@@ -1,0 +1,23 @@
+KU040 DDR4 BIST source-style audit
+Date: 2026-09-11
+Rule source: E:\centOS\代码规则建立\代码规范输出
+
+Design RTL files: 2
+  rtl\axi_ddr_full_bist.v
+  rtl\top_axi_ddr4_full_bist.v
+
+PASS: Verilog-2001 design RTL; SystemVerilog restricted to sim directory.
+PASS: One design module per file.
+PASS: No initial/casex/casez/logic/always_ff/always_comb/interface/class/program in design RTL.
+PASS: No declaration-time wire/reg assignment in design RTL.
+PASS: No nested ternary expression in design RTL.
+PASS: Named module instances and named port connections.
+PASS: Explicit AXI widths/constants and semantic reset/handshake/boundary comments.
+PASS: No simulation delay in design RTL.
+REVIEWED EXCEPTION: CUSTOM-RTL-001 keeps the tightly coupled BIST state-register group in one sequential process; the source comment records the shared invariants and split-process risk.
+
+Verification source:
+  sim\axi4_ram_model.sv
+  sim\tb_axi_ddr_full_bist.sv
+
+PASS: Verification-only SystemVerilog is isolated from synthesizable RTL.

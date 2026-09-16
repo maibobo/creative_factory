@@ -1,0 +1,7 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v,1789462278,verilog,,,,AXI_DDR_FULL_BIST,,,,,,,,
+C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/axi4_ram_model.sv,1789090402,systemVerilog,,C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv,,AXI4_RAM_MODEL,,,,,,,,
+C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv,1789090402,systemVerilog,,,,TB_AXI_DDR_FULL_BIST,,,,,,,,

@@ -1,0 +1,1 @@
+--log "xelab_smoke32.log" --debug "typical" -top "TB_AXI_DDR_FULL_BIST" -snapshot "tb_smoke32" 

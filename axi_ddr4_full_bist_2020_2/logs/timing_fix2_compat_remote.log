@@ -1,0 +1,1820 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Sep 15 14:29:46 2026
+# Process ID: 15624
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Command line: vivado.exe -mode batch -nojournal -source C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_timing_fix_compat.tcl -log C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\logs\timing_fix2_compat_remote.log
+# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/logs/timing_fix2_compat_remote.log
+# Journal file: 
+#-----------------------------------------------------------
+source {C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_timing_fix_compat.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set project_root [file normalize [file join $script_dir ..]]
+# set project_file [file join $project_root prj compat axi_ddr4_full_bist_compat.xpr]
+# set report_dir [file join $project_root reports timing_fix2_compat]
+# set bit_dir [file join $project_root bitstreams timing_fix2_compat]
+# file mkdir $report_dir
+# file mkdir $bit_dir
+# open_project $project_file
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak = 1089.062 ; gain = 0.000
+# reset_run synth_1
+# launch_runs synth_1 -jobs 4
+[Tue Sep 15 14:30:30 2026] Launched synth_1...
+Run output will be captured here: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 1089.062 ; gain = 0.000
+# wait_on_run synth_1
+[Tue Sep 15 14:30:30 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log TOP_AXI_DDR4_FULL_BIST.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP_AXI_DDR4_FULL_BIST.tcl
+
+
+*** Running vivado
+    with args -log TOP_AXI_DDR4_FULL_BIST.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP_AXI_DDR4_FULL_BIST.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source TOP_AXI_DDR4_FULL_BIST.tcl -notrace
+Command: synth_design -top TOP_AXI_DDR4_FULL_BIST -part xcku040-ffva1156-2-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 99240
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1442.910 ; gain = 255.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TOP_AXI_DDR4_FULL_BIST' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:6]
+	Parameter AUTO_START bound to: 1 - type: integer 
+	Parameter AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter AXI_ID_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AXI_DDR_FULL_BIST' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v:6]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter ID_WIDTH bound to: 4 - type: integer 
+	Parameter FULL_SPACE_LIMIT bound to: 33'b100000000000000000000000000000000 
+	Parameter SMOKE_BURST_COUNT bound to: 256 - type: integer 
+	Parameter STRESS_BURST_COUNT bound to: 33554432 - type: integer 
+	Parameter HOLD_CYCLES bound to: 64'b0000000000000000000000000010100111101000110101100000100000000000 
+	Parameter TIMEOUT_CYCLES bound to: 30000000 - type: integer 
+	Parameter BYTE_LANES bound to: 8 - type: integer 
+	Parameter BURST_BEATS_MINUS_ONE bound to: 8'b00001111 
+	Parameter BURST_BYTES bound to: 33'b000000000000000000000000010000000 
+	Parameter BIST_IDLE bound to: 4'b0000 
+	Parameter BIST_PREPARE bound to: 4'b0001 
+	Parameter BIST_WRITE_DATA bound to: 4'b0010 
+	Parameter BIST_WRITE_RESP bound to: 4'b0011 
+	Parameter BIST_READ_ADDR bound to: 4'b0100 
+	Parameter BIST_READ_DATA bound to: 4'b0101 
+	Parameter BIST_HOLD bound to: 4'b0110 
+	Parameter BIST_DONE bound to: 4'b0111 
+	Parameter BIST_READ_CHECK bound to: 4'b1000 
+INFO: [Synth 8-6155] done synthesizing module 'AXI_DDR_FULL_BIST' (1#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vio_bist_ctrl' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/.Xil/Vivado-9584-DESKTOP-H0AB0MD/realtime/vio_bist_ctrl_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_bist_ctrl' (2#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/.Xil/Vivado-9584-DESKTOP-H0AB0MD/realtime/vio_bist_ctrl_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:251]
+INFO: [Synth 8-6157] synthesizing module 'ila_bist_status' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/.Xil/Vivado-9584-DESKTOP-H0AB0MD/realtime/ila_bist_status_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_bist_status' (3#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/.Xil/Vivado-9584-DESKTOP-H0AB0MD/realtime/ila_bist_status_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ddr4_axi_0' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/.Xil/Vivado-9584-DESKTOP-H0AB0MD/realtime/ddr4_axi_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ddr4_axi_0' (4#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/.Xil/Vivado-9584-DESKTOP-H0AB0MD/realtime/ddr4_axi_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'U_VIO_BIST_CTRL'. This will prevent further optimization [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:231]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'U_ILA_BIST_STATUS'. This will prevent further optimization [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:251]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'U_AXI_DDR_FULL_BIST'. This will prevent further optimization [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:169]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'U_DDR4_AXI_0'. This will prevent further optimization [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:273]
+INFO: [Synth 8-6155] done synthesizing module 'TOP_AXI_DDR4_FULL_BIST' (5#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:6]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1516.164 ; gain = 328.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1534.086 ; gain = 346.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1534.086 ; gain = 346.652
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1534.086 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl/vio_bist_ctrl_in_context.xdc] for cell 'U_VIO_BIST_CTRL'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl/vio_bist_ctrl_in_context.xdc] for cell 'U_VIO_BIST_CTRL'
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc] for cell 'U_DDR4_AXI_0'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc] for cell 'U_DDR4_AXI_0'
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status/ila_bist_status_in_context.xdc] for cell 'U_ILA_BIST_STATUS'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status/ila_bist_status_in_context.xdc] for cell 'U_ILA_BIST_STATUS'
+Parsing XDC File [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/constr/top_axi_ddr4_full_bist.xdc]
+Finished Parsing XDC File [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/constr/top_axi_ddr4_full_bist.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/constr/top_axi_ddr4_full_bist.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_AXI_DDR4_FULL_BIST_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_AXI_DDR4_FULL_BIST_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1643.113 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1643.113 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'U_ILA_BIST_STATUS' at clock pin 'clk' is different from the actual clock period '3.332', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'U_VIO_BIST_CTRL' at clock pin 'clk' is different from the actual clock period '3.332', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1643.113 ; gain = 455.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1643.113 ; gain = 455.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_act_n. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_act_n. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[10]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[10]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[11]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[11]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[12]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[12]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[13]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[13]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[14]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[14]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[15]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[15]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[16]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[16]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[8]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[8]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[9]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[9]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ba[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ba[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ba[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ba[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_bg[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_bg[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ck_c[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ck_c[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ck_t[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ck_t[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_cke[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_cke[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_cs_n[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_cs_n[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[10]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[10]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[11]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[11]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[12]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[12]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[13]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[13]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[14]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[14]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[15]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[15]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[16]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[16]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[17]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[17]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[18]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[18]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[19]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[19]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[20]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[20]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[21]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[21]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[22]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 98).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[22]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 99).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[23]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 100).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[23]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 101).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[24]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 102).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[24]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 103).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[25]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 104).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[25]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 105).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[26]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 106).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[26]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 107).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[27]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 108).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[27]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 109).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[28]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 110).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[28]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 111).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[29]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 112).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[29]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 113).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 114).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 115).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[30]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 116).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[30]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 117).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[31]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 118).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[31]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 119).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[32]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 120).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[32]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 121).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[33]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 122).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[33]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 123).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[34]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 124).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[34]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 125).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[35]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 126).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[35]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 127).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[36]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 128).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[36]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 129).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[37]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 130).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[37]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 131).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[38]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 132).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[38]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 133).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[39]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 134).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[39]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 135).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 136).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 137).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[40]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 138).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[40]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 139).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[41]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 140).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[41]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 141).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[42]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 142).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[42]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 143).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[43]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 144).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[43]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 145).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[44]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 146).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[44]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 147).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[45]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 148).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[45]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 149).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[46]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 150).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[46]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 151).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[47]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 152).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[47]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 153).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[48]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 154).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[48]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 155).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[49]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 156).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[49]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 157).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 158).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 159).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[50]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 160).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[50]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 161).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[51]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 162).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[51]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 163).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[52]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 164).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[52]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 165).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[53]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 166).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[53]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 167).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[54]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 168).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[54]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 169).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[55]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 170).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[55]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 171).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[56]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 172).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[56]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 173).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[57]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 174).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[57]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 175).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[58]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 176).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[58]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 177).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[59]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 178).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[59]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 179).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 180).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 181).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[60]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 182).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[60]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 183).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[61]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 184).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[61]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 185).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[62]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 186).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[62]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 187).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[63]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 188).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[63]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 189).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 190).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 191).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 192).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 193).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[8]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 194).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[8]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 195).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[9]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 196).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[9]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 197).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 198).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 199).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 200).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 201).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 202).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 203).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 204).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 205).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 206).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 207).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 208).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 209).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 210).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 211).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 212).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 213).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 214).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 215).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 216).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 217).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 218).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 219).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 220).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 221).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 222).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 223).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 224).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 225).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 226).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 227).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 228).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 229).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_odt[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 230).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_odt[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 231).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_reset_n. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 232).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_reset_n. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 233).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_n. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 234).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk_n. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 235).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_p. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 236).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk_p. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 237).
+Applied set_property KEEP_HIERARCHY = SOFT for U_VIO_BIST_CTRL. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U_DDR4_AXI_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U_ILA_BIST_STATUS. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1643.113 ; gain = 455.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1643.113 ; gain = 455.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 2     
+	   2 Input   33 Bit       Adders := 3     
+	   2 Input   32 Bit       Adders := 6     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 20    
+	   2 Input     32 Bit         XORs := 4     
++---Registers : 
+	               64 Bit    Registers := 7     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 6     
+	               16 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	  10 Input   64 Bit        Muxes := 3     
+	   2 Input   64 Bit        Muxes := 17    
+	   4 Input   64 Bit        Muxes := 1     
+	  10 Input   33 Bit        Muxes := 1     
+	   3 Input   33 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 3     
+	  10 Input   32 Bit        Muxes := 4     
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   3 Input   32 Bit        Muxes := 1     
+	   8 Input   26 Bit        Muxes := 1     
+	   7 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	  10 Input    9 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 8     
+	  10 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	  10 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 37    
+	  10 Input    1 Bit        Muxes := 35    
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1643.113 ; gain = 455.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------------+----------------+---------------+----------------+
+|Module Name       | RTL Object     | Depth x Width | Implemented As | 
++------------------+----------------+---------------+----------------+
+|AXI_DDR_FULL_BIST | progress_value | 32x14         | LUT            | 
+|AXI_DDR_FULL_BIST | progress_value | 32x14         | LUT            | 
++------------------+----------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1731.102 ; gain = 543.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1930.824 ; gain = 743.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1939.914 ; gain = 752.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1939.914 ; gain = 752.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1939.914 ; gain = 752.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1939.914 ; gain = 752.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1939.914 ; gain = 752.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1939.914 ; gain = 752.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1939.914 ; gain = 752.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |vio_bist_ctrl   |         1|
+|2     |ila_bist_status |         1|
+|3     |ddr4_axi_0      |         1|
++------+----------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |ddr4_axi        |     1|
+|2     |ila_bist_status |     1|
+|3     |vio_bist_ctrl   |     1|
+|4     |CARRY8          |    71|
+|5     |LUT1            |    38|
+|6     |LUT2            |   311|
+|7     |LUT3            |   233|
+|8     |LUT4            |   222|
+|9     |LUT5            |   264|
+|10    |LUT6            |   876|
+|11    |MUXF7           |     4|
+|12    |FDRE            |   824|
+|13    |FDSE            |     1|
+|14    |IBUF            |     1|
+|15    |OBUF            |     2|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1939.914 ; gain = 752.480
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1939.914 ; gain = 643.453
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1939.914 ; gain = 752.480
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1951.734 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 76 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'TOP_AXI_DDR4_FULL_BIST' is not ideal for floorplanning, since the cellview 'AXI_DDR_FULL_BIST' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1959.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 1959.391 ; gain = 870.582
+INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/TOP_AXI_DDR4_FULL_BIST.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TOP_AXI_DDR4_FULL_BIST_utilization_synth.rpt -pb TOP_AXI_DDR4_FULL_BIST_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 15 14:59:29 2026...
+[Tue Sep 15 14:59:34 2026] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:02 ; elapsed = 00:29:04 . Memory (MB): peak = 1089.062 ; gain = 0.000
+# if {[get_property STATUS [get_runs synth_1]] ne "synth_design Complete!"} {
+#     error "Synthesis did not complete successfully"
+# }
+# launch_runs impl_1 -to_step route_design -jobs 4
+[Tue Sep 15 14:59:47 2026] Launched impl_1...
+Run output will be captured here: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 1089.062 ; gain = 0.000
+# wait_on_run impl_1
+[Tue Sep 15 14:59:47 2026] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log TOP_AXI_DDR4_FULL_BIST.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source TOP_AXI_DDR4_FULL_BIST.tcl -notrace
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source TOP_AXI_DDR4_FULL_BIST.tcl -notrace
+Command: link_design -top TOP_AXI_DDR4_FULL_BIST -part xcku040-ffva1156-2-i
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+INFO: [Project 1-454] Reading design checkpoint 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0.dcp' for cell 'U_DDR4_AXI_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status.dcp' for cell 'U_ILA_BIST_STATUS'
+INFO: [Project 1-454] Reading design checkpoint 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl.dcp' for cell 'U_VIO_BIST_CTRL'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.530 . Memory (MB): peak = 1350.129 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1443 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: U_DDR4_AXI_0 UUID: 464e1ab7-e734-58de-b136-343c31add41f 
+INFO: [Chipscope 16-324] Core: U_ILA_BIST_STATUS UUID: 4ed7fa86-c25b-5e26-8399-aa4f8607db97 
+INFO: [Chipscope 16-324] Core: U_VIO_BIST_CTRL UUID: f4c0a97e-732a-513c-a9cd-46546e235dea 
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl.xdc] for cell 'U_VIO_BIST_CTRL'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl.xdc] for cell 'U_VIO_BIST_CTRL'
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_0/bd_940f_microblaze_I_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_0/bd_940f_microblaze_I_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_1/bd_940f_rst_0_0_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_1/bd_940f_rst_0_0_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_1/bd_940f_rst_0_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_1/bd_940f_rst_0_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_2/bd_940f_ilmb_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_2/bd_940f_ilmb_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_3/bd_940f_dlmb_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_3/bd_940f_dlmb_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_10/bd_940f_iomodule_0_0_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_10/bd_940f_iomodule_0_0_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ip_0/ddr4_axi_0_microblaze_mcs_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ip_0/ddr4_axi_0_microblaze_mcs_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/par/ddr4_axi_0.xdc] for cell 'U_DDR4_AXI_0/inst'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/par/ddr4_axi_0.xdc] for cell 'U_DDR4_AXI_0/inst'
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_v6_2/constraints/ila_impl.xdc] for cell 'U_ILA_BIST_STATUS/inst'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_v6_2/constraints/ila_impl.xdc] for cell 'U_ILA_BIST_STATUS/inst'
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_v6_2/constraints/ila.xdc] for cell 'U_ILA_BIST_STATUS/inst'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_v6_2/constraints/ila.xdc] for cell 'U_ILA_BIST_STATUS/inst'
+Parsing XDC File [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/constr/top_axi_ddr4_full_bist.xdc]
+Finished Parsing XDC File [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/constr/top_axi_ddr4_full_bist.xdc]
+Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0_board.xdc] for cell 'U_DDR4_AXI_0/inst'
+Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0_board.xdc] for cell 'U_DDR4_AXI_0/inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'TOP_AXI_DDR4_FULL_BIST'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/sw/calibration_0/Debug/calibration_ddr.elf 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1558.414 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 549 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 228 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT(x2)): 8 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 72 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 31 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 204 instances
+
+14 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1558.414 ; gain = 469.445
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku040'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.893 . Memory (MB): peak = 1568.551 ; gain = 10.137
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 1883fddde
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1830.871 ; gain = 262.320
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize MIG Cores
+INFO: [Mig 66-454] Using cached IP synthesis design for IP xilinx.com:ip:ddr4_phy:2.2, cache-ID = 7f25c485bd1fb495.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2129.727 ; gain = 0.000
+Phase 1 Generate And Synthesize MIG Cores | Checksum: 22067f361
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2129.727 ; gain = 67.836
+
+Phase 2 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = b61dfb28aa74f617.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2129.727 ; gain = 0.000
+Phase 2 Generate And Synthesize Debug Cores | Checksum: 174131384
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 2129.727 ; gain = 67.836
+
+Phase 3 Retarget
+INFO: [Opt 31-138] Pushed 9 inverter(s) to 1217 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 278839d49
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2129.727 ; gain = 67.836
+INFO: [Opt 31-389] Phase Retarget created 14 cells and removed 163 cells
+INFO: [Opt 31-1021] In phase Retarget, 262 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 6 inverter(s) to 7 load pin(s).
+Phase 4 Constant propagation | Checksum: 1e050c858
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 2129.727 ; gain = 67.836
+INFO: [Opt 31-389] Phase Constant propagation created 947 cells and removed 3106 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 243 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+Phase 5 Sweep | Checksum: 240034f77
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 2129.727 ; gain = 67.836
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 379 cells
+INFO: [Opt 31-1021] In phase Sweep, 3386 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 6 BUFG optimization | Checksum: 240034f77
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 2129.727 ; gain = 67.836
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 240034f77
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 2129.727 ; gain = 67.836
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 1d3801f9f
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 2129.727 ; gain = 67.836
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 6 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 338 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              14  |             163  |                                            262  |
+|  Constant propagation         |             947  |            3106  |                                            243  |
+|  Sweep                        |               0  |             379  |                                           3386  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               6  |                                            338  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2129.727 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 2bd0b2a1e
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 2129.727 ; gain = 67.836
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Power 33-23] Power model is not available for xiphy_riu_or
+INFO: [Power 33-23] Power model is not available for genVref.u_hpio_vref
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 38 BRAM(s) out of a total of 64 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 38 newly gated: 0 Total Ports: 128
+Ending PowerOpt Patch Enables Task | Checksum: 1f1309dfb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.263 . Memory (MB): peak = 2671.562 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1f1309dfb
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 2671.562 ; gain = 541.836
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1f1309dfb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2671.562 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2671.562 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 2505fa16b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2671.562 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+56 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:52 . Memory (MB): peak = 2671.562 ; gain = 1113.148
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.074 . Memory (MB): peak = 2671.562 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2671.562 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file TOP_AXI_DDR4_FULL_BIST_drc_opted.rpt -pb TOP_AXI_DDR4_FULL_BIST_drc_opted.pb -rpx TOP_AXI_DDR4_FULL_BIST_drc_opted.rpx
+Command: report_drc -file TOP_AXI_DDR4_FULL_BIST_drc_opted.rpt -pb TOP_AXI_DDR4_FULL_BIST_drc_opted.pb -rpx TOP_AXI_DDR4_FULL_BIST_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 3474.645 ; gain = 803.082
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku040'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1ec7d850b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 104b6604b
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1da1bcc64
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1da1bcc64
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1da1bcc64
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1c10a53a7
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1bbb56fa2
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 2.3 Global Placement Core
+
+Phase 2.3.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 120 LUTNM shape to break, 1873 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 47, two critical 73, total 120, new lutff created 4
+INFO: [Physopt 32-775] End 1 Pass. Optimized 964 nets or cells. Created 120 new cells, deleted 844 existing cells and moved 0 existing cell
+INFO: [Physopt 32-76] Pass 1. Identified 4 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net U_DDR4_AXI_0/inst/u_ddr_axi/axi_w_channel_0/wready_d3. Replicated 8 times.
+INFO: [Physopt 32-81] Processed net U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_ui/u_ddr_ui_wr_data/app_wdf_rdy_r. Replicated 8 times.
+INFO: [Physopt 32-81] Processed net U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_ddr_cal_addr_decode/u_ddr_cal_cplx/cplx_cal. Replicated 6 times.
+INFO: [Physopt 32-81] Processed net U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_ui/u_ddr_ui_wr_data/app_wdf_rdy_r_copy2. Replicated 5 times.
+INFO: [Physopt 32-232] Optimized 4 nets. Created 27 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 4 nets or cells. Created 27 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |          120  |            844  |                   964  |           0  |           1  |  00:00:01  |
+|  Very High Fanout                                 |           27  |              0  |                     4  |           0  |           1  |  00:00:01  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |          147  |            844  |                   968  |           0  |           8  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.3.1 Physical Synthesis In Placer | Checksum: 216a3f84c
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:37 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Phase 2.3 Global Placement Core | Checksum: 1d0d05764
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:38 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1d0d05764
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:38 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 103fd0e6d
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:39 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1be8b0ae2
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:42 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: 236953202
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:47 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 3.3.2 DP Optimization
+Phase 3.3.2 DP Optimization | Checksum: 224cfe033
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:52 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 3.3.3 Flow Legalize Slice Clusters
+Phase 3.3.3 Flow Legalize Slice Clusters | Checksum: 27dd379de
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:52 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 3.3.4 Slice Area Swap
+Phase 3.3.4 Slice Area Swap | Checksum: 2071f97d9
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:00:54 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Phase 3.3 Small Shape DP | Checksum: 22fd950d7
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:57 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 2185baca5
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:58 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: 161aee30b
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:59 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 2ad942c01
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:01:11 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 2ad942c01
+
+Time (s): cpu = 00:01:41 ; elapsed = 00:01:11 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 16bfdcd6b
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.188 | TNS=-67.524 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1586065dc
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.690 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1f3e74b73
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.755 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 16bfdcd6b
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:19 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.568. For the most accurate timing information please run report_timing.
+
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:29 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 18e2e5422
+
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:29 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 214272f47
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:30 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                8x8|                8x8|
+|___________|___________________|___________________|
+|      South|                8x8|                8x8|
+|___________|___________________|___________________|
+|       East|                4x4|                8x8|
+|___________|___________________|___________________|
+|       West|                4x4|                8x8|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 214272f47
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:30 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 214272f47
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:31 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:31 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2e3d21ff6
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:31 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Ending Placer Task | Checksum: 1ea60769a
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:31 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+101 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:07 ; elapsed = 00:01:43 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_io -file TOP_AXI_DDR4_FULL_BIST_io_placed.rpt
+report_io: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.075 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file TOP_AXI_DDR4_FULL_BIST_utilization_placed.rpt -pb TOP_AXI_DDR4_FULL_BIST_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file TOP_AXI_DDR4_FULL_BIST_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku040'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.702 | TNS=-57.969 |
+Phase 1 Physical Synthesis Initialization | Checksum: 29cd17ec7
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.702 | TNS=-57.969 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 29cd17ec7
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.702 | TNS=-57.969 |
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_reg_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[3].  Re-placed instance U_AXI_DDR_FULL_BIST/burst_index_reg[3]
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.699 | TNS=-57.723 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[4].  Re-placed instance U_AXI_DDR_FULL_BIST/burst_index_reg[4]
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.684 | TNS=-53.434 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[8].  Re-placed instance U_AXI_DDR_FULL_BIST/burst_index_reg[8]
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.606 | TNS=-51.210 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[3].  Did not re-place instance U_AXI_DDR_FULL_BIST/burst_index_reg[3]
+INFO: [Physopt 32-81] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[3]. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.583 | TNS=-50.044 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[18].  Re-placed instance U_AXI_DDR_FULL_BIST/burst_index_reg[18]
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[18]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.577 | TNS=-49.801 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[4].  Did not re-place instance U_AXI_DDR_FULL_BIST/burst_index_reg[4]
+INFO: [Physopt 32-81] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[4]. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.568 | TNS=-49.395 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[1].  Re-placed instance U_AXI_DDR_FULL_BIST/burst_index_reg[1]
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.549 | TNS=-47.892 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[6].  Re-placed instance U_AXI_DDR_FULL_BIST/burst_index_reg[6]
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.526 | TNS=-47.736 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[5].  Re-placed instance U_AXI_DDR_FULL_BIST/burst_index_reg[5]
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.523 | TNS=-47.637 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2].  Did not re-place instance U_AXI_DDR_FULL_BIST/burst_index_reg[2]
+INFO: [Physopt 32-81] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]. Replicated 3 times.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.504 | TNS=-47.045 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[0].  Did not re-place instance U_AXI_DDR_FULL_BIST/burst_index_reg[0]
+INFO: [Physopt 32-81] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[0]. Replicated 3 times.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.499 | TNS=-46.827 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[12].  Re-placed instance U_AXI_DDR_FULL_BIST/burst_index_reg[12]
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[12]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.490 | TNS=-46.620 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[9].  Re-placed instance U_AXI_DDR_FULL_BIST/burst_index_reg[9]
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.488 | TNS=-46.573 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN.  Did not re-place instance U_AXI_DDR_FULL_BIST/burst_index_reg[2]_replica
+INFO: [Physopt 32-81] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.486 | TNS=-46.484 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[1].  Did not re-place instance U_AXI_DDR_FULL_BIST/burst_index_reg[1]
+INFO: [Physopt 32-81] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[1]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.486 | TNS=-46.484 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[1].  Re-placed instance U_AXI_DDR_FULL_BIST/burst_index_reg[1]
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.482 | TNS=-46.371 |
+INFO: [Physopt 32-81] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[1]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.472 | TNS=-46.115 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN_3.  Did not re-place instance U_AXI_DDR_FULL_BIST/burst_index_reg[2]_replica_3
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN_3 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_3_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_burst_is_last_i_3
+INFO: [Physopt 32-710] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_1_n_0. Critical path length was reduced through logic transformation on cell U_AXI_DDR_FULL_BIST/current_burst_is_last_i_1_comp.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.389 | TNS=-46.032 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_12_n_0.  Re-placed instance U_AXI_DDR_FULL_BIST/current_burst_is_last_i_12
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.344 | TNS=-45.987 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_12_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_burst_is_last_i_12
+INFO: [Physopt 32-710] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_1_n_0. Critical path length was reduced through logic transformation on cell U_AXI_DDR_FULL_BIST/current_burst_is_last_i_1_comp_1.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.063 | TNS=-45.706 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103
+INFO: [Physopt 32-710] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_n_0. Critical path length was reduced through logic transformation on cell U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_comp.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.037 | TNS=-45.680 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_comp
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/is_phase_burst_last01[32]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_reg_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_reg_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_reg_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[7]_i_2_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_addr_ext[7]_i_2
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/current_addr_ext[7]_i_2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3
+INFO: [Physopt 32-710] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[7]_i_2_n_0. Critical path length was reduced through logic transformation on cell U_AXI_DDR_FULL_BIST/current_addr_ext[7]_i_2_comp.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.974 | TNS=-45.644 |
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_41_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[14]_i_3_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_addr_ext[14]_i_3
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/current_addr_ext[14]_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[14]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3
+INFO: [Physopt 32-710] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[14]_i_3_n_0. Critical path length was reduced through logic transformation on cell U_AXI_DDR_FULL_BIST/current_addr_ext[14]_i_3_comp.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.907 | TNS=-45.536 |
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/m_axi_wdata[22]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net U_AXI_DDR_FULL_BIST/phase[3]. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/phase[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.907 | TNS=-45.536 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/phase[5].  Did not re-place instance U_AXI_DDR_FULL_BIST/phase_reg[5]
+INFO: [Physopt 32-81] Processed net U_AXI_DDR_FULL_BIST/phase[5]. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/phase[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.906 | TNS=-45.490 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/phase[4].  Re-placed instance U_AXI_DDR_FULL_BIST/phase_reg[4]
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/phase[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.899 | TNS=-45.042 |
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/m_axi_wdata[39]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/phase[4].  Did not re-place instance U_AXI_DDR_FULL_BIST/phase_reg[4]
+INFO: [Physopt 32-81] Processed net U_AXI_DDR_FULL_BIST/phase[4]. Replicated 3 times.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/phase[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.892 | TNS=-44.896 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/phase[7].  Did not re-place instance U_AXI_DDR_FULL_BIST/phase_reg[7]
+INFO: [Physopt 32-81] Processed net U_AXI_DDR_FULL_BIST/phase[7]. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/phase[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.882 | TNS=-43.331 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/phase[7]_repN.  Did not re-place instance U_AXI_DDR_FULL_BIST/phase_reg[7]_replica
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/phase[7]_repN was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/phase[7]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/m_axi_wdata[54]_i_2_n_0.  Re-placed instance U_AXI_DDR_FULL_BIST/m_axi_wdata[54]_i_2
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/m_axi_wdata[54]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.847 | TNS=-43.193 |
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[17].  Did not re-place instance U_AXI_DDR_FULL_BIST/burst_index_reg[17]
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[17] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[17]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10
+INFO: [Physopt 32-81] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.844 | TNS=-43.144 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[32]_i_13_n_0.  Re-placed instance U_AXI_DDR_FULL_BIST/current_addr_ext[32]_i_13
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[32]_i_13_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.842 | TNS=-44.190 |
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.841 | TNS=-44.099 |
+INFO: [Physopt 32-663] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[12].  Re-placed instance U_AXI_DDR_FULL_BIST/burst_index_reg[12]
+INFO: [Physopt 32-735] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[12]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.833 | TNS=-44.091 |
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg[24]_i_2_n_10. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg[16]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg[8]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_reg_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN_3.  Did not re-place instance U_AXI_DDR_FULL_BIST/burst_index_reg[2]_replica_3
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_comp
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_comp
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/is_phase_burst_last01[32]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg[24]_i_2_n_10. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.833 | TNS=-44.091 |
+Phase 3 Critical Path Optimization | Checksum: 29cd17ec7
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.833 | TNS=-44.091 |
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_reg_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN_3.  Did not re-place instance U_AXI_DDR_FULL_BIST/burst_index_reg[2]_replica_3
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN_3 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_comp
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_comp
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/is_phase_burst_last01[32]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_reg_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_reg_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_reg_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18
+INFO: [Physopt 32-572] Net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg[24]_i_2_n_10. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg[16]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg[8]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_reg_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN_3.  Did not re-place instance U_AXI_DDR_FULL_BIST/burst_index_reg[2]_replica_3
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg_n_0_[2]_repN_3. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_comp
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_33_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_comp
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_103_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/is_phase_burst_last01[32]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_addr_ext[16]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18_n_0.  Did not re-place instance U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/m_axi_awaddr[31]_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/burst_index_reg[24]_i_2_n_10. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net U_AXI_DDR_FULL_BIST/current_burst_is_last_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.833 | TNS=-44.091 |
+Phase 4 Critical Path Optimization | Checksum: 29cd17ec7
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:21 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-0.833 | TNS=-44.091 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.869  |         13.878  |           24  |              0  |                    33  |           0  |           2  |  00:00:19  |
+|  Total          |          0.869  |         13.878  |           24  |              0  |                    33  |           0  |           3  |  00:00:19  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 24f8c1785
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:22 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+340 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:37 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku040'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 8a536e1 ConstDB: 0 ShapeSum: d1648960 RouteDB: cec47820
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: d7882b3b
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 28b80d8f NumContArr: ab73c4fc Constraints: 306fbc01 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 1049b8e8c
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 1049b8e8c
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 1049b8e8c
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 2.4 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.4 Global Clock Net Routing | Checksum: ed0d6d4e
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:25 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Phase 2.5 Update Timing
+Phase 2.5 Update Timing | Checksum: 1c4cea4b3
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:31 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.779 | TNS=-16.519| WHS=-0.372 | THS=-6.447 |
+
+
+Phase 2.6 Update Timing for Bus Skew
+
+Phase 2.6.1 Update Timing
+Phase 2.6.1 Update Timing | Checksum: 292486fa9
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:40 . Memory (MB): peak = 3474.645 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.779 | TNS=-16.529| WHS=N/A    | THS=N/A    |
+
+Phase 2.6 Update Timing for Bus Skew | Checksum: 27d8539c5
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:40 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Phase 2 Router Initialization | Checksum: 24ef4aebc
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:40 . Memory (MB): peak = 3474.645 ; gain = 0.000
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00077048 %
+  Global Horizontal Routing Utilization  = 0.00139378 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 53094
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 47010
+  Number of Partially Routed Nets     = 6084
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 24ef4aebc
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:41 . Memory (MB): peak = 3474.645 ; gain = 0.000
+Phase 3 Initial Routing | Checksum: 1f8730395
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:02 . Memory (MB): peak = 3552.000 ; gain = 77.355
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 7462
+ Number of Nodes with overlaps = 496
+ Number of Nodes with overlaps = 53
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.945 | TNS=-212.066| WHS=-0.019 | THS=-0.024 |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1cec72a09
+
+Time (s): cpu = 00:03:07 ; elapsed = 00:01:54 . Memory (MB): peak = 3558.121 ; gain = 83.477
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 125
+ Number of Nodes with overlaps = 16
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.073 | TNS=-212.817| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: ab0a7b45
+
+Time (s): cpu = 00:03:11 ; elapsed = 00:01:58 . Memory (MB): peak = 3558.121 ; gain = 83.477
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 73
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.935 | TNS=-207.360| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 197e88871
+
+Time (s): cpu = 00:03:15 ; elapsed = 00:02:03 . Memory (MB): peak = 3558.121 ; gain = 83.477
+
+Phase 4.4 Global Iteration 3
+ Number of Nodes with overlaps = 59
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.919 | TNS=-202.372| WHS=N/A    | THS=N/A    |
+
+Phase 4.4 Global Iteration 3 | Checksum: 24d5ee86b
+
+Time (s): cpu = 00:03:19 ; elapsed = 00:02:05 . Memory (MB): peak = 3558.121 ; gain = 83.477
+
+Phase 4.5 Global Iteration 4
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.932 | TNS=-200.454| WHS=N/A    | THS=N/A    |
+
+Phase 4.5 Global Iteration 4 | Checksum: 180440b23
+
+Time (s): cpu = 00:03:20 ; elapsed = 00:02:07 . Memory (MB): peak = 3558.121 ; gain = 83.477
+Phase 4 Rip-up And Reroute | Checksum: 180440b23
+
+Time (s): cpu = 00:03:20 ; elapsed = 00:02:07 . Memory (MB): peak = 3558.121 ; gain = 83.477
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 219f2f091
+
+Time (s): cpu = 00:03:24 ; elapsed = 00:02:09 . Memory (MB): peak = 3558.121 ; gain = 83.477
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.919 | TNS=-202.372| WHS=0.004  | THS=0.000  |
+
+ Number of Nodes with overlaps = 0
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1839b6576
+
+Time (s): cpu = 00:03:41 ; elapsed = 00:02:20 . Memory (MB): peak = 3558.121 ; gain = 83.477
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1839b6576
+
+Time (s): cpu = 00:03:41 ; elapsed = 00:02:20 . Memory (MB): peak = 3558.121 ; gain = 83.477
+Phase 5 Delay and Skew Optimization | Checksum: 1839b6576
+
+Time (s): cpu = 00:03:41 ; elapsed = 00:02:20 . Memory (MB): peak = 3558.121 ; gain = 83.477
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 156cb0b04
+
+Time (s): cpu = 00:03:45 ; elapsed = 00:02:22 . Memory (MB): peak = 3558.121 ; gain = 83.477
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.919 | TNS=-100.282| WHS=0.004  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 2deab8edd
+
+Time (s): cpu = 00:03:45 ; elapsed = 00:02:22 . Memory (MB): peak = 3558.121 ; gain = 83.477
+Phase 6 Post Hold Fix | Checksum: 2deab8edd
+
+Time (s): cpu = 00:03:45 ; elapsed = 00:02:22 . Memory (MB): peak = 3558.121 ; gain = 83.477
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 3.20885 %
+  Global Horizontal Routing Utilization  = 2.02384 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 70.339%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 79.4979%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 58.6538%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 60.5769%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 12a172953
+
+Time (s): cpu = 00:03:46 ; elapsed = 00:02:24 . Memory (MB): peak = 3558.121 ; gain = 83.477
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 12a172953
+
+Time (s): cpu = 00:03:47 ; elapsed = 00:02:24 . Memory (MB): peak = 3558.121 ; gain = 83.477
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 12a172953
+
+Time (s): cpu = 00:03:48 ; elapsed = 00:02:26 . Memory (MB): peak = 3558.121 ; gain = 83.477
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: c8e41640
+
+Time (s): cpu = 00:03:52 ; elapsed = 00:02:28 . Memory (MB): peak = 3558.121 ; gain = 83.477
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.919 | TNS=-100.282| WHS=0.004  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: c8e41640
+
+Time (s): cpu = 00:03:52 ; elapsed = 00:02:28 . Memory (MB): peak = 3558.121 ; gain = 83.477
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:03:52 ; elapsed = 00:02:28 . Memory (MB): peak = 3558.121 ; gain = 83.477
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+362 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:58 ; elapsed = 00:02:54 . Memory (MB): peak = 3558.121 ; gain = 83.477
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 3558.121 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 3558.121 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file TOP_AXI_DDR4_FULL_BIST_drc_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_drc_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_drc_routed.rpx
+Command: report_drc -file TOP_AXI_DDR4_FULL_BIST_drc_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_drc_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 3558.121 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_methodology -file TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpx
+Command: report_methodology -file TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 3558.121 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_power -file TOP_AXI_DDR4_FULL_BIST_power_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_power_summary_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_power_routed.rpx
+Command: report_power -file TOP_AXI_DDR4_FULL_BIST_power_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_power_summary_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+374 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3558.121 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_route_status -file TOP_AXI_DDR4_FULL_BIST_route_status.rpt -pb TOP_AXI_DDR4_FULL_BIST_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file TOP_AXI_DDR4_FULL_BIST_timing_summary_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_timing_summary_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+WARNING: [Timing 38-453] Line(s) in the report have been truncated to keep line length below 5000 characters.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file TOP_AXI_DDR4_FULL_BIST_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file TOP_AXI_DDR4_FULL_BIST_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file TOP_AXI_DDR4_FULL_BIST_bus_skew_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_bus_skew_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 15 15:07:25 2026...
+[Tue Sep 15 15:07:27 2026] impl_1 finished
+wait_on_run: Time (s): cpu = 00:00:02 ; elapsed = 00:07:40 . Memory (MB): peak = 1089.062 ; gain = 0.000
+# open_run impl_1
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1343.176 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1387 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/mmcm_clk_in' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1879.176 ; gain = 49.043
+Restored from archive | CPU: 6.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1879.176 ; gain = 49.043
+Generating merged BMM file for the design top 'ddr4_axi_0'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/sw/calibration_0/Debug/calibration_ddr.elf 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2068.258 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 553 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 228 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT(x2)): 8 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 72 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 31 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 204 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:45 ; elapsed = 00:02:18 . Memory (MB): peak = 2068.258 ; gain = 979.195
+# report_timing_summary -delay_type min_max -max_paths 100 -report_unconstrained \
+#     -file [file join $report_dir timing_summary_routed.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+WARNING: [Timing 38-453] Line(s) in the report have been truncated to keep line length below 5000 characters.
+report_timing_summary: Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 2215.320 ; gain = 147.062
+# report_timing -delay_type max -max_paths 100 -nworst 100 \
+#     -file [file join $report_dir timing_worst100.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 100 -nworst 100 -delay_type max -sort_by slack.
+# report_clock_interaction -delay_type min_max \
+#     -file [file join $report_dir clock_interaction.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-164] This design has multiple clocks. Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+# report_methodology -file [file join $report_dir methodology.rpt]
+Command: report_methodology -file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/reports/timing_fix2_compat/methodology.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/reports/timing_fix2_compat/methodology.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 2264.055 ; gain = 48.734
+# report_bus_skew -file [file join $report_dir bus_skew.rpt]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_bus_skew: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2264.055 ; gain = 0.000
+# report_drc -file [file join $report_dir drc_routed.rpt]
+Command: report_drc -file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/reports/timing_fix2_compat/drc_routed.rpt
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/reports/timing_fix2_compat/drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2313.758 ; gain = 49.703
+# set worst_path [get_timing_paths -delay_type max -max_paths 1]
+# set worst_slack [get_property SLACK $worst_path]
+# puts [format "TIMING_FIX2_COMPAT_WNS=%.3f" $worst_slack]
+TIMING_FIX2_COMPAT_WNS=-0.919
+# if {$worst_slack < 0.0} {
+#     error [format "Timing failed: WNS %.3f ns; bitstream intentionally not generated" $worst_slack]
+# }
+Timing failed: WNS -0.919 ns; bitstream intentionally not generated
+    while executing
+"error [format "Timing failed: WNS %.3f ns; bitstream intentionally not generated" $worst_slack]"
+    invoked from within
+"if {$worst_slack < 0.0} {
+    error [format "Timing failed: WNS %.3f ns; bitstream intentionally not generated" $worst_slack]
+}"
+    (file "C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_timing_fix_compat.tcl" line 39)
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 15 15:11:30 2026...

@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Sep 15 14:26:41 2026
+# Process ID: 89856
+# Current directory: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work
+# Command line: xsim.exe -log xsim_smoke32.log -mode tcl -source {xsim.dir/tb_smoke32/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work/xsim_smoke32.log
+# Journal file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_smoke32/xsim_script.tcl
+# xsim {tb_smoke32} -wdb {smoke32.wdb} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+CASE_PASS name=smoke_random_backpressure expected_pass=1 writes=2 reads=2 errors=0 cycles=115
+CASE_PASS name=data_line_patterns expected_pass=1 writes=132 reads=132 errors=0 cycles=7609
+CASE_PASS name=byte_write_strobes expected_pass=1 writes=9 reads=9 errors=0 cycles=521
+CASE_PASS name=address_line_aliases expected_pass=1 writes=26 reads=26 errors=0 cycles=1471
+CASE_PASS name=directed_boundaries expected_pass=1 writes=6 reads=6 errors=0 cycles=339
+CASE_PASS name=reduced_full_space_forward_reverse expected_pass=1 writes=1024 reads=1024 errors=0 cycles=57951
+CASE_PASS name=reduced_march_class expected_pass=1 writes=1536 reads=1536 errors=0 cycles=86923
+CASE_PASS name=prbs_hold_stress expected_pass=1 writes=32 reads=32 errors=0 cycles=1845
+CASE_PASS name=read_data_injection expected_pass=0 writes=2 reads=2 errors=1 cycles=115
+CASE_PASS name=write_response_injection expected_pass=0 writes=2 reads=2 errors=1 cycles=115
+CASE_PASS name=protocol_timeout expected_pass=0 writes=0 reads=0 errors=1 cycles=65
+AXI_DDR_FULL_BIST_SIM_PASS smoke_bursts=2
+$finish called at time : 523865370 ps : File "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv" Line 336
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:01:33 . Memory (MB): peak = 916.715 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Sep 15 14:28:21 2026...

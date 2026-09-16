@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Sep 11 09:19:25 2026
+# Process ID: 55348
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Command line: vivado.exe -mode batch -nojournal -log C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\logs\elaborate_gd2400.log -source C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\elaborate_project.tcl -tclargs gd2400
+# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/logs/elaborate_gd2400.log
+# Journal file: 
+#-----------------------------------------------------------
+source {C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\elaborate_project.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set project_root [file normalize [file join $script_dir ..]]
+# set profile_name [lindex $argv 0]
+# if {$profile_name eq ""} {
+#     error "Missing elaborate profile"
+# }
+# set project_name "axi_ddr4_full_bist_${profile_name}"
+# set project_dir [file join $project_root prj $profile_name]
+# set generated_dir [file join $project_dir ${project_name}.gen sources_1 ip]
+# set report_dir [file join $project_root reports $profile_name]
+# file mkdir $report_dir
+# create_project -in_memory -part xcku040-ffva1156-2-i
+# set_property verilog_define {XILINX_SIMULATOR} [current_fileset]
+# read_verilog [file join $project_root rtl axi_ddr_full_bist.v]
+# read_verilog [file join $project_root rtl top_axi_ddr4_full_bist.v]
+# read_verilog [file join $generated_dir vio_bist_ctrl sim vio_bist_ctrl.v]
+# read_verilog [file join $generated_dir ila_bist_status sim ila_bist_status.v]
+# read_verilog -sv [file join $generated_dir ddr4_axi_0 sim ddr4_axi_0_stub.sv]
+# synth_design -rtl -name rtl_1 -top TOP_AXI_DDR4_FULL_BIST -part xcku040-ffva1156-2-i
+Command: synth_design -rtl -name rtl_1 -top TOP_AXI_DDR4_FULL_BIST -part xcku040-ffva1156-2-i
+Starting synth_design
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1390.348 ; gain = 251.117
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TOP_AXI_DDR4_FULL_BIST' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:6]
+	Parameter AUTO_START bound to: 1 - type: integer 
+	Parameter AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter AXI_ID_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AXI_DDR_FULL_BIST' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v:6]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter ID_WIDTH bound to: 4 - type: integer 
+	Parameter FULL_SPACE_LIMIT bound to: 33'b100000000000000000000000000000000 
+	Parameter SMOKE_BURST_COUNT bound to: 256 - type: integer 
+	Parameter STRESS_BURST_COUNT bound to: 33554432 - type: integer 
+	Parameter HOLD_CYCLES bound to: 64'b0000000000000000000000000010100111101000110101100000100000000000 
+	Parameter TIMEOUT_CYCLES bound to: 30000000 - type: integer 
+	Parameter BYTE_LANES bound to: 8 - type: integer 
+	Parameter BURST_BEATS_MINUS_ONE bound to: 8'b00001111 
+	Parameter BURST_BYTES bound to: 33'b000000000000000000000000010000000 
+	Parameter BIST_IDLE bound to: 4'b0000 
+	Parameter BIST_PREPARE bound to: 4'b0001 
+	Parameter BIST_WRITE_DATA bound to: 4'b0010 
+	Parameter BIST_WRITE_RESP bound to: 4'b0011 
+	Parameter BIST_READ_ADDR bound to: 4'b0100 
+	Parameter BIST_READ_DATA bound to: 4'b0101 
+	Parameter BIST_HOLD bound to: 4'b0110 
+	Parameter BIST_DONE bound to: 4'b0111 
+INFO: [Synth 8-6155] done synthesizing module 'AXI_DDR_FULL_BIST' (1#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vio_bist_ctrl' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/vio_bist_ctrl/sim/vio_bist_ctrl.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'vio_bist_ctrl' (2#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/vio_bist_ctrl/sim/vio_bist_ctrl.v:49]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:251]
+INFO: [Synth 8-6157] synthesizing module 'ila_bist_status' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/ila_bist_status/sim/ila_bist_status.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'ila_bist_status' (3#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/ila_bist_status/sim/ila_bist_status.v:49]
+INFO: [Synth 8-6157] synthesizing module 'ddr4_axi_0' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/ddr4_axi_0/sim/ddr4_axi_0_stub.sv:69]
+INFO: [Synth 8-6155] done synthesizing module 'ddr4_axi_0' (4#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/ddr4_axi_0/sim/ddr4_axi_0_stub.sv:69]
+INFO: [Synth 8-6155] done synthesizing module 'TOP_AXI_DDR4_FULL_BIST' (5#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:6]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1466.516 ; gain = 327.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1466.516 ; gain = 327.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1466.516 ; gain = 327.285
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1466.516 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1538.285 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1538.285 ; gain = 399.055
+14 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1538.285 ; gain = 428.617
+# report_compile_order -used_in synthesis -file [file join $report_dir compile_order.rpt]
+INFO: [Vivado 12-3442] The output from report_compile_order is primarily targeted for human readability and ease of use. The 'get_files' command, with the -compile_order and -used_in options, produces this same information in a format that is better suited for automated scripts.
+# puts "RTL_ELABORATE_PASS profile=$profile_name"
+RTL_ELABORATE_PASS profile=gd2400
+# close_design
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 11 09:19:53 2026...

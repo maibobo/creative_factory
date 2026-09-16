@@ -1,0 +1,99 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Sep 11 16:45:32 2026
+# Process ID: 98900
+# Current directory: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent59352 C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\prj\compat\axi_ddr4_full_bist_compat.xpr
+# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/vivado.log
+# Journal file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.xpr
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'vio_bist_ctrl_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'ddr4_axi_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'ila_bist_status_synth_1' not found
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'vio_bist_ctrl' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'vio_bist_ctrl' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'vio_bist_ctrl' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'vio_bist_ctrl' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'vio_bist_ctrl' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ddr4_axi_0' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ddr4_axi_0' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ddr4_axi_0' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ddr4_axi_0' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ddr4_axi_0' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ila_bist_status' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ila_bist_status' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ila_bist_status' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ila_bist_status' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ila_bist_status' generated file not found 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1108.840 ; gain = 0.000
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+launch_runs impl_1 -jobs 32
+[Sat Sep 12 09:48:53 2026] Launched vio_bist_ctrl_synth_1, ddr4_axi_0_synth_1, ila_bist_status_synth_1, synth_1...
+Run output will be captured here:
+vio_bist_ctrl_synth_1: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/vio_bist_ctrl_synth_1/runme.log
+ddr4_axi_0_synth_1: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/ddr4_axi_0_synth_1/runme.log
+ila_bist_status_synth_1: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/ila_bist_status_synth_1/runme.log
+synth_1: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/runme.log
+[Sat Sep 12 09:48:54 2026] Launched impl_1...
+Run output will be captured here: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1572.133 ; gain = 61.574
+launch_runs impl_1 -to_step write_bitstream -jobs 32
+[Sat Sep 12 10:04:50 2026] Launched impl_1...
+Run output will be captured here: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1572.133 ; gain = 0.000
+open_run impl_1
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.511 . Memory (MB): peak = 2175.879 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1381 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/mmcm_clk_in' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2707.988 ; gain = 50.043
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2707.988 ; gain = 50.043
+Generating merged BMM file for the design top 'ddr4_axi_0'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/sw/calibration_0/Debug/calibration_ddr.elf 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2880.930 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 554 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 228 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT(x2)): 8 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 72 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 31 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 204 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 3142.906 ; gain = 1570.773
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/vivado_pid98900.debug)
+open_report: Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 4474.836 ; gain = 850.641
+ERROR: [Common 17-39] 'open_report' failed due to earlier errors.
+check_timing -verbose -name timing_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 15 09:41:52 2026...

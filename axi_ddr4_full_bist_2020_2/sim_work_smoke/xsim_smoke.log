@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Sep 15 16:51:37 2026
+# Process ID: 82044
+# Current directory: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work_smoke
+# Command line: xsim.exe -log xsim_smoke.log -mode tcl -source {xsim.dir/tb_smoke/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work_smoke/xsim_smoke.log
+# Journal file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work_smoke\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_smoke/xsim_script.tcl
+# xsim {tb_smoke} -wdb {smoke.wdb} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+CASE_PASS name=smoke_random_backpressure expected_pass=1 writes=2 reads=2 errors=0 cycles=115
+AXI_DDR_FULL_BIST_SIM_PASS smoke_bursts=2
+$finish called at time : 428162 ps : File "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv" Line 336
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Sep 15 16:51:45 2026...

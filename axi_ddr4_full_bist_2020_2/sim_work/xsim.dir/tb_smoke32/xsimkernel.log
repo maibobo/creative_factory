@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_smoke32/xsimk.exe -wdb smoke32.wdb -runall -simmode gui -simrunnum 0 -socket 58856
+Design successfully loaded
+Design Loading Memory Usage: 8644 KB (Peak: 8644 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 13608 KB (Peak: 13608 KB)
+Simulation CPU Usage: 40811 ms

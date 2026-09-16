@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Sep 11 09:15:09 2026
+# Process ID: 48816
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Command line: vivado.exe -mode batch -nojournal -log C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\logs\build_compat.log -source C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\build_bitstream.tcl -tclargs compat
+# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/logs/build_compat.log
+# Journal file: 
+#-----------------------------------------------------------
+source {C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\build_bitstream.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set project_root [file normalize [file join $script_dir ..]]
+# set profile_name [lindex $argv 0]
+# if {$profile_name eq ""} {
+#     error "Missing build profile"
+# }
+# set project_name "axi_ddr4_full_bist_${profile_name}"
+# set xpr_path [file join $project_root prj $profile_name $project_name.xpr]
+# if {![file exists $xpr_path]} {
+#     error "Project does not exist: $xpr_path"
+# }
+# open_project $xpr_path
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1107.586 ; gain = 0.000
+# set report_dir [file join $project_root reports $profile_name]
+# set bitstream_dir [file join $project_root bitstreams]
+# file mkdir $report_dir
+# file mkdir $bitstream_dir
+# reset_run synth_1
+# launch_runs synth_1 -jobs 4
+[Fri Sep 11 09:15:30 2026] Launched vio_bist_ctrl_synth_1, ddr4_axi_0_synth_1, ila_bist_status_synth_1...
+Run output will be captured here:
+vio_bist_ctrl_synth_1: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/vio_bist_ctrl_synth_1/runme.log
+ddr4_axi_0_synth_1: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/ddr4_axi_0_synth_1/runme.log
+ila_bist_status_synth_1: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/ila_bist_status_synth_1/runme.log
+[Fri Sep 11 09:15:30 2026] Launched synth_1...
+Run output will be captured here: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 1107.586 ; gain = 0.000
+# wait_on_run synth_1
+[Fri Sep 11 09:15:30 2026] Waiting for synth_1 to finish...

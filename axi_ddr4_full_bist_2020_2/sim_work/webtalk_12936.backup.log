@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Sep 15 10:03:19 2026
+# Process ID: 12936
+# Current directory: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work
+# Command line: wbtcv.exe -mode batch -source C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work/xsim.dir/tb_smoke4096/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work/webtalk.log
+# Journal file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work\webtalk.jou
+#-----------------------------------------------------------
+source C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work/xsim.dir/tb_smoke4096/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Sep 15 10:03:19 2026...

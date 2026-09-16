@@ -1,0 +1,101 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Sep 11 09:00:40 2026
+| Host         : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
+| Command      : report_ip_status
+------------------------------------------------------------------------------------
+
+IP Status Summary
+
+1. Project IP Status
+--------------------
+Your project uses 16 IP. Some of these IP may have undergone changes in this release of the software. Please review the recommended actions.
+
+More information on the Xilinx versioning policy is available at www.xilinx.com.
+
+Project IP Instances
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| Instance Name               | Status     | Recommendation      | Change    | IP Name            | IP      | New Version   | New        | Original Part        |
+|                             |            |                     | Log       |                    | Version |               | License    |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| ddr4_axi_0                  | Up-to-date | No changes required |  *(1)     | DDR4 SDRAM (MIG)   | 2.2     | 2.2 (Rev. 10) | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           |                    | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 10)     |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| ila_bist_status             | Up-to-date | No changes required |  *(2)     | ILA (Integrated    | 6.2     | 6.2 (Rev. 11) | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           | Logic Analyzer)    | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 11)     |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| vio_bist_ctrl               | Up-to-date | No changes required |  *(3)     | VIO (Virtual       | 3.0     | 3.0 (Rev. 19) | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           | Input/Output)      | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 19)     |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| ddr4_axi_0_microblaze_mcs   | Up-to-date | No changes required |  *(4)     | MicroBlaze MCS     | 3.0     | 3.0 (Rev. 14) | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           |                    | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 14)     |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| ddr4_axi_0_phy              | Up-to-date | No changes required | *(5)      | DDR4 SDRAM PHY IP  | 2.2     | 2.2           | Included   | xcku040-ffva1156-2-i |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| bd_940f_dlmb_0              | Up-to-date | No changes required |  *(6)     | Local Memory Bus   | 3.0     | 3.0 (Rev. 11) | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           | (LMB) 1.0          | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 11)     |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| bd_940f_dlmb_cntlr_0        | Up-to-date | No changes required |  *(7)     | LMB BRAM           | 4.0     | 4.0 (Rev. 19) | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           | Controller         | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 19)     |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| bd_940f_ilmb_0              | Up-to-date | No changes required |  *(8)     | Local Memory Bus   | 3.0     | 3.0 (Rev. 11) | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           | (LMB) 1.0          | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 11)     |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| bd_940f_ilmb_cntlr_0        | Up-to-date | No changes required |  *(9)     | LMB BRAM           | 4.0     | 4.0 (Rev. 19) | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           | Controller         | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 19)     |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| bd_940f_iomodule_0_0        | Up-to-date | No changes required |  *(10)    | IOModule           | 3.1     | 3.1 (Rev. 6)  | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           |                    | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 6)      |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| bd_940f_lmb_bram_I_0        | Up-to-date | No changes required |  *(11)    | Block Memory       | 8.4     | 8.4 (Rev. 4)  | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           | Generator          | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 4)      |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| bd_940f_microblaze_I_0      | Up-to-date | No changes required |  *(12)    | MicroBlaze         | 11.0    | 11.0 (Rev. 4) | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           |                    | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 4)      |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| bd_940f_rst_0_0             | Up-to-date | No changes required |  *(13)    | Processor System   | 5.0     | 5.0 (Rev. 13) | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           | Reset              | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 13)     |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| bd_940f_second_dlmb_cntlr_0 | Up-to-date | No changes required |  *(14)    | LMB BRAM           | 4.0     | 4.0 (Rev. 19) | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           | Controller         | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 19)     |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| bd_940f_second_ilmb_cntlr_0 | Up-to-date | No changes required |  *(15)    | LMB BRAM           | 4.0     | 4.0 (Rev. 19) | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           | Controller         | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 19)     |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+| bd_940f_second_lmb_bram_I_0 | Up-to-date | No changes required |  *(16)    | Block Memory       | 8.4     | 8.4 (Rev. 4)  | Included   | xcku040-ffva1156-2-i |
+|                             |            |                     |           | Generator          | (Rev.   |               |            |                      |
+|                             |            |                     |           |                    | 4)      |               |            |                      |
++-----------------------------+------------+---------------------+-----------+--------------------+---------+---------------+------------+----------------------+
+*(1) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/ddr4_v2_2/doc/ddr4_v2_2_changelog.txt
+*(2) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/ila_v6_2/doc/ila_v6_2_changelog.txt
+*(3) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/vio_v3_0/doc/vio_v3_0_changelog.txt
+*(4) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/microblaze_mcs_v3_0/doc/microblaze_mcs_v3_0_changelog.txt
+*(5) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/ddr4_phy_v2_2/doc/phy_ip_v1_2_changelog.txt
+*(6) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/lmb_v10_v3_0/doc/lmb_v10_v3_0_changelog.txt
+*(7) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/lmb_bram_if_cntlr_v4_0/doc/lmb_bram_if_cntlr_v4_0_changelog.txt
+*(8) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/lmb_v10_v3_0/doc/lmb_v10_v3_0_changelog.txt
+*(9) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/lmb_bram_if_cntlr_v4_0/doc/lmb_bram_if_cntlr_v4_0_changelog.txt
+*(10) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/iomodule_v3_1/doc/iomodule_v3_1_changelog.txt
+*(11) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/blk_mem_gen_v8_4/doc/blk_mem_gen_v8_4_changelog.txt
+*(12) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/microblaze_v11_0/doc/microblaze_v11_0_changelog.txt
+*(13) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/proc_sys_reset_v5_0/doc/proc_sys_reset_v5_0_changelog.txt
+*(14) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/lmb_bram_if_cntlr_v4_0/doc/lmb_bram_if_cntlr_v4_0_changelog.txt
+*(15) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/lmb_bram_if_cntlr_v4_0/doc/lmb_bram_if_cntlr_v4_0_changelog.txt
+*(16) c:/Xilinx/Vivado/2020.2/data/ip/xilinx/blk_mem_gen_v8_4/doc/blk_mem_gen_v8_4_changelog.txt
+
+

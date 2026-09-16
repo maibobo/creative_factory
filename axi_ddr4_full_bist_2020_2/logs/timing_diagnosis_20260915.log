@@ -1,0 +1,107 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Sep 15 09:43:43 2026
+# Process ID: 44128
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Command line: vivado.exe -mode batch -nojournal -source C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\diagnose_impl_compat.tcl -log C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\logs\timing_diagnosis_20260915.log
+# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/logs/timing_diagnosis_20260915.log
+# Journal file: 
+#-----------------------------------------------------------
+source {C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\diagnose_impl_compat.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set project_root [file normalize [file join $script_dir ..]]
+# set xpr_path [file join $project_root prj compat axi_ddr4_full_bist_compat.xpr]
+# set report_dir [file join $project_root reports timing_diagnosis_20260915]
+# file mkdir $report_dir
+# open_project $xpr_path
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 1089.016 ; gain = 0.000
+# open_run impl_1
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1336.797 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1381 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/mmcm_clk_in' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1872.199 ; gain = 49.059
+Restored from archive | CPU: 6.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1872.199 ; gain = 49.059
+Generating merged BMM file for the design top 'ddr4_axi_0'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/sw/calibration_0/Debug/calibration_ddr.elf 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2062.793 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 554 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 228 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT(x2)): 8 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 72 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 31 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 204 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:47 ; elapsed = 00:02:32 . Memory (MB): peak = 2062.793 ; gain = 973.777
+# check_timing -verbose -file [file join $report_dir check_timing_verbose.rpt]
+check_timing: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2091.160 ; gain = 28.367
+# report_timing_summary -delay_type max -max_paths 50 \
+#     -file [file join $report_dir timing_summary_setup.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+WARNING: [Timing 38-453] Line(s) in the report have been truncated to keep line length below 5000 characters.
+report_timing_summary: Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 2192.414 ; gain = 101.254
+# report_timing -delay_type max -max_paths 100 -nworst 10 -sort_by group \
+#     -file [file join $report_dir timing_worst100.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 100 -nworst 10 -delay_type max -sort_by group.
+report_timing: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 2192.414 ; gain = 0.000
+# report_clock_interaction -file [file join $report_dir clock_interaction.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-164] This design has multiple clocks. Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+# report_methodology -file [file join $report_dir methodology.rpt]
+Command: report_methodology -file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/reports/timing_diagnosis_20260915/methodology.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/reports/timing_diagnosis_20260915/methodology.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:42 ; elapsed = 00:01:04 . Memory (MB): peak = 2252.402 ; gain = 59.988
+# report_bus_skew -warn_on_violation -file [file join $report_dir bus_skew.rpt]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_bus_skew: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 2252.402 ; gain = 0.000
+# set port_report [open [file join $report_dir top_port_properties.rpt] w]
+# foreach port_obj [lsort [get_ports]] {
+#     puts $port_report "PORT $port_obj"
+#     foreach property_name {DIRECTION PACKAGE_PIN IOSTANDARD IS_CLOCK} {
+#         puts $port_report "  $property_name=[get_property $property_name $port_obj]"
+#     }
+# }
+# close $port_report
+# puts "TIMING_DIAGNOSIS_PASS report_dir=$report_dir"
+TIMING_DIAGNOSIS_PASS report_dir=C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/reports/timing_diagnosis_20260915
+# close_design
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 15 09:48:45 2026...

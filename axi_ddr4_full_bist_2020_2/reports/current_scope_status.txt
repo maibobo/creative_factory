@@ -1,0 +1,25 @@
+KU040 DDR4 full BIST current scope status
+Date: 2026-09-11
+
+PROJECT_CREATE compat: PASS
+PROJECT_CREATE gd2400: PASS
+RTL_ELABORATE compat: PASS
+RTL_ELABORATE gd2400: PASS
+BEHAVIOR smoke 32 words: PASS
+BEHAVIOR smoke 4096 words / 32 KiB: PASS
+BEHAVIOR reduced 8 modes and negative injection: PASS
+
+SYNTHESIS: NOT RUN / interrupted partial run removed
+IMPLEMENTATION: NOT RUN
+DRC/TIMING: NOT RUN
+BITSTREAM: NOT GENERATED
+BOARD TEST: NOT RUN
+
+Remote process counts after cleanup:
+  vivado=0
+  xelab=0
+  xsim=0
+
+Remote generated-artifact counts after cleanup:
+  *.runs directories=0
+  *.bit/*.bin files=0
