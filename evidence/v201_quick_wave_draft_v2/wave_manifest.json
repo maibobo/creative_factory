@@ -1,0 +1,1047 @@
+[
+  {
+    "file": "01_config_cdc.png",
+    "title": "1 首次合法配置译码与跨时钟锁存",
+    "case": "1g",
+    "segments_ps": [
+      [
+        5446000,
+        7346000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz配置域",
+        "signals": [
+          "src_clk",
+          "cfg_byte",
+          "cfg_byte_valid",
+          "decode_valid",
+          "cfg_hold",
+          "cfg_req",
+          "configured",
+          "configured_id"
+        ]
+      },
+      {
+        "domain": "31.25MHz 1G用户域",
+        "signals": [
+          "user_clk",
+          "req_sync",
+          "cfg_user",
+          "cfg_ack"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "02a_1g_payload.png",
+    "title": "2a 6Byte载荷的两次接口握手",
+    "case": "1g",
+    "segments_ps": [
+      [
+        7964000,
+        8364000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "31.25MHz 1G用户域",
+        "signals": [
+          "user_clk",
+          "tx_curr_st",
+          "tx_valid",
+          "tx_ready",
+          "tx_sof",
+          "tx_eof",
+          "tx_rem",
+          "tx_data"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "02b_1g_cadence.png",
+    "title": "2b 连续发送机会的63拍周期",
+    "case": "1g",
+    "segments_ps": [
+      [
+        8024000,
+        10320000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "31.25MHz 1G用户域",
+        "signals": [
+          "user_clk",
+          "period_count",
+          "period_tick",
+          "tx_sof",
+          "completed_frames"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "03a_1g_backpressure.png",
+    "title": "3a 反压保持与周期任务跳过",
+    "case": "1g",
+    "segments_ps": [
+      [
+        15208000,
+        17608000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "31.25MHz 1G用户域",
+        "signals": [
+          "user_clk",
+          "tx_curr_st",
+          "tx_ready",
+          "tx_valid",
+          "tx_sof",
+          "tx_eof",
+          "tx_rem",
+          "tx_data",
+          "skipped_periods"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "03b_1g_link_recovery.png",
+    "title": "3b 链路下降、重新准备与多帧恢复",
+    "case": "1g",
+    "segments_ps": [
+      [
+        21748000,
+        22228000
+      ],
+      [
+        24988000,
+        28544000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "31.25MHz 1G用户域",
+        "signals": [
+          "user_clk",
+          "channel_up",
+          "arm_count",
+          "tx_curr_st",
+          "tx_valid",
+          "tx_sof",
+          "tx_eof",
+          "tx_data",
+          "completed_frames"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "04_downlink_frame.png",
+    "title": "4 16Byte下行帧边界、数据顺序与地址步进",
+    "case": "tx",
+    "segments_ps": [
+      [
+        168000,
+        518000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz FDMA读取域",
+        "signals": [
+          "fdma_clk",
+          "raddr",
+          "rareq",
+          "rbusy",
+          "rvalid",
+          "rready",
+          "rdata"
+        ]
+      },
+      {
+        "domain": "156.25MHz 10G用户域",
+        "signals": [
+          "user_clk",
+          "tx_state",
+          "valid",
+          "ready",
+          "sof",
+          "eof",
+          "tx_data",
+          "received"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "05a_tx_fifo_fill.png",
+    "title": "5a 300帧输入使FIFO占用达到504",
+    "case": "tx",
+    "segments_ps": [
+      [
+        6222000,
+        7172000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz FDMA读取域",
+        "signals": [
+          "fdma_clk",
+          "limit",
+          "fifo_write_count",
+          "fifo_almost_full",
+          "peak_words",
+          "fifo_overflow"
+        ]
+      },
+      {
+        "domain": "156.25MHz 10G用户域",
+        "signals": [
+          "user_clk",
+          "ready",
+          "valid",
+          "tx_data"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "05b_tx_fifo_drain.png",
+    "title": "5b 接收端恢复后FIFO开始按序排空",
+    "case": "tx",
+    "segments_ps": [
+      [
+        19776800,
+        20056800
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz FDMA读取域",
+        "signals": [
+          "fdma_clk",
+          "fifo_write_count",
+          "fifo_overflow"
+        ]
+      },
+      {
+        "domain": "156.25MHz 10G用户域",
+        "signals": [
+          "user_clk",
+          "fifo_read_count",
+          "ready",
+          "valid",
+          "sof",
+          "eof",
+          "tx_data",
+          "received",
+          "fifo_underflow"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "06_rx_fifo_cdc.png",
+    "title": "6 接收数据跨时钟顺序传递",
+    "case": "rx_fifo",
+    "segments_ps": [
+      [
+        217600,
+        527600
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "156.25MHz接收域",
+        "signals": [
+          "user_clk",
+          "rx_valid",
+          "rx_sof",
+          "rx_eof",
+          "rx_data",
+          "rx_ready"
+        ]
+      },
+      {
+        "domain": "250MHz存储域",
+        "signals": [
+          "mem_clk",
+          "frame_valid",
+          "frame_ready",
+          "frame_data",
+          "fifo_full",
+          "received"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "07a_rx_fifo_full_drop.png",
+    "title": "7a FIFO满时记录一个32bit有效字损失",
+    "case": "rx_fifo",
+    "segments_ps": [
+      [
+        488400,
+        768400
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "156.25MHz接收域",
+        "signals": [
+          "user_clk",
+          "rx_valid",
+          "rx_data",
+          "rx_ready",
+          "drop_bin"
+        ]
+      },
+      {
+        "domain": "250MHz存储域",
+        "signals": [
+          "mem_clk",
+          "fifo_almost_full",
+          "fifo_full",
+          "dropped_frames"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "07b_rx_fifo_release.png",
+    "title": "7b 计数跨域、FIFO排空与后续接收恢复",
+    "case": "rx_fifo",
+    "segments_ps": [
+      [
+        558000,
+        790000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "156.25MHz接收域",
+        "signals": [
+          "user_clk",
+          "drop_bin",
+          "rx_valid",
+          "rx_ready"
+        ]
+      },
+      {
+        "domain": "250MHz存储域",
+        "signals": [
+          "mem_clk",
+          "dropped_frames",
+          "fifo_full",
+          "frame_ready",
+          "frame_valid",
+          "frame_data",
+          "received"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "08a_pair_pack.png",
+    "title": "8a 两个低32bit字组成一个64bit DDR写数据",
+    "case": "ring",
+    "segments_ps": [
+      [
+        0,
+        176000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz存储与DDR写域",
+        "signals": [
+          "clk",
+          "frame_data",
+          "frame_valid",
+          "frame_ready",
+          "half_data",
+          "half_valid",
+          "pair_start",
+          "fdma_waddr",
+          "fdma_wdata",
+          "fdma_wstrb",
+          "fdma_wdone"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "08b_tail_pack.png",
+    "title": "8b 单个剩余字使用低四字节写入DDR",
+    "case": "ring",
+    "segments_ps": [
+      [
+        1564000,
+        1784000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz存储与DDR写域",
+        "signals": [
+          "clk",
+          "half_data",
+          "half_valid",
+          "tail_start",
+          "active_transfer",
+          "fdma_waddr",
+          "fdma_wdata",
+          "fdma_wstrb",
+          "fdma_wvalid",
+          "fdma_waccept",
+          "fdma_wdone",
+          "used_bytes"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "09a_segment_end.png",
+    "title": "9a 100ms采集段结束请求与最后一个DDR写事务",
+    "case": "ring",
+    "segments_ps": [
+      [
+        760000,
+        1010000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz存储与DDR写域",
+        "signals": [
+          "clk",
+          "time_count",
+          "tick",
+          "seal_pending",
+          "half_valid",
+          "tail_start",
+          "write_curr_st",
+          "fdma_wdone"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "09b_queue_and_ack.png",
+    "title": "9b DDR写成功后加入待取队列并由CPU确认",
+    "case": "ring",
+    "segments_ps": [
+      [
+        754000,
+        926000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz存储与CPU交互域",
+        "signals": [
+          "clk",
+          "write_success",
+          "seal_done",
+          "push_block",
+          "queued",
+          "irq",
+          "head_addr",
+          "head_len",
+          "head_seq",
+          "cpu_ack",
+          "pop_block"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "10a_ring_round1.png",
+    "title": "10a 八块地址第1轮使用",
+    "case": "ring",
+    "segments_ps": [
+      [
+        674000,
+        3734000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz块队列域",
+        "signals": [
+          "clk",
+          "write_block",
+          "read_block",
+          "queued",
+          "head_addr",
+          "head_len",
+          "head_seq",
+          "publish_seq",
+          "cpu_ack"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "10b_ring_round2.png",
+    "title": "10b 八块地址第2轮使用",
+    "case": "ring",
+    "segments_ps": [
+      [
+        7078000,
+        10138000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz块队列域",
+        "signals": [
+          "clk",
+          "write_block",
+          "read_block",
+          "queued",
+          "head_addr",
+          "head_len",
+          "head_seq",
+          "publish_seq",
+          "cpu_ack"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "10c_ring_round3.png",
+    "title": "10c 八块地址第3轮使用",
+    "case": "ring",
+    "segments_ps": [
+      [
+        13478000,
+        16538000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz块队列域",
+        "signals": [
+          "clk",
+          "write_block",
+          "read_block",
+          "queued",
+          "head_addr",
+          "head_len",
+          "head_seq",
+          "publish_seq",
+          "cpu_ack"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "11a_queue_full.png",
+    "title": "11a 八块均待取时保持队头并记录新增数据损失",
+    "case": "ring",
+    "segments_ps": [
+      [
+        25514000,
+        25954000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz块队列域",
+        "signals": [
+          "clk",
+          "frame_valid",
+          "frame_data",
+          "queued",
+          "head_addr",
+          "head_seq",
+          "reject_word",
+          "dropped_frames"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "11b_queue_resume.png",
+    "title": "11b CPU确认后队头推进并恢复DDR写入",
+    "case": "ring",
+    "segments_ps": [
+      [
+        25638000,
+        26038000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz块队列域",
+        "signals": [
+          "clk",
+          "cpu_ack",
+          "pop_block",
+          "queued",
+          "read_block",
+          "head_addr",
+          "head_seq",
+          "frame_ready"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "12a_delayed_response.png",
+    "title": "12a DDR写响应延迟期间不增加待取块数",
+    "case": "ring",
+    "segments_ps": [
+      [
+        25766000,
+        27366000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz DDR写域",
+        "signals": [
+          "clk",
+          "response_delay",
+          "fdma_wareq",
+          "fdma_wvalid",
+          "fdma_waccept",
+          "write_curr_st",
+          "fdma_wdone",
+          "ready_blocks",
+          "head_seq"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "12b_error_recovery.png",
+    "title": "12b AXI写错误的影响与后续成功恢复",
+    "case": "ring",
+    "segments_ps": [
+      [
+        27090000,
+        27370000
+      ],
+      [
+        28754000,
+        28902000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz DDR写域",
+        "signals": [
+          "clk",
+          "inject_error",
+          "fdma_waddr",
+          "fdma_wdone",
+          "fdma_werror",
+          "write_failure",
+          "used_bytes",
+          "dropped_frames",
+          "ready_blocks",
+          "head_seq"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "13a_high_address_write.png",
+    "title": "13a 八个256KiB块基址形成独立AXI写事务",
+    "case": "axi",
+    "segments_ps": [
+      [
+        22000,
+        94000
+      ],
+      [
+        282000,
+        354000
+      ],
+      [
+        530000,
+        602000
+      ],
+      [
+        778000,
+        850000
+      ],
+      [
+        1026000,
+        1098000
+      ],
+      [
+        1274000,
+        1346000
+      ],
+      [
+        1522000,
+        1594000
+      ],
+      [
+        1770000,
+        1842000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz AXI写域",
+        "signals": [
+          "M_AXI_ACLK",
+          "M_AXI_AWADDR",
+          "M_AXI_AWLEN",
+          "M_AXI_AWVALID",
+          "M_AXI_AWREADY",
+          "M_AXI_WDATA",
+          "M_AXI_BVALID",
+          "M_AXI_BRESP"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "13b_high_address_readback.png",
+    "title": "13b 高地址读回数据互不混叠",
+    "case": "axi",
+    "segments_ps": [
+      [
+        2018000,
+        2098000
+      ],
+      [
+        2166000,
+        2246000
+      ],
+      [
+        2314000,
+        2394000
+      ],
+      [
+        2462000,
+        2542000
+      ],
+      [
+        2610000,
+        2690000
+      ],
+      [
+        2758000,
+        2838000
+      ],
+      [
+        2906000,
+        2986000
+      ],
+      [
+        3054000,
+        3134000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz AXI读域",
+        "signals": [
+          "M_AXI_ACLK",
+          "M_AXI_ARADDR",
+          "M_AXI_ARVALID",
+          "M_AXI_ARREADY",
+          "M_AXI_RDATA",
+          "M_AXI_RVALID",
+          "M_AXI_RREADY",
+          "M_AXI_RLAST"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "14a_4k_write_split.png",
+    "title": "14a 520拍写请求按4KiB边界拆成四个AXI突发",
+    "case": "axi",
+    "segments_ps": [
+      [
+        3202000,
+        3290000
+      ],
+      [
+        3242000,
+        6018000
+      ],
+      [
+        5970000,
+        8746000
+      ],
+      [
+        8698000,
+        8870000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz AXI写域",
+        "signals": [
+          "M_AXI_ACLK",
+          "fdma_waddr",
+          "fdma_wsize",
+          "M_AXI_AWADDR",
+          "M_AXI_AWLEN",
+          "M_AXI_AWVALID",
+          "M_AXI_AWREADY",
+          "M_AXI_WLAST",
+          "M_AXI_BVALID"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "14b_4k_read_split.png",
+    "title": "14b 对应读请求按相同边界拆分并连续返回",
+    "case": "axi",
+    "segments_ps": [
+      [
+        8838000,
+        8902000
+      ],
+      [
+        8854000,
+        10958000
+      ],
+      [
+        10910000,
+        13014000
+      ],
+      [
+        12966000,
+        13078000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz AXI读域",
+        "signals": [
+          "M_AXI_ACLK",
+          "fdma_raddr",
+          "fdma_rsize",
+          "M_AXI_ARADDR",
+          "M_AXI_ARLEN",
+          "M_AXI_ARVALID",
+          "M_AXI_RDATA",
+          "M_AXI_RVALID",
+          "M_AXI_RLAST"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "15a_wstrb_ff.png",
+    "title": "15a 全八字节初始写入",
+    "case": "axi_tail",
+    "segments_ps": [
+      [
+        0,
+        90000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz AXI访问域",
+        "signals": [
+          "M_AXI_ACLK",
+          "fdma_wdata",
+          "fdma_wstrb",
+          "M_AXI_WDATA",
+          "M_AXI_WSTRB",
+          "M_AXI_WVALID",
+          "M_AXI_WREADY",
+          "M_AXI_BVALID",
+          "M_AXI_RDATA",
+          "M_AXI_RVALID"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "15b_wstrb_0f.png",
+    "title": "15b 仅低四字节更新",
+    "case": "axi_tail",
+    "segments_ps": [
+      [
+        123000,
+        268000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz AXI访问域",
+        "signals": [
+          "M_AXI_ACLK",
+          "fdma_wdata",
+          "fdma_wstrb",
+          "M_AXI_WDATA",
+          "M_AXI_WSTRB",
+          "M_AXI_WVALID",
+          "M_AXI_WREADY",
+          "M_AXI_BVALID",
+          "M_AXI_RDATA",
+          "M_AXI_RVALID"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "15c_wstrb_readback.png",
+    "title": "15c 读回确认高32bit保持、低32bit更新",
+    "case": "axi_tail",
+    "segments_ps": [
+      [
+        263000,
+        326000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz AXI访问域",
+        "signals": [
+          "M_AXI_ACLK",
+          "fdma_wdata",
+          "fdma_wstrb",
+          "M_AXI_WDATA",
+          "M_AXI_WSTRB",
+          "M_AXI_WVALID",
+          "M_AXI_WREADY",
+          "M_AXI_BVALID",
+          "M_AXI_RDATA",
+          "M_AXI_RVALID"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "16a_submit_start.png",
+    "title": "16a 0x20提交状态产生一次下行启动脉冲",
+    "case": "regs",
+    "segments_ps": [
+      [
+        90000,
+        270000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz AXI-Lite寄存器域",
+        "signals": [
+          "clk",
+          "awaddr",
+          "wdata",
+          "wstrb",
+          "CPU_WR_DONE",
+          "CPU_WR_DONE_d",
+          "CPU_WR_DONE_pos",
+          "start",
+          "command_addr",
+          "command_len",
+          "starts"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "16b_submit_clear_restart.png",
+    "title": "16b 忙时重复提交无效、硬件清零后允许再次启动",
+    "case": "regs",
+    "segments_ps": [
+      [
+        184000,
+        354000
+      ],
+      [
+        246000,
+        396000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz AXI-Lite寄存器域",
+        "signals": [
+          "clk",
+          "done",
+          "CPU_WR_DONE",
+          "CPU_WR_DONE_pos",
+          "start",
+          "command_addr",
+          "command_len",
+          "starts",
+          "rdata"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "17a_ack_wstrb.png",
+    "title": "17a 0x14确认脉冲与低字节WSTRB过滤",
+    "case": "regs",
+    "segments_ps": [
+      [
+        268000,
+        422000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz AXI-Lite寄存器域",
+        "signals": [
+          "clk",
+          "awaddr",
+          "wdata",
+          "wstrb",
+          "ack",
+          "acks",
+          "rdata"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "17b_status_reads.png",
+    "title": "17b 0x30、0x34、0x38状态寄存器读回",
+    "case": "regs",
+    "segments_ps": [
+      [
+        52000,
+        132000
+      ],
+      [
+        68000,
+        148000
+      ],
+      [
+        84000,
+        164000
+      ]
+    ],
+    "groups": [
+      {
+        "domain": "250MHz AXI-Lite寄存器域",
+        "signals": [
+          "clk",
+          "araddr",
+          "arvalid",
+          "arready",
+          "rvalid",
+          "rdata",
+          "RX_READY_BLOCKS",
+          "RX_HEAD_SEQ",
+          "RX_DROPPED_FRAMES"
+        ]
+      }
+    ]
+  }
+]

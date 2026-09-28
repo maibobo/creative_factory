@@ -1,0 +1,401 @@
+[
+  {
+    "path": "README_本地开发.md",
+    "baseline": null,
+    "local": "8D54234E066F9BE6DC20001E0E61ED9261EC8229E9FE2EA5BC558B299F6EB32F",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.xpr",
+    "baseline": "2B3B4FC46BFEA6306A1B4BF793F247E412C81D78EE53287000A8DDA8488AD5FD",
+    "local": "22C0EF551FBA4B0C45F5199A3A951B668E3296BB02C1588DE4C98BD89FC58ACF",
+    "remote": "7D0900C60DD0D8E81DF61FBB86278FF6ADB29D01FF4415E32B7AEE00E6D6FE68",
+    "conflict": true
+  },
+  {
+    "path": "docs/新增需求_主机逻辑与验证说明.md",
+    "baseline": null,
+    "local": "72064A689CF06AB6D4055152C7E698C609136990A9829AC802CD7974C2D16572",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "docs/本轮代码规范核对.md",
+    "baseline": null,
+    "local": "45433105A1A0BC93BDFE78DB9E19408C6AEFFDAB680CE97D52360615D8F7A136",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "reports/batch_core_style_audit.json",
+    "baseline": null,
+    "local": "9B9149B6F2E3490071C94D09550B8271DF6883577BAC6644F6B2AFA161E7E1FF",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "reports/batch_interface_reference_audit.json",
+    "baseline": null,
+    "local": "0C8AF982019ED2A602826F864DB961A14B1B89AADE9773B332FF325C4672BD6F",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "reports/batch_project_audit.json",
+    "baseline": null,
+    "local": "19D48268957DFEC31214EC06B4440859945C228DD4B8BA3BD9D498455735F561",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "reports/batch_static_parse.json",
+    "baseline": null,
+    "local": "2BBD4EBA11937AD561D681861A4B659E17E31487F2D76E65C236FFB7A5D42D93",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "rtl/rtds_1g_periodic_tx.v",
+    "baseline": null,
+    "local": "E46CF65859FE152ABD20A0D8BBDA3FE945A2B3D1148D7490E94C08D78504ECF0",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "rtl/rtds_fpga_bit_cdc.v",
+    "baseline": null,
+    "local": "CE4CC11D09FF031E37BA62899D4F42A9FC37E725E519A146BB1EF9686848B149",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "rtl/rtds_fpga_cfg_cdc.v",
+    "baseline": null,
+    "local": "7DF0397CA62EA00CD1FE23E7F59097E998F2F938DDED354EE79221D9204CC259",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "rtl/rtds_fpga_count_cdc.v",
+    "baseline": null,
+    "local": "9D22CF6A0DF3BD021062ADF149CDDFA2B715D276BCACA5AA9960098BBFFEBB05",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "rtl/rtds_fpga_reset_sync.v",
+    "baseline": null,
+    "local": "D9CC4D993B76E9B52519C7FB74571A351022E06BDA0A7DA1056F5F9F5D5B0CE4",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "rtl/rtds_rx_block_writer.v",
+    "baseline": null,
+    "local": "2603933C0E6E637D77416413BFFE1E41AB47A0BEF19FD246949900C0817A6889",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "rtl/rtds_rx_frame_fifo.v",
+    "baseline": null,
+    "local": "3B3D2EF296580E764704677AC1FA70B29511CD1703876F41ABB82918EF7DA108",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "scripts/refresh_batch_bd.tcl",
+    "baseline": null,
+    "local": "6A406FE8C6F0279BBA86AF4B04698A11D14E82669BC121DB9C8D3921A42EB0C4",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v",
+    "baseline": "4F21E0E17DC2D1694818C47E4D8DE7BA7F1E69108571B017EC80AB3809A183D9",
+    "local": "45623D4AB4D2D2472B70FAC1E82CEB86194C1C2A983CE720FD7E2B06322D3735",
+    "remote": "4F21E0E17DC2D1694818C47E4D8DE7BA7F1E69108571B017EC80AB3809A183D9",
+    "conflict": false
+  },
+  {
+    "path": "regression/batch_1g/README.md",
+    "baseline": null,
+    "local": "999B44C781BCE0532464C7335F0BEE8758AA7A8C6F1070A47E61C72E7B2C13F5",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "regression/batch_1g/rtds_1g_test_if.sv",
+    "baseline": null,
+    "local": "FAD85EED2DBB0E042B7A82B8414CD1109790500B0A60E2894171498986D02B06",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "regression/batch_1g/rtds_axi_test_if.sv",
+    "baseline": null,
+    "local": "1CB884137DCD149FB2B4AB7F311A752DC0195EE7157B748454BBBC53456802CF",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "regression/batch_1g/rtds_ring_test_if.sv",
+    "baseline": null,
+    "local": "55B86B208463701BBAB1C392F88A1C595F77BFA8FF428B534378820C75FB603F",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "regression/batch_1g/rtds_rx_fifo_test_if.sv",
+    "baseline": null,
+    "local": "4E60B53CAB8ACF66070E952B65D4B71B3EDA8297F22EDE1B96852A0C7DFC9FD9",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "regression/batch_1g/run_later.tcl",
+    "baseline": null,
+    "local": "0086F89D00B2CE0DD18944B872E045B15ADC6EA3BC763116D06B8D1A8CEA325C",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "regression/batch_1g/tb_rtds_1g.sv",
+    "baseline": null,
+    "local": "88DD4CC4D641A6E97E1C9031DAA1AA2D6A290F25C1976EDB7FDD6D82E95B227E",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "regression/batch_1g/tb_rtds_axi.sv",
+    "baseline": null,
+    "local": "DD1499A9985F7942E9949FCD3B0F62FC36BECD8C64390A895BB0CC3BE2824CBA",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "regression/batch_1g/tb_rtds_ring.sv",
+    "baseline": null,
+    "local": "8E5C8419327FDEF3F9185E2BBF96BA3FF327841DF192B266F4A7C49B987BA36E",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "regression/batch_1g/tb_rtds_rx_fifo.sv",
+    "baseline": null,
+    "local": "6E48BA6A82EF54C30BDEC73C435D5298C4647B3AE4BA9146002ECBA41B155B82",
+    "remote": null,
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/aurora_ll_peer_bfm.sv",
+    "baseline": "14EDD6D13E771AEE65DF59670AEC526B653E11A70BF9DF9F52CAD3588163DD51",
+    "local": "08DF74440B9370BD645553D87BCF64EF2790F23C91A3C4146C16B2AF472A6ECF",
+    "remote": "14EDD6D13E771AEE65DF59670AEC526B653E11A70BF9DF9F52CAD3588163DD51",
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/conv_dma_axi_response_assertions.sv",
+    "baseline": "A4855864191B398227CEAF16BBBEF7B66259BF5D28B72842942871E1C6D94E54",
+    "local": "CB1D727F84288ABA476C6C817BCA725B10DBE1433D6126786D444ACF74CB223F",
+    "remote": "A4855864191B398227CEAF16BBBEF7B66259BF5D28B72842942871E1C6D94E54",
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/rp_api.svh",
+    "baseline": "79BB02C904ACBE4000F84314081C81BCC1A40ECAFBC49420BE4D1B6F23E6128A",
+    "local": "C367485F7A168A29182BC174D99F6544B8D045406640076BAD7C2E43CD68F8BA",
+    "remote": "79BB02C904ACBE4000F84314081C81BCC1A40ECAFBC49420BE4D1B6F23E6128A",
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/rtds_assertions.sv",
+    "baseline": "1960E37D3A29964A0641B9A39F80FA4CCEFE9566AB978C827A082AE857B50ED0",
+    "local": "3D127621D6A01B742FC465BA17BD887359BA4CF7928053634B5FA7702F520723",
+    "remote": "1960E37D3A29964A0641B9A39F80FA4CCEFE9566AB978C827A082AE857B50ED0",
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/rtds_scoreboard.sv",
+    "baseline": "0217F3CB75582E3C22F08A4A7BFF59696F629BA91C8FA3E5413B9002E1F97BE5",
+    "local": "4926A79211D69D981528EEC48B952DF9CFAF00C9C9F348449A7F6B47FE7E113E",
+    "remote": "0217F3CB75582E3C22F08A4A7BFF59696F629BA91C8FA3E5413B9002E1F97BE5",
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/rtds_test_pkg.sv",
+    "baseline": "C2106C2A3A89B8F0AF1998EC1A1C0EC0272D955AF0FC3A7F75086EBF2C3B0D36",
+    "local": "88F73B7AE4F1A0980B92C40C3C3D91BA26185A8565901AB1FE1885420ED1F2B8",
+    "remote": "C2106C2A3A89B8F0AF1998EC1A1C0EC0272D955AF0FC3A7F75086EBF2C3B0D36",
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/tb_xdma_rtds_trythrough.sv",
+    "baseline": "162B217952955536CC7AC51F42D6017DD02E527968825DFB620ACC1A91A44697",
+    "local": "D4E4008809D2D968C816213637EF509042FDA70466FCC28A3A6F0A2F8E44D192",
+    "remote": "162B217952955536CC7AC51F42D6017DD02E527968825DFB620ACC1A91A44697",
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/xdma_rp_backend.sv",
+    "baseline": "C988317D27907EAE235A754101E7841339D6658EA0F6DF94DBECF1619CEC3F08",
+    "local": "0790F404D8D73BC677E4DC4A1C775780865F439F1EA813579D2F1D07C7763567",
+    "remote": "C988317D27907EAE235A754101E7841339D6658EA0F6DF94DBECF1619CEC3F08",
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_rootport/tb/aurora_ll_peer_bfm.sv",
+    "baseline": "725A3B101D2B81C83AA98595D5C79D117CB663C656850A20C4BC930E35D078C1",
+    "local": "731C25F2F6E07DD9DD98342340B522D9F7FC1013699C630AF2389B95B1F6D72D",
+    "remote": "725A3B101D2B81C83AA98595D5C79D117CB663C656850A20C4BC930E35D078C1",
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_rootport/tb/board.sv",
+    "baseline": "5AE919966165F059537E3BE2653CE49A97A6F2DA83CBA2DE1E149EBFC952B2E9",
+    "local": "A8D96A2C631DEE34B42113D4B64F809B149ED691766408B9E457E77547ABFA0D",
+    "remote": "5AE919966165F059537E3BE2653CE49A97A6F2DA83CBA2DE1E149EBFC952B2E9",
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_rootport/tb/rtds_pcie_ep_sim_wrapper.sv",
+    "baseline": "AF7DEFBBA44F96CAAF8BA2A0DBF99E8A56A02E5A4D447BE75C3CE8C92F272579",
+    "local": "B494381EF1E229926E046E1D3F7CCAA5D30F0D01DAADC06610525D7222083F29",
+    "remote": "AF7DEFBBA44F96CAAF8BA2A0DBF99E8A56A02E5A4D447BE75C3CE8C92F272579",
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_rootport/tb/rtds_rootport_assertions.sv",
+    "baseline": "7772861D1A5AFDD587F7B772E4C6CB1EDB275ED05A8315FB76201DB5AEE065AE",
+    "local": "BDBAA2017EA4B3AD87EE54910D2A3B27051720A96A128C066EF15888CAD5519E",
+    "remote": "7772861D1A5AFDD587F7B772E4C6CB1EDB275ED05A8315FB76201DB5AEE065AE",
+    "conflict": false
+  },
+  {
+    "path": "regression/sim_xdma_rootport/tb/rtds_rootport_pkg.sv",
+    "baseline": "7EEFCB83D39C1CE6EA820F03BB3242733933601ECEF9B316284E265816985101",
+    "local": "6AB16F39F13907523397F45512E2F999C139964B72831DD8E0F71715CB67F101",
+    "remote": "7EEFCB83D39C1CE6EA820F03BB3242733933601ECEF9B316284E265816985101",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v",
+    "baseline": "F85D98BA28FF01AA1EB1A0118EC76659A6BBDA57A89C1B58D3DEED5C4CC2D320",
+    "local": "01E22B41D31247AAB5B17A9A4BED2A3367F41191125CB5C1249DCDA9B466F3C1",
+    "remote": "F85D98BA28FF01AA1EB1A0118EC76659A6BBDA57A89C1B58D3DEED5C4CC2D320",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v",
+    "baseline": "8FD87BAC86A5668B01E37403FF2E2C89FDA64BB08A4697859300B4E561DAB415",
+    "local": "EE1524C8406B35E077A12CA01675F3BAC0642612DC50C172DE1C55E4C38CF727",
+    "remote": "8FD87BAC86A5668B01E37403FF2E2C89FDA64BB08A4697859300B4E561DAB415",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v",
+    "baseline": "2DE3F83ABFB24907B055F0A8A472E02474B96DCA9064B3C45E0E2110001AA579",
+    "local": "6B3740933AF84E8D1C52FF1AD1D1F7C2CDA912B6A7BE05CF674CAF145C6735EE",
+    "remote": "2DE3F83ABFB24907B055F0A8A472E02474B96DCA9064B3C45E0E2110001AA579",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v",
+    "baseline": "828E593F24FC351566A209BC4175FAF28424DEE668EC39B342BA589EBB991F4B",
+    "local": "5D4CB90F66BEAAC3EC99D9E1BC7D56538032BA4EE769E51DCF8505EA75165464",
+    "remote": "828E593F24FC351566A209BC4175FAF28424DEE668EC39B342BA589EBB991F4B",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/TOP.v",
+    "baseline": "79E49B0CB3C632B002E8F03436D7635FFB048AF13A2166EFEB2F13D1D2E586D7",
+    "local": "4B4409F33D7BD8D82AB75F422418A5833B6EDA180FE6C2D947624A26FE27C78C",
+    "remote": "79E49B0CB3C632B002E8F03436D7635FFB048AF13A2166EFEB2F13D1D2E586D7",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/design_1.bd",
+    "baseline": "B1CE0F5AD1BD66659461D56772858B32537DDD3B8C043BB4FDB562E062CB13D8",
+    "local": "F290741C64B66DF763AB7559C30AE620208A9725DDC30DD0C6E071D60F2ACD6B",
+    "remote": "B1CE0F5AD1BD66659461D56772858B32537DDD3B8C043BB4FDB562E062CB13D8",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v",
+    "baseline": "C9062D444827910C5CFABFD5DA65D430C9F17706FDC1684E4C957C0D49EA89A5",
+    "local": "9B57C2C88DFC2A2DB0FEAFA66F6995BA55D1693648E749536155E393DE0F3FB9",
+    "remote": "C9062D444827910C5CFABFD5DA65D430C9F17706FDC1684E4C957C0D49EA89A5",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/sim/design_1.v",
+    "baseline": "170E8AB1F0801212F5AE8E6B26B3EE8F82CF08107B19A1D4665B9F2748125C83",
+    "local": "F6410E4B5BD547C6072FBF43AD9D9783F19876D391AD3EB73359A91301AD863C",
+    "remote": "170E8AB1F0801212F5AE8E6B26B3EE8F82CF08107B19A1D4665B9F2748125C83",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v",
+    "baseline": "170E8AB1F0801212F5AE8E6B26B3EE8F82CF08107B19A1D4665B9F2748125C83",
+    "local": "F6410E4B5BD547C6072FBF43AD9D9783F19876D391AD3EB73359A91301AD863C",
+    "remote": "170E8AB1F0801212F5AE8E6B26B3EE8F82CF08107B19A1D4665B9F2748125C83",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_CONV_DMA_0_0/sim/design_1_CONV_DMA_0_0.v",
+    "baseline": "46D2F03A3F239E38F67249AF070BD110AE317430636F2158BF35F57F2E1DAC8A",
+    "local": "367BAA8E8F20F41389378289D91DFA1B1DD11FA44825557DB061CFE65BA91E98",
+    "remote": "46D2F03A3F239E38F67249AF070BD110AE317430636F2158BF35F57F2E1DAC8A",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_CONV_DMA_0_0/synth/design_1_CONV_DMA_0_0.v",
+    "baseline": "4891900A26E7EF959A63DACC3AA52C5A157D8780F46B8CFBF3FDAC06DDA20B51",
+    "local": "C1043C4EA5A55E1F2DCB6D306BF2790EB9B1B5B695E021F87883911415E29C17",
+    "remote": "4891900A26E7EF959A63DACC3AA52C5A157D8780F46B8CFBF3FDAC06DDA20B51",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_INFO_EXCH_0_0/sim/design_1_INFO_EXCH_0_0.v",
+    "baseline": "59902613C546D170EA049D9DF9B08F62B0F8E6DC8FDD35E3F01F0877ADFE57BA",
+    "local": "1EE16A275CC766233EFEA9E1C75E5A0AAC9780E530EE91540A1156393B02DAE1",
+    "remote": "59902613C546D170EA049D9DF9B08F62B0F8E6DC8FDD35E3F01F0877ADFE57BA",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_INFO_EXCH_0_0/synth/design_1_INFO_EXCH_0_0.v",
+    "baseline": "27A535FABFFF626F4401DF57C22F10FB023965B4052A0B187E6EC1E5DC253E26",
+    "local": "306AFA568F85706D88A28A3D14330D018B6862F9237DA7F547DA5E430011AA6F",
+    "remote": "27A535FABFFF626F4401DF57C22F10FB023965B4052A0B187E6EC1E5DC253E26",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v",
+    "baseline": "D6C2FF4CF34CE731983BDC3D357615315A76158B06A5C26D27143DB190F308BB",
+    "local": "13D3AA9C0E35AC251E1D3A9E34B76C2081C811A27FA0AA4E57AC3811A80EBAAD",
+    "remote": "D6C2FF4CF34CE731983BDC3D357615315A76158B06A5C26D27143DB190F308BB",
+    "conflict": false
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v",
+    "baseline": "73DFD631417CD5D3297F166ECCA33C62D14EF42E30FE692AECBB0F4C08EDFB69",
+    "local": "E40B572400A279E544651B12EE5EA4C2014B3886B693166083A495449445A710",
+    "remote": "73DFD631417CD5D3297F166ECCA33C62D14EF42E30FE692AECBB0F4C08EDFB69",
+    "conflict": false
+  },
+  {
+    "path": "rtl/ddr4/rtds_axi_ram_model.sv",
+    "baseline": "288870EC8CD76156EBA26CABC15A646DE761318323966F6532922D80A375303A",
+    "local": "8840BC382F3BB00192F9E129FEB7EF25775567095849AFE624E1D9F3E41A6639",
+    "remote": "288870EC8CD76156EBA26CABC15A646DE761318323966F6532922D80A375303A",
+    "conflict": false
+  },
+  {
+    "path": "rtl/ddr4/rtds_ddr4_backend.sv",
+    "baseline": "357DEB9B50633A752A9C00D13CFB110E02F47E8A456F39094FC9F100A5CDDD0A",
+    "local": "61F11856AEF99DE7B6F63E9977182A11D02CA38F24EDF4F5D81CB87C5C42325D",
+    "remote": "357DEB9B50633A752A9C00D13CFB110E02F47E8A456F39094FC9F100A5CDDD0A",
+    "conflict": false
+  }
+]

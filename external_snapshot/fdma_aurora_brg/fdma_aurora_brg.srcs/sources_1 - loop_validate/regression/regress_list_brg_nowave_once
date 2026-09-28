@@ -1,0 +1,5 @@
+# testcase                    repeat  wave(0|1)
+tc_brg_rd_ready_stall           1       0
+tc_brg_wr_ready_stall           1       0
+tc_brg_tx_fifo_waterline        1       0
+tc_brg_rx_fifo_overflow         1       0

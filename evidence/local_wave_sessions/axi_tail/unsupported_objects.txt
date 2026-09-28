@@ -1,0 +1,11 @@
+﻿XSim 2020.2 explicitly reports these objects as untraceable (automatic variables or dynamic types).
+/tb_rtds_axi_tail/U_RAM/mem
+/tb_rtds_axi_tail/read_words/Block165_66/beat
+/tb_rtds_axi_tail/read_words/address
+/tb_rtds_axi_tail/read_words/count
+/tb_rtds_axi_tail/read_words/seed
+/tb_rtds_axi_tail/write_words/Block145_65/beat
+/tb_rtds_axi_tail/write_words/address
+/tb_rtds_axi_tail/write_words/bad
+/tb_rtds_axi_tail/write_words/count
+/tb_rtds_axi_tail/write_words/seed

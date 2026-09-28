@@ -1,0 +1,15 @@
+﻿parent_signal,instance,module,port,expression,source,line
+/tb_rtds_1g/U_DUT/clk_250m,U_RTDS_FPGA_CFG_CDC,RTDS_FPGA_CFG_CDC,src_clk,clk_250m,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,262
+/tb_rtds_1g/U_DUT/clk_250m,U_RTDS_FPGA_RESET_SYNC_SRC,RTDS_FPGA_RESET_SYNC,clk,clk_250m,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,27
+/tb_rtds_1g/U_DUT/rst_n,U_RTDS_FPGA_RESET_SYNC_SRC,RTDS_FPGA_RESET_SYNC,rst_async_n,rst_n,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,27
+/tb_rtds_1g/U_DUT/rst_n,U_RTDS_FPGA_RESET_SYNC_USER,RTDS_FPGA_RESET_SYNC,rst_async_n,rst_n,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,30
+/tb_rtds_1g/U_DUT/user_clk,U_RTDS_FPGA_CFG_CDC,RTDS_FPGA_CFG_CDC,dst_clk,user_clk,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,262
+/tb_rtds_1g/U_DUT/user_clk,U_RTDS_FPGA_RESET_SYNC_USER,RTDS_FPGA_RESET_SYNC,clk,user_clk,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,30
+/tb_rtds_1g/U_DUT/src_rst_n,U_RTDS_FPGA_RESET_SYNC_SRC,RTDS_FPGA_RESET_SYNC,rst_sync_n,src_rst_n,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,27
+/tb_rtds_1g/U_DUT/user_rst_n,U_RTDS_FPGA_RESET_SYNC_USER,RTDS_FPGA_RESET_SYNC,rst_sync_n,user_rst_n,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,30
+/tb_rtds_1g/U_DUT/cfg_hold,U_RTDS_FPGA_CFG_CDC,RTDS_FPGA_CFG_CDC,src_data,cfg_hold,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,262
+/tb_rtds_1g/U_DUT/req_sync,U_RTDS_FPGA_CFG_CDC,RTDS_FPGA_CFG_CDC,dst_req,req_sync,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,264
+/tb_rtds_1g/U_DUT/cfg_cdc_data,U_RTDS_FPGA_CFG_CDC,RTDS_FPGA_CFG_CDC,dst_data,cfg_cdc_data,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,264
+/tb_rtds_1g/U_DUT/cfg_send,U_RTDS_FPGA_CFG_CDC,RTDS_FPGA_CFG_CDC,src_send,cfg_send,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,263
+/tb_rtds_1g/U_DUT/cfg_dest_ack,U_RTDS_FPGA_CFG_CDC,RTDS_FPGA_CFG_CDC,dst_ack,cfg_dest_ack,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,263
+/tb_rtds_1g/U_DUT/ack_sync,U_RTDS_FPGA_CFG_CDC,RTDS_FPGA_CFG_CDC,src_rcv,ack_sync,F:\RTDS_test_DDR4_64bit_batch_dev\rtl\rtds_1g_periodic_tx.v,263

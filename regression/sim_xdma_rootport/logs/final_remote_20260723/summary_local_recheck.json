@@ -1,0 +1,47 @@
+﻿{
+    "log":  "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\final_remote_20260723\\simulate.log",
+    "scanned_logs":  [
+                         "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\final_remote_20260723\\simulate.log",
+                         "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\final_remote_20260723\\prepare_rootport_sim.log",
+                         "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\final_remote_20260723\\xvlog.log",
+                         "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\final_remote_20260723\\xvhdl.log",
+                         "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\final_remote_20260723\\xelab.log"
+                     ],
+    "passed":  true,
+    "milestones":  {
+                       "link":  true,
+                       "bar":  true,
+                       "msi_config":  true,
+                       "user_irq_enable":  true,
+                       "base_dma":  true,
+                       "cpu_to_aurora":  true,
+                       "aurora_to_cpu":  true,
+                       "result_zero":  true,
+                       "pass_marker":  true
+                   },
+    "warning_count":  118,
+    "warnings_by_phase":  [
+                              {
+                                  "phase":  "simulate.log",
+                                  "count":  6
+                              },
+                              {
+                                  "phase":  "prepare_rootport_sim.log",
+                                  "count":  1
+                              },
+                              {
+                                  "phase":  "xvlog.log",
+                                  "count":  9
+                              },
+                              {
+                                  "phase":  "xelab.log",
+                                  "count":  102
+                              }
+                          ],
+    "unexpected_warnings":  [
+
+                            ],
+    "fatal_lines":  [
+
+                    ]
+}

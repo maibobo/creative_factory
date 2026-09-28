@@ -1,0 +1,5 @@
+evidence/**/*.wdb filter=lfs diff=lfs merge=lfs -text
+evidence/**/*.vcd filter=lfs diff=lfs merge=lfs -text
+regression/**/*.wdb filter=lfs diff=lfs merge=lfs -text
+regression/**/*.vcd filter=lfs diff=lfs merge=lfs -text
+docs/RPT205-1-001.brd filter=lfs diff=lfs merge=lfs -text

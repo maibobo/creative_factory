@@ -1,0 +1,262 @@
+[
+  {
+    "path": "README_本地开发.md",
+    "sha256": "8d54234e066f9be6dc20001e0e61ed9261ec8229e9fe2ea5bc558b299f6eb32f"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.xpr",
+    "sha256": "4d4b03e6d38679d38f78b776b3a8f363281fd921d9b413d2524eec68a45b3773"
+  },
+  {
+    "path": "docs/PCIe交互协议_V2.01.md",
+    "sha256": "ea18e6ec9c76d738451bd188b62d05e1f4e2790751b6336b2fc97869b0b0b97a"
+  },
+  {
+    "path": "docs/新增需求_主机逻辑与验证说明.md",
+    "sha256": "72064a689cf06ab6d4055152c7e698c609136990a9829ac802cd7974c2d16572"
+  },
+  {
+    "path": "docs/本轮代码规范核对.md",
+    "sha256": "45433105a1a0bc93bdfe78db9e19408c6aeffdab680ce97d52360615d8f7a136"
+  },
+  {
+    "path": "reports/batch_core_style_audit.json",
+    "sha256": "9b9149b6f2e3490071c94d09550b8271df6883577bac6644f6b2afa161e7e1ff"
+  },
+  {
+    "path": "reports/batch_interface_reference_audit.json",
+    "sha256": "0c8af982019ed2a602826f864db961a14b1b89aade9773b332ff325c4672bd6f"
+  },
+  {
+    "path": "reports/batch_project_audit.json",
+    "sha256": "19d48268957dfec31214ec06b4440859945c228dd4b8ba3bd9d498455735f561"
+  },
+  {
+    "path": "reports/batch_static_parse.json",
+    "sha256": "8edcf5644c3c390418335e0edbeb2634e51a011f62d9ab4bdb91a7229b679e68"
+  },
+  {
+    "path": "reports/remote_three_way_20260914.json",
+    "sha256": "8805c3eed8e43f3651f3bcb3255e19e4ee522e7dbfb7a64cfdad9246de986039"
+  },
+  {
+    "path": "rtl/rtds_1g_periodic_tx.v",
+    "sha256": "e46cf65859fe152abd20a0d8bbda3fe945a2b3d1148d7490e94c08d78504ecf0"
+  },
+  {
+    "path": "rtl/rtds_fpga_1g_init.v",
+    "sha256": "7759c575bc205cf0855ec5402e4a3c57ca99612559d5ccaec7135c46bcb3615e"
+  },
+  {
+    "path": "rtl/rtds_fpga_bit_cdc.v",
+    "sha256": "ce4cc11d09ff031e37ba62899d4f42a9fc37e725e519a146bb1ef9686848b149"
+  },
+  {
+    "path": "rtl/rtds_fpga_cfg_cdc.v",
+    "sha256": "7df0397ca62ea00cd1fe23e7f59097e998f2f938dded354ee79221d9204cc259"
+  },
+  {
+    "path": "rtl/rtds_fpga_count_cdc.v",
+    "sha256": "9d22cf6a0df3bd021062adf149cddfa2b715d276bcaca5aa9960098bbffebb05"
+  },
+  {
+    "path": "rtl/rtds_fpga_reset_sync.v",
+    "sha256": "d9cc4d993b76e9b52519c7fb74571a351022e06bda0a7da1056f5f9f5d5b0ce4"
+  },
+  {
+    "path": "rtl/rtds_rx_block_writer.v",
+    "sha256": "2603933c0e6e637d77416413bffe1e41ab47a0bef19fd246949900c0817a6889"
+  },
+  {
+    "path": "rtl/rtds_rx_frame_fifo.v",
+    "sha256": "00c2fccd0e09d8798be465602efce96b579489bf3f7d72b4aae0724a826cc6fd"
+  },
+  {
+    "path": "scripts/refresh_batch_bd.tcl",
+    "sha256": "9d60311300233e9ef194d37f74af5ece270f528794de4a1bfbd63bc46121c589"
+  },
+  {
+    "path": "external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_axi_to_ll_exdes.v",
+    "sha256": "3f43cb04dc6be1c2f69ee5d53f75f0d39ebf46e0883ece7aeef275af8b085b6e"
+  },
+  {
+    "path": "external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_design.v",
+    "sha256": "2354b16cf7eca846c9e73110033228af6631c41c9a5e3b39a6f6759e688b18f5"
+  },
+  {
+    "path": "external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_ll_to_axi_exdes.v",
+    "sha256": "82f28f31dbf196d674b1a54bd07ef47f30c1a140c822ed35e8d3a3f3061288ba"
+  },
+  {
+    "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v",
+    "sha256": "d9b87b661494bbe5b12b6efe239d5d34ee3d740e2f299c9719688ca8c242ac6a"
+  },
+  {
+    "path": "regression/batch_1g/README.md",
+    "sha256": "999b44c781bce0532464c7335f0bee8758aa7a8c6f1070a47e61c72e7b2c13f5"
+  },
+  {
+    "path": "regression/batch_1g/rtds_1g_test_if.sv",
+    "sha256": "fad85eed2dbb0e042b7a82b8414cd1109790500b0a60e2894171498986d02b06"
+  },
+  {
+    "path": "regression/batch_1g/rtds_axi_test_if.sv",
+    "sha256": "1cb884137dcd149fb2b4ab7f311a752dc0195ee7157b748454bbbc53456802cf"
+  },
+  {
+    "path": "regression/batch_1g/rtds_regs_test_if.sv",
+    "sha256": "47f9a78199f855cac151fb088f86e66aa99a435a005e5a122391934623acf870"
+  },
+  {
+    "path": "regression/batch_1g/rtds_ring_test_if.sv",
+    "sha256": "91843432f7e29275664d2aac1f8c9129cd5f60f94f828e81e7db633cb02debeb"
+  },
+  {
+    "path": "regression/batch_1g/rtds_rx_fifo_test_if.sv",
+    "sha256": "d053d85f6eb38cf5557c4945cf3c22a6ac57c6b1b2abbc14941403c53592e1f5"
+  },
+  {
+    "path": "regression/batch_1g/run_later.tcl",
+    "sha256": "0086f89d00b2ce0dd18944b872e045b15adc6ea3bc763116d06b8d1a8cea325c"
+  },
+  {
+    "path": "regression/batch_1g/run_modules.tcl",
+    "sha256": "446ca45d69afdebefc00ee612ee372980915fc57e94edddead2980e666799efd"
+  },
+  {
+    "path": "regression/batch_1g/tb_rtds_1g.sv",
+    "sha256": "25d063615509d5f644632c81fe143fae95edb107a891199ff49f28b68516441e"
+  },
+  {
+    "path": "regression/batch_1g/tb_rtds_axi.sv",
+    "sha256": "218e4a271ad8409d50a2c3fab1049796c4ea688da2344fe283145f9756788d6d"
+  },
+  {
+    "path": "regression/batch_1g/tb_rtds_regs.sv",
+    "sha256": "9e170422b8cfc6c0a5d9d626b4f3b0addf7240e87ca99d2c13672ee84ae08fb4"
+  },
+  {
+    "path": "regression/batch_1g/tb_rtds_ring.sv",
+    "sha256": "e3ee67959a8db46b76cc319cd702014ecb056ae55ad59d9493f368c0375bd119"
+  },
+  {
+    "path": "regression/batch_1g/tb_rtds_rx_fifo.sv",
+    "sha256": "d6d422658a2a955f5991160a8b8f427bd53333e774ddd6f37982f483653f0b9c"
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/aurora_ll_peer_bfm.sv",
+    "sha256": "08df74440b9370bd645553d87bcf64ef2790f23c91a3c4146c16b2af472a6ecf"
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/conv_dma_axi_response_assertions.sv",
+    "sha256": "cb1d727f84288aba476c6c817bca725b10dbe1433d6126786d444acf74cb223f"
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/rtds_assertions.sv",
+    "sha256": "3d127621d6a01b742fc465ba17bd887359ba4cf7928053634b5fa7702f520723"
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/rtds_scoreboard.sv",
+    "sha256": "4926a79211d69d981528eec48b952df9cfaf00c9c9f348449a7f6b47fe7e113e"
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/rtds_test_pkg.sv",
+    "sha256": "88f73b7ae4f1a0980b92c40c3c3d91ba26185a8565901ab1fe1885420ed1f2b8"
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/tb_xdma_rtds_trythrough.sv",
+    "sha256": "d4e4008809d2d968c816213637ef509042fda70466fcc28a3a6f0a2f8e44d192"
+  },
+  {
+    "path": "regression/sim_xdma_trythrough/xdma_rp_backend.sv",
+    "sha256": "0790f404d8d73bc677e4dc4a1c775780865f439f1ea813579d2f1d07c7763567"
+  },
+  {
+    "path": "regression/sim_xdma_rootport/tb/aurora_ll_peer_bfm.sv",
+    "sha256": "99fa3d7b4b3f3e812e0fc06b6974d404c6dc2eab22ea6db220d569d92305792f"
+  },
+  {
+    "path": "regression/sim_xdma_rootport/tb/board.sv",
+    "sha256": "6ee12b3becf0449d6d412a498a8769dc1ac20482323b2f7b3a098bb4b5557839"
+  },
+  {
+    "path": "regression/sim_xdma_rootport/tb/rtds_pcie_ep_sim_wrapper.sv",
+    "sha256": "b494381ef1e229926e046e1d3f7ccaa5d30f0d01daadc06610525d7222083f29"
+  },
+  {
+    "path": "regression/sim_xdma_rootport/tb/rtds_rootport_assertions.sv",
+    "sha256": "c09bd203a73487c73b95da0fffa71999df5551d1b0338ff92fa56b76fd56f796"
+  },
+  {
+    "path": "regression/sim_xdma_rootport/tb/rtds_rootport_pkg.sv",
+    "sha256": "642db59d45cc0669fad45d4f2afb1c6869a28ff46a192847e3d96189aa311255"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v",
+    "sha256": "fbf997e80d55872495f7f02cdf663d9eae8e1b5680aeae49331ede901a468ddd"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v",
+    "sha256": "cf5b964615d63f96e07d21e0417f45ae8eda7a4c63f03c648dc91b0a415d8463"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v",
+    "sha256": "62e613ff365f438e0c4ac18560f3c519255f4373f9b77cf6ed1abd052a723efa"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v",
+    "sha256": "98fcc353043a0cd41c2235d2eb188d48420c6f006cf9a80f7dd5018e1892ec80"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/TOP.v",
+    "sha256": "d1233d75e4bc8b3d92af90ee115b2c741d2443c98825fb1abc3c4b66968e8603"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/design_1.bd",
+    "sha256": "f290741c64b66df763ab7559c30ae620208a9725ddc30dd0c6e071d60f2acd6b"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v",
+    "sha256": "9b57c2c88dfc2a2db0feafa66f6995ba55d1693648e749536155e393de0f3fb9"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/sim/design_1.v",
+    "sha256": "f6410e4b5bd547c6072fbf43ad9d9783f19876d391ad3eb73359a91301ad863c"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v",
+    "sha256": "f6410e4b5bd547c6072fbf43ad9d9783f19876d391ad3eb73359a91301ad863c"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_CONV_DMA_0_0/sim/design_1_CONV_DMA_0_0.v",
+    "sha256": "367baa8e8f20f41389378289d91dfa1b1dd11fa44825557db061cfe65ba91e98"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_CONV_DMA_0_0/synth/design_1_CONV_DMA_0_0.v",
+    "sha256": "c1043c4ea5a55e1f2dcb6d306bf2790eb9b1b5b695e021f87883911415e29c17"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_INFO_EXCH_0_0/sim/design_1_INFO_EXCH_0_0.v",
+    "sha256": "1ee16a275cc766233efea9e1c75e5a0aac9780e530ee91540a1156393b02dae1"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_INFO_EXCH_0_0/synth/design_1_INFO_EXCH_0_0.v",
+    "sha256": "306afa568f85706d88a28a3d14330d018b6862f9237da7f547da5e430011aa6f"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v",
+    "sha256": "13d3aa9c0e35ac251e1d3a9e34b76c2081c811a27fa0aa4e57ac3811a80ebaad"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v",
+    "sha256": "e40b572400a279e544651b12ee5ea4c2014b3886b693166083a495449445a710"
+  },
+  {
+    "path": "rtl/ddr4/rtds_axi_ram_model.sv",
+    "sha256": "8840bc382f3bb00192f9e129feb7ef25775567095849afe624e1d9f3e41a6639"
+  },
+  {
+    "path": "rtl/ddr4/rtds_ddr4_backend.sv",
+    "sha256": "61f11856aef99de7b6f63e9977182a11d02ca38f24edf4f5d81cb87c5c42325d"
+  }
+]

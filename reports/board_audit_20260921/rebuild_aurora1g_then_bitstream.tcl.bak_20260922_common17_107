@@ -1,0 +1,99 @@
+# Rebuild stale Aurora 1G output products/OOC DCP, then rebuild the top design.
+# Run this inside the already-open Vivado 2020.2 GUI Tcl Console.
+# This script intentionally does not close the project or exit Vivado.
+
+set expected_project_dir {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev}
+set active_projects [get_projects -quiet]
+if {[llength $active_projects] != 1} {
+    error "Expected exactly one open project, found [llength $active_projects]."
+}
+set active_project [lindex $active_projects 0]
+set active_project_dir [file normalize [get_property DIRECTORY $active_project]]
+if {![string equal -nocase $active_project_dir [file normalize $expected_project_dir]]} {
+    error "Wrong open project: $active_project_dir"
+}
+
+set aurora_ip [get_ips -quiet aurora_8b10b_1p25g]
+if {[llength $aurora_ip] != 1} {
+    error "Expected one aurora_8b10b_1p25g IP, found [llength $aurora_ip]."
+}
+
+puts "INFO: enforcing verified Aurora 1G placement configuration..."
+set_property -dict [list \
+    CONFIG.C_START_QUAD {Quad_X0Y1} \
+    CONFIG.C_START_LANE {X0Y4} \
+    CONFIG.C_REFCLK_SOURCE {MGTREFCLK0 of Quad X0Y1}] $aurora_ip
+
+puts "INFO: removing stale generated products and regenerating Aurora 1G..."
+reset_target all $aurora_ip
+generate_target all $aurora_ip
+export_ip_user_files -of_objects $aurora_ip -no_script -sync -force -quiet
+
+set aurora_run [get_runs -quiet aurora_8b10b_1p25g_synth_1]
+if {[llength $aurora_run] == 0} {
+    create_ip_run $aurora_ip
+    set aurora_run [get_runs -quiet aurora_8b10b_1p25g_synth_1]
+}
+if {[llength $aurora_run] != 1} {
+    error "Expected one Aurora OOC synthesis run, found [llength $aurora_run]."
+}
+
+puts "INFO: rebuilding Aurora 1G OOC synthesis..."
+reset_run $aurora_run
+launch_runs $aurora_run -jobs 4
+wait_on_run $aurora_run
+set aurora_status [get_property STATUS $aurora_run]
+puts "INFO: Aurora OOC status: $aurora_status"
+if {![string match -nocase {*complete*} $aurora_status]} {
+    error "Aurora OOC synthesis did not complete: $aurora_status"
+}
+
+puts "INFO: rebuilding top synthesis..."
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+set synth_status [get_property STATUS [get_runs synth_1]]
+puts "INFO: top synthesis status: $synth_status"
+if {![string match -nocase {*complete*} $synth_status]} {
+    error "Top synthesis did not complete: $synth_status"
+}
+
+puts "INFO: rebuilding implementation through write_bitstream..."
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set impl_status [get_property STATUS [get_runs impl_1]]
+puts "INFO: implementation status: $impl_status"
+if {![string match -nocase {*complete*} $impl_status]} {
+    error "Implementation/bitstream did not complete: $impl_status"
+}
+
+set impl_dir [get_property DIRECTORY [get_runs impl_1]]
+set run_log [file join $impl_dir runme.log]
+if {![file exists $run_log]} {
+    error "Missing implementation log: $run_log"
+}
+set fp [open $run_log r]
+set log_text [read $fp]
+close $fp
+
+foreach fatal_pattern {
+    {CRITICAL WARNING:.*Cannot set LOC property}
+    {ERROR: \[DRC UCIO-1\]}
+    {ERROR: \[Vivado 12-1345\]}
+    {ERROR: \[Common 17-39\]}
+} {
+    if {[regexp -nocase $fatal_pattern $log_text]} {
+        error "Post-build verification failed; matched: $fatal_pattern"
+    }
+}
+
+set bit_files [glob -nocomplain -directory $impl_dir *.bit]
+if {[llength $bit_files] == 0} {
+    error "Implementation reports complete but no .bit file was found in $impl_dir"
+}
+
+puts "SUCCESS: bitstream generated without the prior GT LOC/UCIO failure."
+foreach bit_file $bit_files {
+    puts "BITFILE: $bit_file"
+}
+puts "INFO: Vivado GUI and project remain open."

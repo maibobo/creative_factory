@@ -1,0 +1,41 @@
+{
+  "target": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev",
+  "created": "2026-09-28 11:21:33 +08:00",
+  "files": [
+    {
+      "path": "evidence/local_wave_sessions/WCFG_ring_axi_regs_观察链与时间刻度.md",
+      "bytes": 20912,
+      "sha256": "D5173AF392C566EAE021354DA61A77582E83BFDFC47620E0BF6F198D83B39EA0"
+    },
+    {
+      "path": "evidence/local_wave_sessions/WCFG_阅读与代码对照.md",
+      "bytes": 7540,
+      "sha256": "170AF97348D93495E2E96C0BC8341A7FC2954540DC6E633AA62774320058C6BC"
+    },
+    {
+      "path": "evidence/local_wave_sessions/README.md",
+      "bytes": 16931,
+      "sha256": "9E03DA554D04825D3ACDD176CE249E7BF82A114AF658F6B9B85F4E180C6072EB"
+    },
+    {
+      "path": "evidence/local_wave_sessions/trace_probe.py",
+      "bytes": 2592,
+      "sha256": "3A9EF296AA36430A0E7AFF9EF3B142AF300DB49AFBADCE1A9F08B265D9314CA7"
+    },
+    {
+      "path": "evidence/local_wave_sessions/axi_handshake_table.py",
+      "bytes": 4302,
+      "sha256": "920C586498E21FA4755402972F54A85CD6B49245F14A6EA335AC31E945BB26FA"
+    },
+    {
+      "path": "evidence/local_wave_sessions/resizable_viewer_test_results.json",
+      "bytes": 3653,
+      "sha256": "371098812437855992D4B39037F6C637A6FCA5DCE2CC63811E3C5BA994498EAF"
+    },
+    {
+      "path": "scripts/test_resizable_wave_viewers.cjs",
+      "bytes": 6691,
+      "sha256": "43A69FC0BCD10CEC1ED11C87164B835310502EF38A962BD77CE0B88A51B84F38"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Sep 25 17:56:11 2026
+# Process ID: 15008
+# Current directory: E:/PCIE-CPU
+# Command line: vivado.exe -mode batch -source F:\RTDS_test_DDR4_64bit_batch_dev\scripts\build_local_wave_sessions.tcl -log F:\RTDS_test_DDR4_64bit_batch_dev\logs\build_local_wave_sessions.log -journal F:\RTDS_test_DDR4_64bit_batch_dev\logs\build_local_wave_sessions.jou
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/logs/build_local_wave_sessions.log
+# Journal file: F:\RTDS_test_DDR4_64bit_batch_dev\logs\build_local_wave_sessions.jou
+#-----------------------------------------------------------
+source {F:\RTDS_test_DDR4_64bit_batch_dev\scripts\build_local_wave_sessions.tcl}
+source tb_rtds_1g.tcl
+source tb_rtds_tx.tcl
+source tb_rtds_rx_fifo.tcl
+source tb_rtds_ring.tcl
+source tb_rtds_axi.tcl
+source tb_rtds_axi_tail.tcl
+source tb_rtds_regs.tcl

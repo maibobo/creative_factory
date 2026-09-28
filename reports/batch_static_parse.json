@@ -1,0 +1,186 @@
+[
+  {
+    "file": "rtl\\rtds_1g_periodic_tx.v",
+    "diagnostics": []
+  },
+  {
+    "file": "rtl\\rtds_fpga_1g_init.v",
+    "diagnostics": []
+  },
+  {
+    "file": "rtl\\rtds_fpga_bit_cdc.v",
+    "diagnostics": []
+  },
+  {
+    "file": "rtl\\rtds_fpga_cfg_cdc.v",
+    "diagnostics": []
+  },
+  {
+    "file": "rtl\\rtds_fpga_count_cdc.v",
+    "diagnostics": []
+  },
+  {
+    "file": "rtl\\rtds_fpga_reset_sync.v",
+    "diagnostics": []
+  },
+  {
+    "file": "rtl\\rtds_rx_block_writer.v",
+    "diagnostics": []
+  },
+  {
+    "file": "rtl\\rtds_rx_frame_fifo.v",
+    "diagnostics": []
+  },
+  {
+    "file": "rtl\\ddr4\\rtds_axi_ram_model.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "rtl\\ddr4\\rtds_ddr4_backend.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\Aurora_frame_gen.v",
+    "diagnostics": []
+  },
+  {
+    "file": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\Aurora_PCIe_cdc.v",
+    "diagnostics": []
+  },
+  {
+    "file": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\CLK_GEN.v",
+    "diagnostics": []
+  },
+  {
+    "file": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\CONV_DMA.v",
+    "diagnostics": []
+  },
+  {
+    "file": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\DATA_CDC.v",
+    "diagnostics": []
+  },
+  {
+    "file": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\INFO_EXCH.v",
+    "diagnostics": []
+  },
+  {
+    "file": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\LED.v",
+    "diagnostics": []
+  },
+  {
+    "file": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\PCIe.v",
+    "diagnostics": []
+  },
+  {
+    "file": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\PCIe_Aurora_cdc.v",
+    "diagnostics": []
+  },
+  {
+    "file": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\pcie_fdma_aurora_brg_adapter.v",
+    "diagnostics": []
+  },
+  {
+    "file": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\TEMP_RD.v",
+    "diagnostics": []
+  },
+  {
+    "file": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\TOP.v",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\batch_1g\\rtds_1g_test_if.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\batch_1g\\rtds_axi_test_if.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\batch_1g\\rtds_ring_test_if.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\batch_1g\\rtds_rx_fifo_test_if.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\batch_1g\\tb_rtds_1g.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\batch_1g\\tb_rtds_axi.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\batch_1g\\tb_rtds_ring.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\batch_1g\\tb_rtds_rx_fifo.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_trythrough\\aurora_ll_peer_bfm.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_trythrough\\conv_dma_axi_response_assertions.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_trythrough\\rtds_assertions.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_trythrough\\rtds_scoreboard.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_trythrough\\rtds_test_pkg.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_trythrough\\tb_xdma_rtds_trythrough.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_trythrough\\xdma_rp_backend.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_rootport\\tb\\aurora_ll_peer_bfm.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_rootport\\tb\\board.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_rootport\\tb\\conv_dma_axi_monitor.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_rootport\\tb\\pcie_cq_host_memory_monitor.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_rootport\\tb\\rtds_pcie_ep_sim_wrapper.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_rootport\\tb\\rtds_rootport_assertions.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_rootport\\tb\\rtds_rootport_pkg.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_rootport\\tb\\xdma_axi_activity_monitor.sv",
+    "diagnostics": []
+  },
+  {
+    "file": "regression\\sim_xdma_rootport\\tb\\xdma_irq_monitor.sv",
+    "diagnostics": []
+  }
+]

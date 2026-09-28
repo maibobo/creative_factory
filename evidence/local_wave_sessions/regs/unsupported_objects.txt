@@ -1,0 +1,6 @@
+﻿XSim 2020.2 explicitly reports these objects as untraceable (automatic variables or dynamic types).
+/tb_rtds_regs/check/address
+/tb_rtds_regs/check/value
+/tb_rtds_regs/wr/address
+/tb_rtds_regs/wr/strobe
+/tb_rtds_regs/wr/value

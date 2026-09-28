@@ -1,0 +1,2 @@
+# testcase                    repeat  wave(0|1)
+tc_brg_tx_fifo_waterline        1       0

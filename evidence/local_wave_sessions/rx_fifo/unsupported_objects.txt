@@ -1,0 +1,5 @@
+﻿XSim 2020.2 explicitly reports these objects as untraceable (automatic variables or dynamic types).
+/tb_rtds_rx_fifo/expected
+/tb_rtds_rx_fifo/send/n
+/tb_rtds_rx_fifo/send/stored
+/tb_rtds_rx_fifo/send/value

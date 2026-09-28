@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Sep 20 15:28:01 2026
+# Process ID: 33740
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev
+# Command line: vivado.exe -mode batch -source C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\scripts\resume_rootport_v201_step2.tcl -log C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\rootport_concurrent_20260920\vivado.log -journal C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\rootport_concurrent_20260920\vivado.jou
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/rootport_concurrent_20260920/vivado.log
+# Journal file: C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\rootport_concurrent_20260920\vivado.jou
+#-----------------------------------------------------------
+source {C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\scripts\resume_rootport_v201_step2.tcl}

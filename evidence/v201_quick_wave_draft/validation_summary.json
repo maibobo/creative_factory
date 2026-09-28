@@ -1,0 +1,18 @@
+{
+  "cases": [
+    "1g",
+    "ring",
+    "axi",
+    "axi_tail",
+    "rx_fifo",
+    "regs",
+    "tx"
+  ],
+  "all_test_pass": true,
+  "runtime_error_or_fatal": 0,
+  "raw_files": 28,
+  "figures_no_title": 17,
+  "figures_with_title": 17,
+  "docx_structure": "PASS",
+  "docx_inline_figures": 17
+}

@@ -1,0 +1,58 @@
+﻿[
+  {
+    "case": "1g",
+    "loaded_objects": 198,
+    "listed_traceable_objects": 195,
+    "explicitly_unsupported_objects": 3,
+    "unexplained_omissions": [],
+    "nonexistent_wcfg_objects": []
+  },
+  {
+    "case": "tx",
+    "loaded_objects": 800,
+    "listed_traceable_objects": 790,
+    "explicitly_unsupported_objects": 10,
+    "unexplained_omissions": [],
+    "nonexistent_wcfg_objects": []
+  },
+  {
+    "case": "rx_fifo",
+    "loaded_objects": 802,
+    "listed_traceable_objects": 798,
+    "explicitly_unsupported_objects": 4,
+    "unexplained_omissions": [],
+    "nonexistent_wcfg_objects": []
+  },
+  {
+    "case": "ring",
+    "loaded_objects": 127,
+    "listed_traceable_objects": 116,
+    "explicitly_unsupported_objects": 11,
+    "unexplained_omissions": [],
+    "nonexistent_wcfg_objects": []
+  },
+  {
+    "case": "axi",
+    "loaded_objects": 244,
+    "listed_traceable_objects": 234,
+    "explicitly_unsupported_objects": 10,
+    "unexplained_omissions": [],
+    "nonexistent_wcfg_objects": []
+  },
+  {
+    "case": "axi_tail",
+    "loaded_objects": 243,
+    "listed_traceable_objects": 233,
+    "explicitly_unsupported_objects": 10,
+    "unexplained_omissions": [],
+    "nonexistent_wcfg_objects": []
+  },
+  {
+    "case": "regs",
+    "loaded_objects": 119,
+    "listed_traceable_objects": 114,
+    "explicitly_unsupported_objects": 5,
+    "unexplained_omissions": [],
+    "nonexistent_wcfg_objects": []
+  }
+]

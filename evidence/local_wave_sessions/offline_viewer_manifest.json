@@ -1,0 +1,86 @@
+﻿[
+  {
+    "case": "1g",
+    "signals": 195,
+    "default_signals": 70,
+    "standard_internal_signals": 105,
+    "parent_connection_signals": 11,
+    "mapped_sources": 174,
+    "core_mapped": 69,
+    "core_missing": [],
+    "html_bytes": 10666441,
+    "vcd_events": 669387
+  },
+  {
+    "case": "tx",
+    "signals": 790,
+    "default_signals": 99,
+    "standard_internal_signals": 670,
+    "parent_connection_signals": 17,
+    "mapped_sources": 676,
+    "core_mapped": 99,
+    "core_missing": [],
+    "html_bytes": 6063934,
+    "vcd_events": 255834
+  },
+  {
+    "case": "rx_fifo",
+    "signals": 798,
+    "default_signals": 62,
+    "standard_internal_signals": 725,
+    "parent_connection_signals": 29,
+    "mapped_sources": 693,
+    "core_mapped": 61,
+    "core_missing": [],
+    "html_bytes": 1138208,
+    "vcd_events": 6558
+  },
+  {
+    "case": "ring",
+    "signals": 116,
+    "default_signals": 99,
+    "standard_internal_signals": 0,
+    "parent_connection_signals": 0,
+    "mapped_sources": 93,
+    "core_mapped": 93,
+    "core_missing": [],
+    "html_bytes": 1388910,
+    "vcd_events": 85529
+  },
+  {
+    "case": "axi",
+    "signals": 234,
+    "default_signals": 226,
+    "standard_internal_signals": 0,
+    "parent_connection_signals": 0,
+    "mapped_sources": 224,
+    "core_mapped": 220,
+    "core_missing": [],
+    "html_bytes": 1541553,
+    "vcd_events": 74654
+  },
+  {
+    "case": "axi_tail",
+    "signals": 233,
+    "default_signals": 225,
+    "standard_internal_signals": 0,
+    "parent_connection_signals": 0,
+    "mapped_sources": 225,
+    "core_mapped": 221,
+    "core_missing": [],
+    "html_bytes": 143221,
+    "vcd_events": 1559
+  },
+  {
+    "case": "regs",
+    "signals": 114,
+    "default_signals": 99,
+    "standard_internal_signals": 0,
+    "parent_connection_signals": 0,
+    "mapped_sources": 99,
+    "core_mapped": 99,
+    "core_missing": [],
+    "html_bytes": 111374,
+    "vcd_events": 2089
+  }
+]

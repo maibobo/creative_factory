@@ -1,0 +1,13 @@
+RTDS_XELAB_FAILURE_RECORD
+date=2026-07-15
+vivado=2020.2
+stage=xelab native module compilation after completed static elaboration and data flow analysis
+command_mt=auto
+command_debug=typical
+xsim_message=ERROR: [XSIM 43-3294] Signal EXCEPTION_ACCESS_VIOLATION received.
+windows_exit_decimal=-1073740940
+windows_exit_hex=0xC0000374
+peak_observed_working_set_mb=2621
+classification=XSim host-side heap corruption/access violation; no RTL syntax or hierarchy error was reported
+retry=Reuse compiled libraries and run xelab with --mt off --debug typical
+

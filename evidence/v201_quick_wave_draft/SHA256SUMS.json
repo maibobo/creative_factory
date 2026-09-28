@@ -1,0 +1,387 @@
+[
+  {
+    "path": "docs\\RTDS_V2.01快速仿真波形确认稿.docx",
+    "bytes": 1460183,
+    "sha256": "f86a7eedbc7c6266f2ef663e8ff225251cc8f8dcc7dbef8d3bc9d144844e33ee"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\01_1g_config_cdc.png",
+    "bytes": 34415,
+    "sha256": "35d466df4bace369d40ba8ee9c80c78cb758a9d452827dc559053a20f99ebec9"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\02_1g_payload_period.png",
+    "bytes": 29084,
+    "sha256": "8671d68f7162af7b3d7f8c09a06f145a952d77d6ae0aaa4fc8ad96612031fb9f"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\03_1g_backpressure_link.png",
+    "bytes": 29214,
+    "sha256": "51a6b5c518e8ccaf2354ceec94c504fe3c5808634af5ace52659b134417db901"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\04_tx_single_frame.png",
+    "bytes": 28939,
+    "sha256": "034c692610119b7db4c5693b64302bb12c86771e23c299453d07acc79e6377e1"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\05_tx_batch_near_full.png",
+    "bytes": 32275,
+    "sha256": "d8fbc30a04e693902d9ecb277a49c70e09a90d2846f830fee8d8d1ee3019f989"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\06_rx_fifo_cdc.png",
+    "bytes": 30257,
+    "sha256": "214a1c3a5fe38fe5e412a783c177dfd4597e7a6f2fef4e0d3b68a2e13ffadbe1"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\07_rx_fifo_full_drop.png",
+    "bytes": 26285,
+    "sha256": "a2ee69e4757a7b018a8bd481c0aac46c9d52b9e3f5e8ee7442d34323e10156f4"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\08_ring_pack_tail.png",
+    "bytes": 30913,
+    "sha256": "a1638419e8ca52697e6f2bcc9b945ed67e8e11a7cf0ae4994549c11abe749cbd"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\09_ring_publish_ack.png",
+    "bytes": 27311,
+    "sha256": "bbadcc39caa166e1559e4f597c9d116e3d693991b67c84d3c026794b9389012b"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\10_ring_three_wraps.png",
+    "bytes": 28382,
+    "sha256": "0fb1f41c48a742d192c8392869d84ecabbb4430771d18d8911c37c902da23e6d"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\11_ring_full_no_overwrite.png",
+    "bytes": 33055,
+    "sha256": "565bb6e5f5258af0b3e78daf504ee67e081f380bd3eeccb11f34b20bfc0a4cf1"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\12_ring_error_recovery.png",
+    "bytes": 32868,
+    "sha256": "bfc94b90038e624fb7d5347dead8379b960577e3a92a181420f799fa94622f64"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\13_axi_independent_high_addr.png",
+    "bytes": 42349,
+    "sha256": "26fc9808682fc599c70c777cde6d9ec7fd35017d3b0a4c0ac2a85e5079db5f0d"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\14_axi_4k_split.png",
+    "bytes": 42478,
+    "sha256": "e36084eafbc9180069cdd086af60ba3dc034050de55d1aba1bd656c7fcd84bf5"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\15_axi_wstrb_tail.png",
+    "bytes": 43022,
+    "sha256": "b6a407587363516554d41c0ee90b815639717f4aef090bc0e728a6253366f833"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\16_regs_doorbell.png",
+    "bytes": 33884,
+    "sha256": "3f88eb97a83ff248823fdde8f90f24992574e9e11cab5f65d3ce072ca1aa7071"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_no_title_png\\17_regs_ack_status.png",
+    "bytes": 37688,
+    "sha256": "3c72d54745cacfeda9f9f598dca1a3aaa1da526cfa0fc92197195bacb521cd37"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\01_1g_config_cdc.png",
+    "bytes": 55478,
+    "sha256": "77356c5edb209077ca75a6ed0237cee0cc284449b16bc506786956f7a8e7984d"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\02_1g_payload_period.png",
+    "bytes": 50775,
+    "sha256": "b0f6d5aed84e534e96ae03261c01ebaf2e7315753e9b26bb8ef62f30913caf70"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\03_1g_backpressure_link.png",
+    "bytes": 51565,
+    "sha256": "594e9acb8ae67bea6fa6ef8208950ca784035c428a2b4f7a429939af5f773498"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\04_tx_single_frame.png",
+    "bytes": 53693,
+    "sha256": "daa6258e58bafe2c69478380945e52921e1fb7c9cab4dfb3e1120d431e300770"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\05_tx_batch_near_full.png",
+    "bytes": 53549,
+    "sha256": "47a5e7fe277dba34731a49532b53b1390c80872961da144512b5c831e2cc208f"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\06_rx_fifo_cdc.png",
+    "bytes": 52328,
+    "sha256": "2d62817be13e19dadb3347754258a0447b3e877b58c1647973057c38ceea5b42"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\07_rx_fifo_full_drop.png",
+    "bytes": 50249,
+    "sha256": "219f005b2b8ec9d21426d7dc12ac05758da6eb7a13ad5c817dd5a6516be08189"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\08_ring_pack_tail.png",
+    "bytes": 53639,
+    "sha256": "3159d30cebf9207547cc21d2679ad0309730fae99b6cecf09ac63ec4b1c816d5"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\09_ring_publish_ack.png",
+    "bytes": 48033,
+    "sha256": "8c8e2e0cc33b9fa181962845263f0db60d74f457ea46cf8380ee7a336c98c71a"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\10_ring_three_wraps.png",
+    "bytes": 47960,
+    "sha256": "f0a2c548fea3b40e6bf855fd26d2cfbfa464f96ff483877624d7375fe54893fa"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\11_ring_full_no_overwrite.png",
+    "bytes": 54926,
+    "sha256": "01ee2678e90e20c004c4dd5026385f69e077ae12c91afce52db9436ad9800ac5"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\12_ring_error_recovery.png",
+    "bytes": 51052,
+    "sha256": "7ab250eb7f1143d20065bd01e71b70e23a27610caeee646629c482b311230bdf"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\13_axi_independent_high_addr.png",
+    "bytes": 65436,
+    "sha256": "1a558b2a9d45389ebe214e8311c1e6082588bf3c42a81d34a846d3beb6e8fe61"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\14_axi_4k_split.png",
+    "bytes": 63839,
+    "sha256": "c8c61efdd612ed16a1020dae8c7a1483b3ff04f0a55ce852ffa1e6d33a7afa92"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\15_axi_wstrb_tail.png",
+    "bytes": 64111,
+    "sha256": "7bbaadc81cd9d5db0c028a73ecb868835fa070f127c22845d045f6db67b947d0"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\16_regs_doorbell.png",
+    "bytes": 55892,
+    "sha256": "40868118fe517d8dee68a7229ad997948cdf7dbc293dd2b3d13ed8c3d3b1ded4"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\figures_with_title_png\\17_regs_ack_status.png",
+    "bytes": 62409,
+    "sha256": "f2613b85e1bfa11f5995a8fd51beee2b37bd60375c7529d71e8fbd204912b0db"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\1g\\1g_all_signals.wcfg",
+    "bytes": 50477,
+    "sha256": "e064026545fa8434fae088e7c562b79fd8e413325871edcc8f9a8c0be051af30"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\1g\\1g_full.vcd",
+    "bytes": 9240968,
+    "sha256": "33a9f459455d719891b68713d63fb99f6b8260a7af133c6029f54a9d95557867"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\1g\\1g_full.wdb",
+    "bytes": 4305529,
+    "sha256": "fc1dfdae825dc56edc1df343273ee89c8b6c1b5782d23323bb35454c7989e33d"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\1g\\xsim_1g.log",
+    "bytes": 3137,
+    "sha256": "decf4c48dad7e607f968117f847ce970e48e3d0efe2a7ad91211aaf226656715"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\axi\\axi_all_signals.wcfg",
+    "bytes": 55051,
+    "sha256": "b570b7e62b28a4a2b353ac9fdba2f38e1008db6b29ccec7877778dcdc2de30f9"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\axi\\axi_full.vcd",
+    "bytes": 871201,
+    "sha256": "aa30931652cf038bc7b5119828baa64850760eefea0e59ad9c3334bde75cbaf2"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\axi\\axi_full.wdb",
+    "bytes": 455162,
+    "sha256": "3ba597d28d9547adb52ebc0cbf354c9d49d4f1c7b134876e5e5157f854d0097e"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\axi\\xsim_axi.log",
+    "bytes": 5118,
+    "sha256": "c6c45863abd281a50e53633409899e80e74348e68b1bdff6d752f3abd636fcd6"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\axi_tail\\axi_tail_all_signals.wcfg",
+    "bytes": 55972,
+    "sha256": "8161bb8e5144e948c58469710966f268783afc5664d16267920ba66dbd0c1256"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\axi_tail\\axi_tail_full.vcd",
+    "bytes": 21044,
+    "sha256": "d7d27f92ae74258ad27df5b3cfa72b481c9aa3fb2b0b555783ecf89505b4b84f"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\axi_tail\\axi_tail_full.wdb",
+    "bytes": 86570,
+    "sha256": "faa79db495bc4864367aefa7f49e46d3d4d0a89f053271aeaace49edbecb15b8"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\axi_tail\\xsim_axi_tail.log",
+    "bytes": 4847,
+    "sha256": "fa5d1fdc91c4b5a83e931f54c3e8240e1e0ddc2d8812ac7c41f46c3a830fc425"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\regs\\regs_all_signals.wcfg",
+    "bytes": 27261,
+    "sha256": "70d3968d5df44f07191fb1ea60e2c09b9b414107b75cf4a14955aca51205c544"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\regs\\regs_full.vcd",
+    "bytes": 16319,
+    "sha256": "dbc7a2f742f7cff8058ecd3ab7e99bed5e5bf43ef8aa093dfbe76b874f7b667a"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\regs\\regs_full.wdb",
+    "bytes": 58250,
+    "sha256": "9478ae0105696013d578626592b0a421138f49c6c0c7d431d845d32cfd55c40b"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\regs\\xsim_regs.log",
+    "bytes": 3543,
+    "sha256": "bebcd5d336d65566cd0d267c232eaa108f2912aad2a34f6231594596213f5076"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\ring\\ring_all_signals.wcfg",
+    "bytes": 27443,
+    "sha256": "e0ec070fdd2fcad1700a95cb5ba7f7330134ebb9c592c55cac75ce5b6d07dacd"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\ring\\ring_full.vcd",
+    "bytes": 640424,
+    "sha256": "970134f95123ab308ce44de4a9a49bd3e4eda67323a676865c8bd39d9479ffd7"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\ring\\ring_full.wdb",
+    "bytes": 464868,
+    "sha256": "71833a60819042d0412090f621829bb64c74adf77607ce26eba878de77cd8302"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\ring\\xsim_ring.log",
+    "bytes": 5184,
+    "sha256": "15dff2daaf3caf72507d776ee4bfb37d9eb5903f44c3bb54531f92b70810a2e6"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\rx_fifo\\rx_fifo_all_signals.wcfg",
+    "bytes": 241516,
+    "sha256": "f2bd4a1f45dd7d884ddd2c784774573de433a90378c2c26242b597d222e152e5"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\rx_fifo\\rx_fifo_full.vcd",
+    "bytes": 120647,
+    "sha256": "85a4ed2d0f7306ce8c79d3b69df7a7ff3ffd6c5a9cb0054a97e9dfcca8224a31"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\rx_fifo\\rx_fifo_full.wdb",
+    "bytes": 251072,
+    "sha256": "ecf303c08c68419fae45116f64cad58d185b978dbeab91090acff5b8a235cc8f"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\rx_fifo\\xsim_rx_fifo.log",
+    "bytes": 5410,
+    "sha256": "ee8e24e224138dec46156b50f37b5497807f7b5a9cfa59544842206b75ee5fbd"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\tx\\tx_all_signals.wcfg",
+    "bytes": 236649,
+    "sha256": "9f55969401d658ee2ae53e3c74be7b8dc0412a8bec5e1a8d2138856a4bb1a616"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\tx\\tx_full.vcd",
+    "bytes": 4141163,
+    "sha256": "3b1c679218be98daf013c6e83150445cf7ecede8fc1f72e43d3dc0d7ef1291c5"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\tx\\tx_full.wdb",
+    "bytes": 1952786,
+    "sha256": "2230be062fe5c783053200941c1d56cd420823d49da500591947bb7f838e275e"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\raw\\tx\\xsim_tx.log",
+    "bytes": 7292,
+    "sha256": "2bb710745585d6494cda326a35ac55bdfa0a645b16f331bb6336795afb4565b1"
+  },
+  {
+    "path": "evidence\\v201_quick_wave_draft\\wave_manifest.json",
+    "bytes": 8115,
+    "sha256": "580b3be3ae33bab47f0d4e2076d46b148d7f68d5db90d98fda0fa13e7891ad11"
+  },
+  {
+    "path": "regression\\batch_1g\\tb_rtds_1g.sv",
+    "bytes": 9119,
+    "sha256": "26058c9844084f3d2b52ed0e411aef625b461d1563f6d40a0478d4126f8ac80b"
+  },
+  {
+    "path": "regression\\batch_1g\\tb_rtds_axi.sv",
+    "bytes": 11113,
+    "sha256": "35971b916608d567e476e4e3efa8c73552c7e500c07439062bb5db8c3e254320"
+  },
+  {
+    "path": "regression\\batch_1g\\tb_rtds_axi_tail.sv",
+    "bytes": 11115,
+    "sha256": "7ec8a9d27a42cd4b65526fc61b66073da67c13ef2e8722b3a50d14d68bc9ba06"
+  },
+  {
+    "path": "regression\\batch_1g\\tb_rtds_regs.sv",
+    "bytes": 4949,
+    "sha256": "35b4da2b7a951d221e85c1e06b30495dadfb280dd267025f15ea4fee05a7b450"
+  },
+  {
+    "path": "regression\\batch_1g\\tb_rtds_ring.sv",
+    "bytes": 6492,
+    "sha256": "22259b662e400e80bc79cdcdeb576c3b32027d0efcc77ef535ab2c0230d55516"
+  },
+  {
+    "path": "regression\\batch_1g\\tb_rtds_rx_fifo.sv",
+    "bytes": 4247,
+    "sha256": "2bc988efdece960cbe2215a1e7a2595884cf370eba483bdf0ad60b77747790ce"
+  },
+  {
+    "path": "regression\\batch_1g\\tb_rtds_tx.sv",
+    "bytes": 6332,
+    "sha256": "a846b155d66f91e7960986ce5aa4710532c22c126b7f57c6af9c50d05c55d307"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\CONV_DMA.v",
+    "bytes": 24194,
+    "sha256": "a58509155bc1ba7dc83951a51c633a6858d2c83fc412927f3cb89ecd2d699c7d"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\INFO_EXCH.v",
+    "bytes": 27213,
+    "sha256": "71aea36f58eaccd7d1ea02e8fc076933f0e152bc3ed9010193f32b8ac8a592de"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\pcie_fdma_aurora_brg_adapter.v",
+    "bytes": 45253,
+    "sha256": "92fb338d79678bb935182c48cef96bd25e18bd27a38416468e1cfc3bbb47e57d"
+  },
+  {
+    "path": "rtl\\rtds_1g_periodic_tx.v",
+    "bytes": 12244,
+    "sha256": "ccb94a84228b589543fb502786791f382f6a586f81930aa0889eb49348259d82"
+  },
+  {
+    "path": "rtl\\rtds_rx_block_writer.v",
+    "bytes": 12892,
+    "sha256": "398f34cee3e183d2df3033a7944a1242d3e52334c97252e53c3e4b35c0c25304"
+  },
+  {
+    "path": "rtl\\rtds_rx_frame_fifo.v",
+    "bytes": 5881,
+    "sha256": "3587d7ca42c050db8d85dcc79541c278b522d52b4a3cb69004a12cdca5b17220"
+  }
+]

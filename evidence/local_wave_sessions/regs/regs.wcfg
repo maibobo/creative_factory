@@ -1,0 +1,884 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="F:\RTDS_test_DDR4_64bit_batch_dev\evidence\local_wave_sessions\regs\regs.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_rtds_regs" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting><ZoomStartTime time="0ps" /><ZoomEndTime time="422000ps" /><Cursor1Time time="0ps" /></zoom_setting><column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="group3082" type="group">
+      <obj_property name="label">01_TESTBENCH</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_rtds_regs/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/starts" type="array">
+         <obj_property name="ElementShortName">starts[31:0]</obj_property>
+         <obj_property name="ObjectShortName">starts[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/acks" type="array">
+         <obj_property name="ElementShortName">acks[31:0]</obj_property>
+         <obj_property name="ObjectShortName">acks[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+   </wvobject>
+   <wvobject fp_name="group3086" type="group">
+      <obj_property name="label">02_INTERFACE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_rtds_regs/bus/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/done" type="logic">
+         <obj_property name="ElementShortName">done</obj_property>
+         <obj_property name="ObjectShortName">done</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/awaddr" type="array">
+         <obj_property name="ElementShortName">awaddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">awaddr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/wdata" type="array">
+         <obj_property name="ElementShortName">wdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/araddr" type="array">
+         <obj_property name="ElementShortName">araddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">araddr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/awvalid" type="logic">
+         <obj_property name="ElementShortName">awvalid</obj_property>
+         <obj_property name="ObjectShortName">awvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/wvalid" type="logic">
+         <obj_property name="ElementShortName">wvalid</obj_property>
+         <obj_property name="ObjectShortName">wvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/arvalid" type="logic">
+         <obj_property name="ElementShortName">arvalid</obj_property>
+         <obj_property name="ObjectShortName">arvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/bready" type="logic">
+         <obj_property name="ElementShortName">bready</obj_property>
+         <obj_property name="ObjectShortName">bready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/rready" type="logic">
+         <obj_property name="ElementShortName">rready</obj_property>
+         <obj_property name="ObjectShortName">rready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/wstrb" type="array">
+         <obj_property name="ElementShortName">wstrb[3:0]</obj_property>
+         <obj_property name="ObjectShortName">wstrb[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/awready" type="logic">
+         <obj_property name="ElementShortName">awready</obj_property>
+         <obj_property name="ObjectShortName">awready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/wready" type="logic">
+         <obj_property name="ElementShortName">wready</obj_property>
+         <obj_property name="ObjectShortName">wready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/bvalid" type="logic">
+         <obj_property name="ElementShortName">bvalid</obj_property>
+         <obj_property name="ObjectShortName">bvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/arready" type="logic">
+         <obj_property name="ElementShortName">arready</obj_property>
+         <obj_property name="ObjectShortName">arready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/rvalid" type="logic">
+         <obj_property name="ElementShortName">rvalid</obj_property>
+         <obj_property name="ObjectShortName">rvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/rdata" type="array">
+         <obj_property name="ElementShortName">rdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/command_addr" type="array">
+         <obj_property name="ElementShortName">command_addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">command_addr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/command_len" type="array">
+         <obj_property name="ElementShortName">command_len[31:0]</obj_property>
+         <obj_property name="ObjectShortName">command_len[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/bresp" type="array">
+         <obj_property name="ElementShortName">bresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">bresp[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/rresp" type="array">
+         <obj_property name="ElementShortName">rresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">rresp[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/start" type="logic">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/ack" type="logic">
+         <obj_property name="ElementShortName">ack</obj_property>
+         <obj_property name="ObjectShortName">ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/clear_irq" type="logic">
+         <obj_property name="ElementShortName">clear_irq</obj_property>
+         <obj_property name="ObjectShortName">clear_irq</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/clear_inter" type="logic">
+         <obj_property name="ElementShortName">clear_inter</obj_property>
+         <obj_property name="ObjectShortName">clear_inter</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group3113" type="group">
+      <obj_property name="label">03_DUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_WR_DONE_EVENT" type="logic">
+         <obj_property name="ElementShortName">CPU_WR_DONE_EVENT</obj_property>
+         <obj_property name="ObjectShortName">CPU_WR_DONE_EVENT</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/FPGA_TEMP_W" type="array">
+         <obj_property name="ElementShortName">FPGA_TEMP_W[31:0]</obj_property>
+         <obj_property name="ObjectShortName">FPGA_TEMP_W[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/INT_STATE_W" type="array">
+         <obj_property name="ElementShortName">INT_STATE_W[0:0]</obj_property>
+         <obj_property name="ObjectShortName">INT_STATE_W[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_REC_STATE_W" type="array">
+         <obj_property name="ElementShortName">CPU_REC_STATE_W[0:0]</obj_property>
+         <obj_property name="ObjectShortName">CPU_REC_STATE_W[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/FPGA_CPU_START_ADDR" type="array">
+         <obj_property name="ElementShortName">FPGA_CPU_START_ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">FPGA_CPU_START_ADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/FPGA_CPU_LEN" type="array">
+         <obj_property name="ElementShortName">FPGA_CPU_LEN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">FPGA_CPU_LEN[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_WR_DONE_resp" type="array">
+         <obj_property name="ElementShortName">CPU_WR_DONE_resp[0:0]</obj_property>
+         <obj_property name="ObjectShortName">CPU_WR_DONE_resp[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/DDR_STATUS_W" type="array">
+         <obj_property name="ElementShortName">DDR_STATUS_W[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DDR_STATUS_W[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/RX_READY_BLOCKS" type="array">
+         <obj_property name="ElementShortName">RX_READY_BLOCKS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RX_READY_BLOCKS[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/RX_HEAD_SEQ" type="array">
+         <obj_property name="ElementShortName">RX_HEAD_SEQ[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RX_HEAD_SEQ[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/RX_DROPPED_FRAMES" type="array">
+         <obj_property name="ElementShortName">RX_DROPPED_FRAMES[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RX_DROPPED_FRAMES[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/r_INT_STATE" type="logic">
+         <obj_property name="ElementShortName">r_INT_STATE</obj_property>
+         <obj_property name="ObjectShortName">r_INT_STATE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/r_CLEAR_INTER" type="logic">
+         <obj_property name="ElementShortName">r_CLEAR_INTER</obj_property>
+         <obj_property name="ObjectShortName">r_CLEAR_INTER</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/r_CPU_REC_STATE" type="logic">
+         <obj_property name="ElementShortName">r_CPU_REC_STATE</obj_property>
+         <obj_property name="ObjectShortName">r_CPU_REC_STATE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/r_RD_START" type="logic">
+         <obj_property name="ElementShortName">r_RD_START</obj_property>
+         <obj_property name="ObjectShortName">r_RD_START</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/r_CPU_FPGA_START_ADDR" type="array">
+         <obj_property name="ElementShortName">r_CPU_FPGA_START_ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_CPU_FPGA_START_ADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/r_CPU_FPGA_LEN" type="array">
+         <obj_property name="ElementShortName">r_CPU_FPGA_LEN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_CPU_FPGA_LEN[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_ACLK" type="logic">
+         <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_ARESETN" type="logic">
+         <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_AWADDR" type="array">
+         <obj_property name="ElementShortName">S_AXI_AWADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_AWADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_AWPROT" type="array">
+         <obj_property name="ElementShortName">S_AXI_AWPROT[2:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_AWPROT[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_AWVALID" type="logic">
+         <obj_property name="ElementShortName">S_AXI_AWVALID</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_AWVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_AWREADY" type="logic">
+         <obj_property name="ElementShortName">S_AXI_AWREADY</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_AWREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_WDATA" type="array">
+         <obj_property name="ElementShortName">S_AXI_WDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_WDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_WSTRB" type="array">
+         <obj_property name="ElementShortName">S_AXI_WSTRB[3:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_WSTRB[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_WVALID" type="logic">
+         <obj_property name="ElementShortName">S_AXI_WVALID</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_WVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_WREADY" type="logic">
+         <obj_property name="ElementShortName">S_AXI_WREADY</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_WREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_BRESP" type="array">
+         <obj_property name="ElementShortName">S_AXI_BRESP[1:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_BRESP[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_BVALID" type="logic">
+         <obj_property name="ElementShortName">S_AXI_BVALID</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_BVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_BREADY" type="logic">
+         <obj_property name="ElementShortName">S_AXI_BREADY</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_BREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_ARADDR" type="array">
+         <obj_property name="ElementShortName">S_AXI_ARADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_ARADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_ARPROT" type="array">
+         <obj_property name="ElementShortName">S_AXI_ARPROT[2:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_ARPROT[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_ARVALID" type="logic">
+         <obj_property name="ElementShortName">S_AXI_ARVALID</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_ARVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_ARREADY" type="logic">
+         <obj_property name="ElementShortName">S_AXI_ARREADY</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_ARREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_RDATA" type="array">
+         <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_RRESP" type="array">
+         <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_RVALID" type="logic">
+         <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_RREADY" type="logic">
+         <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_awaddr" type="array">
+         <obj_property name="ElementShortName">axi_awaddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_awaddr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_awready" type="logic">
+         <obj_property name="ElementShortName">axi_awready</obj_property>
+         <obj_property name="ObjectShortName">axi_awready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_wready" type="logic">
+         <obj_property name="ElementShortName">axi_wready</obj_property>
+         <obj_property name="ObjectShortName">axi_wready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_bresp" type="array">
+         <obj_property name="ElementShortName">axi_bresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_bresp[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_bvalid" type="logic">
+         <obj_property name="ElementShortName">axi_bvalid</obj_property>
+         <obj_property name="ObjectShortName">axi_bvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_araddr" type="array">
+         <obj_property name="ElementShortName">axi_araddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_araddr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_arready" type="logic">
+         <obj_property name="ElementShortName">axi_arready</obj_property>
+         <obj_property name="ObjectShortName">axi_arready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_rdata" type="array">
+         <obj_property name="ElementShortName">axi_rdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_rdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_rresp" type="array">
+         <obj_property name="ElementShortName">axi_rresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_rresp[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_rvalid" type="logic">
+         <obj_property name="ElementShortName">axi_rvalid</obj_property>
+         <obj_property name="ObjectShortName">axi_rvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/INT_STATE_R" type="array">
+         <obj_property name="ElementShortName">INT_STATE_R[0:0]</obj_property>
+         <obj_property name="ObjectShortName">INT_STATE_R[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CLEAR_INTER_R" type="logic">
+         <obj_property name="ElementShortName">CLEAR_INTER_R</obj_property>
+         <obj_property name="ObjectShortName">CLEAR_INTER_R</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_WR_DONE" type="array">
+         <obj_property name="ElementShortName">CPU_WR_DONE[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CPU_WR_DONE[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_REC_STATE" type="array">
+         <obj_property name="ElementShortName">CPU_REC_STATE[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CPU_REC_STATE[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_FPGA_START_ADDR" type="array">
+         <obj_property name="ElementShortName">CPU_FPGA_START_ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CPU_FPGA_START_ADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_FPGA_LEN" type="array">
+         <obj_property name="ElementShortName">CPU_FPGA_LEN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CPU_FPGA_LEN[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/slv_reg_rden" type="logic">
+         <obj_property name="ElementShortName">slv_reg_rden</obj_property>
+         <obj_property name="ObjectShortName">slv_reg_rden</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/slv_reg_wren" type="logic">
+         <obj_property name="ElementShortName">slv_reg_wren</obj_property>
+         <obj_property name="ObjectShortName">slv_reg_wren</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/reg_data_out" type="array">
+         <obj_property name="ElementShortName">reg_data_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_data_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/byte_index" type="array">
+         <obj_property name="ElementShortName">byte_index[31:0]</obj_property>
+         <obj_property name="ObjectShortName">byte_index[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/aw_en" type="logic">
+         <obj_property name="ElementShortName">aw_en</obj_property>
+         <obj_property name="ObjectShortName">aw_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/byte_index_CPU_FPGA_START_ADDR" type="array">
+         <obj_property name="ElementShortName">byte_index_CPU_FPGA_START_ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">byte_index_CPU_FPGA_START_ADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/byte_index_CPU_FPGA_LEN" type="array">
+         <obj_property name="ElementShortName">byte_index_CPU_FPGA_LEN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">byte_index_CPU_FPGA_LEN[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_WR_DONE_d" type="logic">
+         <obj_property name="ElementShortName">CPU_WR_DONE_d</obj_property>
+         <obj_property name="ObjectShortName">CPU_WR_DONE_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_WR_DONE_pos" type="logic">
+         <obj_property name="ElementShortName">CPU_WR_DONE_pos</obj_property>
+         <obj_property name="ObjectShortName">CPU_WR_DONE_pos</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/VERSION" type="array">
+         <obj_property name="ElementShortName">VERSION[31:0]</obj_property>
+         <obj_property name="ObjectShortName">VERSION[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/PROG_TIME" type="array">
+         <obj_property name="ElementShortName">PROG_TIME[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PROG_TIME[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CH_BUF_LEN" type="array">
+         <obj_property name="ElementShortName">CH_BUF_LEN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CH_BUF_LEN[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/C_S_AXI_DATA_WIDTH" type="array">
+         <obj_property name="ElementShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/C_S_AXI_ADDR_WIDTH" type="array">
+         <obj_property name="ElementShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/ADDR_LSB" type="array">
+         <obj_property name="ElementShortName">ADDR_LSB[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ADDR_LSB[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/OPT_MEM_ADDR_BITS" type="array">
+         <obj_property name="ElementShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+   </wvobject>
+   <wvobject fp_name="group3184" type="group">
+      <obj_property name="label">04_ALL_HIERARCHY</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_rtds_regs/bus/driver_cb/driver_cb_clk" type="logic">
+         <obj_property name="ElementShortName">driver_cb_clk</obj_property>
+         <obj_property name="ObjectShortName">driver_cb_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/driver_cb/awready_in" type="logic">
+         <obj_property name="ElementShortName">awready_in</obj_property>
+         <obj_property name="ObjectShortName">awready_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/driver_cb/wready_in" type="logic">
+         <obj_property name="ElementShortName">wready_in</obj_property>
+         <obj_property name="ObjectShortName">wready_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/driver_cb/bvalid_in" type="logic">
+         <obj_property name="ElementShortName">bvalid_in</obj_property>
+         <obj_property name="ObjectShortName">bvalid_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/driver_cb/arready_in" type="logic">
+         <obj_property name="ElementShortName">arready_in</obj_property>
+         <obj_property name="ObjectShortName">arready_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/driver_cb/rvalid_in" type="logic">
+         <obj_property name="ElementShortName">rvalid_in</obj_property>
+         <obj_property name="ObjectShortName">rvalid_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/driver_cb/rdata_in" type="array">
+         <obj_property name="ElementShortName">rdata_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rdata_in[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/driver_cb/bresp_in" type="array">
+         <obj_property name="ElementShortName">bresp_in[1:0]</obj_property>
+         <obj_property name="ObjectShortName">bresp_in[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/driver_cb/rresp_in" type="array">
+         <obj_property name="ElementShortName">rresp_in[1:0]</obj_property>
+         <obj_property name="ObjectShortName">rresp_in[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/monitor_cb/monitor_cb_clk" type="logic">
+         <obj_property name="ElementShortName">monitor_cb_clk</obj_property>
+         <obj_property name="ObjectShortName">monitor_cb_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/monitor_cb/rst_n_in" type="logic">
+         <obj_property name="ElementShortName">rst_n_in</obj_property>
+         <obj_property name="ObjectShortName">rst_n_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/monitor_cb/start_in" type="logic">
+         <obj_property name="ElementShortName">start_in</obj_property>
+         <obj_property name="ObjectShortName">start_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/monitor_cb/ack_in" type="logic">
+         <obj_property name="ElementShortName">ack_in</obj_property>
+         <obj_property name="ObjectShortName">ack_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/monitor_cb/command_addr_in" type="array">
+         <obj_property name="ElementShortName">command_addr_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">command_addr_in[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/monitor_cb/command_len_in" type="array">
+         <obj_property name="ElementShortName">command_len_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">command_len_in[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/rst_n" type="logic">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/done" type="logic">
+         <obj_property name="ElementShortName">done</obj_property>
+         <obj_property name="ObjectShortName">done</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/awaddr" type="array">
+         <obj_property name="ElementShortName">awaddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">awaddr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/wdata" type="array">
+         <obj_property name="ElementShortName">wdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/araddr" type="array">
+         <obj_property name="ElementShortName">araddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">araddr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/awvalid" type="logic">
+         <obj_property name="ElementShortName">awvalid</obj_property>
+         <obj_property name="ObjectShortName">awvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/wvalid" type="logic">
+         <obj_property name="ElementShortName">wvalid</obj_property>
+         <obj_property name="ObjectShortName">wvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/arvalid" type="logic">
+         <obj_property name="ElementShortName">arvalid</obj_property>
+         <obj_property name="ObjectShortName">arvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/bready" type="logic">
+         <obj_property name="ElementShortName">bready</obj_property>
+         <obj_property name="ObjectShortName">bready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/rready" type="logic">
+         <obj_property name="ElementShortName">rready</obj_property>
+         <obj_property name="ObjectShortName">rready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/wstrb" type="array">
+         <obj_property name="ElementShortName">wstrb[3:0]</obj_property>
+         <obj_property name="ObjectShortName">wstrb[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/awready" type="logic">
+         <obj_property name="ElementShortName">awready</obj_property>
+         <obj_property name="ObjectShortName">awready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/wready" type="logic">
+         <obj_property name="ElementShortName">wready</obj_property>
+         <obj_property name="ObjectShortName">wready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/bvalid" type="logic">
+         <obj_property name="ElementShortName">bvalid</obj_property>
+         <obj_property name="ObjectShortName">bvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/arready" type="logic">
+         <obj_property name="ElementShortName">arready</obj_property>
+         <obj_property name="ObjectShortName">arready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/rvalid" type="logic">
+         <obj_property name="ElementShortName">rvalid</obj_property>
+         <obj_property name="ObjectShortName">rvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/rdata" type="array">
+         <obj_property name="ElementShortName">rdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/command_addr" type="array">
+         <obj_property name="ElementShortName">command_addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">command_addr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/command_len" type="array">
+         <obj_property name="ElementShortName">command_len[31:0]</obj_property>
+         <obj_property name="ObjectShortName">command_len[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/bresp" type="array">
+         <obj_property name="ElementShortName">bresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">bresp[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/rresp" type="array">
+         <obj_property name="ElementShortName">rresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">rresp[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/start" type="logic">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/ack" type="logic">
+         <obj_property name="ElementShortName">ack</obj_property>
+         <obj_property name="ObjectShortName">ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/clear_irq" type="logic">
+         <obj_property name="ElementShortName">clear_irq</obj_property>
+         <obj_property name="ObjectShortName">clear_irq</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/bus/clear_inter" type="logic">
+         <obj_property name="ElementShortName">clear_inter</obj_property>
+         <obj_property name="ObjectShortName">clear_inter</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_WR_DONE_EVENT" type="logic">
+         <obj_property name="ElementShortName">CPU_WR_DONE_EVENT</obj_property>
+         <obj_property name="ObjectShortName">CPU_WR_DONE_EVENT</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/FPGA_TEMP_W" type="array">
+         <obj_property name="ElementShortName">FPGA_TEMP_W[31:0]</obj_property>
+         <obj_property name="ObjectShortName">FPGA_TEMP_W[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/INT_STATE_W" type="array">
+         <obj_property name="ElementShortName">INT_STATE_W[0:0]</obj_property>
+         <obj_property name="ObjectShortName">INT_STATE_W[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_REC_STATE_W" type="array">
+         <obj_property name="ElementShortName">CPU_REC_STATE_W[0:0]</obj_property>
+         <obj_property name="ObjectShortName">CPU_REC_STATE_W[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/FPGA_CPU_START_ADDR" type="array">
+         <obj_property name="ElementShortName">FPGA_CPU_START_ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">FPGA_CPU_START_ADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/FPGA_CPU_LEN" type="array">
+         <obj_property name="ElementShortName">FPGA_CPU_LEN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">FPGA_CPU_LEN[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_WR_DONE_resp" type="array">
+         <obj_property name="ElementShortName">CPU_WR_DONE_resp[0:0]</obj_property>
+         <obj_property name="ObjectShortName">CPU_WR_DONE_resp[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/DDR_STATUS_W" type="array">
+         <obj_property name="ElementShortName">DDR_STATUS_W[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DDR_STATUS_W[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/RX_READY_BLOCKS" type="array">
+         <obj_property name="ElementShortName">RX_READY_BLOCKS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RX_READY_BLOCKS[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/RX_HEAD_SEQ" type="array">
+         <obj_property name="ElementShortName">RX_HEAD_SEQ[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RX_HEAD_SEQ[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/RX_DROPPED_FRAMES" type="array">
+         <obj_property name="ElementShortName">RX_DROPPED_FRAMES[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RX_DROPPED_FRAMES[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/r_INT_STATE" type="logic">
+         <obj_property name="ElementShortName">r_INT_STATE</obj_property>
+         <obj_property name="ObjectShortName">r_INT_STATE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/r_CLEAR_INTER" type="logic">
+         <obj_property name="ElementShortName">r_CLEAR_INTER</obj_property>
+         <obj_property name="ObjectShortName">r_CLEAR_INTER</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/r_CPU_REC_STATE" type="logic">
+         <obj_property name="ElementShortName">r_CPU_REC_STATE</obj_property>
+         <obj_property name="ObjectShortName">r_CPU_REC_STATE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/r_RD_START" type="logic">
+         <obj_property name="ElementShortName">r_RD_START</obj_property>
+         <obj_property name="ObjectShortName">r_RD_START</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/r_CPU_FPGA_START_ADDR" type="array">
+         <obj_property name="ElementShortName">r_CPU_FPGA_START_ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_CPU_FPGA_START_ADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/r_CPU_FPGA_LEN" type="array">
+         <obj_property name="ElementShortName">r_CPU_FPGA_LEN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_CPU_FPGA_LEN[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_ACLK" type="logic">
+         <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_ARESETN" type="logic">
+         <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_AWADDR" type="array">
+         <obj_property name="ElementShortName">S_AXI_AWADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_AWADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_AWPROT" type="array">
+         <obj_property name="ElementShortName">S_AXI_AWPROT[2:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_AWPROT[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_AWVALID" type="logic">
+         <obj_property name="ElementShortName">S_AXI_AWVALID</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_AWVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_AWREADY" type="logic">
+         <obj_property name="ElementShortName">S_AXI_AWREADY</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_AWREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_WDATA" type="array">
+         <obj_property name="ElementShortName">S_AXI_WDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_WDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_WSTRB" type="array">
+         <obj_property name="ElementShortName">S_AXI_WSTRB[3:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_WSTRB[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_WVALID" type="logic">
+         <obj_property name="ElementShortName">S_AXI_WVALID</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_WVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_WREADY" type="logic">
+         <obj_property name="ElementShortName">S_AXI_WREADY</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_WREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_BRESP" type="array">
+         <obj_property name="ElementShortName">S_AXI_BRESP[1:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_BRESP[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_BVALID" type="logic">
+         <obj_property name="ElementShortName">S_AXI_BVALID</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_BVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_BREADY" type="logic">
+         <obj_property name="ElementShortName">S_AXI_BREADY</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_BREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_ARADDR" type="array">
+         <obj_property name="ElementShortName">S_AXI_ARADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_ARADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_ARPROT" type="array">
+         <obj_property name="ElementShortName">S_AXI_ARPROT[2:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_ARPROT[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_ARVALID" type="logic">
+         <obj_property name="ElementShortName">S_AXI_ARVALID</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_ARVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_ARREADY" type="logic">
+         <obj_property name="ElementShortName">S_AXI_ARREADY</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_ARREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_RDATA" type="array">
+         <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_RRESP" type="array">
+         <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_RVALID" type="logic">
+         <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/S_AXI_RREADY" type="logic">
+         <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
+         <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_awaddr" type="array">
+         <obj_property name="ElementShortName">axi_awaddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_awaddr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_awready" type="logic">
+         <obj_property name="ElementShortName">axi_awready</obj_property>
+         <obj_property name="ObjectShortName">axi_awready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_wready" type="logic">
+         <obj_property name="ElementShortName">axi_wready</obj_property>
+         <obj_property name="ObjectShortName">axi_wready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_bresp" type="array">
+         <obj_property name="ElementShortName">axi_bresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_bresp[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_bvalid" type="logic">
+         <obj_property name="ElementShortName">axi_bvalid</obj_property>
+         <obj_property name="ObjectShortName">axi_bvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_araddr" type="array">
+         <obj_property name="ElementShortName">axi_araddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_araddr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_arready" type="logic">
+         <obj_property name="ElementShortName">axi_arready</obj_property>
+         <obj_property name="ObjectShortName">axi_arready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_rdata" type="array">
+         <obj_property name="ElementShortName">axi_rdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_rdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_rresp" type="array">
+         <obj_property name="ElementShortName">axi_rresp[1:0]</obj_property>
+         <obj_property name="ObjectShortName">axi_rresp[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/axi_rvalid" type="logic">
+         <obj_property name="ElementShortName">axi_rvalid</obj_property>
+         <obj_property name="ObjectShortName">axi_rvalid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/INT_STATE_R" type="array">
+         <obj_property name="ElementShortName">INT_STATE_R[0:0]</obj_property>
+         <obj_property name="ObjectShortName">INT_STATE_R[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CLEAR_INTER_R" type="logic">
+         <obj_property name="ElementShortName">CLEAR_INTER_R</obj_property>
+         <obj_property name="ObjectShortName">CLEAR_INTER_R</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_WR_DONE" type="array">
+         <obj_property name="ElementShortName">CPU_WR_DONE[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CPU_WR_DONE[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_REC_STATE" type="array">
+         <obj_property name="ElementShortName">CPU_REC_STATE[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CPU_REC_STATE[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_FPGA_START_ADDR" type="array">
+         <obj_property name="ElementShortName">CPU_FPGA_START_ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CPU_FPGA_START_ADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_FPGA_LEN" type="array">
+         <obj_property name="ElementShortName">CPU_FPGA_LEN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CPU_FPGA_LEN[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/slv_reg_rden" type="logic">
+         <obj_property name="ElementShortName">slv_reg_rden</obj_property>
+         <obj_property name="ObjectShortName">slv_reg_rden</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/slv_reg_wren" type="logic">
+         <obj_property name="ElementShortName">slv_reg_wren</obj_property>
+         <obj_property name="ObjectShortName">slv_reg_wren</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/reg_data_out" type="array">
+         <obj_property name="ElementShortName">reg_data_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_data_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/byte_index" type="array">
+         <obj_property name="ElementShortName">byte_index[31:0]</obj_property>
+         <obj_property name="ObjectShortName">byte_index[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/aw_en" type="logic">
+         <obj_property name="ElementShortName">aw_en</obj_property>
+         <obj_property name="ObjectShortName">aw_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/byte_index_CPU_FPGA_START_ADDR" type="array">
+         <obj_property name="ElementShortName">byte_index_CPU_FPGA_START_ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">byte_index_CPU_FPGA_START_ADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/byte_index_CPU_FPGA_LEN" type="array">
+         <obj_property name="ElementShortName">byte_index_CPU_FPGA_LEN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">byte_index_CPU_FPGA_LEN[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_WR_DONE_d" type="logic">
+         <obj_property name="ElementShortName">CPU_WR_DONE_d</obj_property>
+         <obj_property name="ObjectShortName">CPU_WR_DONE_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CPU_WR_DONE_pos" type="logic">
+         <obj_property name="ElementShortName">CPU_WR_DONE_pos</obj_property>
+         <obj_property name="ObjectShortName">CPU_WR_DONE_pos</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/VERSION" type="array">
+         <obj_property name="ElementShortName">VERSION[31:0]</obj_property>
+         <obj_property name="ObjectShortName">VERSION[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/PROG_TIME" type="array">
+         <obj_property name="ElementShortName">PROG_TIME[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PROG_TIME[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/CH_BUF_LEN" type="array">
+         <obj_property name="ElementShortName">CH_BUF_LEN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">CH_BUF_LEN[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/C_S_AXI_DATA_WIDTH" type="array">
+         <obj_property name="ElementShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/C_S_AXI_ADDR_WIDTH" type="array">
+         <obj_property name="ElementShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/ADDR_LSB" type="array">
+         <obj_property name="ElementShortName">ADDR_LSB[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ADDR_LSB[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/U_DUT/OPT_MEM_ADDR_BITS" type="array">
+         <obj_property name="ElementShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
+         <obj_property name="ObjectShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_rtds_regs/starts" type="array">
+         <obj_property name="ElementShortName">starts[31:0]</obj_property>
+         <obj_property name="ObjectShortName">starts[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+      <wvobject fp_name="/tb_rtds_regs/acks" type="array">
+         <obj_property name="ElementShortName">acks[31:0]</obj_property>
+         <obj_property name="ObjectShortName">acks[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property></wvobject>
+   </wvobject>
+</wave_config>

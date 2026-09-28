@@ -1,0 +1,1610 @@
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source {c:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\scripts\run_synth2_ddr4real.tcl} -notrace
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1111.945 ; gain = 0.000
+V201_OLD_VERILOG_DEFINE=<DDR4_SIM_RAM DDR4_REAL>
+V201_NEW_VERILOG_DEFINE=<DDR4_REAL>
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/ip/aurora_64b66b_0/aurora_64b66b_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date
+
+[Wed Sep 16 17:52:18 2026] Launched rtds_axi_clock_converter_synth_1, rtds_ddr4_mig_synth_1...
+Run output will be captured here:
+rtds_axi_clock_converter_synth_1: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/rtds_axi_clock_converter_synth_1/runme.log
+rtds_ddr4_mig_synth_1: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/rtds_ddr4_mig_synth_1/runme.log
+[Wed Sep 16 17:52:18 2026] Launched synth_1...
+Run output will be captured here: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 1111.945 ; gain = 0.000
+[Wed Sep 16 17:52:18 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log TOP.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source TOP.tcl -notrace
+Command: synth_design -top TOP -part xcku040-ffva1156-2-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29548
+WARNING: [Synth 8-6901] identifier 'tx_start_valid' is used before its declaration [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v:225]
+WARNING: [Synth 8-6901] identifier 'tx_frame_done_fdma' is used before its declaration [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v:226]
+WARNING: [Synth 8-6901] identifier 'FPGA_TEMP_BUSY_W' is used before its declaration [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/TOP.v:98]
+WARNING: [Synth 8-6901] identifier 'FPGA_TEMP_W' is used before its declaration [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/TOP.v:98]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1493.594 ; gain = 252.488
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TOP' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/TOP.v:3]
+	Parameter AURORA_SIMULATION bound to: 0 - type: integer 
+	Parameter RX_PERIOD_CYCLES bound to: 25000000 - type: integer 
+	Parameter AURORA1G_PERIOD_CYCLES bound to: 63 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:32998]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:32998]
+INFO: [Synth 8-6157] synthesizing module 'CLK_GEN' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/CLK_GEN.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (2#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'CLK_GEN' (3#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/CLK_GEN.v:23]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_top' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/sources_1/new/aurora_64b66b_top.v:23]
+	Parameter SIMULATION bound to: 0 - type: integer 
+	Parameter INIT_CLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter PMA_HOLD_TIME_MS bound to: 1600 - type: integer 
+	Parameter RESET_GAP_TIME_MS bound to: 20 - type: integer 
+	Parameter CYCLES_PER_MS bound to: 100000 - type: integer 
+	Parameter PMA_HOLD_CYCLES bound to: 160000000 - type: integer 
+	Parameter RESET_GAP_CYCLES bound to: 2000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aurora_power_on_reset_seq' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/sources_1/new/aurora_64b66b_top.v:203]
+	Parameter PMA_HOLD_CYCLES bound to: 160000000 - type: integer 
+	Parameter RESET_GAP_CYCLES bound to: 2000000 - type: integer 
+	Parameter ST_HOLD_BOTH bound to: 2'b00 
+	Parameter ST_RESET_ONLY bound to: 2'b01 
+	Parameter ST_RUN bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_power_on_reset_seq' (4#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/sources_1/new/aurora_64b66b_top.v:203]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_exdes' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:71]
+	Parameter USE_CORE_TRAFFIC bound to: 1'b1 
+	Parameter USR_CLK_PCOUNT bound to: 9'b011111111 
+	Parameter EXAMPLE_SIMULATION bound to: 1'b0 
+	Parameter USE_LABTOOLS bound to: 1'b1 
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_EXAMPLE_LL_TO_AXI' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_example_ll_to_axi.v:64]
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STRB_WIDTH bound to: 8 - type: integer 
+	Parameter USE_4_NFC bound to: 0 - type: integer 
+	Parameter BC bound to: 8 - type: integer 
+	Parameter REM_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_reg_slice_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/aurora_64b66b_0_reg_slice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_reg_slice_0' (5#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/aurora_64b66b_0_reg_slice_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_EXAMPLE_LL_TO_AXI' (6#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_example_ll_to_axi.v:64]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_EXAMPLE_AXI_TO_LL' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_example_axi_to_ll.v:64]
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STRB_WIDTH bound to: 8 - type: integer 
+	Parameter BC bound to: 8 - type: integer 
+	Parameter ISUFC bound to: 0 - type: integer 
+	Parameter REM_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0_reg_slice_2' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/aurora_64b66b_0_reg_slice_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_reg_slice_2' (7#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/aurora_64b66b_0_reg_slice_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_EXAMPLE_AXI_TO_LL' (8#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_example_axi_to_ll.v:64]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (9#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6157] synthesizing module 'aurora_64b66b_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/aurora_64b66b_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0' (10#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/aurora_64b66b_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_0_exdes' (11#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_64b66b_top' (12#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/sources_1/new/aurora_64b66b_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RTDS_FPGA_1G_INIT' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_1g_init.v:3]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE_DIV' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1122]
+	Parameter BUFGCE_DIVIDE bound to: 4 - type: integer 
+	Parameter CE_TYPE bound to: SYNC - type: string 
+	Parameter HARDSYNC_CLR bound to: FALSE - type: string 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_CLR_INVERTED bound to: 1'b0 
+	Parameter IS_I_INVERTED bound to: 1'b0 
+	Parameter SIM_DEVICE bound to: ULTRASCALE - type: string 
+	Parameter STARTUP_SYNC bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE_DIV' (13#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1122]
+INFO: [Synth 8-6157] synthesizing module 'RTDS_FPGA_RESET_SYNC' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_reset_sync.v:4]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter RST_ACTIVE_HIGH bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter DEF_VAL bound to: 1'b1 
+	Parameter INV_DEF_VAL bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (14#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'RTDS_FPGA_RESET_SYNC' (15#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_reset_sync.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'RTDS_FPGA_1G_INIT' (16#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_1g_init.v:3]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_1p25g_design' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_design.v:10]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_1p25g_LL_TO_AXI_EXDES' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_ll_to_axi_exdes.v:62]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STRB_WIDTH bound to: 4 - type: integer 
+	Parameter USE_UFC_REM bound to: 0 - type: integer 
+	Parameter USE_4_NFC bound to: 0 - type: integer 
+	Parameter BC bound to: 4 - type: integer 
+	Parameter REM_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_1p25g_LL_TO_AXI_EXDES' (17#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_ll_to_axi_exdes.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_1p25g_AXI_TO_LL_EXDES' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_axi_to_ll_exdes.v:62]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STRB_WIDTH bound to: 4 - type: integer 
+	Parameter BC bound to: 4 - type: integer 
+	Parameter USE_4_NFC bound to: 0 - type: integer 
+	Parameter REM_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_1p25g_AXI_TO_LL_EXDES' (18#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_axi_to_ll_exdes.v:62]
+INFO: [Synth 8-6157] synthesizing module 'aurora_8b10b_1p25g' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/aurora_8b10b_1p25g_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_1p25g' (19#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/aurora_8b10b_1p25g_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'aurora_8b10b_1p25g_design' (20#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_design.v:10]
+INFO: [Synth 8-6157] synthesizing module 'RTDS_1G_PERIODIC_TX' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_1g_periodic_tx.v:4]
+	Parameter PERIOD_CYCLES bound to: 63 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter FIRST bound to: 2'b01 
+	Parameter LAST bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'RTDS_FPGA_CFG_CDC' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_cfg_cdc.v:6]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+	Parameter DEST_EXT_HSK bound to: 1 - type: integer 
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter SRC_SYNC_FF bound to: 4 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 48 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (21#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake' (22#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6155] done synthesizing module 'RTDS_FPGA_CFG_CDC' (23#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_cfg_cdc.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'RTDS_1G_PERIODIC_TX' (24#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_1g_periodic_tx.v:4]
+INFO: [Synth 8-6157] synthesizing module 'PCIe' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v:17]
+	Parameter RX_PERIOD_CYCLES bound to: 25000000 - type: integer 
+	Parameter FRAME_BYTES bound to: 16 - type: integer 
+	Parameter ACTIVE_WINDOW_BYTES bound to: 32768 - type: integer 
+	Parameter RX_BASE_ADDR_LO bound to: 1048576 - type: integer 
+	Parameter TX_BASE_ADDR_LO bound to: 32768 - type: integer 
+	Parameter CARD_ADDR_HI bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pcie_fdma_aurora_brg_adapter' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v:33]
+	Parameter FRAME_BYTES bound to: 16 - type: integer 
+	Parameter ACTIVE_WINDOW_BYTES bound to: 32768 - type: integer 
+	Parameter RX_BASE_ADDR_LO bound to: 1048576 - type: integer 
+	Parameter TX_BASE_ADDR_LO bound to: 32768 - type: integer 
+	Parameter CARD_ADDR_HI bound to: 0 - type: integer 
+	Parameter RX_PERIOD_CYCLES bound to: 25000000 - type: integer 
+	Parameter RX_BLOCK_BYTES bound to: 262144 - type: integer 
+	Parameter RX_BLOCK_COUNT bound to: 8 - type: integer 
+	Parameter FDMA_TIMEOUT_CYCLES bound to: 65535 - type: integer 
+	Parameter FRAME_WORDS bound to: 2 - type: integer 
+	Parameter FRAME_BYTES_32 bound to: 16 - type: integer 
+	Parameter FRAME_WORDS_16 bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized0' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized0' (24#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6157] synthesizing module 'fdma_aurora_brg_tx' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v:26]
+	Parameter FRAME_BYTES bound to: 16 - type: integer 
+	Parameter MEM_WINDOW_BYTES bound to: 32768 - type: integer 
+	Parameter TEST_MEM_SIZE bound to: 32768 - type: integer 
+	Parameter FDMA_BURST_LEN bound to: 16 - type: integer 
+	Parameter BURST_WORDS bound to: 2 - type: integer 
+	Parameter FRAME_WORDS bound to: 2 - type: integer 
+	Parameter TX_FIFO_RESERVE_WORDS bound to: 8 - type: integer 
+	Parameter TX_PROG_FULL_THRESH bound to: 504 - type: integer 
+	Parameter RD_IDLE bound to: 2'b00 
+	Parameter RD_REQ bound to: 2'b01 
+	Parameter RD_DATA bound to: 2'b10 
+	Parameter RD_WAIT bound to: 2'b11 
+	Parameter TX_IDLE bound to: 2'b00 
+	Parameter TX_SOF bound to: 2'b01 
+	Parameter TX_DATA bound to: 2'b10 
+INFO: [Synth 8-226] default block is never used [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v:204]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142]
+	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 512 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 504 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1f1f - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter EN_ADV_FEATURE_ASYNC bound to: 16'b0001111100011111 
+	Parameter P_FIFO_MEMORY_TYPE bound to: 0 - type: integer 
+	Parameter P_COMMON_CLOCK bound to: 0 - type: integer 
+	Parameter P_ECC_MODE bound to: 0 - type: integer 
+	Parameter P_READ_MODE bound to: 1 - type: integer 
+	Parameter P_WAKEUP_TIME bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+	Parameter COMMON_CLOCK bound to: 0 - type: integer 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: 0 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 512 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 504 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1f1f - type: string 
+	Parameter READ_MODE bound to: 1 - type: integer 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter REMOVE_WR_RD_PROT_LOGIC bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter invalid bound to: 0 - type: integer 
+	Parameter stage1_valid bound to: 2 - type: integer 
+	Parameter stage2_valid bound to: 1 - type: integer 
+	Parameter both_stages_valid bound to: 3 - type: integer 
+	Parameter FIFO_MEM_TYPE bound to: 0 - type: integer 
+	Parameter RD_MODE bound to: 1 - type: integer 
+	Parameter ENABLE_ECC bound to: 0 - type: integer 
+	Parameter FIFO_READ_DEPTH bound to: 512 - type: integer 
+	Parameter FIFO_SIZE bound to: 32768 - type: integer 
+	Parameter WR_WIDTH_LOG bound to: 6 - type: integer 
+	Parameter WR_DEPTH_LOG bound to: 9 - type: integer 
+	Parameter WR_PNTR_WIDTH bound to: 9 - type: integer 
+	Parameter RD_PNTR_WIDTH bound to: 9 - type: integer 
+	Parameter FULL_RST_VAL bound to: 1'b0 
+	Parameter WR_RD_RATIO bound to: 0 - type: integer 
+	Parameter READ_MODE_LL bound to: 1 - type: integer 
+	Parameter PF_THRESH_ADJ bound to: 502 - type: integer 
+	Parameter PE_THRESH_ADJ bound to: 8 - type: integer 
+	Parameter PF_THRESH_MIN bound to: 7 - type: integer 
+	Parameter PF_THRESH_MAX bound to: 507 - type: integer 
+	Parameter PE_THRESH_MIN bound to: 5 - type: integer 
+	Parameter PE_THRESH_MAX bound to: 507 - type: integer 
+	Parameter WR_DC_WIDTH_EXT bound to: 10 - type: integer 
+	Parameter RD_DC_WIDTH_EXT bound to: 10 - type: integer 
+	Parameter RD_LATENCY bound to: 2 - type: integer 
+	Parameter WIDTH_RATIO bound to: 1 - type: integer 
+	Parameter EN_ADV_FEATURE bound to: 16'b0001111100011111 
+	Parameter EN_OF bound to: 1'b1 
+	Parameter EN_PF bound to: 1'b1 
+	Parameter EN_WDC bound to: 1'b1 
+	Parameter EN_AF bound to: 1'b1 
+	Parameter EN_WACK bound to: 1'b1 
+	Parameter FG_EQ_ASYM_DOUT bound to: 1'b0 
+	Parameter EN_UF bound to: 1'b1 
+	Parameter EN_PE bound to: 1'b1 
+	Parameter EN_RDC bound to: 1'b1 
+	Parameter EN_AE bound to: 1'b1 
+	Parameter EN_DVLD bound to: 1'b1 
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+	Parameter COUNTER_WIDTH bound to: 9 - type: integer 
+	Parameter RESET_VALUE bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (25#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+	Parameter COUNTER_WIDTH bound to: 9 - type: integer 
+	Parameter RESET_VALUE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (25#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter MEMORY_SIZE bound to: 32768 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 0 - type: integer 
+	Parameter CLOCKING_MODE bound to: 1 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 64 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 64 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 64 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+	Parameter WRITE_MODE_A bound to: 2 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 64 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 64 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 64 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: 2 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 64 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 64 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 64 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 64 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 512 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 64 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 64 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 9 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 9 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 9 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 9 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter rsta_loop_iter bound to: 64 - type: integer 
+	Parameter rstb_loop_iter bound to: 64 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 64 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:488]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (26#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter REG_OUTPUT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (27#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
+	Parameter REG_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (28#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter REG_OUTPUT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (28#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
+	Parameter REG_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (28#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter REG_OUTPUT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (28#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1204]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1271]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1293]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1902]
+	Parameter RST_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (29#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1902]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+	Parameter COUNTER_WIDTH bound to: 2 - type: integer 
+	Parameter RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (29#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+	Parameter COMMON_CLOCK bound to: 0 - type: integer 
+	Parameter CDC_DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT bound to: 32'sb00000000000000000000000000000000 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter DEF_VAL bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (30#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (31#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+	Parameter COUNTER_WIDTH bound to: 10 - type: integer 
+	Parameter RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (31#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+	Parameter COUNTER_WIDTH bound to: 9 - type: integer 
+	Parameter RESET_VALUE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (31#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (32#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (33#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142]
+INFO: [Synth 8-6155] done synthesizing module 'fdma_aurora_brg_tx' (34#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v:26]
+INFO: [Synth 8-6157] synthesizing module 'RTDS_RX_FRAME_FIFO' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_rx_frame_fifo.v:4]
+	Parameter FIFO_DEPTH bound to: 2048 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'RTDS_FPGA_COUNT_CDC' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_count_cdc.v:4]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized2' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter REG_OUTPUT bound to: 1 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized2' (34#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'RTDS_FPGA_COUNT_CDC' (35#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_count_cdc.v:4]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async__parameterized0' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 2048 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 2043 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 5 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter EN_ADV_FEATURE_ASYNC bound to: 16'b0000011100000111 
+	Parameter P_FIFO_MEMORY_TYPE bound to: 2 - type: integer 
+	Parameter P_COMMON_CLOCK bound to: 0 - type: integer 
+	Parameter P_ECC_MODE bound to: 0 - type: integer 
+	Parameter P_READ_MODE bound to: 1 - type: integer 
+	Parameter P_WAKEUP_TIME bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+	Parameter COMMON_CLOCK bound to: 0 - type: integer 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: 2 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 2048 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 2043 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0707 - type: string 
+	Parameter READ_MODE bound to: 1 - type: integer 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 5 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter REMOVE_WR_RD_PROT_LOGIC bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter invalid bound to: 0 - type: integer 
+	Parameter stage1_valid bound to: 2 - type: integer 
+	Parameter stage2_valid bound to: 1 - type: integer 
+	Parameter both_stages_valid bound to: 3 - type: integer 
+	Parameter FIFO_MEM_TYPE bound to: 2 - type: integer 
+	Parameter RD_MODE bound to: 1 - type: integer 
+	Parameter ENABLE_ECC bound to: 0 - type: integer 
+	Parameter FIFO_READ_DEPTH bound to: 2048 - type: integer 
+	Parameter FIFO_SIZE bound to: 131072 - type: integer 
+	Parameter WR_WIDTH_LOG bound to: 6 - type: integer 
+	Parameter WR_DEPTH_LOG bound to: 11 - type: integer 
+	Parameter WR_PNTR_WIDTH bound to: 11 - type: integer 
+	Parameter RD_PNTR_WIDTH bound to: 11 - type: integer 
+	Parameter FULL_RST_VAL bound to: 1'b0 
+	Parameter WR_RD_RATIO bound to: 0 - type: integer 
+	Parameter READ_MODE_LL bound to: 1 - type: integer 
+	Parameter PF_THRESH_ADJ bound to: 2041 - type: integer 
+	Parameter PE_THRESH_ADJ bound to: 3 - type: integer 
+	Parameter PF_THRESH_MIN bound to: 7 - type: integer 
+	Parameter PF_THRESH_MAX bound to: 2043 - type: integer 
+	Parameter PE_THRESH_MIN bound to: 5 - type: integer 
+	Parameter PE_THRESH_MAX bound to: 2043 - type: integer 
+	Parameter WR_DC_WIDTH_EXT bound to: 12 - type: integer 
+	Parameter RD_DC_WIDTH_EXT bound to: 12 - type: integer 
+	Parameter RD_LATENCY bound to: 2 - type: integer 
+	Parameter WIDTH_RATIO bound to: 1 - type: integer 
+	Parameter EN_ADV_FEATURE bound to: 16'b0000011100000111 
+	Parameter EN_OF bound to: 1'b1 
+	Parameter EN_PF bound to: 1'b1 
+	Parameter EN_WDC bound to: 1'b1 
+	Parameter EN_AF bound to: 1'b0 
+	Parameter EN_WACK bound to: 1'b0 
+	Parameter FG_EQ_ASYM_DOUT bound to: 1'b0 
+	Parameter EN_UF bound to: 1'b1 
+	Parameter EN_PE bound to: 1'b1 
+	Parameter EN_RDC bound to: 1'b1 
+	Parameter EN_AE bound to: 1'b0 
+	Parameter EN_DVLD bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter MEMORY_SIZE bound to: 131072 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 2 - type: integer 
+	Parameter CLOCKING_MODE bound to: 1 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 64 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 64 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 64 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+	Parameter WRITE_MODE_A bound to: 2 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 64 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 64 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 64 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: 2 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 64 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 64 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 64 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 64 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 2048 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 64 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 64 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 11 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 0 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: no - type: string 
+	Parameter rsta_loop_iter bound to: 64 - type: integer 
+	Parameter rstb_loop_iter bound to: 64 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 64 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (35#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized3' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter REG_OUTPUT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized3' (35#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized1' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
+	Parameter REG_WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized1' (35#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized4' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter REG_OUTPUT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized4' (35#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized2' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
+	Parameter REG_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized2' (35#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1880]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized5' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter REG_OUTPUT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized5' (35#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1204]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1271]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1293]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized4' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+	Parameter COUNTER_WIDTH bound to: 12 - type: integer 
+	Parameter RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized4' (35#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized5' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+	Parameter COUNTER_WIDTH bound to: 11 - type: integer 
+	Parameter RESET_VALUE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized5' (35#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized6' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+	Parameter COUNTER_WIDTH bound to: 11 - type: integer 
+	Parameter RESET_VALUE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized6' (35#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1854]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (35#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async__parameterized0' (35#1) [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2142]
+INFO: [Synth 8-6155] done synthesizing module 'RTDS_RX_FRAME_FIFO' (36#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_rx_frame_fifo.v:4]
+INFO: [Synth 8-6157] synthesizing module 'RTDS_RX_BLOCK_WRITER' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_rx_block_writer.v:4]
+	Parameter BLOCK_COUNT bound to: 8 - type: integer 
+	Parameter BLOCK_BYTES bound to: 262144 - type: integer 
+	Parameter PERIOD_CYCLES bound to: 25000000 - type: integer 
+	Parameter BASE_ADDR bound to: 1048576 - type: integer 
+	Parameter INDEX_BITS bound to: 3 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter REQ bound to: 3'b001 
+	Parameter DATA bound to: 3'b010 
+	Parameter RESPONSE bound to: 3'b011 
+INFO: [Synth 8-6155] done synthesizing module 'RTDS_RX_BLOCK_WRITER' (37#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_rx_block_writer.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'pcie_fdma_aurora_brg_adapter' (38#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v:33]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v:255]
+INFO: [Synth 8-6157] synthesizing module 'ila_FDMA' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/ila_FDMA_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_FDMA' (39#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/ila_FDMA_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_CONV_DMA_0_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_CONV_DMA_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_CONV_DMA_0_0' (40#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_CONV_DMA_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M_AXI_WID' of module 'design_1_CONV_DMA_0_0' is unconnected for instance 'CONV_DMA_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:466]
+WARNING: [Synth 8-7023] instance 'CONV_DMA_0' of module 'design_1_CONV_DMA_0_0' has 57 connections declared, but only 56 given [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:466]
+INFO: [Synth 8-6157] synthesizing module 'design_1_INFO_EXCH_0_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_INFO_EXCH_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_INFO_EXCH_0_0' (41#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_INFO_EXCH_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_1' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:800]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1CA5Z32' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:1932]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1CA5Z32' (42#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:1932]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:2434]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (43#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:2434]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1F69D31' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:2706]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_cc_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_cc_0' (44#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_auto_cc_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_auto_cc_0' is unconnected for instance 'auto_cc' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:3013]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_cc_0' is unconnected for instance 'auto_cc' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:3013]
+WARNING: [Synth 8-7023] instance 'auto_cc' of module 'design_1_auto_cc_0' has 82 connections declared, but only 80 given [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:3013]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1F69D31' (45#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:2706]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (46#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_1' (47#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:800]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_2' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:1712]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_HS4N6K' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:2218]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_cc_1' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_auto_cc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_cc_1' (48#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_auto_cc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_HS4N6K' (49#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:2218]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_2' (50#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:1712]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_util_ds_buf_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0' (51#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_util_ds_buf_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xdma_0_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_xdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xdma_0_0' (52#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/design_1_xdma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'usr_irq_ack' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:732]
+WARNING: [Synth 8-7071] port 'msi_enable' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:732]
+WARNING: [Synth 8-7071] port 'msi_vector_width' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:732]
+WARNING: [Synth 8-7071] port 'int_qpll1lock_out' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:732]
+WARNING: [Synth 8-7071] port 'int_qpll1outrefclk_out' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:732]
+WARNING: [Synth 8-7071] port 'int_qpll1outclk_out' of module 'design_1_xdma_0_0' is unconnected for instance 'xdma_0' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:732]
+WARNING: [Synth 8-7023] instance 'xdma_0' of module 'design_1_xdma_0_0' has 71 connections declared, but only 65 given [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:732]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (53#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (54#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'rtds_ddr4_backend' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/ddr4/rtds_ddr4_backend.sv:16]
+	Parameter AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter AXI_ID_WIDTH bound to: 5 - type: integer 
+	Parameter TIMEOUT_CYCLES bound to: 65535 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'rtds_axi_clock_converter' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/rtds_axi_clock_converter_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtds_axi_clock_converter' (55#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/rtds_axi_clock_converter_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtds_ddr4_mig' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/rtds_ddr4_mig_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtds_ddr4_mig' (56#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/rtds_ddr4_mig_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtds_ddr4_backend' (57#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/ddr4/rtds_ddr4_backend.sv:16]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_pcie_fdma_aurora_brg_adapter'. This will prevent further optimization [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v:179]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'design_1_wrapper_inst'. This will prevent further optimization [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v:278]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_FDMA_inst'. This will prevent further optimization [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v:255]
+INFO: [Synth 8-6155] done synthesizing module 'PCIe' (58#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v:17]
+INFO: [Synth 8-6157] synthesizing module 'LED' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/LED.v:23]
+	Parameter SYS_CLK bound to: 250000000 - type: integer 
+	Parameter LED_CYCLE bound to: 1000000 - type: integer 
+	Parameter CYCLE bound to: 250000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'LED' (59#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/LED.v:23]
+INFO: [Synth 8-6157] synthesizing module 'TEMP_RD' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/TEMP_RD.v:23]
+	Parameter SYS_CLK bound to: 250000000 - type: integer 
+	Parameter RD_TEMP_CYCLE bound to: 1000 - type: integer 
+	Parameter CYCLE bound to: 250000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sys_mon' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/sys_mon_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'sys_mon' (60#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/sys_mon_stub.v:5]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/TEMP_RD.v:286]
+INFO: [Synth 8-6157] synthesizing module 'ila_temp' [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/ila_temp_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_temp' (61#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/.Xil/Vivado-29048-DESKTOP-H0AB0MD/realtime/ila_temp_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_temp_inst'. This will prevent further optimization [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/TEMP_RD.v:286]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'sys_mon_inst'. This will prevent further optimization [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/TEMP_RD.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'TEMP_RD' (62#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/TEMP_RD.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'TOP' (63#1) [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/TOP.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1585.918 ; gain = 344.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1603.852 ; gain = 362.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1603.852 ; gain = 362.746
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1615.852 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon/sys_mon_in_context.xdc] for cell 'u_temp_rd/sys_mon_inst'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon/sys_mon_in_context.xdc] for cell 'u_temp_rd/sys_mon_inst'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_CONV_DMA_0_0/design_1_CONV_DMA_0_0/design_1_CONV_DMA_0_0_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/CONV_DMA_0'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_CONV_DMA_0_0/design_1_CONV_DMA_0_0/design_1_CONV_DMA_0_0_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/CONV_DMA_0'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0/design_1_util_ds_buf_0_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/util_ds_buf'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0/design_1_util_ds_buf_0_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/util_ds_buf'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_INFO_EXCH_0_0/design_1_INFO_EXCH_0_0/design_1_INFO_EXCH_0_0_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_INFO_EXCH_0_0/design_1_INFO_EXCH_0_0/design_1_INFO_EXCH_0_0_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/xbar'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/xbar'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0/design_1_auto_cc_0_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/s01_couplers/auto_cc'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0/design_1_auto_cc_0_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/s01_couplers/auto_cc'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1/design_1_auto_cc_1_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1/s00_couplers/auto_cc'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1/design_1_auto_cc_1_in_context.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1/s00_couplers/auto_cc'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_clk_gen/clk_wiz_0_inst'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_clk_gen/clk_wiz_0_inst'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_FDMA/ila_FDMA_in_context.xdc] for cell 'u_pcie/ila_FDMA_inst'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_FDMA/ila_FDMA_in_context.xdc] for cell 'u_pcie/ila_FDMA_inst'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_temp/ila_temp_in_context.xdc] for cell 'u_temp_rd/ila_temp_inst'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_temp/ila_temp_in_context.xdc] for cell 'u_temp_rd/ila_temp_inst'
+Parsing XDC File [c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc] for cell 'U_AURORA_1G/aurora_i'
+Finished Parsing XDC File [c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc] for cell 'U_AURORA_1G/aurora_i'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2_in_context.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_i'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2_in_context.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_i'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_in_context.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_gen_ll_to_axi_data_i/axis_reg_i'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_in_context.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_gen_ll_to_axi_data_i/axis_reg_i'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_in_context.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_ii'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_in_context.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_ii'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter/rtds_axi_clock_converter_in_context.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_axi_clock_converter'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter/rtds_axi_clock_converter_in_context.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_axi_clock_converter'
+Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig'
+Finished Parsing XDC File [c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig'
+Parsing XDC File [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc]
+Finished Parsing XDC File [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/aurora1g_board.xdc]
+Finished Parsing XDC File [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/aurora1g_board.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/aurora1g_board.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1715] 6 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1712.820 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1712.820 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_i' at clock pin 'aclk' is different from the actual clock period '6.206', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_ii' at clock pin 'aclk' is different from the actual clock period '6.206', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_gen_ll_to_axi_data_i/axis_reg_i' at clock pin 'aclk' is different from the actual clock period '6.206', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1712.828 ; gain = 471.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1712.828 ; gain = 471.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for pcie_mgt_rxn[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pcie_mgt_rxn[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for pcie_mgt_rxn[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pcie_mgt_rxn[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for pcie_mgt_rxp[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pcie_mgt_rxp[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for pcie_mgt_rxp[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pcie_mgt_rxp[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for pcie_mgt_txn[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pcie_mgt_txn[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for pcie_mgt_txn[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pcie_mgt_txn[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for pcie_mgt_txp[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pcie_mgt_txp[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for pcie_mgt_txp[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pcie_mgt_txp[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0/design_1_xdma_0_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for pcie_diff_clk_n[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0/design_1_util_ds_buf_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pcie_diff_clk_n[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0/design_1_util_ds_buf_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for pcie_diff_clk_p[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0/design_1_util_ds_buf_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pcie_diff_clk_p[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0/design_1_util_ds_buf_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for GTHQ0_N. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for GTHQ0_N. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for GTHQ0_P. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for GTHQ0_P. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for aurora_rxn. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for aurora_rxn. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for aurora_rxp. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for aurora_rxp. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for aurora_txn. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for aurora_txn. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for aurora_txp. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for aurora_txp. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/aurora_64b66b_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for aurora1g_refclk_n. (constraint file  c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for aurora1g_refclk_n. (constraint file  c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for aurora1g_refclk_p. (constraint file  c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for aurora1g_refclk_p. (constraint file  c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for aurora1g_rxn. (constraint file  c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for aurora1g_rxn. (constraint file  c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for aurora1g_rxp. (constraint file  c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for aurora1g_rxp. (constraint file  c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for aurora1g_txn. (constraint file  c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for aurora1g_txn. (constraint file  c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for aurora1g_txp. (constraint file  c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for aurora1g_txp. (constraint file  c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g/aurora_8b10b_1p25g_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_act_n. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_act_n. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[10]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[10]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[11]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[11]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[12]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[12]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[13]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[13]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[14]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[14]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[15]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[15]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[16]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[16]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[2]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[2]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[3]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[3]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[4]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[4]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[5]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[5]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[6]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[6]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[7]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[7]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[8]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 33).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[8]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[9]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 35).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[9]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ba[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 37).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ba[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ba[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 39).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ba[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_bg[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 41).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_bg[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ck_c[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 43).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ck_c[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ck_t[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 45).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ck_t[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 46).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_cke[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 47).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_cke[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 48).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_cs_n[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 49).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_cs_n[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 50).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 51).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 52).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 53).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 54).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[2]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 55).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[2]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 56).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[3]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 57).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[3]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 58).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[4]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 59).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[4]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 60).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[5]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 61).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[5]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 62).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[6]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 63).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[6]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 64).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[7]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 65).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[7]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 66).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 67).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 68).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[10]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 69).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[10]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 70).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[11]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 71).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[11]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 72).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[12]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 73).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[12]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 74).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[13]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 75).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[13]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 76).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[14]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 77).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[14]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 78).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[15]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 79).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[15]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 80).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[16]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 81).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[16]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 82).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[17]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 83).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[17]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 84).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[18]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 85).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[18]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 86).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[19]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 87).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[19]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 88).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 89).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 90).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[20]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 91).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[20]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 92).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[21]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 93).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[21]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 94).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[22]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 95).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[22]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 96).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[23]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 97).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[23]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 98).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[24]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 99).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[24]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 100).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[25]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 101).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[25]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 102).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[26]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 103).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[26]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 104).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[27]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 105).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[27]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 106).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[28]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 107).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[28]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 108).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[29]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 109).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[29]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 110).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[2]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 111).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[2]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 112).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[30]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 113).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[30]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 114).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[31]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 115).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[31]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 116).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[32]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 117).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[32]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 118).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[33]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 119).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[33]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 120).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[34]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 121).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[34]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 122).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[35]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 123).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[35]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 124).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[36]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 125).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[36]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 126).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[37]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 127).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[37]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 128).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[38]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 129).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[38]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 130).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[39]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 131).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[39]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 132).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[3]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 133).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[3]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 134).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[40]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 135).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[40]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 136).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[41]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 137).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[41]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 138).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[42]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 139).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[42]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 140).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[43]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 141).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[43]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 142).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[44]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 143).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[44]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 144).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[45]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 145).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[45]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 146).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[46]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 147).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[46]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 148).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[47]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 149).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[47]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 150).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[48]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 151).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[48]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 152).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[49]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 153).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[49]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 154).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[4]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 155).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[4]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 156).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[50]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 157).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[50]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 158).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[51]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 159).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[51]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 160).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[52]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 161).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[52]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 162).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[53]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 163).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[53]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 164).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[54]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 165).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[54]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 166).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[55]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 167).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[55]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 168).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[56]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 169).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[56]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 170).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[57]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 171).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[57]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 172).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[58]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 173).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[58]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 174).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[59]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 175).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[59]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 176).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[5]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 177).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[5]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 178).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[60]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 179).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[60]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 180).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[61]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 181).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[61]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 182).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[62]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 183).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[62]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 184).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[63]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 185).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[63]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 186).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[6]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 187).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[6]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 188).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[7]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 189).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[7]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 190).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[8]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 191).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[8]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 192).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[9]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 193).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[9]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 194).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 195).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 196).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 197).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 198).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[2]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 199).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[2]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 200).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[3]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 201).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[3]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 202).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[4]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 203).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[4]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 204).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[5]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 205).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[5]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 206).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[6]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 207).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[6]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 208).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[7]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 209).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[7]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 210).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 211).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 212).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 213).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[1]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 214).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[2]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 215).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[2]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 216).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[3]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 217).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[3]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 218).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[4]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 219).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[4]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 220).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[5]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 221).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[5]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 222).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[6]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 223).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[6]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 224).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[7]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 225).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[7]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 226).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_odt[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 227).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_odt[0]. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 228).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_reset_n. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 229).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_reset_n. (constraint file  c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig/rtds_ddr4_mig_in_context.xdc, line 230).
+Applied set_property KEEP_HIERARCHY = SOFT for u_temp_rd/sys_mon_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/design_1_wrapper_inst/design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/design_1_wrapper_inst/design_1_i/CONV_DMA_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/design_1_wrapper_inst/design_1_i/xdma_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/design_1_wrapper_inst/design_1_i/util_ds_buf. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/s01_couplers/auto_cc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1/s00_couplers/auto_cc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_clk_gen/clk_wiz_0_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/ila_FDMA_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_temp_rd/ila_temp_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U_AURORA_1G/aurora_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/\core_traffic.frame_chk_axi_to_ll_data_i /axis_reg_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/\core_traffic.frame_gen_ll_to_axi_data_i /axis_reg_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/\core_traffic.frame_chk_axi_to_ll_data_i /axis_reg_ii. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_rtds_ddr4_backend/u_axi_clock_converter. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_rtds_ddr4_backend/u_ddr4_mig. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U_RTDS_FPGA_1G_INIT/U_RTDS_FPGA_RESET_SYNC_INIT/U_XPM_CDC_ASYNC_RST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_RTDS_FPGA_COUNT_CDC/U_XPM_CDC_GRAY. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_XPM_CDC_ALMOST_FULL. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_XPM_CDC_FULL. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_cdc_channel_to_fdma. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_cdc_ddr_ready_to_user. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_cdc_lane_to_fdma. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_cdc_pcie_link_to_user. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_cdc_rx_length_error. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_cdc_rx_overflow. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_cdc_status_clear. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_cdc_tx_active_to_user. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_cdc_tx_done_toggle. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_cdc_tx_underflow. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/u_fdma_aurora_brg_tx/xpm_fifo_async_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1712.828 ; gain = 471.723
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'fdma_aurora_brg_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'fdma_aurora_brg_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized0'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+                 iSTATE0 |                               01 |                               10
+                 iSTATE1 |                               10 |                               11
+                 iSTATE2 |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 RD_IDLE |                               01 |                               00
+                  RD_REQ |                               11 |                               01
+                 RD_DATA |                               10 |                               10
+                 RD_WAIT |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'sequential' in module 'fdma_aurora_brg_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 TX_IDLE |                              001 |                               00
+                  TX_SOF |                              010 |                               01
+                 TX_DATA |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'tx_state_reg' using encoding 'one-hot' in module 'fdma_aurora_brg_tx'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5779] Default cascade height of 2 will be used for BRAM '"xpm_memory_base__parameterized0:/gen_wr_a.gen_word_narrow.mem_reg"'.
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 2 and width 36 for RAM "xpm_memory_base__parameterized0:/gen_wr_a.gen_word_narrow.mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 18 for RAM "xpm_memory_base__parameterized0:/gen_wr_a.gen_word_narrow.mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "xpm_memory_base__parameterized0:/gen_wr_a.gen_word_narrow.mem_reg"
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+                 iSTATE0 |                               01 |                               10
+                 iSTATE1 |                               10 |                               11
+                 iSTATE2 |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1712.828 ; gain = 471.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 4     
+	   7 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 4     
+	   2 Input   27 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 3     
+	   4 Input   12 Bit       Adders := 3     
+	   2 Input   12 Bit       Adders := 1     
+	   3 Input   12 Bit       Adders := 2     
+	   4 Input   11 Bit       Adders := 3     
+	   3 Input   11 Bit       Adders := 1     
+	   4 Input   10 Bit       Adders := 3     
+	   2 Input   10 Bit       Adders := 1     
+	   3 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 1     
+	   4 Input    9 Bit       Adders := 5     
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 5     
+	   2 Input    2 Bit       Adders := 1     
+	   5 Input    2 Bit       Adders := 1     
+	   4 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input     12 Bit         XORs := 2     
+	   2 Input     11 Bit         XORs := 2     
+	   2 Input     10 Bit         XORs := 2     
+	   2 Input      9 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 113   
++---Registers : 
+	              128 Bit    Registers := 1     
+	               76 Bit    Registers := 1     
+	               64 Bit    Registers := 4     
+	               48 Bit    Registers := 4     
+	               32 Bit    Registers := 29    
+	               27 Bit    Registers := 1     
+	               16 Bit    Registers := 5     
+	               12 Bit    Registers := 15    
+	               11 Bit    Registers := 12    
+	               10 Bit    Registers := 15    
+	                9 Bit    Registers := 15    
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 28    
+	                1 Bit    Registers := 91    
++---RAMs : 
+	             128K Bit	(2048 X 64 bit)          RAMs := 1     
+	              32K Bit	(512 X 64 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   76 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 8     
+	   2 Input   27 Bit        Muxes := 3     
+	   2 Input   25 Bit        Muxes := 1     
+	  11 Input   25 Bit        Muxes := 1     
+	   2 Input   22 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 4     
+	   2 Input   13 Bit        Muxes := 1     
+	  11 Input   13 Bit        Muxes := 1     
+	   3 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 16    
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 1     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 74    
+	   4 Input    2 Bit        Muxes := 20    
+	   3 Input    2 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 11    
+	   2 Input    1 Bit        Muxes := 79    
+	  11 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 4     
+	   5 Input    1 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5779] Default cascade height of 2 will be used for BRAM '"\u_pcie/u_pcie_fdma_aurora_brg_adapter /\U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg "'.
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 2 and width 36 for RAM "\u_pcie/u_pcie_fdma_aurora_brg_adapter /\U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg "
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 18 for RAM "\u_pcie/u_pcie_fdma_aurora_brg_adapter /\U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg "
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "\u_pcie/u_pcie_fdma_aurora_brg_adapter /\U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg "
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1712.828 ; gain = 471.723
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                                                                                                                                                 | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|\u_pcie/u_pcie_fdma_aurora_brg_adapter /\u_fdma_aurora_brg_tx/xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 512 x 64(NO_CHANGE)    | W |   | 512 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|\u_pcie/u_pcie_fdma_aurora_brg_adapter /\U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst     | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 64(NO_CHANGE)    | W |   | 2 K x 64(NO_CHANGE)    |   | R | Port A and B     | 0      | 4      | 2,1,1           | 
++------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1790.793 ; gain = 549.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5556] The block RAM "\u_pcie/u_pcie_fdma_aurora_brg_adapter /\U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg " may be mapped as a cascade chain, because it is not timing critical.
+INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 2 and width 36 for RAM "\u_pcie/u_pcie_fdma_aurora_brg_adapter /\U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg "
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 18 for RAM "\u_pcie/u_pcie_fdma_aurora_brg_adapter /\U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg "
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "\u_pcie/u_pcie_fdma_aurora_brg_adapter /\U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg "
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1821.301 ; gain = 580.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                                                                                                                                                 | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|\u_pcie/u_pcie_fdma_aurora_brg_adapter /\u_fdma_aurora_brg_tx/xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 512 x 64(NO_CHANGE)    | W |   | 512 x 64(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|\u_pcie/u_pcie_fdma_aurora_brg_adapter /\U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst     | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 64(NO_CHANGE)    | W |   | 2 K x 64(NO_CHANGE)    |   | R | Port A and B     | 0      | 4      | 2,1,1           | 
++------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_pcie/u_pcie_fdma_aurora_brg_adapter/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1837.816 ; gain = 596.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1842.883 ; gain = 601.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1842.883 ; gain = 601.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1842.883 ; gain = 601.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1842.883 ; gain = 601.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1842.883 ; gain = 601.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1842.883 ; gain = 601.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------------+----------+
+|      |BlackBox name               |Instances |
++------+----------------------------+----------+
+|1     |sys_mon                     |         1|
+|2     |ila_temp                    |         1|
+|3     |aurora_8b10b_1p25g          |         1|
+|4     |aurora_64b66b_0             |         1|
+|5     |aurora_64b66b_0_reg_slice_0 |         2|
+|6     |aurora_64b66b_0_reg_slice_2 |         1|
+|7     |clk_wiz_0                   |         1|
+|8     |design_1_xbar_0             |         1|
+|9     |design_1_auto_cc_0          |         1|
+|10    |design_1_auto_cc_1          |         1|
+|11    |design_1_CONV_DMA_0_0       |         1|
+|12    |design_1_INFO_EXCH_0_0      |         1|
+|13    |design_1_util_ds_buf_0      |         1|
+|14    |design_1_xdma_0_0           |         1|
+|15    |ila_FDMA                    |         1|
+|16    |rtds_axi_clock_converter    |         1|
+|17    |rtds_ddr4_mig               |         1|
++------+----------------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------------+------+
+|      |Cell                         |Count |
++------+-----------------------------+------+
+|1     |aurora_64b66b                |     1|
+|2     |aurora_64b66b_0_reg_slice    |     1|
+|3     |aurora_64b66b_0_reg_slice_0_ |     1|
+|4     |aurora_64b66b_0_reg_slice    |     1|
+|5     |aurora_8b10b_1p25g           |     1|
+|6     |clk_wiz                      |     1|
+|7     |design_1_CONV_DMA_0          |     1|
+|8     |design_1_INFO_EXCH_0         |     1|
+|9     |design_1_auto_cc             |     2|
+|11    |design_1_util_ds_buf         |     1|
+|12    |design_1_xbar                |     1|
+|13    |design_1_xdma_0              |     1|
+|14    |ila_FDMA                     |     1|
+|15    |ila_temp                     |     1|
+|16    |rtds_axi_clock_converter     |     1|
+|17    |rtds_ddr4_mig                |     1|
+|18    |sys_mon                      |     1|
+|19    |BUFG                         |     1|
+|20    |BUFGCE_DIV                   |     1|
+|21    |CARRY8                       |    89|
+|22    |LUT1                         |   146|
+|23    |LUT2                         |   558|
+|24    |LUT3                         |   204|
+|25    |LUT4                         |   296|
+|26    |LUT5                         |   220|
+|27    |LUT6                         |   422|
+|28    |RAMB36E2                     |     5|
+|32    |FDCE                         |  1092|
+|33    |FDPE                         |     5|
+|34    |FDRE                         |  1014|
+|35    |FDSE                         |    16|
+|36    |IBUF                         |     2|
+|37    |IBUFDS                       |     1|
+|38    |OBUF                         |     5|
++------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1842.883 ; gain = 601.777
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1842.883 ; gain = 492.801
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1842.883 ; gain = 601.777
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1851.898 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 93 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1880.332 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+250 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:46 . Memory (MB): peak = 1880.332 ; gain = 771.285
+INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/synth_1/TOP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 16 17:55:51 2026...
+[Wed Sep 16 17:55:55 2026] synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:00 ; elapsed = 00:03:37 . Memory (MB): peak = 1111.945 ; gain = 0.000
+V201_SYNTH2_PROGRESS=100%
+V201_SYNTH2_OK
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 16 17:55:55 2026...

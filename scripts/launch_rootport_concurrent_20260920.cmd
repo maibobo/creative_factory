@@ -1,0 +1,2 @@
+@echo off
+powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File "C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\regression\sim_xdma_rootport\launch_breakaway.ps1" -CommandLine "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\scripts\rootport_worker_20260920.ps1" -WorkingDirectory "C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev"

@@ -1,0 +1,7 @@
+﻿F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_1g_periodic_tx.v
+F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_cfg_cdc.v
+F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_reset_sync.v
+F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_1g_test_if.sv
+F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_1g.sv
+F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/1g/project/wave_1g.sim/sim_1/behav/xsim/glbl.v
+D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv

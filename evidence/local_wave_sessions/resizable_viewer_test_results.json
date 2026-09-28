@@ -1,0 +1,145 @@
+[
+  {
+    "case": "1g",
+    "status": "PASS",
+    "all": 195,
+    "shown": 70,
+    "hiddenOk": true,
+    "connections": 11,
+    "checks": [
+      "7 pane combinations at 2 viewport sizes",
+      "drag each splitter",
+      "independent wheel and scrollbar drags",
+      "short/full names",
+      "standard internals hidden with parent connections retained",
+      "all signals recoverable",
+      "connection source line",
+      "time zoom",
+      "compact header and help"
+    ],
+    "pageErrors": []
+  },
+  {
+    "case": "tx",
+    "status": "PASS",
+    "all": 790,
+    "shown": 99,
+    "hiddenOk": true,
+    "connections": 17,
+    "checks": [
+      "7 pane combinations at 2 viewport sizes",
+      "drag each splitter",
+      "independent wheel and scrollbar drags",
+      "short/full names",
+      "standard internals hidden with parent connections retained",
+      "all signals recoverable",
+      "connection source line",
+      "time zoom",
+      "compact header and help"
+    ],
+    "pageErrors": []
+  },
+  {
+    "case": "rx_fifo",
+    "status": "PASS",
+    "all": 798,
+    "shown": 62,
+    "hiddenOk": true,
+    "connections": 29,
+    "checks": [
+      "7 pane combinations at 2 viewport sizes",
+      "drag each splitter",
+      "independent wheel and scrollbar drags",
+      "short/full names",
+      "standard internals hidden with parent connections retained",
+      "all signals recoverable",
+      "connection source line",
+      "time zoom",
+      "compact header and help"
+    ],
+    "pageErrors": []
+  },
+  {
+    "case": "ring",
+    "status": "PASS",
+    "all": 116,
+    "shown": 99,
+    "hiddenOk": true,
+    "connections": 0,
+    "checks": [
+      "7 pane combinations at 2 viewport sizes",
+      "drag each splitter",
+      "independent wheel and scrollbar drags",
+      "short/full names",
+      "standard internals hidden with parent connections retained",
+      "all signals recoverable",
+      "connection source line",
+      "time zoom",
+      "documented ns range jump",
+      "compact header and help"
+    ],
+    "pageErrors": []
+  },
+  {
+    "case": "axi",
+    "status": "PASS",
+    "all": 234,
+    "shown": 226,
+    "hiddenOk": true,
+    "connections": 0,
+    "checks": [
+      "7 pane combinations at 2 viewport sizes",
+      "drag each splitter",
+      "independent wheel and scrollbar drags",
+      "short/full names",
+      "standard internals hidden with parent connections retained",
+      "all signals recoverable",
+      "connection source line",
+      "time zoom",
+      "documented ns range jump",
+      "compact header and help"
+    ],
+    "pageErrors": []
+  },
+  {
+    "case": "axi_tail",
+    "status": "PASS",
+    "all": 233,
+    "shown": 225,
+    "hiddenOk": true,
+    "connections": 0,
+    "checks": [
+      "7 pane combinations at 2 viewport sizes",
+      "drag each splitter",
+      "independent wheel and scrollbar drags",
+      "short/full names",
+      "standard internals hidden with parent connections retained",
+      "all signals recoverable",
+      "connection source line",
+      "time zoom",
+      "compact header and help"
+    ],
+    "pageErrors": []
+  },
+  {
+    "case": "regs",
+    "status": "PASS",
+    "all": 114,
+    "shown": 99,
+    "hiddenOk": true,
+    "connections": 0,
+    "checks": [
+      "7 pane combinations at 2 viewport sizes",
+      "drag each splitter",
+      "independent wheel and scrollbar drags",
+      "short/full names",
+      "standard internals hidden with parent connections retained",
+      "all signals recoverable",
+      "connection source line",
+      "time zoom",
+      "documented ns range jump",
+      "compact header and help"
+    ],
+    "pageErrors": []
+  }
+]

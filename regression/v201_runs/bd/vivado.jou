@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 14 14:20:37 2026
+# Process ID: 71528
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/bd
+# Command line: vivado.exe -mode batch -source C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev/scripts/refresh_batch_bd.tcl
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/bd/vivado.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/bd\vivado.jou
+#-----------------------------------------------------------
+source {C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev/scripts/refresh_batch_bd.tcl}

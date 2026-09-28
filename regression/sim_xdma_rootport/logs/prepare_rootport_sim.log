@@ -1,0 +1,106 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Sep 23 09:32:53 2026
+# Process ID: 20944
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Command line: vivado.exe -mode batch -nojournal -source C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\regression\sim_xdma_rootport\scripts\prepare_rootport_sim.tcl -log C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\regression\sim_xdma_rootport\logs\prepare_rootport_sim.log
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/logs/prepare_rootport_sim.log
+# Journal file: 
+#-----------------------------------------------------------
+INFO: [Common 17-1239] XILINX_LOCAL_USER_DATA is set to 'NO'.
+source {C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\regression\sim_xdma_rootport\scripts\prepare_rootport_sim.tcl}
+# set script_dir  [file dirname [file normalize [info script]]]
+# set sim_dir     [file normalize [file join $script_dir ..]]
+# set project_dir [file normalize [file join $sim_dir .. ..]]
+# set xpr_file    [file join $project_dir RTDS_test_DDR4_64bit.xpr]
+# set tb_dir      [file join $sim_dir tb]
+# set vendor_dir  [file join $sim_dir vendor xdma_rp_2020_2]
+# set export_dir  [file join $sim_dir work export]
+# set log_dir     [file join $sim_dir logs]
+# file mkdir $export_dir
+# file mkdir $log_dir
+# proc fail {message} {
+#     puts "RTDS_PREPARE_ERROR: $message"
+#     error $message
+# }
+# puts "RTDS_PREPARE_BEGIN: Vivado=[version -short]"
+RTDS_PREPARE_BEGIN: Vivado=2020.2
+# open_project $xpr_file
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1110.668 ; gain = 0.000
+# set simset_name sim_xdma_rootport
+# set old_simset [get_filesets -quiet $simset_name]
+# if {[llength $old_simset] != 0} {
+#     set base_simset [get_filesets -quiet sim_1]
+#     if {[llength $base_simset] == 1} {
+#         current_fileset -simset $base_simset
+#     }
+#     delete_fileset $old_simset
+# }
+# create_fileset -simset $simset_name
+# set simset [get_filesets $simset_name]
+# set_property SOURCE_SET sources_1 $simset
+# set_property TOP board $simset
+# set_property TOP_LIB xil_defaultlib $simset
+# set_property INCLUDE_DIRS [list $tb_dir $vendor_dir] $simset
+# set_property VERILOG_DEFINE [list XILINX_SIMULATOR] $simset
+# set_property XSIM.ELABORATE.DEBUG_LEVEL typical $simset
+# set_property XSIM.SIMULATE.RUNTIME 2ms $simset
+# current_fileset -simset $simset
+# set sim_sources [list \
+#     [file join $tb_dir rtds_rootport_pkg.sv] \
+#     [file join $vendor_dir pci_exp_usrapp_cfg.v] \
+#     [file join $vendor_dir pci_exp_usrapp_com.v] \
+#     [file join $vendor_dir pci_exp_usrapp_rx.v] \
+#     [file join $vendor_dir pci_exp_usrapp_tx.v] \
+#     [file join $vendor_dir pcie3_uscale_rp_core_top.v] \
+#     [file join $vendor_dir pcie3_uscale_rp_top.v] \
+#     [file join $vendor_dir sys_clk_gen.v] \
+#     [file join $vendor_dir sys_clk_gen_ds.v] \
+#     [file join $vendor_dir xilinx_pcie_uscale_rp.v] \
+#     [file join $tb_dir rtds_pcie_ep_sim_wrapper.sv] \
+#     [file join $tb_dir aurora_ll_peer_bfm.sv] \
+#     [file join $tb_dir pcie_cq_host_memory_monitor.sv] \
+#     [file join $tb_dir rtds_rootport_assertions.sv] \
+#     [file join $tb_dir board.sv] \
+# ]
+# foreach source $sim_sources {
+#     if {![file exists $source]} {
+#         fail "仿真源文件不存在: $source"
+#     }
+# }
+# add_files -fileset $simset -norecurse $sim_sources
+# update_compile_order -fileset $simset
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:27 . Memory (MB): peak = 1110.668 ; gain = 0.000
+# set order_fp [open [file join $log_dir compile_order.txt] w]
+# foreach source [get_files -compile_order sources -used_in simulation -of_objects $simset] {
+#     puts $order_fp $source
+# }
+# close $order_fp
+# file delete -force $export_dir
+# file mkdir $export_dir
+# export_simulation -of_objects $simset -simulator xsim -directory $export_dir -force -absolute_path
+INFO: [exportsim-Tcl-35] Exporting simulation files for "XSIM" (Xilinx Vivado Simulator)...
+INFO: [exportsim-Tcl-29] Script generated: 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/work/export/xsim/board.sh'
+INFO: [SIM-utils-44] Exported 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/work/export/xsim/design.dat'
+Generating merged BMM file for the design top 'rtds_ddr4_mig'...
+Generating merged BMM file for the design top 'rtds_ddr4_mig'...
+generate_mem_files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:21 . Memory (MB): peak = 1110.668 ; gain = 0.000
+export_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:33 . Memory (MB): peak = 1110.668 ; gain = 0.000
+# set launcher_files [glob -nocomplain -directory $export_dir */board.sh */*/board.sh]
+# if {[llength $launcher_files] == 0} {
+#     fail "export_simulation �?生成 board.sh"
+# }
+# puts "RTDS_PREPARE_EXPORT: $export_dir"
+RTDS_PREPARE_EXPORT: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/work/export
+# puts "RTDS_PREPARE_PASS"
+RTDS_PREPARE_PASS
+# close_project
+# exit 0
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 23 09:34:07 2026...

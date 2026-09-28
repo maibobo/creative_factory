@@ -1,0 +1,135 @@
+[
+  {
+    "case": "1g",
+    "status": "PASS",
+    "signals": 195,
+    "sourceMappings": "all mapped line references valid",
+    "checks": [
+      "load",
+      "full signal list",
+      "source panel",
+      "zoom",
+      "filter",
+      "signal selection",
+      "cursor",
+      "core filter",
+      "file selection",
+      "help"
+    ],
+    "pageErrors": []
+  },
+  {
+    "case": "tx",
+    "status": "PASS",
+    "signals": 790,
+    "sourceMappings": "all mapped line references valid",
+    "checks": [
+      "load",
+      "full signal list",
+      "source panel",
+      "zoom",
+      "filter",
+      "signal selection",
+      "cursor",
+      "core filter",
+      "file selection",
+      "help"
+    ],
+    "pageErrors": []
+  },
+  {
+    "case": "rx_fifo",
+    "status": "PASS",
+    "signals": 798,
+    "sourceMappings": "all mapped line references valid",
+    "checks": [
+      "load",
+      "full signal list",
+      "source panel",
+      "zoom",
+      "filter",
+      "signal selection",
+      "cursor",
+      "core filter",
+      "file selection",
+      "help"
+    ],
+    "pageErrors": []
+  },
+  {
+    "case": "ring",
+    "status": "PASS",
+    "signals": 116,
+    "sourceMappings": "all mapped line references valid",
+    "checks": [
+      "load",
+      "full signal list",
+      "source panel",
+      "zoom",
+      "filter",
+      "signal selection",
+      "cursor",
+      "core filter",
+      "file selection",
+      "help"
+    ],
+    "pageErrors": []
+  },
+  {
+    "case": "axi",
+    "status": "PASS",
+    "signals": 234,
+    "sourceMappings": "all mapped line references valid",
+    "checks": [
+      "load",
+      "full signal list",
+      "source panel",
+      "zoom",
+      "filter",
+      "signal selection",
+      "cursor",
+      "core filter",
+      "file selection",
+      "help"
+    ],
+    "pageErrors": []
+  },
+  {
+    "case": "axi_tail",
+    "status": "PASS",
+    "signals": 233,
+    "sourceMappings": "all mapped line references valid",
+    "checks": [
+      "load",
+      "full signal list",
+      "source panel",
+      "zoom",
+      "filter",
+      "signal selection",
+      "cursor",
+      "core filter",
+      "file selection",
+      "help"
+    ],
+    "pageErrors": []
+  },
+  {
+    "case": "regs",
+    "status": "PASS",
+    "signals": 114,
+    "sourceMappings": "all mapped line references valid",
+    "checks": [
+      "load",
+      "full signal list",
+      "source panel",
+      "zoom",
+      "filter",
+      "signal selection",
+      "cursor",
+      "core filter",
+      "file selection",
+      "help"
+    ],
+    "pageErrors": []
+  }
+]

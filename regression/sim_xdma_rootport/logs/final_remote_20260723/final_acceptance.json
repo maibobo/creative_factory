@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "vivado_version": "2020.2",
+  "run_start": "2026-07-23T17:12:04.5988629+08:00",
+  "run_end": "2026-07-23T17:48:44.7512368+08:00",
+  "wall_clock_seconds": 2200.1524,
+  "simulation_finish_time_ns": 274094,
+  "functional_pass": true,
+  "log_compare_pass": true,
+  "local_windows_powershell_5_1_recheck_pass": true,
+  "all_milestones": true,
+  "unexpected_warnings": 0,
+  "fatal_lines": 0,
+  "result_line": "RTDS_ROOTPORT_RESULT link=1 bar=1 msi=1 irq_route=1 base_dma=1 cpu_to_aurora=1 aurora_to_cpu=1 irq_ack=1 stalls=0 errors=0",
+  "pass_marker": "RTDS_ROOTPORT_PASS",
+  "log_compare_marker": "RTDS_LOG_COMPARE_PASS",
+  "detached_wrapper_original_state": "failed",
+  "detached_wrapper_original_exit_code": 1,
+  "detached_wrapper_note": "功能仿真已 PASS；原包装状态由四条尚未登记的官方 RP x2-to-fixed-x8 内部端口 warning 导致。精确白名单更新后对同一组日志复比通过。",
+  "evidence_directory": "RTDS_test-1ch/regression/sim_xdma_rootport/logs/final_remote_20260723"
+}

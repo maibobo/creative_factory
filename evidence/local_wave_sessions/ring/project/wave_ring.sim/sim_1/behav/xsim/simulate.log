@@ -1,0 +1,6 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+INFO: HDL object /tb_rtds_ring/U_DUT/block_len is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_ring/U_DUT/block_seq is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+TEST PASS tb_rtds_ring V2.01
+$finish called at time : 28902 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_ring.sv" Line 122

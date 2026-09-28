@@ -1,0 +1,7 @@
+ARCHIVED C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test.xpr -> C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/archive_legacy_20260914/RTDS_test.xpr
+ARCHIVED C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test.srcs -> C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/archive_legacy_20260914/RTDS_test.srcs
+ARCHIVED C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test.hw -> C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/archive_legacy_20260914/RTDS_test.hw
+ARCHIVED C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test.ip_user_files -> C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/archive_legacy_20260914/RTDS_test.ip_user_files
+ARCHIVED C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/v201_delta.zip -> C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/archive_legacy_20260914/v201_delta.zip
+ARCHIVED C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/v201_sources.zip -> C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/archive_legacy_20260914/v201_sources.zip
+Historical scripts under tcl/ and regression/ may refer to the archived project; they are not V2.01 entry points.

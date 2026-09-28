@@ -1,0 +1,6 @@
+PASS: FDMA thread ID width=1, base=0; XDMA thread ID width=4, base=16.
+PASS: all 18 representable IDs have disjoint 5-bit encodings and lossless return IDs.
+PASS: generated AWID/ARID zero extension and BID/RID low-bit slices match thread widths.
+PASS: memory-side ID width=5, XDMA AXI data width=64, clock=250MHz.
+BD 41-2384 at these specific boundaries is expected width adaptation; no message suppression applied.
+This is a static wiring/parameter audit, not a timing or functional simulation result.

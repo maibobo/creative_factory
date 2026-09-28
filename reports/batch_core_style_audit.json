@@ -1,0 +1,8 @@
+{
+  "new_core_clocked_multi_root_blocks": [],
+  "core_inline_wire_assignments": [],
+  "self_referential_localparams": [],
+  "original_source_hashes_checked": 6,
+  "original_source_mismatches": [],
+  "scope": "AST/text checks only; not lint/CDC/simulation signoff"
+}

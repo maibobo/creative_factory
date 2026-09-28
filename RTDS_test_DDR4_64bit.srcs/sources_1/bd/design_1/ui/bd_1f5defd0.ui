@@ -1,0 +1,114 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.940149",
+   "Default View_TopLeft":"-372,63",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port pcie_7x_mgt -pg 1 -lvl 8 -x 2540 -y 610 -defaultsOSRD
+preplace port pcie_diff_clock -pg 1 -lvl 0 -x -90 -y 410 -defaultsOSRD
+preplace port M_AXI_MEM -pg 1 -lvl 8 -x 2540 -y 490 -defaultsOSRD
+preplace port sys_clk -pg 1 -lvl 0 -x -90 -y 620 -defaultsOSRD
+preplace port sys_rst_n -pg 1 -lvl 0 -x -90 -y 640 -defaultsOSRD
+preplace port fdma_rareq_0 -pg 1 -lvl 0 -x -90 -y 180 -defaultsOSRD
+preplace port fdma_rbusy_0 -pg 1 -lvl 8 -x 2540 -y 260 -defaultsOSRD
+preplace port fdma_rready_0 -pg 1 -lvl 0 -x -90 -y 220 -defaultsOSRD
+preplace port fdma_rvalid_0 -pg 1 -lvl 8 -x 2540 -y 300 -defaultsOSRD
+preplace port fdma_wareq_0 -pg 1 -lvl 0 -x -90 -y 80 -defaultsOSRD
+preplace port fdma_wbusy_0 -pg 1 -lvl 8 -x 2540 -y 450 -defaultsOSRD
+preplace port fdma_wready_0 -pg 1 -lvl 0 -x -90 -y 140 -defaultsOSRD
+preplace port fdma_wvalid_0 -pg 1 -lvl 8 -x 2540 -y 470 -defaultsOSRD
+preplace port pcie_rst_n -pg 1 -lvl 0 -x -90 -y 480 -defaultsOSRD
+preplace port user_lnk_up -pg 1 -lvl 8 -x 2540 -y 630 -defaultsOSRD
+preplace port r_CLEAR_INTER_0 -pg 1 -lvl 8 -x 2540 -y 730 -defaultsOSRD
+preplace port r_INT_STATE_0 -pg 1 -lvl 8 -x 2540 -y 710 -defaultsOSRD
+preplace port r_RD_START_0 -pg 1 -lvl 8 -x 2540 -y 770 -defaultsOSRD
+preplace port r_CPU_REC_STATE_0 -pg 1 -lvl 8 -x 2540 -y 750 -defaultsOSRD
+preplace port fdma_wdone_0 -pg 1 -lvl 8 -x 2540 -y -10 -defaultsOSRD
+preplace port fdma_werror_0 -pg 1 -lvl 8 -x 2540 -y 10 -defaultsOSRD
+preplace port CPU_WR_DONE_EVENT -pg 1 -lvl 0 -x -90 -y 660 -defaultsOSRD
+preplace portBus fdma_raddr_0 -pg 1 -lvl 0 -x -90 -y 160 -defaultsOSRD
+preplace portBus fdma_rsize_0 -pg 1 -lvl 0 -x -90 -y 200 -defaultsOSRD
+preplace portBus fdma_waddr_0 -pg 1 -lvl 0 -x -90 -y 60 -defaultsOSRD
+preplace portBus fdma_wsize_0 -pg 1 -lvl 0 -x -90 -y 100 -defaultsOSRD
+preplace portBus fdma_rdata_0 -pg 1 -lvl 8 -x 2540 -y 280 -defaultsOSRD
+preplace portBus fdma_wdata_0 -pg 1 -lvl 0 -x -90 -y 120 -defaultsOSRD
+preplace portBus FPGA_TEMP_W_0 -pg 1 -lvl 0 -x -90 -y 700 -defaultsOSRD
+preplace portBus INT_STATE_W_0 -pg 1 -lvl 0 -x -90 -y 720 -defaultsOSRD
+preplace portBus FPGA_CPU_LEN_0 -pg 1 -lvl 0 -x -90 -y 780 -defaultsOSRD
+preplace portBus FPGA_CPU_START_ADDR_0 -pg 1 -lvl 0 -x -90 -y 760 -defaultsOSRD
+preplace portBus r_CPU_FPGA_START_ADDR_0 -pg 1 -lvl 8 -x 2540 -y 790 -defaultsOSRD
+preplace portBus r_CPU_FPGA_LEN_0 -pg 1 -lvl 8 -x 2540 -y 810 -defaultsOSRD
+preplace portBus CPU_WR_DONE_resp_0 -pg 1 -lvl 0 -x -90 -y 800 -defaultsOSRD
+preplace portBus FPGA_CPU_irq_req -pg 1 -lvl 0 -x -90 -y 500 -defaultsOSRD
+preplace portBus CPU_REC_STATE_W_0 -pg 1 -lvl 0 -x -90 -y 740 -defaultsOSRD
+preplace portBus DDR_STATUS_W -pg 1 -lvl 0 -x -90 -y 820 -defaultsOSRD
+preplace portBus RX_READY_BLOCKS -pg 1 -lvl 0 -x -90 -y 840 -defaultsOSRD
+preplace portBus RX_HEAD_SEQ -pg 1 -lvl 0 -x -90 -y 860 -defaultsOSRD
+preplace portBus RX_DROPPED_FRAMES -pg 1 -lvl 0 -x -90 -y 880 -defaultsOSRD
+preplace portBus fdma_wstrb_0 -pg 1 -lvl 0 -x -90 -y 40 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 5 -x 1820 -y 200 -defaultsOSRD
+preplace inst axi_interconnect_1 -pg 1 -lvl 3 -x 870 -y 460 -defaultsOSRD
+preplace inst util_ds_buf -pg 1 -lvl 1 -x 170 -y 410 -defaultsOSRD
+preplace inst xdma_0 -pg 1 -lvl 2 -x 500 -y 470 -defaultsOSRD
+preplace inst CONV_DMA_0 -pg 1 -lvl 4 -x 1320 -y 160 -defaultsOSRD
+preplace inst INFO_EXCH_0 -pg 1 -lvl 4 -x 1320 -y 760 -defaultsOSRD
+preplace netloc M_AXI_ACLK_0_1 1 0 5 NJ 620 NJ 620 710 300 1040 370 1650
+preplace netloc M_AXI_ARESETN_0_1 1 0 5 NJ 640 NJ 640 720 310 1050 350 1630
+preplace netloc fdma_raddr_0_1 1 0 4 NJ 160 NJ 160 NJ 160 1020J
+preplace netloc fdma_rareq_0_1 1 0 4 NJ 180 NJ 180 NJ 180 1050J
+preplace netloc CONV_DMA_0_fdma_rbusy 1 4 4 1600J 20 NJ 20 NJ 20 2430J
+preplace netloc fdma_rready_0_1 1 0 4 NJ 220 NJ 220 NJ 220 1050J
+preplace netloc fdma_rsize_0_1 1 0 4 NJ 200 NJ 200 NJ 200 1020J
+preplace netloc CONV_DMA_0_fdma_rvalid 1 4 4 1640J 350 1970J 300 NJ 300 NJ
+preplace netloc fdma_waddr_0_1 1 0 4 NJ 60 NJ 60 NJ 60 1020J
+preplace netloc fdma_wareq_0_1 1 0 4 NJ 80 NJ 80 NJ 80 1020J
+preplace netloc CONV_DMA_0_fdma_wbusy 1 4 4 1610J 40 NJ 40 NJ 40 2420J
+preplace netloc fdma_wready_0_1 1 0 4 NJ 140 NJ 140 NJ 140 1050J
+preplace netloc fdma_wsize_0_1 1 0 4 -70J 130 NJ 130 NJ 130 1020J
+preplace netloc CONV_DMA_0_fdma_wvalid 1 4 4 1620J 50 NJ 50 NJ 50 2410J
+preplace netloc CONV_DMA_0_fdma_rdata 1 4 4 1590J 0 NJ 0 NJ 0 2440J
+preplace netloc fdma_wdata_0_1 1 0 4 NJ 120 NJ 120 NJ 120 1050J
+preplace netloc reset_rtl_0_1 1 0 2 NJ 480 NJ
+preplace netloc util_ds_buf_IBUF_OUT 1 1 1 330 400n
+preplace netloc util_ds_buf_IBUF_DS_ODIV2 1 1 1 320 420n
+preplace netloc xdma_0_axi_aclk 1 2 3 680 320 1030J 340 1660
+preplace netloc xdma_0_axi_aresetn 1 2 3 700 330 NJ 330 1670
+preplace netloc xdma_0_user_lnk_up 1 2 6 670J 580 1060J 570 1620J 630 NJ 630 NJ 630 NJ
+preplace netloc FPGA_TEMP_W_0_1 1 0 4 -70J 670 NJ 670 NJ 670 NJ
+preplace netloc INFO_EXCH_0_r_CLEAR_INTER 1 4 4 NJ 730 NJ 730 NJ 730 NJ
+preplace netloc INT_STATE_W_0_1 1 0 4 -60J 690 NJ 690 NJ 690 NJ
+preplace netloc INFO_EXCH_0_r_INT_STATE 1 4 4 NJ 710 NJ 710 NJ 710 NJ
+preplace netloc INFO_EXCH_0_r_RD_START 1 4 4 NJ 770 NJ 770 NJ 770 NJ
+preplace netloc FPGA_CPU_LEN_0_1 1 0 4 -30J 750 NJ 750 NJ 750 NJ
+preplace netloc FPGA_CPU_START_ADDR_0_1 1 0 4 -40J 730 NJ 730 NJ 730 NJ
+preplace netloc INFO_EXCH_0_r_CPU_FPGA_START_ADDR 1 4 4 NJ 790 NJ 790 NJ 790 NJ
+preplace netloc INFO_EXCH_0_r_CPU_FPGA_LEN 1 4 4 NJ 810 NJ 810 NJ 810 NJ
+preplace netloc CPU_WR_DONE_resp_0_1 1 0 4 -20J 770 NJ 770 NJ 770 NJ
+preplace netloc INFO_EXCH_0_r_CPU_REC_STATE 1 4 4 NJ 750 NJ 750 NJ 750 NJ
+preplace netloc CPU_REC_STATE_W_0_1 1 0 4 -50J 710 NJ 710 NJ 710 NJ
+preplace netloc FPGA_CPU_irq_req_1 1 0 2 NJ 500 NJ
+preplace netloc DDR_STATUS_W_1 1 0 4 -10J 790 NJ 790 NJ 790 NJ
+preplace netloc RX_READY_BLOCKS_net 1 0 4 0J 810 NJ 810 NJ 810 NJ
+preplace netloc RX_HEAD_SEQ_net 1 0 4 10J 830 NJ 830 NJ 830 NJ
+preplace netloc RX_DROPPED_FRAMES_net 1 0 4 20J 850 NJ 850 NJ 850 NJ
+preplace netloc fdma_wdone_0_net 1 4 4 1570J 10 NJ 10 NJ 10 2400J
+preplace netloc fdma_werror_0_net 1 4 4 1580J 30 NJ 30 NJ 30 2420J
+preplace netloc fdma_wstrb_0_1 1 0 4 NJ 40 NJ 40 NJ 40 1020J
+preplace netloc CPU_WR_DONE_EVENT_1 1 0 4 -70J 650 NJ 650 NJ 650 NJ
+preplace netloc axi_interconnect_0_M00_AXI 1 5 3 NJ 200 NJ 200 2400
+preplace netloc S00_AXI_1 1 4 1 1650 90n
+preplace netloc S01_AXI_1 1 2 3 670J -10 NJ -10 1670
+preplace netloc diff_clock_rtl_0_1 1 0 1 NJ 410
+preplace netloc xdma_0_pcie_mgt 1 2 6 690J 340 1020J 360 NJ 360 NJ 360 NJ 360 2390J
+preplace netloc axi_interconnect_1_M00_AXI 1 3 1 1030 460n
+preplace netloc S00_AXI_2 1 2 1 N 400
+levelinfo -pg 1 -90 170 500 870 1320 1820 2120 2370 2540
+pagesize -pg 1 -db -bbox -sgen -380 -30 2840 950
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_board_cnt":"3",
+   "da_xdma_cnt":"1"
+}

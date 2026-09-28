@@ -1,0 +1,1197 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 21 19:50:42 2026
+# Process ID: 20328
+# Current directory: E:/PCIE-CPU
+# Command line: vivado.exe -mode batch -source F:\RTDS_test_DDR4_64bit_batch_dev\scripts\configure_rpt205_ip_20260921.tcl -log F:\RTDS_test_DDR4_64bit_batch_dev\reports\board_audit_20260921\ip_config_final.log -journal F:\RTDS_test_DDR4_64bit_batch_dev\reports\board_audit_20260921\ip_config_final.jou
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/reports/board_audit_20260921/ip_config_final.log
+# Journal file: F:\RTDS_test_DDR4_64bit_batch_dev\reports\board_audit_20260921\ip_config_final.jou
+#-----------------------------------------------------------
+source {F:\RTDS_test_DDR4_64bit_batch_dev\scripts\configure_rpt205_ip_20260921.tcl}
+# set root F:/RTDS_test_DDR4_64bit_batch_dev
+# open_project $root/RTDS_test_DDR4_64bit.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx_2020_2/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:01:25 . Memory (MB): peak = 999.312 ; gain = 0.000
+# open_bd_design $root/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/design_1.bd
+Reading block design file <F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_1
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf
+Adding component instance block -- xilinx.com:ip:xdma:4.1 - xdma_0
+Adding component instance block -- xilinx.com:module_ref:CONV_DMA:1.0 - CONV_DMA_0
+Adding component instance block -- xilinx.com:module_ref:INFO_EXCH:1.0 - INFO_EXCH_0
+Successfully read diagram <design_1> from block design file <F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 999.312 ; gain = 0.000
+# set xdma [get_bd_cells /xdma_0]
+# puts "XDMA_CONFIG_BEFORE"
+XDMA_CONFIG_BEFORE
+# report_property $xdma
+Property                                          Type     Read-only  Value
+ALLOWED_SIM_MODELS                                string*  true       rtl
+CLASS                                             string   true       bd_cell
+CONFIG.BASEADDR                                   string   false      0x00001000
+CONFIG.Component_Name                             string   false      design_1_xdma_0_0
+CONFIG.HIGHADDR                                   string   false      0x00001FFF
+CONFIG.INS_LOSS_NYQ                               string   false      15
+CONFIG.MSI_X_OPTIONS                              string   false      None
+CONFIG.PCIE_BOARD_INTERFACE                       string   false      Custom
+CONFIG.PF0_DEVICE_ID_mqdma                        string   false      9032
+CONFIG.PF0_MSIX_CAP_PBA_BIR_mqdma                 string   false      BAR_0
+CONFIG.PF0_MSIX_CAP_PBA_OFFSET_mqdma              string   false      00000000
+CONFIG.PF0_MSIX_CAP_TABLE_BIR_mqdma               string   false      BAR_0
+CONFIG.PF0_MSIX_CAP_TABLE_OFFSET_mqdma            string   false      00000000
+CONFIG.PF0_MSIX_CAP_TABLE_SIZE_mqdma              string   false      000
+CONFIG.PF0_REVISION_ID_mqdma                      string   false      00
+CONFIG.PF0_SRIOV_CAP_INITIAL_VF                   string   false      0
+CONFIG.PF0_SRIOV_FIRST_VF_OFFSET                  string   false      0
+CONFIG.PF0_SRIOV_FUNC_DEP_LINK                    string   false      0000
+CONFIG.PF0_SRIOV_SUPPORTED_PAGE_SIZE              string   false      00000553
+CONFIG.PF0_SRIOV_VF_DEVICE_ID                     string   false      0000
+CONFIG.PF0_SUBSYSTEM_ID_mqdma                     string   false      0007
+CONFIG.PF0_SUBSYSTEM_VENDOR_ID_mqdma              string   false      10EE
+CONFIG.PF1_DEVICE_ID_mqdma                        string   false      0007
+CONFIG.PF1_INTERRUPT_PIN                          string   false      NONE
+CONFIG.PF1_MSIX_CAP_PBA_BIR_mqdma                 string   false      BAR_0
+CONFIG.PF1_MSIX_CAP_PBA_OFFSET_mqdma              string   false      00000000
+CONFIG.PF1_MSIX_CAP_TABLE_BIR_mqdma               string   false      BAR_0
+CONFIG.PF1_MSIX_CAP_TABLE_OFFSET_mqdma            string   false      00000000
+CONFIG.PF1_MSIX_CAP_TABLE_SIZE_mqdma              string   false      000
+CONFIG.PF1_MSI_CAP_MULTIMSGCAP                    string   false      1_vector
+CONFIG.PF1_REVISION_ID                            string   false      00
+CONFIG.PF1_REVISION_ID_mqdma                      string   false      00
+CONFIG.PF1_SRIOV_CAP_INITIAL_VF                   string   false      0
+CONFIG.PF1_SRIOV_CAP_VER                          string   false      1
+CONFIG.PF1_SRIOV_FIRST_VF_OFFSET                  string   false      0
+CONFIG.PF1_SRIOV_FUNC_DEP_LINK                    string   false      0001
+CONFIG.PF1_SRIOV_SUPPORTED_PAGE_SIZE              string   false      00000553
+CONFIG.PF1_SRIOV_VF_DEVICE_ID                     string   false      0000
+CONFIG.PF1_SUBSYSTEM_ID                           string   false      0007
+CONFIG.PF1_SUBSYSTEM_ID_mqdma                     string   false      0007
+CONFIG.PF1_SUBSYSTEM_VENDOR_ID                    string   false      10EE
+CONFIG.PF1_SUBSYSTEM_VENDOR_ID_mqdma              string   false      10EE
+CONFIG.PF1_Use_Class_Code_Lookup_Assistant        string   false      false
+CONFIG.PF2_DEVICE_ID_mqdma                        string   false      9032
+CONFIG.PF2_INTERRUPT_PIN                          string   false      NONE
+CONFIG.PF2_MSIX_CAP_PBA_BIR_mqdma                 string   false      BAR_0
+CONFIG.PF2_MSIX_CAP_PBA_OFFSET_mqdma              string   false      00000000
+CONFIG.PF2_MSIX_CAP_TABLE_BIR_mqdma               string   false      BAR_0
+CONFIG.PF2_MSIX_CAP_TABLE_OFFSET_mqdma            string   false      00000000
+CONFIG.PF2_MSIX_CAP_TABLE_SIZE_mqdma              string   false      000
+CONFIG.PF2_MSI_CAP_MULTIMSGCAP                    string   false      1_vector
+CONFIG.PF2_REVISION_ID                            string   false      00
+CONFIG.PF2_REVISION_ID_mqdma                      string   false      00
+CONFIG.PF2_SRIOV_CAP_INITIAL_VF                   string   false      0
+CONFIG.PF2_SRIOV_CAP_VER                          string   false      1
+CONFIG.PF2_SRIOV_FIRST_VF_OFFSET                  string   false      0
+CONFIG.PF2_SRIOV_FUNC_DEP_LINK                    string   false      0002
+CONFIG.PF2_SRIOV_SUPPORTED_PAGE_SIZE              string   false      00000553
+CONFIG.PF2_SRIOV_VF_DEVICE_ID                     string   false      0000
+CONFIG.PF2_SUBSYSTEM_ID                           string   false      0007
+CONFIG.PF2_SUBSYSTEM_ID_mqdma                     string   false      0007
+CONFIG.PF2_SUBSYSTEM_VENDOR_ID                    string   false      10EE
+CONFIG.PF2_SUBSYSTEM_VENDOR_ID_mqdma              string   false      10EE
+CONFIG.PF2_Use_Class_Code_Lookup_Assistant        string   false      false
+CONFIG.PF3_DEVICE_ID_mqdma                        string   false      9032
+CONFIG.PF3_INTERRUPT_PIN                          string   false      NONE
+CONFIG.PF3_MSIX_CAP_PBA_BIR_mqdma                 string   false      BAR_0
+CONFIG.PF3_MSIX_CAP_PBA_OFFSET_mqdma              string   false      00000000
+CONFIG.PF3_MSIX_CAP_TABLE_BIR_mqdma               string   false      BAR_0
+CONFIG.PF3_MSIX_CAP_TABLE_OFFSET_mqdma            string   false      00000000
+CONFIG.PF3_MSIX_CAP_TABLE_SIZE_mqdma              string   false      000
+CONFIG.PF3_MSI_CAP_MULTIMSGCAP                    string   false      1_vector
+CONFIG.PF3_REVISION_ID                            string   false      00
+CONFIG.PF3_REVISION_ID_mqdma                      string   false      00
+CONFIG.PF3_SRIOV_CAP_INITIAL_VF                   string   false      0
+CONFIG.PF3_SRIOV_CAP_VER                          string   false      1
+CONFIG.PF3_SRIOV_FIRST_VF_OFFSET                  string   false      0
+CONFIG.PF3_SRIOV_FUNC_DEP_LINK                    string   false      0003
+CONFIG.PF3_SRIOV_SUPPORTED_PAGE_SIZE              string   false      00000553
+CONFIG.PF3_SRIOV_VF_DEVICE_ID                     string   false      0000
+CONFIG.PF3_SUBSYSTEM_ID                           string   false      0007
+CONFIG.PF3_SUBSYSTEM_ID_mqdma                     string   false      0007
+CONFIG.PF3_SUBSYSTEM_VENDOR_ID                    string   false      10EE
+CONFIG.PF3_SUBSYSTEM_VENDOR_ID_mqdma              string   false      10EE
+CONFIG.PF3_Use_Class_Code_Lookup_Assistant        string   false      false
+CONFIG.PHY_LP_TXPRESET                            string   false      4
+CONFIG.RX_PPM_OFFSET                              string   false      0
+CONFIG.RX_SSC_PPM                                 string   false      0
+CONFIG.SRIOV_CAP_ENABLE                           string   false      false
+CONFIG.SRIOV_FIRST_VF_OFFSET                      string   false      1
+CONFIG.SYS_RST_N_BOARD_INTERFACE                  string   false      Custom
+CONFIG.Shared_Logic                               string   false      1
+CONFIG.Shared_Logic_Both                          string   false      false
+CONFIG.Shared_Logic_Both_7xG2                     string   false      false
+CONFIG.Shared_Logic_Clk                           string   false      false
+CONFIG.Shared_Logic_Clk_7xG2                      string   false      false
+CONFIG.Shared_Logic_Gtc                           string   false      false
+CONFIG.Shared_Logic_Gtc_7xG2                      string   false      false
+CONFIG.acs_ext_cap_enable                         string   false      false
+CONFIG.aspm_support                               string   false      No_ASPM
+CONFIG.axi_aclk_loopback                          string   false      false
+CONFIG.axi_addr_width                             string   false      64
+CONFIG.axi_bypass_64bit_en                        string   false      false
+CONFIG.axi_bypass_prefetchable                    string   false      false
+CONFIG.axi_data_width                             string   false      128_bit
+CONFIG.axi_id_width                               string   false      4
+CONFIG.axi_vip_in_exdes                           string   false      false
+CONFIG.axibar2pciebar_0                           string   false      0x0000000000000000
+CONFIG.axibar2pciebar_1                           string   false      0x0000000000000000
+CONFIG.axibar2pciebar_2                           string   false      0x0000000000000000
+CONFIG.axibar2pciebar_3                           string   false      0x0000000000000000
+CONFIG.axibar2pciebar_4                           string   false      0x0000000000000000
+CONFIG.axibar2pciebar_5                           string   false      0x0000000000000000
+CONFIG.axibar_0                                   string   false      0x0000000000000000
+CONFIG.axibar_1                                   string   false      0x0000000000000000
+CONFIG.axibar_2                                   string   false      0x0000000000000000
+CONFIG.axibar_3                                   string   false      0x0000000000000000
+CONFIG.axibar_4                                   string   false      0x0000000000000000
+CONFIG.axibar_5                                   string   false      0x0000000000000000
+CONFIG.axibar_highaddr_0                          string   false      0x0000000000000000
+CONFIG.axibar_highaddr_1                          string   false      0x0000000000000000
+CONFIG.axibar_highaddr_2                          string   false      0x0000000000000000
+CONFIG.axibar_highaddr_3                          string   false      0x0000000000000000
+CONFIG.axibar_highaddr_4                          string   false      0x0000000000000000
+CONFIG.axibar_highaddr_5                          string   false      0x0000000000000000
+CONFIG.axibar_num                                 string   false      1
+CONFIG.axil_master_64bit_en                       string   false      false
+CONFIG.axil_master_prefetchable                   string   false      false
+CONFIG.axilite_master_en                          string   false      true
+CONFIG.axilite_master_scale                       string   false      Megabytes
+CONFIG.axilite_master_size                        string   false      1
+CONFIG.axis_pipe_line_stage                       string   false      0
+CONFIG.axist_bypass_en                            string   false      false
+CONFIG.axist_bypass_scale                         string   false      Megabytes
+CONFIG.axist_bypass_size                          string   false      1
+CONFIG.axisten_freq                               string   false      125
+CONFIG.axisten_if_enable_msg_route                string   false      27FFF
+CONFIG.axsize_byte_access_en                      string   false      false
+CONFIG.bar0_indicator                             string   false      1
+CONFIG.bar1_indicator                             string   false      0
+CONFIG.bar2_indicator                             string   false      0
+CONFIG.bar3_indicator                             string   false      0
+CONFIG.bar4_indicator                             string   false      0
+CONFIG.bar5_indicator                             string   false      0
+CONFIG.bar_indicator                              string   false      BAR_0
+CONFIG.barlite2                                   string   false      7
+CONFIG.bridge_registers_offset_enable             string   false      false
+CONFIG.broadcom_sbr_wa                            string   false      false
+CONFIG.c_ats_enable                               string   false      false
+CONFIG.c_ats_switch_unique_bdf                    string   false      1
+CONFIG.c_m_axi_num_read                           string   false      8
+CONFIG.c_m_axi_num_readq                          string   false      2
+CONFIG.c_m_axi_num_write                          string   false      8
+CONFIG.c_pri_enable                               string   false      false
+CONFIG.c_s_axi_num_read                           string   false      8
+CONFIG.c_s_axi_num_write                          string   false      8
+CONFIG.c_s_axi_supports_narrow_burst              string   false      false
+CONFIG.c_smmu_en                                  string   false      0
+CONFIG.cfg_ext_if                                 string   false      false
+CONFIG.cfg_mgmt_if                                string   false      false
+CONFIG.comp_timeout                               string   false      50ms
+CONFIG.copy_pf0                                   string   false      true
+CONFIG.copy_sriov_pf0                             string   false      true
+CONFIG.coreclk_freq                               string   false      500
+CONFIG.ctrl_skip_mask                             string   false      true
+CONFIG.dedicate_perst                             string   false      false
+CONFIG.device_port_type                           string   false      PCI_Express_Endpoint_device
+CONFIG.disable_bram_pipeline                      string   false      false
+CONFIG.disable_eq_synchronizer                    string   false      false
+CONFIG.disable_gt_loc                             string   false      false
+CONFIG.disable_user_clock_root                    string   false      true
+CONFIG.dma_2rp                                    string   false      false
+CONFIG.dma_reset_source_sel                       string   false      User_Reset
+CONFIG.drp_clk_sel                                string   false      Internal
+CONFIG.dsc_bypass_rd                              string   false      0000
+CONFIG.dsc_bypass_rd_out                          string   false      0000
+CONFIG.dsc_bypass_wr                              string   false      0000
+CONFIG.dsc_bypass_wr_out                          string   false      0000
+CONFIG.ecc_en                                     string   false      false
+CONFIG.en_axi_master_if                           string   false      true
+CONFIG.en_axi_mm_mqdma                            string   false      true
+CONFIG.en_axi_slave_if                            string   false      true
+CONFIG.en_axi_st_mqdma                            string   false      false
+CONFIG.en_bridge                                  string   false      false
+CONFIG.en_coreclk_es1                             string   false      false
+CONFIG.en_dbg_descramble                          string   false      false
+CONFIG.en_debug_ports                             string   false      false
+CONFIG.en_dma_and_bridge                          string   false      false
+CONFIG.en_ext_ch_gt_drp                           string   false      false
+CONFIG.en_gt_selection                            string   false      true
+CONFIG.en_l23_entry                               string   false      false
+CONFIG.en_mqdma                                   string   false      false
+CONFIG.en_pcie_drp                                string   false      false
+CONFIG.en_transceiver_status_ports                string   false      false
+CONFIG.enable_ats_switch                          string   false      FALSE
+CONFIG.enable_auto_rxeq                           string   false      False
+CONFIG.enable_ccix                                string   false      FALSE
+CONFIG.enable_code                                string   false      0000
+CONFIG.enable_dvsec                               string   false      FALSE
+CONFIG.enable_epyc_chipset_fix                    string   false      false
+CONFIG.enable_gen4                                string   false      true
+CONFIG.enable_ibert                               string   false      false
+CONFIG.enable_jtag_dbg                            string   false      false
+CONFIG.enable_lane_reversal                       string   false      false
+CONFIG.enable_ltssm_dbg                           string   false      false
+CONFIG.enable_mark_debug                          string   false      false
+CONFIG.enable_more_clk                            string   false      false
+CONFIG.enable_multi_pcie                          string   false      false
+CONFIG.enable_pcie_debug                          string   false      False
+CONFIG.enable_resource_reduction                  string   false      false
+CONFIG.enable_slave_read_64os                     string   false      false
+CONFIG.ext_startup_primitive                      string   false      false
+CONFIG.ext_sys_clk_bufg                           string   false      false
+CONFIG.ext_xvc_vsec_enable                        string   false      false
+CONFIG.flr_enable                                 string   false      false
+CONFIG.free_run_freq                              string   false      100_MHz
+CONFIG.functional_mode                            string   false      DMA
+CONFIG.gen4_eieos_0s7                             string   false      true
+CONFIG.gen_pipe_debug                             string   false      false
+CONFIG.gtcom_in_core_usp                          string   false      2
+CONFIG.gtwiz_in_core_us                           string   false      1
+CONFIG.gtwiz_in_core_usp                          string   false      1
+CONFIG.include_baroffset_reg                      string   false      true
+CONFIG.ins_loss_profile                           string   false      Add-in_Card
+CONFIG.intx_rx_pin_en                             string   false      true
+CONFIG.legacy_cfg_ext_if                          string   false      false
+CONFIG.local_test                                 string   false      false
+CONFIG.m_axib_num_write_scale                     string   false      1
+CONFIG.master_cal_only                            string   false      false
+CONFIG.mcap_enablement                            string   false      None
+CONFIG.mcap_fpga_bitstream_version                string   false      00000000
+CONFIG.mode_selection                             string   false      Basic
+CONFIG.mpsoc_pl_rp_enable                         string   false      false
+CONFIG.msi_rx_pin_en                              string   false      FALSE
+CONFIG.msix_pcie_internal                         string   false      false
+CONFIG.msix_rx_decode_en                          string   false      FALSE
+CONFIG.msix_rx_pin_en                             string   false      TRUE
+CONFIG.msix_type                                  string   false      HARD
+CONFIG.mult_pf_des                                string   false      false
+CONFIG.num_queues                                 string   false      1
+CONFIG.old_bridge_timeout                         string   false      false
+CONFIG.parity_settings                            string   false      None
+CONFIG.pcie_blk_locn                              string   false      X0Y0
+CONFIG.pcie_extended_tag                          string   false      true
+CONFIG.pcie_id_if                                 string   false      FALSE
+CONFIG.pciebar2axibar_0                           string   false      0x0000000000000000
+CONFIG.pciebar2axibar_1                           string   false      0x0000000000000000
+CONFIG.pciebar2axibar_2                           string   false      0x0000000000000000
+CONFIG.pciebar2axibar_3                           string   false      0x0000000000000000
+CONFIG.pciebar2axibar_4                           string   false      0x0000000000000000
+CONFIG.pciebar2axibar_5                           string   false      0x0000000000000000
+CONFIG.pciebar2axibar_6                           string   false      0x0000000000000000
+CONFIG.pciebar2axibar_axil_master                 string   false      0x40000000
+CONFIG.pciebar2axibar_axist_bypass                string   false      0x0000000000000000
+CONFIG.pciebar2axibar_xdma                        string   false      0x0000000000000000
+CONFIG.performance                                string   false      false
+CONFIG.pf0_Use_Class_Code_Lookup_Assistant        string   false      false
+CONFIG.pf0_Use_Class_Code_Lookup_Assistant_mqdma  string   false      false
+CONFIG.pf0_aer_cap_ecrc_gen_and_check_capable     string   false      false
+CONFIG.pf0_ari_enabled                            string   false      false
+CONFIG.pf0_ats_enabled                            string   false      false
+CONFIG.pf0_bar0_64bit                             string   false      false
+CONFIG.pf0_bar0_64bit_mqdma                       string   false      false
+CONFIG.pf0_bar0_enabled                           string   false      true
+CONFIG.pf0_bar0_enabled_mqdma                     string   false      true
+CONFIG.pf0_bar0_index                             string   false      0
+CONFIG.pf0_bar0_prefetchable                      string   false      false
+CONFIG.pf0_bar0_prefetchable_mqdma                string   false      false
+CONFIG.pf0_bar0_scale                             string   false      Kilobytes
+CONFIG.pf0_bar0_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf0_bar0_size                              string   false      128
+CONFIG.pf0_bar0_size_mqdma                        string   false      128
+CONFIG.pf0_bar0_type                              string   false      Memory
+CONFIG.pf0_bar0_type_mqdma                        string   false      DMA
+CONFIG.pf0_bar1_64bit                             string   false      false
+CONFIG.pf0_bar1_64bit_mqdma                       string   false      false
+CONFIG.pf0_bar1_enabled                           string   false      false
+CONFIG.pf0_bar1_enabled_mqdma                     string   false      false
+CONFIG.pf0_bar1_index                             string   false      7
+CONFIG.pf0_bar1_prefetchable                      string   false      false
+CONFIG.pf0_bar1_prefetchable_mqdma                string   false      false
+CONFIG.pf0_bar1_scale                             string   false      Kilobytes
+CONFIG.pf0_bar1_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf0_bar1_size                              string   false      4
+CONFIG.pf0_bar1_size_mqdma                        string   false      128
+CONFIG.pf0_bar1_type                              string   false      Memory
+CONFIG.pf0_bar1_type_mqdma                        string   false      N/A
+CONFIG.pf0_bar2_64bit                             string   false      false
+CONFIG.pf0_bar2_64bit_mqdma                       string   false      false
+CONFIG.pf0_bar2_enabled                           string   false      false
+CONFIG.pf0_bar2_enabled_mqdma                     string   false      false
+CONFIG.pf0_bar2_index                             string   false      7
+CONFIG.pf0_bar2_prefetchable                      string   false      false
+CONFIG.pf0_bar2_prefetchable_mqdma                string   false      false
+CONFIG.pf0_bar2_scale                             string   false      Kilobytes
+CONFIG.pf0_bar2_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf0_bar2_size                              string   false      4
+CONFIG.pf0_bar2_size_mqdma                        string   false      128
+CONFIG.pf0_bar2_type                              string   false      Memory
+CONFIG.pf0_bar2_type_mqdma                        string   false      N/A
+CONFIG.pf0_bar3_64bit                             string   false      false
+CONFIG.pf0_bar3_64bit_mqdma                       string   false      false
+CONFIG.pf0_bar3_enabled                           string   false      false
+CONFIG.pf0_bar3_enabled_mqdma                     string   false      false
+CONFIG.pf0_bar3_index                             string   false      7
+CONFIG.pf0_bar3_prefetchable                      string   false      false
+CONFIG.pf0_bar3_prefetchable_mqdma                string   false      false
+CONFIG.pf0_bar3_scale                             string   false      Kilobytes
+CONFIG.pf0_bar3_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf0_bar3_size                              string   false      4
+CONFIG.pf0_bar3_size_mqdma                        string   false      128
+CONFIG.pf0_bar3_type                              string   false      Memory
+CONFIG.pf0_bar3_type_mqdma                        string   false      N/A
+CONFIG.pf0_bar4_64bit                             string   false      false
+CONFIG.pf0_bar4_64bit_mqdma                       string   false      false
+CONFIG.pf0_bar4_enabled                           string   false      false
+CONFIG.pf0_bar4_enabled_mqdma                     string   false      false
+CONFIG.pf0_bar4_index                             string   false      7
+CONFIG.pf0_bar4_prefetchable                      string   false      false
+CONFIG.pf0_bar4_prefetchable_mqdma                string   false      false
+CONFIG.pf0_bar4_scale                             string   false      Kilobytes
+CONFIG.pf0_bar4_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf0_bar4_size                              string   false      4
+CONFIG.pf0_bar4_size_mqdma                        string   false      128
+CONFIG.pf0_bar4_type                              string   false      Memory
+CONFIG.pf0_bar4_type_mqdma                        string   false      N/A
+CONFIG.pf0_bar5_64bit                             string   false      false
+CONFIG.pf0_bar5_enabled                           string   false      false
+CONFIG.pf0_bar5_enabled_mqdma                     string   false      false
+CONFIG.pf0_bar5_index                             string   false      7
+CONFIG.pf0_bar5_prefetchable                      string   false      false
+CONFIG.pf0_bar5_prefetchable_mqdma                string   false      false
+CONFIG.pf0_bar5_scale                             string   false      Kilobytes
+CONFIG.pf0_bar5_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf0_bar5_size                              string   false      4
+CONFIG.pf0_bar5_size_mqdma                        string   false      128
+CONFIG.pf0_bar5_type                              string   false      Memory
+CONFIG.pf0_bar5_type_mqdma                        string   false      N/A
+CONFIG.pf0_base_class_menu                        string   false      Simple_communication_controllers
+CONFIG.pf0_base_class_menu_mqdma                  string   false      Memory_controller
+CONFIG.pf0_class_code                             string   false      070001
+CONFIG.pf0_class_code_base                        string   false      07
+CONFIG.pf0_class_code_base_mqdma                  string   false      05
+CONFIG.pf0_class_code_interface                   string   false      01
+CONFIG.pf0_class_code_interface_mqdma             string   false      00
+CONFIG.pf0_class_code_mqdma                       string   false      058000
+CONFIG.pf0_class_code_sub                         string   false      00
+CONFIG.pf0_class_code_sub_mqdma                   string   false      80
+CONFIG.pf0_device_id                              string   false      8032
+CONFIG.pf0_expansion_rom_enabled                  string   false      false
+CONFIG.pf0_expansion_rom_scale                    string   false      Kilobytes
+CONFIG.pf0_expansion_rom_size                     string   false      4
+CONFIG.pf0_expansion_rom_type                     string   false      N/A
+CONFIG.pf0_interrupt_pin                          string   false      NONE
+CONFIG.pf0_link_status_slot_clock_config          string   false      true
+CONFIG.pf0_msi_cap_multimsgcap                    string   false      1_vector
+CONFIG.pf0_msi_enabled                            string   false      true
+CONFIG.pf0_msix_cap_pba_bir                       string   false      BAR_1
+CONFIG.pf0_msix_cap_pba_offset                    string   false      00000000
+CONFIG.pf0_msix_cap_table_bir                     string   false      BAR_1
+CONFIG.pf0_msix_cap_table_offset                  string   false      00000000
+CONFIG.pf0_msix_cap_table_size                    string   false      000
+CONFIG.pf0_msix_enabled                           string   false      false
+CONFIG.pf0_msix_enabled_mqdma                     string   false      false
+CONFIG.pf0_msix_impl_locn                         string   false      Internal
+CONFIG.pf0_pri_enabled                            string   false      false
+CONFIG.pf0_rbar_cap_bar0                          string   false      0x00000000fff0
+CONFIG.pf0_rbar_cap_bar1                          string   false      0x000000000000
+CONFIG.pf0_rbar_cap_bar2                          string   false      0x000000000000
+CONFIG.pf0_rbar_cap_bar3                          string   false      0x000000000000
+CONFIG.pf0_rbar_cap_bar4                          string   false      0x000000000000
+CONFIG.pf0_rbar_cap_bar5                          string   false      0x000000000000
+CONFIG.pf0_rbar_num                               string   false      1
+CONFIG.pf0_revision_id                            string   false      00
+CONFIG.pf0_sriov_bar0_64bit                       string   false      false
+CONFIG.pf0_sriov_bar0_enabled                     string   false      true
+CONFIG.pf0_sriov_bar0_prefetchable                string   false      false
+CONFIG.pf0_sriov_bar0_scale                       string   false      Kilobytes
+CONFIG.pf0_sriov_bar0_size                        string   false      2
+CONFIG.pf0_sriov_bar0_type                        string   false      DMA
+CONFIG.pf0_sriov_bar1_64bit                       string   false      false
+CONFIG.pf0_sriov_bar1_enabled                     string   false      false
+CONFIG.pf0_sriov_bar1_prefetchable                string   false      false
+CONFIG.pf0_sriov_bar1_scale                       string   false      Kilobytes
+CONFIG.pf0_sriov_bar1_size                        string   false      2
+CONFIG.pf0_sriov_bar1_type                        string   false      N/A
+CONFIG.pf0_sriov_bar2_64bit                       string   false      false
+CONFIG.pf0_sriov_bar2_enabled                     string   false      false
+CONFIG.pf0_sriov_bar2_prefetchable                string   false      false
+CONFIG.pf0_sriov_bar2_scale                       string   false      Kilobytes
+CONFIG.pf0_sriov_bar2_size                        string   false      2
+CONFIG.pf0_sriov_bar2_type                        string   false      N/A
+CONFIG.pf0_sriov_bar3_64bit                       string   false      false
+CONFIG.pf0_sriov_bar3_enabled                     string   false      false
+CONFIG.pf0_sriov_bar3_prefetchable                string   false      false
+CONFIG.pf0_sriov_bar3_scale                       string   false      Kilobytes
+CONFIG.pf0_sriov_bar3_size                        string   false      2
+CONFIG.pf0_sriov_bar3_type                        string   false      N/A
+CONFIG.pf0_sriov_bar4_64bit                       string   false      false
+CONFIG.pf0_sriov_bar4_enabled                     string   false      false
+CONFIG.pf0_sriov_bar4_prefetchable                string   false      false
+CONFIG.pf0_sriov_bar4_scale                       string   false      Kilobytes
+CONFIG.pf0_sriov_bar4_size                        string   false      2
+CONFIG.pf0_sriov_bar4_type                        string   false      N/A
+CONFIG.pf0_sriov_bar5_64bit                       string   false      false
+CONFIG.pf0_sriov_bar5_enabled                     string   false      false
+CONFIG.pf0_sriov_bar5_prefetchable                string   false      false
+CONFIG.pf0_sriov_bar5_scale                       string   false      Kilobytes
+CONFIG.pf0_sriov_bar5_size                        string   false      2
+CONFIG.pf0_sriov_bar5_type                        string   false      N/A
+CONFIG.pf0_sriov_cap_ver                          string   false      1
+CONFIG.pf0_sub_class_interface_menu               string   false      16450_compatible_serial_controller
+CONFIG.pf0_sub_class_interface_menu_mqdma         string   false      Other_memory_controller
+CONFIG.pf0_subsystem_id                           string   false      0007
+CONFIG.pf0_subsystem_vendor_id                    string   false      10EE
+CONFIG.pf0_vendor_id_mqdma                        string   false      10EE
+CONFIG.pf1_Use_Class_Code_Lookup_Assistant_mqdma  string   false      false
+CONFIG.pf1_bar0_64bit                             string   false      false
+CONFIG.pf1_bar0_64bit_mqdma                       string   false      false
+CONFIG.pf1_bar0_enabled                           string   false      true
+CONFIG.pf1_bar0_enabled_mqdma                     string   false      true
+CONFIG.pf1_bar0_index                             string   false      0
+CONFIG.pf1_bar0_prefetchable                      string   false      false
+CONFIG.pf1_bar0_prefetchable_mqdma                string   false      false
+CONFIG.pf1_bar0_scale                             string   false      Megabytes
+CONFIG.pf1_bar0_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf1_bar0_size                              string   false      32
+CONFIG.pf1_bar0_size_mqdma                        string   false      128
+CONFIG.pf1_bar0_type                              string   false      Memory
+CONFIG.pf1_bar0_type_mqdma                        string   false      DMA
+CONFIG.pf1_bar1_64bit                             string   false      false
+CONFIG.pf1_bar1_64bit_mqdma                       string   false      false
+CONFIG.pf1_bar1_enabled                           string   false      true
+CONFIG.pf1_bar1_enabled_mqdma                     string   false      false
+CONFIG.pf1_bar1_index                             string   false      7
+CONFIG.pf1_bar1_prefetchable                      string   false      false
+CONFIG.pf1_bar1_prefetchable_mqdma                string   false      false
+CONFIG.pf1_bar1_scale                             string   false      Kilobytes
+CONFIG.pf1_bar1_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf1_bar1_size                              string   false      128
+CONFIG.pf1_bar1_size_mqdma                        string   false      128
+CONFIG.pf1_bar1_type                              string   false      Memory
+CONFIG.pf1_bar1_type_mqdma                        string   false      N/A
+CONFIG.pf1_bar2_64bit                             string   false      true
+CONFIG.pf1_bar2_64bit_mqdma                       string   false      false
+CONFIG.pf1_bar2_enabled                           string   false      true
+CONFIG.pf1_bar2_enabled_mqdma                     string   false      false
+CONFIG.pf1_bar2_index                             string   false      7
+CONFIG.pf1_bar2_prefetchable                      string   false      false
+CONFIG.pf1_bar2_prefetchable_mqdma                string   false      false
+CONFIG.pf1_bar2_scale                             string   false      Kilobytes
+CONFIG.pf1_bar2_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf1_bar2_size                              string   false      128
+CONFIG.pf1_bar2_size_mqdma                        string   false      128
+CONFIG.pf1_bar2_type                              string   false      Memory
+CONFIG.pf1_bar2_type_mqdma                        string   false      N/A
+CONFIG.pf1_bar3_64bit                             string   false      false
+CONFIG.pf1_bar3_64bit_mqdma                       string   false      false
+CONFIG.pf1_bar3_enabled                           string   false      false
+CONFIG.pf1_bar3_enabled_mqdma                     string   false      false
+CONFIG.pf1_bar3_index                             string   false      7
+CONFIG.pf1_bar3_prefetchable                      string   false      false
+CONFIG.pf1_bar3_prefetchable_mqdma                string   false      false
+CONFIG.pf1_bar3_scale                             string   false      Kilobytes
+CONFIG.pf1_bar3_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf1_bar3_size                              string   false      128
+CONFIG.pf1_bar3_size_mqdma                        string   false      128
+CONFIG.pf1_bar3_type                              string   false      Memory
+CONFIG.pf1_bar3_type_mqdma                        string   false      N/A
+CONFIG.pf1_bar4_64bit                             string   false      true
+CONFIG.pf1_bar4_64bit_mqdma                       string   false      false
+CONFIG.pf1_bar4_enabled                           string   false      true
+CONFIG.pf1_bar4_enabled_mqdma                     string   false      false
+CONFIG.pf1_bar4_index                             string   false      7
+CONFIG.pf1_bar4_prefetchable                      string   false      false
+CONFIG.pf1_bar4_prefetchable_mqdma                string   false      false
+CONFIG.pf1_bar4_scale                             string   false      Kilobytes
+CONFIG.pf1_bar4_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf1_bar4_size                              string   false      128
+CONFIG.pf1_bar4_size_mqdma                        string   false      128
+CONFIG.pf1_bar4_type                              string   false      Memory
+CONFIG.pf1_bar4_type_mqdma                        string   false      N/A
+CONFIG.pf1_bar5_enabled                           string   false      false
+CONFIG.pf1_bar5_enabled_mqdma                     string   false      false
+CONFIG.pf1_bar5_index                             string   false      7
+CONFIG.pf1_bar5_prefetchable                      string   false      false
+CONFIG.pf1_bar5_prefetchable_mqdma                string   false      false
+CONFIG.pf1_bar5_scale                             string   false      Kilobytes
+CONFIG.pf1_bar5_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf1_bar5_size                              string   false      128
+CONFIG.pf1_bar5_size_mqdma                        string   false      128
+CONFIG.pf1_bar5_type                              string   false      Memory
+CONFIG.pf1_bar5_type_mqdma                        string   false      N/A
+CONFIG.pf1_base_class_menu                        string   false      Simple_communication_controllers
+CONFIG.pf1_base_class_menu_mqdma                  string   false      Memory_controller
+CONFIG.pf1_class_code                             string   false      070001
+CONFIG.pf1_class_code_base                        string   false      07
+CONFIG.pf1_class_code_base_mqdma                  string   false      05
+CONFIG.pf1_class_code_interface                   string   false      01
+CONFIG.pf1_class_code_interface_mqdma             string   false      00
+CONFIG.pf1_class_code_mqdma                       string   false      058000
+CONFIG.pf1_class_code_sub                         string   false      00
+CONFIG.pf1_class_code_sub_mqdma                   string   false      80
+CONFIG.pf1_device_id                              string   false      1041
+CONFIG.pf1_expansion_rom_enabled                  string   false      false
+CONFIG.pf1_expansion_rom_scale                    string   false      Kilobytes
+CONFIG.pf1_expansion_rom_size                     string   false      4
+CONFIG.pf1_expansion_rom_type                     string   false      N/A
+CONFIG.pf1_msi_enabled                            string   false      false
+CONFIG.pf1_msix_cap_pba_bir                       string   false      BAR_0
+CONFIG.pf1_msix_cap_pba_offset                    string   false      00009FE0
+CONFIG.pf1_msix_cap_table_bir                     string   false      BAR_0
+CONFIG.pf1_msix_cap_table_offset                  string   false      00009000
+CONFIG.pf1_msix_cap_table_size                    string   false      01F
+CONFIG.pf1_msix_enabled                           string   false      false
+CONFIG.pf1_msix_enabled_mqdma                     string   false      false
+CONFIG.pf1_pciebar2axibar_0                       string   false      0x0000000000000000
+CONFIG.pf1_pciebar2axibar_1                       string   false      0x0000000000000000
+CONFIG.pf1_pciebar2axibar_2                       string   false      0x0000000000000000
+CONFIG.pf1_pciebar2axibar_3                       string   false      0x0000000000000000
+CONFIG.pf1_pciebar2axibar_4                       string   false      0x0000000000000000
+CONFIG.pf1_pciebar2axibar_5                       string   false      0x0000000000000000
+CONFIG.pf1_pciebar2axibar_6                       string   false      0x0000000000000000
+CONFIG.pf1_rbar_cap_bar0                          string   false      0x00000000fff0
+CONFIG.pf1_rbar_cap_bar1                          string   false      0x000000000000
+CONFIG.pf1_rbar_cap_bar2                          string   false      0x000000000000
+CONFIG.pf1_rbar_cap_bar3                          string   false      0x000000000000
+CONFIG.pf1_rbar_cap_bar4                          string   false      0x000000000000
+CONFIG.pf1_rbar_cap_bar5                          string   false      0x000000000000
+CONFIG.pf1_rbar_num                               string   false      1
+CONFIG.pf1_sriov_bar0_64bit                       string   false      false
+CONFIG.pf1_sriov_bar0_enabled                     string   false      true
+CONFIG.pf1_sriov_bar0_prefetchable                string   false      false
+CONFIG.pf1_sriov_bar0_scale                       string   false      Kilobytes
+CONFIG.pf1_sriov_bar0_size                        string   false      2
+CONFIG.pf1_sriov_bar0_type                        string   false      DMA
+CONFIG.pf1_sriov_bar1_64bit                       string   false      false
+CONFIG.pf1_sriov_bar1_enabled                     string   false      false
+CONFIG.pf1_sriov_bar1_prefetchable                string   false      false
+CONFIG.pf1_sriov_bar1_scale                       string   false      Kilobytes
+CONFIG.pf1_sriov_bar1_size                        string   false      2
+CONFIG.pf1_sriov_bar1_type                        string   false      N/A
+CONFIG.pf1_sriov_bar2_64bit                       string   false      false
+CONFIG.pf1_sriov_bar2_enabled                     string   false      false
+CONFIG.pf1_sriov_bar2_prefetchable                string   false      false
+CONFIG.pf1_sriov_bar2_scale                       string   false      Kilobytes
+CONFIG.pf1_sriov_bar2_size                        string   false      2
+CONFIG.pf1_sriov_bar2_type                        string   false      N/A
+CONFIG.pf1_sriov_bar3_64bit                       string   false      false
+CONFIG.pf1_sriov_bar3_enabled                     string   false      false
+CONFIG.pf1_sriov_bar3_prefetchable                string   false      false
+CONFIG.pf1_sriov_bar3_scale                       string   false      Kilobytes
+CONFIG.pf1_sriov_bar3_size                        string   false      2
+CONFIG.pf1_sriov_bar3_type                        string   false      N/A
+CONFIG.pf1_sriov_bar4_64bit                       string   false      false
+CONFIG.pf1_sriov_bar4_enabled                     string   false      false
+CONFIG.pf1_sriov_bar4_prefetchable                string   false      false
+CONFIG.pf1_sriov_bar4_scale                       string   false      Kilobytes
+CONFIG.pf1_sriov_bar4_size                        string   false      2
+CONFIG.pf1_sriov_bar4_type                        string   false      N/A
+CONFIG.pf1_sriov_bar5_64bit                       string   false      false
+CONFIG.pf1_sriov_bar5_enabled                     string   false      false
+CONFIG.pf1_sriov_bar5_prefetchable                string   false      false
+CONFIG.pf1_sriov_bar5_scale                       string   false      Kilobytes
+CONFIG.pf1_sriov_bar5_size                        string   false      2
+CONFIG.pf1_sriov_bar5_type                        string   false      N/A
+CONFIG.pf1_sub_class_interface_menu               string   false      16450_compatible_serial_controller
+CONFIG.pf1_sub_class_interface_menu_mqdma         string   false      Other_memory_controller
+CONFIG.pf1_vendor_id                              string   false      10EE
+CONFIG.pf1_vendor_id_mqdma                        string   false      10EE
+CONFIG.pf2_Use_Class_Code_Lookup_Assistant_mqdma  string   false      false
+CONFIG.pf2_bar0_64bit                             string   false      false
+CONFIG.pf2_bar0_64bit_mqdma                       string   false      false
+CONFIG.pf2_bar0_enabled                           string   false      true
+CONFIG.pf2_bar0_enabled_mqdma                     string   false      true
+CONFIG.pf2_bar0_index                             string   false      0
+CONFIG.pf2_bar0_prefetchable                      string   false      false
+CONFIG.pf2_bar0_prefetchable_mqdma                string   false      false
+CONFIG.pf2_bar0_scale                             string   false      Kilobytes
+CONFIG.pf2_bar0_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf2_bar0_size                              string   false      128
+CONFIG.pf2_bar0_size_mqdma                        string   false      128
+CONFIG.pf2_bar0_type                              string   false      Memory
+CONFIG.pf2_bar0_type_mqdma                        string   false      DMA
+CONFIG.pf2_bar1_64bit                             string   false      false
+CONFIG.pf2_bar1_64bit_mqdma                       string   false      false
+CONFIG.pf2_bar1_enabled                           string   false      true
+CONFIG.pf2_bar1_enabled_mqdma                     string   false      false
+CONFIG.pf2_bar1_index                             string   false      7
+CONFIG.pf2_bar1_prefetchable                      string   false      false
+CONFIG.pf2_bar1_prefetchable_mqdma                string   false      false
+CONFIG.pf2_bar1_scale                             string   false      Kilobytes
+CONFIG.pf2_bar1_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf2_bar1_size                              string   false      128
+CONFIG.pf2_bar1_size_mqdma                        string   false      128
+CONFIG.pf2_bar1_type                              string   false      Memory
+CONFIG.pf2_bar1_type_mqdma                        string   false      N/A
+CONFIG.pf2_bar2_64bit                             string   false      false
+CONFIG.pf2_bar2_64bit_mqdma                       string   false      false
+CONFIG.pf2_bar2_enabled                           string   false      true
+CONFIG.pf2_bar2_enabled_mqdma                     string   false      false
+CONFIG.pf2_bar2_index                             string   false      7
+CONFIG.pf2_bar2_prefetchable                      string   false      false
+CONFIG.pf2_bar2_prefetchable_mqdma                string   false      false
+CONFIG.pf2_bar2_scale                             string   false      Kilobytes
+CONFIG.pf2_bar2_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf2_bar2_size                              string   false      128
+CONFIG.pf2_bar2_size_mqdma                        string   false      128
+CONFIG.pf2_bar2_type                              string   false      Memory
+CONFIG.pf2_bar2_type_mqdma                        string   false      N/A
+CONFIG.pf2_bar3_64bit                             string   false      false
+CONFIG.pf2_bar3_64bit_mqdma                       string   false      false
+CONFIG.pf2_bar3_enabled                           string   false      true
+CONFIG.pf2_bar3_enabled_mqdma                     string   false      false
+CONFIG.pf2_bar3_index                             string   false      7
+CONFIG.pf2_bar3_prefetchable                      string   false      false
+CONFIG.pf2_bar3_prefetchable_mqdma                string   false      false
+CONFIG.pf2_bar3_scale                             string   false      Kilobytes
+CONFIG.pf2_bar3_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf2_bar3_size                              string   false      128
+CONFIG.pf2_bar3_size_mqdma                        string   false      128
+CONFIG.pf2_bar3_type                              string   false      Memory
+CONFIG.pf2_bar3_type_mqdma                        string   false      N/A
+CONFIG.pf2_bar4_64bit                             string   false      false
+CONFIG.pf2_bar4_64bit_mqdma                       string   false      false
+CONFIG.pf2_bar4_enabled                           string   false      true
+CONFIG.pf2_bar4_enabled_mqdma                     string   false      false
+CONFIG.pf2_bar4_index                             string   false      7
+CONFIG.pf2_bar4_prefetchable                      string   false      false
+CONFIG.pf2_bar4_prefetchable_mqdma                string   false      false
+CONFIG.pf2_bar4_scale                             string   false      Kilobytes
+CONFIG.pf2_bar4_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf2_bar4_size                              string   false      128
+CONFIG.pf2_bar4_size_mqdma                        string   false      128
+CONFIG.pf2_bar4_type                              string   false      Memory
+CONFIG.pf2_bar4_type_mqdma                        string   false      N/A
+CONFIG.pf2_bar5_enabled                           string   false      true
+CONFIG.pf2_bar5_enabled_mqdma                     string   false      false
+CONFIG.pf2_bar5_index                             string   false      7
+CONFIG.pf2_bar5_prefetchable                      string   false      false
+CONFIG.pf2_bar5_prefetchable_mqdma                string   false      false
+CONFIG.pf2_bar5_scale                             string   false      Kilobytes
+CONFIG.pf2_bar5_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf2_bar5_size                              string   false      128
+CONFIG.pf2_bar5_size_mqdma                        string   false      128
+CONFIG.pf2_bar5_type                              string   false      Memory
+CONFIG.pf2_bar5_type_mqdma                        string   false      N/A
+CONFIG.pf2_base_class_menu                        string   false      Memory_controller
+CONFIG.pf2_base_class_menu_mqdma                  string   false      Memory_controller
+CONFIG.pf2_class_code                             string   false      058000
+CONFIG.pf2_class_code_base                        string   false      05
+CONFIG.pf2_class_code_base_mqdma                  string   false      05
+CONFIG.pf2_class_code_interface                   string   false      00
+CONFIG.pf2_class_code_interface_mqdma             string   false      00
+CONFIG.pf2_class_code_mqdma                       string   false      058000
+CONFIG.pf2_class_code_sub                         string   false      80
+CONFIG.pf2_class_code_sub_mqdma                   string   false      80
+CONFIG.pf2_device_id                              string   false      1040
+CONFIG.pf2_expansion_rom_enabled                  string   false      false
+CONFIG.pf2_expansion_rom_scale                    string   false      Kilobytes
+CONFIG.pf2_expansion_rom_size                     string   false      4
+CONFIG.pf2_expansion_rom_type                     string   false      N/A
+CONFIG.pf2_msi_enabled                            string   false      false
+CONFIG.pf2_msix_enabled_mqdma                     string   false      false
+CONFIG.pf2_pciebar2axibar_0                       string   false      0x0000000000000000
+CONFIG.pf2_pciebar2axibar_1                       string   false      0x0000000000000000
+CONFIG.pf2_pciebar2axibar_2                       string   false      0x0000000000000000
+CONFIG.pf2_pciebar2axibar_3                       string   false      0x0000000000000000
+CONFIG.pf2_pciebar2axibar_4                       string   false      0x0000000000000000
+CONFIG.pf2_pciebar2axibar_5                       string   false      0x0000000000000000
+CONFIG.pf2_rbar_cap_bar0                          string   false      0x00000000fff0
+CONFIG.pf2_rbar_cap_bar1                          string   false      0x000000000000
+CONFIG.pf2_rbar_cap_bar2                          string   false      0x000000000000
+CONFIG.pf2_rbar_cap_bar3                          string   false      0x000000000000
+CONFIG.pf2_rbar_cap_bar4                          string   false      0x000000000000
+CONFIG.pf2_rbar_cap_bar5                          string   false      0x000000000000
+CONFIG.pf2_rbar_num                               string   false      1
+CONFIG.pf2_sriov_bar0_64bit                       string   false      false
+CONFIG.pf2_sriov_bar0_enabled                     string   false      true
+CONFIG.pf2_sriov_bar0_prefetchable                string   false      false
+CONFIG.pf2_sriov_bar0_scale                       string   false      Kilobytes
+CONFIG.pf2_sriov_bar0_size                        string   false      2
+CONFIG.pf2_sriov_bar0_type                        string   false      DMA
+CONFIG.pf2_sriov_bar1_64bit                       string   false      false
+CONFIG.pf2_sriov_bar1_enabled                     string   false      false
+CONFIG.pf2_sriov_bar1_prefetchable                string   false      false
+CONFIG.pf2_sriov_bar1_scale                       string   false      Kilobytes
+CONFIG.pf2_sriov_bar1_size                        string   false      2
+CONFIG.pf2_sriov_bar1_type                        string   false      N/A
+CONFIG.pf2_sriov_bar2_64bit                       string   false      false
+CONFIG.pf2_sriov_bar2_enabled                     string   false      false
+CONFIG.pf2_sriov_bar2_prefetchable                string   false      false
+CONFIG.pf2_sriov_bar2_scale                       string   false      Kilobytes
+CONFIG.pf2_sriov_bar2_size                        string   false      2
+CONFIG.pf2_sriov_bar2_type                        string   false      N/A
+CONFIG.pf2_sriov_bar3_64bit                       string   false      false
+CONFIG.pf2_sriov_bar3_enabled                     string   false      false
+CONFIG.pf2_sriov_bar3_prefetchable                string   false      false
+CONFIG.pf2_sriov_bar3_scale                       string   false      Kilobytes
+CONFIG.pf2_sriov_bar3_size                        string   false      2
+CONFIG.pf2_sriov_bar3_type                        string   false      N/A
+CONFIG.pf2_sriov_bar4_64bit                       string   false      false
+CONFIG.pf2_sriov_bar4_enabled                     string   false      false
+CONFIG.pf2_sriov_bar4_prefetchable                string   false      false
+CONFIG.pf2_sriov_bar4_scale                       string   false      Kilobytes
+CONFIG.pf2_sriov_bar4_size                        string   false      2
+CONFIG.pf2_sriov_bar4_type                        string   false      N/A
+CONFIG.pf2_sriov_bar5_64bit                       string   false      false
+CONFIG.pf2_sriov_bar5_enabled                     string   false      false
+CONFIG.pf2_sriov_bar5_prefetchable                string   false      false
+CONFIG.pf2_sriov_bar5_scale                       string   false      Kilobytes
+CONFIG.pf2_sriov_bar5_size                        string   false      2
+CONFIG.pf2_sriov_bar5_type                        string   false      N/A
+CONFIG.pf2_sub_class_interface_menu               string   false      Other_memory_controller
+CONFIG.pf2_sub_class_interface_menu_mqdma         string   false      Other_memory_controller
+CONFIG.pf2_vendor_id_mqdma                        string   false      10EE
+CONFIG.pf3_Use_Class_Code_Lookup_Assistant_mqdma  string   false      false
+CONFIG.pf3_bar0_64bit                             string   false      false
+CONFIG.pf3_bar0_64bit_mqdma                       string   false      false
+CONFIG.pf3_bar0_enabled                           string   false      true
+CONFIG.pf3_bar0_enabled_mqdma                     string   false      true
+CONFIG.pf3_bar0_index                             string   false      0
+CONFIG.pf3_bar0_prefetchable                      string   false      false
+CONFIG.pf3_bar0_prefetchable_mqdma                string   false      false
+CONFIG.pf3_bar0_scale                             string   false      Kilobytes
+CONFIG.pf3_bar0_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf3_bar0_size                              string   false      128
+CONFIG.pf3_bar0_size_mqdma                        string   false      128
+CONFIG.pf3_bar0_type                              string   false      Memory
+CONFIG.pf3_bar0_type_mqdma                        string   false      DMA
+CONFIG.pf3_bar1_64bit                             string   false      false
+CONFIG.pf3_bar1_64bit_mqdma                       string   false      false
+CONFIG.pf3_bar1_enabled                           string   false      true
+CONFIG.pf3_bar1_enabled_mqdma                     string   false      false
+CONFIG.pf3_bar1_index                             string   false      7
+CONFIG.pf3_bar1_prefetchable                      string   false      false
+CONFIG.pf3_bar1_prefetchable_mqdma                string   false      false
+CONFIG.pf3_bar1_scale                             string   false      Kilobytes
+CONFIG.pf3_bar1_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf3_bar1_size                              string   false      128
+CONFIG.pf3_bar1_size_mqdma                        string   false      128
+CONFIG.pf3_bar1_type                              string   false      Memory
+CONFIG.pf3_bar1_type_mqdma                        string   false      N/A
+CONFIG.pf3_bar2_64bit                             string   false      false
+CONFIG.pf3_bar2_64bit_mqdma                       string   false      false
+CONFIG.pf3_bar2_enabled                           string   false      true
+CONFIG.pf3_bar2_enabled_mqdma                     string   false      false
+CONFIG.pf3_bar2_index                             string   false      7
+CONFIG.pf3_bar2_prefetchable                      string   false      false
+CONFIG.pf3_bar2_prefetchable_mqdma                string   false      false
+CONFIG.pf3_bar2_scale                             string   false      Kilobytes
+CONFIG.pf3_bar2_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf3_bar2_size                              string   false      128
+CONFIG.pf3_bar2_size_mqdma                        string   false      128
+CONFIG.pf3_bar2_type                              string   false      Memory
+CONFIG.pf3_bar2_type_mqdma                        string   false      N/A
+CONFIG.pf3_bar3_64bit                             string   false      false
+CONFIG.pf3_bar3_64bit_mqdma                       string   false      false
+CONFIG.pf3_bar3_enabled                           string   false      true
+CONFIG.pf3_bar3_enabled_mqdma                     string   false      false
+CONFIG.pf3_bar3_index                             string   false      7
+CONFIG.pf3_bar3_prefetchable                      string   false      false
+CONFIG.pf3_bar3_prefetchable_mqdma                string   false      false
+CONFIG.pf3_bar3_scale                             string   false      Kilobytes
+CONFIG.pf3_bar3_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf3_bar3_size                              string   false      128
+CONFIG.pf3_bar3_size_mqdma                        string   false      128
+CONFIG.pf3_bar3_type                              string   false      Memory
+CONFIG.pf3_bar3_type_mqdma                        string   false      N/A
+CONFIG.pf3_bar4_64bit                             string   false      false
+CONFIG.pf3_bar4_64bit_mqdma                       string   false      false
+CONFIG.pf3_bar4_enabled                           string   false      true
+CONFIG.pf3_bar4_enabled_mqdma                     string   false      false
+CONFIG.pf3_bar4_index                             string   false      7
+CONFIG.pf3_bar4_prefetchable                      string   false      false
+CONFIG.pf3_bar4_prefetchable_mqdma                string   false      false
+CONFIG.pf3_bar4_scale                             string   false      Kilobytes
+CONFIG.pf3_bar4_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf3_bar4_size                              string   false      128
+CONFIG.pf3_bar4_size_mqdma                        string   false      128
+CONFIG.pf3_bar4_type                              string   false      Memory
+CONFIG.pf3_bar4_type_mqdma                        string   false      N/A
+CONFIG.pf3_bar5_enabled                           string   false      true
+CONFIG.pf3_bar5_enabled_mqdma                     string   false      false
+CONFIG.pf3_bar5_index                             string   false      7
+CONFIG.pf3_bar5_prefetchable                      string   false      false
+CONFIG.pf3_bar5_prefetchable_mqdma                string   false      false
+CONFIG.pf3_bar5_scale                             string   false      Kilobytes
+CONFIG.pf3_bar5_scale_mqdma                       string   false      Kilobytes
+CONFIG.pf3_bar5_size                              string   false      128
+CONFIG.pf3_bar5_size_mqdma                        string   false      128
+CONFIG.pf3_bar5_type                              string   false      Memory
+CONFIG.pf3_bar5_type_mqdma                        string   false      N/A
+CONFIG.pf3_base_class_menu                        string   false      Memory_controller
+CONFIG.pf3_base_class_menu_mqdma                  string   false      Memory_controller
+CONFIG.pf3_class_code                             string   false      058000
+CONFIG.pf3_class_code_base                        string   false      05
+CONFIG.pf3_class_code_base_mqdma                  string   false      05
+CONFIG.pf3_class_code_interface                   string   false      00
+CONFIG.pf3_class_code_interface_mqdma             string   false      00
+CONFIG.pf3_class_code_mqdma                       string   false      058000
+CONFIG.pf3_class_code_sub                         string   false      80
+CONFIG.pf3_class_code_sub_mqdma                   string   false      80
+CONFIG.pf3_device_id                              string   false      1039
+CONFIG.pf3_expansion_rom_enabled                  string   false      false
+CONFIG.pf3_expansion_rom_scale                    string   false      Kilobytes
+CONFIG.pf3_expansion_rom_size                     string   false      4
+CONFIG.pf3_expansion_rom_type                     string   false      N/A
+CONFIG.pf3_msi_enabled                            string   false      false
+CONFIG.pf3_msix_enabled_mqdma                     string   false      false
+CONFIG.pf3_pciebar2axibar_0                       string   false      0x0000000000000000
+CONFIG.pf3_pciebar2axibar_1                       string   false      0x0000000000000000
+CONFIG.pf3_pciebar2axibar_2                       string   false      0x0000000000000000
+CONFIG.pf3_pciebar2axibar_3                       string   false      0x0000000000000000
+CONFIG.pf3_pciebar2axibar_4                       string   false      0x0000000000000000
+CONFIG.pf3_pciebar2axibar_5                       string   false      0x0000000000000000
+CONFIG.pf3_rbar_cap_bar0                          string   false      0x00000000fff0
+CONFIG.pf3_rbar_cap_bar1                          string   false      0x000000000000
+CONFIG.pf3_rbar_cap_bar2                          string   false      0x000000000000
+CONFIG.pf3_rbar_cap_bar3                          string   false      0x000000000000
+CONFIG.pf3_rbar_cap_bar4                          string   false      0x000000000000
+CONFIG.pf3_rbar_cap_bar5                          string   false      0x000000000000
+CONFIG.pf3_rbar_num                               string   false      1
+CONFIG.pf3_sriov_bar0_64bit                       string   false      false
+CONFIG.pf3_sriov_bar0_enabled                     string   false      true
+CONFIG.pf3_sriov_bar0_prefetchable                string   false      false
+CONFIG.pf3_sriov_bar0_scale                       string   false      Kilobytes
+CONFIG.pf3_sriov_bar0_size                        string   false      2
+CONFIG.pf3_sriov_bar0_type                        string   false      DMA
+CONFIG.pf3_sriov_bar1_64bit                       string   false      false
+CONFIG.pf3_sriov_bar1_enabled                     string   false      false
+CONFIG.pf3_sriov_bar1_prefetchable                string   false      false
+CONFIG.pf3_sriov_bar1_scale                       string   false      Kilobytes
+CONFIG.pf3_sriov_bar1_size                        string   false      2
+CONFIG.pf3_sriov_bar1_type                        string   false      N/A
+CONFIG.pf3_sriov_bar2_64bit                       string   false      false
+CONFIG.pf3_sriov_bar2_enabled                     string   false      false
+CONFIG.pf3_sriov_bar2_prefetchable                string   false      false
+CONFIG.pf3_sriov_bar2_scale                       string   false      Kilobytes
+CONFIG.pf3_sriov_bar2_size                        string   false      2
+CONFIG.pf3_sriov_bar2_type                        string   false      N/A
+CONFIG.pf3_sriov_bar3_64bit                       string   false      false
+CONFIG.pf3_sriov_bar3_enabled                     string   false      false
+CONFIG.pf3_sriov_bar3_prefetchable                string   false      false
+CONFIG.pf3_sriov_bar3_scale                       string   false      Kilobytes
+CONFIG.pf3_sriov_bar3_size                        string   false      2
+CONFIG.pf3_sriov_bar3_type                        string   false      N/A
+CONFIG.pf3_sriov_bar4_64bit                       string   false      false
+CONFIG.pf3_sriov_bar4_enabled                     string   false      false
+CONFIG.pf3_sriov_bar4_prefetchable                string   false      false
+CONFIG.pf3_sriov_bar4_scale                       string   false      Kilobytes
+CONFIG.pf3_sriov_bar4_size                        string   false      2
+CONFIG.pf3_sriov_bar4_type                        string   false      N/A
+CONFIG.pf3_sriov_bar5_64bit                       string   false      false
+CONFIG.pf3_sriov_bar5_enabled                     string   false      false
+CONFIG.pf3_sriov_bar5_prefetchable                string   false      false
+CONFIG.pf3_sriov_bar5_scale                       string   false      Kilobytes
+CONFIG.pf3_sriov_bar5_size                        string   false      2
+CONFIG.pf3_sriov_bar5_type                        string   false      N/A
+CONFIG.pf3_sub_class_interface_menu               string   false      Other_memory_controller
+CONFIG.pf3_sub_class_interface_menu_mqdma         string   false      Other_memory_controller
+CONFIG.pf3_vendor_id_mqdma                        string   false      10EE
+CONFIG.pf_swap                                    string   false      false
+CONFIG.pipe_line_stage                            string   false      2
+CONFIG.pipe_sim                                   string   false      false
+CONFIG.pl_link_cap_max_link_speed                 string   false      8.0_GT/s
+CONFIG.pl_link_cap_max_link_width                 string   false      X2
+CONFIG.plltype                                    string   false      QPLL1
+CONFIG.post_synth_sim_en                          string   false      false
+CONFIG.prog_usr_irq_vec_map                       string   false      false
+CONFIG.rbar_enable                                string   false      false
+CONFIG.rcfg_nph_fix_en                            string   false      false
+CONFIG.ref_clk_freq                               string   false      100_MHz
+CONFIG.runbit_fix                                 string   false      false
+CONFIG.rx_detect                                  string   false      Default
+CONFIG.s_axi_id_width                             string   true       4
+CONFIG.select_quad                                string   false      GTH_Quad_224
+CONFIG.set_finite_credit                          string   false      false
+CONFIG.shell_bridge                               string   false      false
+CONFIG.silicon_rev                                string   false      Pre-Production
+CONFIG.soft_reset_en                              string   false      false
+CONFIG.split_dma                                  string   false      false
+CONFIG.split_dma_single_pf                        string   false      false
+CONFIG.sys_reset_polarity                         string   false      ACTIVE_LOW
+CONFIG.timeout0_sel                               string   false      14
+CONFIG.timeout1_sel                               string   false      15
+CONFIG.timeout_mult                               string   false      3
+CONFIG.tl_credits_cd                              string   false      15
+CONFIG.tl_credits_ch                              string   false      15
+CONFIG.tl_pf_enable_reg                           string   false      1
+CONFIG.tl_tx_mux_strict_priority                  string   false      false
+CONFIG.two_bypass_bar                             string   false      false
+CONFIG.type1_membase_memlimit_enable              string   false      Disabled
+CONFIG.type1_prefetchable_membase_memlimit        string   false      Disabled
+CONFIG.use_standard_interfaces                    string   false      false
+CONFIG.user_pf_two_axilite_bar_en                 string   false      false
+CONFIG.usplus_es1_seqnum_bypass                   string   false      false
+CONFIG.usr_irq_exdes                              string   false      false
+CONFIG.usrint_expn                                string   false      false
+CONFIG.vcu118_board                               string   false      false
+CONFIG.vcu1525_ddr_ex                             string   false      false
+CONFIG.vendor_id                                  string   false      10EE
+CONFIG.vu9p_board                                 string   false      false
+CONFIG.vu9p_tul_ex                                string   false      false
+CONFIG.xdma_axi_intf_mm                           string   false      AXI_Memory_Mapped
+CONFIG.xdma_axilite_slave                         string   false      false
+CONFIG.xdma_dsc_bypass                            string   false      false
+CONFIG.xdma_en                                    string   false      true
+CONFIG.xdma_non_incremental_exdes                 string   false      false
+CONFIG.xdma_num_usr_irq                           string   false      1
+CONFIG.xdma_pcie_64bit_en                         string   false      false
+CONFIG.xdma_pcie_prefetchable                     string   false      false
+CONFIG.xdma_rnum_chnl                             string   false      1
+CONFIG.xdma_rnum_rids                             string   false      32
+CONFIG.xdma_scale                                 string   false      Kilobytes
+CONFIG.xdma_size                                  string   false      64
+CONFIG.xdma_st_infinite_desc_exdes                string   false      false
+CONFIG.xdma_sts_ports                             string   false      false
+CONFIG.xdma_wnum_chnl                             string   false      1
+CONFIG.xdma_wnum_rids                             string   false      16
+CONFIG.xlnx_ref_board                             string   false      None
+LOCATION                                          string   false      
+NAME                                              string   false      xdma_0
+PATH                                              string   true       /xdma_0
+SCREENSIZE                                        string   false      
+SELECTED_SIM_MODEL                                string   false      rtl
+TYPE                                              string   true       ip
+VLNV                                              string   true       xilinx.com:ip:xdma:4.1
+# set_property -dict [list CONFIG.en_gt_selection true CONFIG.select_quad GTH_Quad_224 CONFIG.dedicate_perst false CONFIG.disable_gt_loc true] $xdma
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+xit::create_sub_core: Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 1143.746 ; gain = 144.434
+# set_property -dict [list CONFIG.axi_data_width 64_bit CONFIG.axisten_freq 250] $xdma
+# set_property CONFIG.ID_WIDTH 5 [get_bd_intf_ports M_AXI_MEM]
+CRITICAL WARNING: [BD 41-737] Cannot set the parameter ID_WIDTH on /M_AXI_MEM. It is read-only.
+# puts "XDMA_CONFIG_AFTER"
+XDMA_CONFIG_AFTER
+# foreach prop {CONFIG.en_gt_selection CONFIG.select_quad CONFIG.dedicate_perst CONFIG.pcie_blk_locn} {
+#     puts "$prop=[get_property $prop $xdma]"
+# }
+CONFIG.en_gt_selection=true
+CONFIG.select_quad=GTH_Quad_224
+CONFIG.dedicate_perst=false
+CONFIG.pcie_blk_locn=X0Y0
+# validate_bd_design
+validate_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1186.668 ; gain = 1.953
+# if {[get_property CONFIG.axi_data_width $xdma] ne "64_bit" || [get_property CONFIG.axisten_freq $xdma] ne "250"} {
+#     error "Unexpected XDMA data width/clock change; preserve 64-bit/250MHz"
+# }
+# if {[get_property CONFIG.ID_WIDTH [get_bd_intf_ports M_AXI_MEM]] ne "5"} {
+#     error "Memory interface must retain its original five-bit AXI ID"
+# }
+# save_bd_design
+Wrote  : <F:\RTDS_test_DDR4_64bit_batch_dev\RTDS_test_DDR4_64bit.srcs\sources_1\bd\design_1\design_1.bd> 
+# set aurora [get_ips aurora_8b10b_1p25g]
+# puts "AURORA_CONFIG_BEFORE"
+AURORA_CONFIG_BEFORE
+# report_property $aurora
+WARNING: [Vivado 12-3672] The is_managed property should only be queried on the file object representing this IP. Use the get_files command to access file objects.
+WARNING: [Vivado 12-3670] The generate_synth_checkpoint property should only be queried on the file object representing this IP. Use the get_files command to access file objects.
+INFO: [Vivado 12-5777] IP Instance 'aurora_8b10b_1p25g' cannot be used in a module reference: The 'xilinx.com:ip:aurora_8b10b:11.1' core does not support module reference.
+Property                              Type     Read-only  Value
+ALLOWED_SIM_MODELS                    string*  true       rtl
+BASE_BOARD_PART                       string   true       
+BOARD                                 string   true       
+BOARD_CONNECTIONS                     string   true       
+CLASS                                 string   true       ip
+COMBINED_SIM_MODEL                    string   false      rtl
+CONFIG.Backchannel_mode               string   false      Sidebands
+CONFIG.CHANNEL_ENABLE                 string   false      X0Y4
+CONFIG.C_AURORA_LANES                 string   false      1
+CONFIG.C_COLUMN_USED                  string   false      left
+CONFIG.C_DOCCPORT_ENABLE              string   false      false
+CONFIG.C_DOUBLE_GTRXRESET             string   false      false
+CONFIG.C_DRP_IF                       string   false      true
+CONFIG.C_EXAMPLE_SIMULATION           string   false      false
+CONFIG.C_GTWIZ_OUT                    string   false      false
+CONFIG.C_GT_CLOCK_1                   string   false      GTHQ0
+CONFIG.C_GT_CLOCK_2                   string   false      None
+CONFIG.C_GT_LOC_1                     string   false      1
+CONFIG.C_GT_LOC_2                     string   false      X
+CONFIG.C_GT_LOC_3                     string   false      X
+CONFIG.C_GT_LOC_4                     string   false      X
+CONFIG.C_GT_LOC_5                     string   false      X
+CONFIG.C_GT_LOC_6                     string   false      X
+CONFIG.C_GT_LOC_7                     string   false      X
+CONFIG.C_GT_LOC_8                     string   false      X
+CONFIG.C_GT_LOC_9                     string   false      X
+CONFIG.C_GT_LOC_10                    string   false      X
+CONFIG.C_GT_LOC_11                    string   false      X
+CONFIG.C_GT_LOC_12                    string   false      X
+CONFIG.C_GT_LOC_13                    string   false      X
+CONFIG.C_GT_LOC_14                    string   false      X
+CONFIG.C_GT_LOC_15                    string   false      X
+CONFIG.C_GT_LOC_16                    string   false      X
+CONFIG.C_GT_LOC_17                    string   false      X
+CONFIG.C_GT_LOC_18                    string   false      X
+CONFIG.C_GT_LOC_19                    string   false      X
+CONFIG.C_GT_LOC_20                    string   false      X
+CONFIG.C_GT_LOC_21                    string   false      X
+CONFIG.C_GT_LOC_22                    string   false      X
+CONFIG.C_GT_LOC_23                    string   false      X
+CONFIG.C_GT_LOC_24                    string   false      X
+CONFIG.C_GT_LOC_25                    string   false      X
+CONFIG.C_GT_LOC_26                    string   false      X
+CONFIG.C_GT_LOC_27                    string   false      X
+CONFIG.C_GT_LOC_28                    string   false      X
+CONFIG.C_GT_LOC_29                    string   false      X
+CONFIG.C_GT_LOC_30                    string   false      X
+CONFIG.C_GT_LOC_31                    string   false      X
+CONFIG.C_GT_LOC_32                    string   false      X
+CONFIG.C_GT_LOC_33                    string   false      X
+CONFIG.C_GT_LOC_34                    string   false      X
+CONFIG.C_GT_LOC_35                    string   false      X
+CONFIG.C_GT_LOC_36                    string   false      X
+CONFIG.C_GT_LOC_37                    string   false      X
+CONFIG.C_GT_LOC_38                    string   false      X
+CONFIG.C_GT_LOC_39                    string   false      X
+CONFIG.C_GT_LOC_40                    string   false      X
+CONFIG.C_GT_LOC_41                    string   false      X
+CONFIG.C_GT_LOC_42                    string   false      X
+CONFIG.C_GT_LOC_43                    string   false      X
+CONFIG.C_GT_LOC_44                    string   false      X
+CONFIG.C_GT_LOC_45                    string   false      X
+CONFIG.C_GT_LOC_46                    string   false      X
+CONFIG.C_GT_LOC_47                    string   false      X
+CONFIG.C_GT_LOC_48                    string   false      X
+CONFIG.C_INIT_CLK                     string   false      25.0
+CONFIG.C_LANE_WIDTH                   string   false      4
+CONFIG.C_LINE_RATE                    string   false      1.25
+CONFIG.C_REFCLK_FREQUENCY             string   false      125
+CONFIG.C_REFCLK_SOURCE                string   false      MGTREFCLK0 of Quad X0Y1
+CONFIG.C_ROW_USED                     string   false      None
+CONFIG.C_START_LANE                   string   false      X0Y4
+CONFIG.C_START_QUAD                   string   false      Quad_X0Y1
+CONFIG.C_UCOLUMN_USED                 string   false      right
+CONFIG.C_USE_BYTESWAP                 string   false      false
+CONFIG.C_USE_CHIPSCOPE                string   false      false
+CONFIG.C_USE_CRC                      string   false      true
+CONFIG.C_USE_SCRAMBLER                string   false      false
+CONFIG.C_active_transceiverquads      string   false      1
+CONFIG.Component_Name                 string   false      aurora_8b10b_1p25g
+CONFIG.DRPCLK.INSERT_VIP              string   false      0
+CONFIG.DRP_FREQ                       string   false      50.0000
+CONFIG.Dataflow_Config                string   false      Duplex
+CONFIG.Flow_Mode                      string   false      None
+CONFIG.GT0_QPLLRESET_OUT.INSERT_VIP   string   false      0
+CONFIG.GT_DRP_CLK_IN.INSERT_VIP       string   false      0
+CONFIG.GT_REFCLK1.INSERT_VIP          string   false      0
+CONFIG.GT_REFCLK1_OUT.INSERT_VIP      string   false      0
+CONFIG.GT_REFCLK2.INSERT_VIP          string   false      0
+CONFIG.GT_REFCLK2_OUT.INSERT_VIP      string   false      0
+CONFIG.GT_RESET.INSERT_VIP            string   false      0
+CONFIG.GT_RESET_OUT.INSERT_VIP        string   false      0
+CONFIG.INIT_CLK_IN.INSERT_VIP         string   false      0
+CONFIG.INIT_CLK_OUT.INSERT_VIP        string   false      0
+CONFIG.INS_LOSS_NYQ                   string   false      14
+CONFIG.Interface_Mode                 string   false      Framing
+CONFIG.LINK_RESET_OUT.INSERT_VIP      string   false      0
+CONFIG.NFC_M_AXI_RX.INSERT_VIP        string   false      0
+CONFIG.NFC_S_AXI_TX.INSERT_VIP        string   false      0
+CONFIG.RESET.INSERT_VIP               string   false      0
+CONFIG.RX_COUPLING                    string   false      AC
+CONFIG.RX_EQ_MODE                     string   false      AUTO
+CONFIG.RX_PPM_OFFSET                  string   false      200
+CONFIG.RX_SYSTEM_RESET.INSERT_VIP     string   false      0
+CONFIG.RX_TERMINATION                 string   false      PROGRAMMABLE
+CONFIG.RX_TERMINATION_PROG_VALUE      string   false      800
+CONFIG.SINGLEEND_GTREFCLK             string   false      false
+CONFIG.SINGLEEND_INITCLK              string   false      true
+CONFIG.SYNC_CLK.INSERT_VIP            string   false      0
+CONFIG.SYNC_CLK_OUT.INSERT_VIP        string   false      0
+CONFIG.SYS_RESET_OUT.INSERT_VIP       string   false      0
+CONFIG.SupportLevel                   string   false      1
+CONFIG.TX_OUT_CLK.INSERT_VIP          string   false      0
+CONFIG.TX_SYSTEM_RESET.INSERT_VIP     string   false      0
+CONFIG.TransceiverControl             string   false      false
+CONFIG.UFC_M_AXI_RX.INSERT_VIP        string   false      0
+CONFIG.UFC_S_AXI_TX.INSERT_VIP        string   false      0
+CONFIG.USER_CLK.INSERT_VIP            string   false      0
+CONFIG.USER_CLK_OUT.INSERT_VIP        string   false      0
+CONFIG.USER_DATA_M_AXI_RX.INSERT_VIP  string   false      0
+CONFIG.USER_DATA_S_AXI_TX.INSERT_VIP  string   false      0
+CORE_REVISION                         int      true       10
+DCP_RESOURCE_DATA                     string   true       LUT 1269  LUTAsLogic 1224  LUTAsMem 45  REG 1404  CARRY8 14  F7MUX 16  F8MUX 0  F9MUX 0  BRAM 0  DSP 0  GLOBAL_CLOCK_BUFFERS 1  PLL 0  MMCM 0  GTHE3_CHANNEL 1  GTHE3_COMMON 0
+DELIVERED_TARGETS                     string*  true       instantiation_template synthesis simulation changelog
+DESIGN_TOOL_CONTEXTS                  string*  true       HDL IPI Sysgen
+IPDEF                                 string   true       xilinx.com:ip:aurora_8b10b:11.1
+IP_CORE_CONTAINER                     string   true       
+IP_DIR                                string   true       f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/aurora1g_verified/ip
+IP_FILE                               string   true       f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/aurora1g_verified/ip/aurora_8b10b_1p25g.xci
+IS_BD_CONTEXT                         bool     true       0
+IS_LOCKED                             bool     true       0
+KNOWN_TARGETS                         string*  true       instantiation_template synthesis simulation example changelog
+NAME                                  string   true       aurora_8b10b_1p25g
+PART                                  string   true       xcku040-ffva1156-2-i
+SELECTED_SIM_MODEL                    string   false      rtl
+STALE_TARGETS                         string*  true       
+SUPPORTED_TARGETS                     string*  true       instantiation_template synthesis simulation example changelog
+SUPPORTS_MODREF                       bool     true       0
+SW_VERSION                            string   true       2020.2
+UNSUPPORTED_SIMULATORS                string*  true       
+USED_LICENSE_KEYS                     string*  true       
+USER_LOCKED                           bool     false      0
+# set_property -dict [list CONFIG.C_START_QUAD Quad_X0Y1 CONFIG.C_START_LANE X0Y4 CONFIG.C_REFCLK_SOURCE {MGTREFCLK0 of Quad X0Y1}] $aurora
+# puts "AURORA_CONFIG_AFTER"
+AURORA_CONFIG_AFTER
+# foreach prop {CONFIG.C_START_QUAD CONFIG.C_START_LANE CONFIG.C_GT_LOC_1 CONFIG.C_GT_LOC_5 CONFIG.C_REFCLK_SOURCE} {
+#     puts "$prop=[get_property $prop $aurora]"
+# }
+CONFIG.C_START_QUAD=Quad_X0Y1
+CONFIG.C_START_LANE=X0Y4
+CONFIG.C_GT_LOC_1=1
+CONFIG.C_GT_LOC_5=X
+CONFIG.C_REFCLK_SOURCE=MGTREFCLK0 of Quad X0Y1
+# generate_target all [get_files $root/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/s01_couplers/auto_cc/m_axi_bid'(4) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_bid'(5) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/s01_couplers/auto_cc/m_axi_rid'(4) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_rid'(5) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'(5) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'(5) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'(5) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_awid'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'(5) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_arid'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/CONV_DMA_0/M_AXI_BID'(1) to pin: '/axi_interconnect_0/S00_AXI_bid'(5) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/CONV_DMA_0/M_AXI_RID'(1) to pin: '/axi_interconnect_0/S00_AXI_rid'(5) - Only lower order bits will be connected.
+VHDL Output written to : F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/s01_couplers/auto_cc/m_axi_bid'(4) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_bid'(5) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/s01_couplers/auto_cc/m_axi_rid'(4) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_rid'(5) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'(5) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'(5) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'(5) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_awid'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'(5) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_arid'(4) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/CONV_DMA_0/M_AXI_BID'(1) to pin: '/axi_interconnect_0/S00_AXI_bid'(5) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/CONV_DMA_0/M_AXI_RID'(1) to pin: '/axi_interconnect_0/S00_AXI_rid'(5) - Only lower order bits will be connected.
+VHDL Output written to : F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_1/s00_couplers/auto_cc .
+Exporting to file F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+WARNING: [Vivado 12-4154] User modified property 'UsedInSimulation' (with value '1') was detected on 'F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0.xci'.
+WARNING: [Vivado 12-4152] One or more user modified properties were detected. The reset_target command can be used to reset the targets data which will also reset all target properties.
+generate_target: Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 1222.645 ; gain = 29.496
+# generate_target all $aurora
+# puts "RPT205_IP_CONFIG_COMPLETE_NO_RUNS_LAUNCHED"
+RPT205_IP_CONFIG_COMPLETE_NO_RUNS_LAUNCHED
+# close_project
+# exit 0
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 21 19:55:36 2026...

@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Sep 20 15:56:11 2026
+# Process ID: 24104
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/rx_fifo/project/module_test.sim/sim_1/behav/xsim
+# Command line: xsim.exe -log C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\evidence\v201_quick_wave_draft\raw\rx_fifo\xsim_rx_fifo.log -mode tcl -source {xsim.dir/tb_rtds_rx_fifo_behav/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/v201_quick_wave_draft/raw/rx_fifo/xsim_rx_fifo.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/rx_fifo/project/module_test.sim/sim_1/behav/xsim\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_rtds_rx_fifo_behav/xsim_script.tcl
+# xsim {tb_rtds_rx_fifo_behav} -wdb {C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\evidence\v201_quick_wave_draft\raw\rx_fifo\rx_fifo_full.wdb} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/record_module_evidence.tcl}
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/record_module_evidence.tcl
+## foreach required {RTDS_WAVE_TOP RTDS_VCD_PATH RTDS_WCFG_PATH} {
+##     if {![info exists ::env($required)]} {
+##         error "missing environment variable $required"
+##     }
+## }
+## set top_scope /$::env(RTDS_WAVE_TOP)
+## if {[string length [current_wave_config]] == 0} {
+##     create_wave_config
+## }
+## log_wave -r ${top_scope}/*
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## add_wave -r ${top_scope}/*
+WARNING: Simulation object /tb_rtds_rx_fifo/send/n was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_rx_fifo/send/stored was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_rx_fifo/send/value was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_rx_fifo/expected was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+## open_vcd $::env(RTDS_VCD_PATH)
+## log_vcd [get_objects -r ${top_scope}/*]
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_RTDS_FPGA_COUNT_CDC/U_XPM_CDC_GRAY/dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /mem is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.enb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.doutb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+## run all
+TEST PASS tb_rtds_rx_fifo V2.01
+$finish called at time : 790 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_rx_fifo.sv" Line 76
+## close_vcd
+## catch {file delete -force $::env(RTDS_WCFG_PATH)}
+## if {[catch {save_wave_config $::env(RTDS_WCFG_PATH)} save_error]} {
+##     puts "RTDS_EVIDENCE_WCFG_WARNING=$save_error"
+## }
+## puts "RTDS_EVIDENCE_RECORDED=$top_scope"
+RTDS_EVIDENCE_RECORDED=/tb_rtds_rx_fifo
+## exit
+INFO: [Common 17-206] Exiting xsim at Sun Sep 20 15:56:18 2026...

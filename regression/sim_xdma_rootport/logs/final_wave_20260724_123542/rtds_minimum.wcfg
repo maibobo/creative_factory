@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/project/RTDS/pcie_07/RTDS_test-1ch/RTDS_test-1ch/regression/sim_xdma_rootport_remote_20260717/logs/rtds_minimum.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_design_1_xdma_0_0_dma_bram_wrap_sv " />
+            <top_module name="axi_bram_ctrl_funcs" />
+            <top_module name="board" />
+            <top_module name="glbl" />
+            <top_module name="rtds_rootport_pkg" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="0" />
+</wave_config>

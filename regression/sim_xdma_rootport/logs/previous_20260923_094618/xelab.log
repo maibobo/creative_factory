@@ -1,0 +1,6 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe --relax --debug off --mt off -L xilinx_vip -L xpm -L xil_defaultlib -L gtwizard_ultrascale_v1_7_9 -L blk_mem_gen_v8_4_4 -L xdma_v4_1_8 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_22 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_21 -L axi_crossbar_v2_1_23 -L axi_clock_converter_v2_1_21 -L unisims_ver -L unimacro_ver -L secureip --snapshot board xil_defaultlib.board xil_defaultlib.glbl -log C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\regression\sim_xdma_rootport\logs\xelab.log --O3 
+Turned off multi-threading.
+Starting static elaboration
+Pass Through NonSizing Optimizer

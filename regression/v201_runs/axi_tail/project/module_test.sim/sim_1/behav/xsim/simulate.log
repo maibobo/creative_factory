@@ -1,0 +1,6 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+WRITE_BEGIN addr=00000000002ffff8 count=          1
+WRITE_BEGIN addr=00000000002ffff8 count=          1
+TEST PASS tb_rtds_axi_tail WSTRB=0F upper32 preserved
+$finish called at time : 326 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi_tail.sv" Line 208

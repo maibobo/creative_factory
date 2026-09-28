@@ -1,0 +1,4 @@
+﻿XSim 2020.2 explicitly reports these objects as untraceable (automatic variables or dynamic types).
+/tb_rtds_1g/submit/id
+/tb_rtds_1g/wait_frames/Block88_100/cycles
+/tb_rtds_1g/wait_frames/target

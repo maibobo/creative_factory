@@ -1,0 +1,139 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Sep 23 09:32:32 2026
+# Process ID: 11652
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Command line: vivado.exe -mode batch -nojournal -source C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\regression\sim_xdma_rootport\scripts\audit_and_prepare.tcl -log C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\regression\sim_xdma_rootport\logs\audit_and_prepare.log
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/logs/audit_and_prepare.log
+# Journal file: 
+#-----------------------------------------------------------
+INFO: [Common 17-1239] XILINX_LOCAL_USER_DATA is set to 'NO'.
+source {C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\regression\sim_xdma_rootport\scripts\audit_and_prepare.tcl}
+# set script_dir  [file dirname [file normalize [info script]]]
+# set sim_dir     [file normalize [file join $script_dir ..]]
+# set project_dir [file normalize [file join $sim_dir .. ..]]
+# set xpr_file    [file join $project_dir RTDS_test_DDR4_64bit.xpr]
+# set log_dir     [file join $sim_dir logs]
+# file mkdir $log_dir
+# proc fail {message} {
+#     puts "RTDS_AUDIT_ERROR: $message"
+#     error $message
+# }
+# proc expect_property {object property expected label} {
+#     if {[lsearch -exact [list_property $object] $property] < 0} {
+#         fail "$label 缺少属怡� $property"
+#     }
+#     set actual [get_property $property $object]
+#     puts "RTDS_AUDIT_CONFIG: $label=$actual"
+#     if {$actual ne $expected} {
+#         fail "$label 期望�? $expected，实际为 $actual"
+#     }
+# }
+# puts "RTDS_AUDIT_BEGIN: Vivado=[version -short]"
+RTDS_AUDIT_BEGIN: Vivado=2020.2
+# puts "RTDS_AUDIT_PROJECT: $xpr_file"
+RTDS_AUDIT_PROJECT: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.xpr
+# open_project $xpr_file
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1108.918 ; gain = 0.000
+# set fifo_ip [get_files -all -quiet */fifo_AURORA_DATA64.xci]
+# if {[llength $fifo_ip] != 1} {
+#     fail "�?�?一找到 fifo_AURORA_DATA64.xci，数�?=[llength $fifo_ip]"
+# }
+# set fifo_vhdl [file join $project_dir RTDS_test_DDR4_64bit.srcs sources_1 ip fifo_AURORA_DATA64 hdl fifo_generator_v13_2_vhsyn_rfs.vhd]
+# if {![file exists $fifo_vhdl]} {
+#     puts "RTDS_AUDIT_FIFO: reset_target all $fifo_ip"
+#     reset_target all $fifo_ip
+#     puts "RTDS_AUDIT_FIFO: generate_target all $fifo_ip"
+#     generate_target all $fifo_ip
+# } else {
+#     puts "RTDS_AUDIT_FIFO: 派生文件已存圡�，本�?不重�? reset/generate"
+# }
+RTDS_AUDIT_FIFO: 派生文件已存圡�，本�?不重�? reset/generate
+# if {![file exists $fifo_vhdl]} {
+#     fail "FIFO 重建后仍缺失 $fifo_vhdl"
+# }
+# puts "RTDS_AUDIT_FIFO_OK: $fifo_vhdl"
+RTDS_AUDIT_FIFO_OK: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/fifo_AURORA_DATA64/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd
+# report_ip_status -file [file join $log_dir ip_status.txt]
+report_ip_status: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1108.918 ; gain = 0.000
+# set locked_ips [get_ips -quiet -filter {IS_LOCKED == 1}]
+# if {[llength $locked_ips] != 0} {
+#     fail "存在锁定 IP: $locked_ips"
+# }
+# set sysmon_xci [get_files -all -quiet */sys_mon.xci]
+# if {[llength $sysmon_xci] == 1} {
+#     puts "RTDS_AUDIT_GENERATE: generate_target all $sysmon_xci"
+#     generate_target all $sysmon_xci
+# }
+RTDS_AUDIT_GENERATE: generate_target all C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.xci
+# set bd_file [get_files -all -quiet */design_1.bd]
+# if {[llength $bd_file] != 1} {
+#     fail "�?�?一找到 design_1.bd，数�?=[llength $bd_file]"
+# }
+# open_bd_design $bd_file
+Reading block design file <C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_1
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf
+Adding component instance block -- xilinx.com:ip:xdma:4.1 - xdma_0
+Adding component instance block -- xilinx.com:module_ref:CONV_DMA:1.0 - CONV_DMA_0
+Adding component instance block -- xilinx.com:module_ref:INFO_EXCH:1.0 - INFO_EXCH_0
+Successfully read diagram <design_1> from block design file <C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/design_1.bd>
+# validate_bd_design
+INFO: [BD 5-320] Validate design is not run, since the design is already validated.
+# puts "RTDS_AUDIT_GENERATE: generate_target all $bd_file"
+RTDS_AUDIT_GENERATE: generate_target all C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/design_1.bd
+# generate_target all $bd_file
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'design_1' - hence not re-generating.
+WARNING: [Vivado 12-4154] User modified property 'UsedInSimulation' (with value '1') was detected on 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0.xci'.
+WARNING: [Vivado 12-4152] One or more user modified properties were detected. The reset_target command can be used to reset the targets data which will also reset all target properties.
+# puts "RTDS_AUDIT_BD_OK: validate_bd_design �? simulation target 已完�?"
+RTDS_AUDIT_BD_OK: validate_bd_design �? simulation target 已完�?
+# set xdma_ip [get_ips -quiet design_1_xdma_0_0]
+# if {[llength $xdma_ip] != 1} {
+#     fail "�?�?一找到 design_1_xdma_0_0，数�?=[llength $xdma_ip]"
+# }
+# expect_property $xdma_ip CONFIG.xdma_rnum_chnl 1       "XDMA_H2C通道敡�"
+WARNING: [Vivado 12-3672] The is_managed property should only be queried on the file object representing this IP. Use the get_files command to access file objects.
+WARNING: [Vivado 12-3670] The generate_synth_checkpoint property should only be queried on the file object representing this IP. Use the get_files command to access file objects.
+RTDS_AUDIT_CONFIG: XDMA_H2C通道敡�=1
+# expect_property $xdma_ip CONFIG.xdma_wnum_chnl 1       "XDMA_C2H通道敡�"
+RTDS_AUDIT_CONFIG: XDMA_C2H通道敡�=1
+# expect_property $xdma_ip CONFIG.pl_link_cap_max_link_speed 8.0_GT/s "PCIe速率"
+RTDS_AUDIT_CONFIG: PCIe速率=8.0_GT/s
+# expect_property $xdma_ip CONFIG.pl_link_cap_max_link_width X2       "PCIe宽度"
+RTDS_AUDIT_CONFIG: PCIe宽度=X2
+# expect_property $xdma_ip CONFIG.axi_data_width 64_bit   "AXI数据宽度"
+RTDS_AUDIT_CONFIG: AXI数据宽度=64_bit
+# expect_property $xdma_ip CONFIG.axisten_freq 250        "AXI时钟MHz"
+RTDS_AUDIT_CONFIG: AXI时钟MHz=250
+# expect_property $xdma_ip CONFIG.axilite_master_en true  "AXI-Lite主接�?"
+RTDS_AUDIT_CONFIG: AXI-Lite主接�?=true
+# expect_property $xdma_ip CONFIG.pf0_msi_enabled true    "PF0单向量MSI能力"
+RTDS_AUDIT_CONFIG: PF0单向量MSI能力=true
+# expect_property $xdma_ip CONFIG.pf0_msix_enabled false  "PF0 MSI-X关闭"
+RTDS_AUDIT_CONFIG: PF0 MSI-X关闭=false
+# set address_report [file join $log_dir address_map.txt]
+# set address_fp [open $address_report w]
+# puts $address_fp "segment\toffset\trange"
+# foreach segment [lsort [get_bd_addr_segs -quiet]] {
+#     puts $address_fp "$segment\t[get_property OFFSET $segment]\t[get_property RANGE $segment]"
+# }
+# close $address_fp
+# puts "RTDS_AUDIT_ADDRESS_MAP: $address_report"
+RTDS_AUDIT_ADDRESS_MAP: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/logs/address_map.txt
+# puts "RTDS_AUDIT_PASS"
+RTDS_AUDIT_PASS
+# close_project
+# exit 0
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 23 09:32:52 2026...

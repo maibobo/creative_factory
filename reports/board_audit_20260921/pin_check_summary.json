@@ -1,0 +1,6 @@
+{
+  "placed_port_count": 146,
+  "ddr_and_sysclk_checked": 117,
+  "ddr_and_sysclk_mismatches": [],
+  "duplicate_placed_pins": []
+}

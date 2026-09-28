@@ -1,0 +1,9 @@
+﻿{
+    "state":  "failed",
+    "launcher_pid":  16804,
+    "start_time":  "2026-07-23T17:12:04.5988629+08:00",
+    "end_time":  "2026-07-23T17:48:44.7512368+08:00",
+    "exit_code":  1,
+    "console":  "C:\\project\\RTDS\\pcie_07\\RTDS_test-1ch\\RTDS_test-1ch\\regression\\sim_xdma_rootport_remote_20260717\\logs\\detached_console_20260723_171204.log",
+    "error_log":  "C:\\project\\RTDS\\pcie_07\\RTDS_test-1ch\\RTDS_test-1ch\\regression\\sim_xdma_rootport_remote_20260717\\logs\\detached_console_20260723_171204.err.log"
+}

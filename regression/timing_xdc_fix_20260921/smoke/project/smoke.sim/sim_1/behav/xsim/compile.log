@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/ddr4/rtds_axi_ram_model.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_axi_ram_model
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/ddr4/rtds_ddr4_backend.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_backend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/sim/ddr4_backend/tb_rtds_ddr4_backend_smoke.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'DDR4_SIM_RAM' [F:/RTDS_test_DDR4_64bit_batch_dev/sim/ddr4_backend/tb_rtds_ddr4_backend_smoke.sv:2]
+INFO: [VRFC 10-311] analyzing module tb_rtds_ddr4_backend_smoke
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/timing_xdc_fix_20260921/smoke/project/smoke.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

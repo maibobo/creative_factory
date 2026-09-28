@@ -1,0 +1,76 @@
+﻿# 每行是一个精确正则。仅允许已在 2020.2 官方 XDMA example 或当前 BD 生成中确认的告警。
+# ---------- 配置语义段：warning 精确白名单 ----------
+# 输入：compare_logs.ps1 从 Vivado/XSim 日志提取的每一条 WARNING 原文。
+# 输出：精确正则命中的已知 Xilinx 2020.2 模型告警；未命中项仍进入失败报告。
+# 作用：隔离已确认的第三方模型噪声，不掩盖 DUT、testbench 或脚本的新告警。
+# 失败定位：新增项必须先在原始日志定位来源和影响，再添加精确规则；禁止使用
+# “.*WARNING.*”一类模糊放行。以 # 开头的中文说明不会参与正则匹配。
+# Vivado 2020.2 report_ip_status 查询 managed IP 文件对象时的已知属性告警：
+^WARNING: \[Vivado 12-3672\] The is_managed property should only be queried on the file object representing this IP\. Use the get_files command to access file objects\.$
+^WARNING: \[Vivado 12-3670\] The generate_synth_checkpoint property should only be queried on the file object representing this IP\. Use the get_files command to access file objects\.$
+# export_simulation 重编译随 Vivado 提供的 VIP/XPM 源时的精确 2020.2 告警：
+^WARNING: \[VRFC 10-3609\] overwriting previous definition of package 'axi4stream_vip_pkg' \[.*/axi4stream_vip_pkg\.sv:51\]$
+^WARNING: \[VRFC 10-3669\] re-analyze package '\$unit_axi4stream_vip_axi4streampc_sv' since package 'axi4stream_vip_pkg' is overwritten or removed \[.*/axi4stream_vip_axi4streampc\.sv:1\]$
+^WARNING: \[VRFC 10-3669\] re-analyze interface 'axi4stream_vip_if' since interface '\$unit_axi4stream_vip_axi4streampc_sv' is overwritten or removed \[.*/axi4stream_vip_if\.sv:71\]$
+^WARNING: \[VRFC 10-3609\] overwriting previous definition of package 'axi_vip_pkg' \[.*/axi_vip_pkg\.sv:51\]$
+^WARNING: \[VRFC 10-3669\] re-analyze interface 'axi_vip_if' since interface '\$unit_axi4stream_vip_axi4streampc_sv' is overwritten or removed \[.*/axi_vip_if\.sv:118\]$
+^WARNING: \[VRFC 10-8426\] non-net output port 'd_out' cannot be initialized at declaration in SystemVerilog mode \[.*/xpm_fifo\.sv:1909\]$
+^WARNING: \[VRFC 10-2821\] generate block is allowed only inside loop and conditional generate in SystemVerilog mode \[.*/xpm_fifo\.sv:3660\]$
+^WARNING: \[VRFC 10-986\] literal value truncated to fit in 4 bits \[.*/xdma_v4_1_vl_rfs\.sv:44731\]$
+^WARNING: \[VRFC 10-986\] literal value truncated to fit in 4 bits \[.*/xdma_v4_1_vl_rfs\.sv:44732\]$
+# 官方 XDMA 模型在 0 ns 的 unique-case 初始化告警：
+^WARNING: [0-9]+ns : none of the conditions were true for unique case from File:.*/xdma_v4_1_vl_rfs\.sv:33974$
+# 当前 BD 中 AXI ID 宽度由互连合法截取：
+^WARNING: \[BD 41-2384\] Width mismatch when connecting pin: '/axi_interconnect_0/s01_couplers/auto_cc/m_axi_rid'\(4\) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_rid'\(5\) - Only lower order bits will be connected\.$
+^WARNING: \[BD 41-2384\] Width mismatch when connecting pin: '/axi_interconnect_0/s01_couplers/auto_cc/m_axi_bid'\(4\) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_bid'\(5\) - Only lower order bits will be connected\.$
+^WARNING: \[BD 41-2384\] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'\(5\) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_awid'\(1\) - Only lower order bits will be connected\.$
+^WARNING: \[BD 41-2384\] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'\(5\) to pin: '/axi_interconnect_0/s00_couplers/M_AXI_arid'\(1\) - Only lower order bits will be connected\.$
+^WARNING: \[BD 41-2384\] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_arid'\(5\) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_arid'\(4\) - Only lower order bits will be connected\.$
+^WARNING: \[BD 41-2384\] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/s_axi_awid'\(5\) to pin: '/axi_interconnect_0/s01_couplers/M_AXI_awid'\(4\) - Only lower order bits will be connected\.$
+^WARNING: \[BD 41-2384\] Width mismatch when connecting pin: '/CONV_DMA_0/M_AXI_RID'\(1\) to pin: '/axi_interconnect_0/S00_AXI_rid'\(5\) - Only lower order bits will be connected\.$
+^WARNING: \[BD 41-2384\] Width mismatch when connecting pin: '/CONV_DMA_0/M_AXI_BID'\(1\) to pin: '/axi_interconnect_0/S00_AXI_bid'\(5\) - Only lower order bits will be connected\.$
+# BRAM 实际深度只使用地址低位：
+^WARNING: \[BD 41-2384\] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'\(32\) to pin: '/axi_bram_ctrl_0/bram_addr_a'\(16\) - Only lower order bits will be connected\.$
+^WARNING: \[BD 41-2384\] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'\(32\) to pin: '/axi_bram_ctrl_0/bram_addr_b'\(16\) - Only lower order bits will be connected\.$
+
+# ---------- 2026-07-21 远端 Gen3 x2 全流程 PASS 基线 ----------
+# 下面只放行 Vivado 2020.2/Xilinx 生成模型的精确告警。
+# board.sv 原先因 RP 默认 x8 产生的四条 2-bit/8-bit 告警不在白名单中，
+# 已通过显式设置 PL_LINK_CAP_MAX_LINK_WIDTH=2 从源头修复。
+
+# 独立时钟 FIFO 行为模型不模拟同步器的亚稳态/同步延迟；功能数据路径仍被模型覆盖。
+^WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays\. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO\. See the FIFO Generator User Guide for more information\.$
+
+# 本 fileset 只实例化轻量 LocalLink BFM；export_simulation 扫描生产 sources_1
+# 元数据时仍会看到未参与本仿真的官方 Aurora IP 外部 XML 引用。
+^WARNING: \[SIM-utils-52\] IP component XML file does not exist: '.*/fdma_aurora_brg\.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0\.xml'$
+
+# XDMA 2020.2 生成包装层中的参数化宽度告警；均来自 Xilinx 生成文件。
+^WARNING: \[VRFC 10-3027\] 'cfg_max_payload' was previously declared with a different range \[.*/design_1_xdma_0_0_core_top\.sv:[0-9]+\]$
+^WARNING: \[VRFC 10-3091\] actual bit length 7 differs from formal bit length 6 for port 'rbar_bar_size_sd' \[.*/design_1_xdma_0_0\.sv:[0-9]+\]$
+^WARNING: \[VRFC 10-3091\] actual bit length 9 differs from formal bit length 8 for port 'rbar_function_number_sd' \[.*/design_1_xdma_0_0\.sv:[0-9]+\]$
+^WARNING: \[VRFC 10-3091\] actual bit length 3 differs from formal bit length 2 for port 'cfg_max_payload_sd' \[.*/design_1_xdma_0_0\.sv:[0-9]+\]$
+^WARNING: \[VRFC 10-3091\] actual bit length 1 differs from formal bit length 252 for port 'cfg_vf_flr_done' \[.*/xdma_v4_1_vl_rfs\.sv:[0-9]+\]$
+^WARNING: \[VRFC 10-3091\] actual bit length 256 differs from formal bit length 64 for port 'cfg_interrupt_msix_address' \[.*/xdma_v4_1_vl_rfs\.sv:[0-9]+\]$
+^WARNING: \[VRFC 10-3091\] actual bit length 4 differs from formal bit length 1 for port 'm_axis_rq_tready' \[.*/xdma_v4_1_vl_rfs\.sv:[0-9]+\]$
+^WARNING: \[VRFC 10-3091\] actual bit length 1 differs from formal bit length 4 for port 'CFG_MSIEN_IN' \[.*/xdma_v4_1_vl_rfs\.sv:[0-9]+\]$
+^WARNING: \[VRFC 10-3091\] actual bit length 256 differs from formal bit length 4 for port 'cfg_flr_done' \[.*/xdma_v4_1_vl_rfs\.sv:[0-9]+\]$
+
+# 1ch 配置下，Xilinx 通用 4ch 生成模型仍语法展开未启用通道 1..3 的 BRAM 索引。
+^WARNING: \[VRFC 10-3705\] select index [123] into '(h2c|c2h)_dat_bram_(in|out|cmd_out)' is out of bounds \[.*/xdma_v4_1_vl_rfs\.sv:[0-9]+\]$
+^WARNING: \[VRFC 10-3705\] select index (119|126) into 's_axis_cq_tuser' is out of bounds \[.*/xdma_v4_1_vl_rfs\.sv:[0-9]+\]$
+
+# Xilinx AXI/XDMA 包装中未使用的可选端口。
+^WARNING: \[VRFC 10-5021\] port 'aclk2x' is not connected on this instance \[.*/axi_crossbar_v2_1_vl_rfs\.v:[0-9]+\]$
+^WARNING: \[VRFC 10-5021\] port 'cfg_fc_vc_sel' is not connected on this instance \[.*/design_1_xdma_0_0\.sv:[0-9]+\]$
+
+# 官方 TPI timeout task 的 XSim 静态敏感性提示。
+^WARNING: \[XSIM 43-4328\] File: .*/pci_exp_usrapp_tx\.v Line: 3158 : Sensitivity on input argument "timeout" of task "TSK_SIMULATION_TIMEOUT" may never get triggered\.$
+
+# 官方 RP 外层已按参数生成 x2 端口，但其内部 pcie3_uscale_rp_top 的物理端口
+# 固定声明为 x8；x2 实例只使用低两条 lane。该告警发生在官方兼容层内部，
+# 实测最终链路仍严格通过 Gen3 x2 协商检查。
+^WARNING: \[VRFC 10-3091\] actual bit length 2 differs from formal bit length 8 for port 'pci_exp_txn' \[.*/vendor/xdma_rp_2020_2/xilinx_pcie_uscale_rp\.v:298\]$
+^WARNING: \[VRFC 10-3091\] actual bit length 2 differs from formal bit length 8 for port 'pci_exp_txp' \[.*/vendor/xdma_rp_2020_2/xilinx_pcie_uscale_rp\.v:299\]$
+^WARNING: \[VRFC 10-3091\] actual bit length 2 differs from formal bit length 8 for port 'pci_exp_rxn' \[.*/vendor/xdma_rp_2020_2/xilinx_pcie_uscale_rp\.v:300\]$
+^WARNING: \[VRFC 10-3091\] actual bit length 2 differs from formal bit length 8 for port 'pci_exp_rxp' \[.*/vendor/xdma_rp_2020_2/xilinx_pcie_uscale_rp\.v:301\]$

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 21 19:50:42 2026
+# Process ID: 20328
+# Current directory: E:/PCIE-CPU
+# Command line: vivado.exe -mode batch -source F:\RTDS_test_DDR4_64bit_batch_dev\scripts\configure_rpt205_ip_20260921.tcl -log F:\RTDS_test_DDR4_64bit_batch_dev\reports\board_audit_20260921\ip_config_final.log -journal F:\RTDS_test_DDR4_64bit_batch_dev\reports\board_audit_20260921\ip_config_final.jou
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/reports/board_audit_20260921/ip_config_final.log
+# Journal file: F:\RTDS_test_DDR4_64bit_batch_dev\reports\board_audit_20260921\ip_config_final.jou
+#-----------------------------------------------------------
+source {F:\RTDS_test_DDR4_64bit_batch_dev\scripts\configure_rpt205_ip_20260921.tcl}

@@ -1,0 +1,7 @@
+tc_aurora_loop_nobp
+tc_aurora_loop_bp
+tc_aurora_loop_addr_wrap
+tc_brg_rd_ready_stall
+tc_brg_wr_ready_stall
+tc_brg_tx_fifo_waterline
+tc_brg_rx_fifo_overflow

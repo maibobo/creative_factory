@@ -1,0 +1,751 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Sep 25 17:56:11 2026
+# Process ID: 15008
+# Current directory: E:/PCIE-CPU
+# Command line: vivado.exe -mode batch -source F:\RTDS_test_DDR4_64bit_batch_dev\scripts\build_local_wave_sessions.tcl -log F:\RTDS_test_DDR4_64bit_batch_dev\logs\build_local_wave_sessions.log -journal F:\RTDS_test_DDR4_64bit_batch_dev\logs\build_local_wave_sessions.jou
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/logs/build_local_wave_sessions.log
+# Journal file: F:\RTDS_test_DDR4_64bit_batch_dev\logs\build_local_wave_sessions.jou
+#-----------------------------------------------------------
+source {F:\RTDS_test_DDR4_64bit_batch_dev\scripts\build_local_wave_sessions.tcl}
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set out [file join $root evidence local_wave_sessions]
+# file mkdir $out
+# foreach selected {1g tx rx_fifo ring axi axi_tail regs} {
+#     set case_dir [file join $out $selected]
+#     file mkdir $case_dir
+#     create_project -force wave_$selected [file join $case_dir project] -part xcku040-ffva1156-2-e
+#     set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
+#     add_files [glob $root/rtl/rtds_*.v]
+#     if {$selected eq "regs"} {add_files [file join $root RTDS_test_DDR4_64bit.srcs sources_1 new INFO_EXCH.v]}
+#     if {$selected in {axi axi_tail}} {
+#         add_files [file join $root RTDS_test_DDR4_64bit.srcs sources_1 new CONV_DMA.v]
+#         add_files [file join $root rtl ddr4 rtds_axi_ram_model.sv]
+#     }
+#     if {$selected eq "tx"} {add_files -norecurse [list [file join $root {external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v}]]}
+#     add_files -fileset sim_1 [file join $root regression batch_1g rtds_${selected}_test_if.sv]
+#     add_files -fileset sim_1 [file join $root regression batch_1g tb_rtds_${selected}.sv]
+#     set_property top tb_rtds_${selected} [get_filesets sim_1]
+#     set_property xsim.elaborate.debug_level all [get_filesets sim_1]
+#     set_property xsim.simulate.runtime 0ns [get_filesets sim_1]
+#     update_compile_order -fileset sim_1
+#     set fh [open [file join $case_dir files.txt] w]
+#     foreach src [get_files -compile_order sources -used_in simulation -of_objects [get_filesets sim_1]] {puts $fh [file normalize $src]}
+#     close $fh
+#     launch_simulation -mode behavioral
+#     log_wave -r /tb_rtds_${selected}/*
+#     open_vcd [file join $case_dir ${selected}.vcd]
+#     log_vcd [get_objects -r /tb_rtds_${selected}/*]
+#     # The database records all traceable HDL objects, including XPM internals.
+#     run all
+#     close_vcd
+#     if {[string length [current_wave_config]] > 0} {close_wave_config [current_wave_config]}
+#     create_wave_config ${selected}_complete
+#     foreach spec [list [list 01_TESTBENCH /tb_rtds_${selected}/*] [list 02_INTERFACE /tb_rtds_${selected}/bus/*] [list 03_DUT /tb_rtds_${selected}/U_DUT/*]] {
+#         lassign $spec label pattern
+#         set group [add_wave_group $label]
+#         add_wave -into $group [get_objects $pattern]
+#     }
+#     set group [add_wave_group 04_ALL_HIERARCHY]
+#     add_wave -r -into $group /tb_rtds_${selected}/*
+#     save_wave_config [file join $case_dir ${selected}.wcfg]
+#     set sim_dir [file join $case_dir project wave_${selected}.sim sim_1 behav xsim]
+#     close_sim
+#     file copy -force [file join $sim_dir tb_rtds_${selected}_behav.wdb] [file join $case_dir ${selected}.wdb]
+#     file copy -force [file join $sim_dir simulate.log] [file join $case_dir simulation.log]
+#     close_project
+#     puts "LOCAL_CASE_COMPLETE=$selected"
+# }
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:35 . Memory (MB): peak = 921.895 ; gain = 0.000
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 921.895 ; gain = 0.000
+Command: launch_simulation -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/1g/project/wave_1g.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx_2020_2/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/1g/project/wave_1g.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_rtds_1g' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/1g/project/wave_1g.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_rtds_1g_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_1g_periodic_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RTDS_1G_PERIODIC_TX
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_cfg_cdc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_CFG_CDC
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_reset_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_RESET_SYNC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_1g_test_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_1g.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rtds_1g
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/1g/project/wave_1g.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '16' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/1g/project/wave_1g.sim/sim_1/behav/xsim'
+"xelab -wto c0aca2fa21ef4809adab1aedf889bcdd --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_1g_behav xil_defaultlib.tb_rtds_1g xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx_2020_2/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c0aca2fa21ef4809adab1aedf889bcdd --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_1g_behav xil_defaultlib.tb_rtds_1g xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.src_drv_cb
+Compiling module xil_defaultlib.tx_drv_cb
+Compiling module xil_defaultlib.tx_mon_cb
+Compiling module xil_defaultlib.rtds_1g_test_if
+Compiling module xpm.xpm_cdc_async_rst(INIT_SYNC_FF=1...
+Compiling module xil_defaultlib.RTDS_FPGA_RESET_SYNC
+Compiling module xpm.xpm_cdc_single(INIT_SYNC_FF=1,SR...
+Compiling module xpm.xpm_cdc_handshake(INIT_SYNC_FF=1...
+Compiling module xil_defaultlib.RTDS_FPGA_CFG_CDC
+Compiling module xil_defaultlib.RTDS_1G_PERIODIC_TX
+Compiling module xil_defaultlib.tb_rtds_1g
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_rtds_1g_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/1g/project/wave_1g.sim/sim_1/behav/xsim/xsim.dir/tb_rtds_1g_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:00:22 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:01:01 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '61' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/1g/project/wave_1g.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_rtds_1g_behav -key {Behavioral:sim_1:Functional:tb_rtds_1g} -tclbatch {tb_rtds_1g.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_rtds_1g.tcl
+## current_wave_config
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rtds_1g_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:01:33 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+TEST PASS tb_rtds_1g completed_frames=60
+$finish called at time : 283920 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_1g.sv" Line 159
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: Simulation object /tb_rtds_1g/submit/id was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_1g/wait_frames/Block88_100/cycles was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_1g/wait_frames/target was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=1g
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 921.895 ; gain = 0.000
+Command: launch_simulation -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/tx/project/wave_tx.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx_2020_2/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/tx/project/wave_tx.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_rtds_tx' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/tx/project/wave_tx.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_rtds_tx_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fdma_aurora_brg_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_tx_test_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_tx.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rtds_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/tx/project/wave_tx.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/tx/project/wave_tx.sim/sim_1/behav/xsim'
+"xelab -wto 70d0f4ed61344c2699ad17d247c5eb8a --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_tx_behav xil_defaultlib.tb_rtds_tx xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx_2020_2/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 70d0f4ed61344c2699ad17d247c5eb8a --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_tx_behav xil_defaultlib.tb_rtds_tx xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fdma_cb
+Compiling module xil_defaultlib.tx_cb
+Compiling module xil_defaultlib.monitor_cb
+Compiling module xil_defaultlib.rtds_tx_test_if
+Compiling module xpm.xpm_cdc_sync_rst(DEST_SYNC_FF=2,...
+Compiling module xpm.xpm_fifo_rst(COMMON_CLOCK=0)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=9)
+Compiling module xpm.xpm_cdc_gray(INIT_SYNC_FF=1,WIDT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=10)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_async(FIFO_WRITE_DEPTH=...
+Compiling module xil_defaultlib.fdma_aurora_brg_tx(MEM_WINDOW_BY...
+Compiling module xil_defaultlib.tb_rtds_tx
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_rtds_tx_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/tx/project/wave_tx.sim/sim_1/behav/xsim/xsim.dir/tb_rtds_tx_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:01:38 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:25 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '25' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/tx/project/wave_tx.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_rtds_tx_behav -key {Behavioral:sim_1:Functional:tb_rtds_tx} -tclbatch {tb_rtds_tx.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_rtds_tx.tcl
+## current_wave_config
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rtds_tx_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:39 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+INFO: HDL object /tb_rtds_tx/U_DUT/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /mem is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_tx/U_DUT/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.enb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_tx/U_DUT/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.doutb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_tx/U_DUT/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_tx/U_DUT/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_tx/U_DUT/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_tx/U_DUT/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_rtds_tx.U_DUT.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_rtds_tx/U_DUT/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial294_87  Scope: tb_rtds_tx.U_DUT.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 488
+TX CASE PASS frames=1 peak=2
+TX CASE PASS frames=300 peak=504
+TEST PASS tb_rtds_tx single/batch/near_full/backpressure
+$finish called at time : 28905600 ps : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_tx.sv" Line 123
+WARNING: Simulation object /tb_rtds_tx/payload/payload was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/payload/word_index was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/produce/Block64_191/Block70_192/beat was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/produce/Block64_191/frame_id was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/produce/frames was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/consume/Block85_193/cycle was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/consume/frames was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/consume/hold_cycles was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/run_case/frames was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/run_case/hold_cycles was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=tx
+Command: launch_simulation -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/rx_fifo/project/wave_rx_fifo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx_2020_2/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/rx_fifo/project/wave_rx_fifo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_rtds_rx_fifo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/rx_fifo/project/wave_rx_fifo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_rtds_rx_fifo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_count_cdc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_COUNT_CDC
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_reset_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_RESET_SYNC
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_rx_frame_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RTDS_RX_FRAME_FIFO
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_rx_fifo_test_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_rx_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rtds_rx_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/rx_fifo/project/wave_rx_fifo.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/rx_fifo/project/wave_rx_fifo.sim/sim_1/behav/xsim'
+"xelab -wto 5be7636ba46a44f3acd359c2bd4da4a7 --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_rx_fifo_behav xil_defaultlib.tb_rtds_rx_fifo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx_2020_2/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 5be7636ba46a44f3acd359c2bd4da4a7 --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_rx_fifo_behav xil_defaultlib.tb_rtds_rx_fifo xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.user_drv_cb
+Compiling module xil_defaultlib.mem_drv_cb
+Compiling module xil_defaultlib.mem_mon_cb
+Compiling module xil_defaultlib.rtds_rx_fifo_test_if
+Compiling module xpm.xpm_cdc_async_rst(INIT_SYNC_FF=1...
+Compiling module xil_defaultlib.RTDS_FPGA_RESET_SYNC
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xil_defaultlib.RTDS_FPGA_COUNT_CDC
+Compiling module xpm.xpm_cdc_single(DEST_SYNC_FF=2,SR...
+Compiling module xpm.xpm_cdc_sync_rst(DEST_SYNC_FF=2,...
+Compiling module xpm.xpm_fifo_rst(COMMON_CLOCK=0)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=5...
+Compiling module xpm.xpm_counter_updn
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_fifo_reg_vec
+Compiling module xpm.xpm_cdc_gray(INIT_SYNC_FF=1,WIDT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=5)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_async(FIFO_MEMORY_TYPE=...
+Compiling module xil_defaultlib.RTDS_RX_FRAME_FIFO(FIFO_DEPTH=16...
+Compiling module xil_defaultlib.tb_rtds_rx_fifo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_rtds_rx_fifo_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/rx_fifo/project/wave_rx_fifo.sim/sim_1/behav/xsim/xsim.dir/tb_rtds_rx_fifo_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:02:41 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:23 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '23' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/rx_fifo/project/wave_rx_fifo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_rtds_rx_fifo_behav -key {Behavioral:sim_1:Functional:tb_rtds_rx_fifo} -tclbatch {tb_rtds_rx_fifo.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_rtds_rx_fifo.tcl
+## current_wave_config
+WARNING: Simulation object /tb_rtds_rx_fifo/expected was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rtds_rx_fifo_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:36 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_RTDS_FPGA_COUNT_CDC/U_XPM_CDC_GRAY/dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /mem is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.enb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.doutb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_rx_fifo/U_DUT/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+TEST PASS tb_rtds_rx_fifo V2.01
+$finish called at time : 790 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_rx_fifo.sv" Line 76
+WARNING: Simulation object /tb_rtds_rx_fifo/expected was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /tb_rtds_rx_fifo/send/n was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_rx_fifo/send/stored was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_rx_fifo/send/value was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_rx_fifo/expected was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=rx_fifo
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 921.895 ; gain = 0.000
+Command: launch_simulation -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/ring/project/wave_ring.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx_2020_2/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/ring/project/wave_ring.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_rtds_ring' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/ring/project/wave_ring.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_rtds_ring_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_rx_block_writer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RTDS_RX_BLOCK_WRITER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_ring_test_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_ring.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rtds_ring
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/ring/project/wave_ring.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '9' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/ring/project/wave_ring.sim/sim_1/behav/xsim'
+"xelab -wto d3c1b47628224ff2ad3b00be74f5d45c --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_ring_behav xil_defaultlib.tb_rtds_ring xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx_2020_2/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto d3c1b47628224ff2ad3b00be74f5d45c --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_ring_behav xil_defaultlib.tb_rtds_ring xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.host_cb
+Compiling module xil_defaultlib.fdma_cb
+Compiling module xil_defaultlib.rtds_ring_test_if
+Compiling module xil_defaultlib.RTDS_RX_BLOCK_WRITER(PERIOD_CYCL...
+Compiling module xil_defaultlib.tb_rtds_ring
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_rtds_ring_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/ring/project/wave_ring.sim/sim_1/behav/xsim/xsim.dir/tb_rtds_ring_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:03:38 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '18' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/ring/project/wave_ring.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_rtds_ring_behav -key {Behavioral:sim_1:Functional:tb_rtds_ring} -tclbatch {tb_rtds_ring.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_rtds_ring.tcl
+## current_wave_config
+WARNING: Simulation object /tb_rtds_ring/memory was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rtds_ring_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:32 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+INFO: HDL object /tb_rtds_ring/U_DUT/block_len is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_ring/U_DUT/block_seq is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+TEST PASS tb_rtds_ring V2.01
+$finish called at time : 28902 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_ring.sv" Line 122
+WARNING: Simulation object /tb_rtds_ring/memory was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /tb_rtds_ring/send_word/value was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_ring/wait_count/Block61_66/i was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_ring/wait_count/count was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_ring/check_head/Block79_67/Block79_68/Block81_69/b was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_ring/check_head/Block79_67/Block79_68/got was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_ring/check_head/Block79_67/i was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_ring/check_head/seq was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_ring/check_head/words was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_ring/check_head/seed was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_ring/check_head/address was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_ring/memory was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=ring
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 921.895 ; gain = 0.000
+Command: launch_simulation -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi/project/wave_axi.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx_2020_2/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi/project/wave_axi.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_rtds_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi/project/wave_axi.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_rtds_axi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CONV_DMA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/ddr4/rtds_axi_ram_model.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_axi_ram_model
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_axi_test_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rtds_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi/project/wave_axi.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi/project/wave_axi.sim/sim_1/behav/xsim'
+"xelab -wto 5df37f3f45de4f8ca2511da4420b4d5b --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_axi_behav xil_defaultlib.tb_rtds_axi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx_2020_2/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 5df37f3f45de4f8ca2511da4420b4d5b --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_axi_behav xil_defaultlib.tb_rtds_axi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+WARNING: [XSIM 43-4127] File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv" Line 179 : The "System Verilog Cover" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv" Line 186 : The "System Verilog Cover" is not supported yet for simulation. The statement will be ignored.
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.driver_cb
+Compiling module xil_defaultlib.rtds_axi_test_if
+Compiling module xil_defaultlib.CONV_DMA_default
+Compiling module xil_defaultlib.rtds_axi_ram_model(ADDR_WIDTH=64...
+Compiling module xil_defaultlib.tb_rtds_axi
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_rtds_axi_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi/project/wave_axi.sim/sim_1/behav/xsim/xsim.dir/tb_rtds_axi_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:04:34 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:21 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '21' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi/project/wave_axi.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_rtds_axi_behav -key {Behavioral:sim_1:Functional:tb_rtds_axi} -tclbatch {tb_rtds_axi.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_rtds_axi.tcl
+## current_wave_config
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rtds_axi_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:33 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+WRITE_BEGIN addr=0000000000100000 count=         16
+WRITE_BEGIN addr=0000000000140000 count=         16
+WRITE_BEGIN addr=0000000000180000 count=         16
+WRITE_BEGIN addr=00000000001c0000 count=         16
+WRITE_BEGIN addr=0000000000200000 count=         16
+WRITE_BEGIN addr=0000000000240000 count=         16
+WRITE_BEGIN addr=0000000000280000 count=         16
+WRITE_BEGIN addr=00000000002c0000 count=         16
+WRITE_BEGIN addr=0000000000180ff8 count=        520
+WRITE_BEGIN addr=0000000000200000 count=         16
+TEST PASS tb_rtds_axi
+$finish called at time : 13318 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv" Line 207
+WARNING: Simulation object /tb_rtds_axi/U_RAM/mem was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /tb_rtds_axi/write_words/Block145_62/beat was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi/write_words/address was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi/write_words/count was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi/write_words/seed was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi/write_words/bad was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi/read_words/Block165_63/beat was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi/read_words/address was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi/read_words/count was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi/read_words/seed was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=axi
+Command: launch_simulation -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi_tail/project/wave_axi_tail.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx_2020_2/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi_tail/project/wave_axi_tail.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_rtds_axi_tail' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi_tail/project/wave_axi_tail.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_rtds_axi_tail_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CONV_DMA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/ddr4/rtds_axi_ram_model.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_axi_ram_model
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_axi_tail_test_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi_tail.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rtds_axi_tail
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi_tail/project/wave_axi_tail.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi_tail/project/wave_axi_tail.sim/sim_1/behav/xsim'
+"xelab -wto 269af040b64045008a6bbddec3fe40e9 --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_axi_tail_behav xil_defaultlib.tb_rtds_axi_tail xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx_2020_2/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 269af040b64045008a6bbddec3fe40e9 --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_axi_tail_behav xil_defaultlib.tb_rtds_axi_tail xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+WARNING: [XSIM 43-4127] File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi_tail.sv" Line 179 : The "System Verilog Cover" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi_tail.sv" Line 186 : The "System Verilog Cover" is not supported yet for simulation. The statement will be ignored.
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.driver_cb
+Compiling module xil_defaultlib.rtds_axi_tail_test_if
+Compiling module xil_defaultlib.CONV_DMA_default
+Compiling module xil_defaultlib.rtds_axi_ram_model(ADDR_WIDTH=64...
+Compiling module xil_defaultlib.tb_rtds_axi_tail
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_rtds_axi_tail_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi_tail/project/wave_axi_tail.sim/sim_1/behav/xsim/xsim.dir/tb_rtds_axi_tail_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:05:28 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:22 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '22' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi_tail/project/wave_axi_tail.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_rtds_axi_tail_behav -key {Behavioral:sim_1:Functional:tb_rtds_axi_tail} -tclbatch {tb_rtds_axi_tail.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_rtds_axi_tail.tcl
+## current_wave_config
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rtds_axi_tail_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:35 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+WRITE_BEGIN addr=00000000002ffff8 count=          1
+WRITE_BEGIN addr=00000000002ffff8 count=          1
+TEST PASS tb_rtds_axi_tail WSTRB=0F upper32 preserved
+$finish called at time : 326 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi_tail.sv" Line 208
+WARNING: Simulation object /tb_rtds_axi_tail/U_RAM/mem was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /tb_rtds_axi_tail/write_words/Block145_65/beat was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi_tail/write_words/address was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi_tail/write_words/count was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi_tail/write_words/seed was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi_tail/write_words/bad was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi_tail/read_words/Block165_66/beat was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi_tail/read_words/address was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi_tail/read_words/count was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_axi_tail/read_words/seed was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:17 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=axi_tail
+create_project: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 921.895 ; gain = 0.000
+update_compile_order: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 921.895 ; gain = 0.000
+Command: launch_simulation -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/regs/project/wave_regs.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx_2020_2/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/regs/project/wave_regs.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_rtds_regs' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/regs/project/wave_regs.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_rtds_regs_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module INFO_EXCH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_regs_test_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_regs.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rtds_regs
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/regs/project/wave_regs.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '10' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/regs/project/wave_regs.sim/sim_1/behav/xsim'
+"xelab -wto 75073680831c4110970cd87f2e8c5dce --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_regs_behav xil_defaultlib.tb_rtds_regs xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx_2020_2/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 75073680831c4110970cd87f2e8c5dce --incr --debug all --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_regs_behav xil_defaultlib.tb_rtds_regs xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.driver_cb
+Compiling module xil_defaultlib.monitor_cb
+Compiling module xil_defaultlib.rtds_regs_test_if
+Compiling module xil_defaultlib.INFO_EXCH_default
+Compiling module xil_defaultlib.tb_rtds_regs
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_rtds_regs_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/regs/project/wave_regs.sim/sim_1/behav/xsim/xsim.dir/tb_rtds_regs_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:06:36 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:19 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '19' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/regs/project/wave_regs.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_rtds_regs_behav -key {Behavioral:sim_1:Functional:tb_rtds_regs} -tclbatch {tb_rtds_regs.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_rtds_regs.tcl
+## current_wave_config
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rtds_regs_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:35 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+TEST PASS tb_rtds_regs V2.01
+$finish called at time : 422 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_regs.sv" Line 89
+WARNING: Simulation object /tb_rtds_regs/wr/address was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_regs/wr/value was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_regs/wr/strobe was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_regs/check/address was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_regs/check/value was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=regs
+# puts "LOCAL_ALL_COMPLETE"
+LOCAL_ALL_COMPLETE
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 18:06:45 2026...

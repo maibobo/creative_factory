@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\evidence\v201_quick_wave_draft\raw\1g\1g_full.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_rtds_1g" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="195" />
+   <wvobject fp_name="/tb_rtds_1g/bus/src_drv_cb/src_drv_cb_clk" type="logic">
+      <obj_property name="ElementShortName">src_drv_cb_clk</obj_property>
+      <obj_property name="ObjectShortName">src_drv_cb_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/src_drv_cb/configured_in" type="logic">
+      <obj_property name="ElementShortName">configured_in</obj_property>
+      <obj_property name="ObjectShortName">configured_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/src_drv_cb/configured_id_in" type="array">
+      <obj_property name="ElementShortName">configured_id_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">configured_id_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_drv_cb/tx_drv_cb_clk" type="logic">
+      <obj_property name="ElementShortName">tx_drv_cb_clk</obj_property>
+      <obj_property name="ObjectShortName">tx_drv_cb_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_drv_cb/tx_valid_in" type="logic">
+      <obj_property name="ElementShortName">tx_valid_in</obj_property>
+      <obj_property name="ObjectShortName">tx_valid_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_drv_cb/tx_sof_in" type="logic">
+      <obj_property name="ElementShortName">tx_sof_in</obj_property>
+      <obj_property name="ObjectShortName">tx_sof_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_drv_cb/tx_eof_in" type="logic">
+      <obj_property name="ElementShortName">tx_eof_in</obj_property>
+      <obj_property name="ObjectShortName">tx_eof_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_drv_cb/tx_data_in" type="array">
+      <obj_property name="ElementShortName">tx_data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_drv_cb/tx_rem_in" type="array">
+      <obj_property name="ElementShortName">tx_rem_in[1:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_rem_in[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_drv_cb/skipped_periods_in" type="array">
+      <obj_property name="ElementShortName">skipped_periods_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">skipped_periods_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_mon_cb/tx_mon_cb_clk" type="logic">
+      <obj_property name="ElementShortName">tx_mon_cb_clk</obj_property>
+      <obj_property name="ObjectShortName">tx_mon_cb_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_mon_cb/rst_n_in" type="logic">
+      <obj_property name="ElementShortName">rst_n_in</obj_property>
+      <obj_property name="ObjectShortName">rst_n_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_mon_cb/user_reset_in" type="logic">
+      <obj_property name="ElementShortName">user_reset_in</obj_property>
+      <obj_property name="ObjectShortName">user_reset_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_mon_cb/channel_up_in" type="logic">
+      <obj_property name="ElementShortName">channel_up_in</obj_property>
+      <obj_property name="ObjectShortName">channel_up_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_mon_cb/tx_ready_in" type="logic">
+      <obj_property name="ElementShortName">tx_ready_in</obj_property>
+      <obj_property name="ObjectShortName">tx_ready_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_mon_cb/tx_valid_in" type="logic">
+      <obj_property name="ElementShortName">tx_valid_in</obj_property>
+      <obj_property name="ObjectShortName">tx_valid_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_mon_cb/tx_sof_in" type="logic">
+      <obj_property name="ElementShortName">tx_sof_in</obj_property>
+      <obj_property name="ObjectShortName">tx_sof_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_mon_cb/tx_eof_in" type="logic">
+      <obj_property name="ElementShortName">tx_eof_in</obj_property>
+      <obj_property name="ObjectShortName">tx_eof_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_mon_cb/tx_data_in" type="array">
+      <obj_property name="ElementShortName">tx_data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_mon_cb/tx_rem_in" type="array">
+      <obj_property name="ElementShortName">tx_rem_in[1:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_rem_in[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/src_clk" type="logic">
+      <obj_property name="ElementShortName">src_clk</obj_property>
+      <obj_property name="ObjectShortName">src_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/user_clk" type="logic">
+      <obj_property name="ElementShortName">user_clk</obj_property>
+      <obj_property name="ObjectShortName">user_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/cfg_byte" type="array">
+      <obj_property name="ElementShortName">cfg_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cfg_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/cfg_byte_valid" type="logic">
+      <obj_property name="ElementShortName">cfg_byte_valid</obj_property>
+      <obj_property name="ObjectShortName">cfg_byte_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/user_reset" type="logic">
+      <obj_property name="ElementShortName">user_reset</obj_property>
+      <obj_property name="ObjectShortName">user_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/channel_up" type="logic">
+      <obj_property name="ElementShortName">channel_up</obj_property>
+      <obj_property name="ObjectShortName">channel_up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_ready" type="logic">
+      <obj_property name="ElementShortName">tx_ready</obj_property>
+      <obj_property name="ObjectShortName">tx_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_data" type="array">
+      <obj_property name="ElementShortName">tx_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_rem" type="array">
+      <obj_property name="ElementShortName">tx_rem[1:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_rem[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_sof" type="logic">
+      <obj_property name="ElementShortName">tx_sof</obj_property>
+      <obj_property name="ObjectShortName">tx_sof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_eof" type="logic">
+      <obj_property name="ElementShortName">tx_eof</obj_property>
+      <obj_property name="ObjectShortName">tx_eof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_valid" type="logic">
+      <obj_property name="ElementShortName">tx_valid</obj_property>
+      <obj_property name="ObjectShortName">tx_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/configured" type="logic">
+      <obj_property name="ElementShortName">configured</obj_property>
+      <obj_property name="ObjectShortName">configured</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/configured_id" type="array">
+      <obj_property name="ElementShortName">configured_id[7:0]</obj_property>
+      <obj_property name="ObjectShortName">configured_id[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/skipped_periods" type="array">
+      <obj_property name="ElementShortName">skipped_periods[31:0]</obj_property>
+      <obj_property name="ObjectShortName">skipped_periods[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/config_drc_async_rst/drc_err_flag" type="logic">
+      <obj_property name="ElementShortName">drc_err_flag</obj_property>
+      <obj_property name="ObjectShortName">drc_err_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/src_arst" type="logic">
+      <obj_property name="ElementShortName">src_arst</obj_property>
+      <obj_property name="ObjectShortName">src_arst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/dest_clk" type="logic">
+      <obj_property name="ElementShortName">dest_clk</obj_property>
+      <obj_property name="ObjectShortName">dest_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/dest_arst" type="logic">
+      <obj_property name="ElementShortName">dest_arst</obj_property>
+      <obj_property name="ObjectShortName">dest_arst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/arststages_ff" type="array">
+      <obj_property name="ElementShortName">arststages_ff[3:0]</obj_property>
+      <obj_property name="ObjectShortName">arststages_ff[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/glblGSR_xpmcdc" type="logic">
+      <obj_property name="ElementShortName">glblGSR_xpmcdc</obj_property>
+      <obj_property name="ObjectShortName">glblGSR_xpmcdc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/async_path_bit" type="logic">
+      <obj_property name="ElementShortName">async_path_bit</obj_property>
+      <obj_property name="ObjectShortName">async_path_bit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/reset_pol" type="logic">
+      <obj_property name="ElementShortName">reset_pol</obj_property>
+      <obj_property name="ObjectShortName">reset_pol</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/reset_polo" type="logic">
+      <obj_property name="ElementShortName">reset_polo</obj_property>
+      <obj_property name="ObjectShortName">reset_polo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/DEST_SYNC_FF" type="array">
+      <obj_property name="ElementShortName">DEST_SYNC_FF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DEST_SYNC_FF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/INIT_SYNC_FF" type="array">
+      <obj_property name="ElementShortName">INIT_SYNC_FF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">INIT_SYNC_FF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/RST_ACTIVE_HIGH" type="array">
+      <obj_property name="ElementShortName">RST_ACTIVE_HIGH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RST_ACTIVE_HIGH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/VERSION" type="array">
+      <obj_property name="ElementShortName">VERSION[31:0]</obj_property>
+      <obj_property name="ObjectShortName">VERSION[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/DEF_VAL" type="logic">
+      <obj_property name="ElementShortName">DEF_VAL</obj_property>
+      <obj_property name="ObjectShortName">DEF_VAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/U_XPM_CDC_ASYNC_RST/INV_DEF_VAL" type="logic">
+      <obj_property name="ElementShortName">INV_DEF_VAL</obj_property>
+      <obj_property name="ObjectShortName">INV_DEF_VAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/rst_async_n" type="logic">
+      <obj_property name="ElementShortName">rst_async_n</obj_property>
+      <obj_property name="ObjectShortName">rst_async_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_SRC/rst_sync_n" type="logic">
+      <obj_property name="ElementShortName">rst_sync_n</obj_property>
+      <obj_property name="ObjectShortName">rst_sync_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/config_drc_async_rst/drc_err_flag" type="logic">
+      <obj_property name="ElementShortName">drc_err_flag</obj_property>
+      <obj_property name="ObjectShortName">drc_err_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/src_arst" type="logic">
+      <obj_property name="ElementShortName">src_arst</obj_property>
+      <obj_property name="ObjectShortName">src_arst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/dest_clk" type="logic">
+      <obj_property name="ElementShortName">dest_clk</obj_property>
+      <obj_property name="ObjectShortName">dest_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/dest_arst" type="logic">
+      <obj_property name="ElementShortName">dest_arst</obj_property>
+      <obj_property name="ObjectShortName">dest_arst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/arststages_ff" type="array">
+      <obj_property name="ElementShortName">arststages_ff[3:0]</obj_property>
+      <obj_property name="ObjectShortName">arststages_ff[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/glblGSR_xpmcdc" type="logic">
+      <obj_property name="ElementShortName">glblGSR_xpmcdc</obj_property>
+      <obj_property name="ObjectShortName">glblGSR_xpmcdc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/async_path_bit" type="logic">
+      <obj_property name="ElementShortName">async_path_bit</obj_property>
+      <obj_property name="ObjectShortName">async_path_bit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/reset_pol" type="logic">
+      <obj_property name="ElementShortName">reset_pol</obj_property>
+      <obj_property name="ObjectShortName">reset_pol</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/reset_polo" type="logic">
+      <obj_property name="ElementShortName">reset_polo</obj_property>
+      <obj_property name="ObjectShortName">reset_polo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/DEST_SYNC_FF" type="array">
+      <obj_property name="ElementShortName">DEST_SYNC_FF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DEST_SYNC_FF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/INIT_SYNC_FF" type="array">
+      <obj_property name="ElementShortName">INIT_SYNC_FF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">INIT_SYNC_FF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/RST_ACTIVE_HIGH" type="array">
+      <obj_property name="ElementShortName">RST_ACTIVE_HIGH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RST_ACTIVE_HIGH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/VERSION" type="array">
+      <obj_property name="ElementShortName">VERSION[31:0]</obj_property>
+      <obj_property name="ObjectShortName">VERSION[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/DEF_VAL" type="logic">
+      <obj_property name="ElementShortName">DEF_VAL</obj_property>
+      <obj_property name="ObjectShortName">DEF_VAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/U_XPM_CDC_ASYNC_RST/INV_DEF_VAL" type="logic">
+      <obj_property name="ElementShortName">INV_DEF_VAL</obj_property>
+      <obj_property name="ObjectShortName">INV_DEF_VAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/rst_async_n" type="logic">
+      <obj_property name="ElementShortName">rst_async_n</obj_property>
+      <obj_property name="ObjectShortName">rst_async_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_RESET_SYNC_USER/rst_sync_n" type="logic">
+      <obj_property name="ElementShortName">rst_sync_n</obj_property>
+      <obj_property name="ObjectShortName">rst_sync_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/config_drc_hsk/drc_err_flag" type="logic">
+      <obj_property name="ElementShortName">drc_err_flag</obj_property>
+      <obj_property name="ObjectShortName">drc_err_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/config_drc_single/drc_err_flag" type="logic">
+      <obj_property name="ElementShortName">drc_err_flag</obj_property>
+      <obj_property name="ObjectShortName">drc_err_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/src_clk" type="logic">
+      <obj_property name="ElementShortName">src_clk</obj_property>
+      <obj_property name="ObjectShortName">src_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/src_in" type="logic">
+      <obj_property name="ElementShortName">src_in</obj_property>
+      <obj_property name="ObjectShortName">src_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/dest_clk" type="logic">
+      <obj_property name="ElementShortName">dest_clk</obj_property>
+      <obj_property name="ObjectShortName">dest_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/dest_out" type="logic">
+      <obj_property name="ElementShortName">dest_out</obj_property>
+      <obj_property name="ObjectShortName">dest_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/syncstages_ff" type="array">
+      <obj_property name="ElementShortName">syncstages_ff[3:0]</obj_property>
+      <obj_property name="ObjectShortName">syncstages_ff[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/glblGSR_xpmcdc" type="logic">
+      <obj_property name="ElementShortName">glblGSR_xpmcdc</obj_property>
+      <obj_property name="ObjectShortName">glblGSR_xpmcdc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/src_ff" type="logic">
+      <obj_property name="ElementShortName">src_ff</obj_property>
+      <obj_property name="ObjectShortName">src_ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/src_inqual" type="logic">
+      <obj_property name="ElementShortName">src_inqual</obj_property>
+      <obj_property name="ObjectShortName">src_inqual</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/async_path_bit" type="logic">
+      <obj_property name="ElementShortName">async_path_bit</obj_property>
+      <obj_property name="ObjectShortName">async_path_bit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/DEST_SYNC_FF" type="array">
+      <obj_property name="ElementShortName">DEST_SYNC_FF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DEST_SYNC_FF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/INIT_SYNC_FF" type="array">
+      <obj_property name="ElementShortName">INIT_SYNC_FF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">INIT_SYNC_FF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/SIM_ASSERT_CHK" type="array">
+      <obj_property name="ElementShortName">SIM_ASSERT_CHK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SIM_ASSERT_CHK[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/SRC_INPUT_REG" type="array">
+      <obj_property name="ElementShortName">SRC_INPUT_REG[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SRC_INPUT_REG[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_src2dest_inst/VERSION" type="array">
+      <obj_property name="ElementShortName">VERSION[31:0]</obj_property>
+      <obj_property name="ObjectShortName">VERSION[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/config_drc_single/drc_err_flag" type="logic">
+      <obj_property name="ElementShortName">drc_err_flag</obj_property>
+      <obj_property name="ObjectShortName">drc_err_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/src_clk" type="logic">
+      <obj_property name="ElementShortName">src_clk</obj_property>
+      <obj_property name="ObjectShortName">src_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/src_in" type="logic">
+      <obj_property name="ElementShortName">src_in</obj_property>
+      <obj_property name="ObjectShortName">src_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/dest_clk" type="logic">
+      <obj_property name="ElementShortName">dest_clk</obj_property>
+      <obj_property name="ObjectShortName">dest_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/dest_out" type="logic">
+      <obj_property name="ElementShortName">dest_out</obj_property>
+      <obj_property name="ObjectShortName">dest_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/syncstages_ff" type="array">
+      <obj_property name="ElementShortName">syncstages_ff[3:0]</obj_property>
+      <obj_property name="ObjectShortName">syncstages_ff[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/glblGSR_xpmcdc" type="logic">
+      <obj_property name="ElementShortName">glblGSR_xpmcdc</obj_property>
+      <obj_property name="ObjectShortName">glblGSR_xpmcdc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/src_ff" type="logic">
+      <obj_property name="ElementShortName">src_ff</obj_property>
+      <obj_property name="ObjectShortName">src_ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/src_inqual" type="logic">
+      <obj_property name="ElementShortName">src_inqual</obj_property>
+      <obj_property name="ObjectShortName">src_inqual</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/async_path_bit" type="logic">
+      <obj_property name="ElementShortName">async_path_bit</obj_property>
+      <obj_property name="ObjectShortName">async_path_bit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/DEST_SYNC_FF" type="array">
+      <obj_property name="ElementShortName">DEST_SYNC_FF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DEST_SYNC_FF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/INIT_SYNC_FF" type="array">
+      <obj_property name="ElementShortName">INIT_SYNC_FF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">INIT_SYNC_FF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/SIM_ASSERT_CHK" type="array">
+      <obj_property name="ElementShortName">SIM_ASSERT_CHK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SIM_ASSERT_CHK[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/SRC_INPUT_REG" type="array">
+      <obj_property name="ElementShortName">SRC_INPUT_REG[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SRC_INPUT_REG[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/xpm_cdc_single_dest2src_inst/VERSION" type="array">
+      <obj_property name="ElementShortName">VERSION[31:0]</obj_property>
+      <obj_property name="ObjectShortName">VERSION[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/src_clk" type="logic">
+      <obj_property name="ElementShortName">src_clk</obj_property>
+      <obj_property name="ObjectShortName">src_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/src_in" type="array">
+      <obj_property name="ElementShortName">src_in[47:0]</obj_property>
+      <obj_property name="ObjectShortName">src_in[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/src_send" type="logic">
+      <obj_property name="ElementShortName">src_send</obj_property>
+      <obj_property name="ObjectShortName">src_send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/src_rcv" type="logic">
+      <obj_property name="ElementShortName">src_rcv</obj_property>
+      <obj_property name="ObjectShortName">src_rcv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_clk" type="logic">
+      <obj_property name="ElementShortName">dest_clk</obj_property>
+      <obj_property name="ObjectShortName">dest_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_out" type="array">
+      <obj_property name="ElementShortName">dest_out[47:0]</obj_property>
+      <obj_property name="ObjectShortName">dest_out[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_req" type="logic">
+      <obj_property name="ElementShortName">dest_req</obj_property>
+      <obj_property name="ObjectShortName">dest_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_ack" type="logic">
+      <obj_property name="ElementShortName">dest_ack</obj_property>
+      <obj_property name="ObjectShortName">dest_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_hsdata_ff" type="array">
+      <obj_property name="ElementShortName">dest_hsdata_ff[47:0]</obj_property>
+      <obj_property name="ObjectShortName">dest_hsdata_ff[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/glblGSR_xpmcdc" type="logic">
+      <obj_property name="ElementShortName">glblGSR_xpmcdc</obj_property>
+      <obj_property name="ObjectShortName">glblGSR_xpmcdc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/src_hsdata_ff" type="array">
+      <obj_property name="ElementShortName">src_hsdata_ff[47:0]</obj_property>
+      <obj_property name="ObjectShortName">src_hsdata_ff[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_req_nxt" type="logic">
+      <obj_property name="ElementShortName">dest_req_nxt</obj_property>
+      <obj_property name="ObjectShortName">dest_req_nxt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_req_ff" type="logic">
+      <obj_property name="ElementShortName">dest_req_ff</obj_property>
+      <obj_property name="ObjectShortName">dest_req_ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_hsdata_en" type="logic">
+      <obj_property name="ElementShortName">dest_hsdata_en</obj_property>
+      <obj_property name="ObjectShortName">dest_hsdata_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_req_ext_nxt" type="logic">
+      <obj_property name="ElementShortName">dest_req_ext_nxt</obj_property>
+      <obj_property name="ObjectShortName">dest_req_ext_nxt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_req_ext_ff" type="logic">
+      <obj_property name="ElementShortName">dest_req_ext_ff</obj_property>
+      <obj_property name="ObjectShortName">dest_req_ext_ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/src_hsdata_nxt" type="array">
+      <obj_property name="ElementShortName">src_hsdata_nxt[47:0]</obj_property>
+      <obj_property name="ObjectShortName">src_hsdata_nxt[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_hsdata_nxt" type="array">
+      <obj_property name="ElementShortName">dest_hsdata_nxt[47:0]</obj_property>
+      <obj_property name="ObjectShortName">dest_hsdata_nxt[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/src_data_src" type="array">
+      <obj_property name="ElementShortName">src_data_src[47:0]</obj_property>
+      <obj_property name="ObjectShortName">src_data_src[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_req_sync" type="logic">
+      <obj_property name="ElementShortName">dest_req_sync</obj_property>
+      <obj_property name="ObjectShortName">dest_req_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_ack_sync_in" type="logic">
+      <obj_property name="ElementShortName">dest_ack_sync_in</obj_property>
+      <obj_property name="ObjectShortName">dest_ack_sync_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/src_sendd_ff" type="logic">
+      <obj_property name="ElementShortName">src_sendd_ff</obj_property>
+      <obj_property name="ObjectShortName">src_sendd_ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/src_sendd_nxt" type="logic">
+      <obj_property name="ElementShortName">src_sendd_nxt</obj_property>
+      <obj_property name="ObjectShortName">src_sendd_nxt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/DEST_EXT_HSK" type="array">
+      <obj_property name="ElementShortName">DEST_EXT_HSK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DEST_EXT_HSK[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/DEST_SYNC_FF" type="array">
+      <obj_property name="ElementShortName">DEST_SYNC_FF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DEST_SYNC_FF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/INIT_SYNC_FF" type="array">
+      <obj_property name="ElementShortName">INIT_SYNC_FF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">INIT_SYNC_FF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/SIM_ASSERT_CHK" type="array">
+      <obj_property name="ElementShortName">SIM_ASSERT_CHK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SIM_ASSERT_CHK[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/SRC_SYNC_FF" type="array">
+      <obj_property name="ElementShortName">SRC_SYNC_FF[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SRC_SYNC_FF[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/VERSION" type="array">
+      <obj_property name="ElementShortName">VERSION[31:0]</obj_property>
+      <obj_property name="ObjectShortName">VERSION[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/WIDTH" type="array">
+      <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/src_clk" type="logic">
+      <obj_property name="ElementShortName">src_clk</obj_property>
+      <obj_property name="ObjectShortName">src_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/dst_clk" type="logic">
+      <obj_property name="ElementShortName">dst_clk</obj_property>
+      <obj_property name="ObjectShortName">dst_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/src_data" type="array">
+      <obj_property name="ElementShortName">src_data[47:0]</obj_property>
+      <obj_property name="ObjectShortName">src_data[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/src_send" type="logic">
+      <obj_property name="ElementShortName">src_send</obj_property>
+      <obj_property name="ObjectShortName">src_send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/dst_ack" type="logic">
+      <obj_property name="ElementShortName">dst_ack</obj_property>
+      <obj_property name="ObjectShortName">dst_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/src_rcv" type="logic">
+      <obj_property name="ElementShortName">src_rcv</obj_property>
+      <obj_property name="ObjectShortName">src_rcv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/dst_req" type="logic">
+      <obj_property name="ElementShortName">dst_req</obj_property>
+      <obj_property name="ObjectShortName">dst_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/U_RTDS_FPGA_CFG_CDC/dst_data" type="array">
+      <obj_property name="ElementShortName">dst_data[47:0]</obj_property>
+      <obj_property name="ObjectShortName">dst_data[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/clk_250m" type="logic">
+      <obj_property name="ElementShortName">clk_250m</obj_property>
+      <obj_property name="ObjectShortName">clk_250m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/cfg_byte" type="array">
+      <obj_property name="ElementShortName">cfg_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cfg_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/cfg_byte_valid" type="logic">
+      <obj_property name="ElementShortName">cfg_byte_valid</obj_property>
+      <obj_property name="ObjectShortName">cfg_byte_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/user_clk" type="logic">
+      <obj_property name="ElementShortName">user_clk</obj_property>
+      <obj_property name="ObjectShortName">user_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/user_reset" type="logic">
+      <obj_property name="ElementShortName">user_reset</obj_property>
+      <obj_property name="ObjectShortName">user_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/channel_up" type="logic">
+      <obj_property name="ElementShortName">channel_up</obj_property>
+      <obj_property name="ObjectShortName">channel_up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/tx_ready" type="logic">
+      <obj_property name="ElementShortName">tx_ready</obj_property>
+      <obj_property name="ObjectShortName">tx_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/tx_data" type="array">
+      <obj_property name="ElementShortName">tx_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/tx_rem" type="array">
+      <obj_property name="ElementShortName">tx_rem[1:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_rem[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/tx_sof" type="logic">
+      <obj_property name="ElementShortName">tx_sof</obj_property>
+      <obj_property name="ObjectShortName">tx_sof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/tx_eof" type="logic">
+      <obj_property name="ElementShortName">tx_eof</obj_property>
+      <obj_property name="ObjectShortName">tx_eof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/tx_valid" type="logic">
+      <obj_property name="ElementShortName">tx_valid</obj_property>
+      <obj_property name="ObjectShortName">tx_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/configured" type="logic">
+      <obj_property name="ElementShortName">configured</obj_property>
+      <obj_property name="ObjectShortName">configured</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/configured_id" type="array">
+      <obj_property name="ElementShortName">configured_id[7:0]</obj_property>
+      <obj_property name="ObjectShortName">configured_id[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/skipped_periods" type="array">
+      <obj_property name="ElementShortName">skipped_periods[31:0]</obj_property>
+      <obj_property name="ObjectShortName">skipped_periods[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/src_rst_n" type="logic">
+      <obj_property name="ElementShortName">src_rst_n</obj_property>
+      <obj_property name="ObjectShortName">src_rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/user_rst_n" type="logic">
+      <obj_property name="ElementShortName">user_rst_n</obj_property>
+      <obj_property name="ObjectShortName">user_rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/cfg_hold" type="array">
+      <obj_property name="ElementShortName">cfg_hold[47:0]</obj_property>
+      <obj_property name="ObjectShortName">cfg_hold[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/cfg_req" type="logic">
+      <obj_property name="ElementShortName">cfg_req</obj_property>
+      <obj_property name="ObjectShortName">cfg_req</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/cfg_ack" type="logic">
+      <obj_property name="ElementShortName">cfg_ack</obj_property>
+      <obj_property name="ObjectShortName">cfg_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/req_sync" type="logic">
+      <obj_property name="ElementShortName">req_sync</obj_property>
+      <obj_property name="ObjectShortName">req_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/cfg_cdc_data" type="array">
+      <obj_property name="ElementShortName">cfg_cdc_data[47:0]</obj_property>
+      <obj_property name="ObjectShortName">cfg_cdc_data[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/cfg_send" type="logic">
+      <obj_property name="ElementShortName">cfg_send</obj_property>
+      <obj_property name="ObjectShortName">cfg_send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/cfg_dest_ack" type="logic">
+      <obj_property name="ElementShortName">cfg_dest_ack</obj_property>
+      <obj_property name="ObjectShortName">cfg_dest_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/ack_sync" type="logic">
+      <obj_property name="ElementShortName">ack_sync</obj_property>
+      <obj_property name="ObjectShortName">ack_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/cfg_user" type="array">
+      <obj_property name="ElementShortName">cfg_user[47:0]</obj_property>
+      <obj_property name="ObjectShortName">cfg_user[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/period_count" type="array">
+      <obj_property name="ElementShortName">period_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">period_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/period_tick" type="logic">
+      <obj_property name="ElementShortName">period_tick</obj_property>
+      <obj_property name="ObjectShortName">period_tick</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/arm_count" type="array">
+      <obj_property name="ElementShortName">arm_count[2:0]</obj_property>
+      <obj_property name="ObjectShortName">arm_count[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/tx_curr_st" type="array">
+      <obj_property name="ElementShortName">tx_curr_st[1:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_curr_st[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/decoded_duty" type="array">
+      <obj_property name="ElementShortName">decoded_duty[15:0]</obj_property>
+      <obj_property name="ObjectShortName">decoded_duty[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/decoded_vin" type="array">
+      <obj_property name="ElementShortName">decoded_vin[31:0]</obj_property>
+      <obj_property name="ObjectShortName">decoded_vin[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/decode_valid" type="logic">
+      <obj_property name="ElementShortName">decode_valid</obj_property>
+      <obj_property name="ObjectShortName">decode_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/tx_next_st" type="array">
+      <obj_property name="ElementShortName">tx_next_st[1:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_next_st[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/PERIOD_CYCLES" type="array">
+      <obj_property name="ElementShortName">PERIOD_CYCLES[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PERIOD_CYCLES[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/IDLE" type="array">
+      <obj_property name="ElementShortName">IDLE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/FIRST" type="array">
+      <obj_property name="ElementShortName">FIRST[1:0]</obj_property>
+      <obj_property name="ObjectShortName">FIRST[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/U_DUT/LAST" type="array">
+      <obj_property name="ElementShortName">LAST[1:0]</obj_property>
+      <obj_property name="ObjectShortName">LAST[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/stimulus/Block99_101/id" type="array">
+      <obj_property name="ElementShortName">id[31:0]</obj_property>
+      <obj_property name="ObjectShortName">id[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/stimulus/previous_frames" type="array">
+      <obj_property name="ElementShortName">previous_frames[31:0]</obj_property>
+      <obj_property name="ObjectShortName">previous_frames[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/src_clk" type="logic">
+      <obj_property name="ElementShortName">src_clk</obj_property>
+      <obj_property name="ObjectShortName">src_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/user_clk" type="logic">
+      <obj_property name="ElementShortName">user_clk</obj_property>
+      <obj_property name="ObjectShortName">user_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/expected_duty" type="array">
+      <obj_property name="ElementShortName">expected_duty[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_duty[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/expected_voltage" type="array">
+      <obj_property name="ElementShortName">expected_voltage[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_voltage[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/check_cadence" type="logic">
+      <obj_property name="ElementShortName">check_cadence</obj_property>
+      <obj_property name="ObjectShortName">check_cadence</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/last_sof_time" type="array">
+      <obj_property name="ElementShortName">last_sof_time[63:0]</obj_property>
+      <obj_property name="ObjectShortName">last_sof_time[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/completed_frames" type="array">
+      <obj_property name="ElementShortName">completed_frames[31:0]</obj_property>
+      <obj_property name="ObjectShortName">completed_frames[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/partial_frame" type="logic">
+      <obj_property name="ElementShortName">partial_frame</obj_property>
+      <obj_property name="ObjectShortName">partial_frame</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/previous_stall" type="logic">
+      <obj_property name="ElementShortName">previous_stall</obj_property>
+      <obj_property name="ObjectShortName">previous_stall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/held_payload" type="array">
+      <obj_property name="ElementShortName">held_payload[35:0]</obj_property>
+      <obj_property name="ObjectShortName">held_payload[35:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/first_word" type="array">
+      <obj_property name="ElementShortName">first_word[31:0]</obj_property>
+      <obj_property name="ObjectShortName">first_word[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/observed_payload" type="array">
+      <obj_property name="ElementShortName">observed_payload[47:0]</obj_property>
+      <obj_property name="ObjectShortName">observed_payload[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/expected_payload" type="array">
+      <obj_property name="ElementShortName">expected_payload[47:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_payload[47:0]</obj_property>
+   </wvobject>
+</wave_config>

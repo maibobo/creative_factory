@@ -1,0 +1,36 @@
+﻿{
+    "log":  "C:\\project\\RTDS\\pcie_07\\RTDS_test-1ch\\RTDS_test-1ch\\regression\\sim_xdma_rootport_remote_20260717\\logs\\simulate.log",
+    "scanned_logs":  [
+                         "C:\\project\\RTDS\\pcie_07\\RTDS_test-1ch\\RTDS_test-1ch\\regression\\sim_xdma_rootport_remote_20260717\\logs\\simulate.log",
+                         "C:\\project\\RTDS\\pcie_07\\RTDS_test-1ch\\RTDS_test-1ch\\regression\\sim_xdma_rootport_remote_20260717\\logs\\prepare_rootport_sim.log"
+                     ],
+    "passed":  true,
+    "milestones":  {
+                       "link":  true,
+                       "bar":  true,
+                       "msi_config":  true,
+                       "user_irq_enable":  true,
+                       "base_dma":  true,
+                       "cpu_to_aurora":  true,
+                       "aurora_to_cpu":  true,
+                       "result_zero":  true,
+                       "pass_marker":  true
+                   },
+    "warning_count":  7,
+    "warnings_by_phase":  [
+                              {
+                                  "phase":  "simulate.log",
+                                  "count":  6
+                              },
+                              {
+                                  "phase":  "prepare_rootport_sim.log",
+                                  "count":  1
+                              }
+                          ],
+    "unexpected_warnings":  [
+
+                            ],
+    "fatal_lines":  [
+
+                    ]
+}

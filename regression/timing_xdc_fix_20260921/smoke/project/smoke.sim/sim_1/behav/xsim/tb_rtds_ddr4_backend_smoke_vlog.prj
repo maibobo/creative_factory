@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  -d "DDR4_SIM_RAM=" \
+"../../../../../../../../rtl/ddr4/rtds_axi_ram_model.sv" \
+"../../../../../../../../rtl/ddr4/rtds_ddr4_backend.sv" \
+"../../../../../../../../sim/ddr4_backend/tb_rtds_ddr4_backend_smoke.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

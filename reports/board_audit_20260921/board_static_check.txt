@@ -1,0 +1,2 @@
+PASS: 134 explicit pins + 8 original differential companion pins = 142 unique port bits.
+PASS: all original DDR port constraints unchanged.

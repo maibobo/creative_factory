@@ -1,0 +1,2 @@
+# testcase                    repeat  wave(0|1)
+tc_brg_rd_ready_stall           1       0

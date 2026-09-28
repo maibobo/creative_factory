@@ -1,0 +1,88 @@
+﻿[
+  {
+    "case": "1g",
+    "wcfg_signals": 195,
+    "vcd_signals": 195,
+    "end_time": 283920000,
+    "timescale": "1ps",
+    "sources": 7,
+    "pass_lines": [
+      "TEST PASS tb_rtds_1g completed_frames=60"
+    ],
+    "vcd_missing_from_wcfg": []
+  },
+  {
+    "case": "tx",
+    "wcfg_signals": 790,
+    "vcd_signals": 783,
+    "end_time": 28905600,
+    "timescale": "1ps",
+    "sources": 7,
+    "pass_lines": [
+      "TX CASE PASS frames=1 peak=2",
+      "TX CASE PASS frames=300 peak=504",
+      "TEST PASS tb_rtds_tx single/batch/near_full/backpressure"
+    ],
+    "vcd_missing_from_wcfg": []
+  },
+  {
+    "case": "rx_fifo",
+    "wcfg_signals": 798,
+    "vcd_signals": 790,
+    "end_time": 790000,
+    "timescale": "1ps",
+    "sources": 9,
+    "pass_lines": [
+      "TEST PASS tb_rtds_rx_fifo V2.01"
+    ],
+    "vcd_missing_from_wcfg": []
+  },
+  {
+    "case": "ring",
+    "wcfg_signals": 116,
+    "vcd_signals": 114,
+    "end_time": 28902000,
+    "timescale": "1ps",
+    "sources": 4,
+    "pass_lines": [
+      "TEST PASS tb_rtds_ring V2.01"
+    ],
+    "vcd_missing_from_wcfg": []
+  },
+  {
+    "case": "axi",
+    "wcfg_signals": 234,
+    "vcd_signals": 234,
+    "end_time": 13318000,
+    "timescale": "1ps",
+    "sources": 5,
+    "pass_lines": [
+      "TEST PASS tb_rtds_axi"
+    ],
+    "vcd_missing_from_wcfg": []
+  },
+  {
+    "case": "axi_tail",
+    "wcfg_signals": 233,
+    "vcd_signals": 233,
+    "end_time": 326000,
+    "timescale": "1ps",
+    "sources": 5,
+    "pass_lines": [
+      "TEST PASS tb_rtds_axi_tail WSTRB=0F upper32 preserved"
+    ],
+    "vcd_missing_from_wcfg": []
+  },
+  {
+    "case": "regs",
+    "wcfg_signals": 114,
+    "vcd_signals": 114,
+    "end_time": 422000,
+    "timescale": "1ps",
+    "sources": 4,
+    "pass_lines": [
+      "TEST PASS tb_rtds_regs V2.01"
+    ],
+    "vcd_missing_from_wcfg": []
+  }
+]

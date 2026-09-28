@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../../RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v" \
+
+sv xil_defaultlib  \
+"../../../../../../../../rtl/ddr4/rtds_axi_ram_model.sv" \
+"../../../../../../../batch_1g/rtds_axi_test_if.sv" \
+"../../../../../../../batch_1g/tb_rtds_axi.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

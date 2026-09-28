@@ -1,0 +1,678 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Sep 23 09:58:21 2026
+# Process ID: 25016
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/work/export/xsim
+# Command line: xsim.exe -log C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/logs/simulate.log -mode tcl -source {xsim.dir/board/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/logs/simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/work/export/xsim\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/board/xsim_script.tcl
+# xsim {board} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/scripts/run_fast.tcl}
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/scripts/run_fast.tcl
+## set script_dir [file dirname [file normalize [info script]]]
+## source [file join $script_dir select_rtds_minimum.tcl]
+### puts "RTDS_TEST_SELECT_COMPAT: tests.vh maps isolated AXI-MM default to rtds_minimum"
+RTDS_TEST_SELECT_COMPAT: tests.vh maps isolated AXI-MM default to rtds_minimum
+## puts "RTDS_FAST_MODE: assertions=on scoreboard=on waves=off"
+RTDS_FAST_MODE: assertions=on scoreboard=on waves=off
+## run all
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+Block Memory Generator module board.EP.DUT.design_1_wrapper_inst.design_1_i.xdma_0.inst.ram_top.\gen_h2c_bram.H2C_DAT0_FIFO .\genblk1[0].genblk1.u_buffermem .inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module board.EP.DUT.design_1_wrapper_inst.design_1_i.xdma_0.inst.ram_top.\gen_h2c_bram.H2C_DAT1_FIFO .\genblk1[0].genblk1.u_buffermem .inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module board.EP.DUT.design_1_wrapper_inst.design_1_i.xdma_0.inst.ram_top.\gen_h2c_bram.H2C_DAT2_FIFO .\genblk1[0].genblk1.u_buffermem .inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module board.EP.DUT.design_1_wrapper_inst.design_1_i.xdma_0.inst.ram_top.\gen_h2c_bram.H2C_DAT3_FIFO .\genblk1[0].genblk1.u_buffermem .inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module board.EP.DUT.design_1_wrapper_inst.design_1_i.xdma_0.inst.ram_top.\gen_c2h_bram.C2H_DAT0_FIFO .\genblk1[0].genblk1.u_buffermem .inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module board.EP.DUT.design_1_wrapper_inst.design_1_i.xdma_0.inst.ram_top.\gen_c2h_bram.C2H_DAT1_FIFO .\genblk1[0].genblk1.u_buffermem .inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module board.EP.DUT.design_1_wrapper_inst.design_1_i.xdma_0.inst.ram_top.\gen_c2h_bram.C2H_DAT2_FIFO .\genblk1[0].genblk1.u_buffermem .inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module board.EP.DUT.design_1_wrapper_inst.design_1_i.xdma_0.inst.ram_top.\gen_c2h_bram.C2H_DAT3_FIFO .\genblk1[0].genblk1.u_buffermem .inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module board.EP.DUT.design_1_wrapper_inst.design_1_i.xdma_0.inst.ram_top.\mas_bridge_ram_write_512.MASTER_WRITE_FIFO .\genblk1[0].genblk1.u_buffermem .inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module board.EP.DUT.design_1_wrapper_inst.design_1_i.xdma_0.inst.ram_top.MASTER_READ_BRAM.\genblk1[0].genblk1.u_buffermem .inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Timescale of (design_1_xdma_0_0_pcie3_ip_pcie3_uscale_core_top(PL_LINK_CAP_MAX_LINK_SPEED=4,PL_LINK_CAP_MAX_LINK_WIDTH=2,PLL_TYPE=2,C_DATA_WIDTH=64,KEEP_WIDTH=2,AXISTEN_IF_CC_ALIGNMENT_MODE="TRUE",AXISTEN_IF_CQ_ALIGNMENT_MODE="TRUE",AXISTEN_IF_ENABLE_MSG_ROUTE=18'b100000000000000000,PF0_AER_CAP_NEXTPTR=12'b01100000000,PF0_BAR0_APERTURE_SIZE=5'b01101,PF0_BAR1_APERTURE_SIZE=5'b01001,PF0_BAR1_CONTROL=3'b100,PF0_BAR2_APERTURE_SIZE=5'b0,PF0_BAR2_CONTROL=3'b0,PF0_BAR3_APERTURE_SIZE=5'b0,PF0_BAR4_APERTURE_SIZE=5'b0,PF0_BAR4_CONTROL=3'b0,PF0_BAR5_APERTURE_SIZE=5'b0,PF0_CAPABILITY_POINTER=8'b10000000,PF0_CLASS_CODE=24'b01110000000000000001,PF0_VENDOR_ID=16'b01000011101110,PF0_DEVICE_ID=16'b1000000000110010,PF0_DEV_CAP2_128B_CAS_ATOMIC_COMPLETER_SUPPORT="FALSE",PF0_DEV_CAP2_32B_ATOMIC_COMPLETER_SUPPORT="FALSE",PF0_DEV_CAP2_64B_ATOMIC_COMPLETER_SUPPORT="FALSE",PF0_DEV_CAP2_LTR_SUPPORT="FALSE",PF0_DEV_CAP_FUNCTION_LEVEL_RESET_CAPABLE="FALSE",PF0_DEV_CAP_MAX_PAYLOAD_SIZE=3'b010,PF0_DPA_CAP_NEXTPTR=12'b01100000000,PF0_DSN_CAP_NEXTPTR=12'b01100000000,PF0_EXPANSION_ROM_APERTURE_SIZE=5'b0,PF0_INTERRUPT_PIN=3'b0,PF0_LTR_CAP_NEXTPTR=12'b01100000000,PF0_MSIX_CAP_PBA_OFFSET=29'b0,PF0_MSIX_CAP_TABLE_OFFSET=29'b0,PF0_MSI_CAP_NEXTPTR=8'b11000000,PF0_PB_CAP_NEXTPTR=12'b01001110100,PF0_PM_CAP_NEXTPTR=8'b10010000,PF0_PM_CAP_PMESUPPORT_D0="FALSE",PF0_PM_CAP_PMESUPPORT_D1="FALSE",PF0_PM_CAP_PMESUPPORT_D3HOT="FALSE",PF0_PM_CAP_SUPP_D1_STATE="FALSE",PF0_RBAR_CAP_NEXTPTR=12'b01100000000,PF0_SRIOV_BAR0_APERTURE_SIZE=5'b0,PF0_SRIOV_BAR0_CONTROL=3'b0,PF0_SRIOV_BAR2_APERTURE_SIZE=5'b0,PF0_SRIOV_BAR2_CONTROL=3'b0,PF0_SRIOV_BAR3_APERTURE_SIZE=5'b0,PF0_SRIOV_BAR4_APERTURE_SIZE=5'b0,PF0_SRIOV_BAR4_CONTROL=3'b0,PF0_SRIOV_BAR5_APERTURE_SIZE=5'b0,PF0_SRIOV_CAP_NEXTPTR=12'b01100000000,PF0_SRIOV_CAP_VER=4'b0,PF0_SRIOV_SUPPORTED_PAGE_SIZE=32'b010101010011,PF0_SUBSYSTEM_VENDOR_ID=16'b01000011101110,PF0_SUBSYSTEM_ID=16'b0111,PF0_TPHR_CAP_NEXTPTR=12'b01100000000,PF0_TPHR_CAP_INT_VEC_MODE="FALSE",PF1_TPHR_CAP_INT_VEC_MODE="FALSE",VF0_TPHR_CAP_INT_VEC_MODE="FALSE",VF1_TPHR_CAP_INT_VEC_MODE="FALSE",VF2_TPHR_CAP_INT_VEC_MODE="FALSE",VF3_TPHR_CAP_INT_VEC_MODE="FALSE",VF4_TPHR_CAP_INT_VEC_MODE="FALSE",VF5_TPHR_CAP_INT_VEC_MODE="FALSE",PF1_BAR0_APERTURE_SIZE=5'b0,PF1_BAR0_CONTROL=3'b0,PF1_BAR1_APERTURE_SIZE=5'b0,PF1_BAR2_APERTURE_SIZE=5'b0,PF1_BAR2_CONTROL=3'b0,PF1_BAR3_APERTURE_SIZE=5'b0,PF1_BAR4_APERTURE_SIZE=5'b0,PF1_BAR4_CONTROL=3'b0,PF1_BAR5_APERTURE_SIZE=5'b0,PF1_CAPABILITY_POINTER=8'b10000000,PF1_CLASS_CODE=24'b01011000000000000000,PF1_DEVICE_ID=16'b1000000000010001,PF1_DEV_CAP_MAX_PAYLOAD_SIZE=3'b010,PF1_DSN_CAP_NEXTPTR=12'b0,PF1_EXPANSION_ROM_APERTURE_SIZE=5'b0,PF1_INTERRUPT_PIN=3'b0,PF1_MSIX_CAP_PBA_OFFSET=29'b0,PF1_MSIX_CAP_TABLE_OFFSET=29'b0,PF1_SRIOV_BAR0_APERTURE_SIZE=5'b0,PF1_SRIOV_BAR0_CONTROL=3'b0,PF1_SRIOV_BAR2_APERTURE_SIZE=5'b0,PF1_SRIOV_BAR2_CONTROL=3'b0,PF1_SRIOV_BAR3_APERTURE_SIZE=5'b0,PF1_SRIOV_BAR4_APERTURE_SIZE=5'b0,PF1_SRIOV_BAR4_CONTROL=3'b0,PF1_SRIOV_BAR5_APERTURE_SIZE=5'b0,PF1_SRIOV_CAP_VER=4'b0,PF1_SRIOV_FUNC_DEP_LINK=16'b01,PF1_SRIOV_SUPPORTED_PAGE_SIZE=32'b010101010011,PF1_SUBSYSTEM_ID=16'b0111,TL_CREDITS_CD=12'b0,TL_CREDITS_CH=8'b0,VF0_CAPABILITY_POINTER=8'b10000000,VF0_MSIX_CAP_PBA_OFFSET=29'b0,VF0_MSIX_CAP_TABLE_OFFSET=29'b0,VF1_MSIX_CAP_PBA_OFFSET=29'b0,VF1_MSIX_CAP_TABLE_OFFSET=29'b0,VF2_MSIX_CAP_PBA_OFFSET=29'b0,VF2_MSIX_CAP_TABLE_OFFSET=29'b0,VF3_MSIX_CAP_PBA_OFFSET=29'b0,VF3_MSIX_CAP_TABLE_OFFSET=29'b0,VF4_MSIX_CAP_PBA_OFFSET=29'b0,VF4_MSIX_CAP_TABLE_OFFSET=29'b0,VF5_MSIX_CAP_PBA_OFFSET=29'b0,VF5_MSIX_CAP_TABLE_OFFSET=29'b0,AXISTEN_IF_ENABLE_CLIENT_TAG="TRUE",PCIE_USE_MODE="2.0",CFG_STATUS_IF="TRUE",TX_FC_IF="TRUE",CFG_FC_IF="TRUE",PER_FUNC_STATUS_IF="TRUE",RCV_MSG_IF="TRUE",CFG_TX_MSG_IF="TRUE",CFG_CTL_IF="TRUE",PCIE3_DRP="FALSE",DIS_GT_WIZARD="FALSE",DEDICATE_PERST="FALSE",SYS_RESET_POLARITY=0,EN_GT_SELECTION="TRUE",SELECT_QUAD="GTH_Quad_224",silicon_revision="Production",DBG_DESCRAMBLE_EN="FALSE",MULT_PF_DES="TRUE",GT_DRP_CLK_SRC=0,FREE_RUN_FREQ=0)) is 1ps/1ps.
+Ref Clk Freq: 0 	 User Clk Freq: 3 	 PCIE Link Speed: 3
+Timescale of (rp_pcie3_uscale_core_top(PL_LINK_CAP_MAX_LINK_SPEED=4,PL_LINK_CAP_MAX_LINK_WIDTH=8,PF0_ARI_CAP_NEXT_FUNC='b0,PF0_AER_CAP_NEXTPTR='b01100000000,PF0_ARI_CAP_NEXTPTR='b0,VF0_ARI_CAP_NEXTPTR='b0,VF1_ARI_CAP_NEXTPTR='b0,VF2_ARI_CAP_NEXTPTR='b0,VF3_ARI_CAP_NEXTPTR='b0,VF4_ARI_CAP_NEXTPTR='b0,VF5_ARI_CAP_NEXTPTR='b0,PF0_BAR0_APERTURE_SIZE='b0100,PF0_BAR0_CONTROL='b0100,PF0_BAR1_APERTURE_SIZE='b0,PF0_BAR1_CONTROL='b0,PF0_BAR2_APERTURE_SIZE='b0,PF0_BAR2_CONTROL='b0,PF0_BAR3_APERTURE_SIZE='b0,PF0_BAR3_CONTROL='b0,PF0_BAR4_APERTURE_SIZE='b0,PF0_BAR4_CONTROL='b0,PF0_BAR5_APERTURE_SIZE='b0,PF0_BAR5_CONTROL='b0,PF0_CAPABILITY_POINTER='b010000000,PF0_CLASS_CODE='b01011000000000000000,PF0_DEVICE_ID='b0111000000110001,PF0_DEV_CAP2_128B_CAS_ATOMIC_COMPLETER_SUPPORT="FALSE",PF0_DEV_CAP2_32B_ATOMIC_COMPLETER_SUPPORT="FALSE",PF0_DEV_CAP2_64B_ATOMIC_COMPLETER_SUPPORT="FALSE",PF0_DEV_CAP2_LTR_SUPPORT="FALSE",PF0_DEV_CAP2_OBFF_SUPPORT='b0,PF0_DEV_CAP_EXT_TAG_SUPPORTED="FALSE",PF0_DEV_CAP_FUNCTION_LEVEL_RESET_CAPABLE="FALSE",PF0_DEV_CAP_MAX_PAYLOAD_SIZE='b010,PF0_DPA_CAP_NEXTPTR='b01100000000,PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION0='b0,PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION1='b0,PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION2='b0,PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION3='b0,PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION4='b0,PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION5='b0,PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION6='b0,PF0_DPA_CAP_SUB_STATE_POWER_ALLOCATION7='b0,PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION0='b0,PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION1='b0,PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION2='b0,PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION3='b0,PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION4='b0,PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION5='b0,PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION6='b0,PF1_DPA_CAP_SUB_STATE_POWER_ALLOCATION7='b0,PF0_DSN_CAP_NEXTPTR='b01100000000,PF0_EXPANSION_ROM_APERTURE_SIZE='b0,PF0_INTERRUPT_PIN='b01,PF0_LINK_STATUS_SLOT_CLOCK_CONFIG="FALSE",PF0_LTR_CAP_NEXTPTR='b01100000000,PF0_MSIX_CAP_NEXTPTR='b0,PF0_MSIX_CAP_PBA_OFFSET='b0,PF0_MSIX_CAP_TABLE_OFFSET='b0,PF0_MSIX_CAP_TABLE_SIZE='b0,PF0_MSI_CAP_NEXTPTR='b011000000,PF0_PB_CAP_NEXTPTR='b01001110100,PF0_PM_CAP_NEXTPTR='b010010000,PF0_PM_CAP_PMESUPPORT_D0="FALSE",PF0_PM_CAP_PMESUPPORT_D1="FALSE",PF0_PM_CAP_PMESUPPORT_D3HOT="FALSE",PF0_PM_CAP_SUPP_D1_STATE="FALSE",PF0_RBAR_CAP_NEXTPTR='b01100000000,PF0_RBAR_CAP_SIZE0='b0,PF0_RBAR_CAP_SIZE1='b0,PF0_RBAR_CAP_SIZE2='b0,PF1_RBAR_CAP_SIZE0='b0,PF1_RBAR_CAP_SIZE1='b0,PF1_RBAR_CAP_SIZE2='b0,PF0_REVISION_ID='b0,PF0_SRIOV_BAR0_APERTURE_SIZE='b0,PF0_SRIOV_BAR0_CONTROL='b0,PF0_SRIOV_BAR1_APERTURE_SIZE='b0,PF0_SRIOV_BAR1_CONTROL='b0,PF0_SRIOV_BAR2_APERTURE_SIZE='b0,PF0_SRIOV_BAR2_CONTROL='b0,PF0_SRIOV_BAR3_APERTURE_SIZE='b0,PF0_SRIOV_BAR3_CONTROL='b0,PF0_SRIOV_BAR4_APERTURE_SIZE='b0,PF0_SRIOV_BAR4_CONTROL='b0,PF0_SRIOV_BAR5_APERTURE_SIZE='b0,PF0_SRIOV_BAR5_CONTROL='b0,PF0_SRIOV_CAP_INITIAL_VF='b0,PF0_SRIOV_CAP_NEXTPTR='b01100000000,PF0_SRIOV_CAP_TOTAL_VF='b0,PF0_SRIOV_CAP_VER='b0,PF0_SRIOV_FIRST_VF_OFFSET='b0,PF0_SRIOV_FUNC_DEP_LINK='b0,PF0_SRIOV_SUPPORTED_PAGE_SIZE='b010101010011,PF0_SRIOV_VF_DEVICE_ID='b0,PF0_SUBSYSTEM_ID='b0111,PF0_TPHR_CAP_NEXTPTR='b01100000000,VF0_TPHR_CAP_NEXTPTR='b0,VF1_TPHR_CAP_NEXTPTR='b0,VF2_TPHR_CAP_NEXTPTR='b0,VF3_TPHR_CAP_NEXTPTR='b0,VF4_TPHR_CAP_NEXTPTR='b0,VF5_TPHR_CAP_NEXTPTR='b0,PF0_TPHR_CAP_ST_MODE_SEL='b0,PF0_TPHR_CAP_ST_TABLE_LOC='b0,PF0_TPHR_CAP_ST_TABLE_SIZE='b0,PF0_TPHR_CAP_VER='b01,PF1_TPHR_CAP_ST_MODE_SEL='b0,PF1_TPHR_CAP_ST_TABLE_LOC='b0,PF1_TPHR_CAP_ST_TABLE_SIZE='b0,PF1_TPHR_CAP_VER='b01,VF0_TPHR_CAP_ST_MODE_SEL='b0,VF0_TPHR_CAP_ST_TABLE_LOC='b0,VF0_TPHR_CAP_ST_TABLE_SIZE='b0,VF0_TPHR_CAP_VER='b01,VF1_TPHR_CAP_ST_MODE_SEL='b0,VF1_TPHR_CAP_ST_TABLE_LOC='b0,VF1_TPHR_CAP_ST_TABLE_SIZE='b0,VF1_TPHR_CAP_VER='b01,VF2_TPHR_CAP_ST_MODE_SEL='b0,VF2_TPHR_CAP_ST_TABLE_LOC='b0,VF2_TPHR_CAP_ST_TABLE_SIZE='b0,VF2_TPHR_CAP_VER='b01,VF3_TPHR_CAP_ST_MODE_SEL='b0,VF3_TPHR_CAP_ST_TABLE_LOC='b0,VF3_TPHR_CAP_ST_TABLE_SIZE='b0,VF3_TPHR_CAP_VER='b01,VF4_TPHR_CAP_ST_MODE_SEL='b0,VF4_TPHR_CAP_ST_TABLE_LOC='b0,VF4_TPHR_CAP_ST_TABLE_SIZE='b0,VF4_TPHR_CAP_VER='b01,VF5_TPHR_CAP_ST_MODE_SEL='b0,VF5_TPHR_CAP_ST_TABLE_LOC='b0,VF5_TPHR_CAP_ST_TABLE_SIZE='b0,VF5_TPHR_CAP_VER='b01,PF0_SECONDARY_PCIE_CAP_NEXTPTR='b0,MCAP_CAP_NEXTPTR='b0,PF0_VC_CAP_NEXTPTR='b0,PF1_AER_CAP_NEXTPTR='b0,PF1_ARI_CAP_NEXTPTR='b0,PF1_BAR0_APERTURE_SIZE='b0,PF1_BAR0_CONTROL='b0,PF1_BAR1_APERTURE_SIZE='b0,PF1_BAR1_CONTROL='b0,PF1_BAR2_APERTURE_SIZE='b0,PF1_BAR2_CONTROL='b0,PF1_BAR3_APERTURE_SIZE='b0,PF1_BAR3_CONTROL='b0,PF1_BAR4_APERTURE_SIZE='b0,PF1_BAR4_CONTROL='b0,PF1_BAR5_APERTURE_SIZE='b0,PF1_BAR5_CONTROL='b0,PF1_CAPABILITY_POINTER='b010000000,PF1_CLASS_CODE='b01011000000000000000,PF1_DEVICE_ID='b0111000000010001,PF1_DEV_CAP_MAX_PAYLOAD_SIZE='b010,PF1_DPA_CAP_NEXTPTR='b0,PF1_DSN_CAP_NEXTPTR='b0,PF1_EXPANSION_ROM_APERTURE_SIZE='b0,PF1_INTERRUPT_PIN='b0,PF1_MSIX_CAP_NEXTPTR='b0,PF1_MSIX_CAP_PBA_OFFSET='b0,PF1_MSIX_CAP_TABLE_OFFSET='b0,PF1_MSIX_CAP_TABLE_SIZE='b0,PF1_MSI_CAP_NEXTPTR='b0,PF1_PB_CAP_NEXTPTR='b0,PF1_PM_CAP_NEXTPTR='b0,PF1_RBAR_CAP_NEXTPTR='b0,PF1_REVISION_ID='b0,PF1_SRIOV_BAR0_APERTURE_SIZE='b0,PF1_SRIOV_BAR0_CONTROL='b0,PF1_SRIOV_BAR1_APERTURE_SIZE='b0,PF1_SRIOV_BAR1_CONTROL='b0,PF1_SRIOV_BAR2_APERTURE_SIZE='b0,PF1_SRIOV_BAR2_CONTROL='b0,PF1_SRIOV_BAR3_APERTURE_SIZE='b0,PF1_SRIOV_BAR3_CONTROL='b0,PF1_SRIOV_BAR4_APERTURE_SIZE='b0,PF1_SRIOV_BAR4_CONTROL='b0,PF1_SRIOV_BAR5_APERTURE_SIZE='b0,PF1_SRIOV_BAR5_CONTROL='b0,PF1_SRIOV_CAP_INITIAL_VF='b0,PF1_SRIOV_CAP_NEXTPTR='b0,PF1_SRIOV_CAP_TOTAL_VF='b0,PF1_SRIOV_CAP_VER='b0,PF1_SRIOV_FIRST_VF_OFFSET='b0,PF1_SRIOV_FUNC_DEP_LINK='b01,PF1_SRIOV_SUPPORTED_PAGE_SIZE='b010101010011,PF1_SRIOV_VF_DEVICE_ID='b0,PF1_SUBSYSTEM_ID='b0111,PF1_TPHR_CAP_NEXTPTR='b0,PL_UPSTREAM_FACING="FALSE",TL_CREDITS_CD='b0,TL_CREDITS_CH='b0,TL_CREDITS_NPD='b0101000,TL_CREDITS_NPH='b0100000,TL_CREDITS_PD='b011001100,TL_CREDITS_PH='b0100000,TL_PF_ENABLE_REG="FALSE",VF0_CAPABILITY_POINTER='b010000000,VF0_MSIX_CAP_PBA_OFFSET='b0,VF0_MSIX_CAP_TABLE_OFFSET='b0,VF0_MSIX_CAP_TABLE_SIZE='b0,VF0_PM_CAP_NEXTPTR='b0,VF1_MSIX_CAP_PBA_OFFSET='b0,VF1_MSIX_CAP_TABLE_OFFSET='b0,VF1_MSIX_CAP_TABLE_SIZE='b0,VF1_PM_CAP_NEXTPTR='b0,VF2_MSIX_CAP_PBA_OFFSET='b0,VF2_MSIX_CAP_TABLE_OFFSET='b0,VF2_MSIX_CAP_TABLE_SIZE='b0,VF2_PM_CAP_NEXTPTR='b0,VF3_MSIX_CAP_PBA_OFFSET='b0,VF3_MSIX_CAP_TABLE_OFFSET='b0,VF3_MSIX_CAP_TABLE_SIZE='b0,VF3_PM_CAP_NEXTPTR='b0,VF4_MSIX_CAP_PBA_OFFSET='b0,VF4_MSIX_CAP_TABLE_OFFSET='b0,VF4_MSIX_CAP_TABLE_SIZE='b0,VF4_PM_CAP_NEXTPTR='b0,VF5_MSIX_CAP_PBA_OFFSET='b0,VF5_MSIX_CAP_TABLE_OFFSET='b0,VF5_MSIX_CAP_TABLE_SIZE='b0,VF5_PM_CAP_NEXTPTR='b0,COMPLETION_SPACE="8KB",PIPE_PIPELINE_STAGES=0,PL_DISABLE_EI_INFER_IN_L0="TRUE",PL_EQ_BYPASS_PHASE23="TRUE",PM_ASPML1_ENTRY_DELAY=20'b0,PM_L1_REENTRY_DELAY=32'b0,PM_PME_SERVICE_TIMEOUT_DELAY=20'b011000011010000000)) is 1ps/1ps.
+Ref Clk Freq: 0 	 User Clk Freq: 3 	 PCIE Link Speed: 3
+[                   0] RTDS_RESET: PCIe 系统复位已拉低
+Timescale of (board) is 1ps / 1ps.
+WARNING: 0ns : none of the conditions were true for unique case from File:c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/cc3e/hdl/xdma_v4_1_vl_rfs.sv:33974
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. board.EP.DUT.u_pcie_fdma_aurora_brg_adapter.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /board/EP/DUT/u_pcie_fdma_aurora_brg_adapter/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial294_74  Scope: board.EP.DUT.u_pcie_fdma_aurora_brg_adapter.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 488
+[             4995000] RTDS_RESET: PCIe 系统复位已释放
+[             5038000] RTDS_TIMEBASE_PASS: 10 个 250 MHz 周期=40000 ps
+[             5193600] RTDS_AURORA_BOUNDARY: LL 用户时钟域已就绪（轻量 BFM，无 GT 模型）
+[             9995000] RTDS_LTSSM_DIAG t=5us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=1 ep_tx_toggle=3
+[            14995000] RTDS_LTSSM_DIAG t=10us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            19995000] RTDS_LTSSM_DIAG t=15us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            24995000] RTDS_LTSSM_DIAG t=20us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            29995000] RTDS_LTSSM_DIAG t=25us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            34995000] RTDS_LTSSM_DIAG t=30us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            39995000] RTDS_LTSSM_DIAG t=35us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            44995000] RTDS_LTSSM_DIAG t=40us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            49995000] RTDS_LTSSM_DIAG t=45us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            54995000] RTDS_LTSSM_DIAG t=50us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            59995000] RTDS_LTSSM_DIAG t=55us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            64995000] RTDS_LTSSM_DIAG t=60us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            69995000] RTDS_LTSSM_DIAG t=65us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            74995000] RTDS_LTSSM_DIAG t=70us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            79995000] RTDS_LTSSM_DIAG t=75us rp_ltssm=000000 ep_ltssm=000000 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            84995000] RTDS_LTSSM_DIAG t=80us rp_ltssm=000000 ep_ltssm=000001 lnk_up=0 phy=00 width=0 speed=0 rp_tx_toggle=3 ep_tx_toggle=4
+[            89995000] RTDS_LTSSM_DIAG t=85us rp_ltssm=000010 ep_ltssm=000100 lnk_up=0 phy=01 width=8 speed=1 rp_tx_toggle=5685 ep_tx_toggle=17856
+[            94995000] RTDS_LTSSM_DIAG t=90us rp_ltssm=000010 ep_ltssm=000100 lnk_up=0 phy=01 width=8 speed=1 rp_tx_toggle=26365 ep_tx_toggle=35646
+[            99995000] RTDS_LTSSM_DIAG t=95us rp_ltssm=000010 ep_ltssm=000100 lnk_up=0 phy=01 width=8 speed=1 rp_tx_toggle=47169 ep_tx_toggle=53440
+[           104995000] RTDS_LTSSM_DIAG t=100us rp_ltssm=000010 ep_ltssm=000100 lnk_up=0 phy=01 width=8 speed=1 rp_tx_toggle=67873 ep_tx_toggle=71228
+[           109995000] RTDS_LTSSM_DIAG t=105us rp_ltssm=000010 ep_ltssm=000100 lnk_up=0 phy=01 width=8 speed=1 rp_tx_toggle=88685 ep_tx_toggle=89012
+[           114995000] RTDS_LTSSM_DIAG t=110us rp_ltssm=000010 ep_ltssm=000100 lnk_up=0 phy=01 width=8 speed=1 rp_tx_toggle=109393 ep_tx_toggle=106800
+[           119995000] RTDS_LTSSM_DIAG t=115us rp_ltssm=000010 ep_ltssm=000100 lnk_up=0 phy=01 width=8 speed=1 rp_tx_toggle=130181 ep_tx_toggle=124584
+[           124995000] RTDS_LTSSM_DIAG t=120us rp_ltssm=000010 ep_ltssm=000100 lnk_up=0 phy=01 width=8 speed=1 rp_tx_toggle=150881 ep_tx_toggle=142376
+[           129995000] RTDS_LTSSM_DIAG t=125us rp_ltssm=000010 ep_ltssm=000100 lnk_up=0 phy=01 width=8 speed=1 rp_tx_toggle=171661 ep_tx_toggle=160172
+[           134995000] RTDS_LTSSM_DIAG t=130us rp_ltssm=000010 ep_ltssm=000100 lnk_up=0 phy=01 width=8 speed=1 rp_tx_toggle=192369 ep_tx_toggle=177962
+[           139995000] RTDS_LTSSM_DIAG t=135us rp_ltssm=000111 ep_ltssm=001000 lnk_up=0 phy=01 width=8 speed=1 rp_tx_toggle=212609 ep_tx_toggle=196968
+[           142191629] : Transaction Reset Is De-asserted...
+[           142195529] : Writing Cfg Addr [0x00000001]
+[           142231529] : Reading Cfg Addr [0x00000032]
+[           142259529] : Writing Cfg Addr [0x00000032]
+[           144995000] RTDS_LTSSM_DIAG t=140us rp_ltssm=001101 ep_ltssm=001101 lnk_up=0 phy=10 width=2 speed=1 rp_tx_toggle=231557 ep_tx_toggle=215248
+[           149995000] RTDS_LTSSM_DIAG t=145us rp_ltssm=001100 ep_ltssm=001100 lnk_up=0 phy=10 width=2 speed=1 rp_tx_toggle=236715 ep_tx_toggle=219768
+[           154995000] RTDS_LTSSM_DIAG t=150us rp_ltssm=001100 ep_ltssm=001100 lnk_up=0 phy=10 width=2 speed=1 rp_tx_toggle=236715 ep_tx_toggle=219768
+[           159995000] RTDS_LTSSM_DIAG t=155us rp_ltssm=001100 ep_ltssm=001100 lnk_up=0 phy=10 width=2 speed=1 rp_tx_toggle=236715 ep_tx_toggle=219768
+[           164995000] RTDS_LTSSM_DIAG t=160us rp_ltssm=001100 ep_ltssm=001100 lnk_up=0 phy=10 width=2 speed=1 rp_tx_toggle=236715 ep_tx_toggle=219768
+[           169995000] RTDS_LTSSM_DIAG t=165us rp_ltssm=001100 ep_ltssm=001100 lnk_up=0 phy=10 width=2 speed=1 rp_tx_toggle=236715 ep_tx_toggle=219768
+[           174995000] RTDS_LTSSM_DIAG t=170us rp_ltssm=001100 ep_ltssm=001100 lnk_up=0 phy=10 width=2 speed=1 rp_tx_toggle=236715 ep_tx_toggle=219768
+[           179995000] RTDS_LTSSM_DIAG t=175us rp_ltssm=101001 ep_ltssm=001100 lnk_up=0 phy=10 width=2 speed=1 rp_tx_toggle=267946 ep_tx_toggle=219768
+[           184995000] RTDS_LTSSM_DIAG t=180us rp_ltssm=101001 ep_ltssm=001100 lnk_up=0 phy=10 width=2 speed=1 rp_tx_toggle=305882 ep_tx_toggle=219768
+[           189995000] RTDS_LTSSM_DIAG t=185us rp_ltssm=101001 ep_ltssm=101001 lnk_up=0 phy=10 width=2 speed=1 rp_tx_toggle=343721 ep_tx_toggle=232925
+[           192147504] : Transaction Link Is Up...
+[           192155504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           192623529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           194155504] :    Check Max Link Speed = 8.0GT/s - PASSED
+[           194155504] :    Check Negotiated Link Width = 2 - PASSED
+[           194163504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           194631529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           194995000] RTDS_LTSSM_DIAG t=190us rp_ltssm=010000 ep_ltssm=010000 lnk_up=1 phy=11 width=2 speed=4 rp_tx_toggle=383799 ep_tx_toggle=273252
+[           194995000] RTDS_LTSSM_UP: 链路训练完成
+[           196163504] :    Check Device/Vendor ID - PASSED
+[           196171504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           196639529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           198171504] :    Check CMPS ID - PASSED
+[           198171504] :    SYSTEM CHECK PASSED
+[           198171504] : Inspecting Core Configuration Space...
+[           198179504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           198587504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           198647529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           199055529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           200595504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           201003504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           201067529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           201471529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           203011504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           203419529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           203479529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           203887529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           205427529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           205835529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           205899529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           206303529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           207843529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           208251529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           208315529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           208715529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           210259529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           210667529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           210727529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           211135529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           212675529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           213083529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           213143529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           213551529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           215083529] PCI EXPRESS BAR MEMORY/IO MAPPING PROCESS BEGUN...
+	BAR 0: VALUE = 00000000 RANGE = fff00000 TYPE =  MEM32 MAPPED
+	BAR 1: VALUE = 00100000 RANGE = ffff0000 TYPE =  MEM32 MAPPED
+	BAR 2: VALUE = 00000000 RANGE = 00000000 TYPE =      DISABLED
+	BAR 3: VALUE = 00000000 RANGE = 00000000 TYPE =      DISABLED
+	BAR 4: VALUE = 00000000 RANGE = 00000000 TYPE =      DISABLED
+	BAR 5: VALUE = 00000000 RANGE = 00000000 TYPE =      DISABLED
+	EROM : VALUE = 00000000 RANGE = 00000000 TYPE =      DISABLED
+[           215083529] : Setting Core Configuration Space...
+[           215091529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           215499529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           215559529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           215907529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           215967529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           216315529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           216379529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           216723529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           216783529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           217131529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           217195529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           217539529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           217603529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           217947529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           218007529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           218355529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           218431504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           218823504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           222363529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           222975504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           224403529] : Data read 00002001 from Address 0x0000
+ XDMA BAR : BAR           0 is NOT XDMA BAR
+
+[           224411529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           225011504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           226451504] : Data read 1fc00006 from Address 0x0000
+ XDMA BAR found : BAR           1 is XDMA BAR
+
+[           226459504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           227059529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           228491504] : Data read 1fc00006 from Address 00000000
+*** Running XDMA AXI-MM test {dma_test0}......
+RTDS_TEST_SELECT_DEFAULT: dma_test0 -> rtds_minimum (isolated harness)
+[           228491504] RTDS_TEST_BEGIN: rtds_minimum
+[           228491504] RTDS_LINK_PASS: Gen3 x2 Device=8032 Vendor=10EE
+[           228491504] RTDS_BAR_MAP: user_bar=0 xdma_bar=1
+[           228499504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           228967504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           230507504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           230975504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           232515504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           232983504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           234523504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           234931504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           234991504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           235339504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           235403504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           235747504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           235807504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           236215504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           239747504] RTDS_MSI_CONFIG_PASS: cap=0x90 address=FEE00000 data=0045
+[           239747504] : Sending Data write task at address 00002004 with data 00000001
+[           239755504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           240155504] : Done register write!!
+[           240163504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           240763529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           242195504] : Data read 00000001 from Address 00002004
+[           242195504] RTDS_XDMA_USER_IRQ_ENABLE_PASS: mask=00000001 vector=0
+[           242203504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           242823504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           242867504] RTDS_BAR_READ: bar=0 offset=00000000 data=00002001 wait_cycles=156
+[           242875504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           243491529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           243535529] RTDS_BAR_READ: bar=0 offset=00000004 data=20260914 wait_cycles=155
+[           243543529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           244163504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           244207504] RTDS_BAR_READ: bar=0 offset=00000008 data=00040000 wait_cycles=156
+[           244215504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           244295529] RTDS_BAR_WRITE: bar=0 offset=00000024 data=00008000
+[           244303529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           244383529] RTDS_BAR_WRITE: bar=0 offset=00000028 data=00000010
+[           244391529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           245015504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           245059529] RTDS_BAR_READ: bar=0 offset=00000024 data=00008000 wait_cycles=157
+[           245067529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           245687504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           245731504] RTDS_BAR_READ: bar=0 offset=00000028 data=00000010 wait_cycles=156
+[           245731504] RTDS_STAGE_BEGIN: BASE_H2C card=00008000 bytes=16
+[           245739604] : Sending Data write task at address 00000004 with data 00000000
+[           245747504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           246147504] : Done register write!!
+[           246147504] : Sending Data write task at address 00004080 with data 00000100
+[           246155504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           246555504] : Done register write!!
+[           246555504] : Sending Data write task at address 00004084 with data 00000000
+[           246563504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           246963504] : Done register write!!
+[           246963504] : Sending Data write task at address 00000004 with data 00fffe7f
+[           246971504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           247371504] : Done register write!!
+[           247603529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+req_compl_wd = 1, cq_be = 15, lower_addr = 100, cq_data = 040
+ ***** TSK_TX_COMPLETION_DATA ****** addr =  256., byte_count =  32, len =    8, comp_status = 0
+
+length =    3 
+
+[           247615529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           247615529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           248287529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+req_compl_wd = 1, cq_be = 15, lower_addr = 400, cq_data = 100
+ ***** TSK_TX_COMPLETION_DATA ****** addr = 1024., byte_count =  16, len =    4, comp_status = 0
+
+[           248295529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           248771629] RTDS_H2C_AXI_PASS: bytes=16 bresp=1 wait_cycles=351
+[           248779529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           249383504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           250811529] : Data read 00000001 from Address 00000048
+[           250819504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           251423529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           252851504] : Data read 00000006 from Address 00000040
+[           252851504] RTDS_DMA_COMPLETE: count=1 status=00000006 reads=1
+[           252851504] : Sending Data write task at address 00000004 with data 00000000
+[           252859504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           253259504] : Done register write!!
+[           253259504] RTDS_STAGE_BEGIN: BASE_C2H card=00008000 bytes=16
+[           253279504] : Sending Data write task at address 00001004 with data 00000000
+[           253287504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           253687504] : Done register write!!
+[           253687504] : Sending Data write task at address 00005080 with data 00000300
+[           253695504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           254095504] : Done register write!!
+[           254095504] : Sending Data write task at address 00005084 with data 00000000
+[           254103504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           254503504] : Done register write!!
+[           254503504] : Sending Data write task at address 00001004 with data 00fffe7f
+[           254511504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           254911504] : Done register write!!
+[           255143529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+req_compl_wd = 1, cq_be = 15, lower_addr = 300, cq_data = 0c0
+ ***** TSK_TX_COMPLETION_DATA ****** addr =  768., byte_count =  32, len =    8, comp_status = 0
+
+length =    3 
+
+[           255155529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           255155529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           255667604] RTDS_C2H_AXI_PASS: bytes=16 bursts=1 wait_cycles=190
+[           256011529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           256143504] RTDS_C2H_HOST_DRAIN_PASS: wait_cycles=87 bytes=16 packets=1
+[           256151504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           256747529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           258183504] : Data read 00000001 from Address 00001048
+[           258191504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           258791529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           260223529] : Data read 00000006 from Address 00001040
+[           260223529] RTDS_DMA_COMPLETE: count=1 status=00000006 reads=1
+[           260223529] : Sending Data write task at address 00001004 with data 00000000
+[           260231529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           260631529] : Done register write!!
+[           260631529] RTDS_HOST_COMPARE_MATCH: 16 bytes
+[           260631529] RTDS_BASE_DMA_PASS: H2C+C2H 16 bytes
+[           260631529] RTDS_STAGE_BEGIN: CPU_TO_AURORA bytes=16
+[           260639529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           260719529] RTDS_BAR_WRITE: bar=0 offset=00000024 data=00008000
+[           260727529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           260807529] RTDS_BAR_WRITE: bar=0 offset=00000028 data=00000010
+[           260815529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           260895504] RTDS_BAR_WRITE: bar=0 offset=00000020 data=00000000
+[           260903504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           260983504] RTDS_BAR_WRITE: bar=0 offset=00000020 data=00000001
+[           260991504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           261071529] RTDS_BAR_WRITE: bar=0 offset=00000020 data=00000000
+[           261574000] RTDS_CPU_TO_AURORA_PASS: 16 bytes
+[           261579529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           262195504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           262239529] RTDS_BAR_READ: bar=0 offset=00000020 data=00000000 wait_cycles=155
+[           262239529] RTDS_STAGE_BEGIN: AURORA_TO_CPU_INJECT bytes=16
+[           262265600] RTDS_STAGE_END: AURORA_TO_CPU_INJECT beats=4
+[           262265600] RTDS_STAGE_BEGIN: WAIT_USER_IRQ max_cycles=50000
+[           305002000] RTDS_USER_IRQ_ASSERT_PASS: wait_cycles=10685
+[           305007504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           305295504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           305623504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           305667504] RTDS_BAR_READ: bar=0 offset=00000030 data=00000001 wait_cycles=155
+[           305675504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           306295529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           306339529] RTDS_BAR_READ: bar=0 offset=00000034 data=00000000 wait_cycles=156
+[           306347529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           306959504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           307003504] RTDS_BAR_READ: bar=0 offset=00000038 data=00000000 wait_cycles=154
+[           307011504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           307627504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           307671504] RTDS_BAR_READ: bar=0 offset=00000018 data=00100000 wait_cycles=155
+[           307679504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           308295529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           308339529] RTDS_BAR_READ: bar=0 offset=0000001c data=00000010 wait_cycles=155
+[           308347529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           308963504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           309007504] RTDS_BAR_READ: bar=0 offset=00000010 data=00000001 wait_cycles=155
+[           309007504] RTDS_STAGE_BEGIN: BASE_C2H card=00100000 bytes=16
+[           309027529] : Sending Data write task at address 00001004 with data 00000000
+[           309035529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           309435529] : Done register write!!
+[           309435529] : Sending Data write task at address 00005080 with data 00000300
+[           309443529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           309843529] : Done register write!!
+[           309843529] : Sending Data write task at address 00005084 with data 00000000
+[           309851529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           310251529] : Done register write!!
+[           310251529] : Sending Data write task at address 00001004 with data 00fffe7f
+[           310259529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           310659529] : Done register write!!
+[           310879504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+req_compl_wd = 1, cq_be = 15, lower_addr = 300, cq_data = 0c0
+ ***** TSK_TX_COMPLETION_DATA ****** addr =  768., byte_count =  32, len =    8, comp_status = 0
+
+length =    3 
+
+[           310891504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           310891504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           311403629] RTDS_C2H_AXI_PASS: bytes=16 bursts=1 wait_cycles=187
+[           311751504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           311883529] RTDS_C2H_HOST_DRAIN_PASS: wait_cycles=88 bytes=16 packets=1
+[           311891529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           312495504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           313923529] : Data read 00000001 from Address 00001048
+[           313931529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           314531504] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           315963529] : Data read 00000006 from Address 00001040
+[           315963529] RTDS_DMA_COMPLETE: count=1 status=00000006 reads=1
+[           315963529] : Sending Data write task at address 00001004 with data 00000000
+[           315971529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           316371529] : Done register write!!
+[           316371529] RTDS_HOST_COMPARE_MATCH: 16 bytes
+[           316379529] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           316459504] RTDS_BAR_WRITE: bar=0 offset=00000014 data=00000001
+[           316467504] : TSK_PARSE_FRAME on Transmit
+
+ frame_store_tx = 0x4a
+[           317091529] : TSK_PARSE_FRAME on Receive
+
+ frame_store_tx = 0x4a
+[           317135529] RTDS_BAR_READ: bar=0 offset=00000014 data=00000000 wait_cycles=157
+[           317262000] RTDS_AURORA_TO_CPU_PASS: 16 bytes irq_ack_seen=1
+RTDS_ROOTPORT_RESULT link=1 bar=1 msi=1 irq_route=1 base_dma=1 cpu_to_aurora=1 aurora_to_cpu=1 irq_ack=1 stalls=0 errors=0
+RTDS_ROOTPORT_PASS
+$finish called at time : 317362 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_rootport/tb/board.sv" Line 917
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:26:49 . Memory (MB): peak = 916.441 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Sep 23 10:25:17 2026...

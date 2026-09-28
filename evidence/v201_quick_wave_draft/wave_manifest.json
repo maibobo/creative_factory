@@ -1,0 +1,340 @@
+[
+  {
+    "figure": "01_1g_config_cdc.png",
+    "title": "1G首次合法配置译码与跨时钟锁存",
+    "case": "1g",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\1g\\1g_full.vcd",
+    "start_ps": 5146000,
+    "end_ps": 8146000,
+    "signals": [
+      "src_clk",
+      "user_clk",
+      "cfg_byte",
+      "cfg_byte_valid",
+      "decode_valid",
+      "cfg_req",
+      "cfg_ack",
+      "configured",
+      "configured_id",
+      "cfg_user"
+    ]
+  },
+  {
+    "figure": "02_1g_payload_period.png",
+    "title": "1G两拍6Byte载荷与63拍发送周期",
+    "case": "1g",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\1g\\1g_full.vcd",
+    "start_ps": 7844000,
+    "end_ps": 10644000,
+    "signals": [
+      "user_clk",
+      "period_tick",
+      "tx_valid",
+      "tx_ready",
+      "tx_sof",
+      "tx_eof",
+      "tx_rem",
+      "tx_data",
+      "completed_frames"
+    ]
+  },
+  {
+    "figure": "03_1g_backpressure_link.png",
+    "title": "1G反压保持、周期跳过与链路恢复",
+    "case": "1g",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\1g\\1g_full.vcd",
+    "start_ps": 15208000,
+    "end_ps": 25968000,
+    "signals": [
+      "user_clk",
+      "channel_up",
+      "tx_ready",
+      "tx_valid",
+      "tx_sof",
+      "tx_eof",
+      "tx_rem",
+      "tx_data",
+      "skipped_periods"
+    ]
+  },
+  {
+    "figure": "04_tx_single_frame.png",
+    "title": "16Byte下行单帧FDMA读取与10G两拍发送",
+    "case": "tx",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\tx\\tx_full.vcd",
+    "start_ps": 0,
+    "end_ps": 466000,
+    "signals": [
+      "fdma_clk",
+      "user_clk",
+      "limit",
+      "raddr",
+      "rareq",
+      "rvalid",
+      "rready",
+      "tx_data",
+      "sof",
+      "eof",
+      "valid",
+      "ready"
+    ]
+  },
+  {
+    "figure": "05_tx_batch_near_full.png",
+    "title": "300帧批量下行、FIFO阈值504与反压排空",
+    "case": "tx",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\tx\\tx_full.vcd",
+    "start_ps": 6222000,
+    "end_ps": 8222000,
+    "signals": [
+      "fdma_clk",
+      "user_clk",
+      "limit",
+      "fifo_wr_cnt",
+      "fifo_almost_full",
+      "fifo_overflow",
+      "fifo_underflow",
+      "valid",
+      "ready",
+      "tx_data",
+      "peak_words"
+    ]
+  },
+  {
+    "figure": "06_rx_fifo_cdc.png",
+    "title": "10G接收异步FIFO双时钟顺序传递",
+    "case": "rx_fifo",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\rx_fifo\\rx_fifo_full.vcd",
+    "start_ps": 0,
+    "end_ps": 514000,
+    "signals": [
+      "user_clk",
+      "mem_clk",
+      "rx_valid",
+      "rx_sof",
+      "rx_eof",
+      "rx_data",
+      "frame_valid",
+      "frame_ready",
+      "frame_data",
+      "received"
+    ]
+  },
+  {
+    "figure": "07_rx_fifo_full_drop.png",
+    "title": "接收FIFO满、按字丢弃及释放恢复",
+    "case": "rx_fifo",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\rx_fifo\\rx_fifo_full.vcd",
+    "start_ps": 414000,
+    "end_ps": 790000,
+    "signals": [
+      "user_clk",
+      "mem_clk",
+      "rx_valid",
+      "rx_ready",
+      "fifo_full",
+      "frame_valid",
+      "frame_ready",
+      "dropped_frames",
+      "length_error"
+    ]
+  },
+  {
+    "figure": "08_ring_pack_tail.png",
+    "title": "上行低32bit紧凑拼接与奇数尾拍",
+    "case": "ring",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\ring\\ring_full.vcd",
+    "start_ps": 1558000,
+    "end_ps": 1758000,
+    "signals": [
+      "clk",
+      "frame_data",
+      "frame_valid",
+      "frame_ready",
+      "half_valid",
+      "fdma_wdata",
+      "fdma_wstrb",
+      "fdma_wvalid",
+      "fdma_wdone"
+    ]
+  },
+  {
+    "figure": "09_ring_publish_ack.png",
+    "title": "100ms窗口封存、块发布与CPU确认",
+    "case": "ring",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\ring\\ring_full.vcd",
+    "start_ps": 718000,
+    "end_ps": 988000,
+    "signals": [
+      "clk",
+      "seal_pending",
+      "fdma_wdone",
+      "ready_blocks",
+      "irq",
+      "head_addr",
+      "head_len",
+      "head_seq",
+      "cpu_ack"
+    ]
+  },
+  {
+    "figure": "10_ring_three_wraps.png",
+    "title": "八块循环回绕与三轮地址复用",
+    "case": "ring",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\ring\\ring_full.vcd",
+    "start_ps": 8638000,
+    "end_ps": 19638000,
+    "signals": [
+      "clk",
+      "ready_blocks",
+      "head_addr",
+      "head_len",
+      "head_seq",
+      "publish_seq",
+      "cpu_ack"
+    ]
+  },
+  {
+    "figure": "11_ring_full_no_overwrite.png",
+    "title": "八块全满、不覆盖队头与丢字统计",
+    "case": "ring",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\ring\\ring_full.vcd",
+    "start_ps": 25282000,
+    "end_ps": 26382000,
+    "signals": [
+      "clk",
+      "frame_valid",
+      "frame_ready",
+      "ready_blocks",
+      "head_addr",
+      "head_len",
+      "head_seq",
+      "reject_word",
+      "dropped_frames",
+      "cpu_ack"
+    ]
+  },
+  {
+    "figure": "12_ring_error_recovery.png",
+    "title": "延迟写响应、错误写响应与恢复",
+    "case": "ring",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\ring\\ring_full.vcd",
+    "start_ps": 25938000,
+    "end_ps": 28902000,
+    "signals": [
+      "clk",
+      "inject_error",
+      "fdma_wareq",
+      "fdma_wvalid",
+      "fdma_wdone",
+      "fdma_werror",
+      "write_failure",
+      "ready_blocks",
+      "dropped_frames",
+      "head_seq"
+    ]
+  },
+  {
+    "figure": "13_axi_independent_high_addr.png",
+    "title": "CONV_DMA的AW/W独立握手与高地址访问",
+    "case": "axi",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\axi\\axi_full.vcd",
+    "start_ps": 0,
+    "end_ps": 2046000,
+    "signals": [
+      "M_AXI_ACLK",
+      "M_AXI_AWADDR",
+      "M_AXI_AWVALID",
+      "M_AXI_AWREADY",
+      "M_AXI_WDATA",
+      "M_AXI_WVALID",
+      "M_AXI_WREADY",
+      "M_AXI_BRESP",
+      "M_AXI_BVALID",
+      "fdma_wdone"
+    ]
+  },
+  {
+    "figure": "14_axi_4k_split.png",
+    "title": "跨4KiB突发拆分、读回与响应完成",
+    "case": "axi",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\axi\\axi_full.vcd",
+    "start_ps": 3026000,
+    "end_ps": 8226000,
+    "signals": [
+      "M_AXI_ACLK",
+      "fdma_waddr",
+      "fdma_wsize",
+      "M_AXI_AWADDR",
+      "M_AXI_AWLEN",
+      "M_AXI_AWVALID",
+      "M_AXI_WLAST",
+      "M_AXI_BVALID",
+      "M_AXI_ARADDR",
+      "M_AXI_RDATA",
+      "fdma_wdone"
+    ]
+  },
+  {
+    "figure": "15_axi_wstrb_tail.png",
+    "title": "WSTRB=0F贯穿FDMA、CONV_DMA与AXI RAM",
+    "case": "axi_tail",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\axi_tail\\axi_tail_full.vcd",
+    "start_ps": 0,
+    "end_ps": 326000,
+    "signals": [
+      "M_AXI_ACLK",
+      "fdma_wdata",
+      "fdma_wstrb",
+      "M_AXI_WDATA",
+      "M_AXI_WSTRB",
+      "M_AXI_WVALID",
+      "M_AXI_WREADY",
+      "M_AXI_BVALID",
+      "M_AXI_RDATA",
+      "fdma_wdone"
+    ]
+  },
+  {
+    "figure": "16_regs_doorbell.png",
+    "title": "V2.01下行门铃、重复提交与自动清零",
+    "case": "regs",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\regs\\regs_full.vcd",
+    "start_ps": 90000,
+    "end_ps": 350000,
+    "signals": [
+      "clk",
+      "awaddr",
+      "wdata",
+      "wstrb",
+      "awvalid",
+      "wvalid",
+      "start",
+      "command_addr",
+      "command_len",
+      "done",
+      "starts"
+    ]
+  },
+  {
+    "figure": "17_regs_ack_status.png",
+    "title": "上行确认脉冲、WSTRB过滤与状态寄存器",
+    "case": "regs",
+    "vcd": "evidence\\v201_quick_wave_draft\\raw\\regs\\regs_full.vcd",
+    "start_ps": 258000,
+    "end_ps": 422000,
+    "signals": [
+      "clk",
+      "awaddr",
+      "wdata",
+      "wstrb",
+      "ack",
+      "acks",
+      "araddr",
+      "rdata",
+      "RX_READY_BLOCKS",
+      "RX_HEAD_SEQ",
+      "RX_DROPPED_FRAMES"
+    ]
+  }
+]

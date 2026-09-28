@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Sep 25 18:07:32 2026
+# Process ID: 1868
+# Current directory: E:/PCIE-CPU
+# Command line: vivado.exe -mode gui -source F:\RTDS_test_DDR4_64bit_batch_dev\scripts\probe_local_wave_gui.tcl -log F:\RTDS_test_DDR4_64bit_batch_dev\logs\local_wave_gui.log -journal F:\RTDS_test_DDR4_64bit_batch_dev\logs\local_wave_gui.jou
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/logs/local_wave_gui.log
+# Journal file: F:\RTDS_test_DDR4_64bit_batch_dev\logs\local_wave_gui.jou
+#-----------------------------------------------------------
+start_gui
+source {F:\RTDS_test_DDR4_64bit_batch_dev\scripts\probe_local_wave_gui.tcl}
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# puts "GUI_OPEN_COMMANDS=[info commands *open*]"
+GUI_OPEN_COMMANDS=open_hw_platform open_placer_checkpoint open_project open_report open_netlist_design open_rtl_design open_impl_design open_dsa open_hw open open_io_design open_example_project open_checkpoint open_run
+# puts "GUI_VIEW_COMMANDS=[info commands *view*]"
+GUI_VIEW_COMMANDS=
+# puts "GUI_RDI_OPEN_COMMANDS=[info commands ::rdi::*open*]"
+GUI_RDI_OPEN_COMMANDS=::rdi::open_ppr_or_dcp
+# set argv {tx}
+# source [file join $root scripts open_local_wave_session.tcl]
+## set root [file normalize [file join [file dirname [info script]] ..]]
+## set selected [lindex $argv 0]
+## if {$selected ni {1g tx rx_fifo ring axi axi_tail regs}} {error "Select 1g, tx, rx_fifo, ring, axi, axi_tail or regs"}
+## set folder [file join $root evidence local_wave_sessions $selected]
+## open_project -read_only [file join $folder project wave_${selected}.xpr]
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/tx/project/wave_tx.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx_2020_2/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1000.395 ; gain = 0.000
+## open_wave_database [file join $folder ${selected}.wdb]
+## open_wave_config [file join $folder ${selected}.wcfg]
+## if {[llength [get_objects -r /tb_rtds_${selected}/*]] == 0} {error "Wave database has no testbench objects"}
+## if {[lindex $argv 1] ne "verify"} {
+##     open_files [file join $root regression batch_1g tb_rtds_${selected}.sv]
+##     open_files [file join $root regression batch_1g rtds_${selected}_test_if.sv]
+##     switch $selected {
+##         1g {set dut [file join $root rtl rtds_1g_periodic_tx.v]}
+##         tx {set dut [file join $root {external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v}]}
+##         rx_fifo {set dut [file join $root rtl rtds_rx_frame_fifo.v]}
+##         ring {set dut [file join $root rtl rtds_rx_block_writer.v]}
+##         regs {set dut [file join $root RTDS_test_DDR4_64bit.srcs sources_1 new INFO_EXCH.v]}
+##         default {set dut [file join $root RTDS_test_DDR4_64bit.srcs sources_1 new CONV_DMA.v]}
+##     }
+##     open_files $dut
+##     catch {show_objects [get_scopes /tb_rtds_${selected}/U_DUT]}
+## }
+invalid command name "open_files"
+    while executing
+"open_files [file join $root regression batch_1g tb_rtds_${selected}.sv]"
+    invoked from within
+"if {[lindex $argv 1] ne "verify"} {
+    open_files [file join $root regression batch_1g tb_rtds_${selected}.sv]
+    open_files [file join $root regres..."
+    (file "F:/RTDS_test_DDR4_64bit_batch_dev/scripts/open_local_wave_session.tcl" line 9)
+
+    while executing
+"source [file join $root scripts open_local_wave_session.tcl]"
+    (file "F:\RTDS_test_DDR4_64bit_batch_dev\scripts\probe_local_wave_gui.tcl" line 6)
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+save_project_as project_1 F:/RTDS_test_DDR4_64bit_batch_dev/project_1 -force
+save_project_as: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1000.395 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 18:22:52 2026...

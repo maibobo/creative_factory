@@ -1,0 +1,9 @@
+ARTIFACT_PASS 1g displayed_rows=263
+ARTIFACT_PASS tx displayed_rows=889
+ARTIFACT_PASS rx_fifo displayed_rows=858
+ARTIFACT_PASS ring displayed_rows=206
+ARTIFACT_PASS axi displayed_rows=394
+ARTIFACT_PASS axi_tail displayed_rows=394
+ARTIFACT_PASS regs displayed_rows=213
+POWERSHELL_VERSION=5.1.19041.5737
+LOCAL_ARTIFACT_ALL_PASS

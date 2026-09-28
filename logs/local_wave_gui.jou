@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Sep 25 18:07:32 2026
+# Process ID: 1868
+# Current directory: E:/PCIE-CPU
+# Command line: vivado.exe -mode gui -source F:\RTDS_test_DDR4_64bit_batch_dev\scripts\probe_local_wave_gui.tcl -log F:\RTDS_test_DDR4_64bit_batch_dev\logs\local_wave_gui.log -journal F:\RTDS_test_DDR4_64bit_batch_dev\logs\local_wave_gui.jou
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/logs/local_wave_gui.log
+# Journal file: F:\RTDS_test_DDR4_64bit_batch_dev\logs\local_wave_gui.jou
+#-----------------------------------------------------------
+start_gui
+source {F:\RTDS_test_DDR4_64bit_batch_dev\scripts\probe_local_wave_gui.tcl}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+save_project_as project_1 F:/RTDS_test_DDR4_64bit_batch_dev/project_1 -force
+close_sim

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 21 19:37:56 2026
+# Process ID: 13536
+# Current directory: F:/RTDS_test_DDR4_64bit_batch_dev/regression/board_cdc_smoke_20260921
+# Command line: vivado.exe -mode batch -source run.tcl -log smoke.log -journal smoke.jou
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/regression/board_cdc_smoke_20260921/smoke.log
+# Journal file: F:/RTDS_test_DDR4_64bit_batch_dev/regression/board_cdc_smoke_20260921\smoke.jou
+#-----------------------------------------------------------
+source run.tcl
+source tb_board_cdc_smoke.tcl

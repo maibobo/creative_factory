@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../../rtl/rtds_rx_block_writer.v" \
+
+sv xil_defaultlib  \
+"../../../../../../../../regression/batch_1g/rtds_ring_test_if.sv" \
+"../../../../../../../../regression/batch_1g/tb_rtds_ring.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

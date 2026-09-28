@@ -1,0 +1,104 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 14 14:07:21 2026
+# Process ID: 25828
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/axi
+# Command line: vivado.exe -mode batch -source C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/run_modules.tcl -tclargs axi
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/axi/vivado.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/axi\vivado.jou
+#-----------------------------------------------------------
+source {C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/run_modules.tcl}
+# set root [file normalize [file join [file dirname [info script]] ../..]]
+# set selected [lindex $argv 0]
+# if {$selected ni {1g ring axi rx_fifo}} {error "expected 1g/ring/axi"}
+# create_project -force module_test ./project -part xcku040-ffva1156-2-e
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/axi/project'
+# set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
+# add_files [glob $root/rtl/rtds_*.v]
+# if {$selected eq "axi"} {
+#  add_files [file join $root RTDS_test_DDR4_64bit.srcs sources_1 new CONV_DMA.v]
+#  add_files [file join $root rtl ddr4 rtds_axi_ram_model.sv]
+# }
+# add_files -fileset sim_1 [file join $root regression batch_1g rtds_${selected}_test_if.sv]
+# add_files -fileset sim_1 [file join $root regression batch_1g tb_rtds_${selected}.sv]
+# set_property top tb_rtds_${selected} [get_filesets sim_1]
+# set_property xsim.simulate.runtime all [get_filesets sim_1]
+# launch_simulation -mode behavioral
+Command: launch_simulation -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/axi/project/module_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/axi/project/module_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_rtds_axi' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/axi/project/module_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_rtds_axi_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CONV_DMA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/ddr4/rtds_axi_ram_model.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_axi_ram_model
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_axi_test_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_rtds_axi
+INFO: [VRFC 10-2458] undeclared symbol M_AXI_ACLK, assumed default net type wire [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv:5]
+WARNING: [VRFC 10-2938] 'M_AXI_ACLK' is already implicitly declared on line 5 [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv:7]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/axi/project/module_test.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/axi/project/module_test.sim/sim_1/behav/xsim'
+"xelab -wto 2e45342f3e3746da811782655da792af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_axi_behav xil_defaultlib.tb_rtds_axi xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 2e45342f3e3746da811782655da792af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rtds_axi_behav xil_defaultlib.tb_rtds_axi xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+WARNING: [XSIM 43-4127] File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv" Line 157 : The "System Verilog Cover" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv" Line 161 : The "System Verilog Cover" is not supported yet for simulation. The statement will be ignored.
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.driver_cb
+Compiling module xil_defaultlib.rtds_axi_test_if
+Compiling module xil_defaultlib.CONV_DMA_default
+Compiling module xil_defaultlib.rtds_axi_ram_model(ADDR_WIDTH=64...
+Compiling module xil_defaultlib.tb_rtds_axi
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_rtds_axi_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/axi/project/module_test.sim/sim_1/behav/xsim/xsim.dir/tb_rtds_axi_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 14 14:07:36 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1108.516 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/axi/project/module_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_rtds_axi_behav -key {Behavioral:sim_1:Functional:tb_rtds_axi} -tclbatch {tb_rtds_axi.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_rtds_axi.tcl
+## current_wave_config
+Fatal: AXI/GLOBAL_TIMEOUT
+Time: 2 ms  Iteration: 0  Process: /tb_rtds_axi/Initial178_67  Scope: tb_rtds_axi.watchdog  File: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv Line: 180
+$finish called at time : 2 ms : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv" Line 180
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_rtds_axi_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for all
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 1108.516 ; gain = 0.000
+# close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1108.516 ; gain = 0.000
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 14 14:07:43 2026...

@@ -1,0 +1,1 @@
+vopt +acc=npr -l elaborate.log -L xilinx_vip -L xpm -L gtwizard_ultrascale_v1_7_9 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.aurora_8b10b_1p25g xil_defaultlib.glbl -o aurora_8b10b_1p25g_opt

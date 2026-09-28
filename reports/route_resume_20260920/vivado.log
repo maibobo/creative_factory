@@ -1,0 +1,169 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Sep 20 21:16:42 2026
+# Process ID: 10836
+# Current directory: F:/RTDS_test_DDR4_64bit_batch_dev
+# Command line: vivado.exe -mode batch -source F:\RTDS_test_DDR4_64bit_batch_dev\scripts\resume_route_from_physopt_20260920.tcl -log F:\RTDS_test_DDR4_64bit_batch_dev\reports\route_resume_20260920\vivado.log -journal F:\RTDS_test_DDR4_64bit_batch_dev\reports\route_resume_20260920\vivado.jou
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/reports/route_resume_20260920/vivado.log
+# Journal file: F:\RTDS_test_DDR4_64bit_batch_dev\reports\route_resume_20260920\vivado.jou
+#-----------------------------------------------------------
+source {F:\RTDS_test_DDR4_64bit_batch_dev\scripts\resume_route_from_physopt_20260920.tcl}
+# set script_dir [file dirname [file normalize [info script]]]
+# set root [file normalize [file join $script_dir ..]]
+# set run_dir [file join $root RTDS_test_DDR4_64bit.runs impl_1]
+# set input_dcp [file join $run_dir TOP_physopt.dcp]
+# set report_dir [file join $root reports route_resume_20260920]
+# file mkdir $report_dir
+# if {![file exists $input_dcp]} {
+#     error "RTDS_PHYSOPT_DCP_MISSING: $input_dcp"
+# }
+# set_param general.maxThreads 1
+# open_checkpoint $input_dcp
+Command: open_checkpoint F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/impl_1/TOP_physopt.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.175 . Memory (MB): peak = 923.934 ; gain = 0.000
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+Netlist sorting complete. Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1180.504 ; gain = 4.707
+INFO: [Netlist 29-17] Analyzing 2025 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 3 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1881.617 ; gain = 79.008
+Restored from archive | CPU: 13.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1881.617 ; gain = 79.008
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx_2020_2/Vivado/2020.2/data/ip'.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 2024.598 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 902 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 244 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT(x2)): 8 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 72 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 31 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 1 instance 
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 20 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 204 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 257 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 10 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+  SRLC32E => SRL16E: 41 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2020.2 (64-bit) build 3064766
+open_checkpoint: Time (s): cpu = 00:01:33 ; elapsed = 00:02:21 . Memory (MB): peak = 2028.602 ; gain = 1104.668
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku040'
+Running DRC as a precondition to command route_design
+INFO: [DRC PORTPROP-10] Incorrect IOStandard on MCAP reset: The PCI Express reset pin pcie_rst_n is driven by an IOB with a 1.8V IO standard.  This is incompatible with the 3.3V signal that is generated by the reset pin of the PCI Express edge connector.  If this pin cannot be driven at 3.3V, your  design will require an external level shifter to convert the incoming 3.3V reset signal from the edge connector to the 1.8V at the FPGA pin.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Advisories
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+Checksum: PlaceDB: 97196ae4 ConstDB: 0 ShapeSum: d01669e1 RouteDB: 90af6fe5
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: fdb54df1
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:02:47 . Memory (MB): peak = 3290.691 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 2499142 NumContArr: e7bd63f7 Constraints: 680cfe08 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 15213f341
+
+Time (s): cpu = 00:02:10 ; elapsed = 00:03:04 . Memory (MB): peak = 3290.691 ; gain = 0.000
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 15213f341
+
+Time (s): cpu = 00:02:10 ; elapsed = 00:03:13 . Memory (MB): peak = 3290.691 ; gain = 0.000
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 15213f341
+
+Time (s): cpu = 00:02:11 ; elapsed = 00:03:14 . Memory (MB): peak = 3290.691 ; gain = 0.000
+
+Phase 2.4 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.4 Global Clock Net Routing | Checksum: 109c23b68
+
+Time (s): cpu = 00:02:19 ; elapsed = 00:03:51 . Memory (MB): peak = 3290.691 ; gain = 0.000
+
+Phase 2.5 Update Timing
+Phase 2.5 Update Timing | Checksum: 2b994b0ef
+
+Time (s): cpu = 00:03:17 ; elapsed = 00:05:13 . Memory (MB): peak = 3290.691 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.705 | TNS=-5.335 | WHS=-0.317 | THS=-12.332|
+
+
+Phase 2.6 Update Timing for Bus Skew
+
+Phase 2.6.1 Update Timing
+Phase 2.6.1 Update Timing | Checksum: 1f5caaf0c
+
+Time (s): cpu = 00:04:37 ; elapsed = 00:06:52 . Memory (MB): peak = 3290.691 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.705 | TNS=-6.558 | WHS=N/A    | THS=N/A    |
+
+WARNING: [Route 35-462] Failed to populate 4 paths in bus skew group (internal name : grp_29). These paths are:
+	U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_hsdata_ff_reg[10]/D
+	U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_hsdata_ff_reg[6]/D
+	U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_hsdata_ff_reg[9]/D
+	U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_hsdata_ff_reg[8]/D
+
+Phase 2.6 Update Timing for Bus Skew | Checksum: 24eaeb9a1
+
+Time (s): cpu = 00:04:38 ; elapsed = 00:06:56 . Memory (MB): peak = 3290.691 ; gain = 0.000
+Phase 2 Router Initialization | Checksum: 24611318a
+
+Time (s): cpu = 00:04:38 ; elapsed = 00:06:57 . Memory (MB): peak = 3290.691 ; gain = 0.000
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.000759779 %
+  Global Horizontal Routing Utilization  = 0.000611307 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 87161
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 76819
+  Number of Partially Routed Nets     = 10342
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 24611318a
+
+Time (s): cpu = 00:04:43 ; elapsed = 00:07:03 . Memory (MB): peak = 3290.691 ; gain = 0.000
+Phase 3 Initial Routing | Checksum: 277ba46b3
+
+Time (s): cpu = 00:06:18 ; elapsed = 00:08:53 . Memory (MB): peak = 3290.691 ; gain = 0.000
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+INFO: [Route 35-443] CLB routing congestion detected. Several CLBs have high routing utilization, which can impact timing closure. Congested CLBs and Nets are dumped in: iter_4_CongestedCLBsAndNets.txt
+ Number of Nodes with overlaps = 13380
+ Number of Nodes with overlaps = 819
+ Number of Nodes with overlaps = 65

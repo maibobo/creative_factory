@@ -1,0 +1,80 @@
+[
+  {
+    "path": "rtl/rtds_1g_periodic_tx.v",
+    "local_sha256": "e46cf65859fe152abd20a0d8bbda3fe945a2b3d1148d7490e94c08d78504ecf0",
+    "remote_sha256": "e46cf65859fe152abd20a0d8bbda3fe945a2b3d1148d7490e94c08d78504ecf0",
+    "equal": true
+  },
+  {
+    "path": "rtl/rtds_fpga_1g_init.v",
+    "local_sha256": "7759c575bc205cf0855ec5402e4a3c57ca99612559d5ccaec7135c46bcb3615e",
+    "remote_sha256": "7759c575bc205cf0855ec5402e4a3c57ca99612559d5ccaec7135c46bcb3615e",
+    "equal": true
+  },
+  {
+    "path": "rtl/rtds_fpga_bit_cdc.v",
+    "local_sha256": "ce4cc11d09ff031e37ba62899d4f42a9fc37e725e519a146bb1ef9686848b149",
+    "remote_sha256": "ce4cc11d09ff031e37ba62899d4f42a9fc37e725e519a146bb1ef9686848b149",
+    "equal": true
+  },
+  {
+    "path": "rtl/rtds_fpga_cfg_cdc.v",
+    "local_sha256": "7df0397ca62ea00cd1fe23e7f59097e998f2f938dded354ee79221d9204cc259",
+    "remote_sha256": "7df0397ca62ea00cd1fe23e7f59097e998f2f938dded354ee79221d9204cc259",
+    "equal": true
+  },
+  {
+    "path": "rtl/rtds_fpga_count_cdc.v",
+    "local_sha256": "9d22cf6a0df3bd021062adf149cddfa2b715d276bcaca5aa9960098bbffebb05",
+    "remote_sha256": "9d22cf6a0df3bd021062adf149cddfa2b715d276bcaca5aa9960098bbffebb05",
+    "equal": true
+  },
+  {
+    "path": "rtl/rtds_fpga_reset_sync.v",
+    "local_sha256": "d9cc4d993b76e9b52519c7fb74571a351022e06bda0a7da1056f5f9f5d5b0ce4",
+    "remote_sha256": "d9cc4d993b76e9b52519c7fb74571a351022e06bda0a7da1056f5f9f5d5b0ce4",
+    "equal": true
+  },
+  {
+    "path": "rtl/rtds_rx_block_writer.v",
+    "local_sha256": "2603933c0e6e637d77416413bffe1e41ab47a0bef19fd246949900c0817a6889",
+    "remote_sha256": "2603933c0e6e637d77416413bffe1e41ab47a0bef19fd246949900c0817a6889",
+    "equal": true
+  },
+  {
+    "path": "rtl/rtds_rx_frame_fifo.v",
+    "local_sha256": "b2b1d44f7ac118e8bbe8b05a2b321ba7a5a6474a510de61e6dba450a352b81d5",
+    "remote_sha256": "b2b1d44f7ac118e8bbe8b05a2b321ba7a5a6474a510de61e6dba450a352b81d5",
+    "equal": true
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/TOP.v",
+    "local_sha256": "d1233d75e4bc8b3d92af90ee115b2c741d2443c98825fb1abc3c4b66968e8603",
+    "remote_sha256": "d1233d75e4bc8b3d92af90ee115b2c741d2443c98825fb1abc3c4b66968e8603",
+    "equal": true
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v",
+    "local_sha256": "62e613ff365f438e0c4ac18560f3c519255f4373f9b77cf6ed1abd052a723efa",
+    "remote_sha256": "62e613ff365f438e0c4ac18560f3c519255f4373f9b77cf6ed1abd052a723efa",
+    "equal": true
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v",
+    "local_sha256": "cf5b964615d63f96e07d21e0417f45ae8eda7a4c63f03c648dc91b0a415d8463",
+    "remote_sha256": "cf5b964615d63f96e07d21e0417f45ae8eda7a4c63f03c648dc91b0a415d8463",
+    "equal": true
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v",
+    "local_sha256": "fbf997e80d55872495f7f02cdf663d9eae8e1b5680aeae49331ede901a468ddd",
+    "remote_sha256": "fbf997e80d55872495f7f02cdf663d9eae8e1b5680aeae49331ede901a468ddd",
+    "equal": true
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v",
+    "local_sha256": "98fcc353043a0cd41c2235d2eb188d48420c6f006cf9a80f7dd5018e1892ec80",
+    "remote_sha256": "98fcc353043a0cd41c2235d2eb188d48420c6f006cf9a80f7dd5018e1892ec80",
+    "equal": true
+  }
+]

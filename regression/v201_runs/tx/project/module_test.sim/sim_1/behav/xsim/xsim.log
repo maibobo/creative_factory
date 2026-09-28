@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Sep 20 15:15:17 2026
+# Process ID: 29516
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/tx/project/module_test.sim/sim_1/behav/xsim
+# Command line: xsim.exe -source {xsim.dir/tb_rtds_tx_behav/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/tx/project/module_test.sim/sim_1/behav/xsim/xsim.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/tx/project/module_test.sim/sim_1/behav/xsim\xsim.jou
+#-----------------------------------------------------------
+start_gui
+source xsim.dir/tb_rtds_tx_behav/xsim_script.tcl
+# set_param project.enableReportConfiguration 0
+# load_feature core
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+# xsim {tb_rtds_tx_behav} -wdb {C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\regression\v201_runs\tx\project\module_test.sim\sim_1\behav\xsim\tb_rtds_tx_behINFO: [Common 17-206] Exiting xsim at Mon Sep 21 08:45:35 2026...
+t_DDR4_64bit_batch_dev/regression/batch_1g/full_wave_gui.tcl}
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/full_wave_gui.tcl
+## if {![info exists ::env(RTDS_WAVE_TOP)]} {
+##     error "缺少�?境变量RTDS_WAVE_TOP"
+## }
+## set top_scope /$::env(RTDS_WAVE_TOP)
+## if {[string length [current_wave_config]] == 0} {
+##     create_wave_config
+## }
+## log_wave -r ${top_scope}/*
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## add_wave -r ${top_scope}/*
+WARNING: Simulation object /tb_rtds_tx/payload/payload was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/payload/word_index was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/produce/Block64_191/Block70_192/beat was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/produce/Block64_191/frame_id was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/produce/frames was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/consume/Block85_193/cycle was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/consume/frames was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/consume/hold_cycles was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/run_case/frames was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+WARNING: Simulation object /tb_rtds_tx/run_case/hold_cycles was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+## run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_rtds_tx.U_DUT.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_rtds_tx/U_DUT/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial294_87  Scope: tb_rtds_tx.U_DUT.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 488
+TX CASE PASS frames=1 peak=2
+TX CASE PASS frames=300 peak=504
+TEST PASS tb_rtds_tx single/batch/near_full/backpressure
+$finish called at time : 28905600 ps : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_tx.sv" Line 123
+## puts "RTDS_FULL_WAVE_READY=$top_scope"
+RTDS_FULL_WAVE_READY=/tb_rtds_tx
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1233.996 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Sep 22 10:00:32 2026...

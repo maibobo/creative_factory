@@ -1,0 +1,53 @@
+{
+  "log": "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\simulate_diag_prefixtpi_2026-07-16.log",
+  "scanned_logs": [
+    "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\simulate_diag_prefixtpi_2026-07-16.log",
+    "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\audit_and_prepare.log",
+    "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\prepare_rootport_sim.log",
+    "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\xvlog.log",
+    "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\xvhdl.log",
+    "E:\\PCIE-CPU\\RTDS_test-1ch\\regression\\sim_xdma_rootport\\logs\\xelab.log"
+  ],
+  "passed": false,
+  "milestones": {
+    "link": false,
+    "bar": true,
+    "msi_config": true,
+    "user_irq_enable": true,
+    "base_dma": false,
+    "cpu_to_aurora": false,
+    "aurora_to_cpu": false,
+    "result_zero": false,
+    "pass_marker": false
+  },
+  "warning_count": 17,
+  "warnings_by_phase": [
+    {
+      "phase": "audit_and_prepare.log",
+      "count": 2
+    },
+    {
+      "phase": "simulate_diag_prefixtpi_2026-07-16.log",
+      "count": 6
+    },
+    {
+      "phase": "xvlog.log",
+      "count": 9
+    }
+  ],
+  "unexpected_warnings": [
+    "[simulate_diag_prefixtpi_2026-07-16.log] WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.",
+    "[simulate_diag_prefixtpi_2026-07-16.log] WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.",
+    "[simulate_diag_prefixtpi_2026-07-16.log] WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.",
+    "[simulate_diag_prefixtpi_2026-07-16.log] WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.",
+    "[simulate_diag_prefixtpi_2026-07-16.log] WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information."
+  ],
+  "fatal_lines": [
+    "Error: RTDS_LINK: up=1 width=2 speed=4",
+    "Error: RTDS_INFO_VERSION=00000000",
+    "Error: RTDS_INFO_PROG_TIME=00000000",
+    "Error: RTDS_INFO_BUFFER=00000000",
+    "Error: RTDS_INFO_ADDR_RB=00000000",
+    "Error: RTDS_INFO_LEN_RB=00000000"
+  ]
+}

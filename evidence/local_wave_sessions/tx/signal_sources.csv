@@ -1,0 +1,100 @@
+﻿signal,source,first_code_occurrence_line,lookup_name
+/tb_rtds_tx/fdma_clk,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\tb_rtds_tx.sv,4,fdma_clk
+/tb_rtds_tx/user_clk,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\tb_rtds_tx.sv,4,user_clk
+/tb_rtds_tx/received,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\tb_rtds_tx.sv,11,received
+/tb_rtds_tx/peak_words,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\tb_rtds_tx.sv,11,peak_words
+/tb_rtds_tx/monitor_enable,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\tb_rtds_tx.sv,12,monitor_enable
+/tb_rtds_tx/held_payload,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\tb_rtds_tx.sv,13,held_payload
+/tb_rtds_tx/was_stalled,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\tb_rtds_tx.sv,14,was_stalled
+/tb_rtds_tx/bus/fdma_clk,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,3,fdma_clk
+/tb_rtds_tx/bus/user_clk,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,3,user_clk
+/tb_rtds_tx/bus/rst_n,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,4,rst_n
+/tb_rtds_tx/bus/channel_up,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,5,channel_up
+/tb_rtds_tx/bus/limit,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,6,limit
+/tb_rtds_tx/bus/raddr,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,7,raddr
+/tb_rtds_tx/bus/rareq,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,8,rareq
+/tb_rtds_tx/bus/rready,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,8,rready
+/tb_rtds_tx/bus/rbusy,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,9,rbusy
+/tb_rtds_tx/bus/rvalid,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,9,rvalid
+/tb_rtds_tx/bus/rdata,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,10,rdata
+/tb_rtds_tx/bus/tx_data,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,11,tx_data
+/tb_rtds_tx/bus/sof,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,12,sof
+/tb_rtds_tx/bus/eof,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,12,eof
+/tb_rtds_tx/bus/valid,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,12,valid
+/tb_rtds_tx/bus/done,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,12,done
+/tb_rtds_tx/bus/rem,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,13,rem
+/tb_rtds_tx/bus/ready,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,14,ready
+/tb_rtds_tx/bus/dbg_fdma,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,15,dbg_fdma
+/tb_rtds_tx/bus/dbg_user,F:\RTDS_test_DDR4_64bit_batch_dev\regression\batch_1g\rtds_tx_test_if.sv,16,dbg_user
+/tb_rtds_tx/U_DUT/fdma_clk,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,33,fdma_clk
+/tb_rtds_tx/U_DUT/fdma_rstn,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,34,fdma_rstn
+/tb_rtds_tx/U_DUT/user_clk,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,35,user_clk
+/tb_rtds_tx/U_DUT/user_rstn,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,36,user_rstn
+/tb_rtds_tx/U_DUT/channel_up,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,39,channel_up
+/tb_rtds_tx/U_DUT/channel_up_fdma,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,40,channel_up_fdma
+/tb_rtds_tx/U_DUT/cfg_tx_burst_limit,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,43,cfg_tx_burst_limit
+/tb_rtds_tx/U_DUT/fdma_raddr,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,45,fdma_raddr
+/tb_rtds_tx/U_DUT/fdma_rareq,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,46,fdma_rareq
+/tb_rtds_tx/U_DUT/fdma_rbusy,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,47,fdma_rbusy
+/tb_rtds_tx/U_DUT/fdma_rdata,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,48,fdma_rdata
+/tb_rtds_tx/U_DUT/fdma_rvalid,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,49,fdma_rvalid
+/tb_rtds_tx/U_DUT/fdma_rready,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,50,fdma_rready
+/tb_rtds_tx/U_DUT/tx_d,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,53,tx_d
+/tb_rtds_tx/U_DUT/tx_sof,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,54,tx_sof
+/tb_rtds_tx/U_DUT/tx_eof,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,55,tx_eof
+/tb_rtds_tx/U_DUT/tx_rem,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,56,tx_rem
+/tb_rtds_tx/U_DUT/tx_src_rdy,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,57,tx_src_rdy
+/tb_rtds_tx/U_DUT/tx_dst_rdy,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,58,tx_dst_rdy
+/tb_rtds_tx/U_DUT/dbg_fdma_bus,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,61,dbg_fdma_bus
+/tb_rtds_tx/U_DUT/dbg_user_bus,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,62,dbg_user_bus
+/tb_rtds_tx/U_DUT/tx_frame_done,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,63,tx_frame_done
+/tb_rtds_tx/U_DUT/rd_state,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,102,rd_state
+/tb_rtds_tx/U_DUT/rd_state_nxt,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,103,rd_state_nxt
+/tb_rtds_tx/U_DUT/rd_addr,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,104,rd_addr
+/tb_rtds_tx/U_DUT/rd_word_cnt,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,105,rd_word_cnt
+/tb_rtds_tx/U_DUT/rd_burst_done,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,106,rd_burst_done
+/tb_rtds_tx/U_DUT/tx_state,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,116,tx_state
+/tb_rtds_tx/U_DUT/tx_state_nxt,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,117,tx_state_nxt
+/tb_rtds_tx/U_DUT/tx_word_cnt,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,118,tx_word_cnt
+/tb_rtds_tx/U_DUT/wr_burst_done,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,119,wr_burst_done
+/tb_rtds_tx/U_DUT/frame_cnt,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,121,frame_cnt
+/tb_rtds_tx/U_DUT/burst_cnt,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,122,burst_cnt
+/tb_rtds_tx/U_DUT/fifo_wr_en,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,125,fifo_wr_en
+/tb_rtds_tx/U_DUT/fifo_rd_en,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,126,fifo_rd_en
+/tb_rtds_tx/U_DUT/wr_en,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,127,wr_en
+/tb_rtds_tx/U_DUT/rd_en,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,128,rd_en
+/tb_rtds_tx/U_DUT/fifo_rst,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,129,fifo_rst
+/tb_rtds_tx/U_DUT/fifo_full,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,130,fifo_full
+/tb_rtds_tx/U_DUT/fifo_empty,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,131,fifo_empty
+/tb_rtds_tx/U_DUT/fifo_wdata,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,132,fifo_wdata
+/tb_rtds_tx/U_DUT/fifo_rdata,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,133,fifo_rdata
+/tb_rtds_tx/U_DUT/fifo_overflow,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,134,fifo_overflow
+/tb_rtds_tx/U_DUT/fifo_underflow,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,135,fifo_underflow
+/tb_rtds_tx/U_DUT/fifo_wr_cnt,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,136,fifo_wr_cnt
+/tb_rtds_tx/U_DUT/fifo_rd_cnt,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,137,fifo_rd_cnt
+/tb_rtds_tx/U_DUT/fifo_almost_full,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,138,fifo_almost_full
+/tb_rtds_tx/U_DUT/fifo_almost_empty,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,139,fifo_almost_empty
+/tb_rtds_tx/U_DUT/wr_rst_busy,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,140,wr_rst_busy
+/tb_rtds_tx/U_DUT/rd_rst_busy,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,141,rd_rst_busy
+/tb_rtds_tx/U_DUT/wr_clk,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,142,wr_clk
+/tb_rtds_tx/U_DUT/rd_clk,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,143,rd_clk
+/tb_rtds_tx/U_DUT/tx_burst_allowed,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,150,tx_burst_allowed
+/tb_rtds_tx/U_DUT/rd_data_phase,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,157,rd_data_phase
+/tb_rtds_tx/U_DUT/fifo_write_ready,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,161,fifo_write_ready
+/tb_rtds_tx/U_DUT/rd_data_hs,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,171,rd_data_hs
+/tb_rtds_tx/U_DUT/tx_hs,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,313,tx_hs
+/tb_rtds_tx/U_DUT/FRAME_BYTES,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,29,FRAME_BYTES
+/tb_rtds_tx/U_DUT/MEM_WINDOW_BYTES,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,30,MEM_WINDOW_BYTES
+/tb_rtds_tx/U_DUT/TEST_MEM_SIZE,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,69,TEST_MEM_SIZE
+/tb_rtds_tx/U_DUT/FDMA_BURST_LEN,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,71,FDMA_BURST_LEN
+/tb_rtds_tx/U_DUT/BURST_WORDS,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,73,BURST_WORDS
+/tb_rtds_tx/U_DUT/FRAME_WORDS,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,75,FRAME_WORDS
+/tb_rtds_tx/U_DUT/TX_FIFO_RESERVE_WORDS,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,78,TX_FIFO_RESERVE_WORDS
+/tb_rtds_tx/U_DUT/TX_PROG_FULL_THRESH,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,79,TX_PROG_FULL_THRESH
+/tb_rtds_tx/U_DUT/RD_IDLE,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,94,RD_IDLE
+/tb_rtds_tx/U_DUT/RD_REQ,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,96,RD_REQ
+/tb_rtds_tx/U_DUT/RD_DATA,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,98,RD_DATA
+/tb_rtds_tx/U_DUT/RD_WAIT,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,100,RD_WAIT
+/tb_rtds_tx/U_DUT/TX_IDLE,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,110,TX_IDLE
+/tb_rtds_tx/U_DUT/TX_SOF,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,112,TX_SOF
+/tb_rtds_tx/U_DUT/TX_DATA,F:\RTDS_test_DDR4_64bit_batch_dev\external_snapshot\fdma_aurora_brg\fdma_aurora_brg.srcs\sources_1 - loop_validate\new\fdma_aurora_brg_tx.v,114,TX_DATA

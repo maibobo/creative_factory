@@ -1,0 +1,60 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Sep 20 14:37:08 2026
+# Process ID: 1396
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev
+# Command line: vivado.exe -mode batch -nojournal -log reports\open_tx_wave_script_check2_20260920.log -source regression\batch_1g\open_module_wave.tcl -tclargs tx
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/open_tx_wave_script_check2_20260920.log
+# Journal file: 
+#-----------------------------------------------------------
+source {regression\batch_1g\open_module_wave.tcl}
+# set selected [lindex $argv 0]
+# set supported {1g ring axi axi_tail rx_fifo regs tx}
+# if {$selected ni $supported} {
+#     error "用例名必须是以下之一�?$supported"
+# }
+# set script_dir [file dirname [file normalize [info script]]]
+# set root [file normalize [file join $script_dir ../..]]
+# set project_file [file join $root regression v201_runs $selected project module_test.xpr]
+# set wave_dir [file join $root regression v201_runs $selected project module_test.sim sim_1 behav xsim]
+# set full_wave_file [file join $wave_dir tb_rtds_${selected}_behav_full.wdb]
+# set default_wave_file [file join $wave_dir tb_rtds_${selected}_behav.wdb]
+# set wave_config_file [file join $wave_dir tb_rtds_${selected}_all_signals.wcfg]
+# set top_scope /tb_rtds_${selected}
+# if {![file exists $project_file]} {
+#     error "找不到仿真工程：$project_file"
+# }
+# if {[file exists $full_wave_file]} {
+#     set wave_file $full_wave_file
+# } elseif {[file exists $default_wave_file]} {
+#     set wave_file $default_wave_file
+# } else {
+#     error "找不到波形数�?库：$default_wave_file"
+# }
+# open_project $project_file
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/tx/project'
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/tx/project/module_test.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+# open_wave_database $wave_file
+# if {[string length [current_wave_config]] == 0} {
+#     create_wave_config
+# }
+# if {[catch {add_wave -r ${top_scope}/*} add_error]} {
+#     puts "RTDS_WAVE_ADD_WARNING=$add_error"
+#     add_wave /
+# }
+# catch {file delete -force $wave_config_file}
+# if {[catch {save_wave_config $wave_config_file} save_error]} {
+#     puts "RTDS_WAVE_CONFIG_WARNING=$save_error"
+# }
+# puts "RTDS_WAVE_OPENED=$wave_file"
+RTDS_WAVE_OPENED=C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/tx/project/module_test.sim/sim_1/behav/xsim/tb_rtds_tx_behav_full.wdb
+# puts "RTDS_WAVE_CONFIG=$wave_config_file"
+RTDS_WAVE_CONFIG=C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/v201_runs/tx/project/module_test.sim/sim_1/behav/xsim/tb_rtds_tx_all_signals.wcfg
+# puts "RTDS_WAVE_NOTE=若需要全部内部信号，请运�? open_module_full_wave.cmd $selected"
+RTDS_WAVE_NOTE=若需要全部内部信号，请运�? open_module_full_wave.cmd tx
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 20 14:37:12 2026...

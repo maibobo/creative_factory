@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v" \
+"../../../../../../../RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v" \
+"../../../../../../../rtl/rtds_1g_periodic_tx.v" \
+"../../../../../../../rtl/rtds_fpga_1g_init.v" \
+"../../../../../../../rtl/rtds_fpga_cfg_cdc.v" \
+"../../../../../../../rtl/rtds_fpga_count_cdc.v" \
+"../../../../../../../rtl/rtds_fpga_reset_sync.v" \
+"../../../../../../../rtl/rtds_rx_block_writer.v" \
+"../../../../../../../rtl/rtds_rx_frame_fifo.v" \
+
+sv xil_defaultlib  \
+"../../../../../tb_board_cdc_smoke.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

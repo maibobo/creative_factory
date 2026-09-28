@@ -1,0 +1,6 @@
+verilog xil_defaultlib --include "../../../../RTDS_test.srcs/sources_1/ip/ila_temp/hdl/verilog" \
+"../../../../RTDS_test.srcs/sources_1/ip/ila_temp/sim/ila_temp.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

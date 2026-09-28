@@ -1,0 +1,244 @@
+﻿# axi：FDMA 与 AXI 五通道
+
+FDMA 读写请求/长度/数据/完成/错误、AXI AW/W/B/AR/R 全部接口、内部地址/拍数/状态、RAM 门控与错误注入；用于检查高地址、4KiB/256拍拆分及反压。
+
+当前本机重跑日志：234 个 WCFG 对象，234 个 VCD 声明；结束时间 13318000 × 1ps。
+
+```text
+TEST PASS tb_rtds_axi
+```
+
+## 核心层信号与变化概要
+
+以下逐项列出测试顶层、接口与 DUT 第一层信号。深层 CDC/XPM、clocking block 别名和存储对象见 signals.csv / signals.txt；WCFG 同时包含完整层次。变化次数不包含初值，不等于成功握手次数；已知值范围按无符号二进制解释，X/Z 次数包含初始化阶段，不单独判错。时间单位见上文。
+
+| 信号全名 | 位宽 | 变化次数 | 首次变化 | 最后变化 | 已知最小值 | 已知最大值 |
+|---|---:|---:|---:|---:|---:|---:|
+| `/tb_rtds_axi/M_AXI_ACLK` | 1 | 6659 | 2000 | 13318000 | 0 | 1 |
+| `/tb_rtds_axi/cycle_count` | 32 | 3320 | 42000 | 13318000 | 0 | 3320 |
+| `/tb_rtds_axi/allow_aw` | 1 | 603 | 70000 | 13314000 | 0 | 1 |
+| `/tb_rtds_axi/allow_w` | 1 | 872 | 46000 | 13298000 | 0 | 1 |
+| `/tb_rtds_axi/allow_b` | 1 | 215 | 42000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/ram_awready` | 1 | 27 | 38000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/ram_awvalid` | 1 | 26 | 70000 | 13098000 | 0 | 1 |
+| `/tb_rtds_axi/ram_wready` | 1 | 1329 | 38000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/ram_wvalid` | 1 | 704 | 50000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/ram_bvalid` | 1 | 27 | 2000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/ram_bready` | 1 | 27 | 2000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/ram_bresp` | 2 | 1 | 2000 | 2000 | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_ACLK` | 1 | 6659 | 2000 | 13318000 | 0 | 1 |
+| `/tb_rtds_axi/bus/fdma_wdone` | 1 | 21 | 2000 | 13314000 | 0 | 1 |
+| `/tb_rtds_axi/bus/fdma_werror` | 1 | 2 | 2000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/bus/fdma_waddr` | 64 | 10 | 42000 | 13062000 | 0 | 2883584 |
+| `/tb_rtds_axi/bus/fdma_wareq` | 1 | 20 | 42000 | 13070000 | 0 | 1 |
+| `/tb_rtds_axi/bus/fdma_wsize` | 16 | 3 | 42000 | 13062000 | 0 | 520 |
+| `/tb_rtds_axi/bus/fdma_wbusy` | 1 | 21 | 2000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/bus/fdma_wdata` | 64 | 663 | 54000 | 13238000 | 0 | 1958505086991 |
+| `/tb_rtds_axi/bus/fdma_wvalid` | 1 | 1328 | 50000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/bus/fdma_wready` | 1 | 20 | 50000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/bus/fdma_raddr` | 64 | 9 | 2038000 | 8858000 | 0 | 2883584 |
+| `/tb_rtds_axi/bus/fdma_rareq` | 1 | 18 | 2038000 | 8866000 | 0 | 1 |
+| `/tb_rtds_axi/bus/fdma_rsize` | 16 | 2 | 2038000 | 8858000 | 0 | 520 |
+| `/tb_rtds_axi/bus/fdma_rbusy` | 1 | 19 | 2000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/bus/fdma_rdata` | 64 | 648 | 2000 | 13050000 | 0 | 528280977927 |
+| `/tb_rtds_axi/bus/fdma_rvalid` | 1 | 1296 | 2054000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/bus/fdma_rready` | 1 | 18 | 2046000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_ARESETN` | 1 | 1 | 38000 | 38000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_AWID` | 1 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_AWADDR` | 64 | 14 | 2000 | 13066000 | 0 | 2883584 |
+| `/tb_rtds_axi/bus/M_AXI_AWLEN` | 8 | 6 | 2000 | 13070000 | 0 | 255 |
+| `/tb_rtds_axi/bus/M_AXI_AWSIZE` | 3 | 0 | None | None | 3 | 3 |
+| `/tb_rtds_axi/bus/M_AXI_AWBURST` | 2 | 0 | None | None | 1 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_AWLOCK` | 1 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_AWCACHE` | 4 | 0 | None | None | 2 | 2 |
+| `/tb_rtds_axi/bus/M_AXI_AWPROT` | 3 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_AWQOS` | 4 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_AWVALID` | 1 | 27 | 2000 | 13098000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_AWREADY` | 1 | 281 | 70000 | 13314000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_WID` | 1 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_WDATA` | 64 | 663 | 54000 | 13238000 | 0 | 1958505086991 |
+| `/tb_rtds_axi/bus/M_AXI_WSTRB` | 8 | 0 | None | None | 255 | 255 |
+| `/tb_rtds_axi/bus/M_AXI_WLAST` | 1 | 24 | 2000 | 13238000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_WVALID` | 1 | 26 | 50000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_WREADY` | 1 | 1490 | 46000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_BID` | 1 | 1 | 2000 | 2000 | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_BRESP` | 2 | 2 | 2000 | 13062000 | 0 | 2 |
+| `/tb_rtds_axi/bus/M_AXI_BVALID` | 1 | 27 | 2000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_BREADY` | 1 | 27 | 2000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_ARID` | 1 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_ARADDR` | 64 | 13 | 2000 | 12990000 | 0 | 2883584 |
+| `/tb_rtds_axi/bus/M_AXI_ARLEN` | 8 | 5 | 2000 | 12994000 | 0 | 255 |
+| `/tb_rtds_axi/bus/M_AXI_ARSIZE` | 3 | 0 | None | None | 3 | 3 |
+| `/tb_rtds_axi/bus/M_AXI_ARBURST` | 2 | 0 | None | None | 1 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_ARLOCK` | 1 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_ARCACHE` | 4 | 0 | None | None | 2 | 2 |
+| `/tb_rtds_axi/bus/M_AXI_ARPROT` | 3 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_ARQOS` | 4 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_ARVALID` | 1 | 25 | 2000 | 12998000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_ARREADY` | 1 | 25 | 38000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_RID` | 1 | 1 | 2000 | 2000 | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_RDATA` | 64 | 648 | 2000 | 13050000 | 0 | 528280977927 |
+| `/tb_rtds_axi/bus/M_AXI_RRESP` | 2 | 1 | 2000 | 2000 | 0 | 0 |
+| `/tb_rtds_axi/bus/M_AXI_RLAST` | 1 | 25 | 2000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_RVALID` | 1 | 1297 | 2000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/bus/M_AXI_RREADY` | 1 | 24 | 2050000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/bus/inject_error` | 1 | 1 | 13062000 | 13062000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/fdma_wstrb` | 8 | 0 | None | None | 255 | 255 |
+| `/tb_rtds_axi/U_DUT/fdma_wdone` | 1 | 21 | 2000 | 13314000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/fdma_werror` | 1 | 2 | 2000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/fdma_waddr` | 64 | 10 | 42000 | 13062000 | 0 | 2883584 |
+| `/tb_rtds_axi/U_DUT/fdma_wareq` | 1 | 20 | 42000 | 13070000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/fdma_wsize` | 16 | 3 | 42000 | 13062000 | 0 | 520 |
+| `/tb_rtds_axi/U_DUT/fdma_wbusy` | 1 | 21 | 2000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/fdma_wdata` | 64 | 663 | 54000 | 13238000 | 0 | 1958505086991 |
+| `/tb_rtds_axi/U_DUT/fdma_wvalid` | 1 | 1328 | 50000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/fdma_wready` | 1 | 20 | 50000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/fdma_raddr` | 64 | 9 | 2038000 | 8858000 | 0 | 2883584 |
+| `/tb_rtds_axi/U_DUT/fdma_rareq` | 1 | 18 | 2038000 | 8866000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/fdma_rsize` | 16 | 2 | 2038000 | 8858000 | 0 | 520 |
+| `/tb_rtds_axi/U_DUT/fdma_rbusy` | 1 | 19 | 2000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/fdma_rdata` | 64 | 648 | 2000 | 13050000 | 0 | 528280977927 |
+| `/tb_rtds_axi/U_DUT/fdma_rvalid` | 1 | 1296 | 2054000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/fdma_rready` | 1 | 18 | 2046000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ACLK` | 1 | 6659 | 2000 | 13318000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ARESETN` | 1 | 1 | 38000 | 38000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_AWID` | 1 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_AWADDR` | 64 | 14 | 2000 | 13066000 | 0 | 2883584 |
+| `/tb_rtds_axi/U_DUT/M_AXI_AWLEN` | 8 | 6 | 2000 | 13070000 | 0 | 255 |
+| `/tb_rtds_axi/U_DUT/M_AXI_AWSIZE` | 3 | 0 | None | None | 3 | 3 |
+| `/tb_rtds_axi/U_DUT/M_AXI_AWBURST` | 2 | 0 | None | None | 1 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_AWLOCK` | 1 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_AWCACHE` | 4 | 0 | None | None | 2 | 2 |
+| `/tb_rtds_axi/U_DUT/M_AXI_AWPROT` | 3 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_AWQOS` | 4 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_AWVALID` | 1 | 27 | 2000 | 13098000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_AWREADY` | 1 | 281 | 70000 | 13314000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_WID` | 1 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_WDATA` | 64 | 663 | 54000 | 13238000 | 0 | 1958505086991 |
+| `/tb_rtds_axi/U_DUT/M_AXI_WSTRB` | 8 | 0 | None | None | 255 | 255 |
+| `/tb_rtds_axi/U_DUT/M_AXI_WLAST` | 1 | 24 | 2000 | 13238000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_WVALID` | 1 | 26 | 50000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_WREADY` | 1 | 1490 | 46000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_BID` | 1 | 1 | 2000 | 2000 | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_BRESP` | 2 | 2 | 2000 | 13062000 | 0 | 2 |
+| `/tb_rtds_axi/U_DUT/M_AXI_BVALID` | 1 | 27 | 2000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_BREADY` | 1 | 27 | 2000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ARID` | 1 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ARADDR` | 64 | 13 | 2000 | 12990000 | 0 | 2883584 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ARLEN` | 8 | 5 | 2000 | 12994000 | 0 | 255 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ARSIZE` | 3 | 0 | None | None | 3 | 3 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ARBURST` | 2 | 0 | None | None | 1 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ARLOCK` | 1 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ARCACHE` | 4 | 0 | None | None | 2 | 2 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ARPROT` | 3 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ARQOS` | 4 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ARVALID` | 1 | 25 | 2000 | 12998000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ARREADY` | 1 | 25 | 38000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_RID` | 1 | 1 | 2000 | 2000 | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_RDATA` | 64 | 648 | 2000 | 13050000 | 0 | 528280977927 |
+| `/tb_rtds_axi/U_DUT/M_AXI_RRESP` | 2 | 1 | 2000 | 2000 | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_RLAST` | 1 | 25 | 2000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_RVALID` | 1 | 1297 | 2000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_RREADY` | 1 | 24 | 2050000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/write_curr_st` | 3 | 50 | 2000 | 13310000 | 0 | 3 |
+| `/tb_rtds_axi/U_DUT/read_curr_st` | 3 | 46 | 2000 | 13054000 | 0 | 3 |
+| `/tb_rtds_axi/U_DUT/wa` | 64 | 14 | 2000 | 13066000 | 0 | 2883584 |
+| `/tb_rtds_axi/U_DUT/ra` | 64 | 13 | 2000 | 12990000 | 0 | 2883584 |
+| `/tb_rtds_axi/U_DUT/wleft` | 16 | 7 | 2000 | 13066000 | 0 | 520 |
+| `/tb_rtds_axi/U_DUT/rleft` | 16 | 6 | 2000 | 12990000 | 0 | 520 |
+| `/tb_rtds_axi/U_DUT/wb` | 9 | 6 | 2000 | 13070000 | 0 | 256 |
+| `/tb_rtds_axi/U_DUT/rb` | 9 | 5 | 2000 | 12994000 | 0 | 256 |
+| `/tb_rtds_axi/U_DUT/wbeat` | 9 | 663 | 2000 | 13238000 | 0 | 255 |
+| `/tb_rtds_axi/U_DUT/rbeat` | 9 | 647 | 2000 | 13046000 | 0 | 255 |
+| `/tb_rtds_axi/U_DUT/aw_pending` | 1 | 27 | 2000 | 13098000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/w_pending` | 1 | 27 | 2000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/whs` | 1 | 1328 | 50000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/rhs` | 1 | 1296 | 2054000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_DUT/write_len_minus_one` | 9 | 6 | 2000 | 13070000 | 0 | 511 |
+| `/tb_rtds_axi/U_DUT/read_len_minus_one` | 9 | 5 | 2000 | 12994000 | 0 | 511 |
+| `/tb_rtds_axi/U_DUT/write_next_st` | 3 | 49 | 42000 | 13306000 | 0 | 3 |
+| `/tb_rtds_axi/U_DUT/read_next_st` | 3 | 45 | 2038000 | 13050000 | 0 | 3 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ID_WIDTH` | 0 | 0 | None | None | 1 | 1 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ID` | 0 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/M_AXI_ADDR_WIDTH` | 0 | 0 | None | None | 64 | 64 |
+| `/tb_rtds_axi/U_DUT/M_AXI_DATA_WIDTH` | 0 | 0 | None | None | 64 | 64 |
+| `/tb_rtds_axi/U_DUT/AXI_BYTES` | 0 | 0 | None | None | 8 | 8 |
+| `/tb_rtds_axi/U_DUT/SIZE_BITS` | 0 | 0 | None | None | 3 | 3 |
+| `/tb_rtds_axi/U_DUT/W_IDLE` | 3 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/W_PREP` | 3 | 0 | None | None | 1 | 1 |
+| `/tb_rtds_axi/U_DUT/W_SEND` | 3 | 0 | None | None | 2 | 2 |
+| `/tb_rtds_axi/U_DUT/W_RESP` | 3 | 0 | None | None | 3 | 3 |
+| `/tb_rtds_axi/U_DUT/R_IDLE` | 3 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/R_PREP` | 3 | 0 | None | None | 1 | 1 |
+| `/tb_rtds_axi/U_DUT/R_ADDR` | 3 | 0 | None | None | 2 | 2 |
+| `/tb_rtds_axi/U_DUT/R_DATA` | 3 | 0 | None | None | 3 | 3 |
+| `/tb_rtds_axi/U_DUT/AXI_FIXED_ID` | 0 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_DUT/AXI_SIZE` | 3 | 0 | None | None | 3 | 3 |
+| `/tb_rtds_axi/U_RAM/aclk` | 1 | 6659 | 2000 | 13318000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/aresetn` | 1 | 1 | 38000 | 38000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_awid` | 1 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_RAM/s_axi_awaddr` | 64 | 14 | 2000 | 13066000 | 0 | 2883584 |
+| `/tb_rtds_axi/U_RAM/s_axi_awlen` | 8 | 6 | 2000 | 13070000 | 0 | 255 |
+| `/tb_rtds_axi/U_RAM/s_axi_awsize` | 3 | 0 | None | None | 3 | 3 |
+| `/tb_rtds_axi/U_RAM/s_axi_awburst` | 2 | 0 | None | None | 1 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_awvalid` | 1 | 26 | 70000 | 13098000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_awready` | 1 | 27 | 38000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_wdata` | 64 | 663 | 54000 | 13238000 | 0 | 1958505086991 |
+| `/tb_rtds_axi/U_RAM/s_axi_wstrb` | 8 | 0 | None | None | 255 | 255 |
+| `/tb_rtds_axi/U_RAM/s_axi_wlast` | 1 | 24 | 2000 | 13238000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_wvalid` | 1 | 704 | 50000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_wready` | 1 | 1329 | 38000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_bid` | 1 | 1 | 2000 | 2000 | 0 | 0 |
+| `/tb_rtds_axi/U_RAM/s_axi_bresp` | 2 | 1 | 2000 | 2000 | 0 | 0 |
+| `/tb_rtds_axi/U_RAM/s_axi_bvalid` | 1 | 27 | 2000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_bready` | 1 | 27 | 2000 | 13310000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_arid` | 1 | 0 | None | None | 0 | 0 |
+| `/tb_rtds_axi/U_RAM/s_axi_araddr` | 64 | 13 | 2000 | 12990000 | 0 | 2883584 |
+| `/tb_rtds_axi/U_RAM/s_axi_arlen` | 8 | 5 | 2000 | 12994000 | 0 | 255 |
+| `/tb_rtds_axi/U_RAM/s_axi_arsize` | 3 | 0 | None | None | 3 | 3 |
+| `/tb_rtds_axi/U_RAM/s_axi_arburst` | 2 | 0 | None | None | 1 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_arvalid` | 1 | 25 | 2000 | 12998000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_arready` | 1 | 25 | 38000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_rid` | 1 | 1 | 2000 | 2000 | 0 | 0 |
+| `/tb_rtds_axi/U_RAM/s_axi_rdata` | 64 | 648 | 2000 | 13050000 | 0 | 528280977927 |
+| `/tb_rtds_axi/U_RAM/s_axi_rresp` | 2 | 1 | 2000 | 2000 | 0 | 0 |
+| `/tb_rtds_axi/U_RAM/s_axi_rlast` | 1 | 25 | 2000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_rvalid` | 1 | 1297 | 2000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/s_axi_rready` | 1 | 24 | 2050000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/aw_hold_valid` | 1 | 27 | 2000 | 13294000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/aw_hold_id` | 1 | 1 | 74000 | 74000 | 0 | 0 |
+| `/tb_rtds_axi/U_RAM/aw_hold_addr` | 64 | 664 | 74000 | 13242000 | 1048576 | 2883704 |
+| `/tb_rtds_axi/U_RAM/aw_beats_left` | 8 | 663 | 74000 | 13242000 | 0 | 255 |
+| `/tb_rtds_axi/U_RAM/aw_hold_size` | 3 | 1 | 74000 | 74000 | 3 | 3 |
+| `/tb_rtds_axi/U_RAM/aw_hold_burst` | 2 | 1 | 74000 | 74000 | 1 | 1 |
+| `/tb_rtds_axi/U_RAM/aw_error` | 1 | 1 | 2000 | 2000 | 0 | 0 |
+| `/tb_rtds_axi/U_RAM/w_hold_valid` | 1 | 1329 | 2000 | 13294000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/w_hold_data` | 64 | 664 | 54000 | 13290000 | 0 | 1958505086991 |
+| `/tb_rtds_axi/U_RAM/w_hold_strb` | 8 | 1 | 54000 | 54000 | 255 | 255 |
+| `/tb_rtds_axi/U_RAM/w_hold_last` | 1 | 24 | 54000 | 13290000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/aw_in_range` | 1 | 1 | 74000 | 74000 | 1 | 1 |
+| `/tb_rtds_axi/U_RAM/write_commit` | 1 | 1329 | 2000 | 13294000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/byte_index` | 32 | 1 | 78000 | 78000 | 8 | 8 |
+| `/tb_rtds_axi/U_RAM/read_active` | 1 | 25 | 2000 | 13054000 | 0 | 1 |
+| `/tb_rtds_axi/U_RAM/read_id` | 1 | 1 | 2050000 | 2050000 | 0 | 0 |
+| `/tb_rtds_axi/U_RAM/read_addr` | 64 | 648 | 2050000 | 13046000 | 1048576 | 2883704 |
+| `/tb_rtds_axi/U_RAM/read_beats_left` | 8 | 647 | 2050000 | 13046000 | 0 | 255 |
+| `/tb_rtds_axi/U_RAM/read_size` | 3 | 1 | 2050000 | 2050000 | 3 | 3 |
+| `/tb_rtds_axi/U_RAM/read_burst` | 2 | 1 | 2050000 | 2050000 | 1 | 1 |
+| `/tb_rtds_axi/U_RAM/read_error` | 1 | 1 | 2050000 | 2050000 | 0 | 0 |
+| `/tb_rtds_axi/U_RAM/ADDR_WIDTH` | 0 | 0 | None | None | 64 | 64 |
+| `/tb_rtds_axi/U_RAM/DATA_WIDTH` | 0 | 0 | None | None | 64 | 64 |
+| `/tb_rtds_axi/U_RAM/ID_WIDTH` | 0 | 0 | None | None | 1 | 1 |
+| `/tb_rtds_axi/U_RAM/MEM_BYTES` | 0 | 0 | None | None | 4194304 | 4194304 |
+| `/tb_rtds_axi/U_RAM/STRB_WIDTH` | 0 | 0 | None | None | 8 | 8 |
+| `/tb_rtds_axi/U_RAM/WORDS` | 0 | 0 | None | None | 524288 | 524288 |
+| `/tb_rtds_axi/U_RAM/BYTE_BITS` | 0 | 0 | None | None | 3 | 3 |
+| `/tb_rtds_axi/U_RAM/INDEX_BITS` | 0 | 0 | None | None | 19 | 19 |
+
+## 仿真源码文件列表（编译顺序）
+
+- [CONV_DMA.v](F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v)
+- [rtds_axi_ram_model.sv](F:/RTDS_test_DDR4_64bit_batch_dev/rtl/ddr4/rtds_axi_ram_model.sv)
+- [rtds_axi_test_if.sv](F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_axi_test_if.sv)
+- [tb_rtds_axi.sv](F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv)
+- [glbl.v](F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/axi/project/wave_axi.sim/sim_1/behav/xsim/glbl.v)

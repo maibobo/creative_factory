@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../../../rtl/rtds_1g_periodic_tx.v" \
+"../../../../../../../../rtl/rtds_fpga_cfg_cdc.v" \
+"../../../../../../../../rtl/rtds_fpga_reset_sync.v" \
+
+sv xil_defaultlib  \
+"../../../../../../../../regression/batch_1g/rtds_1g_test_if.sv" \
+"../../../../../../../../regression/batch_1g/tb_rtds_1g.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
