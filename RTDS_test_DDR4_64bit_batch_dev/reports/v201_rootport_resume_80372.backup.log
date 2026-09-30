@@ -1,0 +1,226 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 14 19:30:28 2026
+# Process ID: 80372
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Journal file: 
+#-----------------------------------------------------------
+# set root [file normalize [file join [file dirname [info script]] ..]]
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:59 . Memory (MB): peak = 1088.914 ; gain = 0.000
+# current_fileset -simset [get_filesets sim_xdma_rootport]
+# set_property xsim.simulate.runtime all [get_filesets sim_xdma_rootport]
+# launch_simulation -simset sim_xdma_rootport -mode behavioral -scripts_only
+Command: launch_simulation -simset sim_xdma_rootport -mode behavioral -scripts_only
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_xdma_rootport'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [SIM-utils-50] Design contains embedded sources, generating MEM files for simulation...
+WARNING: [Memdata 28-176] There are no bmm files or elf files. Therefore Vivado could not produce any .mem files. Check the design for the existence of processors and associated elf files.
+INFO: [SIM-utils-54] Inspecting design source files for 'board' in fileset 'sim_xdma_rootport'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_xdma_rootport'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-4] XSim::Simulate design
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:36 . Memory (MB): peak = 1088.914 ; gain = 0.000
+# source [file join $root scripts patch_util_ds_buf_sim_2020_2.tcl]
+## set root [file normalize [file join [file dirname [info script]] ..]]
+## set h [open $f r];
+## set src [read $h];
+## close $h
+## set backup [file join $root reports util_ds_buf_before_compat.vhd]
+## if {![file exists $backup]} {file copy $f $backup}
+## set h [open $backup r];
+## set src [read $h];
+## close $h
+## set start [string first {USE_IBUFDS_GTME5 :} $src]
+## set finish [string first {end generate USE_IBUFDS_GTME5;} $src]
+## if {$start < 0 || $finish < 0} {error "Unexpected util_ds_buf source"}
+## set section [string range $src $start $finish]
+## set section [regsub {REFCLK_CTL_DRV_SWING[^
+## ]*
+## } $section {}]
+## set section [regsub {REFCLK_EN_DRV[^
+## ]*
+## } $section {}]
+## set src [string replace $src $start $finish $section]
+## set start [string first {USE_OBUFDS_GTME5_ADV :} $src]
+## set finish [string first {end generate USE_OBUFDS_GTME5_ADV;} $src]
+## set section [string range $src $start $finish]
+## set section [string map [list {REFCLK_EN_TX_PATH  => BIT1,} {REFCLK_EN_TX_PATH  => BIT1} {RXRECCLK_SEL       => BIT2} {-- RXRECCLK_SEL removed: actual library uses RXRECCLKSEL input}] $section]
+## set section [string map [list {I            => OBUFDS_GTME5_ADV_I((4*i)+3 downto (4*i))} {I            => OBUFDS_GTME5_ADV_I((4*i)+3 downto (4*i)),
+##           RXRECCLKSEL => "00"}] $section]
+## set src [string replace $src $start $finish $section]
+## set h [open $f w];
+## puts -nonewline $h $src;
+## close $h
+## puts "UTIL_DS_BUF_SIM_COMPAT_APPLIED"
+UTIL_DS_BUF_SIM_COMPAT_APPLIED
+# cd $work
+# foreach step {compile elaborate simulate} {
+#  puts "V201_STEP_BEGIN $step"
+#  set failed [catch {exec cmd /c ${step}.bat 2>@1} output]
+#  puts $output
+# }
+V201_STEP_BEGIN compile
+"xvlog --incr --relax -L uvm -L xdma_v4_1_8 -prj board_vlog.prj"
+INFO: [VRFC 10-311] analyzing module CONV_DMA
+INFO: [VRFC 10-311] analyzing module INFO_EXCH
+INFO: [VRFC 10-311] analyzing module design_1_CONV_DMA_0_0
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_7_8_gthe3_channel
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt_gthe3_channel_wrapper
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_7_8_gthe3_common
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt_gthe3_common_wrapper
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt_gtwizard_top
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_tph_tbl
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_pipe_lane
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_16k
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_rep_8k
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_req_8k
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt_channel
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_pipe_pipeline
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_pipe_misc
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_init_ctrl
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt_common
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_8k
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_rep
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_req
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_sync
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_cpl
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_sys_clk_gen_ps
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_rst
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_txeq
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_clk
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_rxeq
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gtwizard_top
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_wrapper
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_pcie3_uscale_wrapper
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_pcie3_uscale_top
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_sync_cell
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_rxcdrhold
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_pcie3_uscale_core_top
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip
+INFO: [VRFC 10-311] analyzing module xdma_v4_1_8_blk_mem_64_reg_be
+INFO: [VRFC 10-311] analyzing module xdma_v4_1_8_blk_mem_64_noreg_be
+INFO: [VRFC 10-311] analyzing module xdma_v4_1_6_dma_bram_wrap
+INFO: [VRFC 10-311] analyzing module xdma_v4_1_6_dma_fifo_64x512_wrap
+INFO: [VRFC 10-311] analyzing module xdma_v4_1_6_mem_simple_dport_bram
+INFO: [VRFC 10-311] analyzing module xdma_v4_1_6_dma_bram_wrap_1024
+INFO: [VRFC 10-311] analyzing module xdma_v4_1_6_dma_bram_wrap_2048
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_core_top
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0
+INFO: [VRFC 10-311] analyzing module design_1_INFO_EXCH_0_0
+INFO: [VRFC 10-311] analyzing module design_1_xbar_0
+INFO: [VRFC 10-311] analyzing module design_1_auto_cc_0
+INFO: [VRFC 10-311] analyzing module design_1_auto_cc_1
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-311] analyzing module design_1_axi_interconnect_0_1
+INFO: [VRFC 10-311] analyzing module design_1_axi_interconnect_0_2
+INFO: [VRFC 10-311] analyzing module m00_couplers_imp_1CA5Z32
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_HS4N6K
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_O7FAN0
+INFO: [VRFC 10-311] analyzing module s01_couplers_imp_1F69D31
+INFO: [VRFC 10-311] analyzing module ila_FDMA
+INFO: [VRFC 10-311] analyzing module PCIe
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-311] analyzing module fdma_aurora_brg_tx
+INFO: [VRFC 10-311] analyzing module pci_exp_usrapp_cfg
+INFO: [VRFC 10-311] analyzing module pci_exp_usrapp_com
+INFO: [VRFC 10-311] analyzing module pci_exp_usrapp_rx
+INFO: [VRFC 10-311] analyzing module pci_exp_usrapp_tx
+INFO: [VRFC 10-311] analyzing module rp_pcie3_uscale_core_top
+INFO: [VRFC 10-311] analyzing module rp_pcie3_uscale_top
+INFO: [VRFC 10-311] analyzing module rp_init_ctrl
+INFO: [VRFC 10-311] analyzing module rp_tph_tbl
+INFO: [VRFC 10-311] analyzing module rp_pipe_pipeline
+INFO: [VRFC 10-311] analyzing module rp_pipe_misc
+INFO: [VRFC 10-311] analyzing module rp_pipe_lane
+INFO: [VRFC 10-311] analyzing module rp_pcie3_uscale_wrapper
+INFO: [VRFC 10-311] analyzing module rp_bram
+INFO: [VRFC 10-311] analyzing module rp_bram_rep
+INFO: [VRFC 10-311] analyzing module rp_bram_rep_8k
+INFO: [VRFC 10-311] analyzing module rp_bram_req
+INFO: [VRFC 10-311] analyzing module rp_bram_8k
+INFO: [VRFC 10-311] analyzing module rp_bram_cpl
+INFO: [VRFC 10-311] analyzing module rp_bram_16k
+INFO: [VRFC 10-311] analyzing module rp_deemph
+INFO: [VRFC 10-311] analyzing module rp_rxcdrhold
+INFO: [VRFC 10-311] analyzing module rp_phy_sync
+INFO: [VRFC 10-311] analyzing module rp_phy_sync_cell
+INFO: [VRFC 10-311] analyzing module rp_phy_wrapper
+INFO: [VRFC 10-311] analyzing module rp_phy_clk
+INFO: [VRFC 10-311] analyzing module rp_phy_rst
+INFO: [VRFC 10-311] analyzing module rp_phy_txeq
+INFO: [VRFC 10-311] analyzing module rp_phy_rxeq
+INFO: [VRFC 10-311] analyzing module rp_phy_reset_sync
+INFO: [VRFC 10-311] analyzing module rp_phy_multi_pipe_sync
+INFO: [VRFC 10-311] analyzing module rp_phy_freq_cntr
+INFO: [VRFC 10-311] analyzing module rp_gt_channel
+INFO: [VRFC 10-311] analyzing module rp_gt_common
+INFO: [VRFC 10-311] analyzing module rp_gtwizard_top
+INFO: [VRFC 10-311] analyzing module rp_gt
+INFO: [VRFC 10-311] analyzing module rp_gt_gtwizard_top
+INFO: [VRFC 10-311] analyzing module rp_gt_gtwizard_gthe3
+INFO: [VRFC 10-311] analyzing module rp_gt_gthe3_common_wrapper
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_gthe3_common_rp
+INFO: [VRFC 10-311] analyzing module rp_gt_gthe3_channel_wrapper
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_gthe3_channel_rp
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_gthe3_cpll_cal_rp
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_reset_synchronizer_rp
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_bit_synchronizer_rp
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_gthe3_cpll_cal_freq_counter_rp
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_gtwiz_userclk_tx_rp
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_gtwiz_userclk_rx_rp
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_gtwiz_buffbypass_tx_rp
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_gtwiz_buffbypass_rx_rp
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_gtwiz_reset_rp
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_gtwiz_userdata_tx_rp
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_5_4_gtwiz_userdata_rx_rp
+INFO: [VRFC 10-311] analyzing module pcie3_uscale_rp_top
+INFO: [VRFC 10-311] analyzing module pcie_fdma_aurora_brg_adapter
+INFO: [VRFC 10-311] analyzing module sys_clk_gen
+INFO: [VRFC 10-311] analyzing module sys_clk_gen_ds
+INFO: [VRFC 10-311] analyzing module xilinx_pcie3_uscale_rp
+INFO: [VRFC 10-311] analyzing module aurora_ll_peer_bfm
+INFO: [VRFC 10-311] analyzing module pcie_cq_host_memory_monitor
+INFO: [VRFC 10-311] analyzing module xdma_irq_monitor
+INFO: [VRFC 10-311] analyzing module conv_dma_axi_monitor
+INFO: [VRFC 10-311] analyzing module xdma_axi_activity_monitor
+INFO: [VRFC 10-311] analyzing module board
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj board_vhdl.prj"
+INFO: [VRFC 10-3107] analyzing entity 'util_ds_buf'
+INFO: [VRFC 10-3107] analyzing entity 'design_1_util_ds_buf_0'
+V201_STEP_BEGIN elaborate
+"xelab -wto 6685dc9037bc45bd8dc34b12c53cbeb6 --incr --debug typical --relax --mt 2 -d "XILINX_SIMULATOR=" -d "DDR4_SIM_RAM=" -L xil_defaultlib -L gtwizard_ultrascale_v1_7_9 -L blk_mem_gen_v8_4_4 -L xdma_v4_1_8 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_22 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_21 -L axi_crossbar_v2_1_23 -L axi_clock_converter_v2_1_21 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot board_behav xil_defaultlib.board xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6685dc9037bc45bd8dc34b12c53cbeb6 --incr --debug typical --relax --mt 2 -d XILINX_SIMULATOR= -d DDR4_SIM_RAM= -L xil_defaultlib -L gtwizard_ultrascale_v1_7_9 -L blk_mem_gen_v8_4_4 -L xdma_v4_1_8 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_22 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_21 -L axi_crossbar_v2_1_23 -L axi_clock_converter_v2_1_21 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot board_behav xil_defaultlib.board xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+child process exited abnormally
+V201 elaborate failed; inspect output
+    while executing
+"error "V201 $step failed; inspect output""
+    invoked from within
+    ("foreach" body line 5)
+    invoked from within
+"foreach step {compile elaborate simulate} {
+ puts "V201_STEP_BEGIN $step"
+ set failed [catch {exec cmd /c ${step}.bat 2>@1} output]
+ puts $output
+ if ..."
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 14 19:32:19 2026...

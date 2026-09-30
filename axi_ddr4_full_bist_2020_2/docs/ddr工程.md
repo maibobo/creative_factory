@@ -2,7 +2,6 @@
 
 ### User
 
-根据C:\project\RTDS\DDR\RTDS\_test\_DDR4\_64bit docs\    9-8号的几个文件，指出如何查看原理图文件，以及当前的xdc需要如何修改/管脚绑定   这个不是KU的板子，是组里自己做好的板子，也是后面集成DDR后的pcie项目（C:\project\RTDS\pcie\_07\RTDS\_test-1ch\RTDS\_test-1ch）做的板子
 
 ### Assistant
 
@@ -100,15 +99,11 @@ xcku040-ffva1156-2-i
 目标工程当前活动约束是：
 
 ```text
-C:\project\RTDS\pcie_07\RTDS_test-1ch\RTDS_test-1ch\
-RTDS_test.srcs\constrs_1\new\PIN.xdc
 ```
 
 DDR 集成工程还有：
 
 ```text
-C:\project\RTDS\DDR\RTDS_test_DDR4_64bit\
-RTDS_test_DDR4_64bit.srcs\constrs_1\new\DDR4_PIN.xdc
 ```
 
 ### 系统时钟
@@ -286,7 +281,6 @@ MT40A1G16TB-062EIT
 
 本次检查结论已经同步写入本机和远程运行纪要，SHA-256 一致：
 
-[RTDS_DDR4集成运行关键点与问题记录.md](</E:/PCIE-CPU/RTDS_test_DDR4_64bit_本机备份_20260820/docs/RTDS_DDR4集成运行关键点与问题记录.md>)。未启动 Vivado GUI，也没有修改生产 RTL、IP、XPR 或 XDC。
 
 ---
 
@@ -296,7 +290,6 @@ MT40A1G16TB-062EIT
 
 ### User
 
-问了下同事，说其实就是把KU040  FPGA做到了当前项目的单板上（板子上包含自己的DDR颗粒和其他硬件如pcie、aurora、以太网），因此理论上复用demo的xdc文件即可（他说他就跑了原始demo的工程按这个文档说明是通的），他按照远程机C/project/RTDS/DDR目录 xxxfpga开发指南的 32章实验demo（工程在同目录的26\_topxx）                                                                                                       注意，我们之前做过DDR最小工程同目录的xxxddr4\_minxx (日志操作在E:\codex\_history\_md\ddr\_proc目录）   当前问题是他让我再复核下管脚有木有问题，我不知道怎么看，并且要验证全DDR空间的读写、包括其他在硬件测试上需要FPGA验证的项，我用之前的最小ddr工程是否可行（我记得之前的工程代码是兼容仿真、上板验证的，不需要修改代码或xdc文件？）
 
 ### Assistant
 
@@ -345,7 +338,6 @@ Demo 按 Micron 颗粒用了 `16-16-16`；GD规格书在2400速率保证的是 `
 ## 1. 结论与实施原则
 
 - 继续使用 AXI 最小工程作为验证底座。它比第32章 Demo 的 Native APP 接口更适合后续接入 PCIe/Aurora。
-- 原工程 `axi_ddr4_min_2020_2` 保持不变；新建 `C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2` 完成增强验证。
 - 当前最小工程与 `26_top_ddr4_rw` 的 DDR管脚、AK17差分时钟、AC34复位及T22/T23 LED约束逐项一致。XDC只做审计，不改变物理绑定。
 - 现有bitstream可以直接用于32 KiB基础冒烟，但不能证明4 GB全空间正常。
 - 全空间测试必须生成新bitstream。最小改动可把顶层 `TEST_WORDS` 覆盖为536,870,912，但正式硬件验收应增强BIST测试模式、突发访问、进度和错误记录。
@@ -417,7 +409,6 @@ PLEASE IMPLEMENT THIS PLAN:
 ## 1. 结论与实施原则
 
 - 继续使用 AXI 最小工程作为验证底座。它比第32章 Demo 的 Native APP 接口更适合后续接入 PCIe/Aurora。
-- 原工程 `axi_ddr4_min_2020_2` 保持不变；新建 `C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2` 完成增强验证。
 - 当前最小工程与 `26_top_ddr4_rw` 的 DDR管脚、AK17差分时钟、AC34复位及T22/T23 LED约束逐项一致。XDC只做审计，不改变物理绑定。
 - 现有bitstream可以直接用于32 KiB基础冒烟，但不能证明4 GB全空间正常。
 - 全空间测试必须生成新bitstream。最小改动可把顶层 `TEST_WORDS` 覆盖为536,870,912，但正式硬件验收应增强BIST测试模式、突发访问、进度和错误记录。
@@ -619,7 +610,6 @@ SHA 检查第一次出现 5 个“缺失”是远端 PowerShell 5 按本地代�
 
 新工程有两份：
 
-- 远程机正式工程：`C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2`
 - 本机轻量备份：[axi_ddr4_full_bist_2020_2](E:/PCIE-CPU/axi_ddr4_full_bist_2020_2)
 
 建议优先看这些文件：
@@ -725,7 +715,6 @@ RTL 修改已通过语法编译，正在重跑原有行为回归，确认新增�
 远端行为仿真已发起，正在运行：
 
 ```text
-C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2
 ```
 
 日志：
@@ -768,7 +757,6 @@ logs\behavior_after_timing_fix_remote.log
 
 现在请先不要手动综合/实现：我启动的 `synth_1` 仍在运行，脚本之后会自动进入 `impl_1`，同时操作会冲突。你可以只读查看：
 
-- 主日志：`C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\logs\timing_fix2_compat_remote.log`
 - 综合实时日志：`...\prj\compat\axi_ddr4_full_bist_compat.runs\synth_1\runme.log`
 - 实现实时日志：`...\prj\compat\axi_ddr4_full_bist_compat.runs\impl_1\runme.log`
 
@@ -811,7 +799,6 @@ logs\behavior_after_timing_fix_remote.log
 
 请打开：
 
-`C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\prj\compat\axi_ddr4_full_bist_compat.xpr`
 
 在 Design Runs 中：
 
@@ -870,7 +857,6 @@ logs\behavior_after_timing_fix_remote.log
 远端对应目录：
 
 ```text
-C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2
 ```
 
 最新违例分析：

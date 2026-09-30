@@ -1,7 +1,0 @@
-﻿F:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v
-F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_tx_test_if.sv
-F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_tx.sv
-F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/tx/project/wave_tx.sim/sim_1/behav/xsim/glbl.v
-D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv
-D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv
-D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv

@@ -4,7 +4,6 @@
 -- Date        : Sat Sep 12 09:54:12 2026
 -- Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0_stub.vhdl
 -- Design      : ddr4_axi_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcku040-ffva1156-2-i

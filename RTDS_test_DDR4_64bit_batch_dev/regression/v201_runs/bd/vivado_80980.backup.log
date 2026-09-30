@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 14 14:06:46 2026
+# Process ID: 80980
+#-----------------------------------------------------------
+# set project_dir [file normalize [file join [file dirname [info script]] ..]]
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'ila_FDMA_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_CONV_DMA_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'fifo_cdc_pcie_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'fifo_AURORA_DATA64_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'ila_temp_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'fifo_cdc_aurora_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'ila_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:30 . Memory (MB): peak = 1110.141 ; gain = 0.000
+# update_compile_order -fileset sources_1
+# puts "MODULE_FILES=[get_files -all *CONV_DMA.v] [get_files -all *INFO_EXCH.v]"
+# open_bd_design [get_files design_1.bd]
+Adding component instance block -- xilinx.com:module_ref:CONV_DMA:1.0 - CONV_DMA_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_1
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf
+Adding component instance block -- xilinx.com:ip:xdma:4.1 - xdma_0
+Adding component instance block -- xilinx.com:module_ref:INFO_EXCH:1.0 - INFO_EXCH_0
+CRITICAL WARNING: [BD 41-2162] Unable to find pin <RX_READY_BLOCKS> in cell <INFO_EXCH_0> while setting up net connections during loading of BD file.
+CRITICAL WARNING: [BD 41-2162] Unable to find pin <RX_HEAD_SEQ> in cell <INFO_EXCH_0> while setting up net connections during loading of BD file.
+CRITICAL WARNING: [BD 41-2162] Unable to find pin <RX_DROPPED_FRAMES> in cell <INFO_EXCH_0> while setting up net connections during loading of BD file.
+CRITICAL WARNING: [BD 41-2162] Unable to find pin <fdma_wdone> in cell <CONV_DMA_0> while setting up net connections during loading of BD file.
+CRITICAL WARNING: [BD 41-2162] Unable to find pin <fdma_werror> in cell <CONV_DMA_0> while setting up net connections during loading of BD file.
+# foreach cell {CONV_DMA_0 INFO_EXCH_0} {
+#     set pin_nets {}; set intf_nets {}; set configs {}
+#     foreach pin [get_bd_pins -of_objects [get_bd_cells $cell]] {
+#         set net [get_bd_nets -quiet -of_objects $pin]
+#         if {[llength $net]} {lappend pin_nets [list [file tail $pin] $net]}
+#     }
+#     foreach pin [get_bd_intf_pins -of_objects [get_bd_cells $cell]] {
+#         set net [get_bd_intf_nets -quiet -of_objects $pin]
+#         if {[llength $net]} {lappend intf_nets [list [file tail $pin] $net]}
+#     }
+#     foreach property [list_property [get_bd_cells $cell]] {
+#         if {[string match CONFIG.* $property]} {lappend configs $property [get_property $property [get_bd_cells $cell]]}
+#     }
+#     set reference [expr {$cell eq "CONV_DMA_0" ? "CONV_DMA" : "INFO_EXCH"}]
+#     delete_bd_objs [get_bd_cells $cell]
+#     create_bd_cell -type module -reference $reference $cell
+#     if {[llength $configs]} {set_property -dict $configs [get_bd_cells $cell]}
+#     foreach item $pin_nets {
+#         lassign $item name net
+#         if {[llength [get_bd_pins -quiet $cell/$name]]} {connect_bd_net -net $net [get_bd_pins $cell/$name]}
+#     }
+#     foreach item $intf_nets {
+#         lassign $item name net
+#         connect_bd_intf_net -intf_net $net [get_bd_intf_pins $cell/$name]
+#     }
+# }
+WARNING: [IP_Flow 19-3571] IP 'design_1_CONV_DMA_0_1' is restricted:
+* Detected changes to module reference file(s).
+WARNING: [BD 5-263] Attempt to change 'Component_Name' on 'CONV_DMA_0' to 'design_1_CONV_DMA_0_0' is not allowed and is ignored.
+ERROR: [Common 17-163] Missing value for option 'object2', please type 'connect_bd_intf_net -help' for usage info.
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 14 14:07:30 2026...

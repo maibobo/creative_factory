@@ -1,0 +1,16 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.src_drv_cb
+Compiling module xil_defaultlib.tx_drv_cb
+Compiling module xil_defaultlib.tx_mon_cb
+Compiling module xpm.xpm_cdc_async_rst(INIT_SYNC_FF=1...
+Compiling module xpm.xpm_cdc_single(INIT_SYNC_FF=1,SR...
+Compiling module xpm.xpm_cdc_handshake(INIT_SYNC_FF=1...
+Compiling module xil_defaultlib.glbl

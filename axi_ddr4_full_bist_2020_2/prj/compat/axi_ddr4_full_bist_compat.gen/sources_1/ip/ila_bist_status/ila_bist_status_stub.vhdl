@@ -4,7 +4,6 @@
 -- Date        : Sat Sep 12 09:50:56 2026
 -- Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status_stub.vhdl
 -- Design      : ila_bist_status
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcku040-ffva1156-2-i

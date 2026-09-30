@@ -1,0 +1,470 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Sep 25 17:56:11 2026
+# Process ID: 15008
+# Current directory: E:/PCIE-CPU
+#-----------------------------------------------------------
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set out [file join $root evidence local_wave_sessions]
+# file mkdir $out
+# foreach selected {1g tx rx_fifo ring axi axi_tail regs} {
+#     set case_dir [file join $out $selected]
+#     file mkdir $case_dir
+#     create_project -force wave_$selected [file join $case_dir project] -part xcku040-ffva1156-2-e
+#     set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
+#     if {$selected in {axi axi_tail}} {
+#     }
+#     if {$selected eq "tx"} {add_files -norecurse [list [file join $root {external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v}]]}
+#     set_property xsim.elaborate.debug_level all [get_filesets sim_1]
+#     set_property xsim.simulate.runtime 0ns [get_filesets sim_1]
+#     update_compile_order -fileset sim_1
+#     set fh [open [file join $case_dir files.txt] w]
+#     foreach src [get_files -compile_order sources -used_in simulation -of_objects [get_filesets sim_1]] {puts $fh [file normalize $src]}
+#     close $fh
+#     launch_simulation -mode behavioral
+#     open_vcd [file join $case_dir ${selected}.vcd]
+#     # The database records all traceable HDL objects, including XPM internals.
+#     run all
+#     close_vcd
+#     if {[string length [current_wave_config]] > 0} {close_wave_config [current_wave_config]}
+#     create_wave_config ${selected}_complete
+#         lassign $spec label pattern
+#         set group [add_wave_group $label]
+#         add_wave -into $group [get_objects $pattern]
+#     }
+#     set group [add_wave_group 04_ALL_HIERARCHY]
+#     save_wave_config [file join $case_dir ${selected}.wcfg]
+#     set sim_dir [file join $case_dir project wave_${selected}.sim sim_1 behav xsim]
+#     close_sim
+#     file copy -force [file join $sim_dir simulate.log] [file join $case_dir simulation.log]
+#     close_project
+#     puts "LOCAL_CASE_COMPLETE=$selected"
+# }
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:35 . Memory (MB): peak = 921.895 ; gain = 0.000
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 921.895 ; gain = 0.000
+Command: launch_simulation -mode behavioral
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '16' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.src_drv_cb
+Compiling module xil_defaultlib.tx_drv_cb
+Compiling module xil_defaultlib.tx_mon_cb
+Compiling module xpm.xpm_cdc_async_rst(INIT_SYNC_FF=1...
+Compiling module xpm.xpm_cdc_single(INIT_SYNC_FF=1,SR...
+Compiling module xpm.xpm_cdc_handshake(INIT_SYNC_FF=1...
+Compiling module xil_defaultlib.glbl
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:00:22 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:01:01 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '61' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-98] *** Running xsim
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+## current_wave_config
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:01:33 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 921.895 ; gain = 0.000
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=1g
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 921.895 ; gain = 0.000
+Command: launch_simulation -mode behavioral
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [VRFC 10-311] analyzing module fdma_aurora_brg_tx
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.fdma_cb
+Compiling module xil_defaultlib.tx_cb
+Compiling module xil_defaultlib.monitor_cb
+Compiling module xpm.xpm_cdc_sync_rst(DEST_SYNC_FF=2,...
+Compiling module xpm.xpm_fifo_rst(COMMON_CLOCK=0)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=9)
+Compiling module xpm.xpm_cdc_gray(INIT_SYNC_FF=1,WIDT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=10)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_async(FIFO_WRITE_DEPTH=...
+Compiling module xil_defaultlib.fdma_aurora_brg_tx(MEM_WINDOW_BY...
+Compiling module xil_defaultlib.glbl
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:01:38 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:25 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '25' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-98] *** Running xsim
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+## current_wave_config
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:39 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+TX CASE PASS frames=1 peak=2
+TX CASE PASS frames=300 peak=504
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=tx
+Command: launch_simulation -mode behavioral
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.user_drv_cb
+Compiling module xil_defaultlib.mem_drv_cb
+Compiling module xil_defaultlib.mem_mon_cb
+Compiling module xpm.xpm_cdc_async_rst(INIT_SYNC_FF=1...
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_cdc_single(DEST_SYNC_FF=2,SR...
+Compiling module xpm.xpm_cdc_sync_rst(DEST_SYNC_FF=2,...
+Compiling module xpm.xpm_fifo_rst(COMMON_CLOCK=0)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=5...
+Compiling module xpm.xpm_counter_updn
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_fifo_reg_vec
+Compiling module xpm.xpm_cdc_gray(INIT_SYNC_FF=1,WIDT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=5)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_async(FIFO_MEMORY_TYPE=...
+Compiling module xil_defaultlib.glbl
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:02:41 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:23 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '23' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-98] *** Running xsim
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+## current_wave_config
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:36 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=rx_fifo
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 921.895 ; gain = 0.000
+Command: launch_simulation -mode behavioral
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '9' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.host_cb
+Compiling module xil_defaultlib.fdma_cb
+Compiling module xil_defaultlib.glbl
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:03:38 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '18' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-98] *** Running xsim
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+## current_wave_config
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:32 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=ring
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 921.895 ; gain = 0.000
+Command: launch_simulation -mode behavioral
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [VRFC 10-311] analyzing module CONV_DMA
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.driver_cb
+Compiling module xil_defaultlib.CONV_DMA_default
+Compiling module xil_defaultlib.glbl
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:04:34 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:21 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '21' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-98] *** Running xsim
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+## current_wave_config
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:33 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+WRITE_BEGIN addr=0000000000100000 count=         16
+WRITE_BEGIN addr=0000000000140000 count=         16
+WRITE_BEGIN addr=0000000000180000 count=         16
+WRITE_BEGIN addr=00000000001c0000 count=         16
+WRITE_BEGIN addr=0000000000200000 count=         16
+WRITE_BEGIN addr=0000000000240000 count=         16
+WRITE_BEGIN addr=0000000000280000 count=         16
+WRITE_BEGIN addr=00000000002c0000 count=         16
+WRITE_BEGIN addr=0000000000180ff8 count=        520
+WRITE_BEGIN addr=0000000000200000 count=         16
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=axi
+Command: launch_simulation -mode behavioral
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [VRFC 10-311] analyzing module CONV_DMA
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.driver_cb
+Compiling module xil_defaultlib.CONV_DMA_default
+Compiling module xil_defaultlib.glbl
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:05:28 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:22 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '22' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-98] *** Running xsim
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+## current_wave_config
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:35 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+WRITE_BEGIN addr=00000000002ffff8 count=          1
+WRITE_BEGIN addr=00000000002ffff8 count=          1
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:17 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=axi_tail
+create_project: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 921.895 ; gain = 0.000
+update_compile_order: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 921.895 ; gain = 0.000
+Command: launch_simulation -mode behavioral
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [VRFC 10-311] analyzing module INFO_EXCH
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '10' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.driver_cb
+Compiling module xil_defaultlib.monitor_cb
+Compiling module xil_defaultlib.INFO_EXCH_default
+Compiling module xil_defaultlib.glbl
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 25 18:06:36 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:19 . Memory (MB): peak = 921.895 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '19' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-98] *** Running xsim
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+## current_wave_config
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:35 . Memory (MB): peak = 921.895 ; gain = 0.000
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 921.895 ; gain = 0.000
+LOCAL_CASE_COMPLETE=regs
+# puts "LOCAL_ALL_COMPLETE"
+LOCAL_ALL_COMPLETE
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 25 18:06:45 2026...

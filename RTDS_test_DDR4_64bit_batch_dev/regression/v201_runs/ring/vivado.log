@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 14 14:02:09 2026
+# Process ID: 62188
+#-----------------------------------------------------------
+# set root [file normalize [file join [file dirname [info script]] ../..]]
+# set selected [lindex $argv 0]
+# if {$selected ni {1g ring axi rx_fifo}} {error "expected 1g/ring/axi"}
+# create_project -force module_test ./project -part xcku040-ffva1156-2-e
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+# set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
+# if {$selected eq "axi"} {
+# }
+# set_property xsim.simulate.runtime all [get_filesets sim_1]
+# launch_simulation -mode behavioral
+Command: launch_simulation -mode behavioral
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.host_cb
+Compiling module xil_defaultlib.fdma_cb
+Compiling module xil_defaultlib.glbl
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 14 14:02:26 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1109.125 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-98] *** Running xsim
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+## current_wave_config
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+INFO: [USF-XSim-97] XSim simulation ran for all
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 1109.125 ; gain = 0.000
+# close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1109.125 ; gain = 0.000
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 14 14:02:33 2026...

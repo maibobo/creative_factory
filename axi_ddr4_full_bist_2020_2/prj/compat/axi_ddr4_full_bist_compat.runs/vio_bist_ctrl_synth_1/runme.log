@@ -21,8 +21,6 @@ INFO: [Synth 8-7075] Helper process launched with PID 20456
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1410.035 ; gain = 254.367
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'vio_bist_ctrl' [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/synth/vio_bist_ctrl.v:59]
-INFO: [Synth 8-6155] done synthesizing module 'vio_bist_ctrl' (8#1) [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/synth/vio_bist_ctrl.v:59]
 ---------------------------------------------------------------------------------
 Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1492.766 ; gain = 337.098
 ---------------------------------------------------------------------------------
@@ -40,10 +38,6 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl_ooc.xdc]
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl_ooc.xdc]
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl.xdc]
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl.xdc]
 Completed Processing XDC Constraints
 
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1581.012 ; gain = 0.000
@@ -260,10 +254,8 @@ INFO: [Common 17-83] Releasing license: Synthesis
 17 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
 synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:54 . Memory (MB): peak = 1752.504 ; gain = 640.812
-INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/vio_bist_ctrl_synth_1/vio_bist_ctrl.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP vio_bist_ctrl, cache-ID = a1a48eb71e6990a8
 INFO: [Coretcl 2-1174] Renamed 11 cell refs.
-INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/vio_bist_ctrl_synth_1/vio_bist_ctrl.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file vio_bist_ctrl_utilization_synth.rpt -pb vio_bist_ctrl_utilization_synth.pb
 INFO: [Common 17-206] Exiting Vivado at Sat Sep 12 09:49:44 2026...

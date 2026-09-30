@@ -4,7 +4,6 @@
 -- Date        : Wed Sep 16 09:20:08 2026
 -- Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl_sim_netlist.vhdl
 -- Design      : vio_bist_ctrl
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

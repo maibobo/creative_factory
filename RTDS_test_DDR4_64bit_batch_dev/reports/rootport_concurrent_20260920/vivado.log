@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Sep 20 15:28:01 2026
+# Process ID: 33740
+#-----------------------------------------------------------
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# cd $work
+# foreach step {compile elaborate simulate} {
+#     puts "V201_STEP2_BEGIN $step"
+#     set failed [catch {exec cmd /c ${step}.bat 2>@1} output]
+#     puts $output
+# }
+V201_STEP2_BEGIN compile
+"xvlog --incr --relax -L uvm -L xdma_v4_1_8 -prj board_vlog.prj"
+"xvhdl --incr --relax -prj board_vhdl.prj"
+V201_STEP2_BEGIN elaborate
+"xelab -wto 6685dc9037bc45bd8dc34b12c53cbeb6 --incr --debug off --relax --mt 2 -d "XILINX_SIMULATOR=" -d "DDR4_SIM_RAM=" -L xil_defaultlib -L gtwizard_ultrascale_v1_7_9 -L blk_mem_gen_v8_4_4 -L xdma_v4_1_8 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_22 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_21 -L axi_crossbar_v2_1_23 -L axi_clock_converter_v2_1_21 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot board_behav xil_defaultlib.board xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6685dc9037bc45bd8dc34b12c53cbeb6 --incr --debug off --relax --mt 2 -d XILINX_SIMULATOR= -d DDR4_SIM_RAM= -L xil_defaultlib -L gtwizard_ultrascale_v1_7_9 -L blk_mem_gen_v8_4_4 -L xdma_v4_1_8 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_22 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_21 -L axi_crossbar_v2_1_23 -L axi_clock_converter_v2_1_21 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot board_behav xil_defaultlib.board xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+V201_STEP2_BEGIN simulate

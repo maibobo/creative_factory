@@ -5,11 +5,8 @@
 # Start of session at: Tue Sep 15 16:51:24 2026
 # Process ID: 64624
 # Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
-# Command line: vivado.exe -mode batch -nojournal -source C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_smoke_only.tcl -log C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\logs\smoke_after_wdata_prefetch_remote.log
-# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/logs/smoke_after_wdata_prefetch_remote.log
 # Journal file: 
 #-----------------------------------------------------------
-source {C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_smoke_only.tcl}
 # set script_dir [file dirname [file normalize [info script]]]
 # set project_root [file normalize [file join $script_dir ..]]
 # set vivado_bin [file join $::env(XILINX_VIVADO) bin]
@@ -31,14 +28,9 @@ source {C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_smoke_only.tcl}
 #     puts $command_output
 # }
 # run_checked [list $xvlog --log xvlog_rtl.log $rtl_file]
-RUN C:/Xilinx/Vivado/2020.2/bin/xvlog.bat --log xvlog_rtl.log C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v" into library work
 INFO: [VRFC 10-311] analyzing module AXI_DDR_FULL_BIST
 # run_checked [list $xvlog --sv --log xvlog_smoke.log $model_file $tb_file]
-RUN C:/Xilinx/Vivado/2020.2/bin/xvlog.bat --sv --log xvlog_smoke.log C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/axi4_ram_model.sv C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/axi4_ram_model.sv" into library work
 INFO: [VRFC 10-311] analyzing module AXI4_RAM_MODEL
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv" into library work
 INFO: [VRFC 10-311] analyzing module TB_AXI_DDR_FULL_BIST
 # run_checked [list $xelab --log xelab_smoke.log --debug typical \
 #     -top TB_AXI_DDR_FULL_BIST -snapshot tb_smoke]
@@ -63,7 +55,6 @@ Built simulation snapshot tb_smoke
   **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
-source C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work_smoke/xsim.dir/tb_smoke/webtalk/xsim_webtalk.tcl -notrace
 INFO: [Common 17-206] Exiting Webtalk at Tue Sep 15 16:51:37 2026...
 # run_checked [list $xsim tb_smoke --runall --wdb smoke.wdb --log xsim_smoke.log]
 RUN C:/Xilinx/Vivado/2020.2/bin/xsim.bat tb_smoke --runall --wdb smoke.wdb --log xsim_smoke.log
@@ -80,7 +71,6 @@ Time resolution is 1 ps
 run -all
 CASE_PASS name=smoke_random_backpressure expected_pass=1 writes=2 reads=2 errors=0 cycles=115
 AXI_DDR_FULL_BIST_SIM_PASS smoke_bursts=2
-$finish called at time : 428162 ps : File "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv" Line 336
 exit
 INFO: [Common 17-206] Exiting xsim at Tue Sep 15 16:51:45 2026...
 # puts "SMOKE_ONLY_PASS"

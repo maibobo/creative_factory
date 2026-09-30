@@ -1,0 +1,65 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Sep 20 19:44:15 2026
+# Process ID: 4836
+#-----------------------------------------------------------
+# set script_dir [file dirname [file normalize [info script]]]
+# set root [file normalize [file join $script_dir ..]]
+# set report_dir [file join $root reports impl_after_pin_constraint_fix_20260920]
+# file mkdir $report_dir
+# open_project $xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx_2020_2/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1000.145 ; gain = 0.000
+# set pin_file [get_files -quiet -all $pin_xdc]
+# if {[llength $pin_file] == 0} {
+#     add_files -fileset constrs_1 -norecurse $pin_xdc
+#     set pin_file [get_files -quiet -all $pin_xdc]
+# }
+# if {[llength $pin_file] != 1} {
+# }
+# set_property USED_IN_SYNTHESIS true $pin_file
+# set_property USED_IN_IMPLEMENTATION true $pin_file
+# set_property TARGET_CONSTRS_FILE $pin_xdc [get_filesets constrs_1]
+# reset_run impl_1
+# launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Sep 20 19:45:46 2026] Launched impl_1...
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:01:04 . Memory (MB): peak = 1000.145 ; gain = 0.000
+# wait_on_run impl_1
+[Sun Sep 20 19:45:46 2026] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log TOP.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source TOP.tcl -notrace
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source TOP.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1000.371 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1000.371 ; gain = 0.000
+Command: link_design -top TOP -part xcku040-ffva1156-2-i
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+INFO: [Project 1-454] Reading design checkpoint 'f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.dcp' for cell 'U_AURORA_1G/aurora_i'
+Netlist sorting complete. Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1312.340 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2043 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: u_pcie/ila_FDMA_inst UUID: dbfac52f-6aad-50c0-82b7-35fd11508148 
+INFO: [Chipscope 16-324] Core: u_temp_rd/ila_temp_inst UUID: f764fd9b-5a2a-50e5-9a36-6d20613a5bd5 
+Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/ip_0/synth/aurora_8b10b_1p25g_gt.xdc] for cell 'U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst'
+Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/ip_0/synth/aurora_8b10b_1p25g_gt.xdc] for cell 'U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst'
+Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.dcp'

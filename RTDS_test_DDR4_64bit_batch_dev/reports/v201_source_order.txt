@@ -1,0 +1,11 @@
+Source compile order for 'synthesis' with fileset 'sources_1' in source management mode 'All':
+Index  File Name                             Used_In      File_Type  Library         Ngc Wrapper  Full Path Name
+-----  ------------------------------------  -----------  ---------  --------------  -----------  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Missing instances for 'synthesis' with fileset 'sources_1':
+Index  Instance Path  File Path  Line
+-----  -------------  ---------  ----
+< empty >
+
+

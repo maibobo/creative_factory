@@ -1,4 +1,0 @@
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-TEST PASS tb_rtds_1g completed_frames=60
-$finish called at time : 283920 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_1g.sv" Line 159

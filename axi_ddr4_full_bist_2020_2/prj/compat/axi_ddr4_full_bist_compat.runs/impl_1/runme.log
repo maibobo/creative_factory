@@ -15,9 +15,6 @@ Command: link_design -top TOP_AXI_DDR4_FULL_BIST -part xcku040-ffva1156-2-i
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
-INFO: [Project 1-454] Reading design checkpoint 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0.dcp' for cell 'U_DDR4_AXI_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status.dcp' for cell 'U_ILA_BIST_STATUS'
-INFO: [Project 1-454] Reading design checkpoint 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl.dcp' for cell 'U_VIO_BIST_CTRL'
 Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.557 . Memory (MB): peak = 1348.574 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1437 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -26,35 +23,8 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: U_DDR4_AXI_0 UUID: 464e1ab7-e734-58de-b136-343c31add41f 
 INFO: [Chipscope 16-324] Core: U_ILA_BIST_STATUS UUID: 4ed7fa86-c25b-5e26-8399-aa4f8607db97 
 INFO: [Chipscope 16-324] Core: U_VIO_BIST_CTRL UUID: f4c0a97e-732a-513c-a9cd-46546e235dea 
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl.xdc] for cell 'U_VIO_BIST_CTRL'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl.xdc] for cell 'U_VIO_BIST_CTRL'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_0/bd_940f_microblaze_I_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_0/bd_940f_microblaze_I_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_1/bd_940f_rst_0_0_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_1/bd_940f_rst_0_0_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_1/bd_940f_rst_0_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_1/bd_940f_rst_0_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_2/bd_940f_ilmb_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_2/bd_940f_ilmb_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_3/bd_940f_dlmb_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_3/bd_940f_dlmb_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_10/bd_940f_iomodule_0_0_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_10/bd_940f_iomodule_0_0_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ip_0/ddr4_axi_0_microblaze_mcs_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ip_0/ddr4_axi_0_microblaze_mcs_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/par/ddr4_axi_0.xdc] for cell 'U_DDR4_AXI_0/inst'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/par/ddr4_axi_0.xdc] for cell 'U_DDR4_AXI_0/inst'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_v6_2/constraints/ila_impl.xdc] for cell 'U_ILA_BIST_STATUS/inst'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_v6_2/constraints/ila_impl.xdc] for cell 'U_ILA_BIST_STATUS/inst'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_v6_2/constraints/ila.xdc] for cell 'U_ILA_BIST_STATUS/inst'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_v6_2/constraints/ila.xdc] for cell 'U_ILA_BIST_STATUS/inst'
-Parsing XDC File [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/constr/top_axi_ddr4_full_bist.xdc]
-Finished Parsing XDC File [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/constr/top_axi_ddr4_full_bist.xdc]
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0_board.xdc] for cell 'U_DDR4_AXI_0/inst'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0_board.xdc] for cell 'U_DDR4_AXI_0/inst'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Generating merged BMM file for the design top 'TOP_AXI_DDR4_FULL_BIST'...
-INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/sw/calibration_0/Debug/calibration_ddr.elf 
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1556.977 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 549 instances were transformed.
@@ -221,13 +191,11 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.165 . Memory (MB): peak = 2675.336 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_opt.dcp' has been generated.
 write_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 2675.336 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file TOP_AXI_DDR4_FULL_BIST_drc_opted.rpt -pb TOP_AXI_DDR4_FULL_BIST_drc_opted.pb -rpx TOP_AXI_DDR4_FULL_BIST_drc_opted.rpx
 Command: report_drc -file TOP_AXI_DDR4_FULL_BIST_drc_opted.rpt -pb TOP_AXI_DDR4_FULL_BIST_drc_opted.pb -rpx TOP_AXI_DDR4_FULL_BIST_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_drc_opted.rpt.
 report_drc completed successfully
 report_drc: Time (s): cpu = 00:00:42 ; elapsed = 00:00:40 . Memory (MB): peak = 3664.125 ; gain = 988.789
 INFO: [Chipscope 16-240] Debug cores have already been implemented
@@ -478,7 +446,6 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 3664.125 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_placed.dcp' has been generated.
 write_checkpoint: Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 3664.125 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_io -file TOP_AXI_DDR4_FULL_BIST_io_placed.rpt
 report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.531 . Memory (MB): peak = 3664.125 ; gain = 0.000
@@ -500,7 +467,6 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 3664.125 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_physopt.dcp' has been generated.
 write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 3664.125 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
@@ -740,20 +706,17 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 3664.125 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_routed.dcp' has been generated.
 write_checkpoint: Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 3664.125 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file TOP_AXI_DDR4_FULL_BIST_drc_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_drc_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_drc_routed.rpx
 Command: report_drc -file TOP_AXI_DDR4_FULL_BIST_drc_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_drc_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_drc_routed.rpt.
 report_drc completed successfully
 report_drc: Time (s): cpu = 00:00:30 ; elapsed = 00:00:21 . Memory (MB): peak = 3664.125 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_methodology -file TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpx
 Command: report_methodology -file TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpt.
 report_methodology completed successfully
 report_methodology: Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 3664.125 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_power -file TOP_AXI_DDR4_FULL_BIST_power_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_power_summary_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_power_routed.rpx

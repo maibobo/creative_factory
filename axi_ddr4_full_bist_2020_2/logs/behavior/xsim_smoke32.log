@@ -4,10 +4,7 @@
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
 # Start of session at: Fri Sep 11 09:17:44 2026
 # Process ID: 74812
-# Current directory: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work
 # Command line: xsim.exe -log xsim_smoke32.log -mode tcl -source {xsim.dir/tb_smoke32/xsim_script.tcl}
-# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work/xsim_smoke32.log
-# Journal file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim_work\xsim.jou
 #-----------------------------------------------------------
 source xsim.dir/tb_smoke32/xsim_script.tcl
 # xsim {tb_smoke32} -wdb {smoke32.wdb} -autoloadwcfg -runall
@@ -26,7 +23,6 @@ CASE_PASS name=read_data_injection expected_pass=0 writes=2 reads=2 errors=1 cyc
 CASE_PASS name=write_response_injection expected_pass=0 writes=2 reads=2 errors=1 cycles=114
 CASE_PASS name=protocol_timeout expected_pass=0 writes=0 reads=0 errors=1 cycles=65
 AXI_DDR_FULL_BIST_SIM_PASS smoke_bursts=2
-$finish called at time : 523595478 ps : File "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv" Line 336
 run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:31 . Memory (MB): peak = 916.598 ; gain = 0.000
 exit
 INFO: [Common 17-206] Exiting xsim at Fri Sep 11 09:18:20 2026...

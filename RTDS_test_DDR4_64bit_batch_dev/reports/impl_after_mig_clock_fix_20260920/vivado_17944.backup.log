@@ -1,0 +1,143 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Sep 20 19:06:55 2026
+# Process ID: 17944
+#-----------------------------------------------------------
+# set script_dir [file dirname [file normalize [info script]]]
+# set root [file normalize [file join $script_dir ..]]
+# set report_dir [file join $root reports impl_after_mig_clock_fix_20260920]
+# file mkdir $report_dir
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx_2020_2/Vivado/2020.2/data/ip'.
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:03:32 . Memory (MB): peak = 1062.348 ; gain = 140.398
+# set_property verilog_define {DDR4_REAL} [get_filesets sources_1]
+# update_compile_order -fileset sources_1
+update_compile_order: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1062.348 ; gain = 0.000
+# reset_run synth_1
+# launch_runs synth_1 -jobs 4
+[Sun Sep 20 19:12:01 2026] Launched synth_1...
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:17 . Memory (MB): peak = 1062.348 ; gain = 0.000
+# wait_on_run synth_1
+[Sun Sep 20 19:12:01 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log TOP.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source TOP.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1000.297 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1000.297 ; gain = 0.000
+Command: synth_design -top TOP -part xcku040-ffva1156-2-i
+Starting synth_design
+WARNING: [Vivado_Tcl 4-391] The following IPs are missing output products for Synthesis target. These output products could be required for synthesis, please generate the output products using the generate_target or synth_ip command before running synth_design.
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12536
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:33 . Memory (MB): peak = 1297.383 ; gain = 272.844
+---------------------------------------------------------------------------------
+	Parameter AURORA_SIMULATION bound to: 0 - type: integer 
+	Parameter RX_PERIOD_CYCLES bound to: 25000000 - type: integer 
+	Parameter AURORA1G_PERIOD_CYCLES bound to: 63 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [D:/Xilinx_2020_2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:32998]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [D:/Xilinx_2020_2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:32998]
+	Parameter SIMULATION bound to: 0 - type: integer 
+	Parameter INIT_CLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter PMA_HOLD_TIME_MS bound to: 1600 - type: integer 
+	Parameter RESET_GAP_TIME_MS bound to: 20 - type: integer 
+	Parameter CYCLES_PER_MS bound to: 100000 - type: integer 
+	Parameter PMA_HOLD_CYCLES bound to: 160000000 - type: integer 
+	Parameter RESET_GAP_CYCLES bound to: 2000000 - type: integer 
+	Parameter PMA_HOLD_CYCLES bound to: 160000000 - type: integer 
+	Parameter RESET_GAP_CYCLES bound to: 2000000 - type: integer 
+	Parameter ST_HOLD_BOTH bound to: 2'b00 
+	Parameter ST_RESET_ONLY bound to: 2'b01 
+	Parameter ST_RUN bound to: 2'b10 
+	Parameter USE_CORE_TRAFFIC bound to: 1'b1 
+	Parameter USR_CLK_PCOUNT bound to: 9'b011111111 
+	Parameter EXAMPLE_SIMULATION bound to: 1'b0 
+	Parameter USE_LABTOOLS bound to: 1'b1 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STRB_WIDTH bound to: 8 - type: integer 
+	Parameter USE_4_NFC bound to: 0 - type: integer 
+	Parameter BC bound to: 8 - type: integer 
+	Parameter REM_WIDTH bound to: 3 - type: integer 
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter STRB_WIDTH bound to: 8 - type: integer 
+	Parameter BC bound to: 8 - type: integer 
+	Parameter ISUFC bound to: 0 - type: integer 
+	Parameter REM_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Xilinx_2020_2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (9#1) [D:/Xilinx_2020_2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE_DIV' [D:/Xilinx_2020_2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1122]
+	Parameter BUFGCE_DIVIDE bound to: 4 - type: integer 
+	Parameter CE_TYPE bound to: SYNC - type: string 
+	Parameter HARDSYNC_CLR bound to: FALSE - type: string 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_CLR_INVERTED bound to: 1'b0 
+	Parameter IS_I_INVERTED bound to: 1'b0 
+	Parameter SIM_DEVICE bound to: ULTRASCALE - type: string 
+	Parameter STARTUP_SYNC bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE_DIV' (13#1) [D:/Xilinx_2020_2/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1122]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter RST_ACTIVE_HIGH bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter DEF_VAL bound to: 1'b1 
+	Parameter INV_DEF_VAL bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (14#1) [D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STRB_WIDTH bound to: 4 - type: integer 
+	Parameter USE_UFC_REM bound to: 0 - type: integer 
+	Parameter USE_4_NFC bound to: 0 - type: integer 
+	Parameter BC bound to: 4 - type: integer 
+	Parameter REM_WIDTH bound to: 2 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter STRB_WIDTH bound to: 4 - type: integer 
+	Parameter BC bound to: 4 - type: integer 
+	Parameter USE_4_NFC bound to: 0 - type: integer 
+	Parameter REM_WIDTH bound to: 2 - type: integer 
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:01:27 . Memory (MB): peak = 1359.660 ; gain = 335.121
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 5 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 20 19:16:42 2026...
+[Sun Sep 20 19:17:33 2026] synth_1 finished
+WARNING: [Vivado 12-8222] Failed run(s) : 'synth_1'
+wait_on_run: Time (s): cpu = 00:00:02 ; elapsed = 00:05:32 . Memory (MB): peak = 1062.348 ; gain = 0.000
+# set synth_status [get_property STATUS [get_runs synth_1]]
+# set synth_progress [get_property PROGRESS [get_runs synth_1]]
+# if {$synth_progress ne "100%" || ![string match "*Complete*" $synth_status]} {
+# }
+    while executing
+    invoked from within
+"if {$synth_progress ne "100%" || ![string match "*Complete*" $synth_status]} {
+}"
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 20 19:17:34 2026...

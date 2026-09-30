@@ -1,4 +1,2 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/axi4_ram_model.sv" into library work
 INFO: [VRFC 10-311] analyzing module AXI4_RAM_MODEL
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv" into library work
 INFO: [VRFC 10-311] analyzing module TB_AXI_DDR_FULL_BIST

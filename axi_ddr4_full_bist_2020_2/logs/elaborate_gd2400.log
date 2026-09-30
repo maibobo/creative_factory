@@ -5,11 +5,8 @@
 # Start of session at: Fri Sep 11 09:19:25 2026
 # Process ID: 55348
 # Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
-# Command line: vivado.exe -mode batch -nojournal -log C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\logs\elaborate_gd2400.log -source C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\elaborate_project.tcl -tclargs gd2400
-# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/logs/elaborate_gd2400.log
 # Journal file: 
 #-----------------------------------------------------------
-source {C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\elaborate_project.tcl}
 # set script_dir [file dirname [file normalize [info script]]]
 # set project_root [file normalize [file join $script_dir ..]]
 # set profile_name [lindex $argv 0]
@@ -35,12 +32,10 @@ INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1390.348 ; gain = 251.117
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'TOP_AXI_DDR4_FULL_BIST' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:6]
 	Parameter AUTO_START bound to: 1 - type: integer 
 	Parameter AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter AXI_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter AXI_ID_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'AXI_DDR_FULL_BIST' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v:6]
 	Parameter ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter DATA_WIDTH bound to: 64 - type: integer 
 	Parameter ID_WIDTH bound to: 4 - type: integer 
@@ -60,15 +55,6 @@ INFO: [Synth 8-6157] synthesizing module 'AXI_DDR_FULL_BIST' [C:/project/RTDS/DD
 	Parameter BIST_READ_DATA bound to: 4'b0101 
 	Parameter BIST_HOLD bound to: 4'b0110 
 	Parameter BIST_DONE bound to: 4'b0111 
-INFO: [Synth 8-6155] done synthesizing module 'AXI_DDR_FULL_BIST' (1#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v:6]
-INFO: [Synth 8-6157] synthesizing module 'vio_bist_ctrl' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/vio_bist_ctrl/sim/vio_bist_ctrl.v:49]
-INFO: [Synth 8-6155] done synthesizing module 'vio_bist_ctrl' (2#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/vio_bist_ctrl/sim/vio_bist_ctrl.v:49]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:251]
-INFO: [Synth 8-6157] synthesizing module 'ila_bist_status' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/ila_bist_status/sim/ila_bist_status.v:49]
-INFO: [Synth 8-6155] done synthesizing module 'ila_bist_status' (3#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/ila_bist_status/sim/ila_bist_status.v:49]
-INFO: [Synth 8-6157] synthesizing module 'ddr4_axi_0' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/ddr4_axi_0/sim/ddr4_axi_0_stub.sv:69]
-INFO: [Synth 8-6155] done synthesizing module 'ddr4_axi_0' (4#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/ddr4_axi_0/sim/ddr4_axi_0_stub.sv:69]
-INFO: [Synth 8-6155] done synthesizing module 'TOP_AXI_DDR4_FULL_BIST' (5#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:6]
 ---------------------------------------------------------------------------------
 Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1466.516 ; gain = 327.285
 ---------------------------------------------------------------------------------

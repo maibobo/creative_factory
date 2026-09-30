@@ -6,7 +6,6 @@
 
 目标板是同一块组内自研 KU040 单板，FPGA 为 `xcku040-ffva1156-2-i`，板上包含四颗 GDQ3BFAM-WJ、PCIe、Aurora 和以太网。本工程只验证 DDR4，未并入 PCIe/Aurora/以太网，避免接口问题干扰 DDR 定位。
 
-原工程 `C:\project\RTDS\DDR\axi_ddr4_min_2020_2` 保持不变。新工程位于 `C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2`，采用 AXI4 64-bit 接口，便于后续移植到 PCIe/Aurora 数据通路。
 
 工程已经完成工程生成、RTL Elaborate、行为冒烟和两轮 compat 实现诊断。第二轮结构优化后的 RTL 已再次通过行为回归，但本次综合被按用户要求暂停，尚无新的实现结果。因此当前结论仍不是“可直接下载上板”：已有 bitstream 来自负 WNS 的实现，只能作为失败产物留档，不能作为正式测试版本。
 

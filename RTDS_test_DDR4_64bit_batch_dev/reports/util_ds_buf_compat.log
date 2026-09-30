@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 14 19:19:18 2026
+# Process ID: 76728
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Journal file: 
+#-----------------------------------------------------------
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set h [open $f r];
+# set src [read $h];
+# close $h
+# set backup [file join $root reports util_ds_buf_before_compat.vhd]
+# if {![file exists $backup]} {file copy $f $backup}
+# set h [open $backup r];
+# set src [read $h];
+# close $h
+# set start [string first {USE_IBUFDS_GTME5 :} $src]
+# set finish [string first {end generate USE_IBUFDS_GTME5;} $src]
+# if {$start < 0 || $finish < 0} {error "Unexpected util_ds_buf source"}
+# set section [string range $src $start $finish]
+# set section [regsub {REFCLK_CTL_DRV_SWING[^
+# ]*
+# } $section {}]
+# set section [regsub {REFCLK_EN_DRV[^
+# ]*
+# } $section {}]
+# set src [string replace $src $start $finish $section]
+# set start [string first {USE_OBUFDS_GTME5_ADV :} $src]
+# set finish [string first {end generate USE_OBUFDS_GTME5_ADV;} $src]
+# set section [string range $src $start $finish]
+# set section [string map [list {REFCLK_EN_TX_PATH  => BIT1,} {REFCLK_EN_TX_PATH  => BIT1} {RXRECCLK_SEL       => BIT2} {-- RXRECCLK_SEL removed: actual library uses RXRECCLKSEL input}] $section]
+# set section [string map [list {I            => OBUFDS_GTME5_ADV_I((4*i)+3 downto (4*i))} {I            => OBUFDS_GTME5_ADV_I((4*i)+3 downto (4*i)),
+#           RXRECCLKSEL => "00"}] $section]
+# set src [string replace $src $start $finish $section]
+# set h [open $f w];
+# puts -nonewline $h $src;
+# close $h
+# puts "UTIL_DS_BUF_SIM_COMPAT_APPLIED"
+UTIL_DS_BUF_SIM_COMPAT_APPLIED
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 14 19:19:21 2026...

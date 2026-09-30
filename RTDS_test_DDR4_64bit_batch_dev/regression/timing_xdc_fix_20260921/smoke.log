@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 21 07:16:38 2026
+# Process ID: 6780
+# Command line: vivado.exe -mode batch -source run_smoke.tcl -log smoke.log -journal smoke.jou
+#-----------------------------------------------------------
+source run_smoke.tcl
+# set out [file dirname [file normalize [info script]]]
+# file mkdir $out/smoke
+# cd $out/smoke
+# create_project -in_memory smoke -part xcku040-ffva1156-2-i
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 920.969 ; gain = 0.000
+# set_property verilog_define DDR4_SIM_RAM [get_filesets sim_1]
+# set_property xsim.simulate.runtime all [get_filesets sim_1]
+# launch_simulation -simset sim_1 -mode behavioral
+ERROR: [Common 17-53] User Exception: No open project. Please use Save Project As to save your work and re-do this operation.
+
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 21 07:19:27 2026...

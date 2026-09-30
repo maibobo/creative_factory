@@ -1,0 +1,63 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 21 07:25:34 2026
+# Process ID: 9208
+# Command line: vivado.exe -mode batch -source run_smoke.tcl -log smoke_retry.log -journal smoke_retry.jou
+#-----------------------------------------------------------
+source run_smoke.tcl
+# set out [file dirname [file normalize [info script]]]
+# file mkdir $out/smoke
+# cd $out/smoke
+# create_project smoke $out/smoke/project -part xcku040-ffva1156-2-i
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:32 . Memory (MB): peak = 1000.324 ; gain = 0.000
+# set_property verilog_define DDR4_SIM_RAM [get_filesets sim_1]
+# set_property xsim.simulate.runtime all [get_filesets sim_1]
+# launch_simulation -simset sim_1 -mode behavioral
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [VRFC 10-311] analyzing module glbl
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:17 . Memory (MB): peak = 1000.324 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '17' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.glbl
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-206] Exiting Webtalk at Mon Sep 21 07:29:04 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:01:13 . Memory (MB): peak = 1000.324 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '73' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-98] *** Running xsim
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+## current_wave_config
+DDR_READY_AFTER_TWO_CYCLES_PASS
+W_FIRST_SINGLE_PASS
+INCR16_8000_PASS
+INFO: [USF-XSim-97] XSim simulation ran for all
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:01:53 . Memory (MB): peak = 1000.324 ; gain = 0.000
+# close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1000.324 ; gain = 0.000
+# close_project
+# exit 0
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 21 07:29:17 2026...

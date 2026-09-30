@@ -4,7 +4,6 @@
 -- Date        : Sat Sep 12 09:49:43 2026
 -- Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl_stub.vhdl
 -- Design      : vio_bist_ctrl
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcku040-ffva1156-2-i

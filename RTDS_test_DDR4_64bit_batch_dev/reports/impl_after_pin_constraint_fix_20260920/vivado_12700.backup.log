@@ -1,0 +1,154 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Sep 20 19:49:50 2026
+# Process ID: 12700
+#-----------------------------------------------------------
+# set script_dir [file dirname [file normalize [info script]]]
+# set root [file normalize [file join $script_dir ..]]
+# set report_dir [file join $root reports impl_after_pin_constraint_fix_20260920]
+# file mkdir $report_dir
+# open_project $xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx_2020_2/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1010.895 ; gain = 0.000
+# set legacy_pin_file [get_files -quiet -all $pin_xdc]
+# if {[llength $legacy_pin_file] == 1} {
+#     remove_files -fileset constrs_1 $legacy_pin_file
+# }
+remove_files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1010.895 ; gain = 0.000
+# set ddr4_pin_file [get_files -quiet -all $ddr4_pin_xdc]
+# if {[llength $ddr4_pin_file] != 1} {
+# }
+# set_property USED_IN_SYNTHESIS true $ddr4_pin_file
+# set_property USED_IN_IMPLEMENTATION true $ddr4_pin_file
+# set_property TARGET_CONSTRS_FILE $ddr4_pin_xdc [get_filesets constrs_1]
+# reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Couldn't access process for termination
+
+# launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Sep 20 19:51:32 2026] Launched impl_1...
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:57 . Memory (MB): peak = 1010.895 ; gain = 0.000
+# wait_on_run impl_1
+[Sun Sep 20 19:51:32 2026] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log TOP.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source TOP.tcl -notrace
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source TOP.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1000.371 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1000.371 ; gain = 0.000
+Command: link_design -top TOP -part xcku040-ffva1156-2-i
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+INFO: [Project 1-454] Reading design checkpoint 'f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.dcp' for cell 'U_AURORA_1G/aurora_i'
+Netlist sorting complete. Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1312.340 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2043 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: u_pcie/ila_FDMA_inst UUID: dbfac52f-6aad-50c0-82b7-35fd11508148 
+INFO: [Chipscope 16-324] Core: u_temp_rd/ila_temp_inst UUID: f764fd9b-5a2a-50e5-9a36-6d20613a5bd5 
+Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/ip_0/synth/aurora_8b10b_1p25g_gt.xdc] for cell 'U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst'
+Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/ip_0/synth/aurora_8b10b_1p25g_gt.xdc] for cell 'U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst'
+Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.dcp'
+all_fanout: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1872.234 ; gain = 343.387
+Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g_clocks.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g_clocks.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+INFO: [Project 1-1715] 6 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+
+*** Running vivado
+    with args -log TOP.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source TOP.tcl -notrace
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source TOP.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 991.043 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 991.043 ; gain = 0.000
+Command: link_design -top TOP -part xcku040-ffva1156-2-i
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+INFO: [Project 1-454] Reading design checkpoint 'f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.dcp' for cell 'U_AURORA_1G/aurora_i'
+Netlist sorting complete. Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.188 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2043 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: u_pcie/ila_FDMA_inst UUID: dbfac52f-6aad-50c0-82b7-35fd11508148 
+INFO: [Chipscope 16-324] Core: u_temp_rd/ila_temp_inst UUID: f764fd9b-5a2a-50e5-9a36-6d20613a5bd5 
+Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/ip_0/synth/aurora_8b10b_1p25g_gt.xdc] for cell 'U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst'
+Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/ip_0/synth/aurora_8b10b_1p25g_gt.xdc] for cell 'U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst'
+Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.dcp'
+all_fanout: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1871.207 ; gain = 341.621
+Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g_clocks.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g_clocks.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+INFO: [Project 1-1715] 6 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'TOP'...
+INFO: [Project 1-1687] 4 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1875.133 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 865 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 244 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUF => IBUF_ANALOG: 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT(x2)): 8 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 72 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 31 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 1 instance 
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 20 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 204 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 260 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 10 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+
+33 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:01:39 ; elapsed = 00:02:08 . Memory (MB): peak = 1875.133 ; gain = 884.090
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku040'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1875.133 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: e08bb575
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 1875.133 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize MIG Cores

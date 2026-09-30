@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 14 17:23:11 2026
+# Process ID: 43184
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Journal file: 
+#-----------------------------------------------------------
+# set root [file normalize [file join [file dirname [info script]] ..]]
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:59 . Memory (MB): peak = 1088.863 ; gain = 0.000
+# set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
+# set f [file join $root {external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/ip/aurora_64b66b_0/aurora_64b66b_0.xci}]
+# if {![file exists $f]} {error "Missing required source: $f"}
+# if {[llength [get_files -quiet $f]] == 0} {add_files -norecurse -fileset sources_1 $f}
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 14 17:24:12 2026...

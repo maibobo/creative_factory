@@ -5,11 +5,8 @@
 # Start of session at: Fri Sep 11 09:17:32 2026
 # Process ID: 23872
 # Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
-# Command line: vivado.exe -mode batch -nojournal -log C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\logs\behavior_driver.log -source C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_behavior_sim.tcl
-# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/logs/behavior_driver.log
 # Journal file: 
 #-----------------------------------------------------------
-source {C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_behavior_sim.tcl}
 # set script_dir [file dirname [file normalize [info script]]]
 # set project_root [file normalize [file join $script_dir ..]]
 # set vivado_bin [file join $::env(XILINX_VIVADO) bin]
@@ -31,14 +28,9 @@ source {C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_behavior_sim.tcl}
 #     puts $command_output
 # }
 # run_checked [list $xvlog --log xvlog_rtl.log $rtl_file]
-RUN C:/Xilinx/Vivado/2020.2/bin/xvlog.bat --log xvlog_rtl.log C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v" into library work
 INFO: [VRFC 10-311] analyzing module AXI_DDR_FULL_BIST
 # run_checked [list $xvlog --sv --log xvlog_smoke32.log -d TB_EXTENDED $model_file $tb_file]
-RUN C:/Xilinx/Vivado/2020.2/bin/xvlog.bat --sv --log xvlog_smoke32.log -d TB_EXTENDED C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/axi4_ram_model.sv C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/axi4_ram_model.sv" into library work
 INFO: [VRFC 10-311] analyzing module AXI4_RAM_MODEL
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv" into library work
 INFO: [VRFC 10-311] analyzing module TB_AXI_DDR_FULL_BIST
 # run_checked [list $xelab --log xelab_smoke32.log --debug typical \
 #     -top TB_AXI_DDR_FULL_BIST -snapshot tb_smoke32]
@@ -82,15 +74,11 @@ CASE_PASS name=read_data_injection expected_pass=0 writes=2 reads=2 errors=1 cyc
 CASE_PASS name=write_response_injection expected_pass=0 writes=2 reads=2 errors=1 cycles=114
 CASE_PASS name=protocol_timeout expected_pass=0 writes=0 reads=0 errors=1 cycles=65
 AXI_DDR_FULL_BIST_SIM_PASS smoke_bursts=2
-$finish called at time : 523595478 ps : File "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv" Line 336
 run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:31 . Memory (MB): peak = 916.598 ; gain = 0.000
 exit
 INFO: [Common 17-206] Exiting xsim at Fri Sep 11 09:18:20 2026...
 # run_checked [list $xvlog --sv --log xvlog_smoke4096.log -d TB_SMOKE_4096 $model_file $tb_file]
-RUN C:/Xilinx/Vivado/2020.2/bin/xvlog.bat --sv --log xvlog_smoke4096.log -d TB_SMOKE_4096 C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/axi4_ram_model.sv C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/axi4_ram_model.sv" into library work
 INFO: [VRFC 10-311] analyzing module AXI4_RAM_MODEL
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv" into library work
 INFO: [VRFC 10-311] analyzing module TB_AXI_DDR_FULL_BIST
 # run_checked [list $xelab --log xelab_smoke4096.log --debug typical \
 #     -top TB_AXI_DDR_FULL_BIST -snapshot tb_smoke4096]
@@ -124,7 +112,6 @@ Time resolution is 1 ps
 run -all
 CASE_PASS name=smoke_random_backpressure expected_pass=1 writes=256 reads=256 errors=0 cycles=14488
 AXI_DDR_FULL_BIST_SIM_PASS smoke_bursts=256
-$finish called at time : 48318998 ps : File "C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/sim/tb_axi_ddr_full_bist.sv" Line 336
 exit
 INFO: [Common 17-206] Exiting xsim at Fri Sep 11 09:18:39 2026...
 # puts "BEHAVIOR_REGRESSION_PASS"

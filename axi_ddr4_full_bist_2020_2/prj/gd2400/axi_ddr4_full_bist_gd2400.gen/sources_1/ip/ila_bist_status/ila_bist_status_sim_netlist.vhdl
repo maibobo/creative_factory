@@ -4,7 +4,6 @@
 -- Date        : Wed Sep 16 09:20:41 2026
 -- Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/gd2400/axi_ddr4_full_bist_gd2400.gen/sources_1/ip/ila_bist_status/ila_bist_status_sim_netlist.vhdl
 -- Design      : ila_bist_status
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

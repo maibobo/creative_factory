@@ -1,7 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_rx_block_writer.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RTDS_RX_BLOCK_WRITER
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_ring_test_if.sv" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_ring.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_rtds_ring
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/ring/project/wave_ring.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

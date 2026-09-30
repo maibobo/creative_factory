@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 14 19:32:01 2026
+# Process ID: 59580
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Journal file: 
+#-----------------------------------------------------------
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set project_xml [read $h];
+# close $h
+# set active {}
+# foreach {whole path} [regexp -all -inline {<File Path="([^"]+)"} $project_xml] {
+# }
+# set dest [file normalize [file join $root archive_legacy_20260914]]
+# file mkdir $dest
+# set log [open [file join $root reports legacy_cleanup.txt] w]
+#  set path [file normalize [file join $root $name]]
+#  if {[file dirname $path] ne $root} {error "Unsafe cleanup target: $path"}
+#  set used 0
+#  foreach f $active {
+#   set f [file normalize $f]
+#   if {$f eq $path || [string first "$path/" $f] == 0} {set used 1}
+#  }
+#  if {$used} {puts $log "RETAIN active dependency: $path"; continue}
+#  if {[file exists $path]} {
+#   if {[file exists [file join $dest $name]]} {error "Archive already exists: $name"}
+#   file rename $path [file join $dest $name]
+#   puts $log "ARCHIVED $path -> $dest/$name"
+#  }
+# }
+# puts $log "Historical scripts under tcl/ and regression/ may refer to the archived project; they are not V2.01 entry points."
+# close $log
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 14 19:32:05 2026...

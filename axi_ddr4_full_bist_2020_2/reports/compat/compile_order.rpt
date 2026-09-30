@@ -1,11 +1,6 @@
 Source compile order for 'synthesis' with fileset 'sources_1' in source management mode 'None':
 Index  File Name                 Used_In      File_Type  Library         Ngc Wrapper  Full Path Name
 -----  ------------------------  -----------  ---------  --------------  -----------  -----------------------------------------------------------------------------------------------------------------------------------------
-1      axi_ddr_full_bist.v       Synth & Sim  Verilog    xil_defaultlib  No           C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v
-2      top_axi_ddr4_full_bist.v  Synth & Sim  Verilog    xil_defaultlib  No           C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v
-3      vio_bist_ctrl.v           Synth & Sim  Verilog    xil_defaultlib  No           C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/sim/vio_bist_ctrl.v
-4      ila_bist_status.v         Synth & Sim  Verilog    xil_defaultlib  No           C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/sim/ila_bist_status.v
-5      ddr4_axi_0_stub.sv        Synth & Sim  SVerilog   xil_defaultlib  No           C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/sim/ddr4_axi_0_stub.sv
 
 
 Constraint evaluation order for 'synthesis' with fileset 'sources_1' & with fileset 'constrs_1':

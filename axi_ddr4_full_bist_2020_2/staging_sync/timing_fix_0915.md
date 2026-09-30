@@ -1,7 +1,6 @@
 # KU040 DDR4 全空间 BIST 时序违例分析与修复方案
 
 - 日期：2026-09-15
-- 工程：`C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2`（compat 配置）
 - 数据来源：`prj\compat\axi_ddr4_full_bist_compat.runs\impl_1\TOP_AXI_DDR4_FULL_BIST_timing_summary_routed.rpt`（2026-09-15 15:45:28）
 - 关联文档：`KU040_DDR4全空间复核与验证记录.md`、`KU040_DDR4上板测试操作指南.md`
 
@@ -136,7 +135,6 @@ AXI_DDR_FULL_BIST_SIM_PASS smoke_bursts=2
 SMOKE_ONLY_PASS
 ```
 
-日志：`C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\logs\smoke_after_wdata_prefetch_remote.log`。
 
 本轮仅证明 RTL 编译、Elaborate 和 2-burst 行为冒烟；尚未重新综合/实现。请在远端 GUI 中重新运行 `synth_1` 和 `impl_1`，再确认 WNS/WHS。若 WNS 仍略负，优先使用 `phys_opt_design -directive AggressiveExplore` 和 `route_design -directive AggressiveExplore`，随后重新导出 worst-100；禁止用 false path、放宽 max delay 或降低 ui_clk 约束掩盖问题。
 

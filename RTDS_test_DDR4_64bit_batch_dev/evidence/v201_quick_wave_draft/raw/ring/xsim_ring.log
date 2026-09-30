@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Sep 20 15:55:51 2026
+# Process ID: 26516
+#-----------------------------------------------------------
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+##     if {![info exists ::env($required)]} {
+##         error "missing environment variable $required"
+##     }
+## }
+## if {[string length [current_wave_config]] == 0} {
+##     create_wave_config
+## }
+## log_wave -r ${top_scope}/*
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## add_wave -r ${top_scope}/*
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of automatic variables in Verilog/VHDL subprogram.
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+## log_vcd [get_objects -r ${top_scope}/*]
+## run all
+## close_vcd
+## }
+## exit
+INFO: [Common 17-206] Exiting xsim at Sun Sep 20 15:55:57 2026...

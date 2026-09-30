@@ -4,13 +4,8 @@
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
 # Start of session at: Fri Sep 11 16:45:32 2026
 # Process ID: 98900
-# Current directory: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent59352 C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\prj\compat\axi_ddr4_full_bist_compat.xpr
-# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/vivado.log
-# Journal file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.xpr
 update_compile_order -fileset sources_1
 launch_runs impl_1 -jobs 32
 wait_on_run impl_1

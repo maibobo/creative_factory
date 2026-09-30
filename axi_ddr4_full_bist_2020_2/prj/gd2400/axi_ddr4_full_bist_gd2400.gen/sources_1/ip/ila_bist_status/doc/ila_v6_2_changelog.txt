@@ -120,7 +120,6 @@
 
 2015.2:
  * Version 5.1 (Rev. 1)
- * Updated IP XDC constraints to fix Partial False path scenario in ILA when operated in mulit clock domain
  * Updated IP XDC constraints to fix critical warnings in High Speed Design Debugging mode
 
 2015.1:

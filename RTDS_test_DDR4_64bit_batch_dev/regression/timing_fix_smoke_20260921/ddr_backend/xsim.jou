@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 21 00:39:39 2026
+# Process ID: 2072
+# Command line: xsim.exe -mode tcl -source {xsim.dir/timing_fix_ddr_smoke/xsim_script.tcl}
+#-----------------------------------------------------------
+source xsim.dir/timing_fix_ddr_smoke/xsim_script.tcl
+run -all

@@ -5,11 +5,8 @@
 # Start of session at: Tue Sep 15 14:29:46 2026
 # Process ID: 15624
 # Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
-# Command line: vivado.exe -mode batch -nojournal -source C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_timing_fix_compat.tcl -log C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\logs\timing_fix2_compat_remote.log
-# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/logs/timing_fix2_compat_remote.log
 # Journal file: 
 #-----------------------------------------------------------
-source {C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_timing_fix_compat.tcl}
 # set script_dir [file dirname [file normalize [info script]]]
 # set project_root [file normalize [file join $script_dir ..]]
 # set project_file [file join $project_root prj compat axi_ddr4_full_bist_compat.xpr]
@@ -18,7 +15,6 @@ source {C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_timing_fix_compat.
 # file mkdir $report_dir
 # file mkdir $bit_dir
 # open_project $project_file
-WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.ip_user_files'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -28,7 +24,6 @@ open_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:26 . Memory (MB): peak 
 # reset_run synth_1
 # launch_runs synth_1 -jobs 4
 [Tue Sep 15 14:30:30 2026] Launched synth_1...
-Run output will be captured here: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/runme.log
 launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 1089.062 ; gain = 0.000
 # wait_on_run synth_1
 [Tue Sep 15 14:30:30 2026] Waiting for synth_1 to finish...
@@ -59,12 +54,10 @@ INFO: [Synth 8-7075] Helper process launched with PID 99240
 ---------------------------------------------------------------------------------
 Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1442.910 ; gain = 255.477
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'TOP_AXI_DDR4_FULL_BIST' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:6]
 	Parameter AUTO_START bound to: 1 - type: integer 
 	Parameter AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter AXI_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter AXI_ID_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'AXI_DDR_FULL_BIST' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v:6]
 	Parameter ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter DATA_WIDTH bound to: 64 - type: integer 
 	Parameter ID_WIDTH bound to: 4 - type: integer 
@@ -85,19 +78,6 @@ INFO: [Synth 8-6157] synthesizing module 'AXI_DDR_FULL_BIST' [C:/project/RTDS/DD
 	Parameter BIST_HOLD bound to: 4'b0110 
 	Parameter BIST_DONE bound to: 4'b0111 
 	Parameter BIST_READ_CHECK bound to: 4'b1000 
-INFO: [Synth 8-6155] done synthesizing module 'AXI_DDR_FULL_BIST' (1#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/axi_ddr_full_bist.v:6]
-INFO: [Synth 8-6157] synthesizing module 'vio_bist_ctrl' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/.Xil/Vivado-9584-DESKTOP-H0AB0MD/realtime/vio_bist_ctrl_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'vio_bist_ctrl' (2#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/.Xil/Vivado-9584-DESKTOP-H0AB0MD/realtime/vio_bist_ctrl_stub.v:6]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:251]
-INFO: [Synth 8-6157] synthesizing module 'ila_bist_status' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/.Xil/Vivado-9584-DESKTOP-H0AB0MD/realtime/ila_bist_status_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ila_bist_status' (3#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/.Xil/Vivado-9584-DESKTOP-H0AB0MD/realtime/ila_bist_status_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'ddr4_axi_0' [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/.Xil/Vivado-9584-DESKTOP-H0AB0MD/realtime/ddr4_axi_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ddr4_axi_0' (4#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/.Xil/Vivado-9584-DESKTOP-H0AB0MD/realtime/ddr4_axi_0_stub.v:6]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'U_VIO_BIST_CTRL'. This will prevent further optimization [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:231]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'U_ILA_BIST_STATUS'. This will prevent further optimization [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:251]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'U_AXI_DDR_FULL_BIST'. This will prevent further optimization [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:169]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'U_DDR4_AXI_0'. This will prevent further optimization [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:273]
-INFO: [Synth 8-6155] done synthesizing module 'TOP_AXI_DDR4_FULL_BIST' (5#1) [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/rtl/top_axi_ddr4_full_bist.v:6]
 ---------------------------------------------------------------------------------
 Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1516.164 ; gain = 328.730
 ---------------------------------------------------------------------------------
@@ -115,15 +95,6 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl/vio_bist_ctrl_in_context.xdc] for cell 'U_VIO_BIST_CTRL'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl/vio_bist_ctrl_in_context.xdc] for cell 'U_VIO_BIST_CTRL'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc] for cell 'U_DDR4_AXI_0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc] for cell 'U_DDR4_AXI_0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status/ila_bist_status_in_context.xdc] for cell 'U_ILA_BIST_STATUS'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status/ila_bist_status_in_context.xdc] for cell 'U_ILA_BIST_STATUS'
-Parsing XDC File [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/constr/top_axi_ddr4_full_bist.xdc]
-Finished Parsing XDC File [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/constr/top_axi_ddr4_full_bist.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/constr/top_axi_ddr4_full_bist.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_AXI_DDR4_FULL_BIST_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_AXI_DDR4_FULL_BIST_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
@@ -148,240 +119,6 @@ Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapse
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_act_n. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_act_n. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 5).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 6).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 7).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[10]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 8).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[10]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 9).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[11]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 10).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[11]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 11).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[12]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 12).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[12]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 13).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[13]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 14).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[13]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 15).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[14]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 16).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[14]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 17).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[15]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 18).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[15]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 19).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[16]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 20).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[16]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 21).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 22).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 23).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 24).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 25).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 26).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 27).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 28).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 29).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 30).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 31).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 32).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 33).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 34).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 35).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[8]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 36).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[8]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 37).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[9]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 38).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[9]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 39).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ba[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 40).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ba[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 41).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ba[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 42).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ba[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 43).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_bg[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 44).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_bg[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 45).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ck_c[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 46).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ck_c[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 47).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ck_t[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 48).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ck_t[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 49).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_cke[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 50).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_cke[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 51).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_cs_n[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 52).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_cs_n[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 53).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 54).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 55).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 56).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 57).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 58).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 59).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 60).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 61).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 62).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 63).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 64).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 65).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 66).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 67).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 68).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 69).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 70).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 71).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[10]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 72).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[10]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 73).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[11]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 74).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[11]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 75).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[12]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 76).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[12]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 77).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[13]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 78).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[13]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 79).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[14]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 80).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[14]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 81).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[15]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 82).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[15]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 83).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[16]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 84).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[16]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 85).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[17]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 86).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[17]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 87).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[18]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 88).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[18]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 89).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[19]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 90).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[19]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 91).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 92).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 93).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[20]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 94).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[20]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 95).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[21]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 96).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[21]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 97).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[22]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 98).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[22]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 99).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[23]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 100).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[23]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 101).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[24]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 102).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[24]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 103).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[25]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 104).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[25]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 105).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[26]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 106).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[26]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 107).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[27]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 108).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[27]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 109).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[28]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 110).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[28]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 111).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[29]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 112).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[29]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 113).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 114).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 115).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[30]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 116).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[30]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 117).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[31]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 118).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[31]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 119).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[32]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 120).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[32]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 121).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[33]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 122).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[33]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 123).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[34]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 124).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[34]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 125).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[35]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 126).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[35]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 127).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[36]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 128).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[36]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 129).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[37]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 130).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[37]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 131).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[38]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 132).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[38]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 133).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[39]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 134).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[39]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 135).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 136).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 137).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[40]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 138).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[40]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 139).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[41]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 140).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[41]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 141).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[42]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 142).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[42]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 143).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[43]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 144).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[43]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 145).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[44]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 146).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[44]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 147).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[45]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 148).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[45]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 149).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[46]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 150).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[46]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 151).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[47]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 152).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[47]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 153).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[48]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 154).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[48]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 155).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[49]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 156).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[49]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 157).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 158).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 159).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[50]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 160).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[50]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 161).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[51]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 162).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[51]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 163).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[52]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 164).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[52]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 165).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[53]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 166).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[53]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 167).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[54]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 168).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[54]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 169).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[55]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 170).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[55]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 171).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[56]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 172).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[56]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 173).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[57]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 174).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[57]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 175).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[58]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 176).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[58]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 177).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[59]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 178).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[59]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 179).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 180).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 181).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[60]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 182).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[60]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 183).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[61]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 184).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[61]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 185).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[62]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 186).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[62]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 187).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[63]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 188).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[63]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 189).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 190).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 191).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 192).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 193).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[8]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 194).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[8]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 195).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[9]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 196).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[9]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 197).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 198).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 199).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 200).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 201).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 202).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 203).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 204).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 205).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 206).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 207).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 208).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 209).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 210).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 211).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 212).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 213).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 214).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 215).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 216).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[1]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 217).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 218).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[2]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 219).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 220).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[3]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 221).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 222).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[4]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 223).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 224).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[5]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 225).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 226).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[6]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 227).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 228).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[7]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 229).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_odt[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 230).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_odt[0]. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 231).
-Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_reset_n. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 232).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_reset_n. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 233).
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_n. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 234).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk_n. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 235).
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clk_p. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 236).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk_p. (constraint file  c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0/ddr4_axi_0_in_context.xdc, line 237).
 Applied set_property KEEP_HIERARCHY = SOFT for U_VIO_BIST_CTRL. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U_DDR4_AXI_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U_ILA_BIST_STATUS. (constraint file  auto generated constraint).
@@ -600,7 +337,6 @@ INFO: [Common 17-83] Releasing license: Synthesis
 30 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
 synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 1959.391 ; gain = 870.582
-INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/synth_1/TOP_AXI_DDR4_FULL_BIST.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file TOP_AXI_DDR4_FULL_BIST_utilization_synth.rpt -pb TOP_AXI_DDR4_FULL_BIST_utilization_synth.pb
 INFO: [Common 17-206] Exiting Vivado at Tue Sep 15 14:59:29 2026...
 [Tue Sep 15 14:59:34 2026] synth_1 finished
@@ -610,7 +346,6 @@ wait_on_run: Time (s): cpu = 00:00:02 ; elapsed = 00:29:04 . Memory (MB): peak =
 # }
 # launch_runs impl_1 -to_step route_design -jobs 4
 [Tue Sep 15 14:59:47 2026] Launched impl_1...
-Run output will be captured here: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/runme.log
 launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 1089.062 ; gain = 0.000
 # wait_on_run impl_1
 [Tue Sep 15 14:59:47 2026] Waiting for impl_1 to finish...
@@ -630,9 +365,6 @@ Command: link_design -top TOP_AXI_DDR4_FULL_BIST -part xcku040-ffva1156-2-i
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
-INFO: [Project 1-454] Reading design checkpoint 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0.dcp' for cell 'U_DDR4_AXI_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_bist_status.dcp' for cell 'U_ILA_BIST_STATUS'
-INFO: [Project 1-454] Reading design checkpoint 'c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl.dcp' for cell 'U_VIO_BIST_CTRL'
 Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.530 . Memory (MB): peak = 1350.129 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1443 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -641,35 +373,8 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: U_DDR4_AXI_0 UUID: 464e1ab7-e734-58de-b136-343c31add41f 
 INFO: [Chipscope 16-324] Core: U_ILA_BIST_STATUS UUID: 4ed7fa86-c25b-5e26-8399-aa4f8607db97 
 INFO: [Chipscope 16-324] Core: U_VIO_BIST_CTRL UUID: f4c0a97e-732a-513c-a9cd-46546e235dea 
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl.xdc] for cell 'U_VIO_BIST_CTRL'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/vio_bist_ctrl/vio_bist_ctrl.xdc] for cell 'U_VIO_BIST_CTRL'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_0/bd_940f_microblaze_I_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_0/bd_940f_microblaze_I_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_1/bd_940f_rst_0_0_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_1/bd_940f_rst_0_0_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_1/bd_940f_rst_0_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_1/bd_940f_rst_0_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_2/bd_940f_ilmb_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_2/bd_940f_ilmb_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_3/bd_940f_dlmb_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_3/bd_940f_dlmb_0.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_10/bd_940f_iomodule_0_0_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/bd_0/ip/ip_10/bd_940f_iomodule_0_0_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ip_0/ddr4_axi_0_microblaze_mcs_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ip_0/ddr4_axi_0_microblaze_mcs_board.xdc] for cell 'U_DDR4_AXI_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/par/ddr4_axi_0.xdc] for cell 'U_DDR4_AXI_0/inst'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/par/ddr4_axi_0.xdc] for cell 'U_DDR4_AXI_0/inst'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_v6_2/constraints/ila_impl.xdc] for cell 'U_ILA_BIST_STATUS/inst'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_v6_2/constraints/ila_impl.xdc] for cell 'U_ILA_BIST_STATUS/inst'
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_v6_2/constraints/ila.xdc] for cell 'U_ILA_BIST_STATUS/inst'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ila_bist_status/ila_v6_2/constraints/ila.xdc] for cell 'U_ILA_BIST_STATUS/inst'
-Parsing XDC File [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/constr/top_axi_ddr4_full_bist.xdc]
-Finished Parsing XDC File [C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/constr/top_axi_ddr4_full_bist.xdc]
-Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0_board.xdc] for cell 'U_DDR4_AXI_0/inst'
-Finished Parsing XDC File [c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/ddr4_axi_0_board.xdc] for cell 'U_DDR4_AXI_0/inst'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Generating merged BMM file for the design top 'TOP_AXI_DDR4_FULL_BIST'...
-INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/sw/calibration_0/Debug/calibration_ddr.elf 
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1558.414 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 549 instances were transformed.
@@ -835,13 +540,11 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.074 . Memory (MB): peak = 2671.562 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_opt.dcp' has been generated.
 write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2671.562 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file TOP_AXI_DDR4_FULL_BIST_drc_opted.rpt -pb TOP_AXI_DDR4_FULL_BIST_drc_opted.pb -rpx TOP_AXI_DDR4_FULL_BIST_drc_opted.rpx
 Command: report_drc -file TOP_AXI_DDR4_FULL_BIST_drc_opted.rpt -pb TOP_AXI_DDR4_FULL_BIST_drc_opted.pb -rpx TOP_AXI_DDR4_FULL_BIST_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_drc_opted.rpt.
 report_drc completed successfully
 report_drc: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 3474.645 ; gain = 803.082
 INFO: [Chipscope 16-240] Debug cores have already been implemented
@@ -1092,7 +795,6 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3474.645 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_placed.dcp' has been generated.
 write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 3474.645 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_io -file TOP_AXI_DDR4_FULL_BIST_io_placed.rpt
 report_io: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.075 . Memory (MB): peak = 3474.645 ; gain = 0.000
@@ -1406,7 +1108,6 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 3474.645 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_physopt.dcp' has been generated.
 write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3474.645 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
@@ -1686,20 +1387,17 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 3558.121 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_routed.dcp' has been generated.
 write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 3558.121 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file TOP_AXI_DDR4_FULL_BIST_drc_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_drc_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_drc_routed.rpx
 Command: report_drc -file TOP_AXI_DDR4_FULL_BIST_drc_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_drc_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_drc_routed.rpt.
 report_drc completed successfully
 report_drc: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 3558.121 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_methodology -file TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpx
 Command: report_methodology -file TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST_methodology_drc_routed.rpt.
 report_methodology completed successfully
 report_methodology: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 3558.121 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_power -file TOP_AXI_DDR4_FULL_BIST_power_routed.rpt -pb TOP_AXI_DDR4_FULL_BIST_power_summary_routed.pb -rpx TOP_AXI_DDR4_FULL_BIST_power_routed.rpx
@@ -1750,7 +1448,6 @@ Read XDEF File: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): pea
 Restored from archive | CPU: 6.000000 secs | Memory: 0.000000 MB |
 Finished XDEF File Restore: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1879.176 ; gain = 49.043
 Generating merged BMM file for the design top 'ddr4_axi_0'...
-INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.gen/sources_1/ip/ddr4_axi_0/sw/calibration_0/Debug/calibration_ddr.elf 
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2068.258 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 553 instances were transformed.
@@ -1784,10 +1481,8 @@ INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, 
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
 WARNING: [Timing 38-164] This design has multiple clocks. Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
 # report_methodology -file [file join $report_dir methodology.rpt]
-Command: report_methodology -file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/reports/timing_fix2_compat/methodology.rpt
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/reports/timing_fix2_compat/methodology.rpt.
 report_methodology completed successfully
 report_methodology: Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 2264.055 ; gain = 48.734
 # report_bus_skew -file [file join $report_dir bus_skew.rpt]
@@ -1796,10 +1491,8 @@ INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, 
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
 report_bus_skew: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 2264.055 ; gain = 0.000
 # report_drc -file [file join $report_dir drc_routed.rpt]
-Command: report_drc -file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/reports/timing_fix2_compat/drc_routed.rpt
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/reports/timing_fix2_compat/drc_routed.rpt.
 report_drc completed successfully
 report_drc: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2313.758 ; gain = 49.703
 # set worst_path [get_timing_paths -delay_type max -max_paths 1]
@@ -1816,5 +1509,4 @@ Timing failed: WNS -0.919 ns; bitstream intentionally not generated
 "if {$worst_slack < 0.0} {
     error [format "Timing failed: WNS %.3f ns; bitstream intentionally not generated" $worst_slack]
 }"
-    (file "C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\tcl\run_timing_fix_compat.tcl" line 39)
 INFO: [Common 17-206] Exiting Vivado at Tue Sep 15 15:11:30 2026...

@@ -1,0 +1,97 @@
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+V201_STEP2_BEGIN compile
+"xvlog --incr --relax -L uvm -L xdma_v4_1_8 -prj board_vlog.prj"
+INFO: [VRFC 10-311] analyzing module CONV_DMA
+INFO: [VRFC 10-311] analyzing module INFO_EXCH
+INFO: [VRFC 10-311] analyzing module design_1_CONV_DMA_0_0
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_7_9_gthe3_channel
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt_gthe3_channel_wrapper
+INFO: [VRFC 10-311] analyzing module gtwizard_ultrascale_v1_7_9_gthe3_common
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt_gthe3_common_wrapper
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt_gtwizard_top
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_tph_tbl
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_pipe_lane
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_16k
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_rep_8k
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_req_8k
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt_channel
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_pipe_pipeline
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_pipe_misc
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_init_ctrl
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gt_common
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_8k
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_rep
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_req
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_sync
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram_cpl
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_sys_clk_gen_ps
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_rst
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_txeq
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_clk
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_bram
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_rxeq
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_gtwizard_top
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_wrapper
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_pcie3_uscale_wrapper
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_pcie3_uscale_top
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_phy_sync_cell
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_rxcdrhold
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip_pcie3_uscale_core_top
+INFO: [VRFC 10-311] analyzing module design_1_xdma_0_0_pcie3_ip
+INFO: [VRFC 10-311] analyzing module xdma_v4_1_8_blk_mem_64_reg_be
+INFO: [VRFC 10-311] analyzing module xdma_v4_1_8_blk_mem_64_noreg_be
+INFO: [VRFC 10-311] analyzing module aurora_ll_peer_bfm
+INFO: [VRFC 10-311] analyzing module pcie_cq_host_memory_monitor
+INFO: [VRFC 10-311] analyzing module xdma_irq_monitor
+INFO: [VRFC 10-311] analyzing module conv_dma_axi_monitor
+INFO: [VRFC 10-311] analyzing module xdma_axi_activity_monitor
+INFO: [VRFC 10-311] analyzing module board
+"xvhdl --incr --relax -prj board_vhdl.prj"
+V201_STEP2_BEGIN elaborate
+"xelab -wto 6685dc9037bc45bd8dc34b12c53cbeb6 --incr --debug off --relax --mt 2 -d "XILINX_SIMULATOR=" -d "DDR4_SIM_RAM=" -L xil_defaultlib -L gtwizard_ultrascale_v1_7_9 -L blk_mem_gen_v8_4_4 -L xdma_v4_1_8 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_22 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_21 -L axi_crossbar_v2_1_23 -L axi_clock_converter_v2_1_21 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot board_behav xil_defaultlib.board xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6685dc9037bc45bd8dc34b12c53cbeb6 --incr --debug off --relax --mt 2 -d XILINX_SIMULATOR= -d DDR4_SIM_RAM= -L xil_defaultlib -L gtwizard_ultrascale_v1_7_9 -L blk_mem_gen_v8_4_4 -L xdma_v4_1_8 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_22 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_21 -L axi_crossbar_v2_1_23 -L axi_clock_converter_v2_1_21 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot board_behav xil_defaultlib.board xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:485]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:489]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:492]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:496]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:501]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:505]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:509]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'addra' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:606]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'addrb' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:620]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'src_in_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:664]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'dest_out_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:666]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'reg_in' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:670]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'src_in_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:679]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'dest_out_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:681]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'reg_in' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:685]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'src_in_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:694]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'dest_out_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:696]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'reg_in' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:700]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 10 for port 'src_in_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:709]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'dest_out_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:711]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'reg_in' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:715]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+child process exited abnormally
+V201 step2 elaborate failed; inspect output
+    while executing
+"error "V201 step2 $step failed; inspect output""
+    ("foreach" body line 5)
+    invoked from within
+"foreach step {compile elaborate simulate} {
+    puts "V201_STEP2_BEGIN $step"
+    set failed [catch {exec cmd /c ${step}.bat 2>@1} output]
+    puts $o..."
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 16 19:11:50 2026...

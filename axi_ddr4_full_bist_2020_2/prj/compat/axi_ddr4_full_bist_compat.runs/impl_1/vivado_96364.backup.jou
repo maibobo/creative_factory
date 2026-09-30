@@ -4,9 +4,6 @@
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
 # Start of session at: Tue Sep 15 17:01:21 2026
 # Process ID: 96364
-# Current directory: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1
 # Command line: vivado.exe -log TOP_AXI_DDR4_FULL_BIST.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TOP_AXI_DDR4_FULL_BIST.tcl -notrace
-# Log file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1/TOP_AXI_DDR4_FULL_BIST.vdi
-# Journal file: C:/project/RTDS/DDR/axi_ddr4_full_bist_2020_2/prj/compat/axi_ddr4_full_bist_compat.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source TOP_AXI_DDR4_FULL_BIST.tcl -notrace

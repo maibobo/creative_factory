@@ -1,0 +1,112 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 14 14:20:37 2026
+# Process ID: 71528
+#-----------------------------------------------------------
+# set project_dir [file normalize [file join [file dirname [info script]] ..]]
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'ila_FDMA_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_CONV_DMA_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'fifo_cdc_pcie_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'fifo_AURORA_DATA64_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'ila_temp_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'fifo_cdc_aurora_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'ila_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:36 . Memory (MB): peak = 1110.328 ; gain = 0.000
+# update_compile_order -fileset sources_1
+# puts "MODULE_FILES=[get_files -all *CONV_DMA.v] [get_files -all *INFO_EXCH.v]"
+# open_bd_design [get_files design_1.bd]
+Adding component instance block -- xilinx.com:module_ref:CONV_DMA:1.0 - CONV_DMA_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_1
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf
+Adding component instance block -- xilinx.com:ip:xdma:4.1 - xdma_0
+Adding component instance block -- xilinx.com:module_ref:INFO_EXCH:1.0 - INFO_EXCH_0
+CRITICAL WARNING: [BD 41-2162] Unable to find pin <RX_READY_BLOCKS> in cell <INFO_EXCH_0> while setting up net connections during loading of BD file.
+CRITICAL WARNING: [BD 41-2162] Unable to find pin <RX_HEAD_SEQ> in cell <INFO_EXCH_0> while setting up net connections during loading of BD file.
+CRITICAL WARNING: [BD 41-2162] Unable to find pin <RX_DROPPED_FRAMES> in cell <INFO_EXCH_0> while setting up net connections during loading of BD file.
+CRITICAL WARNING: [BD 41-2162] Unable to find pin <fdma_wdone> in cell <CONV_DMA_0> while setting up net connections during loading of BD file.
+CRITICAL WARNING: [BD 41-2162] Unable to find pin <fdma_werror> in cell <CONV_DMA_0> while setting up net connections during loading of BD file.
+open_bd_design: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1110.328 ; gain = 0.000
+# foreach cell {CONV_DMA_0 INFO_EXCH_0} {
+#     set pin_nets {}; set intf_nets {}; set configs {}
+#     foreach pin [get_bd_pins -of_objects [get_bd_cells $cell]] {
+#         set net [get_bd_nets -quiet -of_objects $pin]
+#         if {[llength $net]} {lappend pin_nets [list [file tail $pin] $net]}
+#     }
+#     foreach pin [get_bd_intf_pins -of_objects [get_bd_cells $cell]] {
+#         set net [get_bd_intf_nets -quiet -of_objects $pin]
+#         if {[llength $net]} {lappend intf_nets [list [file tail $pin] $net]}
+#     }
+#     foreach property [list_property [get_bd_cells $cell]] {
+#         if {[string match CONFIG.* $property]} {lappend configs $property [get_property $property [get_bd_cells $cell]]}
+#     }
+#     set reference [expr {$cell eq "CONV_DMA_0" ? "CONV_DMA" : "INFO_EXCH"}]
+#     delete_bd_objs [get_bd_cells $cell]
+#     create_bd_cell -type module -reference $reference $cell
+#     if {[llength $configs]} {set_property -dict $configs [get_bd_cells $cell]}
+#     foreach item $pin_nets {
+#         lassign $item name net
+#         if {[llength [get_bd_pins -quiet $cell/$name]]} {connect_bd_net -net $net [get_bd_pins $cell/$name]}
+#     }
+#     foreach item $intf_nets {
+#         lassign $item name net
+#         set peers [get_bd_intf_pins -quiet -of_objects [get_bd_intf_nets $net]]
+#         if {[llength $peers] == 0} {set peers [get_bd_intf_ports -quiet -of_objects [get_bd_intf_nets $net]]}
+#         connect_bd_intf_net [lindex $peers 0] [get_bd_intf_pins $cell/$name]
+#     }
+# }
+WARNING: [IP_Flow 19-3571] IP 'design_1_CONV_DMA_0_1' is restricted:
+* Detected changes to module reference file(s).
+WARNING: [BD 5-263] Attempt to change 'Component_Name' on 'CONV_DMA_0' to 'design_1_CONV_DMA_0_0' is not allowed and is ignored.
+WARNING: [IP_Flow 19-3571] IP 'design_1_INFO_EXCH_0_1' is restricted:
+* Detected changes to module reference file(s).
+WARNING: [BD 5-263] Attempt to change 'Component_Name' on 'INFO_EXCH_0' to 'design_1_INFO_EXCH_0_0' is not allowed and is ignored.
+# foreach {port pin direction width} {
+#     fdma_wstrb_0 CONV_DMA_0/fdma_wstrb I 8
+#     CPU_WR_DONE_EVENT INFO_EXCH_0/CPU_WR_DONE_EVENT I 1
+#     fdma_wdone_0 CONV_DMA_0/fdma_wdone O 1
+#     fdma_werror_0 CONV_DMA_0/fdma_werror O 1
+#     RX_READY_BLOCKS INFO_EXCH_0/RX_READY_BLOCKS I 32
+#     RX_HEAD_SEQ INFO_EXCH_0/RX_HEAD_SEQ I 32
+#     RX_DROPPED_FRAMES INFO_EXCH_0/RX_DROPPED_FRAMES I 32
+# } {
+#     if {[llength [get_bd_ports -quiet $port]] == 0} {
+#         if {$width == 1} {create_bd_port -dir $direction $port} else {
+#             create_bd_port -dir $direction -from [expr {$width-1}] -to 0 $port
+#         }
+#     }
+#     if {[llength [get_bd_nets -quiet -of_objects [get_bd_pins $pin]]] == 0} {
+#         connect_bd_net [get_bd_ports $port] [get_bd_pins $pin]
+#     }
+# }
+WARNING: [BD 5-235] No pins matched 'get_bd_pins CONV_DMA_0/fdma_wstrb'
+WARNING: [BD 5-235] No pins matched 'get_bd_pins CONV_DMA_0/fdma_wstrb'
+ERROR: [BD 41-701] connect_bd_net requires at least two pins/ports, or one pin/port and a net
+ERROR: [BD 5-4] Error: running connect_bd_net.
+ERROR: [Common 17-39] 'connect_bd_net' failed due to earlier errors.
+
+    while executing
+"connect_bd_net [get_bd_ports $port] [get_bd_pins $pin]"
+    invoked from within
+"if {[llength [get_bd_nets -quiet -of_objects [get_bd_pins $pin]]] == 0} {
+        connect_bd_net [get_bd_ports $port] [get_bd_pins $pin]
+    }"
+    ("foreach" body line 7)
+    invoked from within
+"foreach {port pin direction width} {
+    fdma_wstrb_0 CONV_DMA_0/fdma_wstrb I 8
+    CPU_WR_DONE_EVENT INFO_EXCH_0/CPU_WR_DONE_EVENT I 1
+    fdma_wdone..."
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 14 14:21:30 2026...
