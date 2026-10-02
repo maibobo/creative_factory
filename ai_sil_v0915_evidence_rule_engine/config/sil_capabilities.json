@@ -1,0 +1,69 @@
+{
+  "target": {
+    "host": "windows",
+    "mcu": "STM32F407",
+    "machine": "stm32f407-atk-explorer",
+    "os": "RT-Thread",
+    "executor": "QEMU"
+  },
+  "capability_router": {
+    "ready": [
+      {
+        "driver": "gpio",
+        "capability": "gpio_output_readback",
+        "real_driver": "drivers/drv_gpio.c",
+        "rtthread_api": [
+          "rt_pin_get",
+          "rt_pin_mode",
+          "rt_pin_write",
+          "rt_pin_read"
+        ],
+        "backend": "virtual_gpio",
+        "targets": "PA.0..PK.15",
+        "faults": [
+          "none",
+          "stuck_low",
+          "stuck_high"
+        ],
+        "commands": [
+          "ai_test_gpio <pin>",
+          "sil_reset",
+          "sil_gpio_fault_none",
+          "sil_gpio_fault_stuck_low",
+          "sil_gpio_fault_stuck_high",
+          "sil_gpio_status",
+          "sil_ping",
+          "sil_cap"
+        ]
+      }
+    ],
+    "not_installed_examples": [
+      "gpio_irq",
+      "adc",
+      "spi",
+      "can",
+      "uart",
+      "i2c",
+      "pwm"
+    ],
+    "extendable": [
+      {
+        "driver": "gpio",
+        "capability": "gpio_input_readback",
+        "template": "gpio_input_readback",
+        "prerequisites": [
+          "RT_USING_PIN",
+          "drivers/drv_gpio.c",
+          "FINSH_USING_MSH"
+        ],
+        "generated_command": "ai_test_gpio_input <pin>",
+        "backend": "virtual_gpio_external_input",
+        "faults": [
+          "none",
+          "stuck_low",
+          "stuck_high"
+        ]
+      }
+    ]
+  }
+}

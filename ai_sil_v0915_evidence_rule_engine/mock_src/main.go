@@ -1,0 +1,129 @@
+//go:build windows
+
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+type state struct {
+	fault         string
+	externalInput int
+}
+
+func prompt() { fmt.Print("msh >") }
+
+func main() {
+	s := state{fault: "none", externalInput: 0}
+	fmt.Println(" \\ | /")
+	fmt.Println("- RT -     Thread Operating System")
+	fmt.Println(" / | \\")
+	fmt.Println("RT-Thread mock console for AI SIL Test Workbench")
+	fmt.Println("@SIL,RUNTIME,READY,STM32F407ZG,virtual_gpio,v1")
+	prompt()
+
+	scanner := bufio.NewScanner(os.Stdin)
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" {
+			prompt()
+			continue
+		}
+		f := strings.Fields(line)
+		switch f[0] {
+		case "help":
+			fmt.Println("ai_test_gpio      - run AI generated GPIO output SIL testcase")
+			fmt.Println("ai_test_gpio_input - run AI generated GPIO input SIL testcase")
+			fmt.Println("sil_ping          - verify AI SIL runtime handshake")
+			fmt.Println("sil_cap           - print SIL capabilities")
+			fmt.Println("sil_reset         - reset GPIO SIL state")
+			fmt.Println("sil_gpio_fault_none - disable GPIO fault")
+			fmt.Println("sil_gpio_fault_stuck_low - force GPIO readback low")
+			fmt.Println("sil_gpio_fault_stuck_high - force GPIO readback high")
+			fmt.Println("sil_gpio_input_low - drive virtual external input low")
+			fmt.Println("sil_gpio_input_high - drive virtual external input high")
+			fmt.Println("sil_gpio_status   - print GPIO SIL state")
+		case "sil_ping":
+			fmt.Println("@SIL,PONG,STM32F407ZG,RT-Thread,virtual_gpio,v1")
+		case "sil_cap":
+			fmt.Println("@SIL,CAP,gpio,driver=drv_gpio.c,cap=gpio_output_readback|gpio_input_readback,api=rt_pin_get|rt_pin_mode|rt_pin_write|rt_pin_read,faults=none|stuck_low|stuck_high")
+		case "sil_reset":
+			s.fault = "none"
+			s.externalInput = 0
+			fmt.Println("@SIL,RESET,GPIO,OK")
+		case "sil_gpio_fault_none":
+			s.fault = "none"
+			fmt.Println("@SIL,FAULT,gpio,none")
+		case "sil_gpio_fault_stuck_low":
+			s.fault = "stuck_low"
+			fmt.Println("@SIL,FAULT,gpio,stuck_low")
+		case "sil_gpio_fault_stuck_high":
+			s.fault = "stuck_high"
+			fmt.Println("@SIL,FAULT,gpio,stuck_high")
+		case "sil_gpio_input_low":
+			s.externalInput = 0
+			fmt.Println("@SIL,INPUT,gpio,level=0")
+		case "sil_gpio_input_high":
+			s.externalInput = 1
+			fmt.Println("@SIL,INPUT,gpio,level=1")
+		case "sil_gpio_status":
+			fmt.Printf("@SIL,STATUS,GPIO,%s,1,2,2,0,0,0,0,%d\n", s.fault, s.externalInput)
+		case "ai_test_gpio_input":
+			pin := "PB.0"
+			if len(f) >= 2 {
+				pin = f[1]
+			}
+			high, low := 1, 0
+			if s.fault == "stuck_low" {
+				high, low = 0, 0
+			}
+			if s.fault == "stuck_high" {
+				high, low = 1, 1
+			}
+			errors := 0
+			if high != 1 {
+				errors++
+			}
+			if low != 0 {
+				errors++
+			}
+			fmt.Printf("@SIL,CASE,GPIO_INPUT_001,pin=%s,fault=%s\n", pin, s.fault)
+			fmt.Printf("@SIL,CHECK,input_high,stimulus=1,observed=%d\n", high)
+			fmt.Printf("@SIL,CHECK,input_low,stimulus=0,observed=%d\n", low)
+			fmt.Println("@SIL,CHECK,mode_input,requested=1,hal_mode=0,pull=0")
+			fmt.Println("@SIL,DRIVER,drv_gpio.c,input_mode_calls=1,write_calls=0,read_calls=2,hal_mode=0,pull=0")
+			fmt.Printf("@SIL,RESULT,GPIO_INPUT,%s,%d,%d,1,0,2,0,0,%s,%d\n", pin, high, low, s.fault, errors)
+		case "ai_test_gpio":
+			pin := "PB.0"
+			if len(f) >= 2 {
+				pin = f[1]
+			}
+			high, low := 1, 0
+			if s.fault == "stuck_low" {
+				high, low = 0, 0
+			}
+			if s.fault == "stuck_high" {
+				high, low = 1, 1
+			}
+			errors := 0
+			if high != 1 {
+				errors++
+			}
+			if low != 0 {
+				errors++
+			}
+			fmt.Printf("@SIL,CASE,GPIO_001,pin=%s,fault=%s\n", pin, s.fault)
+			fmt.Printf("@SIL,CHECK,write_high,requested=1,observed=%d\n", high)
+			fmt.Printf("@SIL,CHECK,write_low,requested=0,observed=%d\n", low)
+			fmt.Println("@SIL,CHECK,mode_output,requested=0,hal_mode=1,pull=0")
+			fmt.Println("@SIL,DRIVER,drv_gpio.c,mode_calls=1,write_calls=2,read_calls=2,hal_mode=1,pull=0")
+			fmt.Printf("@SIL,RESULT,GPIO,%s,%d,%d,1,2,2,1,0,%s,%d\n", pin, high, low, s.fault, errors)
+		default:
+			fmt.Printf("%s: command not found.\n", f[0])
+		}
+		prompt()
+	}
+}
