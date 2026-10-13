@@ -1,4 +1,6 @@
+# RTDS DDR4 集成运行关键点与问题记录
 
+> 维护范围：本聊天中对远程机 `RTDS_test_DDR4_64bit` 的全部关键决策、执行结果、问题、处理办法和阶段结论。  
 > 维护规则：每完成一个关键设计修改、验证步骤或问题定位后同步更新。  
 > 最近更新：2026-08-20（编译、Elaborate、基本冒烟及文档/清单收尾完成）
 
@@ -12,14 +14,20 @@
 
 ## 2. 工程范围与同板卡关系
 
+- 远程新工程：`C:\project\RTDS\DDR\RTDS_test_DDR4_64bit`
+- 生产基线：`E:\PCIE-CPU\RTDS_test-1ch`
+- 远程旧工程参考：`C:\project\PCIE-CPU\RTDS_test`
+- DDR golden：`C:\project\RTDS\DDR\axi_ddr4_min_2020_2`
 - 远程 Vivado：`C:\Xilinx\Vivado\2020.2\bin\vivado.bat`
 - 器件：`xcku040-ffva1156-2-i`
 
+**同板卡说明：** PCIE-CPU 的 RTDS 工程和 `axi_ddr4_min_2020_2` DDR golden 工程均面向同一块 KU040 物理板卡。前者承担 PCIe/Aurora 业务数据通路，后者承担该板卡 DDR4 独立验证和参数/引脚参考。Golden 只读，未直接修改。
 
 ## 3. 需求与方案演变
 
 1. 最初目标是将 DDR 工程接入 PCIE-CPU 工程，并新建独立目录。
 2. 明确只在远程机操作，远程连接配置由 `agent.md` 提供。
+3. DDR 参考对象最终固定为 `C:\project\RTDS\DDR\axi_ddr4_min_2020_2`，不导入 256-bit NVMe/ADC 数据骨干。
 4. 生产方案固定为 64-bit AXI DDR4 替换 BRAM，保留现有 XDMA、CONV_DMA、Adapter 和 Aurora 64-bit 接口。
 5. AXI ID 在生产集成中使用 5 位，禁止截断；golden 独立工程继续保持原 4 位配置。
 6. 地址只使用 DDR 低 64 KiB：Aurora→CPU 为 `0x0000–0x7FFF`，CPU→Aurora 为 `0x8000–0xFFFF`。
@@ -35,6 +43,7 @@
 - 从 `design_1` 移除 `axi_bram_ctrl + blk_mem_gen`。
 - 保留 XDMA/CONV_DMA 两主机及现有仲裁。
 - 导出统一 `M_AXI_MEM`，数据宽度 64 bit，ID 宽度 5 bit。
+- 新增 `rtl\ddr4\rtds_ddr4_backend.sv` 和 `rtl\ddr4\rtds_axi_ram_model.sv`。
 - 后端包含跨时钟 Clock Converter、DDR 校准/复位就绪控制、响应错误 sticky 和进度超时 sticky。
 - MIG 在新目录重新生成，没有复制 golden 的生成目录。
 
@@ -58,6 +67,7 @@
 - `CLK_GEN.v` 改为接收共享 IBUFDS 后的单端时钟。
 - `INFO_EXCH.v` 在 INFO 基址内加入只读 `DDR_STATUS`，偏移 `0x2C`。
 - Adapter 增加 `ddr_ready` 门控。
+- DDR 约束文件：`RTDS_test_DDR4_64bit.srcs\constrs_1\new\DDR4_PIN.xdc`。
 - 约束只引入 golden 的 DDR 物理引脚/IO 标准，排除 golden 的 LED 和系统差分时钟重复约束。
 
 ## 5. 当前寄存器清单
@@ -104,16 +114,20 @@ INFO BD 基址：`0x40000000`。
 
 - 结果：PASS。
 - 日志：`reports\compile\ddr_backend_xvlog.log`、`ddr_backend_xelab.log`、`ddr_backend_smoke.log`。
+- 通过标记：`DDR_READY_AFTER_TWO_CYCLES_PASS`、`W_FIRST_SINGLE_PASS`、`INCR16_8000_PASS`、`RTDS_DDR_BACKEND_SMOKE_PASS`。
 - 覆盖两拍 ready、W 先于 AW 的独立握手、单拍读写和地址 `0x8000` 的 16-beat INCR。
 
 ### 6.3 生产 TOP 定向编译与 Elaborate
 
+- 结果：PASS；标记：`RTDS_TOP_COMPILE_ELABORATE_PASS`。
 - 日志：`reports\compile\top_xvlog.log`、`reports\compile\top_xelab.log`。
 - 所有自定义集成 RTL 均参与编译；未改动的 Aurora 和 BD 内部 vendor 边界使用端口等价 stub，以隔离远程 Vivado 生成模型导出问题。这是结构/接口 Elaborate，不等价于完整 vendor IP 行为仿真。
 
 ### 6.4 DDR4_REAL 后端编译与 Elaborate
 
+- 结果：PASS；标记：`RTDS_DDR4_REAL_BACKEND_COMPILE_ELABORATE_PASS`。
 - 日志：`reports\compile\real_backend_xvlog.log`、`reports\compile\real_backend_xelab.log`。
+- 使用从当前生成的 Clock Converter/MIG stub 提取的纯 Verilog 端口边界，验证 `rtds_ddr4_backend` 的生产实例名、端口名、方向和位宽可 Elaborate。生产 XCI 未修改。
 
 ## 7. 遇到的问题、原因与处理
 
@@ -134,6 +148,7 @@ INFO BD 基址：`0x40000000`。
 
 - 现象：旧 `ip_user_files\bd\design_1\sim\design_1.v` 缺少新增 `M_AXI_MEM/DDR_STATUS`，部分嵌套 IP 仍引用旧 AXI/XDMA 库版本。
 - 原因：复制基线后，`ip_user_files` 仿真导出未与当前 BD 同步。
+- 处理：结构检查使用当前 `RTDS_test_DDR4_64bit.srcs\sources_1\bd\design_1\sim\design_1.v` 和当前 wrapper；vendor 内部边界使用 stub。
 - 后续：完整 Root Port/XDMA 仿真前应重新 export simulation 并编译匹配的 vendor simulation libraries。
 
 ### 7.4 远程 Vivado 的 IP Integrator 辅助 Tcl 缺失/异常
@@ -145,6 +160,7 @@ INFO BD 基址：`0x40000000`。
 
 ### 7.5 生成的 SystemVerilog stub 触发 SystemC 链接错误
 
+- 现象：`xvlog` 通过，但 `xelab` 链接时缺少 `rtds_axi_clock_converter.h`。
 - 原因：Xilinx 生成的 XSim stub 带 `SC_MODULE_EXPORT`，XSim 将其当作 SystemC 模块。
 - 处理：从生成 stub 的当前端口声明提取纯 Verilog 边界文件，仅用于结构 Elaborate。
 - 结果：`DDR4_REAL` 后端 Elaborate PASS。
@@ -183,12 +199,18 @@ INFO BD 基址：`0x40000000`。
 
 ## 11. 收尾审计（2026-08-20）
 
+- Word 已生成：docs\RTDS_test_DDR4设计方案与寄存器清单.docx；结构检查 PASS，明确记录两个工程属于同一块 KU040 板卡。
 - Golden 快照补齐 create_project_2020_2.tcl；golden_snapshot_sha256.txt 记录 3 个只读参考文件。
 - 已精确删除新工程内 10 个传输用 .b64 临时文件。
+- 已移除新 XPR 从基线继承的 ../RTDS_test AutoIncrementalDir 元数据；生产源未发现新目录外绝对引用。
 - 新 XPR 默认定义保持 DDR4_SIM_RAM；DDR4_REAL 使用独立运行脚本验证。
+- 正式交付记录：docs\RTDS_test_DDR4共享缓冲集成与验证记录.md。
 - 最终全目录 SHA-256 清单将在冗余清理决策和必要回归完成后生成，排除清单自身。
 ## 12. 工程目录冗余审计（2026-08-20）
 
+- 独立报告：docs\RTDS_test_DDR4工程目录冗余审计.md。
+- 发现旧名 RTDS_test.xpr/srcs/runs/ip_user_files/cache/hw/sim 约 470.78 MiB；新 XPR 的实际 File Path 不依赖这些目录，属于强清理候选。
+- 发现 RTDS_test_DDR4_64bit.runs 约 171.60 MiB，其 TOP.bit、TOP_routed.dcp、TOP.dcp 与旧 RTDS_test.runs 对应文件 SHA-256 完全一致，属于基线遗留，不能当作本次 DDR4 bitstream。
 - 上述强清理候选合计约 642.38 MiB。本次仅检查，尚未删除，等待用户授权。
 - Aurora 的 sources_1 - loop_validate 下多个 example/exdes 文件被当前 XPR 直接引用，不能按名称删除。
 - 未被当前 XPR 直接引用的 fdma_aurora_brg.gen 为 27.17 MiB，其中 example_design 仅约 0.159 MiB，可作为后续可选清理项。
@@ -196,15 +218,19 @@ INFO BD 基址：`0x40000000`。
 - 清理后必须重跑基本冒烟、TOP 定向编译/Elaborate、DDR4_REAL 后端编译/Elaborate，再生成最终 SHA-256 清单。
 ## 13. 本机轻量可打开备份（2026-08-20）
 
+- 本机备份目录：E:\PCIE-CPU\RTDS_test_DDR4_64bit_本机备份_20260820。
 - 标准 archive_project -exclude_run_results 两次失败：第一次受长临时路径影响发生 Vivado EXCEPTION_ACCESS_VIOLATION；第二次使用短临时目录后，明确报告 Aurora 深层源路径超过 Windows 248-Byte 上限。原远程生产工程未被修改。
 - 改用精确目录备份：包含新 XPR、新 .srcs、当前 XPR 直接引用的 Aurora external_snapshot、rtl/tcl/scripts、sim/regression、docs/reports/logs/manifest/golden_snapshot 和定向验证脚本。
+- 明确排除旧 RTDS_test.* 工程族、两套 .runs、旧 TOP.bit/DCP、新旧 cache/hw/ip_user_files/sim 工作目录和根 XSim 缓存。
 - 本机备份最终体积约 464.26 MiB；BACKUP_SHA256.txt 覆盖除自身外 1446 个文件。
 - 使用本机 D:\Xilinx_2020_2\Vivado\2020.2\bin\vivado.bat 以 batch 模式执行 open_project。
+- 打开结果：工程名 RTDS_test_DDR4_64bit，器件 xcku040-ffva1156-2-i，工程文件 864 个，实际 File Path 缺失 0，标记 RTDS_LOCAL_BACKUP_OPEN_PASS。
 - 未带 .runs 的 GeneratedRun 警告和未带 ip_user_files 的目录警告符合轻量备份预期；两者均为可再生成产物，不影响 XPR 打开。打开验证自动生成的本机 .Xil/.cache/.hw 已清理，打开证明保存在 reports\backup_validation。
 - 本机 E: 已核实为本地 NTFS 固定磁盘（DriveType 3），不是 SMB 映射盘；远程机当前不存在 E:\PCIE-CPU。因此本机备份和远程 C:\project 工程是两份独立副本，不会自动同步。
 
 ## 14. Word 关键图纸重制（2026-08-23）
 
+- 应用户要求扩充 `docs\RTDS_test_DDR4设计方案与寄存器清单.docx`，新增附录A及4张关键图纸。
 - 图 A-1 为64-bit DDR4共享缓冲总体数据通路；使用正交双向AXI总线箭头，明确标注250 MHz/MIG `ui_clk`时钟域、64-bit/32-bit/5-bit接口及低64 KiB地址窗口。
 - 图 A-2 为AK17/AK16共享100 MHz差分时钟与AC34复位电路；使用IBUFDS、分支连接、反相器和结点，不以功能框代替复位极性关系。
 - 图 A-3 为DDR AXI复位两拍释放与`ddr_ready`两级同步电路；使用逻辑门、D触发器、时钟线和清零线表达实际RTL关系。
@@ -214,10 +240,12 @@ INFO BD 基址：`0x40000000`。
 - DOCX结构检查PASS：ZIP成员无损坏，必需OOXML部件齐全，7个原有表格保留，4张2800×1500 PNG均以内联方式嵌入，无浮动`wp:anchor`，4项替代文本齐全。
 - 按当前工作区规则仅执行DOCX结构与图片嵌入审计，未渲染PDF/PNG预览。
 - 本机最终Word SHA-256：`8E5BE4E06CEB0B9A34E3241560F5FAD84A1ACE4061DB3AE893B2E8CCF4388F5F`。
+- 远程同步状态：`vivado-srv`解析为`172.20.10.11`，2026-08-23同步时SSH 22端口超时且Ping不通；因此本次先完成本机备份，待远程机恢复连接后再同步到`C:\project\RTDS\DDR\RTDS_test_DDR4_64bit\docs`，未伪报远程更新完成。
 - 用户确认远程机当前不通且本次不需要打开Vivado；因此未启动Vivado、未执行工程打开或编译，仅完成文档修改与离线结构校验。
 
 ## 15. 最新文档同步到远程机（2026-09-01）
 
+- 远程主机 `DESKTOP-H0AB0MD` 已恢复SSH连接，目标目录为 `C:\project\RTDS\DDR\RTDS_test_DDR4_64bit\docs`。
 - 已同步新版设计方案Word、4张关键图纸、本运行纪要及正式验证记录；未打开Vivado，也未改动RTL、IP、XPR或运行结果。
 - 覆盖前的远程旧版三份主文档已备份到 `docs\archive\sync_before_20260901`，可用于回退。
 - 传输压缩包和7个目标文件均完成SHA-256核对；远程临时压缩包和解包目录已删除。
@@ -226,6 +254,7 @@ INFO BD 基址：`0x40000000`。
 
 - `docs` 新增板卡资料：`RPT205-1-001.DSN`、`RPT205-1-001.brd`、`RPT205-1-001引脚定义.xlsx`、`RP205-1-001 （DDR4）.txt`。板卡是组内自研 `RPT205-1-001`，不是厂商开发板；板上 FPGA 器件仍为 `XCKU040-2-FFVA1156I`，与目标工程 `xcku040-ffva1156-2-i` 一致。
 - 原理图应使用 OrCAD Capture/OrCAD X Capture CIS 打开 `.DSN`；PCB 应使用 Allegro PCB Editor/OrCAD X PCB Designer 打开 `.brd`。当前远程 Windows 仅确认安装 WPS Office 2019，可直接打开 `.xlsx/.docx`；未发现 Cadence、OrCAD、Allegro 或 LibreOffice。Windows 将 `.DSN` 错关联为 ODBC 数据源，不能直接双击，应在 OrCAD 内用 `File > Open > Design`。
+- 当前 PCIe 工程活动约束只有 `RTDS_test.srcs\constrs_1\new\PIN.xdc`。旧实现报告确认 PCIe x2 数据通道位于 Bank 224：RX0 AP1/AP2、RX1 AM1/AM2、TX0 AN3/AN4、TX1 AM5/AM6；这与 9 月 8 日引脚表一致。
 - 旧约束的 PCIe 参考时钟 Y5/Y6（Bank 225）和复位 K22 未出现在 9 月 8 日引脚表。自研板资料给出 Bank 224 直接参考时钟 AF5/AF6、缓冲参考时钟 AD5/AD6及 `SLOT_RST1=AK13`。必须结合 `.DSN` 确认实际装配链路后，在两组参考时钟中二选一，不能同时约束；不得因旧工程曾实现完成就继续沿用 Y5/Y6、K22。
 - 系统 100 MHz 差分时钟确定为 AK17/AK16。现有 XDC 只显式写 AK17，应补齐 AK16并只建立一个 100 MHz 主时钟。单个 IBUFDS 输出供 Clock Wizard，并送入配置为 `No_Buffer` 的 MIG。
 - DDR 引脚表与现有 `DDR4_PIN.xdc` 的 DQ、DM、DQS、地址、命令和 `DDR4-RESETN=AG16` 一致，因此物理 DDR 管脚可作为自研板约束基线；文件注释和来源必须改为 `RPT205-1-001`，不能再写旧 KU040 参考板。

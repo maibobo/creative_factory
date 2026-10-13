@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="byte1_1g_seed_1417633351.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_byte1_1g" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="56" />
+   <wvobject fp_name="/tb_byte1_1g/H/U_ADAPTER/link_up_fdma" type="logic">
+      <obj_property name="ElementShortName">link_up_fdma</obj_property>
+      <obj_property name="ObjectShortName">link_up_fdma</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_ADAPTER/tx_active" type="logic">
+      <obj_property name="ElementShortName">tx_active</obj_property>
+      <obj_property name="ObjectShortName">tx_active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_ADAPTER/tx_recovering" type="logic">
+      <obj_property name="ElementShortName">tx_recovering</obj_property>
+      <obj_property name="ObjectShortName">tx_recovering</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_ADAPTER/tx_quiet_count" type="array">
+      <obj_property name="ElementShortName">tx_quiet_count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_quiet_count[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_ADAPTER/tx_user_quiet_fdma" type="logic">
+      <obj_property name="ElementShortName">tx_user_quiet_fdma</obj_property>
+      <obj_property name="ObjectShortName">tx_user_quiet_fdma</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_ADAPTER/tx_deliver_enable" type="logic">
+      <obj_property name="ElementShortName">tx_deliver_enable</obj_property>
+      <obj_property name="ObjectShortName">tx_deliver_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_ADAPTER/tx_restart_pending" type="logic">
+      <obj_property name="ElementShortName">tx_restart_pending</obj_property>
+      <obj_property name="ObjectShortName">tx_restart_pending</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_ADAPTER/tx_frame_done_fdma" type="logic">
+      <obj_property name="ElementShortName">tx_frame_done_fdma</obj_property>
+      <obj_property name="ObjectShortName">tx_frame_done_fdma</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_DMA/M_AXI_RDATA" type="array">
+      <obj_property name="ElementShortName">M_AXI_RDATA[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RDATA[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_DMA/M_AXI_RVALID" type="logic">
+      <obj_property name="ElementShortName">M_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_DMA/M_AXI_RREADY" type="logic">
+      <obj_property name="ElementShortName">M_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_DMA/read_curr_st" type="array">
+      <obj_property name="ElementShortName">read_curr_st[2:0]</obj_property>
+      <obj_property name="ObjectShortName">read_curr_st[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_DDR/storage_ready" type="logic">
+      <obj_property name="ElementShortName">storage_ready</obj_property>
+      <obj_property name="ObjectShortName">storage_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_DDR/recovery_read_pending" type="logic">
+      <obj_property name="ElementShortName">recovery_read_pending</obj_property>
+      <obj_property name="ObjectShortName">recovery_read_pending</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_DDR/recovery_read_abort" type="logic">
+      <obj_property name="ElementShortName">recovery_read_abort</obj_property>
+      <obj_property name="ObjectShortName">recovery_read_abort</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_DDR/recovery_read_left" type="array">
+      <obj_property name="ElementShortName">recovery_read_left[8:0]</obj_property>
+      <obj_property name="ObjectShortName">recovery_read_left[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_DDR/recovery_rvalid" type="logic">
+      <obj_property name="ElementShortName">recovery_rvalid</obj_property>
+      <obj_property name="ObjectShortName">recovery_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_DDR/recovery_rresp" type="array">
+      <obj_property name="ElementShortName">recovery_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">recovery_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/U_DDR/recovery_rlast" type="logic">
+      <obj_property name="ElementShortName">recovery_rlast</obj_property>
+      <obj_property name="ObjectShortName">recovery_rlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/uclk" type="logic">
+      <obj_property name="ElementShortName">uclk</obj_property>
+      <obj_property name="ObjectShortName">uclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/gclk" type="logic">
+      <obj_property name="ElementShortName">gclk</obj_property>
+      <obj_property name="ObjectShortName">gclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/pcie_up" type="logic">
+      <obj_property name="ElementShortName">pcie_up</obj_property>
+      <obj_property name="ObjectShortName">pcie_up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/channel_up" type="logic">
+      <obj_property name="ElementShortName">channel_up</obj_property>
+      <obj_property name="ObjectShortName">channel_up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/lane_up" type="logic">
+      <obj_property name="ElementShortName">lane_up</obj_property>
+      <obj_property name="ObjectShortName">lane_up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/ddr_reset_n" type="logic">
+      <obj_property name="ElementShortName">ddr_reset_n</obj_property>
+      <obj_property name="ObjectShortName">ddr_reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/tx_ready" type="logic">
+      <obj_property name="ElementShortName">tx_ready</obj_property>
+      <obj_property name="ObjectShortName">tx_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/tx_data" type="array">
+      <obj_property name="ElementShortName">tx_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/tx_sof" type="logic">
+      <obj_property name="ElementShortName">tx_sof</obj_property>
+      <obj_property name="ObjectShortName">tx_sof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/tx_eof" type="logic">
+      <obj_property name="ElementShortName">tx_eof</obj_property>
+      <obj_property name="ObjectShortName">tx_eof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/tx_valid" type="logic">
+      <obj_property name="ElementShortName">tx_valid</obj_property>
+      <obj_property name="ObjectShortName">tx_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/fdma_rdata" type="array">
+      <obj_property name="ElementShortName">fdma_rdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">fdma_rdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/fdma_rareq" type="logic">
+      <obj_property name="ElementShortName">fdma_rareq</obj_property>
+      <obj_property name="ObjectShortName">fdma_rareq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/fdma_rbusy" type="logic">
+      <obj_property name="ElementShortName">fdma_rbusy</obj_property>
+      <obj_property name="ObjectShortName">fdma_rbusy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/fdma_rvalid" type="logic">
+      <obj_property name="ElementShortName">fdma_rvalid</obj_property>
+      <obj_property name="ObjectShortName">fdma_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/fdma_rready" type="logic">
+      <obj_property name="ElementShortName">fdma_rready</obj_property>
+      <obj_property name="ObjectShortName">fdma_rready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/done_event" type="logic">
+      <obj_property name="ElementShortName">done_event</obj_property>
+      <obj_property name="ObjectShortName">done_event</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/cfg_byte" type="array">
+      <obj_property name="ElementShortName">cfg_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cfg_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/cfg_valid" type="logic">
+      <obj_property name="ElementShortName">cfg_valid</obj_property>
+      <obj_property name="ObjectShortName">cfg_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/ddr_ready" type="logic">
+      <obj_property name="ElementShortName">ddr_ready</obj_property>
+      <obj_property name="ObjectShortName">ddr_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/tick_2us" type="logic">
+      <obj_property name="ElementShortName">tick_2us</obj_property>
+      <obj_property name="ObjectShortName">tick_2us</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/gpio_50us" type="logic">
+      <obj_property name="ElementShortName">gpio_50us</obj_property>
+      <obj_property name="ObjectShortName">gpio_50us</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/gdata" type="array">
+      <obj_property name="ElementShortName">gdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/gsof" type="logic">
+      <obj_property name="ElementShortName">gsof</obj_property>
+      <obj_property name="ObjectShortName">gsof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/geof" type="logic">
+      <obj_property name="ElementShortName">geof</obj_property>
+      <obj_property name="ObjectShortName">geof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/gvalid" type="logic">
+      <obj_property name="ElementShortName">gvalid</obj_property>
+      <obj_property name="ObjectShortName">gvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/configured" type="logic">
+      <obj_property name="ElementShortName">configured</obj_property>
+      <obj_property name="ObjectShortName">configured</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/configured_id" type="array">
+      <obj_property name="ElementShortName">configured_id[7:0]</obj_property>
+      <obj_property name="ObjectShortName">configured_id[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/hold_r" type="logic">
+      <obj_property name="ElementShortName">hold_r</obj_property>
+      <obj_property name="ObjectShortName">hold_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/hold_b" type="logic">
+      <obj_property name="ElementShortName">hold_b</obj_property>
+      <obj_property name="ObjectShortName">hold_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/tx_beats" type="array">
+      <obj_property name="ElementShortName">tx_beats[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_beats[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/tx_frames" type="array">
+      <obj_property name="ElementShortName">tx_frames[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_frames[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/H/cfg_pulses" type="array">
+      <obj_property name="ElementShortName">cfg_pulses[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cfg_pulses[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/beat" type="array">
+      <obj_property name="ElementShortName">beat[31:0]</obj_property>
+      <obj_property name="ObjectShortName">beat[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_byte1_1g/frames" type="array">
+      <obj_property name="ElementShortName">frames[31:0]</obj_property>
+      <obj_property name="ObjectShortName">frames[31:0]</obj_property>
+   </wvobject>
+</wave_config>

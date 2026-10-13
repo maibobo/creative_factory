@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-13",
+  "backup": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev_backup_before_vio_20261013_100207",
+  "backup_files": 15990,
+  "backup_hash_files": 4559,
+  "full_top_rtl_elaboration": "PASS",
+  "smoke": [
+    "PASS",
+    "PASS",
+    "PASS",
+    "PASS"
+  ],
+  "post_test_changes": "comment-only; lexical tokens checked equal",
+  "synthesis_launched": false,
+  "implementation_launched": false,
+  "bitstream_generated": false,
+  "files": [
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/TOP.v",
+      "sha256": "c11d818e4898f9756cd98f7edcead74a9bda349c28b7f2eacf1e60585fa117b1"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v",
+      "sha256": "a03d192f0492dc6b19845f163d37985fd92b8c46234a1878e7f06a3410b5d1f3"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v",
+      "sha256": "6859c2f282092cc8566fb1d058e8d4437808ef50ef393aaaf331b1c7b97aa4ee"
+    },
+    {
+      "path": "rtl/rtds_rx_block_writer.v",
+      "sha256": "29f826bd10722081557e80c971937116a8145a384551d4e9968928d4fe4531f1"
+    },
+    {
+      "path": "rtl/rtds_rx_vio_stim.v",
+      "sha256": "e664dda0c51de01da914f05eddf5fff151ee102bda6fce554ba8653c69b0c913"
+    },
+    {
+      "path": "regression/vio_smoke_20261013/rtds_vio_harness.sv",
+      "sha256": "8d235c6ec26987e3ecd31e8764eff2f05c301e6b0f1e2d940bde5981eeab88fd"
+    }
+  ]
+}

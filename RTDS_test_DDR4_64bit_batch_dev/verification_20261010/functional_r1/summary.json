@@ -1,0 +1,38 @@
+﻿[
+    {
+        "case":  "byte1_1g",
+        "passed":  false,
+        "started":  "2026-10-10T17:00:45.1182513+08:00",
+        "finished":  "2026-10-10T17:02:33.2712550+08:00",
+        "log":  "byte1_1g.simulate.log",
+        "wdb":  "byte1_1g.wdb",
+        "vcd":  "byte1_1g.vcd"
+    },
+    {
+        "case":  "tx_boundaries",
+        "passed":  false,
+        "started":  "2026-10-10T17:02:33.2788242+08:00",
+        "finished":  "2026-10-10T17:02:52.1703034+08:00",
+        "log":  "tx_boundaries.simulate.log",
+        "wdb":  "tx_boundaries.wdb",
+        "vcd":  "tx_boundaries.vcd"
+    },
+    {
+        "case":  "regs_multiblock",
+        "passed":  false,
+        "started":  "2026-10-10T17:02:52.1718111+08:00",
+        "finished":  "2026-10-10T17:03:13.2732240+08:00",
+        "log":  "regs_multiblock.simulate.log",
+        "wdb":  "regs_multiblock.wdb",
+        "vcd":  "regs_multiblock.vcd"
+    },
+    {
+        "case":  "ready_recovery",
+        "passed":  false,
+        "started":  "2026-10-10T17:03:13.2752648+08:00",
+        "finished":  "2026-10-10T17:03:36.1820571+08:00",
+        "log":  "ready_recovery.simulate.log",
+        "wdb":  "ready_recovery.wdb",
+        "vcd":  "ready_recovery.vcd"
+    }
+]

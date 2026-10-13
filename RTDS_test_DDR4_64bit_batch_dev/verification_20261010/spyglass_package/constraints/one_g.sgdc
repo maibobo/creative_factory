@@ -1,0 +1,9 @@
+current_design RTDS_1G_PERIODIC_TX
+clock -name clk_250m -period 4 -edge {0 2}
+clock -name user_clk -period 32 -edge {0 16}
+reset -name rst_n -async -value 0
+reset -name user_reset -async -value 1
+# Explicit block input contracts; tick source is the 250 MHz domain.
+abstract_port -ports {tick_toggle_2us} -scope cdc -clock clk_250m -combo no
+abstract_port -ports {cfg_byte cfg_byte_valid rst_n} -scope cdc -clock clk_250m
+abstract_port -ports {user_reset channel_up tx_ready} -scope cdc -clock user_clk

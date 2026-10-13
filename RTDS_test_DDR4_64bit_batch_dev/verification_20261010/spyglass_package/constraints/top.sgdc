@@ -1,0 +1,46 @@
+# Conservative initial clock setup for the unmodified TOP hierarchy.
+# Distinct IP clocks remain separate even when their nominal frequencies match.
+current_design TOP
+clock -name clk_p -period 10 -edge {0 5}
+clock -name clk_250m -period 4 -edge {0 2}
+clock -name clk_100m -period 10 -edge {0 5}
+clock -name clk_156m -period 6.4 -edge {0 3.2}
+clock -name init_clk_25m -period 40 -edge {0 20}
+clock -name aurora_user_clk -period 6.4 -edge {0 3.2}
+clock -name aurora1g_user_clk -period 32 -edge {0 16}
+clock -name u_pcie.design_1_wrapper_inst.design_1_i.xdma_0.axi_aclk -period 4 -edge {0 2}
+clock -name u_pcie.u_rtds_ddr4_backend.ui_clk -period 3.333333 -edge {0 1.666666}
+reset -name sys_rst -async -value 1
+reset -name pcie_rst_n -async -value 0
+reset -name aurora_user_rstn -async -value 0
+reset -name aurora1g_user_reset -async -value 1
+reset -name u_pcie.u_rtds_ddr4_backend.ui_clk_sync_rst -async -value 1
+
+# Reviewed interface clock domains; IP interiors remain outside coverage.
+abstract_port -module xpm_fifo_async -ports {din wr_en full prog_full wr_data_count overflow wr_rst_busy almost_full wr_ack} -clock wr_clk -reset rst -combo no
+abstract_port -module xpm_fifo_async -ports {rd_en dout empty prog_empty rd_data_count underflow rd_rst_busy almost_empty data_valid sbiterr dbiterr} -clock rd_clk -reset rst -combo no
+abstract_port -module xpm_fifo_async -ports {rst sleep injectsbiterr injectdbiterr} -clock wr_clk -combo no
+abstract_port -module aurora_64b66b_top -ports {tx_d tx_sof tx_eof tx_rem tx_src_vld tx_dst_rdy rx_d rx_sof rx_eof rx_rem rx_src_vld rx_dst_rdy channel_up lane_up} -clock user_clk -reset sys_rst -combo no
+abstract_port -module aurora_64b66b_top -ports {user_rstn} -clock user_clk -combo no
+abstract_port -module aurora_8b10b_1p25g_design -ports {tx_data tx_rem tx_sof tx_eof tx_valid tx_ready rx_data rx_rem rx_sof rx_eof rx_valid channel_up rx_crc_error} -clock user_clk_out -reset reset -combo no
+abstract_port -module aurora_8b10b_1p25g_design -ports {system_reset_out} -clock user_clk_out -combo no
+abstract_port -module design_1_auto_cc_0 -ports {s_axi_awid s_axi_awaddr s_axi_awlen s_axi_awsize s_axi_awburst s_axi_awlock s_axi_awcache s_axi_awprot s_axi_awregion s_axi_awqos s_axi_awvalid s_axi_awready s_axi_wdata s_axi_wstrb s_axi_wlast s_axi_wvalid s_axi_wready s_axi_bid s_axi_bresp s_axi_bvalid s_axi_bready s_axi_arid s_axi_araddr s_axi_arlen s_axi_arsize s_axi_arburst s_axi_arlock s_axi_arcache s_axi_arprot s_axi_arregion s_axi_arqos s_axi_arvalid s_axi_arready s_axi_rid s_axi_rdata s_axi_rresp s_axi_rlast s_axi_rvalid s_axi_rready} -clock s_axi_aclk -reset s_axi_aresetn -combo no
+abstract_port -module design_1_auto_cc_0 -ports {s_axi_aresetn} -clock s_axi_aclk -combo no
+abstract_port -module design_1_auto_cc_0 -ports {m_axi_awid m_axi_awaddr m_axi_awlen m_axi_awsize m_axi_awburst m_axi_awlock m_axi_awcache m_axi_awprot m_axi_awregion m_axi_awqos m_axi_awvalid m_axi_awready m_axi_wdata m_axi_wstrb m_axi_wlast m_axi_wvalid m_axi_wready m_axi_bid m_axi_bresp m_axi_bvalid m_axi_bready m_axi_arid m_axi_araddr m_axi_arlen m_axi_arsize m_axi_arburst m_axi_arlock m_axi_arcache m_axi_arprot m_axi_arregion m_axi_arqos m_axi_arvalid m_axi_arready m_axi_rid m_axi_rdata m_axi_rresp m_axi_rlast m_axi_rvalid m_axi_rready} -clock m_axi_aclk -reset m_axi_aresetn -combo no
+abstract_port -module design_1_auto_cc_0 -ports {m_axi_aresetn} -clock m_axi_aclk -combo no
+abstract_port -module design_1_auto_cc_1 -ports {s_axi_awaddr s_axi_awprot s_axi_awvalid s_axi_awready s_axi_wdata s_axi_wstrb s_axi_wvalid s_axi_wready s_axi_bresp s_axi_bvalid s_axi_bready s_axi_araddr s_axi_arprot s_axi_arvalid s_axi_arready s_axi_rdata s_axi_rresp s_axi_rvalid s_axi_rready} -clock s_axi_aclk -reset s_axi_aresetn -combo no
+abstract_port -module design_1_auto_cc_1 -ports {s_axi_aresetn} -clock s_axi_aclk -combo no
+abstract_port -module design_1_auto_cc_1 -ports {m_axi_awaddr m_axi_awprot m_axi_awvalid m_axi_awready m_axi_wdata m_axi_wstrb m_axi_wvalid m_axi_wready m_axi_bresp m_axi_bvalid m_axi_bready m_axi_araddr m_axi_arprot m_axi_arvalid m_axi_arready m_axi_rdata m_axi_rresp m_axi_rvalid m_axi_rready} -clock m_axi_aclk -reset m_axi_aresetn -combo no
+abstract_port -module design_1_auto_cc_1 -ports {m_axi_aresetn} -clock m_axi_aclk -combo no
+abstract_port -module design_1_xbar_0 -ports {s_axi_awid s_axi_awaddr s_axi_awlen s_axi_awsize s_axi_awburst s_axi_awlock s_axi_awcache s_axi_awprot s_axi_awqos s_axi_awvalid s_axi_awready s_axi_wdata s_axi_wstrb s_axi_wlast s_axi_wvalid s_axi_wready s_axi_bid s_axi_bresp s_axi_bvalid s_axi_bready s_axi_arid s_axi_araddr s_axi_arlen s_axi_arsize s_axi_arburst s_axi_arlock s_axi_arcache s_axi_arprot s_axi_arqos s_axi_arvalid s_axi_arready s_axi_rid s_axi_rdata s_axi_rresp s_axi_rlast s_axi_rvalid s_axi_rready m_axi_awid m_axi_awaddr m_axi_awlen m_axi_awsize m_axi_awburst m_axi_awlock m_axi_awcache m_axi_awprot m_axi_awregion m_axi_awqos m_axi_awvalid m_axi_awready m_axi_wdata m_axi_wstrb m_axi_wlast m_axi_wvalid m_axi_wready m_axi_bid m_axi_bresp m_axi_bvalid m_axi_bready m_axi_arid m_axi_araddr m_axi_arlen m_axi_arsize m_axi_arburst m_axi_arlock m_axi_arcache m_axi_arprot m_axi_arregion m_axi_arqos m_axi_arvalid m_axi_arready m_axi_rid m_axi_rdata m_axi_rresp m_axi_rlast m_axi_rvalid m_axi_rready} -clock aclk -reset aresetn -combo no
+abstract_port -module design_1_xbar_0 -ports {aresetn} -clock aclk -combo no
+abstract_port -module design_1_xdma_0_0 -ports {usr_irq_req usr_irq_ack m_axi_awready m_axi_wready m_axi_bid m_axi_bresp m_axi_bvalid m_axi_arready m_axi_rid m_axi_rdata m_axi_rresp m_axi_rlast m_axi_rvalid m_axi_awid m_axi_awaddr m_axi_awlen m_axi_awsize m_axi_awburst m_axi_awprot m_axi_awvalid m_axi_awlock m_axi_awcache m_axi_wdata m_axi_wstrb m_axi_wlast m_axi_wvalid m_axi_bready m_axi_arid m_axi_araddr m_axi_arlen m_axi_arsize m_axi_arburst m_axi_arprot m_axi_arvalid m_axi_arlock m_axi_arcache m_axi_rready m_axil_awaddr m_axil_awprot m_axil_awvalid m_axil_awready m_axil_wdata m_axil_wstrb m_axil_wvalid m_axil_wready m_axil_bvalid m_axil_bresp m_axil_bready m_axil_araddr m_axil_arprot m_axil_arvalid m_axil_arready m_axil_rdata m_axil_rresp m_axil_rvalid m_axil_rready} -clock axi_aclk -reset axi_aresetn -combo no
+abstract_port -module design_1_xdma_0_0 -ports {axi_aresetn user_lnk_up msi_enable msi_vector_width} -clock axi_aclk -combo no
+abstract_port -module rtds_axi_clock_converter -ports {s_axi_awid s_axi_awaddr s_axi_awlen s_axi_awsize s_axi_awburst s_axi_awlock s_axi_awcache s_axi_awprot s_axi_awregion s_axi_awqos s_axi_awvalid s_axi_awready s_axi_wdata s_axi_wstrb s_axi_wlast s_axi_wvalid s_axi_wready s_axi_bid s_axi_bresp s_axi_bvalid s_axi_bready s_axi_arid s_axi_araddr s_axi_arlen s_axi_arsize s_axi_arburst s_axi_arlock s_axi_arcache s_axi_arprot s_axi_arregion s_axi_arqos s_axi_arvalid s_axi_arready s_axi_rid s_axi_rdata s_axi_rresp s_axi_rlast s_axi_rvalid s_axi_rready} -clock s_axi_aclk -reset s_axi_aresetn -combo no
+abstract_port -module rtds_axi_clock_converter -ports {s_axi_aresetn} -clock s_axi_aclk -combo no
+abstract_port -module rtds_axi_clock_converter -ports {m_axi_awid m_axi_awaddr m_axi_awlen m_axi_awsize m_axi_awburst m_axi_awlock m_axi_awcache m_axi_awprot m_axi_awregion m_axi_awqos m_axi_awvalid m_axi_awready m_axi_wdata m_axi_wstrb m_axi_wlast m_axi_wvalid m_axi_wready m_axi_bid m_axi_bresp m_axi_bvalid m_axi_bready m_axi_arid m_axi_araddr m_axi_arlen m_axi_arsize m_axi_arburst m_axi_arlock m_axi_arcache m_axi_arprot m_axi_arregion m_axi_arqos m_axi_arvalid m_axi_arready m_axi_rid m_axi_rdata m_axi_rresp m_axi_rlast m_axi_rvalid m_axi_rready} -clock m_axi_aclk -reset m_axi_aresetn -combo no
+abstract_port -module rtds_axi_clock_converter -ports {m_axi_aresetn} -clock m_axi_aclk -combo no
+abstract_port -module rtds_ddr4_mig -ports {c0_ddr4_s_axi_awid c0_ddr4_s_axi_awaddr c0_ddr4_s_axi_awlen c0_ddr4_s_axi_awsize c0_ddr4_s_axi_awburst c0_ddr4_s_axi_awlock c0_ddr4_s_axi_awcache c0_ddr4_s_axi_awprot c0_ddr4_s_axi_awqos c0_ddr4_s_axi_awvalid c0_ddr4_s_axi_awready c0_ddr4_s_axi_wdata c0_ddr4_s_axi_wstrb c0_ddr4_s_axi_wlast c0_ddr4_s_axi_wvalid c0_ddr4_s_axi_wready c0_ddr4_s_axi_bready c0_ddr4_s_axi_bid c0_ddr4_s_axi_bresp c0_ddr4_s_axi_bvalid c0_ddr4_s_axi_arid c0_ddr4_s_axi_araddr c0_ddr4_s_axi_arlen c0_ddr4_s_axi_arsize c0_ddr4_s_axi_arburst c0_ddr4_s_axi_arlock c0_ddr4_s_axi_arcache c0_ddr4_s_axi_arprot c0_ddr4_s_axi_arqos c0_ddr4_s_axi_arvalid c0_ddr4_s_axi_arready c0_ddr4_s_axi_rready c0_ddr4_s_axi_rid c0_ddr4_s_axi_rdata c0_ddr4_s_axi_rresp c0_ddr4_s_axi_rlast c0_ddr4_s_axi_rvalid} -clock c0_ddr4_ui_clk -reset c0_ddr4_ui_clk_sync_rst -combo no
+abstract_port -module rtds_ddr4_mig -ports {c0_ddr4_aresetn c0_ddr4_ui_clk_sync_rst c0_init_calib_complete} -clock c0_ddr4_ui_clk -combo no
+abstract_port -module rtds_ddr4_mig -ports {sys_rst} -clock c0_sys_clk_i -combo no
+abstract_port -module sys_mon -ports {daddr_in den_in di_in dwe_in busy_out channel_out do_out drdy_out eoc_out eos_out alarm_out} -clock dclk_in -reset reset_in -combo no

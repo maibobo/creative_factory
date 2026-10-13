@@ -223,6 +223,9 @@ Related violations: <none>
 
 LUTAR-1#18 Warning
 LUT drives async reset alert  
+LUT cell u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/u_ddr4_phy_pll/plle_loop[0].gen_plle3.PLLE3_BASE_INST_OTHER_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/u_ddr4_phy_pll/plle_loop[0].gen_plle3.PLLE3_BASE_INST_OTHER/RST,
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/u_ddr4_phy_pll/plle_loop[1].gen_plle3.PLLE3_BASE_INST_OTHER/RST
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/u_ddr4_phy_pll/plle_loop[2].gen_plle3.PLLE3_BASE_INST_OTHER/RST. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-9#1 Warning
@@ -237,6 +240,7 @@ Related violations: <none>
 
 CLKC-8#1 Advisory
 BUFGCE_DIV with active CE or DIVIDE not 1 has BUFG driver  
+The BUFGCE_DIV cell U_RTDS_FPGA_1G_INIT/U_BUFGCE_DIV_INIT U_RTDS_FPGA_1G_INIT/U_BUFGCE_DIV_INIT/I pin (and CE is ACTIVE or BUFGCE_DIVIDE is not 1) is driven by BUFGCE clock buffer u_clk_gen/clk_wiz_0_inst/inst/clkout3_buf. It should be reconnected in parallel to the driving clock buffer in order to reduce skew. Cascaded buffers introduce skew that can lead to difficult or impossible timing closure.
 Related violations: <none>
 
 CLKC-55#1 Advisory

@@ -1,0 +1,9 @@
+set_option top RTDS_1G_PERIODIC_TX
+set_option enableSV yes
+set_option enableSV09 yes
+set_option language_mode mixed
+set_option mthresh 65536
+set_option define {SYNTHESIS DDR4_REAL ONESPIN}
+read_file -type sourcelist full.f
+read_file -type sgdc constraints/one_g.sgdc
+current_methodology $::env(SPYGLASS_HOME)/GuideWare/latest/block/rtl_handoff

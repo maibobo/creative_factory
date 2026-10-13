@@ -2,9 +2,18 @@
  // AXI 定向前仿：实际 CONV_DMA + 实际 4MiB 行为 RAM。
  // 仅在测试包装层门控握手注入 AW/W/B 延迟；不改变 RAM 和 DUT 内部信号。
 module tb_rtds_axi_tail;
+ // 修改记录 2026-10-11：加入随机种子激励。
+ `include "rtds_random.svh"   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     logic M_AXI_ACLK = '0;
     rtds_axi_tail_test_if bus (.M_AXI_ACLK(M_AXI_ACLK));
 
+    bit phase2_aw=0,phase2_w=0,phase2_b=0;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+    always @(negedge M_AXI_ACLK) begin   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+      phase2_aw=phase2_pick(0,9)<6;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+      phase2_w=phase2_pick(0,9)<7;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+      phase2_b=phase2_pick(0,9)<3;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+    end   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+    integer phase2_base=phase2_pick(1,2147483647);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     int cycle_count=0;    // 复位后递增的周期号，供停顿门控取模
     wire allow_aw,allow_w,allow_b;    // AW/W/B 三通道各自的握手许可门控
     wire ram_awready,ram_awvalid,ram_wready,ram_wvalid,ram_bvalid,ram_bready;    // DUT 与 RAM 之间被门控截开的握手中间信号
@@ -21,11 +30,11 @@ module tb_rtds_axi_tail;
             cycle_count<=cycle_count+1;
     end
      // 地址和数据允许独立到达；末拍额外停顿，响应最多等 31 拍。
-    assign allow_aw=(cycle_count%11)>7;
+    assign allow_aw=phase2_aw;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     // 验证层控制握手可用性，用于注入独立通道停顿，不修改DUT内部状态。
-    assign allow_w=(cycle_count%5)>1 && (!bus.M_AXI_WLAST || (cycle_count%17)>13);
+    assign allow_w=phase2_w && (!bus.M_AXI_WLAST || (cycle_count%17)>13);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     // 验证层控制握手可用性，用于注入独立通道停顿，不修改DUT内部状态。
-    assign allow_b=(cycle_count%31)==0;
+    assign allow_b=phase2_b;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     // 验证层控制握手可用性，用于注入独立通道停顿，不修改DUT内部状态。
     assign ram_awvalid=bus.M_AXI_AWVALID && allow_aw;
     // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
@@ -194,13 +203,13 @@ module tb_rtds_axi_tail;
         repeat(10) @(bus.driver_cb);
         bus.driver_cb.M_AXI_ARESETN<=1;
         // 第一步：全字节使能写入基准值，建立高 32bit 旧数据
-        write_words('h2ffff8,1,'h12345678,0);
+        write_words('h2ffff8,1,phase2_base,0);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
         // 后续事务切换为仅低 4 字节使能（模拟尾拍场景）
         @(bus.driver_cb); bus.driver_cb.fdma_wstrb<=8'h0f;
         // 两半均请求写入DEADBEEF；实际只允许低32bit更新，高32bit保留旧值。
         write_words('h2ffff8,1,'hdeadbeef,0);
         // 读回验证：高 32bit 保留基准值，仅低 32bit 被更新
-        read_words('h2ffff8,1,'h12345678);
+        read_words('h2ffff8,1,phase2_base);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
         // 确认 8'h0f 已原样透传到 AXI WSTRB 引脚
         if(bus.M_AXI_WSTRB!==8'h0f)
             $fatal(1,"TAIL/WSTRB_NOT_PROPAGATED");

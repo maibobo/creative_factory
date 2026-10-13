@@ -4,6 +4,7 @@
 // Date        : Tue Sep 15 08:53:36 2026
 // Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
+//               c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_temp_stub.v
 // Design      : ila_temp
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcku040-ffva1156-2-i

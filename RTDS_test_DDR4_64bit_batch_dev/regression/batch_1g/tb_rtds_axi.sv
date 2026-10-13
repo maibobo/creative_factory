@@ -2,9 +2,17 @@
  // AXI 定向前仿：实际 CONV_DMA + 实际 4MiB 行为 RAM。
  // 仅在测试包装层门控握手注入 AW/W/B 延迟；不改变 RAM 和 DUT 内部信号。
 module tb_rtds_axi;
+ // 修改记录 2026-10-11：加入随机种子激励。
+ `include "rtds_random.svh"   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     logic M_AXI_ACLK = '0;
     rtds_axi_test_if bus (.M_AXI_ACLK(M_AXI_ACLK));
 
+    bit phase2_aw=0,phase2_w=0,phase2_b=0;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+    always @(negedge M_AXI_ACLK) begin   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+      phase2_aw=phase2_pick(0,9)<6;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+      phase2_w=phase2_pick(0,9)<7;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+      phase2_b=phase2_pick(0,9)<3;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+    end   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     int cycle_count=0;    // 复位后递增的周期号，供停顿门控取模
     wire allow_aw,allow_w,allow_b;    // AW/W/B 三通道各自的握手许可门控
     wire ram_awready,ram_awvalid,ram_wready,ram_wvalid,ram_bvalid,ram_bready;    // DUT 与 RAM 之间被门控截开的握手中间信号
@@ -21,11 +29,11 @@ module tb_rtds_axi;
             cycle_count<=cycle_count+1;
     end
      // 地址和数据允许独立到达；末拍额外停顿，响应最多等 31 拍。
-    assign allow_aw=(cycle_count%11)>7;
+    assign allow_aw=phase2_aw;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     // 验证层控制握手可用性，用于注入独立通道停顿，不修改DUT内部状态。
-    assign allow_w=(cycle_count%5)>1 && (!bus.M_AXI_WLAST || (cycle_count%17)>13);
+    assign allow_w=phase2_w && (!bus.M_AXI_WLAST || (cycle_count%17)>13);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     // 验证层控制握手可用性，用于注入独立通道停顿，不修改DUT内部状态。
-    assign allow_b=(cycle_count%31)==0;
+    assign allow_b=phase2_b;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     // 验证层控制握手可用性，用于注入独立通道停顿，不修改DUT内部状态。
     assign ram_awvalid=bus.M_AXI_AWVALID && allow_aw;
     // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。

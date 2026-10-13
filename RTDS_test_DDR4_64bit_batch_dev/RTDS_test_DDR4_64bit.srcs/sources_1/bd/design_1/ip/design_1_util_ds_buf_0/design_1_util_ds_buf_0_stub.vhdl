@@ -4,6 +4,7 @@
 -- Date        : Sat Sep 12 09:57:39 2026
 -- Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
+--               c:/project/RTDS/DDR/RTDS_test_DDR4_64bit/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0_stub.vhdl
 -- Design      : design_1_util_ds_buf_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcku040-ffva1156-2-i

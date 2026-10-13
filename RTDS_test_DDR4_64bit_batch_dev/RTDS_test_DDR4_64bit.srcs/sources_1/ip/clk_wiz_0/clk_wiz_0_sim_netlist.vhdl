@@ -4,6 +4,7 @@
 -- Date        : Sat Sep 12 09:57:39 2026
 -- Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
+--               c:/project/RTDS/DDR/RTDS_test_DDR4_64bit/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl
 -- Design      : clk_wiz_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

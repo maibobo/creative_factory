@@ -1,0 +1,185 @@
+--- phase1_before/RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v
++++ current/RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v
+@@ -206,7 +206,22 @@
+     reg [15:0] tx_completed_frames;
+     reg [31:0] tx_base_addr_lo;
+ 
+-    wire tx_start_valid;
++    // 修改记录 2026-10-11：TC-F11恢复修复。结束命令后继续处理旧读响应；
++    // 等待读事务结束、用户域发送桥复位确认和完成事件稳定后，才接收下一任务。
++    reg tx_recovering;   // 2026-10-11：恢复期间禁止新任务和旧数据进入发送桥
++    reg [3:0] tx_quiet_count;   // 2026-10-11：连续八个控制时钟确认旧完成事件已经处理完毕
++    wire tx_user_quiet_fdma;   // 2026-10-11：用户域发送桥已停止并复位的同步确认
++    wire tx_bridge_rareq;   // 2026-10-11：发送桥原始读请求，在适配层限制请求启动
++    wire tx_bridge_rready;   // 2026-10-11：发送桥正常读取时的数据接收许可
++    wire tx_deliver_enable;   // 2026-10-11：仅活动且就绪的任务可以接收业务数据
++    wire tx_start_valid;   // 2026-10-11：声明任务恢复控制信号
++    // 修改记录 2026-10-11：随机快速回归发现正常连续提交被清理间隔拒绝。
++    // 正常末帧完成后的清理可锁存一条下一命令；异常中断清理仍拒绝新提交。
++    reg tx_recovery_aborted;   // 2026-10-11：区分异常中断清理与正常任务收尾
++    reg tx_restart_pending;   // 2026-10-11：已接受但等待两域桥清理的下一条命令
++    reg [31:0] tx_deferred_base;   // 2026-10-11：等待命令的地址快照
++    reg [15:0] tx_deferred_frames;   // 2026-10-11：等待命令的帧数快照
++    wire tx_defer_accept;   // 2026-10-11：正常收尾时锁存合法下一命令的接受事件
+     wire tx_frame_done_fdma;
+     wire [32:0] tx_requested_end;
+ 
+@@ -232,20 +247,50 @@
+                            (tx_requested_end <= tx_window_end) &&
+                            !tx_requested_end[32];
+     // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
+-    assign cpu_wr_done_event = (rd_start && !tx_start_valid) ||    // TX 完成事件：末帧完成/链路断/非法命令
+-        (tx_active && (!link_up_fdma || (tx_frame_done_fdma &&
+-        (tx_completed_frames + 16'd1 >= tx_target_frames))));
++    assign cpu_wr_done_event = (rd_start && !tx_start_valid && !tx_defer_accept) ||   // 2026-10-11：已锁存的下一命令保持0x20忙，不按拒绝结束
++        (tx_restart_pending && !link_up_fdma) ||   // 2026-10-11：等待启动期间失去就绪，结束等待命令
++        (tx_active && (!link_up_fdma || (tx_frame_done_fdma &&   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++        (tx_completed_frames + 16'd1 >= tx_target_frames))));   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
+     // 组合握手条件供本时钟域推进事务；未满足条件时保持当前传输。
+-    assign tx_start_valid = rd_start && !tx_active && link_up_fdma && tx_config_valid;    // TX 启动条件：空闲+链路+命令合法
++    assign tx_start_valid = !tx_active && !tx_recovering && !fdma_rbusy && link_up_fdma &&   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++        ((rd_start && tx_config_valid) || tx_restart_pending);   // 2026-10-11：新脉冲或已锁存命令均等待同一安全启动条件
++    assign tx_defer_accept = rd_start && !tx_active && tx_recovering && !tx_recovery_aborted &&   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++        !tx_restart_pending && link_up_fdma && tx_config_valid;   // 2026-10-11：仅正常收尾清理允许锁存一条下一命令
+     wire tx_config_error_event;
+     // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
+-    assign tx_config_error_event = rd_start && (!tx_config_valid || tx_active);    // TX 配置错误事件（非法参数或重复启动）
++    assign tx_config_error_event = rd_start && (!tx_config_valid || tx_active || tx_restart_pending ||   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++        (tx_recovering && tx_recovery_aborted) || (!tx_recovering && fdma_rbusy));   // 2026-10-11：正常收尾的合法等待命令不记配置错误
+     wire tx_start_link_error;
+     // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
+     assign tx_start_link_error = rd_start && !link_up_fdma;    // TX 启动时链路已断的错误事件
+     wire [31:0] requested_frames_32;
+     // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
+     assign requested_frames_32 = cpu_fpga_len / FRAME_BYTES;    // 请求总帧数=长度/16
++
++    // 修改记录 2026-10-11：等待命令的数据整体锁存；就绪失效时取消，避免自动重发旧批。
++    always @(posedge fdma_clk or negedge fdma_rstn) begin   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++        if (!fdma_rstn) begin   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++            tx_recovery_aborted <= 1'b1;   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++            tx_restart_pending <= 1'b0;   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++            tx_deferred_base <= TX_BASE_ADDR_LO;   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++            tx_deferred_frames <= 16'd0;   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++        end else begin   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++            if (!link_up_fdma) begin   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++                tx_recovery_aborted <= 1'b1;   // 2026-10-11：异常清理不接受下一任务
++                tx_restart_pending <= 1'b0;   // 2026-10-11：等待命令就绪失效即取消
++            end else begin   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++                if (tx_active && tx_frame_done_fdma && (tx_completed_frames + 16'd1 >= tx_target_frames))   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++                    tx_recovery_aborted <= 1'b0;   // 2026-10-11：正常最后帧接受后，允许锁存下一合法任务
++                if (tx_defer_accept) begin   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++                    tx_restart_pending <= 1'b1;   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++                    tx_deferred_base <= cpu_fpga_start_addr;   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++                    tx_deferred_frames <= requested_frames_32[15:0];   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++                end else if (tx_start_valid) begin   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++                    tx_restart_pending <= 1'b0;   // 2026-10-11：安全启动时一次取走等待命令
++                end   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++            end   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++        end   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
++    end   // 2026-10-11：正常收尾期间锁存下一条合法命令，清理完成后自动启动
+ 
+     wire tx_active_user;
+     xpm_cdc_single #(
+@@ -276,6 +321,50 @@
+     wire tx_user_rstn;
+     // 复位极性/状态转换；解除时序由对应时钟域的复位包装层保证。
+     assign tx_user_rstn = tx_user_reset_pipe[1];    // TX bridge 用户域复位
++
++    // 修改记录 2026-10-11：采用用户域停止确认，而非固定跨域延时猜测桥已复位。
++    reg tx_user_quiet;   // 2026-10-11：在用户时钟沿确认任务无效且发送桥复位有效
++    always @(posedge aurora_user_clk or negedge aurora_user_rstn) begin   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        if (!aurora_user_rstn)   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++            tx_user_quiet <= 1'b0;   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        else   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++            tx_user_quiet <= !tx_active_user && !tx_user_rstn;   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++    end   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++    xpm_cdc_single #(   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        .DEST_SYNC_FF(2),   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        .INIT_SYNC_FF(0),   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        .SIM_ASSERT_CHK(0),   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        .SRC_INPUT_REG(0)   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++    ) u_cdc_tx_quiet_to_fdma (   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        .src_clk(aurora_user_clk),   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        .src_in(tx_user_quiet),   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        .dest_clk(fdma_clk),   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        .dest_out(tx_user_quiet_fdma)   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++    );   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++    always @(posedge fdma_clk or negedge fdma_rstn) begin   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        if (!fdma_rstn) begin   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++            tx_recovering <= 1'b1;   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++            tx_quiet_count <= 4'd0;   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        end else if (!link_up_fdma || (tx_active && tx_frame_done_fdma && (tx_completed_frames + 16'd1 >= tx_target_frames))) begin   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++            tx_recovering <= 1'b1;   // 2026-10-11：断链或任务结束均进入清理，隔离迟到的完成事件
++            tx_quiet_count <= 4'd0;   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        end else if (tx_recovering) begin   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++            if (!tx_active && !fdma_rbusy && tx_user_quiet_fdma && !tx_frame_done_fdma) begin   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++                if (tx_quiet_count == 4'd7) begin   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++                    tx_recovering <= 1'b0;   // 2026-10-11：两域停止且旧读取结束后，连续八拍无旧完成事件才放行
++                    tx_quiet_count <= 4'd0;   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++                end else begin   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++                    tx_quiet_count <= tx_quiet_count + 1'b1;   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++                end   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++            end else begin   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++                tx_quiet_count <= 4'd0;   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++            end   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++        end   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++    end   // 2026-10-11：执行发送桥停止确认和旧读事务清理
++    assign tx_deliver_enable = tx_active && link_up_fdma && !tx_recovering;   // 2026-10-11：有效业务数据进入发送桥和Byte1提取的共同条件
++    assign fdma_rareq = tx_bridge_rareq && tx_deliver_enable;   // 2026-10-11：断链后不再接受桥发出的新读请求
++    // 修改记录 2026-10-11：随机回归发现空闲常高ready会误触发超时，排空仅在旧读busy时进行。
++    assign fdma_rready = tx_deliver_enable ? tx_bridge_rready : fdma_rbusy;   // 2026-10-11：有旧读事务时继续排空；空闲时撤销ready，避免误计无进展超时
+ 
+     wire [31:0] tx_fdma_raddr_raw;
+     wire [37:0] tx_fdma_dbg_bus;
+@@ -298,11 +387,11 @@
+         .channel_up_fdma    (link_up_fdma && tx_active),
+         .cfg_tx_burst_limit (tx_target_frames),
+         .fdma_raddr         (tx_fdma_raddr_raw),
+-        .fdma_rareq         (fdma_rareq),
++        .fdma_rareq         (tx_bridge_rareq),   // 2026-10-11：读请求先经适配层就绪和恢复条件检查
+         .fdma_rbusy         (fdma_rbusy),
+         .fdma_rdata         (fdma_rdata),
+-        .fdma_rvalid        (fdma_rvalid),
+-        .fdma_rready        (fdma_rready),
++        .fdma_rvalid        (fdma_rvalid && tx_deliver_enable),   // 2026-10-11：清理期间旧返回不写入发送FIFO
++        .fdma_rready        (tx_bridge_rready),   // 2026-10-11：将正常接收许可与清理接收许可分开
+         .tx_d               (aurora_tx_d),
+         .tx_sof             (aurora_tx_sof),
+         .tx_eof             (aurora_tx_eof),
+@@ -385,7 +474,7 @@
+             tx_target_frames <= 16'd0 ;
+         end else begin
+             if (tx_start_valid) begin
+-                tx_target_frames <= requested_frames_32 [ 15 : 0 ] ;
++                tx_target_frames <= tx_restart_pending ? tx_deferred_frames : requested_frames_32[15:0];   // 2026-10-11：实际启动时采用等待命令的帧数快照
+             end else begin
+                 if (tx_active && ! link_up_fdma) begin
+                     tx_target_frames <= 16'd0 ;
+@@ -431,7 +520,7 @@
+             tx_base_addr_lo <= TX_BASE_ADDR_LO ;
+         end else begin
+             if (tx_start_valid) begin
+-                tx_base_addr_lo <= cpu_fpga_start_addr ;
++                tx_base_addr_lo <= tx_restart_pending ? tx_deferred_base : cpu_fpga_start_addr;   // 2026-10-11：实际启动时采用等待命令的地址快照
+             end
+         end
+     end
+@@ -581,15 +670,15 @@
+     always @(posedge fdma_clk or negedge fdma_rstn) begin
+         if (!fdma_rstn)
+             config_read_beat<=1'b0;
+-        else if (!tx_active)
+-            config_read_beat<=1'b0;
++        else if (!tx_deliver_enable)   // 2026-10-11：中止或恢复期间重置Byte1首拍位置
++            config_read_beat<=1'b0;   // 2026-10-11：中止或恢复期间重置Byte1首拍位置
+         else if (fdma_rvalid && fdma_rready)
+             config_read_beat<=!config_read_beat;
+     end
+     // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
+     assign cfg_byte = fdma_rdata[15:8];    // 配置字节=DDR 读数据 Byte1（编号1~10）
+     // 组合握手条件供本时钟域推进事务；未满足条件时保持当前传输。
+-    assign cfg_byte_valid = tx_active && fdma_rvalid && fdma_rready && (config_read_beat==0);    // 配置有效：TX 活动期间首个读数据拍
++    assign cfg_byte_valid = tx_deliver_enable && fdma_rvalid && fdma_rready && (config_read_beat==0);   // 2026-10-11：清理的旧响应不得形成1G配置事件
+ 
+     // ------------------------------------------------------------------
+     // User-domain frame checking and sticky status

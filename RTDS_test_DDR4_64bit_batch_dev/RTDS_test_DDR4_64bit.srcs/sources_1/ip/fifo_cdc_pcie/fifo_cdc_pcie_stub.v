@@ -4,6 +4,7 @@
 // Date        : Tue Apr 28 15:50:02 2026
 // Host        : Lixy running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
+//               c:/Users/Lixy/Desktop/RTDS/P2020.1/V12/RTDS_test/RTDS_test.srcs/sources_1/ip/fifo_cdc_pcie/fifo_cdc_pcie_stub.v
 // Design      : fifo_cdc_pcie
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcku040-ffva1156-2-i

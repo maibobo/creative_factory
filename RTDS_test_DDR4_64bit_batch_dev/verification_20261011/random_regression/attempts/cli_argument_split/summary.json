@@ -1,0 +1,363 @@
+[
+  {
+    "case": "ready_recovery",
+    "top": "tb_ready_recovery",
+    "ids": [
+      "TC-F11"
+    ],
+    "seed": 1417633351,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:54:07.736880+08:00",
+    "finished": "2026-10-11T20:54:14.813120+08:00",
+    "wall_seconds": 7.08,
+    "log": "ready_recovery_seed_1417633351.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "ready_recovery",
+    "top": "tb_ready_recovery",
+    "ids": [
+      "TC-F11"
+    ],
+    "seed": 750318462,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:54:14.880722+08:00",
+    "finished": "2026-10-11T20:54:20.162266+08:00",
+    "wall_seconds": 5.28,
+    "log": "ready_recovery_seed_750318462.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "ready_recovery",
+    "top": "tb_ready_recovery",
+    "ids": [
+      "TC-F11"
+    ],
+    "seed": 360207181,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:54:20.164263+08:00",
+    "finished": "2026-10-11T20:54:25.474754+08:00",
+    "wall_seconds": 5.31,
+    "log": "ready_recovery_seed_360207181.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "backend_read",
+    "ids": [
+      "TC-F13"
+    ],
+    "status": "ELABORATE_FAIL",
+    "exit_code": 1,
+    "log": "backend_read.elaborate.log",
+    "date": "2026-10-11T20:54:30.855906+08:00"
+  },
+  {
+    "case": "backend_write",
+    "ids": [
+      "TC-F14"
+    ],
+    "status": "ELABORATE_FAIL",
+    "exit_code": 1,
+    "log": "backend_write.elaborate.log",
+    "date": "2026-10-11T20:54:35.275438+08:00"
+  },
+  {
+    "case": "writer_error_recovery",
+    "top": "tb_writer_error_recovery",
+    "ids": [
+      "TC-F14"
+    ],
+    "seed": 1417633351,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:55:07.540503+08:00",
+    "finished": "2026-10-11T20:55:11.945167+08:00",
+    "wall_seconds": 4.41,
+    "log": "writer_error_recovery_seed_1417633351.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "writer_error_recovery",
+    "top": "tb_writer_error_recovery",
+    "ids": [
+      "TC-F14"
+    ],
+    "seed": 750318462,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:55:12.006108+08:00",
+    "finished": "2026-10-11T20:55:15.209340+08:00",
+    "wall_seconds": 3.2,
+    "log": "writer_error_recovery_seed_750318462.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "writer_error_recovery",
+    "top": "tb_writer_error_recovery",
+    "ids": [
+      "TC-F14"
+    ],
+    "seed": 360207181,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:55:15.212330+08:00",
+    "finished": "2026-10-11T20:55:19.295401+08:00",
+    "wall_seconds": 4.09,
+    "log": "writer_error_recovery_seed_360207181.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "recovery_isolation",
+    "top": "tb_recovery_isolation",
+    "ids": [
+      "TC-F15"
+    ],
+    "seed": 1417633351,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:55:52.258947+08:00",
+    "finished": "2026-10-11T20:55:58.798956+08:00",
+    "wall_seconds": 6.55,
+    "log": "recovery_isolation_seed_1417633351.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "recovery_isolation",
+    "top": "tb_recovery_isolation",
+    "ids": [
+      "TC-F15"
+    ],
+    "seed": 750318462,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:55:58.800952+08:00",
+    "finished": "2026-10-11T20:56:04.290302+08:00",
+    "wall_seconds": 5.48,
+    "log": "recovery_isolation_seed_750318462.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "recovery_isolation",
+    "top": "tb_recovery_isolation",
+    "ids": [
+      "TC-F15"
+    ],
+    "seed": 360207181,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:56:04.332189+08:00",
+    "finished": "2026-10-11T20:56:09.301988+08:00",
+    "wall_seconds": 4.97,
+    "log": "recovery_isolation_seed_360207181.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "fast_base",
+    "top": "tb_xdma_rtds_trythrough",
+    "ids": [
+      "TC-F01",
+      "TC-F02",
+      "TC-F03",
+      "TC-F04",
+      "TC-F05",
+      "TC-F06",
+      "TC-F07",
+      "TC-F08"
+    ],
+    "seed": 1417633351,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:56:31.364941+08:00",
+    "finished": "2026-10-11T20:56:35.340081+08:00",
+    "wall_seconds": 3.99,
+    "log": "fast_base_seed_1417633351.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "fast_base",
+    "top": "tb_xdma_rtds_trythrough",
+    "ids": [
+      "TC-F01",
+      "TC-F02",
+      "TC-F03",
+      "TC-F04",
+      "TC-F05",
+      "TC-F06",
+      "TC-F07",
+      "TC-F08"
+    ],
+    "seed": 750318462,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:56:35.369308+08:00",
+    "finished": "2026-10-11T20:56:39.058270+08:00",
+    "wall_seconds": 3.69,
+    "log": "fast_base_seed_750318462.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "fast_base",
+    "top": "tb_xdma_rtds_trythrough",
+    "ids": [
+      "TC-F01",
+      "TC-F02",
+      "TC-F03",
+      "TC-F04",
+      "TC-F05",
+      "TC-F06",
+      "TC-F07",
+      "TC-F08"
+    ],
+    "seed": 360207181,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:56:39.121307+08:00",
+    "finished": "2026-10-11T20:56:42.939271+08:00",
+    "wall_seconds": 3.81,
+    "log": "fast_base_seed_360207181.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "axi",
+    "top": "tb_rtds_axi",
+    "ids": [
+      "TC-M03"
+    ],
+    "seed": 1417633351,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:56:54.622230+08:00",
+    "finished": "2026-10-11T20:56:58.515673+08:00",
+    "wall_seconds": 3.89,
+    "log": "axi_seed_1417633351.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "axi",
+    "top": "tb_rtds_axi",
+    "ids": [
+      "TC-M03"
+    ],
+    "seed": 750318462,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:56:58.522656+08:00",
+    "finished": "2026-10-11T20:57:02.565444+08:00",
+    "wall_seconds": 4.05,
+    "log": "axi_seed_750318462.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "axi",
+    "top": "tb_rtds_axi",
+    "ids": [
+      "TC-M03"
+    ],
+    "seed": 360207181,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:57:02.585720+08:00",
+    "finished": "2026-10-11T20:57:07.100647+08:00",
+    "wall_seconds": 4.52,
+    "log": "axi_seed_360207181.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "axi_tail",
+    "top": "tb_rtds_axi_tail",
+    "ids": [
+      "TC-M04"
+    ],
+    "seed": 1417633351,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:57:18.782032+08:00",
+    "finished": "2026-10-11T20:57:23.151220+08:00",
+    "wall_seconds": 4.38,
+    "log": "axi_tail_seed_1417633351.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "axi_tail",
+    "top": "tb_rtds_axi_tail",
+    "ids": [
+      "TC-M04"
+    ],
+    "seed": 750318462,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:57:23.195615+08:00",
+    "finished": "2026-10-11T20:57:27.157385+08:00",
+    "wall_seconds": 3.97,
+    "log": "axi_tail_seed_750318462.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "axi_tail",
+    "top": "tb_rtds_axi_tail",
+    "ids": [
+      "TC-M04"
+    ],
+    "seed": 360207181,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:57:27.157385+08:00",
+    "finished": "2026-10-11T20:57:31.226134+08:00",
+    "wall_seconds": 4.06,
+    "log": "axi_tail_seed_360207181.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "ring",
+    "top": "tb_rtds_ring",
+    "ids": [
+      "TC-M02"
+    ],
+    "seed": 1417633351,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:57:43.948991+08:00",
+    "finished": "2026-10-11T20:57:48.431440+08:00",
+    "wall_seconds": 4.47,
+    "log": "ring_seed_1417633351.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "ring",
+    "top": "tb_rtds_ring",
+    "ids": [
+      "TC-M02"
+    ],
+    "seed": 750318462,
+    "status": "FAIL",
+    "exit_code": 1,
+    "started": "2026-10-11T20:57:48.433435+08:00",
+    "finished": "2026-10-11T20:57:51.882451+08:00",
+    "wall_seconds": 3.44,
+    "log": "ring_seed_750318462.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  }
+]

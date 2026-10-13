@@ -1,0 +1,49 @@
+﻿INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_1g_periodic_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_1G_PERIODIC_TX
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_1g_init.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_1G_INIT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_bit_cdc.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_BIT_CDC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_cfg_cdc.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_CFG_CDC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_count_cdc.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_COUNT_CDC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_fpga_reset_sync.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_RESET_SYNC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_rx_block_writer.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_RX_BLOCK_WRITER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_rx_frame_fifo.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_RX_FRAME_FIFO
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_sync_timebase.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_SYNC_TIMEBASE
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v" into library work
+INFO: [VRFC 10-311] analyzing module INFO_EXCH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v" into library work
+INFO: [VRFC 10-311] analyzing module CONV_DMA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v" into library work
+INFO: [VRFC 10-311] analyzing module pcie_fdma_aurora_brg_adapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/ddr4/rtds_ddr4_backend.sv" into library work
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_backend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/ddr4/rtds_axi_ram_model.sv" into library work
+INFO: [VRFC 10-311] analyzing module rtds_axi_ram_model
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module fdma_aurora_brg_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_1g_test_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_axi_tail_test_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_axi_test_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_regs_test_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_ring_test_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_rx_fifo_test_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/rtds_tx_test_if.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/rtds_real_harness.sv" into library work
+INFO: [VRFC 10-311] analyzing module rtds_real_harness
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/tb_byte1_1g.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_byte1_1g
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/tb_period_100ms.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_period_100ms
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/tb_ready_recovery.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_ready_recovery
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/tb_regs_multiblock.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_regs_multiblock
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/tb_tx_boundaries.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_tx_boundaries

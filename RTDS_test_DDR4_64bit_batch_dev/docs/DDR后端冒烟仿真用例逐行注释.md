@@ -1,9 +1,11 @@
 # DDR 后端冒烟仿真用例逐行注释
 
+源文件：`sim/ddr4_backend/tb_rtds_ddr4_backend_smoke.sv`。本用例定义 `DDR4_SIM_RAM`，因此被测模块采用行为 AXI RAM，而不例化真实 MIG/DDR4 物理接口。它验证后端的 AXI 基本握手、写入、读回、响应、ready 和状态位；不覆盖 DDR4 校准训练、PCIe、Aurora、乒乓调度或真实硬件时序。
 
 ```systemverilog
 `timescale 1ns/1ps // 仿真时间单位为 1ns，时间精度为 1ps。
 `define DDR4_SIM_RAM // 选择被测模块的行为 AXI RAM 分支，避免真实 MIG 依赖。
+module tb_rtds_ddr4_backend_smoke; // 定义无端口的 DDR 后端快速冒烟测试平台。
     reg clk=0, ddr_clk=0, resetn=0, ddr_resetn=0, clear_status=0; // 声明控制时钟、DDR系统时钟、两路低有效复位和状态清除输入，并初始化。
     always #2 clk=~clk; // 每 2ns 翻转控制时钟，得到周期为 4ns、频率为 250MHz 的 s_axi_aclk。
     always #5 ddr_clk=~ddr_clk; // 每 5ns 翻转 DDR 系统时钟，得到周期为 10ns、频率为 100MHz 的 ddr_sys_clk_i；在 SIM_RAM 分支仅作接口输入。
@@ -32,6 +34,7 @@
     wire [7:0] dm,dqs_c,dqs_t; // 声明 DDR4 数据掩码/DBI 和差分数据选通物理接口。
     wire [63:0] dq; // 声明 DDR4 数据物理接口；SIM_RAM 模式下为高阻，不参与本用例数据通路。
 
+    rtds_ddr4_backend #(.TIMEOUT_CYCLES(64)) dut ( // 例化被测 DDR 后端，并将事务超时阈值缩短到 64 个控制时钟周期以便快速观察。
       .s_axi_aclk(clk),.s_axi_aresetn(resetn),.ddr_sys_clk_i(ddr_clk),.ddr_sys_rst_n(ddr_resetn),.clear_status(clear_status), // 连接控制时钟/复位、DDR系统时钟/复位和状态清除输入。
       .s_axi_awid(awid),.s_axi_awaddr(awaddr),.s_axi_awlen(awlen),.s_axi_awsize(awsize),.s_axi_awburst(awburst), // 连接 AXI 写地址通道的 ID、地址、长度、拍大小和突发类型。
       .s_axi_awlock(awlock),.s_axi_awcache(awcache),.s_axi_awprot(awprot),.s_axi_awregion(awregion),.s_axi_awqos(awqos), // 连接 AXI 写地址通道的锁、缓存、保护、区域和 QoS 属性。
@@ -47,6 +50,7 @@
       .c0_ddr4_dm_dbi_n(dm),.c0_ddr4_dq(dq),.c0_ddr4_dqs_c(dqs_c),.c0_ddr4_dqs_t(dqs_t) // 连接 DDR4 数据、掩码/DBI 和数据选通物理端口。
     ); // 完成被测模块例化。
 
+    task automatic fail(input [255:0] msg); begin $display("RTDS_DDR_BACKEND_SMOKE_FAIL: %0s",msg); $finish; end endtask // 定义失败任务：打印带统一前缀的原因后结束仿真；automatic 使并发调用各自保存局部状态。
     task automatic send_aw(input [31:0] a,input [7:0] len,input [4:0] id); begin // 定义写地址发送任务，参数分别是地址、突发长度减一和事务 ID。
       @(negedge clk); awaddr=a;awlen=len;awid=id;awvalid=1; // 在时钟下降沿稳定地址字段并拉高 AWVALID，避免与上升沿采样竞争。
       while(!awready) @(posedge clk); @(negedge clk);awvalid=0; // 等待 AWREADY 完成握手，再于下降沿撤销 AWVALID；地址字段保持到握手发生。
@@ -93,6 +97,7 @@
       $display("INCR16_8000_PASS"); // 打印 16 拍递增突发用例通过标记。
 
       if(resp_err||timeout_err) fail("unexpected sticky status"); // 确认正常读写未置位响应错误或事务超时粘滞标志。
+      $display("RTDS_DDR_BACKEND_SMOKE_PASS"); // 打印整个冒烟用例通过标记。
       $finish; // 正常结束仿真。
     end // 结束主测试流程。
     initial begin #200000; fail("simulation timeout"); end // 建立 200us 看门狗；主流程卡死或迟迟不结束时，打印失败并结束仿真。

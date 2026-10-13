@@ -1,130 +1,112 @@
+// 连接软件控制、CONV_DMA读写和Aurora 10G用户接口。
+// 下行把DDR载荷按16Byte帧发送，并在每帧首个已接受读拍提取Byte1。
+// 上行每个有效拍取低32bit，经异步FIFO、拼接和块写模块保存到DDR。
+// 链路或DDR失效后停止业务交付，但继续接收旧读，防止旧数据混入下一任务。
+// 重新允许任务需旧读结束、用户域桥停止确认及8拍无旧完成事件；正常结束可暂存一条下一命令。
+// 注释整理 2026-10-12：仅修改说明和排版，端口、表达式、状态条件及连接保持。
+// 功能修改 2026-10-11：旧读排空、用户停止确认、跨任务完成事件隔离及正常下一命令暂存。
+
 `timescale 1ns / 1ps
 
-// =============================================================================
-// 模块用途：连接 INFO_EXCH 软件控制面、CONV_DMA/FDMA 数据面和 Aurora
-// LocalLink 边界，完成 CPU↔Aurora 双向 16 B 帧搬运、接收缓冲区所有权和 IRQ。
-//
-// 输入：
-//   1) fdma_clk 域的软件命令、地址/长度、FDMA busy/data/accept 和清除信号；
-//   2) aurora_user_clk 域的 LocalLink RX 数据、TX ready 及 channel/lane 状态；
-//   3) PCIe link 状态。
-// 输出：
-//   1) FDMA read/write 请求、地址、长度和写数据；
-//   2) Aurora TX LocalLink 帧及 RX 接收能力；
-//   3) INFO_EXCH 状态、用户 IRQ、sticky error 和调试状态。
-//
-// 失败定位顺序：
-//   命令未启动先查 tx_config_valid/link_up_fdma；搬运不前进查 FDMA
-//   req/busy/valid/accept；数据不一致查 SOF/EOF/rem 和 bridge dbg；中断异常查
-//   rx_pending、int_state_w、fpga_cpu_irq_req、int_state_clear/clear_inter；
-//   清除后复发查 user_status_clear_hold 与跨域 sticky 返回值。
-// =============================================================================
-
-// PCIe/FDMA/Aurora control and data-path adapter.
-//
-// Address ownership:
-//   RX window: Aurora -> card memory -> CPU, 0x0010_0000..0x002f_ffff (8 x 256KiB)
-//   TX window: CPU -> card memory -> Aurora, 0x0000_8000..0x0000_ffff
-//
-// INFO_EXCH supplies the low 32 bits of the TX card address. CARD_ADDR_HI is
-// the static upper aperture used by both directions. All FDMA sizes are in
-// 64-bit beats; the bridge's internal raw write size remains byte based.
-
+// 模块参数与输入输出。
 module pcie_fdma_aurora_brg_adapter #(
-        parameter integer FRAME_BYTES          = 16,
-        parameter integer ACTIVE_WINDOW_BYTES  = 32 * 1024,
-        parameter [31:0]  RX_BASE_ADDR_LO       = 32'h0010_0000,
-        parameter [31:0]  TX_BASE_ADDR_LO       = 32'h0000_8000,
-        parameter [31:0]  CARD_ADDR_HI          = 32'h0000_0000,
-        parameter integer RX_PERIOD_CYCLES = 25000000,
-        parameter integer RX_BLOCK_BYTES = 262144,
-        parameter integer RX_BLOCK_COUNT = 8,
-        parameter integer FDMA_TIMEOUT_CYCLES   = 16'hffff
+        parameter integer RX_VIO_TEST_ENABLE = 0, // 2026-10-13：0原FIFO；1固定VIO测试源
+        parameter integer                             FRAME_BYTES          = 16,               // 单帧字节数，当前16Byte
+        parameter integer                             ACTIVE_WINDOW_BYTES  = 32 * 1024,        // 允许的下行数据字节范围
+        parameter     [31:0]                       RX_BASE_ADDR_LO       = 32'h0010_0000,      // 本模块RX_BASE_ADDR_LO固定配置/状态编码
+        parameter     [31:0]                       TX_BASE_ADDR_LO       = 32'h0000_8000,      // 当前任务锁定的DDR低32bit起始地址
+        parameter     [31:0]                       CARD_ADDR_HI          = 32'h0000_0000,      // 卡端地址高32bit，当前使用0
+        parameter integer                             RX_PERIOD_CYCLES = 25000000,             // 上行接收周期拍数，生产值25000000
+        parameter integer                             RX_BLOCK_BYTES = 262144,                 // 本模块RX_BLOCK_BYTES固定配置/状态编码
+        parameter integer                             RX_BLOCK_COUNT = 8,                      // 本模块RX_BLOCK_COUNT固定配置/状态编码
+        parameter integer                             FDMA_TIMEOUT_CYCLES   = 16'hffff         // FDMA持续无进展的诊断阈值拍数
     )(
-        input              fdma_clk,
-        input              fdma_rstn,
-        input              aurora_user_clk,
-        input              aurora_user_rstn,
+        // 修改点 2026-10-13：测试入口和观察量；默认参数0时触发被编译移除。
+        input wire        rx_test_start,                                                                // VIO单输出，0到1触发一次
+        output wire       rx_test_busy,                                                                 // 等待周期、输入接受及真实块完成期间保持忙
+        output wire [1:0] rx_test_accepted,                                                             // 本次已接受的32bit字数，0到2
+        output wire [3:0] rx_test_status,                                                               // bit3中断、bit2失败、bit1 PCIe就绪、bit0 DDR就绪
+        input                                      fdma_clk,                                   // 对应接口时钟，使用域由连接关系确定
+        input                                      fdma_rstn,                                  // FDMA域低有效复位
+        input                                      aurora_user_clk,                            // 对应接口时钟，使用域由连接关系确定
+        input                                      aurora_user_rstn,                           // 低有效复位或同步复位状态
 
-        input              pcie_link_up,
-        input              ddr_ready,
-        input              aurora_channel_up,
-        input              aurora_lane_up,
+        input                                      pcie_link_up,                               // 对应链路就绪状态，跨域副本按后缀区分
+        input                                      ddr_ready,                                  // 存储接口可用且旧读写错误事务已结束，可接收新业务
+        input                                      aurora_channel_up,                          // 对应链路就绪状态，跨域副本按后缀区分
+        input                                      aurora_lane_up,                             // 对应链路就绪状态，跨域副本按后缀区分
 
-        output     [63:0]  aurora_tx_d,
-        output             aurora_tx_sof,
-        output             aurora_tx_eof,
-        output     [2:0]   aurora_tx_rem,
-        output             aurora_tx_src_rdy,
-        input              aurora_tx_dst_rdy,
+        output        [63:0]                       aurora_tx_d,                                // 发送当前数据拍
+        output                                     aurora_tx_sof,                              // 当前帧首拍标志，与有效/接受共同使用
+        output                                     aurora_tx_eof,                              // 当前帧末拍标志，与有效/接受共同使用
+        output        [2:0]                        aurora_tx_rem,                              // 当前拍有效字节数减1
+        output                                     aurora_tx_src_rdy,                          // 当前数据/事件有效
+        input                                      aurora_tx_dst_rdy,                          // 当前通道可接受数据或业务
 
-        input      [63:0]  aurora_rx_d,
-        input              aurora_rx_sof,
-        input              aurora_rx_eof,
-        input      [2:0]   aurora_rx_rem,
-        input              aurora_rx_src_rdy,
-        output             aurora_rx_dst_rdy,
+        input         [63:0]                       aurora_rx_d,                                // 接收当前数据拍
+        input                                      aurora_rx_sof,                              // 当前帧首拍标志，与有效/接受共同使用
+        input                                      aurora_rx_eof,                              // 当前帧末拍标志，与有效/接受共同使用
+        input         [2:0]                        aurora_rx_rem,                              // 当前拍有效字节数减1
+        input                                      aurora_rx_src_rdy,                          // 当前数据/事件有效
+        output                                     aurora_rx_dst_rdy,                          // 当前通道可接受数据或业务
 
-        input              rd_start,
-        input      [31:0]  cpu_fpga_start_addr,
-        input      [31:0]  cpu_fpga_len,
-        output wire        cpu_wr_done_event, // 成功、非法提交或链路中断的消费事件
-        output wire [7:0]  fdma_wstrb, // DDR尾拍字节使能
-        output reg         cpu_wr_done_resp,
+        input                                      rd_start,                                   // INFO_EXCH发出的单拍下行启动命令
+        input         [31:0]                       cpu_fpga_start_addr,                        // 软件配置的下行DDR起始字节地址
+        input         [31:0]                       cpu_fpga_len,                               // 软件配置的下行字节长度
+        output wire                                cpu_wr_done_event,                          // 本条下行命令结束单拍，成功/拒绝/失效均可能触发
+        output wire   [7:0]                        fdma_wstrb,                                 // DDR尾拍字节使能
+        output reg                                 cpu_wr_done_resp,                           // 下行业务任务响应忙状态
 
-        output wire [31:0] fpga_cpu_start_addr,
-        output wire [31:0] fpga_cpu_len,
-        output             int_state_w,
-        input              int_state_clear,
-        input              clear_inter,
-        input              cpu_rec_state_r,
-        output reg         cpu_rec_state_w,
-        output wire        fpga_cpu_irq_req,
+        output wire   [31:0]                       fpga_cpu_start_addr,                        // 最早待读块的DDR字节地址
+        output wire   [31:0]                       fpga_cpu_len,                               // 最早待读块成功写入的字节长度
+        output                                     int_state_w,                                // 当前待读块的通知状态
+        input                                      int_state_clear,                            // 软件读0x10形成的清通知单拍
+        input                                      clear_inter,                                // 软件读0x10形成的清相关错误单拍
+        input                                      cpu_rec_state_r,                            // 软件写0x14形成的CPU读完确认
+        output reg                                 cpu_rec_state_w,                            // CPU确认状态返回寄存器侧
+        output wire                                fpga_cpu_irq_req,                           // 有待读块时向XDMA申请中断
 
-        output     [63:0]  fdma_raddr,
-        output             fdma_rareq,
-        input              fdma_rbusy,
-        input      [63:0]  fdma_rdata,
-        input              fdma_rvalid,
-        output             fdma_rready,
-        output     [15:0]  fdma_rsize,
+        output        [63:0]                       fdma_raddr,                                 // FDMA 读地址=静态高32位+TX基址+bridge游标
+        output                                     fdma_rareq,                                 // 断链后不再接受桥发出的新读请求
+        input                                      fdma_rbusy,                                 // 读请求仍在处理
+        input         [63:0]                       fdma_rdata,                                 // 当前读数据
+        input                                      fdma_rvalid,                                // 读数据已接受事件
+        output                                     fdma_rready,                                // 有旧读事务时继续排空；空闲时撤销ready，避免误计无进展超时
+        output        [15:0]                       fdma_rsize,                                 // FDMA 读突发固定 2 拍（16B 帧）
 
-        output     [63:0]  fdma_waddr,
-        output             fdma_wareq,
-        input              fdma_wbusy,
-        input              fdma_wdone,
-        input              fdma_werror,
-        output wire [31:0] rx_ready_blocks,
-        output wire [31:0] rx_head_seq,
-        output wire [31:0] rx_dropped_frames,
-        output wire [7:0] cfg_byte,
-        output wire cfg_byte_valid,
-        output     [63:0]  fdma_wdata,
-        output             fdma_wvalid,
-        input              fdma_wready,
-        output     [15:0]  fdma_wsize,
+        output        [63:0]                       fdma_waddr,                                 // 写起始字节地址
+        output                                     fdma_wareq,                                 // 写请求，保持到busy接受
+        input                                      fdma_wbusy,                                 // 写请求仍在处理，包含等待响应
+        input                                      fdma_wdone,                                 // 本次写最终响应完成单拍
+        input                                      fdma_werror,                                // 本次写错误，与done共同判断
+        output wire   [31:0]                       rx_ready_blocks,                            // 已经完整写入且等待CPU读取的块数量
+        output wire   [31:0]                       rx_head_seq,                                // 最早待读块的顺序编号
+        output wire   [31:0]                       rx_dropped_frames,                          // FIFO和块写统计的累计丢失32bit字数
+        output wire   [7:0]                        cfg_byte,                                   // 首读拍Byte1配置编号
+        output wire                                cfg_byte_valid,                             // 该帧首读拍被实际接受的配置事件
+        output        [63:0]                       fdma_wdata,                                 // 当前写数据
+        output                                     fdma_wvalid,                                // 写有效/接受信号，方向含义见模块头
+        input                                      fdma_wready,                                // 写接受/有效信号，方向含义见模块头
+        output        [15:0]                       fdma_wsize,                                 // 写请求64bit拍数
 
-        output             rx_fifo_almost_full,
-        output             rx_fifo_full,
-        output             rx_overflow_sticky,
-        output             rx_overrun_sticky,
-        output             tx_underflow_sticky,
-        output             fdma_timeout_sticky,
-        output             length_error_sticky,
-        output             link_down_sticky,
-        output             rx_pending,
-        output     [3:0]   dbg_tx_state,
-        output     [3:0]   dbg_rx_state
+        output                                     rx_fifo_almost_full,                        // FIFO接近满，需暂停继续输入
+        output                                     rx_fifo_full,                               // FIFO当前已满
+        output                                     rx_overflow_sticky,                         // RX 溢出 sticky 输出
+        output                                     rx_overrun_sticky,                          // RX 丢字增长 sticky（clear 后可重捕获）
+        output                                     tx_underflow_sticky,                        // TX 下溢 sticky 输出
+        output                                     fdma_timeout_sticky,                        // FDMA 超时 sticky 输出
+        output                                     length_error_sticky,                        // 帧长错误 sticky 输出
+        output                                     link_down_sticky,                           // 链路断 sticky 输出
+        output                                     rx_pending,                                 // 至少有一个完整上行块等待CPU读取确认
+        output        [3:0]                        dbg_tx_state,                               // 下行桥当前状态
+        output        [3:0]                        dbg_rx_state                                // 上行块写模块当前状态
     );
 
-    localparam integer FRAME_WORDS = FRAME_BYTES / 8;
-    localparam [31:0] FRAME_BYTES_32 = FRAME_BYTES;
-    localparam [15:0] FRAME_WORDS_16 = FRAME_WORDS;
+    localparam integer                             FRAME_WORDS = FRAME_BYTES / 8     ;    // 本模块FRAME_WORDS固定配置/状态编码
+    localparam    [31:0]                       FRAME_BYTES_32 = FRAME_BYTES          ;    // 本模块FRAME_BYTES_32固定配置/状态编码
+    localparam    [15:0]                       FRAME_WORDS_16 = FRAME_WORDS          ;    // 本模块FRAME_WORDS_16固定配置/状态编码
 
-    // ---------- 语义段 1：静态参数自检 ----------
-    // 输入：FRAME_BYTES、活动窗口、RX/TX 基址；输出：仅仿真期 $error。
-    // 作用：在数据搬运前拒绝非 16 B 帧、非整帧窗口和 4 GiB 越界配置。
-    // 失败定位：启动 0 ns 的参数错误，不应继续排查 XDMA、FDMA 或 Aurora。
+
     initial begin
         if (FRAME_BYTES != 16)
             $error("pcie_fdma_aurora_brg_adapter supports 16-byte frames");
@@ -137,155 +119,274 @@ module pcie_fdma_aurora_brg_adapter #(
             $error("TX low-address window crosses a 4-GiB aperture");
     end
 
-    // ------------------------------------------------------------------
-    // ---------- 语义段 2：链路状态跨时钟域 ----------
-    // 输入：PCIe link、Aurora channel/lane；输出：fdma_clk/user_clk 域稳定电平。
-    // 作用：所有 TX/RX 命令只在三种链路状态均有效时执行。
-    // 失败定位：外部状态已拉高但 link_up_fdma/link_up_user 不高时检查复位和 CDC。
-    // Link and control CDC
-    // ------------------------------------------------------------------
-    wire pcie_link_up_user;
-    wire pcie_link_up_fdma;
-    // XDMA与fdma_clk独立，同频也必须同步。源状态已由XDMA寄存。
+
+    // 将PCIe、DDR和Aurora就绪分别同步到使用域。
+    wire                                       pcie_link_up_user                     ;    // 对应链路就绪状态，跨域副本按后缀区分
+    wire                                       pcie_link_up_fdma                     ;    // 对应链路就绪状态，跨域副本按后缀区分
+
     xpm_cdc_single #(
-        .DEST_SYNC_FF(2), .INIT_SYNC_FF(1), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0)
+        .DEST_SYNC_FF(2),
+        .INIT_SYNC_FF(1),
+        .SIM_ASSERT_CHK(0),
+        .SRC_INPUT_REG(0)
     ) u_cdc_pcie_link_to_fdma (
-        .src_clk(1'b0), .src_in(pcie_link_up),
-        .dest_clk(fdma_clk), .dest_out(pcie_link_up_fdma)
+        .src_clk(1'b0),
+        .src_in(pcie_link_up),
+        .dest_clk(fdma_clk),
+        .dest_out(pcie_link_up_fdma)
     );
-    wire ddr_ready_user;
-    wire aurora_channel_up_fdma;
-    wire aurora_lane_up_fdma;
-    wire link_up_user;
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign link_up_user = pcie_link_up_user && ddr_ready_user &&    // 用户域命令门控：PCIe/DDR/Aurora 三链路状态全有效
-                        aurora_channel_up && aurora_lane_up;
-    wire link_up_fdma;
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign link_up_fdma = pcie_link_up_fdma && ddr_ready &&    // FDMA侧命令门控：PCIe/DDR/Aurora 三链路状态全有效
-                        aurora_channel_up_fdma && aurora_lane_up_fdma;
+    wire                                       ddr_ready_user                        ;    // DDR业务ready同步到Aurora用户域
+    wire                                       aurora_channel_up_fdma                ;    // 对应链路就绪状态，跨域副本按后缀区分
+    wire                                       aurora_lane_up_fdma                   ;    // 对应链路就绪状态，跨域副本按后缀区分
+    wire                                       link_up_user                          ;    // 用户域命令门控：PCIe/DDR/Aurora 三链路状态全有效
+
+    assign link_up_user = pcie_link_up_user && ddr_ready_user &&
+                        aurora_channel_up && aurora_lane_up                          ;    // 用户域命令门控：PCIe/DDR/Aurora 三链路状态全有效
+    wire                                       link_up_fdma                          ;    // FDMA侧命令门控：PCIe/DDR/Aurora 三链路状态全有效
+
+    assign link_up_fdma = pcie_link_up_fdma && ddr_ready &&
+                        aurora_channel_up_fdma && aurora_lane_up_fdma                ;    // FDMA侧命令门控：PCIe/DDR/Aurora 三链路状态全有效
 
     xpm_cdc_single #(
-        .DEST_SYNC_FF(2), .INIT_SYNC_FF(0), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0)
+        .DEST_SYNC_FF(2),
+        .INIT_SYNC_FF(0),
+        .SIM_ASSERT_CHK(0),
+        .SRC_INPUT_REG(0)
     ) u_cdc_ddr_ready_to_user (
-        .src_clk(fdma_clk), .src_in(ddr_ready),
-        .dest_clk(aurora_user_clk), .dest_out(ddr_ready_user)
+        .src_clk(fdma_clk),
+        .src_in(ddr_ready),
+        .dest_clk(aurora_user_clk),
+        .dest_out(ddr_ready_user)
     );
 
     xpm_cdc_single #(
-        .DEST_SYNC_FF(2), .INIT_SYNC_FF(0), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0)
+        .DEST_SYNC_FF(2),
+        .INIT_SYNC_FF(0),
+        .SIM_ASSERT_CHK(0),
+        .SRC_INPUT_REG(0)
     ) u_cdc_pcie_link_to_user (
-        .src_clk(fdma_clk), .src_in(pcie_link_up),
-        .dest_clk(aurora_user_clk), .dest_out(pcie_link_up_user)
+        .src_clk(fdma_clk),
+        .src_in(pcie_link_up),
+        .dest_clk(aurora_user_clk),
+        .dest_out(pcie_link_up_user)
     );
 
     xpm_cdc_single #(
-        .DEST_SYNC_FF(2), .INIT_SYNC_FF(0), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0)
+        .DEST_SYNC_FF(2),
+        .INIT_SYNC_FF(0),
+        .SIM_ASSERT_CHK(0),
+        .SRC_INPUT_REG(0)
     ) u_cdc_channel_to_fdma (
-        .src_clk(aurora_user_clk), .src_in(aurora_channel_up),
-        .dest_clk(fdma_clk), .dest_out(aurora_channel_up_fdma)
+        .src_clk(aurora_user_clk),
+        .src_in(aurora_channel_up),
+        .dest_clk(fdma_clk),
+        .dest_out(aurora_channel_up_fdma)
     );
 
     xpm_cdc_single #(
-        .DEST_SYNC_FF(2), .INIT_SYNC_FF(0), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0)
+        .DEST_SYNC_FF(2),
+        .INIT_SYNC_FF(0),
+        .SIM_ASSERT_CHK(0),
+        .SRC_INPUT_REG(0)
     ) u_cdc_lane_to_fdma (
-        .src_clk(aurora_user_clk), .src_in(aurora_lane_up),
-        .dest_clk(fdma_clk), .dest_out(aurora_lane_up_fdma)
+        .src_clk(aurora_user_clk),
+        .src_in(aurora_lane_up),
+        .dest_clk(fdma_clk),
+        .dest_out(aurora_lane_up_fdma)
     );
 
-    // ------------------------------------------------------------------
-    // ---------- 语义段 3：CPU→Aurora 命令校验 ----------
-    // 输入：RD_START、CPU_FPGA_START_ADDR/LEN、链路与 tx_active。
-    // 输出：tx_start_valid、tx_config_error_event、目标帧数和 FDMA read 基址。
-    // 作用：把软件寄存器命令限制在 TX 32 KiB 窗口并强制 16 B 对齐。
-    // 失败定位：RD_START 有脉冲但无 fdma_rareq 时依次检查长度、地址、窗口和链路。
-    // CPU -> Aurora TX command validation and completion
-    // ------------------------------------------------------------------
-    reg        tx_active;
-    reg [15:0] tx_target_frames;
-    reg [15:0] tx_completed_frames;
-    reg [31:0] tx_base_addr_lo;
 
-    wire tx_start_valid;
-    wire tx_frame_done_fdma;
-    wire [32:0] tx_requested_end;
+    // 下行任务地址、目标帧数和完成统计。
+    reg                                        tx_active                             ;    // 当前下行业务任务有效
+    reg           [15:0]                       tx_target_frames                      ;    // 当前下行批量目标帧数
+    reg           [15:0]                       tx_completed_frames                   ;    // 当前任务已经接受完成事件的帧数
+    reg           [31:0]                       tx_base_addr_lo                       ;    // 当前任务锁定的DDR低32bit起始地址
 
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign tx_requested_end = {1'b0, cpu_fpga_start_addr} +    // TX 请求末地址（33bit 供 4GiB 越界检查）
-                                    {1'b0, cpu_fpga_len};
-    wire [32:0] tx_window_end;
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign tx_window_end = {1'b0, TX_BASE_ADDR_LO} +    // TX 窗口末地址=基址+32KiB
-                                ACTIVE_WINDOW_BYTES;
-    wire tx_addr_aligned;
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign tx_addr_aligned = ((cpu_fpga_start_addr & (FRAME_BYTES - 1)) == 0);    // 起始地址 16B 对齐检查
-    wire tx_len_aligned;
-    // 生成当前事务计数/长度字段，计数推进仍由实际握手或提交事件决定。
-    assign tx_len_aligned = ((cpu_fpga_len & (FRAME_BYTES - 1)) == 0);    // 长度 16B 对齐检查
-    wire tx_config_valid;
-    // 组合握手条件供本时钟域推进事务；未满足条件时保持当前传输。
-    assign tx_config_valid = (cpu_fpga_len != 0) &&    // TX 命令合法性：非零/对齐/不越窗
+
+    // 2026-10-11修改：旧任务隔离、停止确认和下一命令暂存。
+    reg                                        tx_recovering                         ;    // 旧读和跨域事件尚在清理，禁止新任务立即启动
+    reg           [3:0]                        tx_quiet_count                        ;    // 旧读结束及用户停止确认后的连续安静拍数
+    wire                                       tx_user_quiet_fdma                    ;    // 用户发送桥停止确认已同步回FDMA域
+    wire                                       tx_bridge_rareq                       ;    // 发送桥提出的原始读请求，仍需adapter门控
+    wire                                       tx_bridge_rready                      ;    // 发送桥正常接收读数据许可
+    wire                                       tx_deliver_enable                     ;    // 当前数据可进入发送桥和Byte1配置提取
+    wire                                       tx_start_valid                        ;    // 可以实际启动当前或等待命令的条件
+
+
+    reg                                        tx_recovery_aborted                   ;    // 当前清理来自异常退出，不能暂存下一命令
+    reg                                        tx_restart_pending                    ;    // 正常结束期间已保存一条等待启动的命令
+    reg           [31:0]                       tx_deferred_base                      ;    // 等待命令的起始地址快照
+    reg           [15:0]                       tx_deferred_frames                    ;    // 等待命令的总帧数快照
+    wire                                       tx_defer_accept                       ;    // 正常结束清理阶段接受一条合法下一命令
+    wire                                       tx_frame_done_fdma                    ;    // FDMA域恢复的单拍帧完成事件
+    wire          [32:0]                       tx_requested_end                      ;    // 请求末端地址的33bit中间值
+
+
+    assign tx_requested_end = {1'b0, cpu_fpga_start_addr} +
+                                    {1'b0, cpu_fpga_len}                             ;    // 请求末端地址的33bit中间值
+    wire          [32:0]                       tx_window_end                         ;    // 允许下行地址范围的末端
+
+    assign tx_window_end = {1'b0, TX_BASE_ADDR_LO} +
+                                ACTIVE_WINDOW_BYTES                                  ;    // 允许下行地址范围的末端
+    wire                                       tx_addr_aligned                       ;    // 起始地址为16Byte对齐
+
+    assign tx_addr_aligned = ((cpu_fpga_start_addr & (FRAME_BYTES - 1)) == 0)        ;    // 起始地址为16Byte对齐
+    wire                                       tx_len_aligned                        ;    // 长度为16Byte整数倍
+
+    assign tx_len_aligned = ((cpu_fpga_len & (FRAME_BYTES - 1)) == 0)                ;    // 长度为16Byte整数倍
+    wire                                       tx_config_valid                       ;    // 地址、长度和范围满足下行请求要求
+
+    assign tx_config_valid = (cpu_fpga_len != 0) &&
                            tx_addr_aligned && tx_len_aligned &&
                            (cpu_fpga_len <= ACTIVE_WINDOW_BYTES) &&
                            (cpu_fpga_start_addr >= TX_BASE_ADDR_LO) &&
                            (tx_requested_end <= tx_window_end) &&
-                           !tx_requested_end[32];
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign cpu_wr_done_event = (rd_start && !tx_start_valid) ||    // TX 完成事件：末帧完成/链路断/非法命令
-        (tx_active && (!link_up_fdma || (tx_frame_done_fdma &&
-        (tx_completed_frames + 16'd1 >= tx_target_frames))));
-    // 组合握手条件供本时钟域推进事务；未满足条件时保持当前传输。
-    assign tx_start_valid = rd_start && !tx_active && link_up_fdma && tx_config_valid;    // TX 启动条件：空闲+链路+命令合法
-    wire tx_config_error_event;
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign tx_config_error_event = rd_start && (!tx_config_valid || tx_active);    // TX 配置错误事件（非法参数或重复启动）
-    wire tx_start_link_error;
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign tx_start_link_error = rd_start && !link_up_fdma;    // TX 启动时链路已断的错误事件
-    wire [31:0] requested_frames_32;
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign requested_frames_32 = cpu_fpga_len / FRAME_BYTES;    // 请求总帧数=长度/16
+                           !tx_requested_end[32]                                     ;    // 地址、长度和范围满足下行请求要求
 
-    wire tx_active_user;
+    assign cpu_wr_done_event = (rd_start && !tx_start_valid && !tx_defer_accept) ||
+        (tx_restart_pending && !link_up_fdma) ||
+        (tx_active && (!link_up_fdma || (tx_frame_done_fdma &&
+        (tx_completed_frames + 16'd1 >= tx_target_frames))))                         ;    // 本条下行命令结束单拍，成功/拒绝/失效均可能触发
+
+    assign tx_start_valid = !tx_active && !tx_recovering && !fdma_rbusy && link_up_fdma &&
+        ((rd_start && tx_config_valid) || tx_restart_pending)                        ;    // 可以实际启动当前或等待命令的条件
+    assign tx_defer_accept = rd_start && !tx_active && tx_recovering && !tx_recovery_aborted &&
+        !tx_restart_pending && link_up_fdma && tx_config_valid                       ;    // 正常结束清理阶段接受一条合法下一命令
+    wire                                       tx_config_error_event                 ;    // 非法请求或不允许的重复启动事件
+
+    assign tx_config_error_event = rd_start && (!tx_config_valid || tx_active || tx_restart_pending ||
+        (tx_recovering && tx_recovery_aborted) || (!tx_recovering && fdma_rbusy))    ;    // 非法请求或不允许的重复启动事件
+    wire                                       tx_start_link_error                   ;    // 启动时完整就绪未成立的错误事件
+
+    assign tx_start_link_error = rd_start && !link_up_fdma                           ;    // 启动时完整就绪未成立的错误事件
+    wire          [31:0]                       requested_frames_32                   ;    // 由字节长度除16得到的帧数
+
+    assign requested_frames_32 = cpu_fpga_len / FRAME_BYTES                          ;    // 由字节长度除16得到的帧数
+
+
+    // FDMA域保存一条正常结束期间的下一命令及地址/帧数；失去就绪取消，异常退出期间不接收暂存命令。
+    always @(posedge fdma_clk or negedge fdma_rstn) begin
+        if (!fdma_rstn) begin
+            tx_recovery_aborted <= 1'b1;
+            tx_restart_pending <= 1'b0;
+            tx_deferred_base <= TX_BASE_ADDR_LO;
+            tx_deferred_frames <= 16'd0;
+        end else begin
+            if (!link_up_fdma) begin
+                tx_recovery_aborted <= 1'b1;
+                tx_restart_pending <= 1'b0;
+            end else begin
+                if (tx_active && tx_frame_done_fdma && (tx_completed_frames + 16'd1 >= tx_target_frames))
+                    tx_recovery_aborted <= 1'b0;
+                if (tx_defer_accept) begin
+                    tx_restart_pending <= 1'b1;
+                    tx_deferred_base <= cpu_fpga_start_addr;
+                    tx_deferred_frames <= requested_frames_32[15:0];
+                end else if (tx_start_valid) begin
+                    tx_restart_pending <= 1'b0;
+                end
+            end
+        end
+    end
+
+    wire                                       tx_active_user                        ;    // 当前任务有效标志已同步到用户域
     xpm_cdc_single #(
-        .DEST_SYNC_FF(2), .INIT_SYNC_FF(0), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0)
+        .DEST_SYNC_FF(2),
+        .INIT_SYNC_FF(0),
+        .SIM_ASSERT_CHK(0),
+        .SRC_INPUT_REG(0)
     ) u_cdc_tx_active_to_user (
-        .src_clk(fdma_clk), .src_in(tx_active),
-        .dest_clk(aurora_user_clk), .dest_out(tx_active_user)
+        .src_clk(fdma_clk),
+        .src_in(tx_active),
+        .dest_clk(aurora_user_clk),
+        .dest_out(tx_active_user)
     );
 
-    // 组合门控只进入寄存器D端，不再直接驱动bridge异步复位脚。
-    // 全局复位异步断言；事务/链路在本域采样清空，释放连续等待两拍。
-    (* ASYNC_REG = "TRUE", SHREG_EXTRACT = "NO" *) reg [1:0] tx_fdma_reset_pipe;
-    (* ASYNC_REG = "TRUE", SHREG_EXTRACT = "NO" *) reg [1:0] tx_user_reset_pipe;
+
+    (* ASYNC_REG = "TRUE", SHREG_EXTRACT = "NO" *) reg [1:0] tx_fdma_reset_pipe      ;    // 发送桥FDMA侧同步解除复位管线
+    (* ASYNC_REG = "TRUE", SHREG_EXTRACT = "NO" *) reg [1:0] tx_user_reset_pipe      ;    // 发送桥用户侧同步解除复位管线
+
+
+    // 2026-10-11修改：FDMA域产生发送桥复位：链路失效或无当前任务时清管线，有效任务连续两拍后解除。
     always @(posedge fdma_clk or negedge fdma_rstn) begin
         if (!fdma_rstn) tx_fdma_reset_pipe <= 2'b00;
         else if (!link_up_fdma || !tx_active) tx_fdma_reset_pipe <= 2'b00;
         else tx_fdma_reset_pipe <= {tx_fdma_reset_pipe[0], 1'b1};
     end
+
+
+    // 2026-10-11修改：用户域产生发送桥复位：用户未就绪或任务无效时清管线，两拍稳定后解除。
     always @(posedge aurora_user_clk or negedge aurora_user_rstn) begin
         if (!aurora_user_rstn) tx_user_reset_pipe <= 2'b00;
         else if (!link_up_user || !tx_active_user) tx_user_reset_pipe <= 2'b00;
         else tx_user_reset_pipe <= {tx_user_reset_pipe[0], 1'b1};
     end
-    wire tx_fdma_rstn;
+    wire                                       tx_fdma_rstn                          ;    // 发送桥FDMA侧低有效复位
 
-    // 复位极性/状态转换；解除时序由对应时钟域的复位包装层保证。
-    assign tx_fdma_rstn = tx_fdma_reset_pipe[1];    // TX bridge FDMA侧复位（链路断或退出时复位）
-    wire tx_user_rstn;
-    // 复位极性/状态转换；解除时序由对应时钟域的复位包装层保证。
-    assign tx_user_rstn = tx_user_reset_pipe[1];    // TX bridge 用户域复位
 
-    wire [31:0] tx_fdma_raddr_raw;
-    wire [37:0] tx_fdma_dbg_bus;
-    wire [38:0] tx_user_dbg_bus;
-    wire tx_frame_done_user;
+    assign tx_fdma_rstn = tx_fdma_reset_pipe[1]                                      ;    // 发送桥FDMA侧低有效复位
+    wire                                       tx_user_rstn                          ;    // 发送桥用户侧低有效复位
 
-    // ---------- 语义段 4：FDMA read 到 Aurora TX LocalLink ----------
-    // 输入：FDMA read data/valid、Aurora dst_rdy；输出：FDMA 请求和 LL TX 帧。
-    // 作用：每帧固定读取 16 个 64-bit word，可响应 Aurora TX 方向背压。
-    // 失败定位：请求存在无数据查 CONV_DMA；数据存在无 LL 帧查 TX bridge/FIFO。
+    assign tx_user_rstn = tx_user_reset_pipe[1]                                      ;    // 发送桥用户侧低有效复位
+
+
+    reg                                        tx_user_quiet                         ;    // 用户域看到任务无效且发送桥复位的确认
+
+
+    // 在用户时钟沿确认任务无效且桥处于复位，得到tx_user_quiet，再同步回FDMA域。
+    always @(posedge aurora_user_clk or negedge aurora_user_rstn) begin
+        if (!aurora_user_rstn)
+            tx_user_quiet <= 1'b0;
+        else
+            tx_user_quiet <= !tx_active_user && !tx_user_rstn;
+    end
+    xpm_cdc_single #(
+        .DEST_SYNC_FF(2),
+        .INIT_SYNC_FF(0),
+        .SIM_ASSERT_CHK(0),
+        .SRC_INPUT_REG(0)
+    ) u_cdc_tx_quiet_to_fdma (
+        .src_clk(aurora_user_clk),
+        .src_in(tx_user_quiet),
+        .dest_clk(fdma_clk),
+        .dest_out(tx_user_quiet_fdma)
+    );
+
+
+    // 2026-10-11修改：保持旧任务清理状态；旧busy结束、用户停止确认及无旧完成事件连续8拍后才允许下一任务。
+    always @(posedge fdma_clk or negedge fdma_rstn) begin
+        if (!fdma_rstn) begin
+            tx_recovering <= 1'b1;
+            tx_quiet_count <= 4'd0;
+        end else if (!link_up_fdma || (tx_active && tx_frame_done_fdma && (tx_completed_frames + 16'd1 >= tx_target_frames))) begin
+            tx_recovering <= 1'b1;
+            tx_quiet_count <= 4'd0;
+        end else if (tx_recovering) begin
+            if (!tx_active && !fdma_rbusy && tx_user_quiet_fdma && !tx_frame_done_fdma) begin
+                if (tx_quiet_count == 4'd7) begin
+                    tx_recovering <= 1'b0;
+                    tx_quiet_count <= 4'd0;
+                end else begin
+                    tx_quiet_count <= tx_quiet_count + 1'b1;
+                end
+            end else begin
+                tx_quiet_count <= 4'd0;
+            end
+        end
+    end
+
+    assign tx_deliver_enable = tx_active && link_up_fdma && !tx_recovering           ;    // 当前数据可进入发送桥和Byte1配置提取
+    assign fdma_rareq = tx_bridge_rareq && tx_deliver_enable                         ;    // 断链后不再接受桥发出的新读请求
+
+    assign fdma_rready = tx_deliver_enable ? tx_bridge_rready : fdma_rbusy           ;    // 有旧读事务时继续排空；空闲时撤销ready，避免误计无进展超时
+
+    // 发送桥的地址、调试状态和跨域完成事件。
+    wire          [31:0]                       tx_fdma_raddr_raw                     ;    // 发送桥给出的相对DDR读字节地址
+    wire          [37:0]                       tx_fdma_dbg_bus                       ;    // 发送桥FDMA侧状态和FIFO写侧统计
+    wire          [38:0]                       tx_user_dbg_bus                       ;    // 发送桥用户侧状态和FIFO读侧统计
+    wire                                       tx_frame_done_user                    ;    // 用户域当前帧完成单拍
+
+
     fdma_aurora_brg_tx #(
         .FRAME_BYTES      (FRAME_BYTES),
         .MEM_WINDOW_BYTES (ACTIVE_WINDOW_BYTES)
@@ -298,11 +399,11 @@ module pcie_fdma_aurora_brg_adapter #(
         .channel_up_fdma    (link_up_fdma && tx_active),
         .cfg_tx_burst_limit (tx_target_frames),
         .fdma_raddr         (tx_fdma_raddr_raw),
-        .fdma_rareq         (fdma_rareq),
+        .fdma_rareq         (tx_bridge_rareq),
         .fdma_rbusy         (fdma_rbusy),
         .fdma_rdata         (fdma_rdata),
-        .fdma_rvalid        (fdma_rvalid),
-        .fdma_rready        (fdma_rready),
+        .fdma_rvalid        (fdma_rvalid && tx_deliver_enable),
+        .fdma_rready        (tx_bridge_rready),
         .tx_d               (aurora_tx_d),
         .tx_sof             (aurora_tx_sof),
         .tx_eof             (aurora_tx_eof),
@@ -314,20 +415,17 @@ module pcie_fdma_aurora_brg_adapter #(
         .tx_frame_done      (tx_frame_done_user)
     );
 
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign fdma_raddr = {CARD_ADDR_HI, tx_base_addr_lo} +    // FDMA 读地址=静态高32位+TX基址+bridge游标
-                        {32'd0, tx_fdma_raddr_raw};
-    // 连接本级与上下游同一事务字段；保持原有时序和位宽语义。
-    assign fdma_rsize = FRAME_WORDS_16;    // FDMA 读突发固定 2 拍（16B 帧）
 
-    // ---------- 语义段 5：TX 帧完成跨域与软件响应 ----------
-    // 输入：Aurora 域单周期 tx_frame_done_user；输出：fdma 域完成事件和 resp。
-    // 作用：用 toggle CDC 防止异步时钟间丢失完成脉冲，并按目标帧数结束事务。
-    // 失败定位：LL 已见 EOF 但 CPU_WR_DONE_resp 不回落时检查两个 toggle 和帧计数。
-    // Toggle CDC preserves one-cycle frame completion pulses across unrelated
-    // clocks without relying on a minimum pulse width.
-    reg tx_done_toggle_user;
+    assign fdma_raddr = {CARD_ADDR_HI, tx_base_addr_lo} +
+                        {32'd0, tx_fdma_raddr_raw}                                   ;    // FDMA 读地址=静态高32位+TX基址+bridge游标
 
+    assign fdma_rsize = FRAME_WORDS_16                                               ;    // FDMA 读突发固定 2 拍（16B 帧）
+
+
+    reg                                        tx_done_toggle_user                   ;    // 用户域每完成一帧翻转的事件标志
+
+
+    // 每完成一帧翻转用户域完成标志，跨域后通过异或恢复单拍事件。
     always @(posedge aurora_user_clk or negedge aurora_user_rstn) begin
         if (!aurora_user_rstn)
             tx_done_toggle_user <= 1'b0;
@@ -335,19 +433,24 @@ module pcie_fdma_aurora_brg_adapter #(
             tx_done_toggle_user <= ~tx_done_toggle_user;
     end
 
-    wire tx_done_toggle_fdma;
-    reg  tx_done_toggle_fdma_d;
+    wire                                       tx_done_toggle_fdma                   ;    // 完成翻转标志已同步到FDMA域
+    reg                                        tx_done_toggle_fdma_d                 ;    // 上一拍同步完成翻转标志
     xpm_cdc_single #(
-        .DEST_SYNC_FF(2), .INIT_SYNC_FF(0), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0)
+        .DEST_SYNC_FF(2),
+        .INIT_SYNC_FF(0),
+        .SIM_ASSERT_CHK(0),
+        .SRC_INPUT_REG(0)
     ) u_cdc_tx_done_toggle (
-        .src_clk(aurora_user_clk), .src_in(tx_done_toggle_user),
-        .dest_clk(fdma_clk), .dest_out(tx_done_toggle_fdma)
+        .src_clk(aurora_user_clk),
+        .src_in(tx_done_toggle_user),
+        .dest_clk(fdma_clk),
+        .dest_out(tx_done_toggle_fdma)
     );
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign tx_frame_done_fdma = tx_done_toggle_fdma ^ tx_done_toggle_fdma_d;    // toggle 异或恢复单拍帧完成事件
 
-        // tx_done_toggle_fdma_d：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
+    assign tx_frame_done_fdma = tx_done_toggle_fdma ^ tx_done_toggle_fdma_d          ;    // FDMA域恢复的单拍帧完成事件
 
+
+    // 保存上一拍同步完成翻转位，供异或检测新完成事件。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_tx_done_toggle_fdma_d
         if (! fdma_rstn) begin
             tx_done_toggle_fdma_d <= 1'b0 ;
@@ -356,8 +459,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // tx_active：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 启动有效任务置tx_active；就绪失效或最后一帧完成后清除。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_tx_active
         if (! fdma_rstn) begin
             tx_active <= 1'b0 ;
@@ -378,14 +481,14 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // tx_target_frames：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 启动时保存目标帧数，正常暂存命令使用其快照；任务结束或失效清目标。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_tx_target_frames
         if (! fdma_rstn) begin
             tx_target_frames <= 16'd0 ;
         end else begin
             if (tx_start_valid) begin
-                tx_target_frames <= requested_frames_32 [ 15 : 0 ] ;
+                tx_target_frames <= tx_restart_pending ? tx_deferred_frames : requested_frames_32[15:0];
             end else begin
                 if (tx_active && ! link_up_fdma) begin
                     tx_target_frames <= 16'd0 ;
@@ -400,8 +503,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // tx_completed_frames：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 只为当前有效任务计已完成帧，启动、失效或最后帧结束时清零。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_tx_completed_frames
         if (! fdma_rstn) begin
             tx_completed_frames <= 16'd0 ;
@@ -424,20 +527,20 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // tx_base_addr_lo：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 启动时锁定本批起始地址，暂存命令用地址快照，读数据时不再跟随软件寄存器变化。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_tx_base_addr_lo
         if (! fdma_rstn) begin
             tx_base_addr_lo <= TX_BASE_ADDR_LO ;
         end else begin
             if (tx_start_valid) begin
-                tx_base_addr_lo <= cpu_fpga_start_addr ;
+                tx_base_addr_lo <= tx_restart_pending ? tx_deferred_base : cpu_fpga_start_addr;
             end
         end
     end
 
-    // cpu_wr_done_resp：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 当前任务开始置响应忙，完成或就绪失效清除；与旧读busy是否结束分开判断。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_cpu_wr_done_resp
         if (! fdma_rstn) begin
             cpu_wr_done_resp <= 1'b0 ;
@@ -459,20 +562,16 @@ module pcie_fdma_aurora_brg_adapter #(
     end
 
 
-    // ------------------------------------------------------------------
-    // ---------- 语义段 6：Aurora→CPU 连续接收与 FDMA write ----------
-    // 输入：无可回压的 Aurora RX LocalLink 数据；输出：FDMA write 请求/数据。
-    // 作用：RX FIFO 只吸收瞬时速率差，不能把 dst_rdy 当作 SerDes 线路反压。
-    // 失败定位：rx_dst_rdy 下降或数据丢失时检查 FIFO full/almost_full、source_valid
-    // 和 fdma_w_accept，不能通过延迟远端发送来掩盖问题。
-    // Aurora -> CPU RX path and buffer ownership
-    // ------------------------------------------------------------------
+    // 上行异步FIFO数据、块写接口及丢字统计。
+    wire          [63:0]                       rx_packet                             ;    // 异步FIFO送到DDR域的原始64bit接收拍
+    wire                                       rx_packet_valid                       ;    // 当前数据/事件有效
+    wire                                       rx_packet_ready                       ;    // 当前通道可接受数据或业务
+    wire          [31:0]                       fifo_drops                            ;    // 接收FIFO累计丢失32bit字数
+    wire          [31:0]                       writer_drops                          ;    // 块空间不足或写响应失败的累计丢字
+    reg           [31:0]                       fifo_drops_previous                   ;    // 上一拍FIFO丢字计数
 
-    wire [63:0] rx_packet;
-    wire rx_packet_valid, rx_packet_ready;
-    wire [31:0] fifo_drops, writer_drops;
-    reg [31:0] fifo_drops_previous; // 只将新增丢帧事件置 sticky，读清后不由历史累计值重置位
 
+    // 保存上一拍FIFO丢字计数，识别接收侧新丢字。
     always @(posedge fdma_clk or negedge fdma_rstn) begin
         if (!fdma_rstn) begin
             fifo_drops_previous <= 32'd0;
@@ -480,32 +579,36 @@ module pcie_fdma_aurora_brg_adapter #(
             fifo_drops_previous <= fifo_drops;
         end
     end
-    wire [32:0] total_drops; // 两个饱和计数求和时保留进位
-    wire rx_accept_enable; // 用户域链路有效即组帧；存储不可用由writer整帧丢弃并计数
-    wire rx_store_enable; // DDR 初始化和 PCIe 链路就绪后允许写缓存
-    wire rx_irq_clear; // 两种通知清除入口，不代表释放块
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign rx_accept_enable = aurora_user_rstn && aurora_channel_up && aurora_lane_up;    // RX 接收使能：用户域 Aurora 链路有效
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign rx_store_enable = ddr_ready && pcie_link_up_fdma;    // RX 存储使能：DDR 校准+PCIe 链路就绪
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign rx_irq_clear = int_state_clear || clear_inter;    // IRQ 通知清除入口（不释放块）
-    wire rx_length_error_raw;
-    wire rx_fifo_overflow_user;
-    wire rx_burst_done_fdma;
-    reg cpu_rec_state_d;
-    wire cpu_rec_ack;
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign cpu_rec_ack = cpu_rec_state_r; // INFO_EXCH输出每次写1对应的单周期命令
-    // 连接本级与上下游同一事务字段；保持原有时序和位宽语义。
-    assign int_state_w = fpga_cpu_irq_req;    // 软件中断状态线=IRQ 请求
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign rx_pending = (rx_ready_blocks != 0);    // 队头待取块数非零即 pending
-    reg rx_overrun_flag; // 从新增丢帧事件置位；通知清除后可重新捕获异常
-    reg [31:0] dropped_frames_previous;
-    // 连接本级与上下游同一事务字段；保持原有时序和位宽语义。
-    assign rx_overrun_sticky = rx_overrun_flag;    // RX 丢字增长 sticky（clear 后可重捕获）
+    wire          [32:0]                       total_drops                           ;    // 两个饱和计数求和时保留进位
+    wire                                       rx_accept_enable                      ;    // 用户域链路有效即组帧；存储不可用由writer整帧丢弃并计数
+    wire                                       rx_store_enable                       ;    // DDR 初始化和 PCIe 链路就绪后允许写缓存
+    wire                                       rx_irq_clear                          ;    // 两种通知清除入口，不代表释放块
 
+    assign rx_accept_enable = (RX_VIO_TEST_ENABLE == 0) && aurora_user_rstn && aurora_channel_up && aurora_lane_up;    // 用户域链路有效即组帧；存储不可用由writer整帧丢弃并计数
+
+    assign rx_store_enable = ddr_ready && pcie_link_up_fdma                          ;    // DDR 初始化和 PCIe 链路就绪后允许写缓存
+
+    assign rx_irq_clear = int_state_clear || clear_inter                             ;    // 两种通知清除入口，不代表释放块
+    wire                                       rx_length_error_raw                   ;    // RX FIFO保留的长度错误兼容输出
+    wire                                       rx_fifo_overflow_user                 ;    // FIFO 溢出统计在 mem 域，user 域恒 0
+    wire                                       rx_burst_done_fdma                    ;    // RX 写 burst 成功提交事件（无写错误）
+
+    // CPU读完确认的单拍检测。
+    reg                                        cpu_rec_state_d                       ;    // 上一拍CPU确认位，用于检测0到1变化
+    wire                                       cpu_rec_ack                           ;    // INFO_EXCH输出每次写1对应的单周期命令
+
+    assign cpu_rec_ack = cpu_rec_state_r                                             ;    // INFO_EXCH输出每次写1对应的单周期命令
+
+    assign int_state_w = fpga_cpu_irq_req                                            ;    // 当前待读块的通知状态
+
+    assign rx_pending = (rx_ready_blocks != 0)                                       ;    // 至少有一个完整上行块等待CPU读取确认
+    reg                                        rx_overrun_flag                       ;    // 块空间或写入失败引起的新丢字保持标志
+    reg           [31:0]                       dropped_frames_previous               ;    // 上一拍合计丢字，用于检测新增加的丢字
+
+    assign rx_overrun_sticky = rx_overrun_flag                                       ;    // RX 丢字增长 sticky（clear 后可重捕获）
+
+
+    // 保存上一拍块写丢字计数，识别DDR写入或空间不足引起的新丢字。
     always @(posedge fdma_clk or negedge fdma_rstn) begin
         if (!fdma_rstn) begin
             dropped_frames_previous <= 32'd0;
@@ -514,6 +617,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
+
+    // 发现新的丢字时保持接收超额错误，软件清相关状态后解除。
     always @(posedge fdma_clk or negedge fdma_rstn) begin
         if (!fdma_rstn) begin
             rx_overrun_flag <= 1'b0;
@@ -523,16 +628,17 @@ module pcie_fdma_aurora_brg_adapter #(
             rx_overrun_flag <= 1'b0;
         end
     end
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign total_drops = {1'b0,fifo_drops} + {1'b0,writer_drops};    // FIFO 丢字+writer 丢字（33bit 防溢出求和）
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign rx_dropped_frames = total_drops[32] ? 32'hffffffff : total_drops[31:0];    // 总丢字数输出（32bit 饱和）
-    // 复位极性/状态转换；解除时序由对应时钟域的复位包装层保证。
-    assign rx_burst_done_fdma = fdma_wdone && !fdma_werror;    // RX 写 burst 成功提交事件（无写错误）
-    // FIFO溢出统计在mem域读取，user域sticky由已有长度检查/丢帧统计补充。
-    assign rx_fifo_overflow_user = 1'b0;    // FIFO 溢出统计在 mem 域，user 域恒 0
-        // cpu_rec_state_d：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    assign total_drops = {1'b0,fifo_drops} + {1'b0,writer_drops}                     ;    // 两个饱和计数求和时保留进位
+
+    assign rx_dropped_frames = total_drops[32] ? 32'hffffffff : total_drops[31:0]    ;    // FIFO和块写统计的累计丢失32bit字数
+
+    assign rx_burst_done_fdma = fdma_wdone && !fdma_werror                           ;    // RX 写 burst 成功提交事件（无写错误）
+
+    assign rx_fifo_overflow_user = 1'b0                                              ;    // FIFO 溢出统计在 mem 域，user 域恒 0
+
+
+    // 保存CPU确认位的上一拍，形成一次0到1确认事件。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_cpu_rec_state_d
         if (! fdma_rstn) begin
             cpu_rec_state_d <= 1'b0 ;
@@ -541,8 +647,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // cpu_rec_state_w：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 同步保存当前CPU确认状态，供寄存器读回。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_cpu_rec_state_w
         if (! fdma_rstn) begin
             cpu_rec_state_w <= 1'b0 ;
@@ -552,54 +658,120 @@ module pcie_fdma_aurora_brg_adapter #(
     end
 
     RTDS_RX_FRAME_FIFO U_RTDS_RX_FRAME_FIFO (
-        .rst_n(fdma_rstn), .user_clk(aurora_user_clk),
+        .rst_n(fdma_rstn),
+        .user_clk(aurora_user_clk),
         .user_ready(rx_accept_enable),
-        .rx_data(aurora_rx_d), .rx_sof(aurora_rx_sof), .rx_eof(aurora_rx_eof),
-        .rx_rem(aurora_rx_rem), .rx_valid(aurora_rx_src_rdy), .rx_ready(aurora_rx_dst_rdy),
-        .mem_clk(fdma_clk), .frame_data(rx_packet), .frame_valid(rx_packet_valid),
-        .frame_ready(rx_packet_ready), .fifo_full(rx_fifo_full),
-        .fifo_almost_full(rx_fifo_almost_full), .dropped_frames(fifo_drops),
+        .rx_data(aurora_rx_d),
+        .rx_sof(aurora_rx_sof),
+        .rx_eof(aurora_rx_eof),
+        .rx_rem(aurora_rx_rem),
+        .rx_valid(aurora_rx_src_rdy),
+        .rx_ready(aurora_rx_dst_rdy),
+        .mem_clk(fdma_clk),
+        .frame_data(rx_packet),
+        .frame_valid(rx_packet_valid),
+        .frame_ready(rx_packet_ready),
+        .fifo_full(rx_fifo_full),
+        .fifo_almost_full(rx_fifo_almost_full),
+        .dropped_frames(fifo_drops),
         .length_error(rx_length_error_raw)
     );
-    RTDS_RX_BLOCK_WRITER #(
-        .BLOCK_COUNT(RX_BLOCK_COUNT), .BLOCK_BYTES(RX_BLOCK_BYTES),
-        .PERIOD_CYCLES(RX_PERIOD_CYCLES), .BASE_ADDR(RX_BASE_ADDR_LO)
-    ) U_RTDS_RX_BLOCK_WRITER (
-        .clk(fdma_clk), .rst_n(fdma_rstn), .enable(rx_store_enable),
-        .frame_data(rx_packet), .frame_valid(rx_packet_valid), .frame_ready(rx_packet_ready),
-        .cpu_ack(cpu_rec_ack), .irq_clear(rx_irq_clear),
-        .head_addr(fpga_cpu_start_addr), .head_len(fpga_cpu_len), .head_seq(rx_head_seq),
-        .ready_blocks(rx_ready_blocks), .dropped_frames(writer_drops), .irq(fpga_cpu_irq_req),
-        .fdma_waddr(fdma_waddr), .fdma_wsize(fdma_wsize), .fdma_wareq(fdma_wareq),
-        .fdma_wstrb(fdma_wstrb), .fdma_wbusy(fdma_wbusy), .fdma_wdata(fdma_wdata), .fdma_wvalid(fdma_wvalid),
-        .fdma_waccept(fdma_wready), .fdma_wdone(fdma_wdone), .fdma_werror(fdma_werror),
-        .dbg_state(dbg_rx_state)
-    );
-    // 每2个64bit读数据拍组成一帧；在第一个真实握手拍提取Byte1。
-    reg config_read_beat;
+    // 修改点 2026-10-13：编译参数选源，无运行时数据MUX；正式参数0仍直连原FIFO。
+    wire [63:0] writer_frame_data;                                                                      // 编译时选择的writer输入数据
+    wire        writer_frame_valid;                                                                     // 编译时选择的writer输入有效
+    wire        writer_frame_ready;                                                                     // writer接受当前输入字的条件
+    wire        writer_period_tick;                                                                     // 原writer周期到期观察输出
+    wire        writer_block_committed;                                                                 // 原writer成功非空块登记观察输出
+    wire        rx_test_fault;                                                                          // 注入中途失败，保持到全局复位
+    assign rx_test_status = {fpga_cpu_irq_req,rx_test_fault,pcie_link_up_fdma,ddr_ready};
+    generate
+        if (RX_VIO_TEST_ENABLE != 0) begin : G_RX_TEST_SOURCE
+            assign rx_packet_ready = 1'b0;
+            RTDS_RX_VIO_STIM U_RX_STIM (
+                .clk(fdma_clk),
+                .rst_n(fdma_rstn),
+                .start(rx_test_start),
+                .store_ready(rx_store_enable),
+                .ready_blocks(rx_ready_blocks),
+                .period_tick(writer_period_tick),
+                .block_committed(writer_block_committed),
+                .write_error(fdma_wdone && fdma_werror),
+                .frame_ready(writer_frame_ready),
+                .frame_data(writer_frame_data),
+                .frame_valid(writer_frame_valid),
+                .busy(rx_test_busy),
+                .accepted_words(rx_test_accepted),
+                .fault(rx_test_fault)
+            );
+        end else begin : G_RX_NORMAL_SOURCE
+            assign writer_frame_data = rx_packet;
+            assign writer_frame_valid = rx_packet_valid;
+            assign rx_packet_ready = writer_frame_ready;
+            assign rx_test_busy = 1'b0;
+            assign rx_test_accepted = 2'd0;
+            assign rx_test_fault = 1'b0;
+        end
+    endgenerate
 
+    RTDS_RX_BLOCK_WRITER #(
+        .BLOCK_COUNT(RX_BLOCK_COUNT),
+        .BLOCK_BYTES(RX_BLOCK_BYTES),
+        .PERIOD_CYCLES(RX_PERIOD_CYCLES),
+        .BASE_ADDR(RX_BASE_ADDR_LO)
+    ) U_RTDS_RX_BLOCK_WRITER (
+        .clk(fdma_clk),
+        .rst_n(fdma_rstn),
+        .enable(rx_store_enable),
+        .frame_data(writer_frame_data),
+        .frame_valid(writer_frame_valid),
+        .frame_ready(writer_frame_ready),
+        .cpu_ack(cpu_rec_ack),
+        .irq_clear(rx_irq_clear),
+        .head_addr(fpga_cpu_start_addr),
+        .head_len(fpga_cpu_len),
+        .head_seq(rx_head_seq),
+        .ready_blocks(rx_ready_blocks),
+        .dropped_frames(writer_drops),
+        .irq(fpga_cpu_irq_req),
+        .fdma_waddr(fdma_waddr),
+        .fdma_wsize(fdma_wsize),
+        .fdma_wareq(fdma_wareq),
+        .fdma_wstrb(fdma_wstrb),
+        .fdma_wbusy(fdma_wbusy),
+        .fdma_wdata(fdma_wdata),
+        .fdma_wvalid(fdma_wvalid),
+        .fdma_waccept(fdma_wready),
+        .fdma_wdone(fdma_wdone),
+        .fdma_werror(fdma_werror),
+        .dbg_state(dbg_rx_state),
+        .debug_period_tick(writer_period_tick),
+        .debug_block_committed(writer_block_committed)
+    );
+
+    reg                                        config_read_beat                      ;    // 帧内读拍位置，0表示下一拍提取Byte1
+
+
+    // 仅当前有效交付任务统计帧内读拍；每两拍归零，停止交付时重置首拍位置。
     always @(posedge fdma_clk or negedge fdma_rstn) begin
         if (!fdma_rstn)
             config_read_beat<=1'b0;
-        else if (!tx_active)
+        else if (!tx_deliver_enable)
             config_read_beat<=1'b0;
         else if (fdma_rvalid && fdma_rready)
             config_read_beat<=!config_read_beat;
     end
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign cfg_byte = fdma_rdata[15:8];    // 配置字节=DDR 读数据 Byte1（编号1~10）
-    // 组合握手条件供本时钟域推进事务；未满足条件时保持当前传输。
-    assign cfg_byte_valid = tx_active && fdma_rvalid && fdma_rready && (config_read_beat==0);    // 配置有效：TX 活动期间首个读数据拍
 
-    // ------------------------------------------------------------------
-    // User-domain frame checking and sticky status
-    // ------------------------------------------------------------------
-    // ---------- 语义段 8：状态清除命令跨域 ----------
-    // 输入：fdma 域 clear_inter 单周期；输出：Aurora 域 status_clear_user 脉冲。
-    // 作用：清除 RX/TX bridge 在 user clock 域产生的 sticky 状态。
-    // 失败定位：fdma 域已 clear 但 user 状态不清时检查 toggle 两侧及 user reset。
-    reg status_clear_toggle_fdma;
+    assign cfg_byte = fdma_rdata[15:8]                                               ;    // 首读拍Byte1配置编号
 
+    assign cfg_byte_valid =
+        tx_deliver_enable && fdma_rvalid && fdma_rready && (config_read_beat==0)     ;    // 该帧首读拍被实际接受的配置事件
+
+
+    // 软件清错事件的翻转跨域传递。
+    reg                                        status_clear_toggle_fdma              ;    // 软件每次清错翻转的源事件位
+
+
+    // 每次软件清相关错误翻转标志，将清除动作可靠传到用户域。
     always @(posedge fdma_clk or negedge fdma_rstn) begin
         if (!fdma_rstn)
             status_clear_toggle_fdma <= 1'b0;
@@ -607,37 +779,38 @@ module pcie_fdma_aurora_brg_adapter #(
             status_clear_toggle_fdma <= ~status_clear_toggle_fdma;
     end
 
-    wire status_clear_toggle_user;
-    reg  status_clear_toggle_user_d;
+    wire                                       status_clear_toggle_user              ;    // 同步到用户域的清错翻转位
+    reg                                        status_clear_toggle_user_d            ;    // 用户域上一拍清错翻转位
     xpm_cdc_single #(
-        .DEST_SYNC_FF(2), .INIT_SYNC_FF(0), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0)
+        .DEST_SYNC_FF(2),
+        .INIT_SYNC_FF(0),
+        .SIM_ASSERT_CHK(0),
+        .SRC_INPUT_REG(0)
     ) u_cdc_status_clear (
-        .src_clk(fdma_clk), .src_in(status_clear_toggle_fdma),
-        .dest_clk(aurora_user_clk), .dest_out(status_clear_toggle_user)
+        .src_clk(fdma_clk),
+        .src_in(status_clear_toggle_fdma),
+        .dest_clk(aurora_user_clk),
+        .dest_out(status_clear_toggle_user)
     );
-    wire status_clear_user;
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign status_clear_user = status_clear_toggle_user ^ status_clear_toggle_user_d;    // 清除命令 toggle 恢复单拍事件
+    wire                                       status_clear_user                     ;    // 用户域检测到的单拍清错事件
 
-    reg rx_in_frame;
-    reg [8:0] rx_frame_word_count;
-    reg rx_length_error_user_sticky;
-    reg rx_overflow_user_sticky;
-    reg tx_underflow_user_sticky;
-    wire rx_hs;
-    // 组合握手条件供本时钟域推进事务；未满足条件时保持当前传输。
-    assign rx_hs = aurora_rx_src_rdy && aurora_rx_dst_rdy;    // RX LocalLink 握手成功一拍
-    wire tx_underflow_user;
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign tx_underflow_user = tx_user_dbg_bus[0];    // TX 下溢标志取自调试总线 bit0
+    assign status_clear_user = status_clear_toggle_user ^ status_clear_toggle_user_d ;    // 用户域检测到的单拍清错事件
 
-    // ---------- 语义段 9：Aurora 域协议检查与 sticky 状态 ----------
-    // 输入：RX SOF/EOF/rem/有效拍、FIFO overflow、TX underflow、链路状态。
-    // 输出：overflow/underflow/length/link-down 等 user 域 sticky。
-    // 作用：检查固定 16 B 帧边界，并记录不可恢复的接收或发送异常。
-    // 失败定位：length_error 时检查 64 个 beat、SOF/EOF 唯一性和末拍 rem。
-        // status_clear_toggle_user_d：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
+    // 用户域帧观察和错误状态。
+    reg                                        rx_in_frame                           ;    // 用户域接收当前处于SOF和EOF之间
+    reg           [8:0]                        rx_frame_word_count                   ;    // 用户域接收帧内实际接受的拍数
+    reg                                        rx_length_error_user_sticky           ;    // 相应错误出现后保持为1，直到软件清除或复位
+    reg                                        rx_overflow_user_sticky               ;    // 相应错误出现后保持为1，直到软件清除或复位
+    reg                                        tx_underflow_user_sticky              ;    // 相应错误出现后保持为1，直到软件清除或复位
+    wire                                       rx_hs                                 ;    // RX LocalLink 握手成功一拍
 
+    assign rx_hs = aurora_rx_src_rdy && aurora_rx_dst_rdy                            ;    // RX LocalLink 握手成功一拍
+    wire                                       tx_underflow_user                     ;    // TX 下溢标志取自调试总线 bit0
+
+    assign tx_underflow_user = tx_user_dbg_bus[0]                                    ;    // TX 下溢标志取自调试总线 bit0
+
+
+    // 保存用户域上一拍清除翻转位，通过异或检测清除单拍。
     always @ ( posedge aurora_user_clk or negedge aurora_user_rstn ) begin : update_status_clear_toggle_user_d
         if (! aurora_user_rstn) begin
             status_clear_toggle_user_d <= 1'b0 ;
@@ -646,8 +819,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // rx_in_frame：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 跟踪接收帧是否处于首尾之间，失去用户就绪时回到无帧状态。
     always @ ( posedge aurora_user_clk or negedge aurora_user_rstn ) begin : update_rx_in_frame
         if (! aurora_user_rstn) begin
             rx_in_frame <= 1'b0 ;
@@ -671,8 +844,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // rx_frame_word_count：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 在用户域按实际接收握手统计帧内拍数，首拍重新计数，末拍归零。
     always @ ( posedge aurora_user_clk or negedge aurora_user_rstn ) begin : update_rx_frame_word_count
         if (! aurora_user_rstn) begin
             rx_frame_word_count <= 9'd0 ;
@@ -702,8 +875,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // 上行业务为连续有效字流，不按SOF/EOF或固定帧长拒收。
 
+    // 长度筛除已取消，此兼容错误标志复位及运行时均为0。
     always @(posedge aurora_user_clk or negedge aurora_user_rstn) begin : update_rx_length_error_user_sticky
         if (!aurora_user_rstn)
             rx_length_error_user_sticky <= 1'b0;
@@ -711,8 +884,8 @@ module pcie_fdma_aurora_brg_adapter #(
             rx_length_error_user_sticky <= 1'b0;
     end
 
-    // rx_overflow_user_sticky：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 用户域检测接收无法保存的拍并保持溢出标志，收到软件跨域清除后归零。
     always @ ( posedge aurora_user_clk or negedge aurora_user_rstn ) begin : update_rx_overflow_user_sticky
         if (! aurora_user_rstn) begin
             rx_overflow_user_sticky <= 1'b0 ;
@@ -726,8 +899,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // tx_underflow_user_sticky：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 用户域保持发送读空错误，收到跨域清除后归零。
     always @ ( posedge aurora_user_clk or negedge aurora_user_rstn ) begin : update_tx_underflow_user_sticky
         if (! aurora_user_rstn) begin
             tx_underflow_user_sticky <= 1'b0 ;
@@ -742,70 +915,86 @@ module pcie_fdma_aurora_brg_adapter #(
     end
 
 
-    wire rx_length_error_fdma;
-    wire rx_overflow_fdma;
-    wire tx_underflow_fdma;
+    wire                                       rx_length_error_fdma                  ;    // 用户长度错误同步到FDMA域的兼容状态
+    wire                                       rx_overflow_fdma                      ;    // 对应FIFO不能保存新输入的溢出状态
+    wire                                       tx_underflow_fdma                     ;    // 对应FIFO读侧无数据的错误状态
     xpm_cdc_single #(
-        .DEST_SYNC_FF(2), .INIT_SYNC_FF(0), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0)
+        .DEST_SYNC_FF(2),
+        .INIT_SYNC_FF(0),
+        .SIM_ASSERT_CHK(0),
+        .SRC_INPUT_REG(0)
     ) u_cdc_rx_length_error (
-        .src_clk(aurora_user_clk), .src_in(rx_length_error_user_sticky),
-        .dest_clk(fdma_clk), .dest_out(rx_length_error_fdma)
+        .src_clk(aurora_user_clk),
+        .src_in(rx_length_error_user_sticky),
+        .dest_clk(fdma_clk),
+        .dest_out(rx_length_error_fdma)
     );
     xpm_cdc_single #(
-        .DEST_SYNC_FF(2), .INIT_SYNC_FF(0), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0)
+        .DEST_SYNC_FF(2),
+        .INIT_SYNC_FF(0),
+        .SIM_ASSERT_CHK(0),
+        .SRC_INPUT_REG(0)
     ) u_cdc_rx_overflow (
-        .src_clk(aurora_user_clk), .src_in(rx_overflow_user_sticky),
-        .dest_clk(fdma_clk), .dest_out(rx_overflow_fdma)
+        .src_clk(aurora_user_clk),
+        .src_in(rx_overflow_user_sticky),
+        .dest_clk(fdma_clk),
+        .dest_out(rx_overflow_fdma)
     );
     xpm_cdc_single #(
-        .DEST_SYNC_FF(2), .INIT_SYNC_FF(0), .SIM_ASSERT_CHK(0), .SRC_INPUT_REG(0)
+        .DEST_SYNC_FF(2),
+        .INIT_SYNC_FF(0),
+        .SIM_ASSERT_CHK(0),
+        .SRC_INPUT_REG(0)
     ) u_cdc_tx_underflow (
-        .src_clk(aurora_user_clk), .src_in(tx_underflow_user_sticky),
-        .dest_clk(fdma_clk), .dest_out(tx_underflow_fdma)
+        .src_clk(aurora_user_clk),
+        .src_in(tx_underflow_user_sticky),
+        .dest_clk(fdma_clk),
+        .dest_out(tx_underflow_fdma)
     );
 
-    // ------------------------------------------------------------------
-    // FDMA-domain sticky status and progress-aware timeout
-    // ------------------------------------------------------------------
-    reg rx_overflow_sticky_r;
-    reg tx_underflow_sticky_r;
-    reg fdma_timeout_sticky_r;
-    reg length_error_sticky_r;
-    reg link_down_sticky_r;
-    reg seen_link_up;
-    reg [31:0] fdma_wait_count;
-    reg user_status_clear_hold;
 
-    // 连接本级与上下游同一事务字段；保持原有时序和位宽语义。
-    assign rx_overflow_sticky  = rx_overflow_sticky_r;    // RX 溢出 sticky 输出
-    // 连接本级与上下游同一事务字段；保持原有时序和位宽语义。
-    assign tx_underflow_sticky = tx_underflow_sticky_r;    // TX 下溢 sticky 输出
-    // 连接本级与上下游同一事务字段；保持原有时序和位宽语义。
-    assign fdma_timeout_sticky = fdma_timeout_sticky_r;    // FDMA 超时 sticky 输出
-    // 连接本级与上下游同一事务字段；保持原有时序和位宽语义。
-    assign length_error_sticky = length_error_sticky_r;    // 帧长错误 sticky 输出
-    // 连接本级与上下游同一事务字段；保持原有时序和位宽语义。
-    assign link_down_sticky    = link_down_sticky_r;    // 链路断 sticky 输出
+    // FDMA域错误保持与软件清除。
+    reg                                        rx_overflow_sticky_r                  ;    // 相应错误出现后保持为1，直到软件清除或复位
+    reg                                        tx_underflow_sticky_r                 ;    // 相应错误出现后保持为1，直到软件清除或复位
+    reg                                        fdma_timeout_sticky_r                 ;    // 相应错误出现后保持为1，直到软件清除或复位
+    reg                                        length_error_sticky_r                 ;    // 相应错误出现后保持为1，直到软件清除或复位
+    reg                                        link_down_sticky_r                    ;    // 相应错误出现后保持为1，直到软件清除或复位
+    reg                                        seen_link_up                          ;    // 对应链路就绪状态，跨域副本按后缀区分
+    reg           [31:0]                       fdma_wait_count                       ;    // FDMA连续等待且无进展的拍计数
+    reg                                        user_status_clear_hold                ;    // 等待用户域旧错误清除反馈，避免旧高电平重新置错
 
-    wire fdma_waiting;
 
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign fdma_waiting = fdma_rareq || fdma_wareq ||    // FDMA 等待中：请求未接受或数据未返回
+    assign rx_overflow_sticky  = rx_overflow_sticky_r                                ;    // RX 溢出 sticky 输出
+
+    assign tx_underflow_sticky = tx_underflow_sticky_r                               ;    // TX 下溢 sticky 输出
+
+    assign fdma_timeout_sticky = fdma_timeout_sticky_r                               ;    // FDMA 超时 sticky 输出
+
+    assign length_error_sticky = length_error_sticky_r                               ;    // 帧长错误 sticky 输出
+
+    assign link_down_sticky    = link_down_sticky_r                                  ;    // 链路断 sticky 输出
+
+    // 等待/进展判断；仅持续无进展时累计超时。
+    wire                                       fdma_waiting                          ;    // FDMA 等待中：请求未接受或数据未返回
+
+
+    // 等待/进展判断；仅持续无进展时累计超时。
+    assign fdma_waiting = fdma_rareq || fdma_wareq ||
                         (fdma_rready && !fdma_rvalid) ||
-                        (fdma_wvalid && !fdma_wready);
-    wire fdma_progress;
-    // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
-    assign fdma_progress = (fdma_rareq && fdma_rbusy) ||    // FDMA 前进：任一握手或提交事件
+                        (fdma_wvalid && !fdma_wready)                                ;    // FDMA 等待中：请求未接受或数据未返回
+    wire                                       fdma_progress                         ;    // FDMA 前进：任一握手或提交事件
+
+    assign fdma_progress = (fdma_rareq && fdma_rbusy) ||
                          (fdma_wareq && fdma_wbusy) ||
                          (fdma_rvalid && fdma_rready) ||
                          (fdma_wvalid && fdma_wready) ||
-                         rx_burst_done_fdma;
+                         rx_burst_done_fdma                                          ;    // FDMA 前进：任一握手或提交事件
 
-    reg fdma_waiting_q;    // FDMA等待状态流水，切断AXI反压到超时计数器的长组合路径
-    reg fdma_progress_q;   // FDMA进展状态流水，保持超时判断与等待状态使用同一拍快照
+    reg                                        fdma_waiting_q                        ;    // FDMA等待状态流水，切断AXI反压到超时计数器的长组合路径
+    reg                                        fdma_progress_q                       ;    // FDMA进展状态流水，保持超时判断与等待状态使用同一拍快照
 
-    // 超时门控信号先寄存一级。65535拍量级的超时保护允许一个时钟周期的检测延迟，
-    // 且不会改变任何FDMA数据握手、地址或长度行为。
+
+    // 把等待和进展条件同时寄存一级，使超时计算使用同一拍状态。
     always @(posedge fdma_clk or negedge fdma_rstn) begin : pipeline_fdma_timeout_status
         if (!fdma_rstn) begin
             fdma_waiting_q  <= 1'b0;
@@ -816,14 +1005,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // ---------- 语义段 10：FDMA 域 sticky 汇聚、清除保持与超时 ----------
-    // 输入：跨域 user sticky、配置错误、链路下降、FDMA progress/waiting。
-    // 输出：软件可读 sticky error。
-    // 作用：clear 后等待旧 CDC 高电平真正返回低电平，再允许新错误置位；超时只在
-    // 等待且无任何 progress 时累计。
-    // 失败定位：清除后立即复发查 user_status_clear_hold；慢但有 progress 不应超时。
-        // rx_overflow_sticky_r：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // FDMA域保持新的接收溢出或丢字错误；清除后等旧跨域高电平撤销再允许重新置位。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_rx_overflow_sticky_r
         if (! fdma_rstn) begin
             rx_overflow_sticky_r <= 1'b0 ;
@@ -839,8 +1022,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // tx_underflow_sticky_r：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // FDMA域保持用户侧发送读空错误；软件清除时优先清零。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_tx_underflow_sticky_r
         if (! fdma_rstn) begin
             tx_underflow_sticky_r <= 1'b0 ;
@@ -856,8 +1039,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // fdma_timeout_sticky_r：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 仅等待且无进展达到阈值时置超时，软件清除时归零；空闲不应算等待。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_fdma_timeout_sticky_r
         if (! fdma_rstn) begin
             fdma_timeout_sticky_r <= 1'b0 ;
@@ -874,8 +1057,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // length_error_sticky_r：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 保持非法命令或用户侧长度错误；软件清除和跨域清除等待共同约束重新置位。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_length_error_sticky_r
         if (! fdma_rstn) begin
             length_error_sticky_r <= 1'b0 ;
@@ -894,8 +1077,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // link_down_sticky_r：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 启动时未就绪或活动任务失去就绪时置链路错误；曾建立链路后下降也记录。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_link_down_sticky_r
         if (! fdma_rstn) begin
             link_down_sticky_r <= 1'b0 ;
@@ -915,8 +1098,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // seen_link_up：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 记录是否曾出现完整就绪，复位清零，用于区别尚未建链与建链后丢失。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_seen_link_up
         if (! fdma_rstn) begin
             seen_link_up <= 1'b0 ;
@@ -927,8 +1110,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // fdma_wait_count：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 有进展、无等待或软件清错时清计数，仅持续无进展等待时累加到超时阈值。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_fdma_wait_count
         if (! fdma_rstn) begin
             fdma_wait_count <= 32'd0 ;
@@ -947,8 +1130,8 @@ module pcie_fdma_aurora_brg_adapter #(
         end
     end
 
-    // user_status_clear_hold：事务寄存器按原状态分支和握手条件更新；未命中分支保持，复位回到确定初值。
 
+    // 软件清错后保持用户侧清除等待；旧跨域错误都回低后再接受新的错误事件。
     always @ ( posedge fdma_clk or negedge fdma_rstn ) begin : update_user_status_clear_hold
         if (! fdma_rstn) begin
             user_status_clear_hold <= 1'b0 ;
@@ -963,7 +1146,6 @@ module pcie_fdma_aurora_brg_adapter #(
     end
 
 
-    // 只提供调试或未使用接口观察，不参与业务数据提交。
-    assign dbg_tx_state = {2'b00, tx_fdma_dbg_bus[37:36]};    // TX bridge 状态观测（调试用）
+    assign dbg_tx_state = {2'b00, tx_fdma_dbg_bus[37:36]}                            ;    // 下行桥当前状态
 
 endmodule

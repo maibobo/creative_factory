@@ -1,0 +1,16 @@
+{
+  "remote_baseline": {
+    "baseline_count": 153,
+    "baseline_mismatches": [],
+    "wave_mismatches": []
+  },
+  "remote_native_wave_open": "5/5 PASS",
+  "F_native_wave_open": "5/5 PASS",
+  "offline_viewer": "5/5 PASS",
+  "documents_remote_F_sha256": "PASS",
+  "docx_structure": "PASS",
+  "rendered": false,
+  "new_cases": "4 PASS / 1 FAIL (TC-F11)",
+  "regression": "10 PASS",
+  "F_root": "F:\\RTDS_test_DDR4_64bit_batch_dev"
+}

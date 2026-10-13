@@ -1,3 +1,5 @@
+#ifndef IP_RTDS_DDR4_MIG_SC_H_
+#define IP_RTDS_DDR4_MIG_SC_H_
 
 // (c) Copyright 1995-2026 Xilinx, Inc. All rights reserved.
 // 
@@ -91,3 +93,4 @@ private:
 
 };
 
+#endif // IP_RTDS_DDR4_MIG_SC_H_

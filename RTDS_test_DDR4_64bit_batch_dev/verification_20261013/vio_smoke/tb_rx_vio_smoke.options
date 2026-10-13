@@ -1,0 +1,5 @@
+--testplusarg "SEED=1417633351"
+--tclbatch "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261013/vio_smoke/tb_rx_vio_smoke.tcl"
+--onerror quit
+--onfinish stop
+--log tb_rx_vio_smoke.simulate.log

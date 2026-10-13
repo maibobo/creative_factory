@@ -1,0 +1,244 @@
+[
+  {
+    "package": "rtl/TOP.v",
+    "source": "source_snapshot/RTDS_test_DDR4_64bit.srcs/sources_1/new/TOP.v",
+    "sha256": "6bbcbe4ab635f540c1557f2701d4c9ab7928a5a67fef275e774ab9477d2f7476",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/PCIe.v",
+    "source": "source_snapshot/RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v",
+    "sha256": "a18d31abeca3a51fdb587a6bfd10572f280f671260d5a3126aa1382c62a14eef",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/CLK_GEN.v",
+    "source": "source_snapshot/RTDS_test_DDR4_64bit.srcs/sources_1/new/CLK_GEN.v",
+    "sha256": "2ac3a9720a3e99c962425d4c2e2f0f2ee35a9ab36826f9dc68b507aa1e6940d8",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/LED.v",
+    "source": "source_snapshot/RTDS_test_DDR4_64bit.srcs/sources_1/new/LED.v",
+    "sha256": "995c42e8bce62cae8d460edf0c80e008053b4ef716f82d2157dbff420fb0a89b",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/TEMP_RD.v",
+    "source": "source_snapshot/RTDS_test_DDR4_64bit.srcs/sources_1/new/TEMP_RD.v",
+    "sha256": "22c212366aad8d9f0335c82573991f94c41775da093e45c24689f5ddaa7f6731",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/INFO_EXCH.v",
+    "source": "source_snapshot/RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v",
+    "sha256": "71aea36f58eaccd7d1ea02e8fc076933f0e152bc3ed9010193f32b8ac8a592de",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/CONV_DMA.v",
+    "source": "source_snapshot/RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v",
+    "sha256": "a58509155bc1ba7dc83951a51c633a6858d2c83fc412927f3cb89ecd2d699c7d",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/pcie_fdma_aurora_brg_adapter.v",
+    "source": "source_snapshot/RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v",
+    "sha256": "f7e1064d9afc9df3b313f1a69850fdbb6ecd37f096259235eed8aaac2ce6dc1b",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/rtds_1g_periodic_tx.v",
+    "source": "source_snapshot/rtl/rtds_1g_periodic_tx.v",
+    "sha256": "d70c6d9577f5d366233f7392d3f8da84529586b02075966b00e63bcdc3f66c7e",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/rtds_fpga_1g_init.v",
+    "source": "source_snapshot/rtl/rtds_fpga_1g_init.v",
+    "sha256": "4d4dee2976b50fcaeab3b6a3b61af15b0c2951ccc56297bd269d03d2c6385eb3",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/rtds_fpga_bit_cdc.v",
+    "source": "source_snapshot/rtl/rtds_fpga_bit_cdc.v",
+    "sha256": "ce4cc11d09ff031e37ba62899d4f42a9fc37e725e519a146bb1ef9686848b149",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/rtds_fpga_cfg_cdc.v",
+    "source": "source_snapshot/rtl/rtds_fpga_cfg_cdc.v",
+    "sha256": "7df0397ca62ea00cd1fe23e7f59097e998f2f938dded354ee79221d9204cc259",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/rtds_fpga_count_cdc.v",
+    "source": "source_snapshot/rtl/rtds_fpga_count_cdc.v",
+    "sha256": "9a4174877a18086971f1c35f87e8cbb3ff84b5cb77e5da9acca08cbcd5947c35",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/rtds_fpga_reset_sync.v",
+    "source": "source_snapshot/rtl/rtds_fpga_reset_sync.v",
+    "sha256": "ae78cb7d15b37c373b036bef094c7c74549ba3e0fa846154eff7de16e0c225c5",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/rtds_rx_block_writer.v",
+    "source": "source_snapshot/rtl/rtds_rx_block_writer.v",
+    "sha256": "e86699193de598003162988e7067e8ddae87d38c93322c281d1df2cf3df0e0fe",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/rtds_rx_frame_fifo.v",
+    "source": "source_snapshot/rtl/rtds_rx_frame_fifo.v",
+    "sha256": "15fd93613f8bd3775c1a1c6fb68ab8f2b8db9445e0118e6260c63a3acc0ca2f0",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/rtds_sync_timebase.v",
+    "source": "source_snapshot/rtl/rtds_sync_timebase.v",
+    "sha256": "25a3b3cbb19cf22e9a102212b6c21a9b9ac3d3816e63f81c4ac6c3ff6d4d822b",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/rtds_ddr4_backend.sv",
+    "source": "source_snapshot/rtl/ddr4/rtds_ddr4_backend.sv",
+    "sha256": "62907e3b5b288de8aa8285a2abde5d86feaf2d1ce80fb4ad318020a824dc8583",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/fdma_aurora_brg_tx.v",
+    "source": "source_snapshot/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v",
+    "sha256": "ebf6560ad7228748a839baa8d7c364045cbea36dc783a5008e38c5f9c37be9c2",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/design_1.v",
+    "source": "source_snapshot/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v",
+    "sha256": "537d7365b08acdf5cfc36f8244914c46caba71cccd9d47d18d110d45cbb90dd7",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/design_1_wrapper.v",
+    "source": "source_snapshot/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v",
+    "sha256": "c72c1b4ab9fdbf441ee8bd3212a4938ebd31028023302e4df666b40280379d8e",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/design_1_CONV_DMA_0_0.v",
+    "source": "vendor_sources/design_1_CONV_DMA_0_0.v",
+    "sha256": "9d43439e135e88b1ea0d3f28a6646b1bc16ccb54a6a8c94de82adb71bcb508a1",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/design_1_INFO_EXCH_0_0.v",
+    "source": "vendor_sources/design_1_INFO_EXCH_0_0.v",
+    "sha256": "4c2ddd74d153308ca51804a153a8e8ffa16b0191982482330979739268b0389a",
+    "kind": "original"
+  },
+  {
+    "package": "rtl/xpm_cdc.sv",
+    "source": "vendor_sources/xpm_cdc.sv",
+    "sha256": "c8c4d9c9c63dcfafe5261a54d29d71381d23fc71f51ed6a573508c9298ba0960",
+    "kind": "original"
+  },
+  {
+    "package": "models/design_1_auto_cc_0_stub.v",
+    "source": "source_snapshot/rtds_test_ddr4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_stub.v",
+    "sha256": "2c8da86d446286663bdd79a716cdfef43307aa2056c1c648098f912373be7bb0",
+    "kind": "original"
+  },
+  {
+    "package": "models/design_1_auto_cc_1_stub.v",
+    "source": "source_snapshot/rtds_test_ddr4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_stub.v",
+    "sha256": "980ff9431be3d4967de220aa3b1aedd659cbd420814576c74c35bdc7627eebd6",
+    "kind": "original"
+  },
+  {
+    "package": "models/design_1_util_ds_buf_0_stub.v",
+    "source": "source_snapshot/rtds_test_ddr4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0_stub.v",
+    "sha256": "e6aaa827c0e079ff770fe8a496672d8e2706052b49e822b27e70975a36fcbe75",
+    "kind": "original"
+  },
+  {
+    "package": "models/design_1_xbar_0_stub.v",
+    "source": "source_snapshot/rtds_test_ddr4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_stub.v",
+    "sha256": "e587d6731fb59d47b00ba0b98c4be89338920647574eb0dc2e5220a86e0850fa",
+    "kind": "original"
+  },
+  {
+    "package": "models/design_1_xdma_0_0_stub.v",
+    "source": "source_snapshot/rtds_test_ddr4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0_stub.v",
+    "sha256": "be4340bd3adc97833fef95723100d668c53e806d62ede7e07e535908bfb149fb",
+    "kind": "original"
+  },
+  {
+    "package": "models/clk_wiz_0_stub.v",
+    "source": "source_snapshot/rtds_test_ddr4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v",
+    "sha256": "b1ce4cdd04bac54537a24176884c199e5fb1f020cf7911c3a9a9584377ccde9e",
+    "kind": "original"
+  },
+  {
+    "package": "models/ila_0_stub.v",
+    "source": "source_snapshot/rtds_test_ddr4_64bit.srcs/sources_1/ip/ila_0/ila_0_stub.v",
+    "sha256": "2f5e3d9685693228f429118cfe150fa30191e4f2738933a2e9cf78afebb0495e",
+    "kind": "original"
+  },
+  {
+    "package": "models/ila_FDMA_stub.v",
+    "source": "source_snapshot/rtds_test_ddr4_64bit.srcs/sources_1/ip/ila_FDMA/ila_FDMA_stub.v",
+    "sha256": "ed319c2117828052f2c11d697c8ab116fc549380b9b2c9f799073658bc93ebf7",
+    "kind": "original"
+  },
+  {
+    "package": "models/ila_temp_stub.v",
+    "source": "source_snapshot/rtds_test_ddr4_64bit.srcs/sources_1/ip/ila_temp/ila_temp_stub.v",
+    "sha256": "45352bb155bbc8e81798cd2463bba49ab3b3078c043ca2c01c7ce7ee8cf04651",
+    "kind": "original"
+  },
+  {
+    "package": "models/rtds_axi_clock_converter_stub.v",
+    "source": "source_snapshot/rtds_test_ddr4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter_stub.v",
+    "sha256": "bed55234ffa58b0fb0e7ea19250e124514ca241c7e0917939d2ca56117ee792e",
+    "kind": "original"
+  },
+  {
+    "package": "models/rtds_ddr4_mig_stub.v",
+    "source": "source_snapshot/rtds_test_ddr4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig_stub.v",
+    "sha256": "9b6676e0f6843520dacd02055d2395a3621662f4f065ae38f2caf3d4f683422e",
+    "kind": "original"
+  },
+  {
+    "package": "models/sys_mon_stub.v",
+    "source": "source_snapshot/rtds_test_ddr4_64bit.srcs/sources_1/ip/sys_mon/sys_mon_stub.v",
+    "sha256": "81282422e0f65f7aeb0f679f726c46b09fad53b4ae40d4292a23d839ddc33695",
+    "kind": "original"
+  },
+  {
+    "package": "models/aurora_64b66b_top_stub.sv",
+    "source": "source_snapshot/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/sources_1/new/aurora_64b66b_top.v",
+    "kind": "header-only boundary",
+    "source_sha256": "04a0ff5f886568659b70d4a9ee8d352d990eb7bc8627e405c1324d46f5636b17",
+    "sha256": "2ef586b493bc4d38efdd9653f5211c0d17e0325b33d29e581663a4fc1029d439"
+  },
+  {
+    "package": "models/aurora_8b10b_1p25g_design_stub.sv",
+    "source": "source_snapshot/external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_design.v",
+    "kind": "header-only boundary",
+    "source_sha256": "2354b16cf7eca846c9e73110033228af6631c41c9a5e3b39a6f6759e688b18f5",
+    "sha256": "859ad7300fb8a1a63b414056744480c2d7fb45561150ad0387607e5230f97d9f"
+  },
+  {
+    "package": "models/xpm_fifo_async_stub.sv",
+    "source": "vendor_sources/xpm_fifo.sv",
+    "kind": "header-only boundary",
+    "source_sha256": "aa3423ccb7be96c8780b03d1970ab45d44b058127881cbdc046b3581ef176d19",
+    "sha256": "5c598923e432c4cdd042c03562d793a8de1853c4648c670b8384a3930e71daac"
+  },
+  {
+    "package": "models/io_buffers.v",
+    "kind": "static primitive connectivity/boundary",
+    "sha256": "068dc4697386423da7721336442018c2f87a0aac0bc42c0e0217ed0c8994e212"
+  }
+]

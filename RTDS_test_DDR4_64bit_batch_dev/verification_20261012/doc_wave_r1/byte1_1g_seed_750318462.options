@@ -1,0 +1,7 @@
+--sv_seed 750318462
+--testplusarg "SEED=750318462"
+--tclbatch "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r1/byte1_1g_seed_750318462.tcl"
+--onerror quit
+--onfinish stop
+--wdb byte1_1g_seed_750318462.wdb
+--log byte1_1g_seed_750318462.simulate.log

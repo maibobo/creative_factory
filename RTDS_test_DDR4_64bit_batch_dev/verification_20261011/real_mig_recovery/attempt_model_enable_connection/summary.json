@@ -1,0 +1,9 @@
+{
+  "model": "DDR4_REAL + actual AXI clock converter + 4 x x16 DDR4 model",
+  "ids": [
+    "TC-F16"
+  ],
+  "runs": [],
+  "status": "ELABORATE_FAIL",
+  "exit_code": 1
+}

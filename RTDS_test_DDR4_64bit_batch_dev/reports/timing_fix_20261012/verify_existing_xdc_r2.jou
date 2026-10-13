@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 11:23:56 2026
+# Process ID: 26072
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/timing_fix_20261012
+# Command line: vivado.exe -mode batch -source C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\verify_existing_xdc.tcl -log C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\verify_existing_xdc_r2.log -journal C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\verify_existing_xdc_r2.jou
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/timing_fix_20261012/verify_existing_xdc_r2.log
+# Journal file: C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\verify_existing_xdc_r2.jou
+#-----------------------------------------------------------
+source {C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\verify_existing_xdc.tcl}

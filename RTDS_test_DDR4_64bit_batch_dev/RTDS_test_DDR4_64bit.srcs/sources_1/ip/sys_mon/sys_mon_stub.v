@@ -4,6 +4,7 @@
 // Date        : Sat Sep 12 09:57:39 2026
 // Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
+//               c:/project/RTDS/DDR/RTDS_test_DDR4_64bit/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon_stub.v
 // Design      : sys_mon
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcku040-ffva1156-2-i

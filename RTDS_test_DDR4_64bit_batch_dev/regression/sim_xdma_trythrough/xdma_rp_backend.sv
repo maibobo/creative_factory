@@ -35,7 +35,10 @@ module xdma_rp_backend #(
         output reg [31:0]  backend_error_count
     );
     import rtds_test_pkg::*;
+    // 修改记录 2026-10-11：补入远端历史测试台声明顺序修复，兼容Vivado 2020.2。
+    reg [15:0] wr_words_left;   // 2026-10-11：在写完成逻辑引用之前声明剩余写拍数
     // 行为后端完成事件：数据数组实际写入后才可向块管理器提交。
+    // 该模型没有 AXI B 通道；真实 B 延迟/错误由 tb_rtds_axi 和 Root Port 验证。
     assign fdma_werror = 1'b0;
 
     always @(posedge clk) begin
@@ -62,7 +65,6 @@ module xdma_rp_backend #(
     reg [31:0] rd_word_index;
     reg [15:0] rd_words_left;
     reg [31:0] wr_word_index;
-    reg [15:0] wr_words_left;
     reg        read_stall_enable;
     reg        write_stall_enable;
     reg        write_block_enable;

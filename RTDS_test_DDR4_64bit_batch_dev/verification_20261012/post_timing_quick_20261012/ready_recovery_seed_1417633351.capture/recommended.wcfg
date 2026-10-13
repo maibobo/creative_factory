@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ready_recovery_seed_1417633351.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_ready_recovery" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="180" />
+   <wvobject fp_name="/tb_ready_recovery/H/U_ADAPTER/link_up_fdma" type="logic">
+      <obj_property name="ElementShortName">link_up_fdma</obj_property>
+      <obj_property name="ObjectShortName">link_up_fdma</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_ADAPTER/tx_active" type="logic">
+      <obj_property name="ElementShortName">tx_active</obj_property>
+      <obj_property name="ObjectShortName">tx_active</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_ADAPTER/tx_recovering" type="logic">
+      <obj_property name="ElementShortName">tx_recovering</obj_property>
+      <obj_property name="ObjectShortName">tx_recovering</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_ADAPTER/tx_quiet_count" type="array">
+      <obj_property name="ElementShortName">tx_quiet_count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_quiet_count[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_ADAPTER/tx_user_quiet_fdma" type="logic">
+      <obj_property name="ElementShortName">tx_user_quiet_fdma</obj_property>
+      <obj_property name="ObjectShortName">tx_user_quiet_fdma</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_ADAPTER/tx_deliver_enable" type="logic">
+      <obj_property name="ElementShortName">tx_deliver_enable</obj_property>
+      <obj_property name="ObjectShortName">tx_deliver_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_ADAPTER/tx_restart_pending" type="logic">
+      <obj_property name="ElementShortName">tx_restart_pending</obj_property>
+      <obj_property name="ObjectShortName">tx_restart_pending</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_ADAPTER/tx_frame_done_fdma" type="logic">
+      <obj_property name="ElementShortName">tx_frame_done_fdma</obj_property>
+      <obj_property name="ObjectShortName">tx_frame_done_fdma</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DMA/M_AXI_RDATA" type="array">
+      <obj_property name="ElementShortName">M_AXI_RDATA[63:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RDATA[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DMA/M_AXI_RVALID" type="logic">
+      <obj_property name="ElementShortName">M_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DMA/M_AXI_RREADY" type="logic">
+      <obj_property name="ElementShortName">M_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DMA/read_curr_st" type="array">
+      <obj_property name="ElementShortName">read_curr_st[2:0]</obj_property>
+      <obj_property name="ObjectShortName">read_curr_st[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/storage_ready" type="logic">
+      <obj_property name="ElementShortName">storage_ready</obj_property>
+      <obj_property name="ObjectShortName">storage_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_read_pending" type="logic">
+      <obj_property name="ElementShortName">recovery_read_pending</obj_property>
+      <obj_property name="ObjectShortName">recovery_read_pending</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_write_pending" type="logic">
+      <obj_property name="ElementShortName">recovery_write_pending</obj_property>
+      <obj_property name="ObjectShortName">recovery_write_pending</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_read_abort" type="logic">
+      <obj_property name="ElementShortName">recovery_read_abort</obj_property>
+      <obj_property name="ObjectShortName">recovery_read_abort</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_write_abort" type="logic">
+      <obj_property name="ElementShortName">recovery_write_abort</obj_property>
+      <obj_property name="ObjectShortName">recovery_write_abort</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_read_left" type="array">
+      <obj_property name="ElementShortName">recovery_read_left[8:0]</obj_property>
+      <obj_property name="ObjectShortName">recovery_read_left[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_write_left" type="array">
+      <obj_property name="ElementShortName">recovery_write_left[8:0]</obj_property>
+      <obj_property name="ObjectShortName">recovery_write_left[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_rvalid" type="logic">
+      <obj_property name="ElementShortName">recovery_rvalid</obj_property>
+      <obj_property name="ObjectShortName">recovery_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_rdata" type="array">
+      <obj_property name="ElementShortName">recovery_rdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">recovery_rdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_rid" type="array">
+      <obj_property name="ElementShortName">recovery_rid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">recovery_rid[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_rresp" type="array">
+      <obj_property name="ElementShortName">recovery_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">recovery_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_rlast" type="logic">
+      <obj_property name="ElementShortName">recovery_rlast</obj_property>
+      <obj_property name="ObjectShortName">recovery_rlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_bvalid" type="logic">
+      <obj_property name="ElementShortName">recovery_bvalid</obj_property>
+      <obj_property name="ObjectShortName">recovery_bvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_bid" type="array">
+      <obj_property name="ElementShortName">recovery_bid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">recovery_bid[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/U_DDR/recovery_bresp" type="array">
+      <obj_property name="ElementShortName">recovery_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">recovery_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/phase2_seed" type="array">
+      <obj_property name="ElementShortName">phase2_seed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">phase2_seed[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/phase2_rng" type="array">
+      <obj_property name="ElementShortName">phase2_rng[31:0]</obj_property>
+      <obj_property name="ObjectShortName">phase2_rng[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/phase2_draws" type="array">
+      <obj_property name="ElementShortName">phase2_draws[31:0]</obj_property>
+      <obj_property name="ObjectShortName">phase2_draws[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/phase2_rng_ready" type="logic">
+      <obj_property name="ElementShortName">phase2_rng_ready</obj_property>
+      <obj_property name="ObjectShortName">phase2_rng_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/uclk" type="logic">
+      <obj_property name="ElementShortName">uclk</obj_property>
+      <obj_property name="ObjectShortName">uclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/gclk" type="logic">
+      <obj_property name="ElementShortName">gclk</obj_property>
+      <obj_property name="ObjectShortName">gclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/user_clock_enable" type="logic">
+      <obj_property name="ElementShortName">user_clock_enable</obj_property>
+      <obj_property name="ObjectShortName">user_clock_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/user_half_period" type="other">
+      <obj_property name="ElementShortName">user_half_period</obj_property>
+      <obj_property name="ObjectShortName">user_half_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/random_tx_ready" type="logic">
+      <obj_property name="ElementShortName">random_tx_ready</obj_property>
+      <obj_property name="ObjectShortName">random_tx_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/pcie_up" type="logic">
+      <obj_property name="ElementShortName">pcie_up</obj_property>
+      <obj_property name="ObjectShortName">pcie_up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/channel_up" type="logic">
+      <obj_property name="ElementShortName">channel_up</obj_property>
+      <obj_property name="ObjectShortName">channel_up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/lane_up" type="logic">
+      <obj_property name="ElementShortName">lane_up</obj_property>
+      <obj_property name="ObjectShortName">lane_up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/ddr_reset_n" type="logic">
+      <obj_property name="ElementShortName">ddr_reset_n</obj_property>
+      <obj_property name="ObjectShortName">ddr_reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/tx_ready" type="logic">
+      <obj_property name="ElementShortName">tx_ready</obj_property>
+      <obj_property name="ObjectShortName">tx_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/rx_data" type="array">
+      <obj_property name="ElementShortName">rx_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/rx_valid" type="logic">
+      <obj_property name="ElementShortName">rx_valid</obj_property>
+      <obj_property name="ObjectShortName">rx_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/rx_sof" type="logic">
+      <obj_property name="ElementShortName">rx_sof</obj_property>
+      <obj_property name="ObjectShortName">rx_sof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/rx_eof" type="logic">
+      <obj_property name="ElementShortName">rx_eof</obj_property>
+      <obj_property name="ObjectShortName">rx_eof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/rx_ready" type="logic">
+      <obj_property name="ElementShortName">rx_ready</obj_property>
+      <obj_property name="ObjectShortName">rx_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/tx_data" type="array">
+      <obj_property name="ElementShortName">tx_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/tx_sof" type="logic">
+      <obj_property name="ElementShortName">tx_sof</obj_property>
+      <obj_property name="ObjectShortName">tx_sof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/tx_eof" type="logic">
+      <obj_property name="ElementShortName">tx_eof</obj_property>
+      <obj_property name="ObjectShortName">tx_eof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/tx_valid" type="logic">
+      <obj_property name="ElementShortName">tx_valid</obj_property>
+      <obj_property name="ObjectShortName">tx_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/tx_rem" type="array">
+      <obj_property name="ElementShortName">tx_rem[2:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_rem[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_raddr" type="array">
+      <obj_property name="ElementShortName">fdma_raddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">fdma_raddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_rdata" type="array">
+      <obj_property name="ElementShortName">fdma_rdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">fdma_rdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_waddr" type="array">
+      <obj_property name="ElementShortName">fdma_waddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">fdma_waddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_wdata" type="array">
+      <obj_property name="ElementShortName">fdma_wdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">fdma_wdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_rsize" type="array">
+      <obj_property name="ElementShortName">fdma_rsize[15:0]</obj_property>
+      <obj_property name="ObjectShortName">fdma_rsize[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_wsize" type="array">
+      <obj_property name="ElementShortName">fdma_wsize[15:0]</obj_property>
+      <obj_property name="ObjectShortName">fdma_wsize[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_wstrb" type="array">
+      <obj_property name="ElementShortName">fdma_wstrb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fdma_wstrb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_rareq" type="logic">
+      <obj_property name="ElementShortName">fdma_rareq</obj_property>
+      <obj_property name="ObjectShortName">fdma_rareq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_rbusy" type="logic">
+      <obj_property name="ElementShortName">fdma_rbusy</obj_property>
+      <obj_property name="ObjectShortName">fdma_rbusy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_rvalid" type="logic">
+      <obj_property name="ElementShortName">fdma_rvalid</obj_property>
+      <obj_property name="ObjectShortName">fdma_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_rready" type="logic">
+      <obj_property name="ElementShortName">fdma_rready</obj_property>
+      <obj_property name="ObjectShortName">fdma_rready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_wareq" type="logic">
+      <obj_property name="ElementShortName">fdma_wareq</obj_property>
+      <obj_property name="ObjectShortName">fdma_wareq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_wbusy" type="logic">
+      <obj_property name="ElementShortName">fdma_wbusy</obj_property>
+      <obj_property name="ObjectShortName">fdma_wbusy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_wvalid" type="logic">
+      <obj_property name="ElementShortName">fdma_wvalid</obj_property>
+      <obj_property name="ObjectShortName">fdma_wvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_waccept" type="logic">
+      <obj_property name="ElementShortName">fdma_waccept</obj_property>
+      <obj_property name="ObjectShortName">fdma_waccept</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_wdone" type="logic">
+      <obj_property name="ElementShortName">fdma_wdone</obj_property>
+      <obj_property name="ObjectShortName">fdma_wdone</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_werror" type="logic">
+      <obj_property name="ElementShortName">fdma_werror</obj_property>
+      <obj_property name="ObjectShortName">fdma_werror</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/head_addr" type="array">
+      <obj_property name="ElementShortName">head_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">head_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/head_len" type="array">
+      <obj_property name="ElementShortName">head_len[31:0]</obj_property>
+      <obj_property name="ObjectShortName">head_len[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/head_seq" type="array">
+      <obj_property name="ElementShortName">head_seq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">head_seq[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/ready_blocks" type="array">
+      <obj_property name="ElementShortName">ready_blocks[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ready_blocks[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/dropped_words" type="array">
+      <obj_property name="ElementShortName">dropped_words[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dropped_words[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/int_state" type="logic">
+      <obj_property name="ElementShortName">int_state</obj_property>
+      <obj_property name="ObjectShortName">int_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/rec_state" type="logic">
+      <obj_property name="ElementShortName">rec_state</obj_property>
+      <obj_property name="ObjectShortName">rec_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/irq" type="logic">
+      <obj_property name="ElementShortName">irq</obj_property>
+      <obj_property name="ObjectShortName">irq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/overflow" type="logic">
+      <obj_property name="ElementShortName">overflow</obj_property>
+      <obj_property name="ObjectShortName">overflow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/overrun" type="logic">
+      <obj_property name="ElementShortName">overrun</obj_property>
+      <obj_property name="ObjectShortName">overrun</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/underflow" type="logic">
+      <obj_property name="ElementShortName">underflow</obj_property>
+      <obj_property name="ObjectShortName">underflow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fdma_timeout" type="logic">
+      <obj_property name="ElementShortName">fdma_timeout</obj_property>
+      <obj_property name="ObjectShortName">fdma_timeout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/length_error" type="logic">
+      <obj_property name="ElementShortName">length_error</obj_property>
+      <obj_property name="ObjectShortName">length_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/link_error" type="logic">
+      <obj_property name="ElementShortName">link_error</obj_property>
+      <obj_property name="ObjectShortName">link_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/rx_pending" type="logic">
+      <obj_property name="ElementShortName">rx_pending</obj_property>
+      <obj_property name="ObjectShortName">rx_pending</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/tx_state" type="array">
+      <obj_property name="ElementShortName">tx_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/rx_state" type="array">
+      <obj_property name="ElementShortName">rx_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fifo_afull" type="logic">
+      <obj_property name="ElementShortName">fifo_afull</obj_property>
+      <obj_property name="ObjectShortName">fifo_afull</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fifo_full" type="logic">
+      <obj_property name="ElementShortName">fifo_full</obj_property>
+      <obj_property name="ObjectShortName">fifo_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/done_event" type="logic">
+      <obj_property name="ElementShortName">done_event</obj_property>
+      <obj_property name="ObjectShortName">done_event</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/done_resp" type="logic">
+      <obj_property name="ElementShortName">done_resp</obj_property>
+      <obj_property name="ObjectShortName">done_resp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/cfg_byte" type="array">
+      <obj_property name="ElementShortName">cfg_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cfg_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/cfg_valid" type="logic">
+      <obj_property name="ElementShortName">cfg_valid</obj_property>
+      <obj_property name="ObjectShortName">cfg_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/ddr_ready" type="logic">
+      <obj_property name="ElementShortName">ddr_ready</obj_property>
+      <obj_property name="ObjectShortName">ddr_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/calib" type="logic">
+      <obj_property name="ElementShortName">calib</obj_property>
+      <obj_property name="ObjectShortName">calib</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/response_error" type="logic">
+      <obj_property name="ElementShortName">response_error</obj_property>
+      <obj_property name="ObjectShortName">response_error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/ddr_timeout" type="logic">
+      <obj_property name="ElementShortName">ddr_timeout</obj_property>
+      <obj_property name="ObjectShortName">ddr_timeout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/ddr_status" type="array">
+      <obj_property name="ElementShortName">ddr_status[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_status[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/tick_2us" type="logic">
+      <obj_property name="ElementShortName">tick_2us</obj_property>
+      <obj_property name="ObjectShortName">tick_2us</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/gpio_50us" type="logic">
+      <obj_property name="ElementShortName">gpio_50us</obj_property>
+      <obj_property name="ObjectShortName">gpio_50us</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/gdata" type="array">
+      <obj_property name="ElementShortName">gdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/grem" type="array">
+      <obj_property name="ElementShortName">grem[1:0]</obj_property>
+      <obj_property name="ObjectShortName">grem[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/gsof" type="logic">
+      <obj_property name="ElementShortName">gsof</obj_property>
+      <obj_property name="ObjectShortName">gsof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/geof" type="logic">
+      <obj_property name="ElementShortName">geof</obj_property>
+      <obj_property name="ObjectShortName">geof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/gvalid" type="logic">
+      <obj_property name="ElementShortName">gvalid</obj_property>
+      <obj_property name="ObjectShortName">gvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/configured" type="logic">
+      <obj_property name="ElementShortName">configured</obj_property>
+      <obj_property name="ObjectShortName">configured</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/configured_id" type="array">
+      <obj_property name="ElementShortName">configured_id[7:0]</obj_property>
+      <obj_property name="ObjectShortName">configured_id[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/skipped" type="array">
+      <obj_property name="ElementShortName">skipped[31:0]</obj_property>
+      <obj_property name="ObjectShortName">skipped[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fault_read" type="logic">
+      <obj_property name="ElementShortName">fault_read</obj_property>
+      <obj_property name="ObjectShortName">fault_read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/fault_write" type="logic">
+      <obj_property name="ElementShortName">fault_write</obj_property>
+      <obj_property name="ObjectShortName">fault_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/hold_r" type="logic">
+      <obj_property name="ElementShortName">hold_r</obj_property>
+      <obj_property name="ObjectShortName">hold_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/hold_b" type="logic">
+      <obj_property name="ElementShortName">hold_b</obj_property>
+      <obj_property name="ObjectShortName">hold_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/cpu_read_mode" type="logic">
+      <obj_property name="ElementShortName">cpu_read_mode</obj_property>
+      <obj_property name="ObjectShortName">cpu_read_mode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/cpu_arvalid" type="logic">
+      <obj_property name="ElementShortName">cpu_arvalid</obj_property>
+      <obj_property name="ObjectShortName">cpu_arvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/cpu_rready" type="logic">
+      <obj_property name="ElementShortName">cpu_rready</obj_property>
+      <obj_property name="ObjectShortName">cpu_rready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/cpu_araddr" type="array">
+      <obj_property name="ElementShortName">cpu_araddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cpu_araddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/cpu_arready" type="logic">
+      <obj_property name="ElementShortName">cpu_arready</obj_property>
+      <obj_property name="ObjectShortName">cpu_arready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/cpu_rvalid" type="logic">
+      <obj_property name="ElementShortName">cpu_rvalid</obj_property>
+      <obj_property name="ObjectShortName">cpu_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/cpu_rlast" type="logic">
+      <obj_property name="ElementShortName">cpu_rlast</obj_property>
+      <obj_property name="ObjectShortName">cpu_rlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/cpu_rdata" type="array">
+      <obj_property name="ElementShortName">cpu_rdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cpu_rdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/cpu_rresp" type="array">
+      <obj_property name="ElementShortName">cpu_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">cpu_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_awid" type="logic">
+      <obj_property name="ElementShortName">a_awid</obj_property>
+      <obj_property name="ObjectShortName">a_awid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_awaddr" type="array">
+      <obj_property name="ElementShortName">a_awaddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">a_awaddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_awlen" type="array">
+      <obj_property name="ElementShortName">a_awlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a_awlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_awsize" type="array">
+      <obj_property name="ElementShortName">a_awsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a_awsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_awburst" type="array">
+      <obj_property name="ElementShortName">a_awburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">a_awburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_awlock" type="logic">
+      <obj_property name="ElementShortName">a_awlock</obj_property>
+      <obj_property name="ObjectShortName">a_awlock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_awcache" type="array">
+      <obj_property name="ElementShortName">a_awcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a_awcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_awprot" type="array">
+      <obj_property name="ElementShortName">a_awprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a_awprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_awqos" type="array">
+      <obj_property name="ElementShortName">a_awqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a_awqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_awvalid" type="logic">
+      <obj_property name="ElementShortName">a_awvalid</obj_property>
+      <obj_property name="ObjectShortName">a_awvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_awready" type="logic">
+      <obj_property name="ElementShortName">a_awready</obj_property>
+      <obj_property name="ObjectShortName">a_awready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_wid" type="logic">
+      <obj_property name="ElementShortName">a_wid</obj_property>
+      <obj_property name="ObjectShortName">a_wid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_wdata" type="array">
+      <obj_property name="ElementShortName">a_wdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">a_wdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_wstrb" type="array">
+      <obj_property name="ElementShortName">a_wstrb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a_wstrb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_wlast" type="logic">
+      <obj_property name="ElementShortName">a_wlast</obj_property>
+      <obj_property name="ObjectShortName">a_wlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_wvalid" type="logic">
+      <obj_property name="ElementShortName">a_wvalid</obj_property>
+      <obj_property name="ObjectShortName">a_wvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_wready" type="logic">
+      <obj_property name="ElementShortName">a_wready</obj_property>
+      <obj_property name="ObjectShortName">a_wready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_bid" type="logic">
+      <obj_property name="ElementShortName">a_bid</obj_property>
+      <obj_property name="ObjectShortName">a_bid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_bresp" type="array">
+      <obj_property name="ElementShortName">a_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">a_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_bvalid" type="logic">
+      <obj_property name="ElementShortName">a_bvalid</obj_property>
+      <obj_property name="ObjectShortName">a_bvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_bready" type="logic">
+      <obj_property name="ElementShortName">a_bready</obj_property>
+      <obj_property name="ObjectShortName">a_bready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_arid" type="logic">
+      <obj_property name="ElementShortName">a_arid</obj_property>
+      <obj_property name="ObjectShortName">a_arid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_araddr" type="array">
+      <obj_property name="ElementShortName">a_araddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">a_araddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_arlen" type="array">
+      <obj_property name="ElementShortName">a_arlen[7:0]</obj_property>
+      <obj_property name="ObjectShortName">a_arlen[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_arsize" type="array">
+      <obj_property name="ElementShortName">a_arsize[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a_arsize[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_arburst" type="array">
+      <obj_property name="ElementShortName">a_arburst[1:0]</obj_property>
+      <obj_property name="ObjectShortName">a_arburst[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_arlock" type="logic">
+      <obj_property name="ElementShortName">a_arlock</obj_property>
+      <obj_property name="ObjectShortName">a_arlock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_arcache" type="array">
+      <obj_property name="ElementShortName">a_arcache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a_arcache[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_arprot" type="array">
+      <obj_property name="ElementShortName">a_arprot[2:0]</obj_property>
+      <obj_property name="ObjectShortName">a_arprot[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_arqos" type="array">
+      <obj_property name="ElementShortName">a_arqos[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a_arqos[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_arvalid" type="logic">
+      <obj_property name="ElementShortName">a_arvalid</obj_property>
+      <obj_property name="ObjectShortName">a_arvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_arready" type="logic">
+      <obj_property name="ElementShortName">a_arready</obj_property>
+      <obj_property name="ObjectShortName">a_arready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_rid" type="logic">
+      <obj_property name="ElementShortName">a_rid</obj_property>
+      <obj_property name="ObjectShortName">a_rid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_rdata" type="array">
+      <obj_property name="ElementShortName">a_rdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">a_rdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_rresp" type="array">
+      <obj_property name="ElementShortName">a_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">a_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_rlast" type="logic">
+      <obj_property name="ElementShortName">a_rlast</obj_property>
+      <obj_property name="ObjectShortName">a_rlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_rvalid" type="logic">
+      <obj_property name="ElementShortName">a_rvalid</obj_property>
+      <obj_property name="ObjectShortName">a_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/a_rready" type="logic">
+      <obj_property name="ElementShortName">a_rready</obj_property>
+      <obj_property name="ObjectShortName">a_rready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/b_arready" type="logic">
+      <obj_property name="ElementShortName">b_arready</obj_property>
+      <obj_property name="ObjectShortName">b_arready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/b_rvalid" type="logic">
+      <obj_property name="ElementShortName">b_rvalid</obj_property>
+      <obj_property name="ObjectShortName">b_rvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/b_rlast" type="logic">
+      <obj_property name="ElementShortName">b_rlast</obj_property>
+      <obj_property name="ObjectShortName">b_rlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/b_bvalid" type="logic">
+      <obj_property name="ElementShortName">b_bvalid</obj_property>
+      <obj_property name="ObjectShortName">b_bvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/b_rdata" type="array">
+      <obj_property name="ElementShortName">b_rdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">b_rdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/b_rresp" type="array">
+      <obj_property name="ElementShortName">b_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">b_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/b_bresp" type="array">
+      <obj_property name="ElementShortName">b_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">b_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/b_bid" type="logic">
+      <obj_property name="ElementShortName">b_bid</obj_property>
+      <obj_property name="ObjectShortName">b_bid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/b_rid" type="logic">
+      <obj_property name="ElementShortName">b_rid</obj_property>
+      <obj_property name="ObjectShortName">b_rid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/read_beats" type="array">
+      <obj_property name="ElementShortName">read_beats[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_beats[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/read_requests" type="array">
+      <obj_property name="ElementShortName">read_requests[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_requests[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/tx_beats" type="array">
+      <obj_property name="ElementShortName">tx_beats[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_beats[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/tx_frames" type="array">
+      <obj_property name="ElementShortName">tx_frames[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_frames[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/cfg_pulses" type="array">
+      <obj_property name="ElementShortName">cfg_pulses[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cfg_pulses[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/done_events" type="array">
+      <obj_property name="ElementShortName">done_events[31:0]</obj_property>
+      <obj_property name="ObjectShortName">done_events[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/acks" type="array">
+      <obj_property name="ElementShortName">acks[31:0]</obj_property>
+      <obj_property name="ObjectShortName">acks[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/check_tx" type="logic">
+      <obj_property name="ElementShortName">check_tx</obj_property>
+      <obj_property name="ObjectShortName">check_tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/expected_tx_base" type="array">
+      <obj_property name="ElementShortName">expected_tx_base[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_tx_base[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/expected_tx_len" type="array">
+      <obj_property name="ElementShortName">expected_tx_len[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_tx_len[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/expected_seed" type="array">
+      <obj_property name="ElementShortName">expected_seed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_seed[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ready_recovery/H/expected_byte1" type="array">
+      <obj_property name="ElementShortName">expected_byte1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_byte1[7:0]</obj_property>
+   </wvobject>
+</wave_config>

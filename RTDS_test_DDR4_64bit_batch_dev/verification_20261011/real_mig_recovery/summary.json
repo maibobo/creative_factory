@@ -1,0 +1,22 @@
+{
+  "model": "DDR4_REAL + actual AXI clock converter + 4 x x16 DDR4 model",
+  "ids": [
+    "TC-F16"
+  ],
+  "runs": [
+    {
+      "seed": 1417633351,
+      "status": "PASS",
+      "exit_code": 0,
+      "log": "real_mig_seed_1417633351.simulate.log",
+      "wall_seconds": 163.55
+    },
+    {
+      "seed": 750318462,
+      "status": "PASS",
+      "exit_code": 0,
+      "log": "real_mig_seed_750318462.simulate.log",
+      "wall_seconds": 1005.26
+    }
+  ]
+}

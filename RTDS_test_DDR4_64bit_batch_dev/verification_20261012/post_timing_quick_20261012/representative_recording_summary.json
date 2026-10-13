@@ -1,0 +1,74 @@
+[
+  {
+    "case": "ready_recovery",
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "wall_seconds": 23.88,
+    "log": "ready_recovery_seed_1417633351.record.simulate.log",
+    "purpose": "Explicit per-seed WDB recording; rerun from same frozen compiled snapshot"
+  },
+  {
+    "case": "recovery_cross_variants",
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "wall_seconds": 19.25,
+    "log": "recovery_cross_variants_seed_1417633351.record.simulate.log",
+    "purpose": "Explicit per-seed WDB recording; rerun from same frozen compiled snapshot"
+  },
+  {
+    "case": "sync",
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "wall_seconds": 6.77,
+    "log": "sync_seed_1417633351.record.simulate.log",
+    "purpose": "Explicit per-seed WDB recording; rerun from same frozen compiled snapshot"
+  },
+  {
+    "case": "1g",
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "wall_seconds": 7.38,
+    "log": "1g_seed_1417633351.record.simulate.log",
+    "purpose": "Explicit per-seed WDB recording; rerun from same frozen compiled snapshot"
+  },
+  {
+    "case": "byte1_1g",
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "wall_seconds": 18.12,
+    "log": "byte1_1g_seed_1417633351.record.simulate.log",
+    "purpose": "Explicit per-seed WDB recording; rerun from same frozen compiled snapshot"
+  },
+  {
+    "case": "backend_read",
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "wall_seconds": 6.7,
+    "log": "backend_read_seed_1417633351.record.simulate.log",
+    "purpose": "Explicit per-seed WDB recording; rerun from same frozen compiled snapshot"
+  },
+  {
+    "case": "backend_write",
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "wall_seconds": 6.7,
+    "log": "backend_write_seed_1417633351.record.simulate.log",
+    "purpose": "Explicit per-seed WDB recording; rerun from same frozen compiled snapshot"
+  },
+  {
+    "case": "ring",
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "wall_seconds": 6.69,
+    "log": "ring_seed_1417633351.record.simulate.log",
+    "purpose": "Explicit per-seed WDB recording; rerun from same frozen compiled snapshot"
+  }
+]

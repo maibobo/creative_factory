@@ -4,9 +4,17 @@
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
 # Start of session at: Sun Sep 20 20:03:35 2026
 # Process ID: 14768
+# Current directory: F:/RTDS_test_DDR4_64bit_batch_dev
+# Command line: vivado.exe -mode batch -source F:\RTDS_test_DDR4_64bit_batch_dev\scripts\fix_pin_constraint_and_rerun_impl_20260920.tcl -log F:\RTDS_test_DDR4_64bit_batch_dev\reports\impl_after_pin_constraint_fix_20260920\vivado.log -journal F:\RTDS_test_DDR4_64bit_batch_dev\reports\impl_after_pin_constraint_fix_20260920\vivado.jou
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/reports/impl_after_pin_constraint_fix_20260920/vivado.log
+# Journal file: F:\RTDS_test_DDR4_64bit_batch_dev\reports\impl_after_pin_constraint_fix_20260920\vivado.jou
 #-----------------------------------------------------------
+source {F:\RTDS_test_DDR4_64bit_batch_dev\scripts\fix_pin_constraint_and_rerun_impl_20260920.tcl}
 # set script_dir [file dirname [file normalize [info script]]]
 # set root [file normalize [file join $script_dir ..]]
+# set xpr [file join $root RTDS_test_DDR4_64bit.xpr]
+# set pin_xdc [file join $root RTDS_test_DDR4_64bit.srcs constrs_1 new PIN.xdc]
+# set ddr4_pin_xdc [file join $root RTDS_test_DDR4_64bit.srcs constrs_1 new DDR4_PIN.xdc]
 # set report_dir [file join $root reports impl_after_pin_constraint_fix_20260920]
 # file mkdir $report_dir
 # open_project $xpr
@@ -22,16 +30,25 @@ open_project: Time (s): cpu = 00:00:34 ; elapsed = 00:00:56 . Memory (MB): peak 
 # }
 # set ddr4_pin_file [get_files -quiet -all $ddr4_pin_xdc]
 # if {[llength $ddr4_pin_file] != 1} {
+#     error "RTDS_DDR4_PIN_XDC_COUNT_ERROR: expected 1, got [llength $ddr4_pin_file]"
 # }
 # set_property USED_IN_SYNTHESIS true $ddr4_pin_file
 # set_property USED_IN_IMPLEMENTATION true $ddr4_pin_file
 # set_property TARGET_CONSTRS_FILE $ddr4_pin_xdc [get_filesets constrs_1]
+# puts "RTDS_DDR4_PIN_XDC_ACTIVE=[get_property NAME $ddr4_pin_file]"
+RTDS_DDR4_PIN_XDC_ACTIVE=F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc
+# puts "RTDS_LEGACY_PIN_XDC_REMOVED=[expr {[llength [get_files -quiet -all $pin_xdc]] == 0}]"
+RTDS_LEGACY_PIN_XDC_REMOVED=1
 # reset_run impl_1
 WARNING: [Vivado 12-1017] Problems encountered:
 1. Couldn't access process for termination
 
 # launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'F:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/ip/aurora_64b66b_0/aurora_64b66b_0.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci' is already up-to-date
 [Sun Sep 20 20:05:59 2026] Launched impl_1...
+Run output will be captured here: F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/impl_1/runme.log
 launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:01:06 . Memory (MB): peak = 1000.227 ; gain = 0.000
 # wait_on_run impl_1
 [Sun Sep 20 20:05:59 2026] Waiting for impl_1 to finish...
@@ -54,21 +71,120 @@ Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
 INFO: [Project 1-454] Reading design checkpoint 'f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.dcp' for cell 'U_AURORA_1G/aurora_i'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.dcp' for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2.dcp' for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_i'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0.dcp' for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_ii'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'u_clk_gen/clk_wiz_0_inst'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_FDMA.dcp' for cell 'u_pcie/ila_FDMA_inst'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_CONV_DMA_0_0/design_1_CONV_DMA_0_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/CONV_DMA_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_INFO_EXCH_0_0/design_1_INFO_EXCH_0_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/util_ds_buf'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/s01_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1/s00_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter.dcp' for cell 'u_pcie/u_rtds_ddr4_backend/u_axi_clock_converter'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig.dcp' for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_temp.dcp' for cell 'u_temp_rd/ila_temp_inst'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.dcp' for cell 'u_temp_rd/sys_mon_inst'
 Netlist sorting complete. Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1312.340 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2043 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: u_pcie/ila_FDMA_inst UUID: dbfac52f-6aad-50c0-82b7-35fd11508148 
+INFO: [Chipscope 16-324] Core: u_pcie/u_rtds_ddr4_backend/u_ddr4_mig UUID: 947b7c90-f1c0-53d2-873b-e03c6fbc627c 
 INFO: [Chipscope 16-324] Core: u_temp_rd/ila_temp_inst UUID: f764fd9b-5a2a-50e5-9a36-6d20613a5bd5 
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon_board.xdc] for cell 'u_temp_rd/sys_mon_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon_board.xdc] for cell 'u_temp_rd/sys_mon_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.xdc] for cell 'u_temp_rd/sys_mon_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.xdc] for cell 'u_temp_rd/sys_mon_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/ip_0/synth/design_1_xdma_0_0_pcie3_ip_gt.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst/design_1_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie3_ip_gt_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/ip_0/synth/design_1_xdma_0_0_pcie3_ip_gt.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst/design_1_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie3_ip_gt_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie3_ip-PCIE_X0Y0.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie3_ip-PCIE_X0Y0.xdc:203]
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie3_ip-PCIE_X0Y0.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0_board.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0_board.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/source/design_1_xdma_0_0_pcie3_us_ip.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/source/design_1_xdma_0_0_pcie3_us_ip.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0_board.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/util_ds_buf/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0_board.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/util_ds_buf/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/master_fifo.data_fifo/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/master_fifo.data_fifo/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_pcie/ila_FDMA_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_pcie/ila_FDMA_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_v6_2/constraints/ila.xdc] for cell 'u_pcie/ila_FDMA_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_v6_2/constraints/ila.xdc] for cell 'u_pcie/ila_FDMA_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_temp_rd/ila_temp_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_temp_rd/ila_temp_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_v6_2/constraints/ila.xdc] for cell 'u_temp_rd/ila_temp_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_v6_2/constraints/ila.xdc] for cell 'u_temp_rd/ila_temp_inst/inst'
 Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/ip_0/synth/aurora_8b10b_1p25g_gt.xdc] for cell 'U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst'
 Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/ip_0/synth/aurora_8b10b_1p25g_gt.xdc] for cell 'U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst'
 Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
 Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_0/bd_6edb_microblaze_I_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_0/bd_6edb_microblaze_I_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_2/bd_6edb_ilmb_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_2/bd_6edb_ilmb_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_3/bd_6edb_dlmb_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_3/bd_6edb_dlmb_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_10/bd_6edb_iomodule_0_0_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_10/bd_6edb_iomodule_0_0_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/ip_0/rtds_ddr4_mig_microblaze_mcs_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/ip_0/rtds_ddr4_mig_microblaze_mcs_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/par/rtds_ddr4_mig.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/par/rtds_ddr4_mig.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst'
+Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc]
+Finished Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc]
+Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/rtl/aurora1g_board.xdc]
+Finished Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/rtl/aurora1g_board.xdc]
+Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/PIN.xdc]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst/design_1_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.design_1_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[1].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[1].GTHE3_CHANNEL_PRIM_INST Instance u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst/design_1_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.design_1_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[1].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[1].GTHE3_CHANNEL_PRIM_INST can not be placed in GTHE3_CHANNEL of site GTHE3_CHANNEL_X0Y0 because the bel is occupied by U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst/gen_gtwizard_gthe3_top.aurora_8b10b_1p25g_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[0].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[0].GTHE3_CHANNEL_PRIM_INST. This could be caused by bel constraint conflict [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/PIN.xdc:27]
+Finished Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/PIN.xdc]
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.dcp'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/s01_couplers/auto_cc/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc:16]
+INFO: [Timing 38-2] Deriving generated clocks [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc:16]
 all_fanout: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1872.234 ; gain = 343.387
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/s01_couplers/auto_cc/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1/s00_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc:13]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc:17]
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1/s00_couplers/auto_cc/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/master_fifo.data_fifo/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/master_fifo.data_fifo/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
 Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g_clocks.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
 Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g_clocks.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_ii/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_ii/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_gen_ll_to_axi_data_i/axis_reg_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_gen_ll_to_axi_data_i/axis_reg_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter_clocks.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_axi_clock_converter/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter_clocks.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_axi_clock_converter/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst'
 INFO: [Project 1-1715] 6 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 
@@ -90,24 +206,121 @@ Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
 INFO: [Project 1-454] Reading design checkpoint 'f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.dcp' for cell 'U_AURORA_1G/aurora_i'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.dcp' for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2.dcp' for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_i'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0.dcp' for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_ii'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'u_clk_gen/clk_wiz_0_inst'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_FDMA.dcp' for cell 'u_pcie/ila_FDMA_inst'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_CONV_DMA_0_0/design_1_CONV_DMA_0_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/CONV_DMA_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_INFO_EXCH_0_0/design_1_INFO_EXCH_0_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/util_ds_buf'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/s01_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1/s00_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter.dcp' for cell 'u_pcie/u_rtds_ddr4_backend/u_axi_clock_converter'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig.dcp' for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_temp.dcp' for cell 'u_temp_rd/ila_temp_inst'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.dcp' for cell 'u_temp_rd/sys_mon_inst'
 Netlist sorting complete. Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1311.188 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2043 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: u_pcie/ila_FDMA_inst UUID: dbfac52f-6aad-50c0-82b7-35fd11508148 
+INFO: [Chipscope 16-324] Core: u_pcie/u_rtds_ddr4_backend/u_ddr4_mig UUID: 947b7c90-f1c0-53d2-873b-e03c6fbc627c 
 INFO: [Chipscope 16-324] Core: u_temp_rd/ila_temp_inst UUID: f764fd9b-5a2a-50e5-9a36-6d20613a5bd5 
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon_board.xdc] for cell 'u_temp_rd/sys_mon_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon_board.xdc] for cell 'u_temp_rd/sys_mon_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.xdc] for cell 'u_temp_rd/sys_mon_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.xdc] for cell 'u_temp_rd/sys_mon_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/ip_0/synth/design_1_xdma_0_0_pcie3_ip_gt.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst/design_1_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie3_ip_gt_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/ip_0/synth/design_1_xdma_0_0_pcie3_ip_gt.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst/design_1_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie3_ip_gt_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie3_ip-PCIE_X0Y0.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie3_ip-PCIE_X0Y0.xdc:203]
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie3_ip-PCIE_X0Y0.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0_board.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0_board.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/source/design_1_xdma_0_0_pcie3_us_ip.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/source/design_1_xdma_0_0_pcie3_us_ip.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0_board.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/util_ds_buf/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0_board.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/util_ds_buf/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/master_fifo.data_fifo/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/master_fifo.data_fifo/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_pcie/ila_FDMA_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_pcie/ila_FDMA_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_v6_2/constraints/ila.xdc] for cell 'u_pcie/ila_FDMA_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_v6_2/constraints/ila.xdc] for cell 'u_pcie/ila_FDMA_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_temp_rd/ila_temp_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_temp_rd/ila_temp_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_v6_2/constraints/ila.xdc] for cell 'u_temp_rd/ila_temp_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_v6_2/constraints/ila.xdc] for cell 'u_temp_rd/ila_temp_inst/inst'
 Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/ip_0/synth/aurora_8b10b_1p25g_gt.xdc] for cell 'U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst'
 Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/ip_0/synth/aurora_8b10b_1p25g_gt.xdc] for cell 'U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst'
 Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
 Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_0/bd_6edb_microblaze_I_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_0/bd_6edb_microblaze_I_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_2/bd_6edb_ilmb_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_2/bd_6edb_ilmb_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_3/bd_6edb_dlmb_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_3/bd_6edb_dlmb_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_10/bd_6edb_iomodule_0_0_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_10/bd_6edb_iomodule_0_0_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/ip_0/rtds_ddr4_mig_microblaze_mcs_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/ip_0/rtds_ddr4_mig_microblaze_mcs_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/par/rtds_ddr4_mig.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/par/rtds_ddr4_mig.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst'
+Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc]
+Finished Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc]
+Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/rtl/aurora1g_board.xdc]
+Finished Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/rtl/aurora1g_board.xdc]
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.dcp'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/s01_couplers/auto_cc/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc:16]
+INFO: [Timing 38-2] Deriving generated clocks [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc:16]
 all_fanout: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1871.207 ; gain = 341.621
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/s01_couplers/auto_cc/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1/s00_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc:13]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc:17]
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1/s00_couplers/auto_cc/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/master_fifo.data_fifo/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/master_fifo.data_fifo/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
 Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g_clocks.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
 Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g_clocks.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_ii/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_ii/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_gen_ll_to_axi_data_i/axis_reg_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_gen_ll_to_axi_data_i/axis_reg_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter_clocks.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_axi_clock_converter/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter_clocks.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_axi_clock_converter/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst'
 INFO: [Project 1-1715] 6 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Generating merged BMM file for the design top 'TOP'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/sw/calibration_0/Debug/calibration_ddr.elf 
 INFO: [Project 1-1687] 4 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1875.133 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -169,24 +382,121 @@ Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
 INFO: [Project 1-454] Reading design checkpoint 'f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.dcp' for cell 'U_AURORA_1G/aurora_i'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.dcp' for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2.dcp' for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_i'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0.dcp' for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_ii'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'u_clk_gen/clk_wiz_0_inst'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_FDMA.dcp' for cell 'u_pcie/ila_FDMA_inst'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_CONV_DMA_0_0/design_1_CONV_DMA_0_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/CONV_DMA_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_INFO_EXCH_0_0/design_1_INFO_EXCH_0_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/util_ds_buf'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/s01_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1.dcp' for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1/s00_couplers/auto_cc'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter.dcp' for cell 'u_pcie/u_rtds_ddr4_backend/u_axi_clock_converter'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig.dcp' for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_temp.dcp' for cell 'u_temp_rd/ila_temp_inst'
+INFO: [Project 1-454] Reading design checkpoint 'f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.dcp' for cell 'u_temp_rd/sys_mon_inst'
 Netlist sorting complete. Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1313.047 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2043 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: u_pcie/ila_FDMA_inst UUID: dbfac52f-6aad-50c0-82b7-35fd11508148 
+INFO: [Chipscope 16-324] Core: u_pcie/u_rtds_ddr4_backend/u_ddr4_mig UUID: 947b7c90-f1c0-53d2-873b-e03c6fbc627c 
 INFO: [Chipscope 16-324] Core: u_temp_rd/ila_temp_inst UUID: f764fd9b-5a2a-50e5-9a36-6d20613a5bd5 
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon_board.xdc] for cell 'u_temp_rd/sys_mon_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon_board.xdc] for cell 'u_temp_rd/sys_mon_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.xdc] for cell 'u_temp_rd/sys_mon_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.xdc] for cell 'u_temp_rd/sys_mon_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/ip_0/synth/design_1_xdma_0_0_pcie3_ip_gt.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst/design_1_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie3_ip_gt_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/ip_0/synth/design_1_xdma_0_0_pcie3_ip_gt.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst/design_1_xdma_0_0_pcie3_ip_gt_top_i/gt_wizard.gtwizard_top_i/design_1_xdma_0_0_pcie3_ip_gt_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie3_ip-PCIE_X0Y0.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie3_ip-PCIE_X0Y0.xdc:203]
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/source/design_1_xdma_0_0_pcie3_ip-PCIE_X0Y0.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst/pcie3_ip_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0_board.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0_board.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/source/design_1_xdma_0_0_pcie3_us_ip.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/source/design_1_xdma_0_0_pcie3_us_ip.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/xdma_0/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0_board.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/util_ds_buf/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0_board.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/util_ds_buf/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/master_fifo.data_fifo/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/master_fifo.data_fifo/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/aurora_64b66b_0_multi_gt_i/aurora_64b66b_0_gt_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_pcie/ila_FDMA_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_pcie/ila_FDMA_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_v6_2/constraints/ila.xdc] for cell 'u_pcie/ila_FDMA_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_v6_2/constraints/ila.xdc] for cell 'u_pcie/ila_FDMA_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_temp_rd/ila_temp_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_v6_2/constraints/ila_impl.xdc] for cell 'u_temp_rd/ila_temp_inst/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_v6_2/constraints/ila.xdc] for cell 'u_temp_rd/ila_temp_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_v6_2/constraints/ila.xdc] for cell 'u_temp_rd/ila_temp_inst/inst'
 Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/ip_0/synth/aurora_8b10b_1p25g_gt.xdc] for cell 'U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst'
 Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/ip_0/synth/aurora_8b10b_1p25g_gt.xdc] for cell 'U_AURORA_1G/aurora_i/inst/aurora_8b10b_1p25g_core_i/gt_wrapper_i/aurora_8b10b_1p25g_gt_i/inst'
 Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
 Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_0/bd_6edb_microblaze_I_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_0/bd_6edb_microblaze_I_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_2/bd_6edb_ilmb_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_2/bd_6edb_ilmb_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_3/bd_6edb_dlmb_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_3/bd_6edb_dlmb_0.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_10/bd_6edb_iomodule_0_0_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_10/bd_6edb_iomodule_0_0_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/ip_0/rtds_ddr4_mig_microblaze_mcs_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/ip_0/rtds_ddr4_mig_microblaze_mcs_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/par/rtds_ddr4_mig.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/par/rtds_ddr4_mig.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst'
+Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc]
+Finished Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc]
+Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/rtl/aurora1g_board.xdc]
+Finished Parsing XDC File [F:/RTDS_test_DDR4_64bit_batch_dev/rtl/aurora1g_board.xdc]
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g.dcp'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/s01_couplers/auto_cc/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc:16]
+INFO: [Timing 38-2] Deriving generated clocks [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc:16]
 all_fanout: Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1872.082 ; gain = 342.535
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_0/s01_couplers/auto_cc/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1/s00_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc:13]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc:17]
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_clocks.xdc] for cell 'u_pcie/design_1_wrapper_inst/design_1_i/axi_interconnect_1/s00_couplers/auto_cc/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/master_fifo.data_fifo/U0'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst/aurora_64b66b_0_core_i/aurora_64b66b_0_wrapper_i/cbcc_gtx0_i/master_fifo.data_fifo/U0'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/aurora_64b66b_0_block_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'u_clk_gen/clk_wiz_0_inst/inst'
 Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g_clocks.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
 Finished Parsing XDC File [f:/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g_clocks.xdc] for cell 'U_AURORA_1G/aurora_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_2/aurora_64b66b_0_reg_slice_2_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_ii/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_chk_axi_to_ll_data_i/axis_reg_ii/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_gen_ll_to_axi_data_i/axis_reg_i/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0_reg_slice_0/aurora_64b66b_0_reg_slice_0_clocks.xdc] for cell 'u_aurora_64b66b_top/aurora_64b66b_0_exdes_inst/core_traffic.frame_gen_ll_to_axi_data_i/axis_reg_i/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter_clocks.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_axi_clock_converter/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter_clocks.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_axi_clock_converter/inst'
+Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst'
+Finished Parsing XDC File [f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig_board.xdc] for cell 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst'
 INFO: [Project 1-1715] 6 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Generating merged BMM file for the design top 'TOP'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: f:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/sw/calibration_0/Debug/calibration_ddr.elf 
 INFO: [Project 1-1687] 4 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
 Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1876.867 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -360,11 +670,13 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 4369.332 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/impl_1/TOP_opt.dcp' has been generated.
 write_checkpoint: Time (s): cpu = 00:00:53 ; elapsed = 00:00:40 . Memory (MB): peak = 4369.332 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file TOP_drc_opted.rpt -pb TOP_drc_opted.pb -rpx TOP_drc_opted.rpx
 Command: report_drc -file TOP_drc_opted.rpt -pb TOP_drc_opted.pb -rpx TOP_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/impl_1/TOP_drc_opted.rpt.
 report_drc completed successfully
 report_drc: Time (s): cpu = 00:00:47 ; elapsed = 00:00:41 . Memory (MB): peak = 4369.332 ; gain = 0.000
 INFO: [Chipscope 16-240] Debug cores have already been implemented
@@ -376,6 +688,7 @@ INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC REQP-1853] BUFGCE_DIV_cascade_from_clock_buf: Cascaded clock buffers exist in the design with constant CE pin. This may result in large clock skew and timing violations. Cell BUFGCE_DIV U_RTDS_FPGA_1G_INIT/U_BUFGCE_DIV_INIT I pin is driven by another clock buffer u_clk_gen/clk_wiz_0_inst/inst/clkout3_buf.
 INFO: [DRC PORTPROP-10] Incorrect IOStandard on MCAP reset: The PCI Express reset pin pcie_rst_n is driven by an IOB with a 1.8V IO standard.  This is incompatible with the 3.3V signal that is generated by the reset pin of the PCI Express edge connector.  If this pin cannot be driven at 3.3V, your  design will require an external level shifter to convert the incoming 3.3V reset signal from the edge connector to the 1.8V at the FPGA pin.
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Warnings, 1 Advisories
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
@@ -429,6 +742,11 @@ INFO: [Physopt 32-1035] Found 250 LUTNM shape to break, 2194 LUT instances to cr
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 129, two critical 121, total 250, new lutff created 20
 INFO: [Physopt 32-775] End 1 Pass. Optimized 1166 nets or cells. Created 250 new cells, deleted 916 existing cells and moved 0 existing cell
 INFO: [Physopt 32-76] Pass 1. Identified 5 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr_axi/axi_w_channel_0/wready_d3. Replicated 7 times.
+INFO: [Physopt 32-81] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_ddr_cal_addr_decode/u_ddr_cal_cplx/cplx_cal. Replicated 8 times.
+INFO: [Physopt 32-81] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_ui/u_ddr_ui_wr_data/app_wdf_rdy_r. Replicated 6 times.
+INFO: [Physopt 32-81] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr_axi/USE_UPSIZER.upsizer_d2/ARESET. Replicated 9 times.
+INFO: [Physopt 32-81] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_ui/u_ddr_ui_wr_data/app_wdf_rdy_r_copy2. Replicated 7 times.
 INFO: [Physopt 32-232] Optimized 5 nets. Created 37 new instances.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 5 nets or cells. Created 37 new cells, deleted 0 existing cell and moved 0 existing cell
 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.606 . Memory (MB): peak = 4369.332 ; gain = 0.000
@@ -445,6 +763,7 @@ INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, 
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.072 . Memory (MB): peak = 4369.332 ; gain = 0.000
+INFO: [Physopt 32-736] Net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr_axi/axi_w_channel_0/wready_i_1_n_0 has fanout of one; hence not performing Critical-cell optimization
 INFO: [Physopt 32-68] No nets found for critical-cell optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -618,6 +937,7 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 Write XDEF Complete: Time (s): cpu = 00:00:37 ; elapsed = 00:00:14 . Memory (MB): peak = 4369.332 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/impl_1/TOP_placed.dcp' has been generated.
 write_checkpoint: Time (s): cpu = 00:01:00 ; elapsed = 00:00:32 . Memory (MB): peak = 4369.332 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_io -file TOP_io_placed.rpt
 report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.669 . Memory (MB): peak = 4369.332 ; gain = 0.000
@@ -649,15 +969,28 @@ Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 4369.332 ; g
 Phase 3 Critical Path Optimization
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.320 | TNS=-18.065 |
 INFO: [Physopt 32-702] Processed net u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0/inst/S_AXI_RDATA[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg_0.  Re-placed instance u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg
+INFO: [Physopt 32-735] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg_0. Optimization improves timing on the net.
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.085 | TNS=-17.830 |
+INFO: [Physopt 32-662] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg_0.  Did not re-place instance u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg
+INFO: [Physopt 32-81] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg_0. Optimization improves timing on the net.
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.007 | TNS=-17.752 |
+INFO: [Physopt 32-662] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg_0_repN.  Did not re-place instance u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg_replica
+INFO: [Physopt 32-702] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg_0_repN. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0/inst/axi_rdata[1]_i_3_n_0.  Did not re-place instance u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0/inst/axi_rdata[1]_i_3
 INFO: [Physopt 32-710] Processed net u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0/inst/axi_rdata[1]_i_1_n_0. Critical path length was reduced through logic transformation on cell u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0/inst/axi_rdata[1]_i_1_comp.
 INFO: [Physopt 32-735] Processed net u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0/inst/axi_rdata[1]_i_3_n_0. Optimization improves timing on the net.
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.889 | TNS=-17.634 |
 INFO: [Physopt 32-702] Processed net u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0/inst/axi_rdata[1]_i_1_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net u_pcie/design_1_wrapper_inst/design_1_i/INFO_EXCH_0/inst/S_AXI_RDATA[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg_0_repN.  Re-placed instance u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg_replica
+INFO: [Physopt 32-735] Processed net u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/calDone_gated_reg_0_repN. Optimization improves timing on the net.
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.772 | TNS=-17.404 |
+INFO: [Physopt 32-662] Processed net u_pcie/u_rtds_ddr4_backend/ready_sync_reg_n_0_[0].  Did not re-place instance u_pcie/u_rtds_ddr4_backend/ready_sync_reg[0]
+INFO: [Physopt 32-702] Processed net u_pcie/u_rtds_ddr4_backend/ready_sync_reg_n_0_[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net u_pcie/u_rtds_ddr4_backend/ui_axi_aresetn.  Did not re-place instance u_pcie/u_rtds_ddr4_backend/ui_reset_pipe_reg[1]
+INFO: [Physopt 32-702] Processed net u_pcie/u_rtds_ddr4_backend/ui_axi_aresetn. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.772 | TNS=-17.404 |
 Phase 3 Critical Path Optimization | Checksum: 13efb5428
 
@@ -665,7 +998,18 @@ Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 4369.332 ; g
 
 Phase 4 Critical Path Optimization
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.772 | TNS=-17.404 |
+INFO: [Physopt 32-662] Processed net u_pcie/u_rtds_ddr4_backend/ready_sync_reg_n_0_[0].  Did not re-place instance u_pcie/u_rtds_ddr4_backend/ready_sync_reg[0]
+INFO: [Physopt 32-702] Processed net u_pcie/u_rtds_ddr4_backend/ready_sync_reg_n_0_[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net u_pcie/u_rtds_ddr4_backend/ui_axi_aresetn.  Did not re-place instance u_pcie/u_rtds_ddr4_backend/ui_reset_pipe_reg[1]
+INFO: [Physopt 32-81] Processed net u_pcie/u_rtds_ddr4_backend/ui_axi_aresetn. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net u_pcie/u_rtds_ddr4_backend/ui_axi_aresetn. Optimization improves timing on the net.
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.735 | TNS=-17.367 |
+INFO: [Physopt 32-662] Processed net u_pcie/u_rtds_ddr4_backend/ui_axi_aresetn_repN.  Did not re-place instance u_pcie/u_rtds_ddr4_backend/ui_reset_pipe_reg[1]_replica
+INFO: [Physopt 32-702] Processed net u_pcie/u_rtds_ddr4_backend/ui_axi_aresetn_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net u_pcie/u_rtds_ddr4_backend/ready_sync_reg_n_0_[0].  Did not re-place instance u_pcie/u_rtds_ddr4_backend/ready_sync_reg[0]
+INFO: [Physopt 32-702] Processed net u_pcie/u_rtds_ddr4_backend/ready_sync_reg_n_0_[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net u_pcie/u_rtds_ddr4_backend/ui_axi_aresetn_repN.  Did not re-place instance u_pcie/u_rtds_ddr4_backend/ui_reset_pipe_reg[1]_replica
+INFO: [Physopt 32-702] Processed net u_pcie/u_rtds_ddr4_backend/ui_axi_aresetn_repN. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.735 | TNS=-17.367 |
 Phase 4 Critical Path Optimization | Checksum: 13efb5428
 
@@ -701,6 +1045,7 @@ Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
 Write XDEF Complete: Time (s): cpu = 00:00:37 ; elapsed = 00:00:13 . Memory (MB): peak = 4369.332 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/impl_1/TOP_physopt.dcp' has been generated.
 write_checkpoint: Time (s): cpu = 00:01:00 ; elapsed = 00:00:30 . Memory (MB): peak = 4369.332 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
@@ -764,6 +1109,10 @@ Time (s): cpu = 00:04:59 ; elapsed = 00:03:45 . Memory (MB): peak = 4369.332 ; g
 INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.705 | TNS=-6.558 | WHS=N/A    | THS=N/A    |
 
 WARNING: [Route 35-462] Failed to populate 4 paths in bus skew group (internal name : grp_29). These paths are:
+	U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_hsdata_ff_reg[10]/D
+	U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_hsdata_ff_reg[6]/D
+	U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_hsdata_ff_reg[9]/D
+	U_RTDS_1G_PERIODIC_TX/U_RTDS_FPGA_CFG_CDC/U_XPM_CDC_HANDSHAKE/dest_hsdata_ff_reg[8]/D
 
 Phase 2.6 Update Timing for Bus Skew | Checksum: 24eaeb9a1
 

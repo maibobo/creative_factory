@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Oct 10 16:56:30 2026
+# Process ID: 7892
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/period_r2
+# Command line: xsim.exe -log period_100ms.simulate.log -mode tcl -source {xsim.dir/period_100ms/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/period_r2/period_100ms.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/period_r2\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/period_100ms/xsim_script.tcl
+# xsim {period_100ms} -wdb {period_100ms.wdb} -autoloadwcfg -tclbatch {period_100ms.tcl} -onfinish stop -onerror quit
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source period_100ms.tcl
+## set top /tb_period_100ms
+## open_vcd period_100ms.vcd
+## set sigs [get_objects $top/*]
+## set sigs [lsearch -all -inline -not -exact $sigs $top/clk]
+## set sigs [concat $sigs [get_objects $top/bus/*]]
+## set sigs [lsearch -all -inline -not -exact $sigs $top/bus/clk]
+## log_wave $sigs
+## log_vcd $sigs
+INFO: HDL object /tb_period_100ms/stored_words is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+## run all
+PERIOD_TICK n=1 time_ns=100000030 ready=0
+WRITE_RESPONSE n=1 time_ns=100000194 addr=0000000000100000 strb=ff
+PERIOD_TICK n=2 time_ns=200000030 ready=0
+BLOCK_READABLE seq=0 time_ns=200000146 length=8
+PERIOD_TICK n=3 time_ns=300000030 ready=0
+WRITE_RESPONSE n=2 time_ns=300000162 addr=0000000000140000 strb=ff
+BLOCK_READABLE seq=1 time_ns=300000266 length=8
+PERIOD_TICK n=4 time_ns=400000030 ready=0
+WRITE_RESPONSE n=3 time_ns=400000162 addr=0000000000180000 strb=0f
+BLOCK_READABLE seq=2 time_ns=400000266 length=4
+TEST PASS tb_period_100ms ticks=4 intervals=3 writes=3 blocks=3 PERIOD_CYCLES=25000000 clk_ns=4
+$finish called at time : 400000394 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/tb_period_100ms.sv" Line 84
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:04:16 . Memory (MB): peak = 916.977 ; gain = 0.000
+## close_vcd
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 10 17:00:53 2026...

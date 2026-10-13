@@ -4,6 +4,7 @@
 -- Date        : Tue Sep 22 16:58:03 2026
 -- Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
+--               c:/project/RTDS/DDR/aurora_8b10b_1p25g_design.gen/sources_1/ip/aurora_8b10b_1p25g/aurora_8b10b_1p25g_stub.vhdl
 -- Design      : aurora_8b10b_1p25g
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xcku040-ffva1156-2-i

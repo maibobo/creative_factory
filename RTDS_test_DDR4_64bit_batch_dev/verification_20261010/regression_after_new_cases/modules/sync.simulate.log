@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Oct 10 17:08:34 2026
+# Process ID: 1632
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/regression_after_new_cases/modules
+# Command line: xsim.exe -log sync.simulate.log -mode tcl -source {xsim.dir/sync/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/regression_after_new_cases/modules/sync.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/regression_after_new_cases/modules\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/sync/xsim_script.tcl
+# xsim {sync} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/regression_after_new_cases/run_nowave.tcl} -onfinish quit -onerror quit
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/regression_after_new_cases/run_nowave.tcl
+## puts {SMOKE_NOWAVE assertions=on waves=off}
+SMOKE_NOWAVE assertions=on waves=off
+## run all
+TEST PASS tb_rtds_sync 2us=500 cycles 50us=12500 cycles 25 events high=6250 low=6250
+$finish called at time : 100021 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_sync.sv" Line 46
+exit 0
+INFO: [Common 17-206] Exiting xsim at Sat Oct 10 17:08:43 2026...

@@ -1,0 +1,32 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -debug all -O0 -mt off -L xpm -L unisims_ver work.tb_rtds_1g work.glbl -s 1g 
+Turned off multi-threading.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.src_drv_cb
+Compiling module work.tx_drv_cb
+Compiling module work.tx_mon_cb
+Compiling module work.rtds_1g_test_if
+Compiling module work.RTDS_SYNC_TIMEBASE
+Compiling module xpm.xpm_cdc_async_rst(INIT_SYNC_FF=1...
+Compiling module work.RTDS_FPGA_RESET_SYNC
+Compiling module xpm.xpm_cdc_single(INIT_SYNC_FF=1,SR...
+Compiling module xpm.xpm_cdc_handshake(INIT_SYNC_FF=1...
+Compiling module work.RTDS_FPGA_CFG_CDC
+Compiling module work.RTDS_1G_PERIODIC_TX
+Compiling module work.tb_rtds_1g
+Compiling module work.glbl
+Built simulation snapshot 1g
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/xsim.dir/1g/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Oct 12 10:40:42 2026...

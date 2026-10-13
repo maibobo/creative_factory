@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 10:40:51 2026
+# Process ID: 25596
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final
+# Command line: xsim.exe -log 1g_seed_750318462.simulate.log -mode tcl -source {xsim.dir/1g/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/1g_seed_750318462.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/1g/xsim_script.tcl
+# xsim {1g} -testplusarg SEED=750318462 -wdb {1g_seed_750318462.wdb} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/1g_seed_750318462.tcl} -onfinish stop -onerror quit -sv_seed 750318462
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/1g_seed_750318462.tcl
+## run all
+RNG_INIT scope=tb_rtds_1g.phase2_pick seed=750318462 algorithm=xorshift32
+RNG_DRAW scope=tb_rtds_1g.phase2_pick n=1 value=31 lo=0 hi=50
+RNG_DRAW scope=tb_rtds_1g.phase2_pick n=2 value=7 lo=0 hi=30
+RNG_DRAW scope=tb_rtds_1g.phase2_pick n=3 value=11 lo=0 hi=50
+RNG_DRAW scope=tb_rtds_1g.phase2_pick n=4 value=17 lo=0 hi=30
+RNG_DRAW scope=tb_rtds_1g.phase2_pick n=5 value=36 lo=0 hi=50
+RNG_DRAW scope=tb_rtds_1g.phase2_pick n=6 value=1 lo=0 hi=30
+RNG_DRAW scope=tb_rtds_1g.phase2_pick n=7 value=48 lo=0 hi=50
+RNG_DRAW scope=tb_rtds_1g.phase2_pick n=8 value=27 lo=0 hi=30
+TEST PASS tb_rtds_1g completed_frames=60
+RNG_SUMMARY scope=tb_rtds_1g seed=750318462 draws=20 state=6f91ff3f
+$finish called at time : 294288 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_1g.sv" Line 159
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 10:40:57 2026...

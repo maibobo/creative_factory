@@ -1,0 +1,16 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Sep 22 16:44:18 2026
+| Host         : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-i
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'aurora_8b10b_1p25g'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of aurora_8b10b_1p25g (xilinx.com:ip:aurora_8b10b:11.1 (Rev. 10)) to Vivado generation flows.
+

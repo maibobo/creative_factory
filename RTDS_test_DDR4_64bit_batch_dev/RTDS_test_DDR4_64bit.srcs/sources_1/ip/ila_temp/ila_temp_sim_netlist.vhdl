@@ -4,6 +4,7 @@
 -- Date        : Tue Sep 15 08:53:36 2026
 -- Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
+--               c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_temp_sim_netlist.vhdl
 -- Design      : ila_temp
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

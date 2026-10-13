@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-10",
+  "tool": "SpyGlass Q-2020.03-SP2-3",
+  "vm": "autumn@bogon",
+  "package_directory": "/home/autumn/projects/pcie_cpu_spyglass_20261010",
+  "source_model_files": 40,
+  "blackbox_modules": 16,
+  "top_signoff_passed": false,
+  "waived_messages": 0,
+  "goals": [
+    {
+      "fatal": 0,
+      "error": 1,
+      "warning": 431,
+      "info": 5,
+      "profile": "TOP",
+      "goal": "lint/lint_rtl",
+      "passed": false,
+      "report": "top_lint.rpt"
+    },
+    {
+      "fatal": 0,
+      "error": 1,
+      "warning": 37,
+      "info": 67,
+      "profile": "TOP",
+      "goal": "cdc/cdc_setup_check",
+      "passed": false,
+      "report": "top_setup.rpt",
+      "unclocked_registers": 0
+    },
+    {
+      "fatal": 0,
+      "error": 66,
+      "warning": 46,
+      "info": 99,
+      "profile": "TOP",
+      "goal": "cdc/cdc_verify_struct",
+      "passed": false,
+      "report": "top_struct.rpt",
+      "unsynchronized_crossings": 63,
+      "convergences": 8
+    },
+    {
+      "fatal": 0,
+      "error": 0,
+      "warning": 11,
+      "info": 21,
+      "profile": "RTDS_1G_PERIODIC_TX",
+      "goal": "cdc/cdc_setup_check",
+      "passed": true,
+      "report": "one_g_setup.rpt",
+      "unclocked_registers": 0
+    },
+    {
+      "fatal": 0,
+      "error": 0,
+      "warning": 11,
+      "info": 31,
+      "profile": "RTDS_1G_PERIODIC_TX",
+      "goal": "cdc/cdc_verify_struct",
+      "passed": true,
+      "report": "one_g_struct.rpt",
+      "unsynchronized_crossings": 0,
+      "convergences": 0
+    }
+  ],
+  "assumptions": [
+    "Independent roots are retained for same-frequency clocks.",
+    "Blackbox reset output clock contracts are trusted by the checker, not proven IP internals.",
+    "Aurora physical wrappers and asynchronous FIFO interiors are excluded.",
+    "No blanket false_path or waiver was added."
+  ],
+  "error_classification": {
+    "ac_unsync_locked_reset_chain": 51,
+    "ac_unsync_gt_physical_pins": 8,
+    "ac_unsync_other": 4,
+    "xpm_unused_constant_clock": 1,
+    "reset_sync_errors": 2
+  },
+  "configuration_sha256": {
+    "full.f": "ca0b9e373e30841579487ff755f35aa2867ed6822f9745f75490a36013563057",
+    "constraints/top.sgdc": "2f22db65d797c05041e5441a50cb95f0d11d469269cd29653b6d9318ae597db1",
+    "constraints/one_g.sgdc": "9e679217223b6d21092e55ef1299458bd2e768f62ffb255528bace48537a92b4",
+    "projects/top.prj": "036b94ba24849a6dac4f50887bf5811a8d5c9e63ab831ccd0eebf8b917769e43",
+    "projects/one_g.prj": "cdf8299f003e226aadf87e3bfa1caecf5999e3f59555f8f228d0ab63e92d1dd0",
+    "scripts/run_spyglass.sh": "cd9b4374b5227a4941540500627f989b06f715950e66e0d2c24c31293e60c492",
+    "manifest/source_manifest.json": "248fd1db884d4cbd87be67c146e8c61edfc3f13fcd9b886fc6ecb3f30e53dec1"
+  }
+}

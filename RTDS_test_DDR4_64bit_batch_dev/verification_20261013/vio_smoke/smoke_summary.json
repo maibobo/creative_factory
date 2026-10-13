@@ -1,0 +1,30 @@
+[
+  {
+    "case": "tb_vio_stim_handshake",
+    "status": "PASS",
+    "model": "real RTL + DDR4_SIM_RAM; simulated VIO start; no board/XDMA/MIG proof",
+    "date": "2026-10-13T10:14:38.954088+08:00",
+    "log": "tb_vio_stim_handshake.simulate.log"
+  },
+  {
+    "case": "tb_rx_vio_smoke",
+    "status": "PASS",
+    "model": "real RTL + DDR4_SIM_RAM; simulated VIO start; no board/XDMA/MIG proof",
+    "date": "2026-10-13T10:14:56.745862+08:00",
+    "log": "tb_rx_vio_smoke.simulate.log"
+  },
+  {
+    "case": "tb_vio_disabled_smoke",
+    "status": "PASS",
+    "model": "real RTL + DDR4_SIM_RAM; simulated VIO start; no board/XDMA/MIG proof",
+    "date": "2026-10-13T10:15:13.735457+08:00",
+    "log": "tb_vio_disabled_smoke.simulate.log"
+  },
+  {
+    "case": "tb_regs_multiblock",
+    "status": "PASS",
+    "model": "real RTL + DDR4_SIM_RAM; simulated VIO start; no board/XDMA/MIG proof",
+    "date": "2026-10-13T10:15:30.766937+08:00",
+    "log": "tb_regs_multiblock.simulate.log"
+  }
+]

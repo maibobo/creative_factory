@@ -1,0 +1,91 @@
+﻿
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/byte1_1g/xsim_script.tcl
+# xsim {byte1_1g} -wdb {byte1_1g.wdb} -autoloadwcfg -tclbatch {byte1_1g.tcl} -onfinish stop -onerror quit
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source byte1_1g.tcl
+## set top /tb_byte1_1g
+## open_vcd byte1_1g.vcd
+## log_wave -r $top/*
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## log_vcd [get_objects -r $top/*]
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /mem is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.enb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.doutb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_RTDS_FPGA_COUNT_CDC/U_XPM_CDC_GRAY/dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /mem is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.enb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.doutb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/U_RTDS_RX_BLOCK_WRITER/block_len is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_byte1_1g/H/U_ADAPTER/U_RTDS_RX_BLOCK_WRITER/block_seq is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+## run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_byte1_1g.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_byte1_1g/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial294_136  Scope: tb_byte1_1g.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 488
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=1 duty=3000 voltage=5 cfg=005000000bb8 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=2 duty=5000 voltage=5 cfg=005000001388 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=3 duty=8000 voltage=5 cfg=005000001f40 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=4 duty=2000 voltage=12 cfg=00c0000007d0 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=5 duty=3000 voltage=12 cfg=00c000000bb8 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=6 duty=5000 voltage=12 cfg=00c000001388 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=7 duty=8000 voltage=12 cfg=00c000001f40 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=8 duty=3000 voltage=24 cfg=018000000bb8 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=9 duty=5000 voltage=24 cfg=018000001388 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=10 duty=8000 voltage=24 cfg=018000001f40 frames=4
+TEST PASS tb_byte1_1g ids=10 illegal=0,11 four_beats=4 Byte6=F0 lock=checked
+$finish called at time : 166400 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/tb_byte1_1g.sv" Line 39
+## close_vcd
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 10 17:03:09 2026...

@@ -1,0 +1,16 @@
+BUFGCE_DIV
+aurora_64b66b_top
+aurora_8b10b_1p25g_design
+clk_wiz_0
+design_1_auto_cc_0
+design_1_auto_cc_1
+design_1_util_ds_buf_0
+design_1_xbar_0
+design_1_xdma_0_0
+ila_0
+ila_FDMA
+ila_temp
+rtds_axi_clock_converter
+rtds_ddr4_mig
+sys_mon
+xpm_fifo_async

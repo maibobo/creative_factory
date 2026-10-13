@@ -1,3 +1,4 @@
+# RTDS V2.01 远程自动综合、实现和时序报告入口。
 # 本脚本只使用生产 DDR4_REAL 分支；完成后保留 bitstream、状态标记和完整报告。
 set script_dir [file dirname [file normalize [info script]]]
 set project_root [file normalize [file join $script_dir ..]]

@@ -1,0 +1,239 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 19:16:20 2026
+# Process ID: 41012
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Command line: vivado.exe -mode batch -source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/create_and_check_edge_projects.tcl -log C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/edge_criteria_closure_20261012/wave_open_check.log -journal C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/edge_criteria_closure_20261012/wave_open_check.jou
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/edge_criteria_closure_20261012/wave_open_check.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/edge_criteria_closure_20261012/wave_open_check.jou
+#-----------------------------------------------------------
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/create_and_check_edge_projects.tcl
+# set package [file dirname [file normalize [info script]]]
+# set here [file join $package backend_edge_recovery]
+# create_project -force wave_backend_edge_recovery [file join $here project] -part xcku040-ffva1156-2-i
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/backend_edge_recovery/project'
+# set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
+# set files {}
+# lappend files [file join $here sources {rtl/rtds_1g_periodic_tx.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_1g_init.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_bit_cdc.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_cfg_cdc.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_count_cdc.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_reset_sync.v}]
+# lappend files [file join $here sources {rtl/rtds_rx_block_writer.v}]
+# lappend files [file join $here sources {rtl/rtds_rx_frame_fifo.v}]
+# lappend files [file join $here sources {rtl/rtds_sync_timebase.v}]
+# lappend files [file join $here sources {RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v}]
+# lappend files [file join $here sources {RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v}]
+# lappend files [file join $here sources {RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v}]
+# lappend files [file join $here sources {rtl/ddr4/rtds_ddr4_backend.sv}]
+# lappend files [file join $here sources {rtl/ddr4/rtds_axi_ram_model.sv}]
+# lappend files [file join $here sources {external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_1g_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_axi_tail_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_axi_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_regs_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_ring_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_rx_fifo_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_tx_test_if.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/rtds_real_harness.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_byte1_1g.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_period_100ms.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_ready_recovery.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_regs_multiblock.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_tx_boundaries.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_1g.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_axi.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_axi_tail.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_regs.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_ring.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_rx_fifo.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_sync.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_tx.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/rtds_backend_test_if.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/backend_recovery_runner.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/tb_recovery_isolation.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/tb_writer_error_recovery.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/tb_recovery_cross_variants.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/tb_backend_edge_recovery.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/rtds_test_pkg.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/xdma_rp_backend.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/aurora_ll_peer_bfm.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/rtds_scoreboard.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/rtds_assertions.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/tb_xdma_rtds_trythrough.sv}]
+# lappend files [file join $here sources {regression/board_cdc_smoke_20260921/tb_board_cdc_smoke.sv}]
+# add_files -fileset sim_1 -norecurse $files
+# set_property top tb_backend_edge_recovery [get_filesets sim_1]
+# set_property verilog_define {DDR4_SIM_RAM} [get_filesets sim_1]
+# set_property include_dirs [list [file join $here sources regression recovery_phase2_20261011] [file join $here sources regression sim_xdma_trythrough]] [get_filesets sim_1]
+# update_compile_order -fileset sim_1
+# close_project
+# open_project -read_only [file join $here project wave_backend_edge_recovery.xpr]
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/backend_edge_recovery/project'
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/backend_edge_recovery/project/wave_backend_edge_recovery.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+# open_wave_database [file join $here trace.wdb]
+# open_wave_config [file join $here recommended.wcfg]
+# puts "EDGE_WAVE_OPEN_OK=main"
+EDGE_WAVE_OPEN_OK=main
+# close_sim
+INFO: [Simtcl 6-16] Simulation closed
+# close_project
+# set here [file join $package backend_edge_recovery phase_early]
+# create_project -force wave_backend_edge_recovery [file join $here project] -part xcku040-ffva1156-2-i
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/backend_edge_recovery/phase_early/project'
+# set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
+# set files {}
+# lappend files [file join $here sources {rtl/rtds_1g_periodic_tx.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_1g_init.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_bit_cdc.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_cfg_cdc.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_count_cdc.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_reset_sync.v}]
+# lappend files [file join $here sources {rtl/rtds_rx_block_writer.v}]
+# lappend files [file join $here sources {rtl/rtds_rx_frame_fifo.v}]
+# lappend files [file join $here sources {rtl/rtds_sync_timebase.v}]
+# lappend files [file join $here sources {RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v}]
+# lappend files [file join $here sources {RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v}]
+# lappend files [file join $here sources {RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v}]
+# lappend files [file join $here sources {rtl/ddr4/rtds_ddr4_backend.sv}]
+# lappend files [file join $here sources {rtl/ddr4/rtds_axi_ram_model.sv}]
+# lappend files [file join $here sources {external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_1g_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_axi_tail_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_axi_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_regs_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_ring_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_rx_fifo_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_tx_test_if.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/rtds_real_harness.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_byte1_1g.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_period_100ms.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_ready_recovery.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_regs_multiblock.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_tx_boundaries.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_1g.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_axi.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_axi_tail.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_regs.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_ring.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_rx_fifo.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_sync.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_tx.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/rtds_backend_test_if.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/backend_recovery_runner.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/tb_recovery_isolation.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/tb_writer_error_recovery.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/tb_recovery_cross_variants.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/tb_backend_edge_recovery.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/rtds_test_pkg.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/xdma_rp_backend.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/aurora_ll_peer_bfm.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/rtds_scoreboard.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/rtds_assertions.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/tb_xdma_rtds_trythrough.sv}]
+# lappend files [file join $here sources {regression/board_cdc_smoke_20260921/tb_board_cdc_smoke.sv}]
+# add_files -fileset sim_1 -norecurse $files
+# set_property top tb_backend_edge_recovery [get_filesets sim_1]
+# set_property verilog_define {DDR4_SIM_RAM} [get_filesets sim_1]
+# set_property include_dirs [list [file join $here sources regression recovery_phase2_20261011] [file join $here sources regression sim_xdma_trythrough]] [get_filesets sim_1]
+# update_compile_order -fileset sim_1
+# close_project
+# open_project -read_only [file join $here project wave_backend_edge_recovery.xpr]
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/backend_edge_recovery/phase_early/project'
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/backend_edge_recovery/phase_early/project/wave_backend_edge_recovery.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+# open_wave_database [file join $here trace.wdb]
+# open_wave_config [file join $here recommended.wcfg]
+# puts "EDGE_WAVE_OPEN_OK=early"
+EDGE_WAVE_OPEN_OK=early
+# close_sim
+INFO: [Simtcl 6-16] Simulation closed
+# close_project
+# set here [file join $package backend_edge_recovery phase_late]
+# create_project -force wave_backend_edge_recovery [file join $here project] -part xcku040-ffva1156-2-i
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/backend_edge_recovery/phase_late/project'
+# set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
+# set files {}
+# lappend files [file join $here sources {rtl/rtds_1g_periodic_tx.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_1g_init.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_bit_cdc.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_cfg_cdc.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_count_cdc.v}]
+# lappend files [file join $here sources {rtl/rtds_fpga_reset_sync.v}]
+# lappend files [file join $here sources {rtl/rtds_rx_block_writer.v}]
+# lappend files [file join $here sources {rtl/rtds_rx_frame_fifo.v}]
+# lappend files [file join $here sources {rtl/rtds_sync_timebase.v}]
+# lappend files [file join $here sources {RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v}]
+# lappend files [file join $here sources {RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v}]
+# lappend files [file join $here sources {RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v}]
+# lappend files [file join $here sources {rtl/ddr4/rtds_ddr4_backend.sv}]
+# lappend files [file join $here sources {rtl/ddr4/rtds_axi_ram_model.sv}]
+# lappend files [file join $here sources {external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_1g_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_axi_tail_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_axi_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_regs_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_ring_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_rx_fifo_test_if.sv}]
+# lappend files [file join $here sources {regression/batch_1g/rtds_tx_test_if.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/rtds_real_harness.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_byte1_1g.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_period_100ms.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_ready_recovery.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_regs_multiblock.sv}]
+# lappend files [file join $here sources {regression/new_cases_20261010/tb_tx_boundaries.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_1g.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_axi.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_axi_tail.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_regs.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_ring.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_rx_fifo.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_sync.sv}]
+# lappend files [file join $here sources {regression/batch_1g/tb_rtds_tx.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/rtds_backend_test_if.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/backend_recovery_runner.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/tb_recovery_isolation.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/tb_writer_error_recovery.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/tb_recovery_cross_variants.sv}]
+# lappend files [file join $here sources {regression/recovery_phase2_20261011/tb_backend_edge_recovery.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/rtds_test_pkg.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/xdma_rp_backend.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/aurora_ll_peer_bfm.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/rtds_scoreboard.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/rtds_assertions.sv}]
+# lappend files [file join $here sources {regression/sim_xdma_trythrough/tb_xdma_rtds_trythrough.sv}]
+# lappend files [file join $here sources {regression/board_cdc_smoke_20260921/tb_board_cdc_smoke.sv}]
+# add_files -fileset sim_1 -norecurse $files
+# set_property top tb_backend_edge_recovery [get_filesets sim_1]
+# set_property verilog_define {DDR4_SIM_RAM} [get_filesets sim_1]
+# set_property include_dirs [list [file join $here sources regression recovery_phase2_20261011] [file join $here sources regression sim_xdma_trythrough]] [get_filesets sim_1]
+# update_compile_order -fileset sim_1
+# close_project
+# open_project -read_only [file join $here project wave_backend_edge_recovery.xpr]
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/backend_edge_recovery/phase_late/project'
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/backend_edge_recovery/phase_late/project/wave_backend_edge_recovery.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+# open_wave_database [file join $here trace.wdb]
+# open_wave_config [file join $here recommended.wcfg]
+# puts "EDGE_WAVE_OPEN_OK=late"
+EDGE_WAVE_OPEN_OK=late
+# close_sim
+INFO: [Simtcl 6-16] Simulation closed
+# close_project
+# puts "ALL_EDGE_WAVES_OPENED=3"
+ALL_EDGE_WAVES_OPENED=3
+# exit
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 12 19:16:31 2026...

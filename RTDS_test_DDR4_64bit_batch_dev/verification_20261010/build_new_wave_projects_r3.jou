@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Oct 10 17:22:26 2026
+# Process ID: 22692
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Command line: vivado.exe -mode batch -source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/scripts/build_new_wave_projects.tcl -log C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/build_new_wave_projects_r3.log -journal C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/build_new_wave_projects_r3.jou
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/build_new_wave_projects_r3.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/build_new_wave_projects_r3.jou
+#-----------------------------------------------------------
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/scripts/build_new_wave_projects.tcl
+open_wave_config {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g\byte1_1g.wcfg}

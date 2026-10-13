@@ -1,0 +1,5 @@
+RTL_ELABORATION_PASS RX_VIO_TEST_ENABLE=1
+part=xcku040-ffva1156-2-i
+generic=RX_VIO_TEST_ENABLE=1
+stim=u_pcie/u_pcie_fdma_aurora_brg_adapter/G_RX_TEST_SOURCE.U_RX_STIM
+vio=u_pcie/G_RX_VIO.U_VIO_RX_START

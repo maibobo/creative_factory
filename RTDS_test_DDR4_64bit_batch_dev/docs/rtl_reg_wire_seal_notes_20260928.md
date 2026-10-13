@@ -1,8 +1,10 @@
 # RTL 关键 reg、wire 与 `seal` 说明
 
+本文对应 `C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\rtl` 当前版本，分析 `RTDS_FPGA_1G_INIT`、`RTDS_1G_PERIODIC_TX` 和 `RTDS_RX_BLOCK_WRITER`。`ddr4` 目录及 `*cdc.v`、`*sync.v`、`*fifo.v` 不在信号分析范围内。表中的 `reg`、`wire` 是 Verilog 声明类型；`always @(*)` 内赋值的 `reg` 仍是组合逻辑，不能仅凭声明类型判断它是触发器。
 
 ## `seal` 前缀的含义
 
+`RTDS_RX_BLOCK_WRITER` 使用 `seal` 表示一个计时周期的收尾过程。`tick` 到达时，模块暂时停止读取新的接收字，但已经开始的 FDMA 写事务仍须等到最终写响应。若还留有一个未配对的 32 位字，模块会将它写成低四字节有效的 64 位尾拍。以上工作结束后，当前块中已经成功写入的数据才可供 CPU 读取。
 
 | 信号 | 类型 | 条件及作用 |
 | --- | --- | --- |
@@ -13,6 +15,7 @@
 
 这几个信号不会直接取消正在进行的写事务。`used_bytes` 只随无错误的最终写响应增加，因此块长度反映的是已确认写入的字节数。
 
+## `RTDS_FPGA_1G_INIT`
 
 模块用 `BUFGCE_DIV` 将 `clk_100m` 四分频生成 25 MHz `init_clk`，再在该时钟域内分阶段解除 GT 和协议核复位。主机复位 `rst` 为高有效。
 
@@ -26,6 +29,7 @@
 
 `gt_reset` 和 `core_reset` 在时钟沿赋值，比较的是该沿之前的 `startup_count`，因此输出比对应计数条件晚一个 `init_clk` 拍变化。
 
+## `RTDS_1G_PERIODIC_TX`
 
 模块从 250 MHz 控制域接收首次合法编号，译码为 48 位参数，再通过配置跨域模块送到 `user_clk` 域。用户域按固定拍数尝试发送两拍数据；`tx_ready` 暂停时保持当前状态和数据。
 
@@ -49,6 +53,7 @@
 
 只有主机逻辑复位会清除首次配置。`user_reset` 和 `channel_up` 影响当前帧发送及 `arm_count`，不会改写控制域保存的编号和用户域已接收参数。
 
+## `RTDS_RX_BLOCK_WRITER`
 
 模块在 `clk` 域将两个 32 位有效字拼为一个 64 位 FDMA 写拍；周期末尾若只有一个字，则写低四字节有效的尾拍。写地址和有效长度依据最终写响应维护。默认有 8 个块，每块 262144 字节。
 

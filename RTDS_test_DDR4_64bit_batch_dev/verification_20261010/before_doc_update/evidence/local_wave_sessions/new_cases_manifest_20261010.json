@@ -1,0 +1,72 @@
+[
+  {
+    "case": "byte1_1g",
+    "test_case": "TC-F09",
+    "run": "functional_r2",
+    "end_ns": 166400.0,
+    "signals": 2528,
+    "default_signals": 869,
+    "events": 1410487,
+    "mapped": 1507,
+    "connections": 398,
+    "limitations": "实际仿真数据；源码跳转为静态首个代码出现位置，连接跳转指向父模块实例端口。DDR_SIM_RAM / 模型 CPU，未覆盖真实 XDMA、GT 和板级。 递归记录可追踪信号；VCD 不支持非打包数组，原生 WDB 的数组也受模拟器大小限制。",
+    "sha256_vcd": "4d763ef4472f1a37c86428f5949372c5989e18109ad4fce481045a31b8aebd61",
+    "sha256_wdb": "9acae4a1bbf06ccaf597eac656d85f0e3db5523395814a6c39cb1c089c064872"
+  },
+  {
+    "case": "tx_boundaries",
+    "test_case": "TC-F10",
+    "run": "functional_r2",
+    "end_ns": 91398.0,
+    "signals": 2520,
+    "default_signals": 861,
+    "events": 2098472,
+    "mapped": 1499,
+    "connections": 398,
+    "limitations": "实际仿真数据；源码跳转为静态首个代码出现位置，连接跳转指向父模块实例端口。DDR_SIM_RAM / 模型 CPU，未覆盖真实 XDMA、GT 和板级。 递归记录可追踪信号；VCD 不支持非打包数组，原生 WDB 的数组也受模拟器大小限制。",
+    "sha256_vcd": "ce8d995025382f92fa71ecc29034b9b0c252e1cef17a141d30ec77f597d15b22",
+    "sha256_wdb": "a8a777ab80a03d955f4c4ab272a55780633ca6c311f2810ce20e2b243a8684d4"
+  },
+  {
+    "case": "ready_recovery",
+    "test_case": "TC-F11",
+    "run": "recovery_r5",
+    "end_ns": 294754.0,
+    "signals": 2526,
+    "default_signals": 867,
+    "events": 2815061,
+    "mapped": 1505,
+    "connections": 398,
+    "limitations": "实际仿真数据；源码跳转为静态首个代码出现位置，连接跳转指向父模块实例端口。DDR_SIM_RAM / 模型 CPU，未覆盖真实 XDMA、GT 和板级。 递归记录可追踪信号；VCD 不支持非打包数组，原生 WDB 的数组也受模拟器大小限制。",
+    "sha256_vcd": "801be74065632b2ec926075c07d4f24cb5560efab85ef9df41983b2395361f07",
+    "sha256_wdb": "346c99b0a306a426f86f2eb3011bc5e7c76ee6700461e431185a442739046bb5"
+  },
+  {
+    "case": "regs_multiblock",
+    "test_case": "TC-F12",
+    "run": "functional_r2",
+    "end_ns": 43610.0,
+    "signals": 2526,
+    "default_signals": 867,
+    "events": 363890,
+    "mapped": 1505,
+    "connections": 398,
+    "limitations": "实际仿真数据；源码跳转为静态首个代码出现位置，连接跳转指向父模块实例端口。DDR_SIM_RAM / 模型 CPU，未覆盖真实 XDMA、GT 和板级。 递归记录可追踪信号；VCD 不支持非打包数组，原生 WDB 的数组也受模拟器大小限制。",
+    "sha256_vcd": "55a9d3c58fb318b46c749d92999d7a1d22348481bba1f702196d8cbd1410c044",
+    "sha256_wdb": "52b702e1c9b5433e8e8ff68eeb19c6ba3914974c74763a19e396b6a52f5c6a44"
+  },
+  {
+    "case": "period_100ms",
+    "test_case": "TC-M09",
+    "run": "period_r2",
+    "end_ns": 400000394.0,
+    "signals": 30,
+    "default_signals": 30,
+    "events": 170,
+    "mapped": 30,
+    "connections": 24,
+    "limitations": "真实 RX_BLOCK_WRITER + FDMA 写响应模型；没有实例化 DDR 后端或 CPU。源码跳转为静态首个代码出现位置。全程记录事件及接口，不记录 250MHz 时钟、周期计数器和 clocking 副本；四次 tick 与实际 400ms 时间均保留。",
+    "sha256_vcd": "c82bace565b847bbb29b4b6246deccd7fc3b7e8830cf0b52be9ee63555020b3d",
+    "sha256_wdb": "729ba9bb047a547d001368741c6f7f989b68290492a23432d1159eabfd9528bd"
+  }
+]

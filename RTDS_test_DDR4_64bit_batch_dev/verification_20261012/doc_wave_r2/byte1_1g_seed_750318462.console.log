@@ -1,0 +1,21 @@
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/byte1_1g/xsim_script.tcl
+# xsim {byte1_1g} -testplusarg SEED=750318462 -wdb {byte1_1g_seed_750318462.wdb} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r2/byte1_1g_seed_750318462.tcl} -onfinish stop -onerror quit -sv_seed 750318462
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r2/byte1_1g_seed_750318462.tcl
+## run all
+RNG_INIT scope=tb_byte1_1g.H.phase2_pick seed=750318462 algorithm=xorshift32
+RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=1 value=10 lo=0 hi=31
+FATAL_ERROR: Vivado Simulator kernel has discovered an exceptional condition from which it cannot recover. Process will terminate. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
+Time: 0 ps  Iteration: 0  Process: /tb_byte1_1g/Initial26_549
+  File: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/tb_byte1_1g.sv
+
+HDL Line: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/tb_byte1_1g.sv:28
+exit 2
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 10:33:51 2026...

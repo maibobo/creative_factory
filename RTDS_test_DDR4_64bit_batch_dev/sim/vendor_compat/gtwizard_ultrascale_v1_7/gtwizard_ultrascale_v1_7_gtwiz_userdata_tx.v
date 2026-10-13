@@ -233,6 +233,7 @@ module gtwizard_ultrascale_v1_7_9_gtwiz_userdata_tx #(
 
         default:
           begin : gen_default
+            // The default case is a configuration error scenario should never be exercised
             assign txdata_out  = {P_TOTAL_NUMBER_OF_CHANNELS*128{1'b1}};
             assign txctrl0_out = {P_TOTAL_NUMBER_OF_CHANNELS*16{1'b1}};
             assign txctrl1_out = {P_TOTAL_NUMBER_OF_CHANNELS*16{1'b1}};

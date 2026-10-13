@@ -213,6 +213,7 @@
  * Enhanced support for IP Integrator
  * Added Little endian support for data & flow control interfaces as non-default GUI selectable option
  * Interoperability guidance provided in Product Guide
+ * Resolved functional issue seen with specific frame lengths in certain scenarios
  * Refer Product Guide for more information on critical warnings during IP upgrade
 
 2013.4:

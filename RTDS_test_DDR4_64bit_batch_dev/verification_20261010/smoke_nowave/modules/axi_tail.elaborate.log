@@ -1,0 +1,26 @@
+﻿Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -debug off -O3 -mt off -L xpm work.tb_rtds_axi_tail -s axi_tail 
+Turned off multi-threading.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+WARNING: [XSIM 43-4127] File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi_tail.sv" Line 179 : The "System Verilog Cover" is not supported yet for simulation. The statement will be ignored.
+WARNING: [XSIM 43-4127] File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi_tail.sv" Line 186 : The "System Verilog Cover" is not supported yet for simulation. The statement will be ignored.
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.driver_cb
+Compiling module work.rtds_axi_tail_test_if
+Compiling module work.CONV_DMA_default
+Compiling module work.rtds_axi_ram_model(ADDR_WIDTH=64...
+Compiling module work.tb_rtds_axi_tail
+Built simulation snapshot axi_tail
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/smoke_nowave/modules/xsim.dir/axi_tail/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 10 12:57:31 2026...

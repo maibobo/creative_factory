@@ -1,0 +1,118 @@
+[
+  {
+    "path": "rtl\\rtds_1g_periodic_tx.v",
+    "sha256": "54cb551ed6cc013bf4041cef3a4a5990f9d88814832ed7ec38ae03dc377f5929"
+  },
+  {
+    "path": "rtl\\rtds_fpga_1g_init.v",
+    "sha256": "2347d9e082632ba370b2b64c97408e1f4321e9493c2a70001e36b361117d6e2a"
+  },
+  {
+    "path": "rtl\\rtds_fpga_bit_cdc.v",
+    "sha256": "ce4cc11d09ff031e37ba62899d4f42a9fc37e725e519a146bb1ef9686848b149"
+  },
+  {
+    "path": "rtl\\rtds_fpga_cfg_cdc.v",
+    "sha256": "f5a6102288e4ba9a90698082c50a01dd22d8febc5aa2363f3ad5354f069a02e8"
+  },
+  {
+    "path": "rtl\\rtds_fpga_count_cdc.v",
+    "sha256": "acf5f934117e552404e69caf04262e6a05090773c1ce06a7cf4fe752b7e1947b"
+  },
+  {
+    "path": "rtl\\rtds_fpga_reset_sync.v",
+    "sha256": "27747817788871afcf8237d11c44aec9313792c4440bbcac191068de02369e11"
+  },
+  {
+    "path": "rtl\\rtds_rx_block_writer.v",
+    "sha256": "88b1d7a8205fe47196c4b1d3db1144fafa373307df6837370d8e1d230eed5331"
+  },
+  {
+    "path": "rtl\\rtds_rx_frame_fifo.v",
+    "sha256": "1263b892f17925bb5a7761c2d97de749015a48882fbfd82aad2c87dedad2418d"
+  },
+  {
+    "path": "rtl\\rtds_rx_vio_stim.v",
+    "sha256": "e664dda0c51de01da914f05eddf5fff151ee102bda6fce554ba8653c69b0c913"
+  },
+  {
+    "path": "rtl\\rtds_sync_timebase.v",
+    "sha256": "d015ae9f57935a3a43b8d72f2856531c97b56feb09e4aa9baf9036c23d29045d"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\INFO_EXCH.v",
+    "sha256": "b7ec6e070fc43cf9b118520398582e56ab248bd73201fbba6c14f1d84198a11e"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\CONV_DMA.v",
+    "sha256": "3a4fa96ecc03e8d208e678e4e9f0ba3a91190d77bba459d992c5d103d99bd117"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\pcie_fdma_aurora_brg_adapter.v",
+    "sha256": "33ce854da109854ce1cde2e4a09dcd0be51305652a664418ba72f88b2c233fe0"
+  },
+  {
+    "path": "rtl\\ddr4\\rtds_ddr4_backend.sv",
+    "sha256": "a1672f711e338132ec4cf824949cfe5c539339ab55cba29b963745c39e8dee29"
+  },
+  {
+    "path": "rtl\\ddr4\\rtds_axi_ram_model.sv",
+    "sha256": "9ab7c15e675d24143fa5c57bf2ca0e67da72eef8f165e7ab830e26d857bbf6f0"
+  },
+  {
+    "path": "external_snapshot\\fdma_aurora_brg\\fdma_aurora_brg.srcs\\sources_1 - loop_validate\\new\\fdma_aurora_brg_tx.v",
+    "sha256": "66dca7cf446c5902b3b81fc7b6b0d7ff28aaf8e88f4235ba2295308d2fc29f74"
+  },
+  {
+    "path": "regression\\batch_1g\\rtds_1g_test_if.sv",
+    "sha256": "f273a6e587daed5d85908bcbdbd251f70dc9b13201cd292db3b830e998e73373"
+  },
+  {
+    "path": "regression\\batch_1g\\rtds_axi_tail_test_if.sv",
+    "sha256": "91a3d7ebacf462c144e623f98427e7aecc096e3d24b3858cec5fb9785d0038da"
+  },
+  {
+    "path": "regression\\batch_1g\\rtds_axi_test_if.sv",
+    "sha256": "b48c2a87e28a8f557e2e6da70598224bfbcc16db043491a2799d2aa210c4e679"
+  },
+  {
+    "path": "regression\\batch_1g\\rtds_regs_test_if.sv",
+    "sha256": "89bb7045b9fea03e75b4109063d250bda6d5ea92bb9753952b74089607ea8bb9"
+  },
+  {
+    "path": "regression\\batch_1g\\rtds_ring_test_if.sv",
+    "sha256": "77d285721833410d273973fb665c97c94de94f873789ed22d893eca0f4010ac0"
+  },
+  {
+    "path": "regression\\batch_1g\\rtds_rx_fifo_test_if.sv",
+    "sha256": "d5ae55446cb825e68db312eb41c4236e4d1aebd7d0e1918110a005cda26df807"
+  },
+  {
+    "path": "regression\\batch_1g\\rtds_tx_test_if.sv",
+    "sha256": "e51e5dda4c46b56f8891fd105fc557d32a69f652791d4523f1c205e38aba1e50"
+  },
+  {
+    "path": "regression\\vio_smoke_20261013\\rtds_vio_harness.sv",
+    "sha256": "8d235c6ec26987e3ecd31e8764eff2f05c301e6b0f1e2d940bde5981eeab88fd"
+  },
+  {
+    "path": "regression\\vio_smoke_20261013\\tb_rx_vio_smoke.sv",
+    "sha256": "0d5b739ad7bdd2c2d06235dbd317c561225b80e00e996ac70757a8fd73077e77"
+  },
+  {
+    "path": "regression\\vio_smoke_20261013\\tb_vio_disabled_smoke.sv",
+    "sha256": "e12dd33e0de5f853c9fc46538a76ce757d162883cbb8ed8d398af4707a3ab73c"
+  },
+  {
+    "path": "regression\\vio_smoke_20261013\\tb_vio_stim_handshake.sv",
+    "sha256": "7c7c5d657e6005a4ff737680ea631cb344e37817b9035ecbb1a4f6764a3e696d"
+  },
+  {
+    "path": "regression\\new_cases_20261010\\rtds_real_harness.sv",
+    "sha256": "0d2511d2b280823ea134de1d97fc978deeeb71254d2f015610fc389a3161bae5"
+  },
+  {
+    "path": "regression\\new_cases_20261010\\tb_regs_multiblock.sv",
+    "sha256": "82a2248ec9532e245ec58327cb3062c39d8188272993e69cb38707fbb8ec9677"
+  }
+]

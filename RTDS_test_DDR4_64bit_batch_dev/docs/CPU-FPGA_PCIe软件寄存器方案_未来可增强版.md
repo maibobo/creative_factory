@@ -2,6 +2,7 @@
 
 规划版本：V3.00 Draft  
 日期：2026-09-21  
+适用工程：`RTDS_test_DDR4_64bit_batch_dev`  
 状态：软件/RTL 联调接口建议，尚未在当前 RTL 中实现
 
 ## 1. 设计目标
@@ -88,6 +89,7 @@ UP_BLOCK_ADDR(k) = 0x00100000 + k * 0x00040000,  k = 0..7
 
 | 偏移 | 名称 | 属性 | 复位/固定值 | 说明 |
 |---:|---|---|---:|---|
+| `0x3C` | `REG_MAGIC` | RO | `0x52544453` | ASCII `RTDS`；用于识别扩展寄存器存在 |
 | `0x40` | `CAPABILITY0` | RO | 见第 5.2 节 | 接口能力与固定参数 |
 | `0x44` | `IRQ_STATUS` | RO/W1C | 0 | 粘滞中断原因；写 1 清除对应位 |
 | `0x48` | `IRQ_MASK` | RW | 0 | 中断使能；`IRQ_STATUS & IRQ_MASK != 0` 时请求中断 |
@@ -333,6 +335,7 @@ UP_BLOCK_ADDR(k) = 0x00100000 + k * 0x00040000,  k = 0..7
 ## 10. 建议的软件数据结构
 
 ```c
+struct rtds_caps {
     uint32_t version;
     uint32_t capability0;
     uint32_t down_base;
@@ -342,12 +345,14 @@ UP_BLOCK_ADDR(k) = 0x00100000 + k * 0x00040000,  k = 0..7
     uint32_t transfer_granule;
 };
 
+struct rtds_up_head {
     uint32_t seq;
     uint32_t addr;
     uint32_t len;
     uint32_t flags;
 };
 
+struct rtds_down_result {
     uint32_t status;
     uint32_t tag;
     uint32_t bytes_done;

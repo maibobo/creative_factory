@@ -1,0 +1,84 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 10:41:32 2026
+# Process ID: 18540
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final
+# Command line: xsim.exe -log byte1_1g_seed_750318462.simulate.log -mode tcl -source {xsim.dir/byte1_1g/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/byte1_1g_seed_750318462.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/byte1_1g/xsim_script.tcl
+# xsim {byte1_1g} -testplusarg SEED=750318462 -wdb {byte1_1g_seed_750318462.wdb} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/byte1_1g_seed_750318462.tcl} -onfinish stop -onerror quit -sv_seed 750318462
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/byte1_1g_seed_750318462.tcl
+## run all
+RNG_INIT scope=tb_byte1_1g.H.phase2_pick seed=750318462 algorithm=xorshift32
+RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=1 value=10 lo=0 hi=31
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_byte1_1g.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_byte1_1g/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial294_146  Scope: tb_byte1_1g.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 488
+RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=2 value=4 lo=0 hi=9
+RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=3 value=0 lo=0 hi=9
+RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=4 value=3 lo=0 hi=9
+RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=5 value=7 lo=0 hi=9
+RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=6 value=9 lo=0 hi=9
+RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=7 value=9 lo=0 hi=9
+RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=8 value=6 lo=0 hi=9
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=1 duty=3000 voltage=5 cfg=005000000bb8 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=2 duty=5000 voltage=5 cfg=005000001388 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=3 duty=8000 voltage=5 cfg=005000001f40 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=4 duty=2000 voltage=12 cfg=00c0000007d0 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=5 duty=3000 voltage=12 cfg=00c000000bb8 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=6 duty=5000 voltage=12 cfg=00c000001388 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=7 duty=8000 voltage=12 cfg=00c000001f40 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=8 duty=3000 voltage=24 cfg=018000000bb8 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=9 duty=5000 voltage=24 cfg=018000001388 frames=4
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008010 length=16 end=00008020 frames=1 beats=2
+TX_CHECK addr=00008020 length=16 end=00008030 frames=1 beats=2
+TX_CHECK addr=00008030 length=16 end=00008040 frames=1 beats=2
+BYTE1_CHECK id=10 duty=8000 voltage=24 cfg=018000001f40 frames=4
+TEST PASS tb_byte1_1g ids=10 illegal=0,11 four_beats=4 Byte6=F0 lock=checked
+RNG_SUMMARY scope=tb_byte1_1g.H seed=750318462 draws=26007 state=950c2b26
+RNG_SUMMARY scope=tb_byte1_1g seed=x draws=0 state=00000000
+$finish called at time : 166400 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/tb_byte1_1g.sv" Line 41
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 10:41:39 2026...

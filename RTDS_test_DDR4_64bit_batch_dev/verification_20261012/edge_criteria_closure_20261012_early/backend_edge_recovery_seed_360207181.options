@@ -1,0 +1,7 @@
+--sv_seed 360207181
+--testplusarg "EDGE_PHASE=-1"
+--testplusarg "SEED=360207181"
+--tclbatch "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/edge_criteria_closure_20261012_early/backend_edge_recovery_seed_360207181.tcl"
+--onerror quit
+--onfinish stop
+--log backend_edge_recovery_seed_360207181.simulate.log

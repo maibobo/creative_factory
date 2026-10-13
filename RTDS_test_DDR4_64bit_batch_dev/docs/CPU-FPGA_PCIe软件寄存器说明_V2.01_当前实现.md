@@ -2,6 +2,7 @@
 
 ## 1. 文档用途
 
+本文只描述当前生产工程已经实现的软件接口，供主机驱动和测试程序访问当前 bitstream。寄存器定义以 `INFO_EXCH.v`、`PCIe.v`、`pcie_fdma_aurora_brg_adapter.v`、`rtds_rx_block_writer.v` 和当前 Block Design 参数为准。
 
 本文不定义未来扩展寄存器。软件不得访问 `0x3C` 及以上偏移，也不得假设当前硬件具有事务结果码、IRQ mask或带序号的ACK接口。
 
@@ -114,3 +115,8 @@
 
 | 内容 | 当前来源 |
 |---|---|
+| 寄存器偏移、读写和复位行为 | `RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v` |
+| `DDR_STATUS`位拼接及BD连接 | `RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v` |
+| 下行窗口、16Byte校验及任务结束条件 | `RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v` |
+| 上行块地址、队列、序号和丢字计数 | `rtl/rtds_rx_block_writer.v` |
+| 固定版本参数 | `RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/design_1.bd` |

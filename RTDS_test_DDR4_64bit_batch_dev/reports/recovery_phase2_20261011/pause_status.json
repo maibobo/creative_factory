@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-12",
+  "status": "paused_at_user_request",
+  "native_simulation_processes_expected": 0,
+  "documents_in_docs": true,
+  "archive_created": false,
+  "pending": [
+    "新增同拍判据复核",
+    "1G版本统一",
+    "完整TOP CDC",
+    "共享真实IP组合验证",
+    "新波形",
+    "板级验证"
+  ]
+}

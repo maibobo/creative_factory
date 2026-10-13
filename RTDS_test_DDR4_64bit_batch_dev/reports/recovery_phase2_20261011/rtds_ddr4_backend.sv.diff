@@ -1,0 +1,346 @@
+--- phase1_before/rtl/ddr4/rtds_ddr4_backend.sv
++++ current/rtl/ddr4/rtds_ddr4_backend.sv
+@@ -86,6 +86,130 @@
+     initial $error("DDR4_REAL and DDR4_SIM_RAM are mutually exclusive");
+ `endif
+ 
++    // 修改记录 2026-10-11：TC-F11的DDR中断恢复。每个方向最多接受一个AXI突发，
++    // 保存已接受事务的ID和剩余拍数；存储侧复位后补齐SLVERR，避免上游永久等待。
++    // 已经展示给上游的R/B响应在反压时保持；新事务等待旧错误响应结束。
++    // 不复位CONV_DMA、INFO_EXCH和块队列，不把错误完成记成成功写入。
++    wire storage_ready;   // 2026-10-11：物理后端校准和复位同步完成，与业务恢复完成分开
++    wire mem_awready;   // 2026-10-11：存储侧写地址接收许可
++    wire mem_wready;   // 2026-10-11：存储侧写数据接收许可
++    wire mem_bvalid;   // 2026-10-11：存储侧写响应有效
++    wire [AXI_ID_WIDTH-1:0] mem_bid;   // 2026-10-11：存储侧写响应ID
++    wire [1:0] mem_bresp;   // 2026-10-11：存储侧写响应码
++    wire mem_arready;   // 2026-10-11：存储侧读地址接收许可
++    wire mem_rvalid;   // 2026-10-11：存储侧读响应有效
++    wire [AXI_ID_WIDTH-1:0] mem_rid;   // 2026-10-11：存储侧读响应ID
++    wire [AXI_DATA_WIDTH-1:0] mem_rdata;   // 2026-10-11：存储侧读数据
++    wire [1:0] mem_rresp;   // 2026-10-11：存储侧读响应码
++    wire mem_rlast;   // 2026-10-11：存储侧读末拍标志
++    reg recovery_read_pending;   // 2026-10-11：已接受AR至上游接受最后R拍期间保持
++    reg recovery_write_pending;   // 2026-10-11：已接受AW至上游接受B期间保持
++    reg recovery_read_abort;   // 2026-10-11：此读突发经历存储不可用，剩余拍返回错误
++    reg recovery_write_abort;   // 2026-10-11：此写突发经历存储不可用，剩余数据丢弃并返回错误
++    reg [8:0] recovery_read_left;   // 2026-10-11：尚未装入上游响应寄存器的读拍数，支持256拍
++    reg [8:0] recovery_write_left;   // 2026-10-11：尚未从上游接受的写拍数，支持256拍
++    reg [AXI_ID_WIDTH-1:0] recovery_read_id;   // 2026-10-11：接受AR时保存ID
++    reg [AXI_ID_WIDTH-1:0] recovery_write_id;   // 2026-10-11：接受AW时保存ID
++    reg recovery_rvalid;   // 2026-10-11：上游读响应寄存器有效标志
++    reg [AXI_DATA_WIDTH-1:0] recovery_rdata;   // 2026-10-11：反压期间保持的读数据
++    reg [AXI_ID_WIDTH-1:0] recovery_rid;   // 2026-10-11：反压期间保持的读响应ID
++    reg [1:0] recovery_rresp;   // 2026-10-11：反压期间保持的读响应码
++    reg recovery_rlast;   // 2026-10-11：反压期间保持的读末拍标志
++    reg recovery_bvalid;   // 2026-10-11：上游写响应寄存器有效标志
++    reg [AXI_ID_WIDTH-1:0] recovery_bid;   // 2026-10-11：反压期间保持的写响应ID
++    reg [1:0] recovery_bresp;   // 2026-10-11：反压期间保持的写响应码
++    wire recovery_read_fault = recovery_read_abort || !storage_ready;   // 2026-10-11：已中断的读突发不能在校准恢复后继续使用旧数据
++    wire recovery_write_fault = recovery_write_abort || !storage_ready;   // 2026-10-11：已中断的写突发不能在校准恢复后补写成成功
++    wire recovery_rslot = !recovery_rvalid || s_axi_rready;   // 2026-10-11：读响应寄存器可接收下一拍
++    wire recovery_rload = recovery_read_pending && (recovery_read_left != 0) && recovery_rslot && (recovery_read_fault || mem_rvalid);   // 2026-10-11：装入一拍真实或错误响应
++    wire recovery_bload = recovery_write_pending && (recovery_write_left == 0) && !recovery_bvalid && (recovery_write_fault || mem_bvalid);   // 2026-10-11：收齐全部W后才产生一次B
++    wire mem_awvalid = s_axi_aresetn && s_axi_awvalid && ddr_ready && !recovery_write_pending;   // 2026-10-11：一次只向存储侧提交一个写突发
++    wire mem_arvalid = s_axi_aresetn && s_axi_arvalid && ddr_ready && !recovery_read_pending;   // 2026-10-11：一次只向存储侧提交一个读突发
++    wire mem_wvalid = s_axi_aresetn && s_axi_wvalid && recovery_write_pending && (recovery_write_left != 0) && !recovery_write_fault;   // 2026-10-11：仅转发未中断的已接受AW对应数据
++    wire mem_bready = s_axi_aresetn && recovery_write_pending && (recovery_write_left == 0) && !recovery_bvalid && !recovery_write_fault;   // 2026-10-11：真实写响应装入独立保持寄存器
++    wire mem_rready = s_axi_aresetn && recovery_read_pending && (recovery_read_left != 0) && recovery_rslot && !recovery_read_fault;   // 2026-10-11：真实读响应装入独立保持寄存器
++    assign ddr_ready = storage_ready && !recovery_read_abort && !recovery_write_abort;   // 2026-10-11：错误事务尚未处理完毕时禁止启动新业务
++    assign s_axi_awready = s_axi_aresetn && ddr_ready && !recovery_write_pending && mem_awready;   // 2026-10-11：AW接收与实际存储侧接收同拍
++    assign s_axi_arready = s_axi_aresetn && ddr_ready && !recovery_read_pending && mem_arready;   // 2026-10-11：AR接收与实际存储侧接收同拍
++    assign s_axi_wready = s_axi_aresetn && recovery_write_pending && (recovery_write_left != 0) && (recovery_write_fault || mem_wready);   // 2026-10-11：中断后仍收完原突发W拍，但不再写存储
++    assign s_axi_rvalid = recovery_rvalid;   // 2026-10-11：R响应有效在反压期间保持
++    assign s_axi_rdata = recovery_rdata;   // 2026-10-11：R响应数据在反压期间保持
++    assign s_axi_rid = recovery_rid;   // 2026-10-11：R响应ID在反压期间保持
++    assign s_axi_rresp = recovery_rresp;   // 2026-10-11：R响应码在反压期间保持
++    assign s_axi_rlast = recovery_rlast;   // 2026-10-11：R末拍标志在反压期间保持
++    assign s_axi_bvalid = recovery_bvalid;   // 2026-10-11：B响应有效在反压期间保持
++    assign s_axi_bid = recovery_bid;   // 2026-10-11：B响应ID在反压期间保持
++    assign s_axi_bresp = recovery_bresp;   // 2026-10-11：B响应码在反压期间保持
++
++    always @(posedge s_axi_aclk) begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++        if (!s_axi_aresetn) begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_read_pending <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_read_abort <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_read_left <= 9'd0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_read_id <= {AXI_ID_WIDTH{1'b0}};   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_rvalid <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_rdata <= {AXI_DATA_WIDTH{1'b0}};   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_rid <= {AXI_ID_WIDTH{1'b0}};   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_rresp <= 2'b00;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_rlast <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++        end else begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            if (s_axi_arvalid && s_axi_arready) begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_read_pending <= 1'b1;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_read_left <= {1'b0,s_axi_arlen} + 9'd1;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_read_id <= s_axi_arid;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            end   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            if (recovery_read_pending && !storage_ready)   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_read_abort <= 1'b1;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            if (recovery_rvalid && s_axi_rready) begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_rvalid <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                if (recovery_rlast) begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                    recovery_read_pending <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                    recovery_read_abort <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                end   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            end   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            if (recovery_rload) begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_rvalid <= 1'b1;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_rdata <= recovery_read_fault ? {AXI_DATA_WIDTH{1'b0}} : mem_rdata;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_rid <= recovery_read_fault ? recovery_read_id : mem_rid;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_rresp <= recovery_read_fault ? 2'b10 : mem_rresp;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_rlast <= (recovery_read_left == 9'd1);   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_read_left <= recovery_read_left - 9'd1;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            end   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++        end   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++    end   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++
++    always @(posedge s_axi_aclk) begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++        if (!s_axi_aresetn) begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_write_pending <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_write_abort <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_write_left <= 9'd0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_write_id <= {AXI_ID_WIDTH{1'b0}};   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_bvalid <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_bid <= {AXI_ID_WIDTH{1'b0}};   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            recovery_bresp <= 2'b00;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++        end else begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            if (s_axi_awvalid && s_axi_awready) begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_write_pending <= 1'b1;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_write_left <= {1'b0,s_axi_awlen} + 9'd1;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_write_id <= s_axi_awid;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            end   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            if (recovery_write_pending && !storage_ready)   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_write_abort <= 1'b1;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            if (s_axi_wvalid && s_axi_wready)   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_write_left <= recovery_write_left - 9'd1;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            if (recovery_bvalid && s_axi_bready) begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_bvalid <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_write_pending <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_write_abort <= 1'b0;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            end   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            if (recovery_bload) begin   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_bvalid <= 1'b1;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_bid <= recovery_write_fault ? recovery_write_id : mem_bid;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++                recovery_bresp <= recovery_write_fault ? 2'b10 : mem_bresp;   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++            end   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++        end   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++    end   // 2026-10-11：维护已接受AXI事务，存储中断后按原长度和ID完成错误响应
++
+     wire aw_hs = s_axi_awvalid && s_axi_awready;    // AW 通道握手成功一拍
+     wire w_hs  = s_axi_wvalid  && s_axi_wready;    // W 通道握手成功一拍
+     wire b_hs  = s_axi_bvalid  && s_axi_bready;    // B 通道握手成功一拍
+@@ -154,7 +278,7 @@
+             sim_ready_pipe <= {sim_ready_pipe[0],1'b1};
+     end
+     // 组合握手条件供本时钟域推进事务；未满足条件时保持当前传输。
+-    assign ddr_ready = sim_ready_pipe[1];
++    assign storage_ready = sim_ready_pipe[1];   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+     // 组合接口映射；对应模块的状态机负责更新源寄存器及事务边界。
+     assign init_calib_complete = sim_ready_pipe[1];
+ 
+@@ -163,46 +287,46 @@
+     wire [1:0] ram_bresp, ram_rresp;    // RAM 模型侧响应码
+     wire [AXI_DATA_WIDTH-1:0] ram_rdata;    // RAM 模型侧读数据
+     // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
+-    assign s_axi_awready = ddr_ready && ram_awready;
+-    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
+-    assign s_axi_wready  = ddr_ready && ram_wready;
+-    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
+-    assign s_axi_bvalid  = ram_bvalid;
+-    // 保留AXI响应码与事务标识，供上层关联完成状态。
+-    assign s_axi_bid     = ram_bid;
+-    // 保留AXI响应码与事务标识，供上层关联完成状态。
+-    assign s_axi_bresp   = ram_bresp;
+-    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
+-    assign s_axi_arready = ddr_ready && ram_arready;
+-    // 保留AXI响应码与事务标识，供上层关联完成状态。
+-    assign s_axi_rid     = ram_rid;
++    assign mem_awready = storage_ready && ram_awready;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
++    assign mem_wready  = storage_ready && ram_wready;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
++    assign mem_bvalid  = ram_bvalid;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // 保留AXI响应码与事务标识，供上层关联完成状态。
++    assign mem_bid     = ram_bid;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // 保留AXI响应码与事务标识，供上层关联完成状态。
++    assign mem_bresp   = ram_bresp;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
++    assign mem_arready = storage_ready && ram_arready;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // 保留AXI响应码与事务标识，供上层关联完成状态。
++    assign mem_rid     = ram_rid;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+     // AXI通道字段连接；数据、地址或属性随所属事务保持，不自行重排字节。
+-    assign s_axi_rdata   = ram_rdata;
+-    // 保留AXI响应码与事务标识，供上层关联完成状态。
+-    assign s_axi_rresp   = ram_rresp;
++    assign mem_rdata   = ram_rdata;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // 保留AXI响应码与事务标识，供上层关联完成状态。
++    assign mem_rresp   = ram_rresp;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+     // AXI通道字段连接；数据、地址或属性随所属事务保持，不自行重排字节。
+-    assign s_axi_rlast   = ram_rlast;
+-    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
+-    assign s_axi_rvalid  = ram_rvalid;
++    assign mem_rlast   = ram_rlast;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
++    assign mem_rvalid  = ram_rvalid;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+ 
+     rtds_axi_ram_model #(
+         .ADDR_WIDTH(AXI_ADDR_WIDTH), .DATA_WIDTH(AXI_DATA_WIDTH),
+         .ID_WIDTH(AXI_ID_WIDTH), .MEM_BYTES(4194304)
+     ) u_sim_ram (
+-        .aclk(s_axi_aclk), .aresetn(s_axi_aresetn && ddr_ready),
++        .aclk(s_axi_aclk), .aresetn(s_axi_aresetn && storage_ready),   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+         .s_axi_awid(s_axi_awid), .s_axi_awaddr(s_axi_awaddr),
+         .s_axi_awlen(s_axi_awlen), .s_axi_awsize(s_axi_awsize),
+-        .s_axi_awburst(s_axi_awburst), .s_axi_awvalid(s_axi_awvalid && ddr_ready),
++        .s_axi_awburst(s_axi_awburst), .s_axi_awvalid(mem_awvalid),   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+         .s_axi_awready(ram_awready), .s_axi_wdata(s_axi_wdata),
+         .s_axi_wstrb(s_axi_wstrb), .s_axi_wlast(s_axi_wlast),
+-        .s_axi_wvalid(s_axi_wvalid && ddr_ready), .s_axi_wready(ram_wready),
++        .s_axi_wvalid(mem_wvalid), .s_axi_wready(ram_wready),   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+         .s_axi_bid(ram_bid), .s_axi_bresp(ram_bresp), .s_axi_bvalid(ram_bvalid),
+-        .s_axi_bready(s_axi_bready), .s_axi_arid(s_axi_arid),
++        .s_axi_bready(mem_bready), .s_axi_arid(s_axi_arid),   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+         .s_axi_araddr(s_axi_araddr), .s_axi_arlen(s_axi_arlen),
+         .s_axi_arsize(s_axi_arsize), .s_axi_arburst(s_axi_arburst),
+-        .s_axi_arvalid(s_axi_arvalid && ddr_ready), .s_axi_arready(ram_arready),
++        .s_axi_arvalid(mem_arvalid), .s_axi_arready(ram_arready),   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+         .s_axi_rid(ram_rid), .s_axi_rdata(ram_rdata), .s_axi_rresp(ram_rresp),
+-        .s_axi_rlast(ram_rlast), .s_axi_rvalid(ram_rvalid), .s_axi_rready(s_axi_rready)
++        .s_axi_rlast(ram_rlast), .s_axi_rvalid(ram_rvalid), .s_axi_rready(mem_rready)   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+     );
+ 
+     // 行为RAM配置下不驱动真实DDR存储事务；固定电平/高阻隔离物理管脚。
+@@ -242,6 +366,31 @@
+     // 电平同步；禁止在第一级结果上承载业务含义或组合逻辑。
+     (* ASYNC_REG = "TRUE", SHREG_EXTRACT = "NO" *) reg [1:0] ready_sync;
+     wire ui_axi_aresetn = ui_reset_pipe[1];    // 同步到控制域的 MIG 侧复位（低有效）
++    // 修改记录 2026-10-11：为转换器两侧和MIG AXI接口建立共同复位范围。
++    // 任一主机复位、DDR系统复位或UI不可用均立即复位；每侧运行16拍后释放。
++    // 业务恢复计数留在接口外，不随存储侧复位丢失，继续向上游补齐错误响应。
++    wire converter_reset_n = s_axi_aresetn && ddr_sys_rst_n && ui_axi_aresetn;   // 2026-10-11：两个AXI时钟域共用的异步复位条件
++    (* ASYNC_REG = "TRUE", SHREG_EXTRACT = "NO" *) reg [15:0] converter_s_reset_pipe;   // 2026-10-11：业务时钟域复位释放管线
++    (* ASYNC_REG = "TRUE", SHREG_EXTRACT = "NO" *) reg [15:0] converter_m_reset_pipe;   // 2026-10-11：MIG时钟域复位释放管线
++    (* ASYNC_REG = "TRUE", SHREG_EXTRACT = "NO" *) reg [1:0] converter_ready_sync;   // 2026-10-11：MIG侧复位释放同步回业务域
++    always @(posedge s_axi_aclk or negedge converter_reset_n) begin   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++        if (!converter_reset_n)   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++            converter_s_reset_pipe <= 16'd0;   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++        else   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++            converter_s_reset_pipe <= {converter_s_reset_pipe[14:0],1'b1};   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++    end   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++    always @(posedge ui_clk or negedge converter_reset_n) begin   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++        if (!converter_reset_n)   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++            converter_m_reset_pipe <= 16'd0;   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++        else   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++            converter_m_reset_pipe <= {converter_m_reset_pipe[14:0],1'b1};   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++    end   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++    always @(posedge s_axi_aclk or negedge converter_reset_n) begin   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++        if (!converter_reset_n)   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++            converter_ready_sync <= 2'b00;   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++        else   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++            converter_ready_sync <= {converter_ready_sync[0],converter_m_reset_pipe[15]};   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
++    end   // 2026-10-11：两侧AXI接口同时进入复位，各自在本时钟域延迟释放
+ 
+     always @(posedge ui_clk) begin
+         if (ui_clk_sync_rst || !mig_calib_complete)
+@@ -257,9 +406,9 @@
+             ready_sync <= {ready_sync[0],ui_axi_aresetn};
+     end
+     // 组合握手条件供本时钟域推进事务；未满足条件时保持当前传输。
+-    assign ddr_ready = ready_sync[1];
++    assign storage_ready = ready_sync[1] && converter_s_reset_pipe[15] && converter_ready_sync[1];   // 2026-10-11：校准和转换器两侧复位释放均完成后才允许访问
+     // 软件可见的校准状态必须使用控制域同步结果，避免把 MIG 原始状态直接送入
+-    // 250MHz AXI 寄存器。ddr_ready 与该状态在真实 DDR 模式下语义一致。
++    // 2026-10-11：校准状态单独保留；ddr_ready还要求接口复位及旧错误事务处理完成。
+     assign init_calib_complete = ready_sync[1];
+ 
+     wire cc_s_awready, cc_s_wready, cc_s_bvalid, cc_s_arready, cc_s_rlast, cc_s_rvalid;    // 时钟转换器从侧五通道握手线
+@@ -267,27 +416,27 @@
+     wire [1:0] cc_s_bresp, cc_s_rresp;    // 时钟转换器从侧响应码
+     wire [AXI_DATA_WIDTH-1:0] cc_s_rdata;    // 时钟转换器从侧读数据
+     // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
+-    assign s_axi_awready = ddr_ready && cc_s_awready;
+-    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
+-    assign s_axi_wready  = ddr_ready && cc_s_wready;
+-    // 保留AXI响应码与事务标识，供上层关联完成状态。
+-    assign s_axi_bid     = cc_s_bid;
+-    // 保留AXI响应码与事务标识，供上层关联完成状态。
+-    assign s_axi_bresp   = cc_s_bresp;
+-    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
+-    assign s_axi_bvalid  = cc_s_bvalid;
+-    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
+-    assign s_axi_arready = ddr_ready && cc_s_arready;
+-    // 保留AXI响应码与事务标识，供上层关联完成状态。
+-    assign s_axi_rid     = cc_s_rid;
++    assign mem_awready = storage_ready && cc_s_awready;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
++    assign mem_wready  = storage_ready && cc_s_wready;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // 保留AXI响应码与事务标识，供上层关联完成状态。
++    assign mem_bid     = cc_s_bid;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // 保留AXI响应码与事务标识，供上层关联完成状态。
++    assign mem_bresp   = cc_s_bresp;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
++    assign mem_bvalid  = cc_s_bvalid;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
++    assign mem_arready = storage_ready && cc_s_arready;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // 保留AXI响应码与事务标识，供上层关联完成状态。
++    assign mem_rid     = cc_s_rid;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+     // AXI通道字段连接；数据、地址或属性随所属事务保持，不自行重排字节。
+-    assign s_axi_rdata   = cc_s_rdata;
+-    // 保留AXI响应码与事务标识，供上层关联完成状态。
+-    assign s_axi_rresp   = cc_s_rresp;
++    assign mem_rdata   = cc_s_rdata;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // 保留AXI响应码与事务标识，供上层关联完成状态。
++    assign mem_rresp   = cc_s_rresp;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+     // AXI通道字段连接；数据、地址或属性随所属事务保持，不自行重排字节。
+-    assign s_axi_rlast   = cc_s_rlast;
+-    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
+-    assign s_axi_rvalid  = cc_s_rvalid;
++    assign mem_rlast   = cc_s_rlast;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
++    assign mem_rvalid  = cc_s_rvalid;   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+ 
+     wire [AXI_ID_WIDTH-1:0] m_awid, m_bid, m_arid, m_rid;    // MIG 侧写通道 ID/地址/属性组
+     wire [AXI_ADDR_WIDTH-1:0] m_awaddr, m_araddr;    // MIG 侧读写地址
+@@ -304,21 +453,23 @@
+     wire m_bvalid, m_bready, m_arvalid, m_arready, m_rlast, m_rvalid, m_rready;    // MIG 侧读通道握手组
+ 
+     rtds_axi_clock_converter u_axi_clock_converter (
+-        .s_axi_aclk(s_axi_aclk), .s_axi_aresetn(s_axi_aresetn),
++        .s_axi_aclk(s_axi_aclk),   // 2026-10-11：转换器业务侧时钟
++        .s_axi_aresetn(converter_s_reset_pipe[15]),   // 2026-10-11：清空转换器业务侧旧事务缓存
+         .s_axi_awid(s_axi_awid), .s_axi_awaddr(s_axi_awaddr), .s_axi_awlen(s_axi_awlen),
+         .s_axi_awsize(s_axi_awsize), .s_axi_awburst(s_axi_awburst), .s_axi_awlock(s_axi_awlock),
+         .s_axi_awcache(s_axi_awcache), .s_axi_awprot(s_axi_awprot), .s_axi_awregion(s_axi_awregion),
+-        .s_axi_awqos(s_axi_awqos), .s_axi_awvalid(s_axi_awvalid && ddr_ready), .s_axi_awready(cc_s_awready),
++        .s_axi_awqos(s_axi_awqos), .s_axi_awvalid(mem_awvalid), .s_axi_awready(cc_s_awready),   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+         .s_axi_wdata(s_axi_wdata), .s_axi_wstrb(s_axi_wstrb), .s_axi_wlast(s_axi_wlast),
+-        .s_axi_wvalid(s_axi_wvalid && ddr_ready), .s_axi_wready(cc_s_wready),
+-        .s_axi_bid(cc_s_bid), .s_axi_bresp(cc_s_bresp), .s_axi_bvalid(cc_s_bvalid), .s_axi_bready(s_axi_bready),
++        .s_axi_wvalid(mem_wvalid), .s_axi_wready(cc_s_wready),   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++        .s_axi_bid(cc_s_bid), .s_axi_bresp(cc_s_bresp), .s_axi_bvalid(cc_s_bvalid), .s_axi_bready(mem_bready),   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+         .s_axi_arid(s_axi_arid), .s_axi_araddr(s_axi_araddr), .s_axi_arlen(s_axi_arlen),
+         .s_axi_arsize(s_axi_arsize), .s_axi_arburst(s_axi_arburst), .s_axi_arlock(s_axi_arlock),
+         .s_axi_arcache(s_axi_arcache), .s_axi_arprot(s_axi_arprot), .s_axi_arregion(s_axi_arregion),
+-        .s_axi_arqos(s_axi_arqos), .s_axi_arvalid(s_axi_arvalid && ddr_ready), .s_axi_arready(cc_s_arready),
++        .s_axi_arqos(s_axi_arqos), .s_axi_arvalid(mem_arvalid), .s_axi_arready(cc_s_arready),   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
+         .s_axi_rid(cc_s_rid), .s_axi_rdata(cc_s_rdata), .s_axi_rresp(cc_s_rresp),
+-        .s_axi_rlast(cc_s_rlast), .s_axi_rvalid(cc_s_rvalid), .s_axi_rready(s_axi_rready),
+-        .m_axi_aclk(ui_clk), .m_axi_aresetn(ui_axi_aresetn),
++        .s_axi_rlast(cc_s_rlast), .s_axi_rvalid(cc_s_rvalid), .s_axi_rready(mem_rready),   // 2026-10-11：存储侧经事务恢复逻辑连接；复位后旧响应不进入新事务
++        .m_axi_aclk(ui_clk),   // 2026-10-11：转换器MIG侧时钟
++        .m_axi_aresetn(converter_m_reset_pipe[15]),   // 2026-10-11：与MIG AXI接口采用相同复位
+         .m_axi_awid(m_awid), .m_axi_awaddr(m_awaddr), .m_axi_awlen(m_awlen), .m_axi_awsize(m_awsize),
+         .m_axi_awburst(m_awburst), .m_axi_awlock(m_awlock), .m_axi_awcache(m_awcache),
+         .m_axi_awprot(m_awprot), .m_axi_awregion(m_awregion), .m_axi_awqos(m_awqos),
+@@ -340,7 +491,8 @@
+         .c0_ddr4_dqs_c(c0_ddr4_dqs_c), .c0_ddr4_dqs_t(c0_ddr4_dqs_t), .c0_ddr4_odt(c0_ddr4_odt),
+         .c0_ddr4_bg(c0_ddr4_bg), .c0_ddr4_reset_n(c0_ddr4_reset_n), .c0_ddr4_act_n(c0_ddr4_act_n),
+         .c0_ddr4_ck_c(c0_ddr4_ck_c), .c0_ddr4_ck_t(c0_ddr4_ck_t), .c0_ddr4_ui_clk(ui_clk),
+-        .c0_ddr4_ui_clk_sync_rst(ui_clk_sync_rst), .c0_ddr4_aresetn(ui_axi_aresetn),
++        .c0_ddr4_ui_clk_sync_rst(ui_clk_sync_rst),   // 2026-10-11：保留MIG原有UI复位指示
++        .c0_ddr4_aresetn(converter_m_reset_pipe[15]),   // 2026-10-11：与转换器MIG侧同步清空AXI在途事务
+         .c0_ddr4_s_axi_awid(m_awid), .c0_ddr4_s_axi_awaddr(m_awaddr), .c0_ddr4_s_axi_awlen(m_awlen),
+         .c0_ddr4_s_axi_awsize(m_awsize), .c0_ddr4_s_axi_awburst(m_awburst), .c0_ddr4_s_axi_awlock(m_awlock),
+         .c0_ddr4_s_axi_awcache(m_awcache), .c0_ddr4_s_axi_awprot(m_awprot), .c0_ddr4_s_axi_awqos(m_awqos),

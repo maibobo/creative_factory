@@ -1,0 +1,92 @@
+﻿[
+    {
+        "case":  "sync",
+        "top":  "tb_rtds_sync",
+        "passed":  true,
+        "started":  "2026-10-10T17:08:26.7310293+08:00",
+        "finished":  "2026-10-10T17:08:43.1224014+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\regression_after_new_cases\\modules\\sync.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_sync"
+    },
+    {
+        "case":  "1g",
+        "top":  "tb_rtds_1g",
+        "passed":  true,
+        "started":  "2026-10-10T17:08:43.2169524+08:00",
+        "finished":  "2026-10-10T17:08:56.2092158+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\regression_after_new_cases\\modules\\1g.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_1g"
+    },
+    {
+        "case":  "tx",
+        "top":  "tb_rtds_tx",
+        "passed":  true,
+        "started":  "2026-10-10T17:08:56.2143038+08:00",
+        "finished":  "2026-10-10T17:09:09.2316255+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\regression_after_new_cases\\modules\\tx.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_tx"
+    },
+    {
+        "case":  "rx_fifo",
+        "top":  "tb_rtds_rx_fifo",
+        "passed":  true,
+        "started":  "2026-10-10T17:09:09.2326394+08:00",
+        "finished":  "2026-10-10T17:09:22.1359047+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\regression_after_new_cases\\modules\\rx_fifo.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_rx_fifo"
+    },
+    {
+        "case":  "ring",
+        "top":  "tb_rtds_ring",
+        "passed":  true,
+        "started":  "2026-10-10T17:09:22.1374225+08:00",
+        "finished":  "2026-10-10T17:09:34.6710552+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\regression_after_new_cases\\modules\\ring.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_ring"
+    },
+    {
+        "case":  "axi",
+        "top":  "tb_rtds_axi",
+        "passed":  true,
+        "started":  "2026-10-10T17:09:34.6725675+08:00",
+        "finished":  "2026-10-10T17:09:47.3800820+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\regression_after_new_cases\\modules\\axi.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_axi"
+    },
+    {
+        "case":  "axi_tail",
+        "top":  "tb_rtds_axi_tail",
+        "passed":  true,
+        "started":  "2026-10-10T17:09:47.3823197+08:00",
+        "finished":  "2026-10-10T17:10:00.1463294+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\regression_after_new_cases\\modules\\axi_tail.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_axi_tail"
+    },
+    {
+        "case":  "regs",
+        "top":  "tb_rtds_regs",
+        "passed":  true,
+        "started":  "2026-10-10T17:10:00.1483505+08:00",
+        "finished":  "2026-10-10T17:10:12.6988747+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\regression_after_new_cases\\modules\\regs.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_regs"
+    },
+    {
+        "case":  "board_cdc",
+        "top":  "tb_board_cdc_smoke",
+        "passed":  true,
+        "started":  "2026-10-10T17:10:12.7004006+08:00",
+        "finished":  "2026-10-10T17:10:27.4692232+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\regression_after_new_cases\\modules\\board_cdc.simulate.log",
+        "pass_pattern":  "TEST PASS|BOARD_CDC.*PASS"
+    },
+    {
+        "case":  "fast_base",
+        "top":  "tb_xdma_rtds_trythrough",
+        "passed":  true,
+        "started":  "2026-10-10T17:10:28.9220348+08:00",
+        "finished":  "2026-10-10T17:10:45.8406869+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\regression_after_new_cases\\fast_base\\fast_base.simulate.log",
+        "pass_pattern":  "RTDS_TRYTHROUGH_PASS"
+    }
+]

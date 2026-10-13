@@ -1,6 +1,8 @@
 `timescale 1ns/1ps
 // 使用真实寄存器RTL验证自动清零，不用BFM寄存器模型代替被测逻辑。
 module tb_rtds_regs;
+ // 修改记录 2026-10-11：加入随机种子激励。
+ `include "rtds_random.svh"   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     logic clk=0;
 
     // 生成 250MHz 寄存器总线时钟
@@ -37,6 +39,7 @@ module tb_rtds_regs;
     end
     // AXI4-Lite 写事务：可选字节使能，响应必须为 OKAY
     task automatic wr(input int address,input int value,input logic[3:0] strobe=4'hf);
+        repeat(phase2_pick(0,7)) @(bus.driver_cb);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
         @(bus.driver_cb);bus.driver_cb.awaddr<=address;bus.driver_cb.wdata<=value;
         bus.driver_cb.wstrb<=strobe;bus.driver_cb.awvalid<=1;bus.driver_cb.wvalid<=1;
         do @(bus.driver_cb); while(!(bus.driver_cb.awready && bus.driver_cb.wready));
@@ -47,6 +50,7 @@ module tb_rtds_regs;
     endtask
     // AXI4-Lite 读事务：读回值必须与期望完全一致
     task automatic check(input int address,input int value);
+        repeat(phase2_pick(0,7)) @(bus.driver_cb);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
         @(bus.driver_cb);bus.driver_cb.araddr<=address;bus.driver_cb.arvalid<=1;
         do @(bus.driver_cb); while(!bus.driver_cb.arready);
         bus.driver_cb.arvalid<=0;

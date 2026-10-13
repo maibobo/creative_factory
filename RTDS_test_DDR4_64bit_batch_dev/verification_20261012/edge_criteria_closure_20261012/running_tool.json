@@ -1,0 +1,1 @@
+{"pid": 13124, "tool": "xsim", "args": ["recovery_cross_variants", "-f", "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261012\\edge_criteria_closure_20261012\\recovery_cross_variants_seed_360207181.options"], "log": "recovery_cross_variants_seed_360207181.console.log", "started": "2026-10-12T18:39:12.426262+08:00"}

@@ -1,0 +1,95 @@
+﻿[
+    {
+        "case":  "sync",
+        "top":  "tb_rtds_sync",
+        "passed":  true,
+        "started":  "2026-10-10T12:56:46.5232483+08:00",
+        "finished":  "2026-10-10T12:56:59.3757657+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave\\modules\\sync.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_sync"
+    },
+    {
+        "case":  "1g",
+        "top":  "tb_rtds_1g",
+        "passed":  false,
+        "error":  "xelab failed exit=1 log=1g.elaborate.log",
+        "started":  "2026-10-10T12:56:59.4367495+08:00",
+        "finished":  "2026-10-10T12:56:59.9154573+08:00"
+    },
+    {
+        "case":  "tx",
+        "top":  "tb_rtds_tx",
+        "passed":  false,
+        "error":  "xelab failed exit=1 log=tx.elaborate.log",
+        "started":  "2026-10-10T12:56:59.9179966+08:00",
+        "finished":  "2026-10-10T12:57:00.4283974+08:00"
+    },
+    {
+        "case":  "rx_fifo",
+        "top":  "tb_rtds_rx_fifo",
+        "passed":  false,
+        "error":  "xelab failed exit=1 log=rx_fifo.elaborate.log",
+        "started":  "2026-10-10T12:57:00.4299045+08:00",
+        "finished":  "2026-10-10T12:57:00.9168458+08:00"
+    },
+    {
+        "case":  "ring",
+        "top":  "tb_rtds_ring",
+        "passed":  true,
+        "started":  "2026-10-10T12:57:00.9183572+08:00",
+        "finished":  "2026-10-10T12:57:13.3979979+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave\\modules\\ring.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_ring"
+    },
+    {
+        "case":  "axi",
+        "top":  "tb_rtds_axi",
+        "passed":  true,
+        "started":  "2026-10-10T12:57:13.3995036+08:00",
+        "finished":  "2026-10-10T12:57:26.0668531+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave\\modules\\axi.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_axi"
+    },
+    {
+        "case":  "axi_tail",
+        "top":  "tb_rtds_axi_tail",
+        "passed":  true,
+        "started":  "2026-10-10T12:57:26.0698926+08:00",
+        "finished":  "2026-10-10T12:57:38.7209411+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave\\modules\\axi_tail.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_axi_tail"
+    },
+    {
+        "case":  "regs",
+        "top":  "tb_rtds_regs",
+        "passed":  true,
+        "started":  "2026-10-10T12:57:38.7224547+08:00",
+        "finished":  "2026-10-10T12:57:51.2201817+08:00",
+        "log":  "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave\\modules\\regs.simulate.log",
+        "pass_pattern":  "TEST PASS tb_rtds_regs"
+    },
+    {
+        "case":  "board_cdc",
+        "top":  "tb_board_cdc_smoke",
+        "passed":  false,
+        "error":  "xelab failed exit=1 log=board_cdc.elaborate.log",
+        "started":  "2026-10-10T12:57:51.2232404+08:00",
+        "finished":  "2026-10-10T12:57:51.7000525+08:00"
+    },
+    {
+        "case":  "fast_base",
+        "top":  "tb_xdma_rtds_trythrough",
+        "passed":  false,
+        "error":  "xelab failed exit=1 log=fast_base.elaborate.log",
+        "started":  "2026-10-10T12:57:52.6742439+08:00",
+        "finished":  "2026-10-10T12:57:53.2022239+08:00"
+    },
+    {
+        "case":  "fast_highaddr",
+        "top":  "tb_xdma_rtds_trythrough",
+        "passed":  false,
+        "error":  "xelab failed exit=1 log=fast_highaddr.elaborate.log",
+        "started":  "2026-10-10T12:57:54.1749340+08:00",
+        "finished":  "2026-10-10T12:57:54.6964625+08:00"
+    }
+]

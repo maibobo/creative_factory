@@ -1,0 +1,26 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -debug all -O0 -mt off -L xpm -L unisims_ver work.tb_backend_write work.glbl -s backend_write 
+Turned off multi-threading.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'c0_ddr4_act_n' remains unconnected for this instance [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/sources/regression/recovery_phase2_20261011/rtds_backend_test_if.sv:17]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.rtds_axi_ram_model_default
+Compiling module work.rtds_ddr4_backend(TIMEOUT_CYCLES...
+Compiling module work.rtds_backend_test_if
+Compiling module work.backend_recovery_runner(KIND=1)
+Compiling module work.tb_backend_write
+Compiling module work.glbl
+Built simulation snapshot backend_write
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/xsim.dir/backend_write/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Oct 12 12:47:04 2026...

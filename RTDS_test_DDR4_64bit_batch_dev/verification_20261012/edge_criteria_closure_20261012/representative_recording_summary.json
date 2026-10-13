@@ -1,0 +1,26 @@
+[
+  {
+    "case": "backend_edge_recovery",
+    "seed": 1417633351,
+    "phase": 0,
+    "status": "PASS",
+    "purpose": "Representative waveform recording, excluded from 27 functional runs",
+    "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261012\\edge_criteria_closure_20261012\\backend_edge_recovery_seed_1417633351.record.simulate.log"
+  },
+  {
+    "case": "backend_edge_recovery",
+    "seed": 1417633351,
+    "phase": -1,
+    "status": "PASS",
+    "purpose": "Representative waveform recording, excluded from 27 functional runs",
+    "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261012\\edge_criteria_closure_20261012_early\\backend_edge_recovery_seed_1417633351.record.simulate.log"
+  },
+  {
+    "case": "backend_edge_recovery",
+    "seed": 1417633351,
+    "phase": 1,
+    "status": "PASS",
+    "purpose": "Representative waveform recording, excluded from 27 functional runs",
+    "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261012\\edge_criteria_closure_20261012_late\\backend_edge_recovery_seed_1417633351.record.simulate.log"
+  }
+]

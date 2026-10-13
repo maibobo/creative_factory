@@ -47,6 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
+#include "rtds_ddr4_mig_sc.h"
 
 #include "sim_ddr_v2_0.h"
 

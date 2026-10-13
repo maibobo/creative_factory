@@ -2,6 +2,7 @@
 
 ## 1. 确定方案与执行范围
 
+- 基于已检查完整的[本地轻量备份](E:/PCIE-CPU/RTDS_test_DDR4_64bit_本机备份_20260820/RTDS_test_DDR4_64bit.xpr)，建立独立开发目录 `E:\PCIE-CPU\RTDS_test_DDR4_64bit_本地开发`，保留原备份。
 - 主机只新增一个 **32bit Aurora 1G 实例**。1G 只做业务下行；不例化 Buck 模型，不处理其输出或启停信号。
 - 下行：CPU 的128Byte配置帧原样送10G；Byte1首次译码后，1G独立周期发送6Byte参数。
 - 上行：只接收10G，采用已确认的 **100ms × 8块循环缓存**。

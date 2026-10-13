@@ -1,0 +1,17 @@
+{
+  "root": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev",
+  "captured": "2026-10-12T18:40:13.646692+08:00",
+  "seeds": [
+    1417633351,
+    750318462,
+    360207181
+  ],
+  "mode": "RTL functional quick regression; DDR4_SIM_RAM",
+  "wave_seed": 1417633351,
+  "excluded": [
+    "period_100ms production period",
+    "real MIG and DDR4 model",
+    "real Root Port"
+  ],
+  "source_count": 56
+}

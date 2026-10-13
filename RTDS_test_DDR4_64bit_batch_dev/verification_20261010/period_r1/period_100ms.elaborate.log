@@ -1,0 +1,25 @@
+﻿Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -debug all -O3 -mt off -L xpm -L unisims_ver work.tb_period_100ms work.glbl -s period_100ms 
+Turned off multi-threading.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.host_cb
+Compiling module work.fdma_cb
+Compiling module work.rtds_ring_test_if
+Compiling module work.RTDS_RX_BLOCK_WRITER_default
+Compiling module work.tb_period_100ms
+Compiling module work.glbl
+Built simulation snapshot period_100ms
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/period_r1/xsim.dir/period_100ms/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 10 16:55:34 2026...

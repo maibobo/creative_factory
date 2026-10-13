@@ -1,3 +1,5 @@
+#ifndef IP_RTDS_AXI_CLOCK_CONVERTER_H_
+#define IP_RTDS_AXI_CLOCK_CONVERTER_H_
 
 // (c) Copyright 1995-2026 Xilinx, Inc. All rights reserved.
 // 
@@ -63,6 +65,7 @@
 #define DllExport
 #endif
 
+#include "rtds_axi_clock_converter_sc.h"
 
 
 
@@ -692,3 +695,4 @@ private:
 
 };
 #endif // MTI_SYSTEMC
+#endif // IP_RTDS_AXI_CLOCK_CONVERTER_H_

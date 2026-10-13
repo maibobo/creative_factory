@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Oct 10 17:10:26 2026
+# Process ID: 26028
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/regression_after_new_cases/modules
+# Command line: wbtcv.exe -mode batch -source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/regression_after_new_cases/modules/xsim.dir/board_cdc/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/regression_after_new_cases/modules/webtalk.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/regression_after_new_cases/modules\webtalk.jou
+#-----------------------------------------------------------
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/regression_after_new_cases/modules/xsim.dir/board_cdc/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Oct 10 17:10:26 2026...

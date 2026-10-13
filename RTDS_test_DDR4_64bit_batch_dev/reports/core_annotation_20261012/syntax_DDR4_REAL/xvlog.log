@@ -1,0 +1,41 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/aurora_64b66b_top.v" into library work
+INFO: [VRFC 10-311] analyzing module aurora_64b66b_top
+INFO: [VRFC 10-311] analyzing module aurora_power_on_reset_seq
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/fdma_aurora_brg_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module fdma_aurora_brg_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/CLK_GEN.v" into library work
+INFO: [VRFC 10-311] analyzing module CLK_GEN
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/CONV_DMA.v" into library work
+INFO: [VRFC 10-311] analyzing module CONV_DMA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/INFO_EXCH.v" into library work
+INFO: [VRFC 10-311] analyzing module INFO_EXCH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/LED.v" into library work
+INFO: [VRFC 10-311] analyzing module LED
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/PCIe.v" into library work
+INFO: [VRFC 10-311] analyzing module PCIe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/pcie_fdma_aurora_brg_adapter.v" into library work
+INFO: [VRFC 10-311] analyzing module pcie_fdma_aurora_brg_adapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/TEMP_RD.v" into library work
+INFO: [VRFC 10-311] analyzing module TEMP_RD
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/TOP.v" into library work
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/rtds_axi_ram_model.sv" into library work
+INFO: [VRFC 10-311] analyzing module rtds_axi_ram_model
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/rtds_ddr4_backend.sv" into library work
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_backend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/rtds_1g_periodic_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_1G_PERIODIC_TX
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/rtds_fpga_1g_init.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_1G_INIT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/rtds_fpga_cfg_cdc.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_CFG_CDC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/rtds_fpga_count_cdc.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_COUNT_CDC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/rtds_fpga_reset_sync.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_FPGA_RESET_SYNC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/rtds_rx_block_writer.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_RX_BLOCK_WRITER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/rtds_rx_frame_fifo.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_RX_FRAME_FIFO
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/core_annotation_20261012/syntax_DDR4_REAL/src/rtds_sync_timebase.v" into library work
+INFO: [VRFC 10-311] analyzing module RTDS_SYNC_TIMEBASE

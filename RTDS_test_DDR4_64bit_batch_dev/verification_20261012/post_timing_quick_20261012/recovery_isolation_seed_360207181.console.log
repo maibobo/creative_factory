@@ -1,0 +1,238 @@
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/recovery_isolation/xsim_script.tcl
+# xsim {recovery_isolation} -testplusarg SEED=360207181 -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/recovery_isolation_seed_360207181.tcl} -onfinish stop -onerror quit -sv_seed 360207181
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/recovery_isolation_seed_360207181.tcl
+## run all
+RNG_INIT scope=tb_recovery_isolation.H.phase2_pick seed=360207181 algorithm=xorshift32
+RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=1 value=26 lo=0 hi=31
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_recovery_isolation.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_recovery_isolation/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial294_146  Scope: tb_recovery_isolation.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 488
+RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=2 value=3 lo=0 hi=9
+RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=3 value=5 lo=0 hi=9
+RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=4 value=2 lo=0 hi=9
+RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=5 value=6 lo=0 hi=9
+RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=6 value=4 lo=0 hi=9
+RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=7 value=4 lo=0 hi=9
+RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=8 value=4 lo=0 hi=9
+RNG_INIT scope=tb_recovery_isolation.phase2_pick seed=360207181 algorithm=xorshift32
+RNG_DRAW scope=tb_recovery_isolation.phase2_pick n=1 value=3 lo=1 hi=4
+RNG_DRAW scope=tb_recovery_isolation.phase2_pick n=2 value=610159 lo=1 hi=1048575
+RNG_DRAW scope=tb_recovery_isolation.phase2_pick n=3 value=33 lo=8 hi=40
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=0 kind=0 stage=0 old_bytes=48 paused=1 fresh_beats=4 done=1
+RNG_DRAW scope=tb_recovery_isolation.phase2_pick n=4 value=1 lo=1 hi=4
+RNG_DRAW scope=tb_recovery_isolation.phase2_pick n=5 value=724632 lo=1 hi=1048575
+RNG_DRAW scope=tb_recovery_isolation.phase2_pick n=6 value=34 lo=8 hi=40
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=1 kind=1 stage=1 old_bytes=16 paused=0 fresh_beats=4 done=1
+RNG_DRAW scope=tb_recovery_isolation.phase2_pick n=7 value=1 lo=1 hi=4
+RNG_DRAW scope=tb_recovery_isolation.phase2_pick n=8 value=204200 lo=1 hi=1048575
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=2 kind=2 stage=2 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=3 kind=0 stage=3 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=4 kind=1 stage=4 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=5 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=6 kind=0 stage=0 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=7 kind=1 stage=1 old_bytes=48 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=8 kind=2 stage=2 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=9 kind=0 stage=3 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=10 kind=1 stage=4 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=11 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=12 kind=0 stage=0 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=13 kind=1 stage=1 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=14 kind=2 stage=2 old_bytes=64 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=15 kind=0 stage=3 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=16 kind=1 stage=4 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=17 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=18 kind=0 stage=0 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=19 kind=1 stage=1 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=20 kind=2 stage=2 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=21 kind=0 stage=3 old_bytes=32 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=22 kind=1 stage=4 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=23 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=24 kind=0 stage=0 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=25 kind=1 stage=1 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=26 kind=2 stage=2 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=27 kind=0 stage=3 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=28 kind=1 stage=4 old_bytes=48 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=29 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=30 kind=0 stage=0 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=31 kind=1 stage=1 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=32 kind=2 stage=2 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=33 kind=0 stage=3 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=34 kind=1 stage=4 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=35 kind=2 stage=5 old_bytes=16 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=36 kind=0 stage=0 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=37 kind=1 stage=1 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=38 kind=2 stage=2 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=39 kind=0 stage=3 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=40 kind=1 stage=4 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=41 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=42 kind=0 stage=0 old_bytes=32 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=43 kind=1 stage=1 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=44 kind=2 stage=2 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=45 kind=0 stage=3 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=46 kind=1 stage=4 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=47 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=48 kind=0 stage=0 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=49 kind=1 stage=1 old_bytes=48 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=50 kind=2 stage=2 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=51 kind=0 stage=3 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=52 kind=1 stage=4 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=53 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=54 kind=0 stage=0 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=55 kind=1 stage=1 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=56 kind=2 stage=2 old_bytes=64 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=57 kind=0 stage=3 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=58 kind=1 stage=4 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=59 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=60 kind=0 stage=0 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=61 kind=1 stage=1 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=62 kind=2 stage=2 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=63 kind=0 stage=3 old_bytes=64 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=64 kind=1 stage=4 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=65 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=66 kind=0 stage=0 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=67 kind=1 stage=1 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=68 kind=2 stage=2 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=69 kind=0 stage=3 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=70 kind=1 stage=4 old_bytes=16 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=71 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=72 kind=0 stage=0 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=73 kind=1 stage=1 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=74 kind=2 stage=2 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=75 kind=0 stage=3 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=76 kind=1 stage=4 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=77 kind=2 stage=5 old_bytes=16 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=78 kind=0 stage=0 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=79 kind=1 stage=1 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=80 kind=2 stage=2 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=81 kind=0 stage=3 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=82 kind=1 stage=4 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=83 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=84 kind=0 stage=0 old_bytes=64 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=85 kind=1 stage=1 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=86 kind=2 stage=2 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=87 kind=0 stage=3 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=88 kind=1 stage=4 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=89 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=90 kind=0 stage=0 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=91 kind=1 stage=1 old_bytes=16 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=92 kind=2 stage=2 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=93 kind=0 stage=3 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=94 kind=1 stage=4 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=95 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=96 kind=0 stage=0 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=97 kind=1 stage=1 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=98 kind=2 stage=2 old_bytes=16 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=99 kind=0 stage=3 old_bytes=16 paused=0 fresh_beats=4 done=1
+TEST PASS tb_recovery_isolation iterations=100 reset_free=100
+RNG_SUMMARY scope=tb_recovery_isolation.H seed=360207181 draws=12552 state=10e3f30d
+RNG_SUMMARY scope=tb_recovery_isolation seed=360207181 draws=284 state=d29c6410
+$finish called at time : 162850 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/sources/regression/recovery_phase2_20261011/tb_recovery_isolation.sv" Line 57
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 12:48:47 2026...

@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 12:54:20 2026
+# Process ID: 13908
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012
+# Command line: xsim.exe -log tx_boundaries_seed_750318462.simulate.log -mode tcl -source {xsim.dir/tx_boundaries/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/tx_boundaries_seed_750318462.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tx_boundaries/xsim_script.tcl
+# xsim {tx_boundaries} -testplusarg SEED=750318462 -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/tx_boundaries_seed_750318462.tcl} -onfinish stop -onerror quit -sv_seed 750318462
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/tx_boundaries_seed_750318462.tcl
+## run all
+RNG_INIT scope=tb_tx_boundaries.H.phase2_pick seed=750318462 algorithm=xorshift32
+RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=1 value=10 lo=0 hi=31
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_tx_boundaries.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_tx_boundaries/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial294_146  Scope: tb_tx_boundaries.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 488
+RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=2 value=4 lo=0 hi=9
+RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=3 value=0 lo=0 hi=9
+RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=4 value=3 lo=0 hi=9
+RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=5 value=7 lo=0 hi=9
+RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=6 value=9 lo=0 hi=9
+RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=7 value=9 lo=0 hi=9
+RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=8 value=6 lo=0 hi=9
+REJECT_CHECK addr=00008000 len=0 no_DDR_access=1
+REJECT_CHECK addr=00008000 len=15 no_DDR_access=1
+REJECT_CHECK addr=00008000 len=17 no_DDR_access=1
+REJECT_CHECK addr=00008001 len=16 no_DDR_access=1
+REJECT_CHECK addr=00007ff0 len=16 no_DDR_access=1
+REJECT_CHECK addr=0000fff0 len=32 no_DDR_access=1
+REJECT_CHECK addr=00008000 len=32784 no_DDR_access=1
+TX_CHECK addr=00008000 length=16 end=00008010 frames=1 beats=2
+TX_CHECK addr=00008000 length=32768 end=00010000 frames=2048 beats=4096
+TX_CHECK addr=0000fff0 length=16 end=00010000 frames=1 beats=2
+RNG_INIT scope=tb_tx_boundaries.phase2_pick seed=750318462 algorithm=xorshift32
+RNG_DRAW scope=tb_tx_boundaries.phase2_pick n=1 value=43 lo=1 hi=128
+RNG_DRAW scope=tb_tx_boundaries.phase2_pick n=2 value=1346 lo=0 hi=2005
+RNG_DRAW scope=tb_tx_boundaries.phase2_pick n=3 value=1 lo=1 hi=10
+RNG_DRAW scope=tb_tx_boundaries.phase2_pick n=4 value=665929 lo=1 hi=1048575
+TX_CHECK addr=0000d420 length=688 end=0000d6d0 frames=43 beats=86
+RNG_DRAW scope=tb_tx_boundaries.phase2_pick n=5 value=96 lo=1 hi=128
+RNG_DRAW scope=tb_tx_boundaries.phase2_pick n=6 value=187 lo=0 hi=1952
+RNG_DRAW scope=tb_tx_boundaries.phase2_pick n=7 value=10 lo=1 hi=10
+RNG_DRAW scope=tb_tx_boundaries.phase2_pick n=8 value=706022 lo=1 hi=1048575
+TX_CHECK addr=00008bb0 length=1536 end=000091b0 frames=96 beats=192
+TX_CHECK addr=0000b500 length=624 end=0000b770 frames=39 beats=78
+TX_CHECK addr=0000d620 length=1280 end=0000db20 frames=80 beats=160
+TX_CHECK addr=0000b650 length=1968 end=0000be00 frames=123 beats=246
+TX_CHECK addr=0000bb00 length=80 end=0000bb50 frames=5 beats=10
+TX_CHECK addr=0000c580 length=1856 end=0000ccc0 frames=116 beats=232
+TX_CHECK addr=00008900 length=1072 end=00008d30 frames=67 beats=134
+TEST PASS tb_tx_boundaries invalid=7 valid=3 max_bytes=32768 max_frames=2048 max_beats=4096
+RNG_SUMMARY scope=tb_tx_boundaries.H seed=750318462 draws=25761 state=a449c29f
+RNG_SUMMARY scope=tb_tx_boundaries seed=750318462 draws=32 state=a00fd9d2
+$finish called at time : 130334 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/sources/regression/new_cases_20261010/tb_tx_boundaries.sv" Line 26
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 12:54:27 2026...

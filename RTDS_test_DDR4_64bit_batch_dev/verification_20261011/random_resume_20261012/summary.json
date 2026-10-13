@@ -1,0 +1,312 @@
+[
+  {
+    "case": "backend_read",
+    "top": "tb_backend_read",
+    "ids": [
+      "TC-F13"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-11T22:25:30.074231+08:00",
+    "finished": "2026-10-11T22:26:28.055926+08:00",
+    "wall_seconds": 57.97,
+    "log": "backend_read_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=1 value=166008068 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=2 value=1138832515 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=4 value=278997607 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=5 value=139715218 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=7 value=158571554 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=8 value=604752445 lo=1 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=7 value=158571554 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=8 value=604752445 lo=1 hi=2147483647",
+      "RNG_SUMMARY scope=tb_backend_read.T seed=1417633351 draws=3968 state=b9795f5b"
+    ],
+    "preserved_pass_from": "random_backend_final",
+    "snapshot_directory": "random_backend_final",
+    "source_hashes": "backend_read.source_hashes.json"
+  },
+  {
+    "case": "backend_read",
+    "top": "tb_backend_read",
+    "ids": [
+      "TC-F13"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "log": "backend_read_seed_750318462.simulate.log",
+    "started": "2026-10-12T09:11:18.992783+08:00",
+    "finished": "2026-10-12T09:12:52.959354+08:00",
+    "wall_seconds": 93.97,
+    "snapshot_directory": "random_backend_final",
+    "source_hashes": "backend_read.source_hashes.json",
+    "random_summary": [
+      "RNG_SUMMARY scope=tb_backend_read.T seed=750318462 draws=3968 state=442c6e4a"
+    ],
+    "markers": [
+      "TEST PASS tb_backend_read checks=16"
+    ]
+  },
+  {
+    "case": "backend_read",
+    "top": "tb_backend_read",
+    "ids": [
+      "TC-F13"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "log": "backend_read_seed_360207181.simulate.log",
+    "started": "2026-10-12T09:12:52.994506+08:00",
+    "finished": "2026-10-12T09:13:05.204004+08:00",
+    "wall_seconds": 12.22,
+    "snapshot_directory": "random_backend_final",
+    "source_hashes": "backend_read.source_hashes.json",
+    "random_summary": [
+      "RNG_SUMMARY scope=tb_backend_read.T seed=360207181 draws=3968 state=063744e5"
+    ],
+    "markers": [
+      "TEST PASS tb_backend_read checks=16"
+    ]
+  },
+  {
+    "case": "backend_write",
+    "top": "tb_backend_write",
+    "ids": [
+      "TC-F14"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "log": "backend_write_seed_1417633351.simulate.log",
+    "started": "2026-10-12T09:13:44.575500+08:00",
+    "finished": "2026-10-12T09:13:57.980009+08:00",
+    "wall_seconds": 13.41,
+    "snapshot_directory": "random_backend_final",
+    "source_hashes": "backend_write.source_hashes.json",
+    "random_summary": [
+      "RNG_SUMMARY scope=tb_backend_write.T seed=1417633351 draws=3980 state=bb2e7a47"
+    ],
+    "markers": [
+      "TEST PASS tb_backend_write checks=16"
+    ]
+  },
+  {
+    "case": "backend_write",
+    "top": "tb_backend_write",
+    "ids": [
+      "TC-F14"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "log": "backend_write_seed_750318462.simulate.log",
+    "started": "2026-10-12T09:13:58.002298+08:00",
+    "finished": "2026-10-12T09:14:08.015165+08:00",
+    "wall_seconds": 10.02,
+    "snapshot_directory": "random_backend_final",
+    "source_hashes": "backend_write.source_hashes.json",
+    "random_summary": [
+      "RNG_SUMMARY scope=tb_backend_write.T seed=750318462 draws=3980 state=2e6c20cb"
+    ],
+    "markers": [
+      "TEST PASS tb_backend_write checks=16"
+    ]
+  },
+  {
+    "case": "backend_write",
+    "top": "tb_backend_write",
+    "ids": [
+      "TC-F14"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "log": "backend_write_seed_360207181.simulate.log",
+    "started": "2026-10-12T09:14:08.106535+08:00",
+    "finished": "2026-10-12T09:14:17.456784+08:00",
+    "wall_seconds": 9.36,
+    "snapshot_directory": "random_backend_final",
+    "source_hashes": "backend_write.source_hashes.json",
+    "random_summary": [
+      "RNG_SUMMARY scope=tb_backend_write.T seed=360207181 draws=3980 state=7e1e1694"
+    ],
+    "markers": [
+      "TEST PASS tb_backend_write checks=16"
+    ]
+  },
+  {
+    "case": "backend_edge_recovery",
+    "top": "tb_backend_edge_recovery",
+    "ids": [
+      "TC-F13",
+      "TC-F14"
+    ],
+    "seed": 1417633351,
+    "status": "FAIL",
+    "exit_code": 0,
+    "log": "backend_edge_recovery_seed_1417633351.simulate.log",
+    "started": "2026-10-12T09:14:28.613345+08:00",
+    "finished": "2026-10-12T09:14:42.072852+08:00",
+    "wall_seconds": 13.45,
+    "snapshot_directory": "random_backend_final",
+    "source_hashes": "backend_edge_recovery.source_hashes.json",
+    "random_summary": [
+      "RNG_SUMMARY scope=tb_backend_edge_recovery seed=1417633351 draws=13 state=e561cd88"
+    ],
+    "markers": [
+      "Fatal: EDGE/R k=2 id=1 resp=0 last=0 data=0853e29274328a91"
+    ]
+  },
+  {
+    "case": "backend_edge_recovery",
+    "top": "tb_backend_edge_recovery",
+    "ids": [
+      "TC-F13",
+      "TC-F14"
+    ],
+    "seed": 750318462,
+    "status": "FAIL",
+    "exit_code": 0,
+    "log": "backend_edge_recovery_seed_750318462.simulate.log",
+    "started": "2026-10-12T09:14:42.076842+08:00",
+    "finished": "2026-10-12T09:14:50.240209+08:00",
+    "wall_seconds": 8.16,
+    "snapshot_directory": "random_backend_final",
+    "source_hashes": "backend_edge_recovery.source_hashes.json",
+    "random_summary": [
+      "RNG_SUMMARY scope=tb_backend_edge_recovery seed=750318462 draws=13 state=d172c3cf"
+    ],
+    "markers": [
+      "Fatal: EDGE/R k=2 id=1 resp=0 last=0 data=3aa715e15b87e3f2"
+    ]
+  },
+  {
+    "case": "backend_edge_recovery",
+    "top": "tb_backend_edge_recovery",
+    "ids": [
+      "TC-F13",
+      "TC-F14"
+    ],
+    "seed": 360207181,
+    "status": "FAIL",
+    "exit_code": 0,
+    "log": "backend_edge_recovery_seed_360207181.simulate.log",
+    "started": "2026-10-12T09:14:50.249746+08:00",
+    "finished": "2026-10-12T09:15:00.292461+08:00",
+    "wall_seconds": 10.05,
+    "snapshot_directory": "random_backend_final",
+    "source_hashes": "backend_edge_recovery.source_hashes.json",
+    "random_summary": [
+      "RNG_SUMMARY scope=tb_backend_edge_recovery seed=360207181 draws=13 state=a918025e"
+    ],
+    "markers": [
+      "Fatal: EDGE/R k=2 id=1 resp=0 last=0 data=53bb015e418bca16"
+    ]
+  },
+  {
+    "case": "board_cdc",
+    "top": "tb_board_cdc_smoke",
+    "ids": [],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-11T22:25:03.303148+08:00",
+    "finished": "2026-10-11T22:25:41.880370+08:00",
+    "wall_seconds": 38.58,
+    "log": "board_cdc_seed_1417633351.simulate.log",
+    "random_samples": [],
+    "random_summary": [],
+    "preserved_pass_from": "random_final",
+    "snapshot_directory": "random_final",
+    "source_hashes": "board_cdc.source_hashes.json"
+  },
+  {
+    "case": "board_cdc",
+    "top": "tb_board_cdc_smoke",
+    "ids": [],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "log": "board_cdc_seed_750318462.simulate.log",
+    "started": "2026-10-12T09:15:00.390175+08:00",
+    "finished": "2026-10-12T09:15:10.832752+08:00",
+    "wall_seconds": 10.44,
+    "snapshot_directory": "random_final",
+    "source_hashes": "board_cdc.source_hashes.json",
+    "random_summary": [],
+    "markers": []
+  },
+  {
+    "case": "board_cdc",
+    "top": "tb_board_cdc_smoke",
+    "ids": [],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "log": "board_cdc_seed_360207181.simulate.log",
+    "started": "2026-10-12T09:15:10.860341+08:00",
+    "finished": "2026-10-12T09:15:19.181299+08:00",
+    "wall_seconds": 8.33,
+    "snapshot_directory": "random_final",
+    "source_hashes": "board_cdc.source_hashes.json",
+    "random_summary": [],
+    "markers": []
+  },
+  {
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "log": "real_mig_seed_1417633351.simulate.log",
+    "wall_seconds": 163.55,
+    "case": "real_mig",
+    "ids": [
+      "TC-F16"
+    ],
+    "snapshot_directory": "real_mig_recovery",
+    "source_hashes": "real_mig.source_hashes.json",
+    "preserved_pass_from": "real_mig_recovery"
+  },
+  {
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "log": "real_mig_seed_750318462.simulate.log",
+    "wall_seconds": 1005.26,
+    "case": "real_mig",
+    "ids": [
+      "TC-F16"
+    ],
+    "snapshot_directory": "real_mig_recovery",
+    "source_hashes": "real_mig.source_hashes.json",
+    "preserved_pass_from": "real_mig_recovery"
+  },
+  {
+    "case": "real_mig",
+    "top": "tb_real_mig_recovery",
+    "ids": [
+      "TC-F16"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "log": "real_mig_seed_360207181.simulate.log",
+    "started": "2026-10-12T09:15:19.350512+08:00",
+    "finished": "2026-10-12T09:15:55.516155+08:00",
+    "wall_seconds": 36.17,
+    "snapshot_directory": "real_mig_recovery",
+    "source_hashes": "real_mig.source_hashes.json",
+    "random_summary": [
+      "RNG_SUMMARY scope=tb_real_mig_recovery seed=360207181 draws=35 state=ab953c65"
+    ],
+    "markers": [
+      "TEST PASS tb_real_mig_recovery old_read=4 fresh_write_read=4 DDR4_REAL=1"
+    ]
+  }
+]

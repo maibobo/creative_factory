@@ -1,0 +1,41 @@
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/ready_recovery/xsim_script.tcl
+# xsim {ready_recovery} -testplusarg SEED=750318462 -autoloadwcfg -tclbatch {F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/ready_recovery_seed_750318462.tcl} -onfinish stop -onerror quit
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/ready_recovery_seed_750318462.tcl
+## run all
+RNG_INIT scope=tb_ready_recovery.H.phase2_pick seed=750318462 algorithm=xorshift32
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=1 value=10 lo=0 hi=31
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_ready_recovery.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_ready_recovery/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial294_145  Scope: tb_ready_recovery.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 488
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=2 value=4 lo=0 hi=9
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=3 value=0 lo=0 hi=9
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=4 value=3 lo=0 hi=9
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=5 value=7 lo=0 hi=9
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=6 value=9 lo=0 hi=9
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=7 value=9 lo=0 hi=9
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=8 value=6 lo=0 hi=9
+RNG_INIT scope=tb_ready_recovery.phase2_pick seed=750318462 algorithm=xorshift32
+RNG_DRAW scope=tb_ready_recovery.phase2_pick n=1 value=49 lo=0 hi=80
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+RECOVERY_NO_RESET_CHECK kind=0 interrupted_bytes=16 fresh_beats=4 completion=1
+RNG_DRAW scope=tb_ready_recovery.phase2_pick n=2 value=29 lo=0 hi=80
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+RECOVERY_NO_RESET_CHECK kind=1 interrupted_bytes=64 fresh_beats=4 completion=1
+RNG_DRAW scope=tb_ready_recovery.phase2_pick n=3 value=26 lo=0 hi=80
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+RECOVERY_NO_RESET_CHECK kind=2 interrupted_bytes=32 fresh_beats=4 completion=1
+TX_CHECK addr=0000a000 length=16 end=0000a010 frames=1 beats=2
+TEST PASS tb_ready_recovery not_ready=DDR,PCIe,Aurora aborts=3 R_error=1 B_error=1 timeout=1 overflow=1 clear=0x10
+RNG_SUMMARY scope=tb_ready_recovery.H seed=750318462 draws=47339 state=e54b87ac
+RNG_SUMMARY scope=tb_ready_recovery seed=750318462 draws=3 state=a280585c
+$finish called at time : 289170 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/tb_ready_recovery.sv" Line 78
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 926.391 ; gain = 376.969
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 21:04:37 2026...

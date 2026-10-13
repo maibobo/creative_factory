@@ -1,0 +1,664 @@
+{
+  "date": "2026-10-10",
+  "host": "DESKTOP-H0AB0MD",
+  "remote_root": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev",
+  "matched_files": 153,
+  "files": [
+    {
+      "path": "rtl/aurora1g_board.xdc",
+      "sha256": "85C7E96F422269FEBFC6214D7E1CB59FF1F3D7DC3166A08ACE3EF7531EAC704D"
+    },
+    {
+      "path": "rtl/rtds_1g_periodic_tx.v",
+      "sha256": "D70C6D9577F5D366233F7392D3F8DA84529586B02075966B00E63BCDC3F66C7E"
+    },
+    {
+      "path": "rtl/rtds_fpga_1g_init.v",
+      "sha256": "4D4DEE2976B50FCAEAB3B6A3B61AF15B0C2951CCC56297BD269D03D2C6385EB3"
+    },
+    {
+      "path": "rtl/rtds_fpga_bit_cdc.v",
+      "sha256": "CE4CC11D09FF031E37BA62899D4F42A9FC37E725E519A146BB1EF9686848B149"
+    },
+    {
+      "path": "rtl/rtds_fpga_cfg_cdc.v",
+      "sha256": "7DF0397CA62EA00CD1FE23E7F59097E998F2F938DDED354EE79221D9204CC259"
+    },
+    {
+      "path": "rtl/rtds_fpga_count_cdc.v",
+      "sha256": "9A4174877A18086971F1C35F87E8CBB3FF84B5CB77E5DA9ACCA08CBCD5947C35"
+    },
+    {
+      "path": "rtl/rtds_fpga_reset_sync.v",
+      "sha256": "AE78CB7D15B37C373B036BEF094C7C74549BA3E0FA846154EFF7DE16E0C225C5"
+    },
+    {
+      "path": "rtl/rtds_rx_block_writer.v",
+      "sha256": "E86699193DE598003162988E7067E8DDAE87D38C93322C281D1DF2CF3DF0E0FE"
+    },
+    {
+      "path": "rtl/rtds_rx_frame_fifo.v",
+      "sha256": "15FD93613F8BD3775C1A1C6FB68AB8F2B8DB9445E0118E6260C63A3ACC0CA2F0"
+    },
+    {
+      "path": "rtl/rtds_sync_timebase.v",
+      "sha256": "25A3B3CBB19CF22E9A102212B6C21A9B9AC3D3816E63F81C4AC6C3FF6D4D822B"
+    },
+    {
+      "path": "rtl/ddr4/rtds_axi_ram_model.sv",
+      "sha256": "A30104DDC54CEB1BA2C1B45BFEAC8003F83E1636CB44DD677A9A11579FFF0EB2"
+    },
+    {
+      "path": "rtl/ddr4/rtds_ddr4_backend.sv",
+      "sha256": "62907E3B5B288DE8AA8285A2ABDE5D86FEAF2D1CE80FB4AD318020A824DC8583"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/Aurora_frame_gen.v",
+      "sha256": "30ECD45152F5985468D3F14A7A3B9E02D6BED6F1153C145FB3BD8DC1B175B232"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/Aurora_PCIe_cdc.v",
+      "sha256": "C58DC28FEB3D7A45F5D0E8FC953C7308D52B8DD13709A71C09EA471E9DF07549"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/CLK_GEN.v",
+      "sha256": "2AC3A9720A3E99C962425D4C2E2F0F2EE35A9AB36826F9DC68B507AA1E6940D8"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v",
+      "sha256": "A58509155BC1BA7DC83951A51C633A6858D2C83FC412927F3CB89ECD2D699C7D"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/DATA_CDC.v",
+      "sha256": "A0A81FAF0B8AB90B577F74A5F51A225DBA81FFE9EDD2C51653A9E0E4CC272C17"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v",
+      "sha256": "71AEA36F58EACCD7D1EA02E8FC076933F0E152BC3ED9010193F32B8AC8A592DE"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/LED.v",
+      "sha256": "995C42E8BCE62CAE8D460EDF0C80E008053B4EF716F82D2157DBFF420FB0A89B"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v",
+      "sha256": "A18D31ABECA3A51FDB587A6BFD10572F280F671260D5A3126AA1382C62A14EEF"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe_Aurora_cdc.v",
+      "sha256": "083176162879AB3C5B279BFF14A2183F53AE0A3DE1A2BFAAA58518155E9214A8"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v",
+      "sha256": "F7E1064D9AFC9DF3B313F1A69850FDBB6ECD37F096259235EED8AAAC2CE6DC1B"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/TEMP_RD.v",
+      "sha256": "22C212366AAD8D9F0335C82573991F94C41775DA093E45C24689F5DDAA7F6731"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/TOP.v",
+      "sha256": "6BBCBE4AB635F540C1557F2701D4C9AB7928A5A67FEF275E774AB9477D2F7476"
+    },
+    {
+      "path": "regression/batch_1g/full_wave_gui.tcl",
+      "sha256": "6091948C29C8E3F9352240FBBEB9B3F67BF6B0E1C26DD4221D90D30C802A1484"
+    },
+    {
+      "path": "regression/batch_1g/open_module_wave.tcl",
+      "sha256": "E6ED49876A42AC6662BBD196E0AF1E60D7A200F6E3E0CC3A6AB572C56D828D58"
+    },
+    {
+      "path": "regression/batch_1g/record_module_evidence.tcl",
+      "sha256": "AA31B6C60933516599A54D5F8B21E3558943C913FEB9CA2C89BF3DE475554A7F"
+    },
+    {
+      "path": "regression/batch_1g/rtds_1g_test_if.sv",
+      "sha256": "F273A6E587DAED5D85908BCBDBD251F70DC9B13201CD292DB3B830E998E73373"
+    },
+    {
+      "path": "regression/batch_1g/rtds_axi_tail_test_if.sv",
+      "sha256": "91A3D7EBACF462C144E623F98427E7AECC096E3D24B3858CEC5FB9785D0038DA"
+    },
+    {
+      "path": "regression/batch_1g/rtds_axi_test_if.sv",
+      "sha256": "B48C2A87E28A8F557E2E6DA70598224BFBCC16DB043491A2799D2AA210C4E679"
+    },
+    {
+      "path": "regression/batch_1g/rtds_regs_test_if.sv",
+      "sha256": "89BB7045B9FEA03E75B4109063D250BDA6D5EA92BB9753952B74089607EA8BB9"
+    },
+    {
+      "path": "regression/batch_1g/rtds_ring_test_if.sv",
+      "sha256": "77D285721833410D273973FB665C97C94DE94F873789ED22D893ECA0F4010AC0"
+    },
+    {
+      "path": "regression/batch_1g/rtds_rx_fifo_test_if.sv",
+      "sha256": "D5AE55446CB825E68DB312EB41C4236E4D1AEBD7D0E1918110A005CDA26DF807"
+    },
+    {
+      "path": "regression/batch_1g/rtds_tx_test_if.sv",
+      "sha256": "E51E5DDA4C46B56F8891FD105FC557D32A69F652791D4523F1C205E38ABA1E50"
+    },
+    {
+      "path": "regression/batch_1g/run_later.tcl",
+      "sha256": "0086F89D00B2CE0DD18944B872E045B15ADC6EA3BC763116D06B8D1A8CEA325C"
+    },
+    {
+      "path": "regression/batch_1g/run_modules.tcl",
+      "sha256": "ACB8B25242E9A32B1819A5C5F1F086407368DEDE96B94B65368D9584AE25D875"
+    },
+    {
+      "path": "regression/batch_1g/tb_rtds_1g.sv",
+      "sha256": "2B1CD5D6DAF8E653E5D5914EBE02101F7CD3599838AA47E38432CAF049C96D80"
+    },
+    {
+      "path": "regression/batch_1g/tb_rtds_axi.sv",
+      "sha256": "35971B916608D567E476E4E3EFA8C73552C7E500C07439062BB5DB8C3E254320"
+    },
+    {
+      "path": "regression/batch_1g/tb_rtds_axi_tail.sv",
+      "sha256": "7EC8A9D27A42CD4B65526FC61B66073DA67C13EF2E8722B3A50D14D68BC9BA06"
+    },
+    {
+      "path": "regression/batch_1g/tb_rtds_regs.sv",
+      "sha256": "35B4DA2B7A951D221E85C1E06B30495DADFB280DD267025F15EA4FEE05A7B450"
+    },
+    {
+      "path": "regression/batch_1g/tb_rtds_ring.sv",
+      "sha256": "22259B662E400E80BC79CDCDEB576C3B32027D0EFCC77EF535AB2C0230D55516"
+    },
+    {
+      "path": "regression/batch_1g/tb_rtds_rx_fifo.sv",
+      "sha256": "2BC988EFDECE960CBE2215A1E7A2595884CF370EBA483BDF0AD60B77747790CE"
+    },
+    {
+      "path": "regression/batch_1g/tb_rtds_sync.sv",
+      "sha256": "CDEDA1EB844FBD18A70EC6135A4A298FB38E43E88901331B7E9A140BF9688FEA"
+    },
+    {
+      "path": "regression/batch_1g/tb_rtds_tx.sv",
+      "sha256": "A846B155D66F91E7960986CE5AA4710532C22C126B7F57C6AF9C50D05C55D307"
+    },
+    {
+      "path": "external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_axi_to_ll_exdes.v",
+      "sha256": "3F43CB04DC6BE1C2F69EE5D53F75F0D39EBF46E0883ECE7AEEF275AF8B085B6E"
+    },
+    {
+      "path": "external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_design.v",
+      "sha256": "2354B16CF7ECA846C9E73110033228AF6631C41C9A5E3B39A6F6759E688B18F5"
+    },
+    {
+      "path": "external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_ll_to_axi_exdes.v",
+      "sha256": "82F28F31DBF196D674B1A54BD07EF47F30C1A140C822ED35E8D3A3F3061288BA"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/sources_1/new/aurora_64b66b_top.v",
+      "sha256": "04A0FF5F886568659B70D4A9EE8D352D990EB7BC8627E405C1324D46F5636B17"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/sources_1/new/led.v",
+      "sha256": "4CF65D440CCFAA905F7158559849892B93293BF117486F494065DB25688F9C08"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_cdc_sync_exdes.v",
+      "sha256": "9A45F7B79E5198EBD0B3C4AD715CF9383FF39DA2E971CB69B3E2B901F493BD4D"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_example_axi_to_ll.v",
+      "sha256": "8597DCCD58D33E8A5EC3F6AC2534129DA5AE7F8719B58908AD5453EC58055536"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_example_ll_to_axi.v",
+      "sha256": "7F9B0C307114E4F5C7C0C0B658BB970900666AD0EA05C015DDEC8BCE1C09B689"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_exdes.v",
+      "sha256": "5EC3B1C6509F7EC03FE2F1AACF428E542542738DAB216B4DA28C8F061FE4E042"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_frame_check.v",
+      "sha256": "A0986DCA646A25F3BE5FC5D4B3AFE61655B2B6935C86149F4A61989F7328958B"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_frame_gen.v",
+      "sha256": "3DC7157538500935DCA0C657D38750E4A9240DB89596C0B85409951605B0993D"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/imports/aurora_64b66b_0_tb.v",
+      "sha256": "17459EF85B1676A59327988E0C4F6DBDF0B2DFE21008D6760A60F915BD27E3AE"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/cdc_sync.v",
+      "sha256": "B8208B0ED42CF7A891D5E408898E9D2821BBD49B301F8EFAB754872DC2013D5A"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_aurora_loop.v",
+      "sha256": "3E1D281523BB30E9B6B7AF0AD1859590DE0B012D8941EE062904EEEFA8F7BB8A"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_aurora_loop_hw.v",
+      "sha256": "BEAB56443F681A28EB92252C0CA53A5F6390072C7B8503A1006290C9B1353BEC"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_rx.v",
+      "sha256": "A069531AAB78C85B70FF23E22EBBD46E87B1561C53D4948D2BC19AE0D3A61C19"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_top.v",
+      "sha256": "4D78A15DCD21D6425163B8F6F0602A238D5ADB5FED6465E232D5B2C2801ABA7C"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v",
+      "sha256": "EBF6560AD7228748A839BAA8D7C364045CBEA36DC783A5008E38C5F9C37BE9C2"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_pcie_conv_dma_wrapper.v",
+      "sha256": "30AF79AE33C9235BCE113D60C175CFB59B13B740AD6FAABD06F8ED1C1FFB4DAB"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_hw_test_engine.v",
+      "sha256": "1A8F0C2F780D8CAF393171AA45738C8226A8C9794B4C427826E75BF8885323F1"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/ila_brg_loop.v",
+      "sha256": "E27BC28F1220CC0243D31F233745B6F033BA3CAD6D6533B03DD59C69F8828821"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tb_aurora_power_on_reset_seq.sv",
+      "sha256": "0D46B9EA2098EFB39F4F32905796FDAD3A105D4B17EE027875012ADC6368F139"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tb_backpressure_test.sv",
+      "sha256": "458C8EC1DCCE4EDEC0FA79D7AB965BF66CC67EFC2DC0AF4D8ED71AE83055178B"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tb_fdma_aurora_brg.sv",
+      "sha256": "0149B0B113942DD4285294F3DF8BEB84AE4144751397245B1706F51E9B992E93"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tb_fdma_aurora_brg_aurora_loop.sv",
+      "sha256": "922F90C031E709F9ED5237B127A14759BF50A6DF4CADB849A2E06F9403EE9E27"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tb_fdma_aurora_brg_aurora_loop_bp - note.sv",
+      "sha256": "18FBA7B64AA953EB455F2DE8773E1ABA6DF26BA3A93784276A924C727530313E"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tb_fdma_aurora_brg_aurora_loop_bp.sv",
+      "sha256": "339CDD78792DF496A5CDC361AB53EE9888A960ED4C7C622C5D2FF075333EAEF8"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tb_fdma_aurora_brg_aurora_loop_nobp.sv",
+      "sha256": "6F075EA8D2D57387317A69BCDF34F8A593CB479BB33132F129C042203BCF60C7"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tb_fdma_hw_test_engine.sv",
+      "sha256": "347353AA350CD2A9C67A8894CE80A706906FF73EA22462B6F7A0B256C520EE4C"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tb_fdma_tx_burst_boundary.sv",
+      "sha256": "CE4CEDB0644C1E481AA1D74CF92AF97B9B9C224C4E4DDDACE1CA1C07DFC8C64E"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/harness/aurora_loop_harness.sv",
+      "sha256": "9056A9CF6F54ACCC7DA73D25845B244A8DB41C51D429330E0B90AA9FEBB51CBB"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/harness/brg_harness.sv",
+      "sha256": "2B2AD6B3BA6A90CF2B9E4D43920CDA32869DBC4014A64D94B5BB2030A9E397F2"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/integration/axi_ram_model.sv",
+      "sha256": "F48C98C3309ACB01F56122B45D2C6C210918B6D471AC47E619E8E5BF42CD6A63"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/integration/tb_fdma_aurora_brg_conv_dma_integration.sv",
+      "sha256": "01722D53F4784CDA4C6290DE59ECC13F63379A9E77F74919F615A26E8D7ED6AE"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tc/tc_aurora_loop_addr_wrap.sv",
+      "sha256": "B2EDD677EF0A4B8BC36DF201DF220B72CDF615CB32AA52624FF579EE614662FB"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tc/tc_aurora_loop_bp.sv",
+      "sha256": "5A0867FB49EA5AC0A6C00017FDE8BC667A6C6470898679282AAA2C23E7CD12AD"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tc/tc_aurora_loop_nobp.sv",
+      "sha256": "B8991FAEBE8535FCCA8B2B88C7ABF987C0475077242AD5F4381ECADE6487354A"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tc/tc_base.sv",
+      "sha256": "CCCEBB92DE7F170AA8A5D06ED0B14133CB774C99BF67E45E1770EFD3651DB79F"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tc/tc_brg_rd_ready_stall.sv",
+      "sha256": "523E4E06EF584D6F7AAAA472064C26D708D278E5FB9BBE1A34E9C5705D00CA77"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tc/tc_brg_rx_fifo_overflow.sv",
+      "sha256": "95D010611EE2E18B0B9C64DDAC0AFEC24610D70F2147A227C575C949ECC34DE8"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tc/tc_brg_tx_fifo_waterline.sv",
+      "sha256": "67C05A2D64F33E1CA66472AD571D42F34F37206B230CA07D88EA39AC3CF67217"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tc/tc_brg_wr_ready_stall.sv",
+      "sha256": "5E25A8AC6CBEC11FD1D84FD99932F2A6722902FCF5B0A72ABBF083E9D23F1D7B"
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/tc/tc_if.sv",
+      "sha256": "3EA152ACD07352BC701330CB71AF5282CD2D80E873A284C2B17C4F6C5BF1B234"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v",
+      "sha256": "C72C1B4AB9FDBF441EE8BD3212A4938EBD31028023302E4DF666B40280379D8E"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0.xci",
+      "sha256": "833671FB1976E25DAD6B6B7240A39AA503C65215ABB4013D2FC33D637FE78F03"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_stub.v",
+      "sha256": "2C8DA86D446286663BDD79A716CDFEF43307AA2056C1C648098F912373BE7BB0"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1.xci",
+      "sha256": "CC64E583C7778C51B6DEBB9C98BB2B69F6B61098C84A150200A467E630FE4DFE"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_1/design_1_auto_cc_1_stub.v",
+      "sha256": "980FF9431BE3D4967DE220AA3B1AEDD659CBD420814576C74C35BDC7627EEBD6"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_axi_interconnect_0_1/design_1_axi_interconnect_0_1.xci",
+      "sha256": "C4FB5DF4BAD3BD02FC02746AF7A97D6A04125E8B24A5F97EBC7FF00F2772A73A"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_axi_interconnect_0_2/design_1_axi_interconnect_0_2.xci",
+      "sha256": "DCB083632B1666D016583525F5D9AD20AE7B2FB253C906FF6D753861F4C6BB44"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_CONV_DMA_0_0/design_1_CONV_DMA_0_0.xci",
+      "sha256": "0ACA2F0F24EF2552B29D5EDC59585B775E993DC3A62EA0465734524601A9B0A3"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_CONV_DMA_0_0/design_1_CONV_DMA_0_0_stub.v",
+      "sha256": "2F9BD6B7FF59BC90DC91B06748188069F0CB05E8F8BD223D140E56C67413E256"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_INFO_EXCH_0_0/design_1_INFO_EXCH_0_0.xci",
+      "sha256": "2BD74DFC1C40F3FB716FA85BFDF979D2868D18CE9CEF07DB41D7C1873C1DD8BE"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_INFO_EXCH_0_0/design_1_INFO_EXCH_0_0_stub.v",
+      "sha256": "D1A47585BFCED110C45A96647DA8FC587C9CEA12C276E5FF22A381EA923ED210"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0.xci",
+      "sha256": "C497B913A4C9B13D33DB9D7CAFADEC88136AF108E07702B70844F7E3C4330042"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_util_ds_buf_0/design_1_util_ds_buf_0_stub.v",
+      "sha256": "E6AAA827C0E079FF770FE8A496672D8E2706052B49E822B27E70975A36FCBE75"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.xci",
+      "sha256": "001DEE32E084E9502B05E0A150BD77BA1E71961F4835C812BED554AE87893BFD"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_stub.v",
+      "sha256": "E587D6731FB59D47B00BA0B98C4BE89338920647574EB0DC2E5220A86E0850FA"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0.xci",
+      "sha256": "917E4E1B682FE4F585B566F4009E55D78F45C5C250E16346EA428755ACA16B9B"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0_stub.v",
+      "sha256": "BE4340BD3ADC97833FEF95723100D668C53E806D62EDE7E07E535908BFB149FB"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/design_1_xdma_0_0_pcie3_ip.xci",
+      "sha256": "6BE37435DD81C621100F27FD0AD87F993B47821C788DFA63D09AFC9BF2BE2288"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_0/ip_0/design_1_xdma_0_0_pcie3_ip_gt.xci",
+      "sha256": "2116DFC8893DE1156A234244B4F52321AB70FC94F53462E1FE26D85BF23A6511"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_1/xdma_v4_1_8_blk_mem_64_reg_be.xci",
+      "sha256": "1EC4162B3E46E44286736301E12CB4640619DCE35F2DF28A3A35C7B19E421BF0"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/ip_2/xdma_v4_1_8_blk_mem_64_noreg_be.xci",
+      "sha256": "7A2B4BB0E42F11996E8AC1E76122C117EB3D9EC7015B1AD1E1B5480841A8D34B"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/sim/design_1.v",
+      "sha256": "E4999A06E0EA4A48B9BD2B83F3401B84322AB6405758886C47863E3A39B8B3E1"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/synth/design_1.v",
+      "sha256": "537D7365B08ACDF5CFC36F8244914C46CABA71CCCD9D47D18D110D45CBB90DD7"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci",
+      "sha256": "0159C03E83C1F92CBECF20338226EA585EACB4960CE8783BE58D34055FE96515"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v",
+      "sha256": "B1CE4CDD04BAC54537A24176884C199E5FB1F020CF7911C3A9A9584377CCDE9E"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/fifo_AURORA_DATA64/fifo_AURORA_DATA64.xci",
+      "sha256": "C3BFA4D0744C8B0A0AAE402AED8498D58B188A37A29EE7E8125B06751D28BDDD"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/fifo_cdc_aurora/fifo_cdc_aurora.xci",
+      "sha256": "29415A442C166F4FD4E58329BEB2078D506C749F384B7500F3D2C2667DBD82C1"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/fifo_cdc_aurora/fifo_cdc_aurora_stub.v",
+      "sha256": "6CD3567F11959B01CEC45DDC40C2585EDDE137D279BB7C6934F2CB0678586E29"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/fifo_cdc_pcie/fifo_cdc_pcie.xci",
+      "sha256": "38F9990B092256FFD11CC4C40F4DD824A4531F54078D4DC9F7363AB91F588491"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/fifo_cdc_pcie/fifo_cdc_pcie_stub.v",
+      "sha256": "CCBD063B83358EC9A0BBA9009182320D0BE7F15B0BCE2C129B30A4E57E93B60A"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_0/ila_0.xci",
+      "sha256": "E990136FFA48031F1EA140BAF6D0134BE571C9DE5333086C12E636C8A9BBD058"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_0/ila_0_stub.v",
+      "sha256": "2F5E3D9685693228F429118CFE150FA30191E4F2738933A2E9CF78AFEBB0495E"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_FDMA.xci",
+      "sha256": "272CE4BE1D1A008EF1E7407AA18553A1148CA8D5E8BE871EEC12CA009BDBA43A"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_FDMA/ila_FDMA_stub.v",
+      "sha256": "ED319C2117828052F2C11D697C8AB116FC549380B9B2C9F799073658BC93EBF7"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_temp.xci",
+      "sha256": "A89C3172A5518173C52F0FC6BDF49DD3738713A745B00EFCE6A624A3B5ED2897"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/ila_temp/ila_temp_stub.v",
+      "sha256": "45352BB155BBC8E81798CD2463BBA49AB3B3078C043CA2C01C7CE7EE8CF04651"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter.xci",
+      "sha256": "B4036AFFD5260F38037B3ED11814EBA0CD4481047D913963201C3E85082AF9C3"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter_stub.v",
+      "sha256": "BED55234FFA58B0FB0E7EA19250E124514CA241C7E0917939D2CA56117EE792E"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig.xci",
+      "sha256": "37135D94E78F5C3F9BF9695AAC01B55C85B39E79E8380E9C50E7E0CCB5CE890B"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig_stub.v",
+      "sha256": "9B6676E0F6843520DACD02055D2395A3621662F4F065AE38F2CAF3D4F683422E"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_0/bd_6edb_microblaze_I_0.xci",
+      "sha256": "AA30233F27249BA1E61361C1C17D8842CACD3CFBE9FF142AD28D33B7CC0DD1E5"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_1/bd_6edb_rst_0_0.xci",
+      "sha256": "B46844791E360DE6C9856542DD05C5BDA2DD5F078876C21E74BE4EFE205FC028"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_10/bd_6edb_iomodule_0_0.xci",
+      "sha256": "6403E091A7FDCC9A9168A7221384B6BBDC088CF96E1C6066FA17C66FE055A7AC"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_2/bd_6edb_ilmb_0.xci",
+      "sha256": "0553411907BBCF0419D8306379EF8FF4C986F78228FBA499F856E77D02AE62E0"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_3/bd_6edb_dlmb_0.xci",
+      "sha256": "324B82BD4C4037A4C3AA7C7D6B117EA5751ED49A41BC1E57D6683FC74664123C"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_4/bd_6edb_dlmb_cntlr_0.xci",
+      "sha256": "70C75B734A6A3B4A3C7AFFAD1BBBEB682EE4F401D8CB0D48A760633675E0FDD9"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_5/bd_6edb_ilmb_cntlr_0.xci",
+      "sha256": "E4C231C99B6B6B11A21B42631AE1777B280D6410713478AED596985708EDE051"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_6/bd_6edb_lmb_bram_I_0.xci",
+      "sha256": "3090045B8B9C6470FF1B972B7937E31833532BA56211387FA11976C9470CE4EE"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_7/bd_6edb_second_dlmb_cntlr_0.xci",
+      "sha256": "171C99C4A20ABA4959835BF9CF5581A2B74AA172F1435BF3AC65E73AE4C8F692"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_8/bd_6edb_second_ilmb_cntlr_0.xci",
+      "sha256": "9F17B7A68A8B501710ACD8C633AA51C4A2E699A22FCCD060B7F29228279A9467"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_9/bd_6edb_second_lmb_bram_I_0.xci",
+      "sha256": "99C12C22EAE28B9BB6BB6A6C56C9457134A497317C988EE0D6ECE6BE0A6CD0F9"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/ip_0/rtds_ddr4_mig_microblaze_mcs.xci",
+      "sha256": "468CBD8544F9F37221CD382D59FCEC7E7A7E917C09C6148FDEF4C1186B58C514"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/ip_1/rtds_ddr4_mig_phy.xci",
+      "sha256": "14A6131ACE938BEED7C94654A4B855517AEBA8BB518F802447205966C4675EB9"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon.xci",
+      "sha256": "52205BDF9E816AF54623D60532E8F6243CD3F05B7721A138D6138929FAFB5AFC"
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/ip/sys_mon/sys_mon_stub.v",
+      "sha256": "81282422E0F65F7AEB0F679F726C46B09FAD53B4AE40D4292A23D839DDC33695"
+    },
+    {
+      "path": "regression/sim_xdma_trythrough/aurora_ll_peer_bfm.sv",
+      "sha256": "707079E30228460AC446BD342518E6CCCCC69BB1C6E896CE48E138B5B22D08DB"
+    },
+    {
+      "path": "regression/sim_xdma_trythrough/conv_dma_axi_response_assertions.sv",
+      "sha256": "28C70F7E71F1FF9101FDCD937087B9F66D8DBF4817A8EFF5639D73417A8BBEC3"
+    },
+    {
+      "path": "regression/sim_xdma_trythrough/README.md",
+      "sha256": "2E6C449FC040A847AA7326255F90730DD5982CF11D5BFA8B4DF47FEE5873A054"
+    },
+    {
+      "path": "regression/sim_xdma_trythrough/rp_api.svh",
+      "sha256": "A5EBD84D6DE4D33FFDABACF2E91D50DF83B79B8433E3725A81C45D35461934C5"
+    },
+    {
+      "path": "regression/sim_xdma_trythrough/rtds_assertions.sv",
+      "sha256": "4C87066514BECB27F237D285D161D0D709CE5DACBF56015B83F4B37CAE3440BB"
+    },
+    {
+      "path": "regression/sim_xdma_trythrough/rtds_scoreboard.sv",
+      "sha256": "4BACFFE7A7A6AEE7C3C31F318A8847EB40E28D10820F8175AA0E8898D26B6C8C"
+    },
+    {
+      "path": "regression/sim_xdma_trythrough/rtds_test_pkg.sv",
+      "sha256": "66855E58545964A1D2860F22292F2C302204F223F2FC83522C698EE58C7FDC4F"
+    },
+    {
+      "path": "regression/sim_xdma_trythrough/run_all.tcl",
+      "sha256": "6218FFA4F2392F3C61113605D4AB2CD023186E11F1DA826B920E510A9A797EFB"
+    },
+    {
+      "path": "regression/sim_xdma_trythrough/run_xsim.ps1",
+      "sha256": "7F35AA21B7E2625D97264D14EBDB875A74362E1F4FA4D7E7C290B0D9F453E902"
+    },
+    {
+      "path": "regression/sim_xdma_trythrough/tb_xdma_rtds_trythrough.sv",
+      "sha256": "16FCBCE51EDEC688A56178B919FBD7228809DC3C13242EFB3CB9E32528C3793F"
+    },
+    {
+      "path": "regression/sim_xdma_trythrough/xdma_rp_backend.sv",
+      "sha256": "26819472EB6D1CD09DC9600A67EE1212300A91F41267DC9319F322A87A20EDAE"
+    }
+  ],
+  "documents": [
+    {
+      "name": "CPU-FPGA_PCIe寄存器表单_软件指导手册_V1.2.docx",
+      "remote_relative": "docs\\CPU-FPGA_PCIe寄存器表单_软件指导手册_V1.2.docx",
+      "sha256": "ce60f58d07b5d4ba304b4ad845048ce98f3b70fd9a86515ec9a52fea854d0af0",
+      "bytes": 52745
+    },
+    {
+      "name": "CPU-FPGA_PCIe寄存器表单_软件指导手册_V2.0.docx",
+      "remote_relative": "docs\\CPU-FPGA_PCIe寄存器表单_软件指导手册_V2.0.docx",
+      "sha256": "c2cef7d565e8a4973fd121728a287f8e3fb5070974775d6972784ddaa4a05b6b",
+      "bytes": 52683
+    },
+    {
+      "name": "PCIe交互协议_V2.01.md",
+      "remote_relative": "docs\\PCIe交互协议_V2.01.md",
+      "sha256": "bfe0f617cbef331d387f3aec4520f62946b0be1a4a3e58d9235d9c21be1ac776",
+      "bytes": 6981
+    },
+    {
+      "name": "RTDS_V2.01_设计规格_测试点_测试用例_追溯矩阵_20260923.xlsx",
+      "remote_relative": "docs\\RTDS_V2.01_设计规格_测试点_测试用例_追溯矩阵_20260923.xlsx",
+      "sha256": "e4e76d079443cf97a399d99e62b65676cfa55e5f8a8b37d8c8a4b631431c3808",
+      "bytes": 33836
+    },
+    {
+      "name": "RTDS_主机FPGA_PCIe_DDR4_Aurora_详细设计方案_V1.0_20261002.docx",
+      "remote_relative": "docs\\RTDS_主机FPGA_PCIe_DDR4_Aurora_详细设计方案_V1.0_20261002.docx",
+      "sha256": "6c6a1d22fab03f5ec5b187b51dbebf2c807c3ad1baad0b85526f652a8aec06f0",
+      "bytes": 580065
+    },
+    {
+      "name": "RTDS_设计方案_时序_CDC与软硬件协同深度解析_V1.0_20261008.docx",
+      "remote_relative": "docs\\RTDS_设计方案_时序_CDC与软硬件协同深度解析_V1.0_20261008.docx",
+      "sha256": "d990f97b7be3ce97f9da0469cd13009884fbc0cacce867c2cc1582404e97c2ec",
+      "bytes": 1304548
+    },
+    {
+      "name": "RTDS评估系统设计说明书_V1.01.docx",
+      "remote_relative": "docs\\RTDS评估系统设计说明书_V1.01.docx",
+      "sha256": "15f4ef8961c02b0e05ba5143687f058e2321c467cfa6c530196dd9c316e7caa2",
+      "bytes": 320593
+    }
+  ]
+}

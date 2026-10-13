@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-12",
+  "docx": [
+    {
+      "path": "docs\\RTDS_恢复修复_修改因果_随机回归与展开_20261012.docx",
+      "zip_xml_relationships": "PASS",
+      "tables": 2,
+      "rendered": false,
+      "sha256": "f34c6cec8283ee620cd7a9c2542a0d6fe91df115f77c0a73ba2f0a18271eab19"
+    },
+    {
+      "path": "docs\\RTDS_历史遗留问题与后续工作清单_20261012.docx",
+      "zip_xml_relationships": "PASS",
+      "tables": 2,
+      "rendered": false,
+      "sha256": "03ec804de5764038f232dddb8bbaf12232f3fdafd7d4b8ff8378a7c81afe48e5"
+    },
+    {
+      "path": "docs\\RTDS_主机FPGA_PCIe_DDR4_Aurora_详细设计方案_V1.0_20261002.docx",
+      "zip_xml_relationships": "PASS",
+      "tables": 37,
+      "rendered": false,
+      "sha256": "24b87099e003e77e9ce759d3d0faf213ad93f2b4fb23ab18e2dc87ba82161f7b"
+    },
+    {
+      "path": "docs\\RTDS_functional_20261011\\RTDS_功能规格与验证核查报告_20261011.docx",
+      "zip_xml_relationships": "PASS",
+      "tables": 1,
+      "rendered": false,
+      "sha256": "da1815432a532fa69239a6525715367bc5676c3bf4d89b7f81fd5d706b08459b"
+    }
+  ],
+  "workbook_semantic_references": "PASS",
+  "row_counts": {
+    "设计规格": 120,
+    "测试点": 50,
+    "测试用例": 26
+  },
+  "format_checks": false,
+  "pdf_png_rendering": false,
+  "regression_counts": {
+    "通过": 19,
+    "失败": 2,
+    "未执行（展开暂不追踪）": 1,
+    "功能通过／工具退出超时": 1,
+    "核心通过／补充判据待复核": 2,
+    "部分执行": 1
+  },
+  "elaborate": {
+    "status": "PASS",
+    "log": "verification_20261011/elaborate_final/vivado.log",
+    "note": "synth_design -rtl；IP为stub/blackbox，不构成逻辑综合、IP内部仿真、完整CDC或时序签核"
+  },
+  "open_issues": 22
+}

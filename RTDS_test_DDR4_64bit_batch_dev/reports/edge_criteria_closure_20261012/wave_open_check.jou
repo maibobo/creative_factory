@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 19:16:20 2026
+# Process ID: 41012
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Command line: vivado.exe -mode batch -source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/create_and_check_edge_projects.tcl -log C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/edge_criteria_closure_20261012/wave_open_check.log -journal C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/edge_criteria_closure_20261012/wave_open_check.jou
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/edge_criteria_closure_20261012/wave_open_check.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/edge_criteria_closure_20261012/wave_open_check.jou
+#-----------------------------------------------------------
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/recovery_and_1g_20261012/create_and_check_edge_projects.tcl

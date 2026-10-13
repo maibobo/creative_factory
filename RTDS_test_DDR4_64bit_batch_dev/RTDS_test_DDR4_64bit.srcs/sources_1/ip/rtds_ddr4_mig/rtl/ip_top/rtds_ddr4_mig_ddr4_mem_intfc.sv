@@ -51,6 +51,7 @@
 // /___/  \  /    Vendor             : Xilinx
 // \   \   \/     Version            : 1.0
 //  \   \         Application        : MIG
+//  /   /         Filename           : rtds_ddr4_mig_mem_intfc.sv
 // /___/   /\     Date Last Modified : $Date: 2014/09/05 $
 // \   \  /  \    Date Created       : Thu Apr 18 2013
 //  \___\/\___\

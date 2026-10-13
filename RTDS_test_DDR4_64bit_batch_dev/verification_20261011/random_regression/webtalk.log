@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Oct 11 21:47:13 2026
+# Process ID: 21536
+# Current directory: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression
+# Command line: wbtcv.exe -mode batch -source F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/xsim.dir/period_100ms/webtalk/xsim_webtalk.tcl -notrace
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/webtalk.log
+# Journal file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression\webtalk.jou
+#-----------------------------------------------------------
+source F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/xsim.dir/period_100ms/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct 11 21:47:14 2026...

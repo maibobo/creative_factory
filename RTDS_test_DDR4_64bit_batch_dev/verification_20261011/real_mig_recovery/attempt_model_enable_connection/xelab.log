@@ -1,0 +1,9 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx_2020_2/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe --relax -debug typical -O0 -mt off -L xpm -L blk_mem_gen_v8_4_4 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_22 -L fifo_generator_v13_2_5 -L axi_data_fifo_v2_1_21 -L axi_clock_converter_v2_1_21 -L unisims_ver -L unimacro_ver -L secureip xil_defaultlib.tb_real_mig_recovery xil_defaultlib.glbl -s real_mig 
+Turned off multi-threading.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3423] illegal output port connection to 'model_enable' [F:/RTDS_test_DDR4_64bit_batch_dev/regression/recovery_phase2_20261011/rtds_ddr4_physical_peer.sv:13]
+WARNING: [VRFC 10-3705] select index 2 into 'rank' is out of bounds [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_mc_odt.sv:147]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

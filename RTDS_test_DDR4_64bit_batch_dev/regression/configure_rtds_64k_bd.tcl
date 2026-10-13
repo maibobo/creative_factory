@@ -1,3 +1,4 @@
+# Configure the RTDS_test memory contract used by XDMA and CONV_DMA.
 #
 # Final address map:
 #   0x0000_0000 - 0x0000_7fff : Aurora -> CPU (RX), 32 KiB

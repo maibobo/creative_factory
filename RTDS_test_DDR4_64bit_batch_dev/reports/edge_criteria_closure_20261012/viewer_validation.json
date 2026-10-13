@@ -1,0 +1,69 @@
+{
+  "checked": "2026-10-12T10:48:46.921Z",
+  "mode": "Local headless Edge, no screenshots; external network blocked",
+  "cases": [
+    {
+      "case": "edge_criteria_closure_staging_20261012",
+      "status": "PASS",
+      "data": {
+        "signals": 242,
+        "end": 5590000,
+        "tickNs": 0.001,
+        "core": 53,
+        "sources": 53,
+        "connections": 0,
+        "missingEventIds": 0
+      },
+      "pane_combinations_checked": 14,
+      "allCount": "242 / 242",
+      "vertical_scroll_synchronized": true,
+      "shift_wheel_pan": true,
+      "splitter_drag": true,
+      "sourceInfo": "tb_backend_edge_recovery.sv:8",
+      "external_network_requests": 0,
+      "page_errors": []
+    },
+    {
+      "case": "edge_criteria_closure_staging_20261012_early",
+      "status": "PASS",
+      "data": {
+        "signals": 242,
+        "end": 5594000,
+        "tickNs": 0.001,
+        "core": 53,
+        "sources": 53,
+        "connections": 0,
+        "missingEventIds": 0
+      },
+      "pane_combinations_checked": 14,
+      "allCount": "242 / 242",
+      "vertical_scroll_synchronized": true,
+      "shift_wheel_pan": true,
+      "splitter_drag": true,
+      "sourceInfo": "tb_backend_edge_recovery.sv:8",
+      "external_network_requests": 0,
+      "page_errors": []
+    },
+    {
+      "case": "edge_criteria_closure_staging_20261012_late",
+      "status": "PASS",
+      "data": {
+        "signals": 242,
+        "end": 5594000,
+        "tickNs": 0.001,
+        "core": 53,
+        "sources": 53,
+        "connections": 0,
+        "missingEventIds": 0
+      },
+      "pane_combinations_checked": 14,
+      "allCount": "242 / 242",
+      "vertical_scroll_synchronized": true,
+      "shift_wheel_pan": true,
+      "splitter_drag": true,
+      "sourceInfo": "tb_backend_edge_recovery.sv:8",
+      "external_network_requests": 0,
+      "page_errors": []
+    }
+  ]
+}

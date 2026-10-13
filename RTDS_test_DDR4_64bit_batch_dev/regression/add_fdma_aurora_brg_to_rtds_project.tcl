@@ -1,3 +1,4 @@
+# Add the real fdma_aurora_brg adapter integration sources to RTDS_test.
 # If the checkout location changes, edit only these three path variables.
 
 set project_path {E:/PCIE-CPU/RTDS_test/RTDS_test.xpr}

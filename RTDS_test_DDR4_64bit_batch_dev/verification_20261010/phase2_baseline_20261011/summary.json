@@ -1,0 +1,6 @@
+﻿{
+    "case":  "ready_recovery",
+    "passed":  false,
+    "error":  "xelab exit=1 log=ready_recovery.elaborate.log",
+    "started":  "2026-10-11T20:25:22.8906273+08:00"
+}

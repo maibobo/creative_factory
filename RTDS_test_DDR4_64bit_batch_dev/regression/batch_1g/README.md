@@ -11,6 +11,7 @@
 | axi | sim_batch_axi | 实际CONV_DMA+4MiB RAM、AW/W独立停顿、B延迟/错误、末拍保持、高地址不别名、4KiB拆分 |
 | rx_fifo | sim_batch_rx_fifo | 128帧FIFO满载、整帧丢弃、排空、短帧及链路中断、恢复后的数据序号 |
 
+`rtds_*_test_if.sv` 集中保存引脚和clocking block；driver与monitor使用显式采样偏移。定向测试以 `$fatal` 结束错误路径，并带全局watchdog。只有真实执行后同时满足激励完成、无残留、检查器无错误，日志中的TEST PASS才有效。源代码中预先写有PASS打印语句不表示已经通过。
 
 先运行顺序：1G / FIFO / 块管理 → AXI/DDR → 原快速adapter集成 → 原真实XDMA Root Port集成。时间加速参数只在验证实例中覆盖，生产250MHz下100ms=25000000拍保持不变。1G测试仍使用真实500拍周期与31.25MHz用户时钟。
 

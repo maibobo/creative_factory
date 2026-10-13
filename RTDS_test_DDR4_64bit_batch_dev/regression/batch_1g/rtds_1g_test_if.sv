@@ -8,8 +8,8 @@ interface rtds_1g_test_if(input logic src_clk, input logic user_clk);
     logic user_reset = 1;    // 发送域复位（上电默认处于复位态）
     logic channel_up = 0;    // Aurora链路up指示
     logic tx_ready = 0;    // 发送域反压ready（dst_rdy）
-    wire [31:0] tx_data;    // 发送数据（16Byte帧=2拍32bit）
-    wire [1:0] tx_rem;    // 本拍有效字节数-1（首拍3=4B，末拍1=2B）
+    wire [31:0] tx_data;    // 发送数据（16Byte帧=4拍32bit）
+    wire [1:0] tx_rem;    // 本拍有效字节数-1（四拍均为3=4B）
     wire tx_sof, tx_eof, tx_valid, configured;    // 帧边界/有效与已配置标志
     wire [7:0] configured_id;    // 已锁存的配置组号
     wire [31:0] skipped_periods;    // 反压期间跳过的发送周期计数

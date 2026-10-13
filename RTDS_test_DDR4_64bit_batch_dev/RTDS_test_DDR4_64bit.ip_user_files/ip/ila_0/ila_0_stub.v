@@ -4,6 +4,7 @@
 // Date        : Thu Apr 30 14:26:06 2026
 // Host        : Lixy running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
+//               c:/Users/Lixy/Desktop/RTDS/P2020.1/V14/RTDS_test/RTDS_test.srcs/sources_1/ip/ila_0/ila_0_stub.v
 // Design      : ila_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcku040-ffva1156-2-i

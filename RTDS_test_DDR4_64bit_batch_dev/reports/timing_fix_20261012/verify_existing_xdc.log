@@ -1,0 +1,92 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 11:21:34 2026
+# Process ID: 21280
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/timing_fix_20261012
+# Command line: vivado.exe -mode batch -source C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\verify_existing_xdc.tcl -log C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\verify_existing_xdc.log -journal C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\verify_existing_xdc.jou
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/timing_fix_20261012/verify_existing_xdc.log
+# Journal file: C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\verify_existing_xdc.jou
+#-----------------------------------------------------------
+source {C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\verify_existing_xdc.tcl}
+# set root C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev
+# set out $root/reports/timing_fix_20261012/registered_xdc_verification
+# file mkdir $out
+# set_param general.maxThreads 4
+# open_checkpoint $root/RTDS_test_DDR4_64bit.runs/impl_1/TOP_routed.dcp
+Command: open_checkpoint C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/impl_1/TOP_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1108.594 ; gain = 0.000
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1401.418 ; gain = 4.684
+INFO: [Netlist 29-17] Analyzing 2023 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2111.305 ; gain = 84.238
+Restored from archive | CPU: 11.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2111.305 ; gain = 84.238
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2283.195 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 902 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 244 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT(x2)): 8 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 72 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 31 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 1 instance 
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 20 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 204 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 257 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 10 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+  SRLC32E => SRL16E: 41 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2020.2 (64-bit) build 3064766
+open_checkpoint: Time (s): cpu = 00:00:50 ; elapsed = 00:01:04 . Memory (MB): peak = 2287.211 ; gain = 1178.617
+# read_xdc $root/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc
+Parsing XDC File [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sys_clk_100m' already exists, overwriting the previous clock with the same name. [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc:10]
+WARNING: [Constraints 18-619] A clock with name 'pcie_refclk_100m' already exists, overwriting the previous clock with the same name. [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc:14]
+Finished Parsing XDC File [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc]
+# source $root/reports/timing_fix_20261012/verify_loaded_cdc.tcl
+## set rtds_out C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/timing_fix_20261012/loaded_constraint_check
+## file mkdir $rtds_out
+## set rtds_pipes [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_(s|m)_reset_pipe_reg\[[0-9]+\]$}]
+## set rtds_sync [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_ready_sync_reg\[[01]\]$}]
+## set rtds_clr [get_pins -of_objects [concat $rtds_pipes $rtds_sync] -filter {REF_PIN_NAME == CLR}]
+## if {[llength $rtds_pipes] != 32 || [llength $rtds_sync] != 2 || [llength $rtds_clr] != 34} {error "RTDS_CDC_TARGET_COUNT_FAIL"}
+## foreach rtds_cell [concat $rtds_pipes $rtds_sync] {if {[get_property ASYNC_REG $rtds_cell] != 1} {error "RTDS_ASYNC_REG_MISSING: $rtds_cell"}}
+## set rtds_q0 [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_ready_sync_reg\[0\]$}] -filter {REF_PIN_NAME == Q}]
+## set rtds_d1 [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_ready_sync_reg\[1\]$}] -filter {REF_PIN_NAME == D}]
+## set rtds_d0 [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_ready_sync_reg\[0\]$}] -filter {REF_PIN_NAME == D}]
+## set rtds_mq [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_m_reset_pipe_reg\[15\]$}] -filter {REF_PIN_NAME == Q}]
+## if {[llength [get_timing_paths -quiet -from $rtds_mq -to $rtds_d0 -max_paths 1]] != 0} {error "RTDS_FIRST_STAGE_EXCEPTION_NOT_LOADED"}
+RTDS_FIRST_STAGE_EXCEPTION_NOT_LOADED
+    while executing
+"error "RTDS_FIRST_STAGE_EXCEPTION_NOT_LOADED""
+    invoked from within
+"if {[llength [get_timing_paths -quiet -from $rtds_mq -to $rtds_d0 -max_paths 1]] != 0} {error "RTDS_FIRST_STAGE_EXCEPTION_NOT_LOADED"}"
+    (file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/timing_fix_20261012/verify_loaded_cdc.tcl" line 13)
+
+    while executing
+"source $root/reports/timing_fix_20261012/verify_loaded_cdc.tcl"
+    (file "C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\verify_existing_xdc.tcl" line 8)
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 12 11:22:51 2026...

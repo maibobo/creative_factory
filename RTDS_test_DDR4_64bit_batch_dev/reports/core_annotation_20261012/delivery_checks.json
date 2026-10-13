@@ -1,0 +1,233 @@
+{
+  "date": "2026-10-12",
+  "files": [
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/sources_1/new/aurora_64b66b_top.v",
+      "before_sha256": "04a0ff5f886568659b70d4a9ee8d352d990eb7bc8627e405c1324d46f5636b17",
+      "after_sha256": "e88f5000e19cc8c8629547b12426427edefe51fb726ddb349ad9fd9f2531a721",
+      "token_equivalent": true,
+      "always_blocks": 2,
+      "before_lines": 264,
+      "after_lines": 214,
+      "semicolon_column": 105,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v",
+      "before_sha256": "ebf6560ad7228748a839baa8d7c364045cbea36dc783a5008e38c5f9c37be9c2",
+      "after_sha256": "66dca7cf446c5902b3b81fc7b6b0d7ff28aaf8e88f4235ba2295308d2fc29f74",
+      "token_equivalent": true,
+      "always_blocks": 11,
+      "before_lines": 478,
+      "after_lines": 431,
+      "semicolon_column": 106,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/CLK_GEN.v",
+      "before_sha256": "2ac3a9720a3e99c962425d4c2e2f0f2ee35a9ab36826f9dc68b507aa1e6940d8",
+      "after_sha256": "c8a9f698c868dd8688bcba88b49627b3fdea31bffcd03f9c28cb1db418090341",
+      "token_equivalent": true,
+      "always_blocks": 0,
+      "before_lines": 65,
+      "after_lines": 39,
+      "semicolon_column": 75,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v",
+      "before_sha256": "a58509155bc1ba7dc83951a51c633a6858d2c83fc412927f3cb89ecd2d699c7d",
+      "after_sha256": "3a4fa96ecc03e8d208e678e4e9f0ba3a91190d77bba459d992c5d103d99bd117",
+      "token_equivalent": true,
+      "always_blocks": 16,
+      "before_lines": 608,
+      "after_lines": 614,
+      "semicolon_column": 90,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v",
+      "before_sha256": "71aea36f58eaccd7d1ea02e8fc076933f0e152bc3ed9010193f32b8ac8a592de",
+      "after_sha256": "b7ec6e070fc43cf9b118520398582e56ab248bd73201fbba6c14f1d84198a11e",
+      "token_equivalent": true,
+      "always_blocks": 19,
+      "before_lines": 646,
+      "after_lines": 510,
+      "semicolon_column": 89,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/LED.v",
+      "before_sha256": "995c42e8bce62cae8d460edf0c80e008053b4ef716f82d2157dbff420fb0a89b",
+      "after_sha256": "e91835534c6a3164328dfbdbd4bc51bfb4f5f5e40a200759b27b2bdc8a1cca1a",
+      "token_equivalent": true,
+      "always_blocks": 1,
+      "before_lines": 66,
+      "after_lines": 52,
+      "semicolon_column": 86,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/PCIe.v",
+      "before_sha256": "a18d31abeca3a51fdb587a6bfd10572f280f671260d5a3126aa1382c62a14eef",
+      "after_sha256": "d9c78300aefc290a5887e066a70190929397fd4cc8829a8b39517e906c3b522b",
+      "token_equivalent": true,
+      "always_blocks": 1,
+      "before_lines": 408,
+      "after_lines": 444,
+      "semicolon_column": 82,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v",
+      "before_sha256": "dd2b409178e961420783d3830586d9e4615e7afe97a83a2185e405989914082e",
+      "after_sha256": "51dceda8395dce863da6d35d67fce46ee90eab0e4d667ca321d598c99d5ca0af",
+      "token_equivalent": true,
+      "always_blocks": 34,
+      "before_lines": 1058,
+      "after_lines": 1106,
+      "semicolon_column": 85,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/TEMP_RD.v",
+      "before_sha256": "22c212366aad8d9f0335c82573991f94c41775da093e45c24689f5ddaa7f6731",
+      "after_sha256": "a18e67d33f1e62248419a44f0cd78cf9a1161ddb7071bf7fe4c04596e7d6ce44",
+      "token_equivalent": true,
+      "always_blocks": 3,
+      "before_lines": 298,
+      "after_lines": 114,
+      "semicolon_column": 90,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/TOP.v",
+      "before_sha256": "6bbcbe4ab635f540c1557f2701d4c9ab7928a5a67fef275e774ab9477d2f7476",
+      "after_sha256": "c7427c1cf11c2d3e2ebd185360e162aadfd1a6fbde579d3ca1ab1855cf350fc6",
+      "token_equivalent": true,
+      "always_blocks": 1,
+      "before_lines": 278,
+      "after_lines": 321,
+      "semicolon_column": 75,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "rtl/ddr4/rtds_axi_ram_model.sv",
+      "before_sha256": "a30104ddc54ceb1ba2c1b45bfeac8003f83e1636cb44dd677a9a11579fff0eb2",
+      "after_sha256": "9ab7c15e675d24143fa5c57bf2ca0e67da72eef8f165e7ab830e26d857bbf6f0",
+      "token_equivalent": true,
+      "always_blocks": 2,
+      "before_lines": 177,
+      "after_lines": 187,
+      "semicolon_column": 87,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "rtl/ddr4/rtds_ddr4_backend.sv",
+      "before_sha256": "42ccf3d8c3612e8adb1f9d06eca2ced77b75599f65b8c545812fbe82c79000b2",
+      "after_sha256": "a1672f711e338132ec4cf824949cfe5c539339ab55cba29b963745c39e8dee29",
+      "token_equivalent": true,
+      "always_blocks": 9,
+      "before_lines": 515,
+      "after_lines": 726,
+      "semicolon_column": 94,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "rtl/rtds_1g_periodic_tx.v",
+      "before_sha256": "d70c6d9577f5d366233f7392d3f8da84529586b02075966b00e63bcdc3f66c7e",
+      "after_sha256": "54cb551ed6cc013bf4041cef3a4a5990f9d88814832ed7ec38ae03dc377f5929",
+      "token_equivalent": true,
+      "always_blocks": 13,
+      "before_lines": 268,
+      "after_lines": 282,
+      "semicolon_column": 75,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "rtl/rtds_fpga_1g_init.v",
+      "before_sha256": "4d4dee2976b50fcaeab3b6a3b61af15b0c2951ccc56297bd269d03d2c6385eb3",
+      "after_sha256": "2347d9e082632ba370b2b64c97408e1f4321e9493c2a70001e36b361117d6e2a",
+      "token_equivalent": true,
+      "always_blocks": 2,
+      "before_lines": 59,
+      "after_lines": 61,
+      "semicolon_column": 75,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "rtl/rtds_fpga_cfg_cdc.v",
+      "before_sha256": "7df0397ca62ea00cd1fe23e7f59097e998f2f938dded354ee79221d9204cc259",
+      "after_sha256": "f5a6102288e4ba9a90698082c50a01dd22d8febc5aa2363f3ad5354f069a02e8",
+      "token_equivalent": true,
+      "always_blocks": 0,
+      "before_lines": 24,
+      "after_lines": 36,
+      "semicolon_column": 75,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "rtl/rtds_fpga_count_cdc.v",
+      "before_sha256": "9a4174877a18086971f1c35f87e8cbb3ff84b5cb77e5da9acca08cbcd5947c35",
+      "after_sha256": "acf5f934117e552404e69caf04262e6a05090773c1ce06a7cf4fe752b7e1947b",
+      "token_equivalent": true,
+      "always_blocks": 0,
+      "before_lines": 16,
+      "after_lines": 28,
+      "semicolon_column": 75,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "rtl/rtds_fpga_reset_sync.v",
+      "before_sha256": "ae78cb7d15b37c373b036bef094c7c74549ba3e0fa846154eff7de16e0c225c5",
+      "after_sha256": "27747817788871afcf8237d11c44aec9313792c4440bbcac191068de02369e11",
+      "token_equivalent": true,
+      "always_blocks": 0,
+      "before_lines": 14,
+      "after_lines": 23,
+      "semicolon_column": 75,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "rtl/rtds_rx_block_writer.v",
+      "before_sha256": "e86699193de598003162988e7067e8ddae87d38c93322c281d1df2cf3df0e0fe",
+      "after_sha256": "601521c5baeebd5a42221556738b4288e91ccf3b1781d31c94d54065cc40167f",
+      "token_equivalent": true,
+      "always_blocks": 16,
+      "before_lines": 299,
+      "after_lines": 337,
+      "semicolon_column": 84,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "rtl/rtds_rx_frame_fifo.v",
+      "before_sha256": "15fd93613f8bd3775c1a1c6fb68ab8f2b8db9445e0118e6260c63a3acc0ca2f0",
+      "after_sha256": "1263b892f17925bb5a7761c2d97de749015a48882fbfd82aad2c87dedad2418d",
+      "token_equivalent": true,
+      "always_blocks": 2,
+      "before_lines": 169,
+      "after_lines": 168,
+      "semicolon_column": 75,
+      "generic_comment_fallbacks": 0
+    },
+    {
+      "path": "rtl/rtds_sync_timebase.v",
+      "before_sha256": "25a3b3cbb19cf22e9a102212b6c21a9b9ac3d3816e63f81c4ac6c3ff6d4d822b",
+      "after_sha256": "d015ae9f57935a3a43b8d72f2856531c97b56feb09e4aa9baf9036c23d29045d",
+      "token_equivalent": true,
+      "always_blocks": 1,
+      "before_lines": 26,
+      "after_lines": 35,
+      "semicolon_column": 75,
+      "generic_comment_fallbacks": 0
+    }
+  ],
+  "applied": 20,
+  "syntax_modes": [
+    "DDR4_REAL",
+    "DDR4_SIM_RAM"
+  ],
+  "logic_token_equivalence": true,
+  "backup": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\backups\\core_annotation_20261012",
+  "simulation_rerun": false
+}

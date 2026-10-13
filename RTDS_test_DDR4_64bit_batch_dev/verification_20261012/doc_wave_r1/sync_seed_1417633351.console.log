@@ -1,0 +1,36 @@
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/sync/xsim_script.tcl
+# xsim {sync} -testplusarg SEED=1417633351 -wdb {sync_seed_1417633351.wdb} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r1/sync_seed_1417633351.tcl} -onfinish stop -onerror quit -sv_seed 1417633351
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r1/sync_seed_1417633351.tcl
+## set scope /tb_rtds_sync
+## log_wave -r ${scope}/*
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set objects [get_objects -r ${scope}/*]
+## set fh [open {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r1/sync_seed_1417633351.capture/recorded_signals.txt} w]
+## foreach obj $objects {puts $fh $obj}
+## close $fh
+## create_wave_config
+## set shown 0
+## foreach obj $objects {if {[regexp {(^/[^/]+/(clk|fdma_clk|user_clk|src_clk|clk_250m|rst_n|ticks|frames|beat)$)|(/bus/[^/]+$)|(/H/(clk|uclk|gclk|rst_n|pcie_up|channel_up|lane_up|ddr_reset_n|ddr_ready|hold_r|hold_b|tx_ready|fdma_rbusy|fdma_rareq|fdma_rdata|fdma_rvalid|fdma_rready|tx_valid|tx_data|tx_sof|tx_eof|done_event|cfg_byte|cfg_valid|cfg_pulses|tx_frames|tx_beats|gdata|gvalid|gsof|geof|configured|configured_id|tick_2us|gpio_50us)$)|(/U_ADAPTER/(tx_active|tx_recovering|tx_quiet_count|tx_user_quiet_fdma|tx_deliver_enable|link_up_fdma|tx_frame_done_fdma|tx_restart_pending)$)|(/U_DMA/(read_curr_st|M_AXI_RVALID|M_AXI_RREADY|M_AXI_RDATA)$)|(/U_DDR/(storage_ready|recovery_read_pending|recovery_read_abort|recovery_read_left|recovery_rvalid|recovery_rresp|recovery_rlast)$)} $obj]} {catch {add_wave $obj};incr shown}}
+## if {$shown==0} {add_wave ${scope}/*}
+## save_wave_config {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r1/sync_seed_1417633351.capture/recommended.wcfg}
+## open_vcd {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r1/sync_seed_1417633351.capture/trace.vcd}
+## log_vcd $objects
+## run all
+RNG_INIT scope=tb_rtds_sync.phase2_pick seed=1417633351 algorithm=xorshift32
+RNG_DRAW scope=tb_rtds_sync.phase2_pick n=1 value=8 lo=5 hi=20
+TEST PASS tb_rtds_sync 2us=500 cycles 50us=12500 cycles 25 events high=6250 low=6250
+RNG_SUMMARY scope=tb_rtds_sync seed=1417633351 draws=1 state=09e51503
+$finish called at time : 100033 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_sync.sv" Line 48
+## close_vcd
+## puts "CAPTURE_DONE=sync_seed_1417633351"
+CAPTURE_DONE=sync_seed_1417633351
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 10:26:18 2026...

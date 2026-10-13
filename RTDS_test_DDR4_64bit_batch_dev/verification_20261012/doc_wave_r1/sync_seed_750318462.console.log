@@ -1,0 +1,19 @@
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/sync/xsim_script.tcl
+# xsim {sync} -testplusarg SEED=750318462 -wdb {sync_seed_750318462.wdb} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r1/sync_seed_750318462.tcl} -onfinish stop -onerror quit -sv_seed 750318462
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r1/sync_seed_750318462.tcl
+## run all
+RNG_INIT scope=tb_rtds_sync.phase2_pick seed=750318462 algorithm=xorshift32
+RNG_DRAW scope=tb_rtds_sync.phase2_pick n=1 value=15 lo=5 hi=20
+TEST PASS tb_rtds_sync 2us=500 cycles 50us=12500 cycles 25 events high=6250 low=6250
+RNG_SUMMARY scope=tb_rtds_sync seed=750318462 draws=1 state=289cafaa
+$finish called at time : 100061 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_sync.sv" Line 48
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 10:26:24 2026...

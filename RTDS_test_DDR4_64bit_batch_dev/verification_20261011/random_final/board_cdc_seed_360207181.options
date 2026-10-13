@@ -1,0 +1,6 @@
+--sv_seed 360207181
+--testplusarg "SEED=360207181"
+--tclbatch "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_final/board_cdc_seed_360207181.tcl"
+--onerror quit
+--onfinish stop
+--log board_cdc_seed_360207181.simulate.log

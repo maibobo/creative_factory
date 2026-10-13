@@ -1,0 +1,30 @@
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/ready_recovery/xsim_script.tcl
+# xsim {ready_recovery} -testplusarg SEED=1417633351 -autoloadwcfg -tclbatch {F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/ready_recovery_seed_1417633351.tcl} -onfinish stop -onerror quit
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/ready_recovery_seed_1417633351.tcl
+## run all
+RNG_INIT scope=tb_ready_recovery.H.phase2_pick seed=1417633351 algorithm=xorshift32
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=1 value=3 lo=0 hi=31
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_ready_recovery.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_ready_recovery/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial294_145  Scope: tb_ready_recovery.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 488
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=2 value=1 lo=0 hi=9
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=3 value=9 lo=0 hi=9
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=4 value=6 lo=0 hi=9
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=5 value=4 lo=0 hi=9
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=6 value=8 lo=0 hi=9
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=7 value=0 lo=0 hi=9
+RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=8 value=1 lo=0 hi=9
+Fatal: REAL/REG addr=0000002c got=00000010 expected=00000000
+Time: 1614 ns  Iteration: 1  Process: /tb_ready_recovery/H/check_reg  Scope: tb_ready_recovery.H.check_reg  File: F:/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/rtds_real_harness.sv Line: 169
+$finish called at time : 1614 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/rtds_real_harness.sv" Line 169
+## quit
+RNG_SUMMARY scope=tb_ready_recovery.H seed=1417633351 draws=192 state=af65802f
+RNG_SUMMARY scope=tb_ready_recovery seed=x draws=0 state=00000000
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 20:59:24 2026...

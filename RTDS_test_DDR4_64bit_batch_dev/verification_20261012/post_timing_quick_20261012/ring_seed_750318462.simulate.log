@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 12:51:02 2026
+# Process ID: 21432
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012
+# Command line: xsim.exe -log ring_seed_750318462.simulate.log -mode tcl -source {xsim.dir/ring/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/ring_seed_750318462.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/ring/xsim_script.tcl
+# xsim {ring} -testplusarg SEED=750318462 -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/ring_seed_750318462.tcl} -onfinish stop -onerror quit -sv_seed 750318462
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/ring_seed_750318462.tcl
+## run all
+RNG_INIT scope=tb_rtds_ring.phase2_pick seed=750318462 algorithm=xorshift32
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=1 value=7 lo=3 hi=9
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=2 value=2 lo=0 hi=3
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=3 value=578836572 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=4 value=1 lo=0 hi=3
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=5 value=984028639 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=6 value=3 lo=2 hi=9
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=7 value=1 lo=0 hi=3
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=8 value=1966784146 lo=0 hi=2147483647
+TEST PASS tb_rtds_ring V2.01
+RNG_SUMMARY scope=tb_rtds_ring seed=750318462 draws=198 state=211c8eee
+$finish called at time : 28926 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/sources/regression/batch_1g/tb_rtds_ring.sv" Line 125
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 12:51:08 2026...

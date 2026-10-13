@@ -1,15 +1,17 @@
-#requires -version 5.0
+﻿#requires -version 5.0
 [CmdletBinding()]
 param(
-    [ValidateSet('1g','tx','rx_fifo','ring','axi','axi_tail','regs')]
+    [ValidateSet('1g','tx','rx_fifo','ring','axi','axi_tail','regs','byte1_1g','tx_boundaries','ready_recovery','regs_multiblock','period_100ms')]
     [string]$Case = 'tx',
     [switch]$Vivado
 )
 $ErrorActionPreference = 'Stop'
-$vivadoExe = 'D:\Xilinx_2020_2\Vivado\2020.2\bin\vivado.bat'
+$vivadoExe = 'C:\Xilinx\Vivado\2020.2\bin\vivado.bat'
+if (-not (Test-Path -LiteralPath $vivadoExe)) { $vivadoExe = 'D:\Xilinx_2020_2\Vivado\2020.2\bin\vivado.bat' }
 $root = Split-Path -Parent $PSScriptRoot
 $caseDir = Join-Path $root ('evidence\local_wave_sessions\' + $Case)
 $entry = Join-Path $PSScriptRoot 'open_local_wave_session.tcl'
+if ($Case -in @('byte1_1g','tx_boundaries','ready_recovery','regs_multiblock','period_100ms')) { $entry = Join-Path $PSScriptRoot 'open_new_case_wave.tcl' }
 if (-not $Vivado) {
     $html = Join-Path $caseDir ($Case + '_viewer.html')
     if (-not (Test-Path -LiteralPath $html -PathType Leaf)) { throw "Offline viewer is missing: $html" }
@@ -28,8 +30,10 @@ foreach ($path in @($vivadoExe, $entry, (Join-Path $caseDir ($Case + '.wdb')), (
 $hashList = Join-Path $caseDir 'source_hashes.json'
 if (-not (Test-Path -LiteralPath $hashList)) { throw "Missing source validation manifest: $hashList" }
 foreach ($source in (Get-Content -LiteralPath $hashList -Raw -Encoding UTF8 | ConvertFrom-Json)) {
-    if (-not (Test-Path -LiteralPath $source.path -PathType Leaf)) { throw "Source file is missing: $($source.path)" }
-    if ((Get-FileHash -LiteralPath $source.path -Algorithm SHA256).Hash -ne $source.sha256) {
+    $sourcePath = $source.path
+    if ($source.snapshot) { $sourcePath = Join-Path $caseDir $source.snapshot }
+    if (-not (Test-Path -LiteralPath $sourcePath -PathType Leaf)) { throw "Source file is missing: $($source.path)" }
+    if ((Get-FileHash -LiteralPath $sourcePath -Algorithm SHA256).Hash -ne $source.sha256) {
         throw "Source changed since this waveform was generated: $($source.path). Rebuild the local wave sessions before comparing code and waveforms."
     }
 }

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Oct 10 17:06:40 2026
+# Process ID: 13732
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/recovery_r3
+# Command line: xsim.exe -log ready_recovery.simulate.log -mode tcl -source {xsim.dir/ready_recovery/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/recovery_r3/ready_recovery.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/recovery_r3\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/ready_recovery/xsim_script.tcl
+source ready_recovery.tcl

@@ -1,0 +1,1 @@
+{"pid": 37912, "tool": "xsim", "args": ["backend_edge_recovery", "-f", "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261012\\edge_criteria_closure_20261012_early\\backend_edge_recovery_seed_360207181.options"], "log": "backend_edge_recovery_seed_360207181.console.log", "started": "2026-10-12T18:40:34.491914+08:00"}

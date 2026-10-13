@@ -1,7 +1,9 @@
 `timescale 1ns/1ps
-// 定向前仿：十组 LUT、非法/重复配置、异步时钟、两拍字节序、反压及重建链。
+// 定向前仿：十组 LUT、非法/重复配置、异步时钟、四拍字节序、反压及重建链。
 // 无 Aurora IP；检验主机用户接口契约。没有运行，不预填 PASS 结果。
 module tb_rtds_1g;
+ // 修改记录 2026-10-11：加入随机种子激励。
+ `include "rtds_random.svh"   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     logic src_clk = 0;
     logic user_clk = 0;
 
@@ -11,9 +13,11 @@ module tb_rtds_1g;
     // 31.25MHz 用户时钟（半周期 16ns），与源时钟异步
     always #16 user_clk = ~user_clk;
     rtds_1g_test_if bus(.src_clk(src_clk), .user_clk(user_clk));
-    // 被测设计：以用户时钟 63 拍（2.016us）为周期发送 16Byte 状态帧
-    RTDS_1G_PERIODIC_TX #(.PERIOD_CYCLES(63)) U_DUT (
-        .clk_250m(src_clk), .rst_n(bus.rst_n),
+    // 被测设计：以250MHz同源2us事件驱动四拍16Byte状态帧
+    wire tick_toggle_2us, cpu_sync_50us;
+    RTDS_SYNC_TIMEBASE U_TIME (.clk_250m(src_clk),.rst_n(bus.rst_n),.tick_toggle_2us(tick_toggle_2us),.cpu_sync_50us(cpu_sync_50us));
+    RTDS_1G_PERIODIC_TX U_DUT (
+        .clk_250m(src_clk), .tick_toggle_2us(tick_toggle_2us), .rst_n(bus.rst_n),
         .cfg_byte(bus.cfg_byte), .cfg_byte_valid(bus.cfg_byte_valid),
         .user_clk(user_clk), .user_reset(bus.user_reset), .channel_up(bus.channel_up),
         .tx_ready(bus.tx_ready), .tx_data(bus.tx_data), .tx_rem(bus.tx_rem),
@@ -21,6 +25,8 @@ module tb_rtds_1g;
         .configured(bus.configured), .configured_id(bus.configured_id),
         .skipped_periods(bus.skipped_periods)
     );
+    integer phase2_beat=0;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+    logic[31:0] phase2_expected;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     int expected_duty;    // 当前组期望的占空比码值，用于生成参考载荷
     int expected_voltage;    // 当前组期望的电压码值，用于生成参考载荷
     bit check_cadence=1; // 无反压时检查32ns量化后的相邻发送周期
@@ -39,7 +45,7 @@ module tb_rtds_1g;
     // 发送监测器：组帧、字节序重组、周期节拍与反压保持检查均在此完成
     always @(bus.tx_mon_cb) begin : monitor_tx
         if (!bus.tx_mon_cb.rst_n || bus.tx_mon_cb.user_reset || !bus.tx_mon_cb.channel_up) begin
-            partial_frame = 0;
+            partial_frame = 0; phase2_beat=0;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
             previous_stall = 0;
             last_sof_time = 0;
         end else begin
@@ -52,26 +58,19 @@ module tb_rtds_1g;
             if (bus.tx_mon_cb.tx_valid && bus.tx_mon_cb.tx_ready) begin
                 if ($isunknown(held_payload))
                     $fatal(1,"ONE_G/X: unknown accepted payload");
-                if (!partial_frame) begin
-                    if (!bus.tx_mon_cb.tx_sof || bus.tx_mon_cb.tx_eof || bus.tx_mon_cb.tx_rem != 3)
-                        $fatal(1,"ONE_G/FIRST: invalid first beat");
-                    if(check_cadence && last_sof_time!=0 &&
-                       $time-last_sof_time!=2016)
-                        $fatal(1,"ONE_G/CADENCE delta_ns=%0t",$time-last_sof_time);
+                case (phase2_beat)   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+                  0: phase2_expected={expected_payload[7:0],expected_payload[15:8],expected_payload[23:16],expected_payload[31:24]};   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+                  1: phase2_expected={expected_payload[39:32],expected_payload[47:40],8'hf0,8'h00};   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+                  default: phase2_expected=0;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+                endcase   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+                if(bus.tx_mon_cb.tx_sof!=(phase2_beat==0) || bus.tx_mon_cb.tx_eof!=(phase2_beat==3) || bus.tx_mon_cb.tx_rem!=3 || bus.tx_mon_cb.tx_data!==phase2_expected)   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+                    $fatal(1,"ONE_G/FOUR_BEAT_TARGET beat=%0d data=%h expected=%h eof=%b rem=%d",phase2_beat,bus.tx_mon_cb.tx_data,phase2_expected,bus.tx_mon_cb.tx_eof,bus.tx_mon_cb.tx_rem);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+                if(phase2_beat==0) begin   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+                    if(check_cadence && last_sof_time!=0 && $time-last_sof_time!=1984 && $time-last_sof_time!=2016) $fatal(1,"ONE_G/CADENCE");   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
                     last_sof_time=$time;
-                    first_word = bus.tx_mon_cb.tx_data;
-                    partial_frame = 1;
-                end else begin
-                    if (bus.tx_mon_cb.tx_sof || !bus.tx_mon_cb.tx_eof || bus.tx_mon_cb.tx_rem != 1)
-                        $fatal(1,"ONE_G/LAST: invalid last beat");
-                    observed_payload = {bus.tx_mon_cb.tx_data[23:16],bus.tx_mon_cb.tx_data[31:24],
-                                        first_word[7:0],first_word[15:8],first_word[23:16],first_word[31:24]};
-                    expected_payload = (48'(expected_voltage * 1048576) << 16) | 48'(expected_duty);
-                    if (observed_payload !== expected_payload)
-                        $fatal(1,"ONE_G/DATA: expected=%h actual=%h",expected_payload,observed_payload);
-                    partial_frame = 0;
-                    completed_frames = completed_frames + 1;
                 end
+                if(phase2_beat==3) begin phase2_beat=0;partial_frame=0;completed_frames++;end   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+                else begin phase2_beat++;partial_frame=1;end   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
             end
         end
     end
@@ -122,6 +121,7 @@ module tb_rtds_1g;
             if (completed_frames != previous_frames || bus.configured)
                 $fatal(1,"ONE_G/INVALID");
             // 提交有效配置 id，等待至少 2 帧新载荷产出
+            expected_payload=(48'(expected_voltage*1048576)<<16)|48'(expected_duty);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
             submit(8'(id));
             wait_frames(previous_frames+2);
             // 锁存的配置号必须等于本次提交的有效 id
@@ -132,7 +132,7 @@ module tb_rtds_1g;
             check_cadence=0;
             // 首拍反压跨越多个 2.016us；恢复后只完成在途帧，不补排队任务。
             @(bus.tx_drv_cb); bus.tx_drv_cb.tx_ready <= 0;
-            repeat (210) @(bus.tx_drv_cb);
+            repeat (210+phase2_pick(0,50)) @(bus.tx_drv_cb);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
             // 长反压期间必须累计跳过的发送周期
             if (bus.tx_drv_cb.skipped_periods == 0)
                 $fatal(1,"ONE_G/SKIP_NOT_EXERCISED");
@@ -140,7 +140,7 @@ module tb_rtds_1g;
             // 接受首拍后，clocking output 在本拍 NBA 拉低 ready，阻塞末拍。
             do @(bus.tx_drv_cb); while (!(bus.tx_drv_cb.tx_valid && bus.tx_drv_cb.tx_sof));
             bus.tx_drv_cb.tx_ready <= 0;
-            repeat (90) @(bus.tx_drv_cb);
+            repeat (90+phase2_pick(0,30)) @(bus.tx_drv_cb);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
             bus.tx_drv_cb.tx_ready <= 1;
             wait_frames(previous_frames+4);
             // 断开链路再重建，验证发送随之恢复

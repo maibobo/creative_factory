@@ -1,0 +1,45 @@
+[
+  {
+    "path": "rtl/rtds_ddr4_recovery_cdc.xdc",
+    "last_write": "2026-10-12T10:47:25.821408",
+    "sha256": "84177265e74c6806a141462f72c2392ff3d95565d7eb86aa488e11462db902e7",
+    "dated_comments": [
+      "# 修改记录 2026-10-12：DDR事务恢复新增同步器的定点CDC约束。"
+    ]
+  },
+  {
+    "path": "rtl/ddr4/rtds_ddr4_backend.sv",
+    "last_write": "2026-10-12T11:20:58.073088",
+    "sha256": "42ccf3d8c3612e8adb1f9d06eca2ced77b75599f65b8c545812fbe82c79000b2",
+    "dated_comments": [
+      "// 修改记录 2026-10-11：TC-F11的DDR中断恢复。每个方向最多接受一个AXI突发，",
+      "wire storage_ready;   // 2026-10-11：物理后端校准和复位同步完成，与业务恢复完成分开",
+      "wire mem_awready;   // 2026-10-11：存储侧写地址接收许可",
+      "wire mem_wready;   // 2026-10-11：存储侧写数据接收许可",
+      "wire mem_bvalid;   // 2026-10-11：存储侧写响应有效",
+      "wire [AXI_ID_WIDTH-1:0] mem_bid;   // 2026-10-11：存储侧写响应ID"
+    ]
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v",
+    "last_write": "2026-10-11T21:24:37.844929",
+    "sha256": "dd2b409178e961420783d3830586d9e4615e7afe97a83a2185e405989914082e",
+    "dated_comments": [
+      "// 修改记录 2026-10-11：TC-F11恢复修复。结束命令后继续处理旧读响应；",
+      "reg tx_recovering;   // 2026-10-11：恢复期间禁止新任务和旧数据进入发送桥",
+      "reg [3:0] tx_quiet_count;   // 2026-10-11：连续八个控制时钟确认旧完成事件已经处理完毕",
+      "wire tx_user_quiet_fdma;   // 2026-10-11：用户域发送桥已停止并复位的同步确认",
+      "wire tx_bridge_rareq;   // 2026-10-11：发送桥原始读请求，在适配层限制请求启动",
+      "wire tx_bridge_rready;   // 2026-10-11：发送桥正常读取时的数据接收许可"
+    ]
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc",
+    "last_write": "2026-10-12T11:20:56.588750",
+    "sha256": "b5f8e8a2645d359301648fc0ae054481ea54b81f88e60c83773ec14de39d4275",
+    "dated_comments": [
+      "# 修改点 2026-10-12：直接写入当前已加载的DDR4_PIN.xdc，避免额外XDC未登记时修复失效。",
+      "# 修改记录 2026-10-12：DDR事务恢复新增同步器的定点CDC约束。"
+    ]
+  }
+]

@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Oct 11 22:13:36 2026
+# Process ID: 23580
+# Current directory: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression
+# Command line: xsim.exe -log board_diag.log -mode tcl -source {xsim.dir/board_cdc/xsim_script.tcl}
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/board_diag.log
+# Journal file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/board_cdc/xsim_script.tcl
+# xsim {board_cdc} -autoloadwcfg -tclbatch {board_diag.tcl}
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source board_diag.tcl
+## run 5 us
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_board_cdc_smoke.dut.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_board_cdc_smoke/dut/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial294_81  Scope: tb_board_cdc_smoke.dut.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 488
+## foreach s {received cfg cfgv configured done req busy rv ready valid core_reset gt_reset dut.tx_active dut.tx_recovering dut.tx_restart_pending dut.link_up_fdma} {
+##     set path /tb_board_cdc_smoke/[string map {. /} $s]
+##     puts "SMOKE_DIAG $s=[get_value $path]"
+## }
+SMOKE_DIAG received=2
+SMOKE_DIAG cfg=32
+SMOKE_DIAG cfgv=0
+SMOKE_DIAG configured=1
+SMOKE_DIAG done=0
+SMOKE_DIAG req=0
+SMOKE_DIAG busy=0
+SMOKE_DIAG rv=0
+SMOKE_DIAG ready=0
+SMOKE_DIAG valid=0
+SMOKE_DIAG core_reset=1
+SMOKE_DIAG gt_reset=1
+SMOKE_DIAG dut.tx_active=0
+SMOKE_DIAG dut.tx_recovering=0
+ERROR: [Simtcl 6-8] No such HDL object /tb_board_cdc_smoke/dut/tx_restart_pending
+xsim% INFO: [Common 17-206] Exiting xsim at Sun Oct 11 22:13:44 2026...

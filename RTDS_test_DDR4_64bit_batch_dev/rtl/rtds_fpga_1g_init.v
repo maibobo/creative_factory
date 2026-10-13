@@ -1,25 +1,27 @@
+// 把板载100MHz通过BUFGCE_DIV四分频成25MHz的1G初始化时钟。
+// 主机复位重新开始初始化计数；GT复位先于协议核复位解除。
+// 计数和输出在init_clk域更新，复位解除经过本域同步；不由业务数据生成时钟。
+// 注释整理 2026-10-12：仅修改说明和排版，端口、表达式、状态条件及连接保持。
+
 `timescale 1ns/1ps
-// 功能：将板载100MHz时钟通过BUFGCE_DIV分频为25MHz初始化时钟。
-// 主机复位到来时立即复位初始化计数及输出；复位解除后在25MHz域重新计时。
-// 先解除GT复位，再解除协议核复位，为收发器提供启动时间。
-// 输出复位由寄存器产生，避免多位计数值变化直接影响复位输出。
+
+// 模块参数与输入输出。
 module RTDS_FPGA_1G_INIT (
-    input  wire          clk_100m,      // 100MHz 板载差分时钟单端输入
-    input  wire          rst,           // 主机复位，高有效；不由Aurora用户时钟生成
-    output wire          init_clk,      // BUFGCE_DIV 4分频产生的25MHz初始化时钟
-    output reg           core_reset,    // 协议核复位，高有效；保持至初始化计数结束
-    output reg           gt_reset       // GT复位，高有效；先于core释放128拍
+    input wire                                 clk_100m,                              // 100MHz板载或初始化参考时钟
+    input wire                                 rst,                                   // 主机复位，高有效；不由Aurora用户时钟生成
+    output wire                                init_clk,                              // 25MHz专用分频初始化时钟
+    output reg                                 core_reset,                            // 1G协议核高有效复位
+    output reg                                 gt_reset                               // GT高有效复位，早于协议核解除
 
 );
 
-    // 复位与启动计数信号。
-    wire           rst_n        ;    // 主机复位取反后供低有效复位接口使用。
-    wire           init_rst_n   ;    // 25MHz初始化域同步解除后的复位。
-    reg     [7:0]  startup_count;    // 计到255后保持，用于分阶段解除复位。
+
+    wire                                       rst_n                       ;    // 低有效全局复位输入
+    wire                                       init_rst_n                  ;    // 初始化时钟域同步解除后的复位
+    reg           [7:0]                        startup_count               ;    // 1G初始化计数，255后保持
 
 
-    // 初始化时钟及复位输入。
-    assign rst_n = !rst         ;    // 把主机高有效复位转换为内部低有效复位。
+    assign rst_n = !rst                                                    ;    // 低有效全局复位输入
 
     BUFGCE_DIV #(
         .BUFGCE_DIVIDE(4)
@@ -37,8 +39,7 @@ module RTDS_FPGA_1G_INIT (
     );
 
 
-    // 启动计数及复位输出。
-    // 初始化计数到255后保持。
+    // 25MHz初始化时钟沿累加到255后保持，复位重新从0开始。
     always @(posedge init_clk or negedge init_rst_n) begin : update_startup_count
         if (!init_rst_n)
             startup_count <= 8'd0;
@@ -46,7 +47,8 @@ module RTDS_FPGA_1G_INIT (
             startup_count <= startup_count + 8'd1;
     end
 
-    // 依计数值先解除GT复位，再解除协议核复位。
+
+    // 初始化域先在计数128后解除GT复位，再在255后解除协议核复位；输出均由寄存器形成。
     always @(posedge init_clk or negedge init_rst_n) begin
         if (!init_rst_n) begin
             gt_reset <= 1'b1;

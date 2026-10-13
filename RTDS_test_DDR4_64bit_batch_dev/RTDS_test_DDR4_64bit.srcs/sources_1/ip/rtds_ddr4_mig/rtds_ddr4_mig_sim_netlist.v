@@ -4,6 +4,8 @@
 // Date        : Wed Sep 16 17:54:47 2026
 // Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
+//               c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_ddr4_mig/rtds_ddr4_mig_sim_netlist.v
+// Design      : rtds_ddr4_mig
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xcku040-ffva1156-2-i

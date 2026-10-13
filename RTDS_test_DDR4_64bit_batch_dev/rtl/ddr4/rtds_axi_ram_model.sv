@@ -1,73 +1,81 @@
+// 仿真用AXI存储模型，不模拟DDR校准、引脚或物理时序。
+// AW和W分别保存，按WSTRB逐字节写入；支持当前8Byte拍配置的INCR/FIXED地址模式。
+// 读地址接受后逐拍返回数据，R/B受反压时保持；越界和不支持的请求返回SLVERR。
+// 状态在aclk运行，aresetn清接口状态；真实DDR上板配置不使用本模型。
+// 注释整理 2026-10-12：仅修改说明和排版，端口、表达式、状态条件及连接保持。
+
 `timescale 1ns/1ps
 
-// AXI4 行为级 RAM 模型（仿真专用）：单拍就绪/单事务缓存，
-// 支持 INCR/FIXED、按 WSTRB 写入、范围外地址返回 SLVERR。
+// 模块参数与输入输出。
 module rtds_axi_ram_model #(
-    parameter integer ADDR_WIDTH = 32,
-    parameter integer DATA_WIDTH = 64,
-    parameter integer ID_WIDTH   = 5,
-    parameter integer MEM_BYTES  = 4194304
+    parameter integer                             ADDR_WIDTH = 32,                    // 模型字节地址位宽
+    parameter integer                             DATA_WIDTH = 64,                    // 数据位宽
+    parameter integer                             ID_WIDTH   = 5,                     // 事务ID位宽
+    parameter integer                             MEM_BYTES  = 4194304                // 行为RAM总字节容量
 ) (
-    input  wire                     aclk,    // AXI 时钟
-    input  wire                     aresetn,    // AXI 低有效复位
-    input  wire [ID_WIDTH-1:0]      s_axi_awid,    // 写地址通道 ID
-    input  wire [ADDR_WIDTH-1:0]    s_axi_awaddr,    // 写起始字节地址
-    input  wire [7:0]               s_axi_awlen,    // 写突发拍数减一
-    input  wire [2:0]               s_axi_awsize,    // 写每拍字节数（3=8Byte）
-    input  wire [1:0]               s_axi_awburst,    // 写突发类型
-    input  wire                     s_axi_awvalid,    // 写地址有效
-    output wire                     s_axi_awready,    // 写地址就绪
-    input  wire [DATA_WIDTH-1:0]    s_axi_wdata,    // 写数据
-    input  wire [(DATA_WIDTH/8)-1:0] s_axi_wstrb,    // 写字节使能
-    input  wire                     s_axi_wlast,    // 写末拍标志
-    input  wire                     s_axi_wvalid,    // 写数据有效
-    output wire                     s_axi_wready,    // 写数据就绪
-    output reg  [ID_WIDTH-1:0]      s_axi_bid,    // 写响应 ID
-    output reg  [1:0]               s_axi_bresp,    // 写响应码
-    output reg                      s_axi_bvalid,    // 写响应有效
-    input  wire                     s_axi_bready,    // 写响应就绪
-    input  wire [ID_WIDTH-1:0]      s_axi_arid,    // 读地址通道 ID
-    input  wire [ADDR_WIDTH-1:0]    s_axi_araddr,    // 读起始字节地址
-    input  wire [7:0]               s_axi_arlen,    // 读突发拍数减一
-    input  wire [2:0]               s_axi_arsize,    // 读每拍字节数
-    input  wire [1:0]               s_axi_arburst,    // 读突发类型
-    input  wire                     s_axi_arvalid,    // 读地址有效
-    output wire                     s_axi_arready,    // 读地址就绪
-    output reg  [ID_WIDTH-1:0]      s_axi_rid,    // 读响应 ID
-    output reg  [DATA_WIDTH-1:0]    s_axi_rdata,    // 读数据
-    output reg  [1:0]               s_axi_rresp,    // 读响应码
-    output reg                      s_axi_rlast,    // 读末拍标志
-    output reg                      s_axi_rvalid,    // 读数据有效
-    input  wire                     s_axi_rready    // 读就绪
+    input wire                                 aclk,                                  // AXI 时钟
+    input wire                                 aresetn,                               // AXI 低有效复位
+    input wire    [ID_WIDTH-1:0]               s_axi_awid,                            // 写地址通道 ID
+    input wire    [ADDR_WIDTH-1:0]             s_axi_awaddr,                          // 写起始字节地址
+    input wire    [7:0]                        s_axi_awlen,                           // 写突发拍数减一
+    input wire    [2:0]                        s_axi_awsize,                          // 写每拍字节数（3=8Byte）
+    input wire    [1:0]                        s_axi_awburst,                         // 写突发类型
+    input wire                                 s_axi_awvalid,                         // 写地址有效
+    output wire                                s_axi_awready,                         // 写地址就绪
+    input wire    [DATA_WIDTH-1:0]             s_axi_wdata,                           // 写数据
+    input wire    [(DATA_WIDTH/8)-1:0]         s_axi_wstrb,                           // 写字节使能
+    input wire                                 s_axi_wlast,                           // 写末拍标志
+    input wire                                 s_axi_wvalid,                          // 写数据有效
+    output wire                                s_axi_wready,                          // 写数据就绪
+    output reg    [ID_WIDTH-1:0]               s_axi_bid,                             // 写响应 ID
+    output reg    [1:0]                        s_axi_bresp,                           // 写响应码
+    output reg                                 s_axi_bvalid,                          // 写响应有效
+    input wire                                 s_axi_bready,                          // 写响应就绪
+    input wire    [ID_WIDTH-1:0]               s_axi_arid,                            // 读地址通道 ID
+    input wire    [ADDR_WIDTH-1:0]             s_axi_araddr,                          // 读起始字节地址
+    input wire    [7:0]                        s_axi_arlen,                           // 读突发拍数减一
+    input wire    [2:0]                        s_axi_arsize,                          // 读每拍字节数
+    input wire    [1:0]                        s_axi_arburst,                         // 读突发类型
+    input wire                                 s_axi_arvalid,                         // 读地址有效
+    output wire                                s_axi_arready,                         // 读地址就绪
+    output reg    [ID_WIDTH-1:0]               s_axi_rid,                             // 读响应 ID
+    output reg    [DATA_WIDTH-1:0]             s_axi_rdata,                           // 读数据
+    output reg    [1:0]                        s_axi_rresp,                           // 读响应码
+    output reg                                 s_axi_rlast,                           // 读末拍标志
+    output reg                                 s_axi_rvalid,                          // 读数据有效
+    input wire                                 s_axi_rready                           // 读就绪
 );
-    localparam integer STRB_WIDTH = DATA_WIDTH / 8;    // 字节使能位宽（64bit=8）
-    localparam integer WORDS = MEM_BYTES / STRB_WIDTH;    // 存储字数
-    localparam integer BYTE_BITS = $clog2(STRB_WIDTH);    // 字内字节地址位宽（8Byte=3）
-    localparam integer INDEX_BITS = $clog2(WORDS);    // 字索引位宽
-    reg [DATA_WIDTH-1:0] mem [0:WORDS-1];    // 行为存储阵列
+    localparam integer                             STRB_WIDTH = DATA_WIDTH / 8         ;    // 每拍字节使能位数
+    localparam integer                             WORDS = MEM_BYTES / STRB_WIDTH      ;    // 行为RAM可存放的数据拍数量
+    localparam integer                             BYTE_BITS = $clog2(STRB_WIDTH)      ;    // 数据拍内部字节位置位宽
+    localparam integer                             INDEX_BITS = $clog2(WORDS)          ;    // 由存储字数或块数计算的索引位宽
+    reg           [DATA_WIDTH-1:0]             mem [0:WORDS-1]                         ;    // 按数据拍保存的行为RAM数组
 
-    reg aw_hold_valid;    // 已接受 AW 标志
-    reg [ID_WIDTH-1:0] aw_hold_id;    // 锁存的写 ID
-    reg [ADDR_WIDTH-1:0] aw_hold_addr;    // 锁存的写地址（INCR 时递增）
-    reg [7:0] aw_beats_left;    // 剩余写拍计数
-    reg [2:0] aw_hold_size;    // 锁存的每拍字节数
-    reg [1:0] aw_hold_burst;    // 锁存的突发类型
-    reg aw_error;    // 本写事务已检出协议错误
+    reg                                        aw_hold_valid                           ;    // 已接受 AW 标志
+    reg           [ID_WIDTH-1:0]               aw_hold_id                              ;    // 锁存的写 ID
+    reg           [ADDR_WIDTH-1:0]             aw_hold_addr                            ;    // 锁存的写地址（INCR 时递增）
+    reg           [7:0]                        aw_beats_left                           ;    // 剩余写拍计数
+    reg           [2:0]                        aw_hold_size                            ;    // 锁存的每拍字节数
+    reg           [1:0]                        aw_hold_burst                           ;    // 锁存的突发类型
+    reg                                        aw_error                                ;    // 本写事务已检出协议错误
 
-    reg w_hold_valid;    // 已接受 W 标志
-    reg [DATA_WIDTH-1:0] w_hold_data;    // 锁存的写数据
-    reg [STRB_WIDTH-1:0] w_hold_strb;    // 锁存的字节使能
-    reg w_hold_last;    // 锁存的末拍标志
+    reg                                        w_hold_valid                            ;    // 已接受 W 标志
+    reg           [DATA_WIDTH-1:0]             w_hold_data                             ;    // 锁存的写数据
+    reg           [STRB_WIDTH-1:0]             w_hold_strb                             ;    // 锁存的字节使能
+    reg                                        w_hold_last                             ;    // 锁存的末拍标志
 
-    wire aw_in_range = (aw_hold_addr < MEM_BYTES);    // AW 地址在存储范围内
-    wire write_commit = aw_hold_valid && w_hold_valid && !s_axi_bvalid;    // AW/W 均就绪且 B 空闲时可提交
-    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
-    assign s_axi_awready = aresetn && !aw_hold_valid && !s_axi_bvalid;
-    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
-    assign s_axi_wready  = aresetn && !w_hold_valid && !s_axi_bvalid;
+    wire                                       aw_in_range = (aw_hold_addr < MEM_BYTES);    // AW 地址在存储范围内
+    wire                                       write_commit =
+        aw_hold_valid && w_hold_valid && !s_axi_bvalid                                 ;    // AW/W 均就绪且 B 空闲时可提交
 
-    integer byte_index;    // 按字节写入循环变量
+    assign s_axi_awready = aresetn && !aw_hold_valid && !s_axi_bvalid                  ;    // 写地址就绪
 
+    assign s_axi_wready  = aresetn && !w_hold_valid && !s_axi_bvalid                   ;    // 写数据就绪
+
+    integer                                    byte_index                              ;    // 按WSTRB逐字节操作的循环索引
+
+
+    // aclk沿独立保存AW和W；两者都有且B空闲时按WSTRB写入。最后拍形成一次B，反压期间保持ID和响应码。
     always @(posedge aclk) begin
         if (!aresetn) begin
             aw_hold_valid <= 1'b0;
@@ -124,17 +132,19 @@ module rtds_axi_ram_model #(
         end
     end
 
-    reg read_active;    // 读事务进行中标志
-    reg [ID_WIDTH-1:0] read_id;    // 锁存的读 ID
-    reg [ADDR_WIDTH-1:0] read_addr;    // 锁存的读地址（INCR 时递增）
-    reg [7:0] read_beats_left;    // 剩余读拍计数
-    reg [2:0] read_size;    // 锁存的每拍字节数
-    reg [1:0] read_burst;    // 锁存的突发类型
-    reg read_error;    // 本读事务已检出协议错误
+    reg                                        read_active                             ;    // 读事务进行中标志
+    reg           [ID_WIDTH-1:0]               read_id                                 ;    // 锁存的读 ID
+    reg           [ADDR_WIDTH-1:0]             read_addr                               ;    // 锁存的读地址（INCR 时递增）
+    reg           [7:0]                        read_beats_left                         ;    // 剩余读拍计数
+    reg           [2:0]                        read_size                               ;    // 锁存的每拍字节数
+    reg           [1:0]                        read_burst                              ;    // 锁存的突发类型
+    reg                                        read_error                              ;    // 本读事务已检出协议错误
 
-    // AXI通道握手边界；仅在本级状态允许时接收或保持有效事务。
-    assign s_axi_arready = aresetn && !read_active && !s_axi_rvalid;
 
+    assign s_axi_arready = aresetn && !read_active && !s_axi_rvalid                    ;    // 读地址就绪
+
+
+    // aclk沿保存AR参数并逐拍返回数据；仅R被接受后推进地址/剩余拍数，RREADY为0时保持当前拍。
     always @(posedge aclk) begin
         if (!aresetn) begin
             read_active    <= 1'b0;

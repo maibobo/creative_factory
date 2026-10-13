@@ -4,6 +4,7 @@
 -- Date        : Tue Apr 28 15:50:02 2026
 -- Host        : Lixy running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/Lixy/Desktop/RTDS/P2020.1/V12/RTDS_test/RTDS_test.srcs/sources_1/ip/fifo_cdc_pcie/fifo_cdc_pcie_sim_netlist.vhdl
 -- Design      : fifo_cdc_pcie
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

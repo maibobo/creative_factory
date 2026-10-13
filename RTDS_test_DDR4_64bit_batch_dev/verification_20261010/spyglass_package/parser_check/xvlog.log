@@ -1,0 +1,3 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/spyglass_package/models/io_buffers.v" into library work
+INFO: [VRFC 10-311] analyzing module IBUFDS
+INFO: [VRFC 10-311] analyzing module BUFGCE_DIV

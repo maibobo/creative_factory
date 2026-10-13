@@ -4,6 +4,7 @@
 // Date        : Thu Apr 30 14:17:27 2026
 // Host        : Lixy running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
+//               c:/Users/Lixy/Desktop/RTDS/P2020.1/V14/RTDS_test/RTDS_test.srcs/sources_1/ip/fifo_cdc_aurora/fifo_cdc_aurora_sim_netlist.v
 // Design      : fifo_cdc_aurora
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

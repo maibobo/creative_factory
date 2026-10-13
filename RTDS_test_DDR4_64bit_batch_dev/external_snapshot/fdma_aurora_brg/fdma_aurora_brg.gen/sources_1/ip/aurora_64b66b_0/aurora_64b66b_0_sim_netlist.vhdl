@@ -4,6 +4,7 @@
 -- Date        : Tue Sep 22 13:45:55 2026
 -- Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
+--               c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_sim_netlist.vhdl
 -- Design      : aurora_64b66b_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

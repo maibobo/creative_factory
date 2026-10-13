@@ -1,0 +1,8 @@
+{
+  "current_sources": true,
+  "backend": "DDR4_SIM_RAM",
+  "real_xdma_root_port": true,
+  "runs": [],
+  "status": "ELABORATE_FAIL",
+  "exit_code": -999
+}

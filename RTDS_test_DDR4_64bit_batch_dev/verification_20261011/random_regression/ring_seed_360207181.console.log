@@ -1,0 +1,26 @@
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/ring/xsim_script.tcl
+# xsim {ring} -testplusarg SEED=360207181 -autoloadwcfg -tclbatch {F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/ring_seed_360207181.tcl} -onfinish stop -onerror quit
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/ring_seed_360207181.tcl
+## run all
+RNG_INIT scope=tb_rtds_ring.phase2_pick seed=360207181 algorithm=xorshift32
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=1 value=4 lo=3 hi=9
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=2 value=1 lo=0 hi=3
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=3 value=659271715 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=4 value=0 lo=0 hi=3
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=5 value=1404764508 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=6 value=6 lo=2 hi=9
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=7 value=0 lo=0 hi=3
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=8 value=106108226 lo=0 hi=2147483647
+TEST PASS tb_rtds_ring V2.01
+RNG_SUMMARY scope=tb_rtds_ring seed=360207181 draws=198 state=fe8668cd
+$finish called at time : 28922 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_ring.sv" Line 125
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 21:17:40 2026...

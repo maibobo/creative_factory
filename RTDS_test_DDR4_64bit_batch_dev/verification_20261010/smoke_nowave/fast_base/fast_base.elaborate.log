@@ -1,0 +1,29 @@
+﻿Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -debug off -O3 -mt off -L xpm work.tb_xdma_rtds_trythrough -s fast_base 
+Turned off multi-threading.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2989] 'glbl' is not declared [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:213]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:485]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:489]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:492]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:496]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:501]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:505]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'count_value' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:509]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'addra' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:606]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'addrb' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:620]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'src_in_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:664]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'dest_out_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:666]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'reg_in' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:670]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'src_in_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:679]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'dest_out_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:681]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'reg_in' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:685]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'src_in_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:694]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'dest_out_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:696]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 9 for port 'reg_in' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:700]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 10 for port 'src_in_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:709]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'dest_out_bin' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:711]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 10 for port 'reg_in' [C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:715]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

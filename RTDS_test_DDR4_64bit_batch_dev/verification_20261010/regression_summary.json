@@ -1,0 +1,129 @@
+{
+  "current_configuration": "CARD_ADDR_HI=0",
+  "current_config_passed": true,
+  "current_config_cases": 10,
+  "expanded_all_passed": false,
+  "case_count": 11,
+  "wave_count": 0,
+  "cases": [
+    {
+      "case": "1g",
+      "top": "tb_rtds_1g",
+      "passed": true,
+      "started": "2026-10-10T12:58:21.4212967+08:00",
+      "finished": "2026-10-10T12:58:34.0327370+08:00",
+      "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave_r2\\modules\\1g.simulate.log",
+      "pass_pattern": "TEST PASS tb_rtds_1g"
+    },
+    {
+      "case": "axi",
+      "top": "tb_rtds_axi",
+      "passed": true,
+      "started": "2026-10-10T12:57:13.3995036+08:00",
+      "finished": "2026-10-10T12:57:26.0668531+08:00",
+      "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave\\modules\\axi.simulate.log",
+      "pass_pattern": "TEST PASS tb_rtds_axi"
+    },
+    {
+      "case": "axi_tail",
+      "top": "tb_rtds_axi_tail",
+      "passed": true,
+      "started": "2026-10-10T12:57:26.0698926+08:00",
+      "finished": "2026-10-10T12:57:38.7209411+08:00",
+      "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave\\modules\\axi_tail.simulate.log",
+      "pass_pattern": "TEST PASS tb_rtds_axi_tail"
+    },
+    {
+      "case": "board_cdc",
+      "top": "tb_board_cdc_smoke",
+      "passed": true,
+      "started": "2026-10-10T12:58:59.8862165+08:00",
+      "finished": "2026-10-10T12:59:14.6512902+08:00",
+      "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave_r2\\modules\\board_cdc.simulate.log",
+      "pass_pattern": "TEST PASS|BOARD_CDC.*PASS"
+    },
+    {
+      "case": "fast_base",
+      "top": "tb_xdma_rtds_trythrough",
+      "passed": true,
+      "started": "2026-10-10T13:02:40.0198741+08:00",
+      "finished": "2026-10-10T13:02:54.9914984+08:00",
+      "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave_r3\\fast_base\\fast_base.simulate.log",
+      "pass_pattern": "RTDS_TRYTHROUGH_PASS"
+    },
+    {
+      "case": "fast_highaddr",
+      "top": "tb_xdma_rtds_trythrough",
+      "passed": false,
+      "started": "2026-10-10T13:02:56.5003049+08:00",
+      "finished": "2026-10-10T13:03:10.9798063+08:00",
+      "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave_r3\\fast_highaddr\\fast_highaddr.simulate.log",
+      "pass_pattern": "RTDS_TRYTHROUGH_PASS"
+    },
+    {
+      "case": "regs",
+      "top": "tb_rtds_regs",
+      "passed": true,
+      "started": "2026-10-10T12:57:38.7224547+08:00",
+      "finished": "2026-10-10T12:57:51.2201817+08:00",
+      "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave\\modules\\regs.simulate.log",
+      "pass_pattern": "TEST PASS tb_rtds_regs"
+    },
+    {
+      "case": "ring",
+      "top": "tb_rtds_ring",
+      "passed": true,
+      "started": "2026-10-10T12:57:00.9183572+08:00",
+      "finished": "2026-10-10T12:57:13.3979979+08:00",
+      "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave\\modules\\ring.simulate.log",
+      "pass_pattern": "TEST PASS tb_rtds_ring"
+    },
+    {
+      "case": "rx_fifo",
+      "top": "tb_rtds_rx_fifo",
+      "passed": true,
+      "started": "2026-10-10T12:58:47.0944864+08:00",
+      "finished": "2026-10-10T12:58:59.8831934+08:00",
+      "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave_r2\\modules\\rx_fifo.simulate.log",
+      "pass_pattern": "TEST PASS tb_rtds_rx_fifo"
+    },
+    {
+      "case": "sync",
+      "top": "tb_rtds_sync",
+      "passed": true,
+      "started": "2026-10-10T12:56:46.5232483+08:00",
+      "finished": "2026-10-10T12:56:59.3757657+08:00",
+      "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave\\modules\\sync.simulate.log",
+      "pass_pattern": "TEST PASS tb_rtds_sync"
+    },
+    {
+      "case": "tx",
+      "top": "tb_rtds_tx",
+      "passed": true,
+      "started": "2026-10-10T12:58:34.1051677+08:00",
+      "finished": "2026-10-10T12:58:47.0899373+08:00",
+      "log": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\verification_20261010\\smoke_nowave_r2\\modules\\tx.simulate.log",
+      "pass_pattern": "TEST PASS tb_rtds_tx"
+    }
+  ],
+  "changed_files": [
+    {
+      "path": "regression/sim_xdma_trythrough/tb_xdma_rtds_trythrough.sv",
+      "before": "3D40A3AFCCAD33A1C9093B87326E0FBE193C9734539FE0428926017E01EABD6D",
+      "after": "16FCBCE51EDEC688A56178B919FBD7228809DC3C13242EFB3CB9E32528C3793F"
+    },
+    {
+      "path": "regression/sim_xdma_trythrough/xdma_rp_backend.sv",
+      "before": "6153FAD2C038D74A211444C6B7690F6B5D0FB00861EE9C4CA4E593B5EE1E7AE1",
+      "after": "26819472EB6D1CD09DC9600A67EE1212300A91F41267DC9319F322A87A20EDAE"
+    }
+  ],
+  "high_address_failure": {
+    "configuration": "CARD_ADDR_HI=1",
+    "time_ns": 3066,
+    "reason": "RTDS_RX_BLOCK_WRITER constructs fdma_waddr with upper 32 bits fixed to zero",
+    "rtl": "rtl/rtds_rx_block_writer.v",
+    "line": 130
+  },
+  "rootport_rerun": false
+}

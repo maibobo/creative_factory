@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Oct 11 21:24:57 2026
+# Process ID: 21752
+# Current directory: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression
+# Command line: xsim.exe -log 1g_seed_1417633351.simulate.log -mode tcl -source {xsim.dir/1g/xsim_script.tcl}
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/1g_seed_1417633351.simulate.log
+# Journal file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/1g/xsim_script.tcl
+# xsim {1g} -testplusarg SEED=1417633351 -autoloadwcfg -tclbatch {F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/1g_seed_1417633351.tcl} -onfinish stop -onerror quit
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/1g_seed_1417633351.tcl
+## run all
+Fatal: ONE_G/FOUR_BEAT_TARGET beat=1 data=50000000 expected=5000f000 eof=1 rem=1
+Time: 8208 ns  Iteration: 1  Process: /tb_rtds_1g/Always44_100  Scope: tb_rtds_1g.monitor_tx  File: F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_1g.sv Line: 65
+$finish called at time : 8208 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_1g.sv" Line 65
+## quit
+RNG_SUMMARY scope=tb_rtds_1g seed=x draws=0 state=00000000
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 21:25:05 2026...

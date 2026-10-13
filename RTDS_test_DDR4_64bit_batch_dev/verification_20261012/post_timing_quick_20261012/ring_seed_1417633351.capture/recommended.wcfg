@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ring_seed_1417633351.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_rtds_ring" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="31" />
+   <wvobject fp_name="/tb_rtds_ring/bus/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/frame_valid" type="logic">
+      <obj_property name="ElementShortName">frame_valid</obj_property>
+      <obj_property name="ObjectShortName">frame_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/cpu_ack" type="logic">
+      <obj_property name="ElementShortName">cpu_ack</obj_property>
+      <obj_property name="ObjectShortName">cpu_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/irq_clear" type="logic">
+      <obj_property name="ElementShortName">irq_clear</obj_property>
+      <obj_property name="ObjectShortName">irq_clear</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/frame_data" type="array">
+      <obj_property name="ElementShortName">frame_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">frame_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/frame_ready" type="logic">
+      <obj_property name="ElementShortName">frame_ready</obj_property>
+      <obj_property name="ObjectShortName">frame_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/head_addr" type="array">
+      <obj_property name="ElementShortName">head_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">head_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/head_len" type="array">
+      <obj_property name="ElementShortName">head_len[31:0]</obj_property>
+      <obj_property name="ObjectShortName">head_len[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/head_seq" type="array">
+      <obj_property name="ElementShortName">head_seq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">head_seq[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/ready_blocks" type="array">
+      <obj_property name="ElementShortName">ready_blocks[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ready_blocks[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/dropped_frames" type="array">
+      <obj_property name="ElementShortName">dropped_frames[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dropped_frames[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/irq" type="logic">
+      <obj_property name="ElementShortName">irq</obj_property>
+      <obj_property name="ObjectShortName">irq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/fdma_waddr" type="array">
+      <obj_property name="ElementShortName">fdma_waddr[63:0]</obj_property>
+      <obj_property name="ObjectShortName">fdma_waddr[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/fdma_wdata" type="array">
+      <obj_property name="ElementShortName">fdma_wdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">fdma_wdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/fdma_wstrb" type="array">
+      <obj_property name="ElementShortName">fdma_wstrb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fdma_wstrb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/fdma_wsize" type="array">
+      <obj_property name="ElementShortName">fdma_wsize[15:0]</obj_property>
+      <obj_property name="ObjectShortName">fdma_wsize[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/fdma_wareq" type="logic">
+      <obj_property name="ElementShortName">fdma_wareq</obj_property>
+      <obj_property name="ObjectShortName">fdma_wareq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/fdma_wvalid" type="logic">
+      <obj_property name="ElementShortName">fdma_wvalid</obj_property>
+      <obj_property name="ObjectShortName">fdma_wvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/fdma_wbusy" type="logic">
+      <obj_property name="ElementShortName">fdma_wbusy</obj_property>
+      <obj_property name="ObjectShortName">fdma_wbusy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/fdma_waccept" type="logic">
+      <obj_property name="ElementShortName">fdma_waccept</obj_property>
+      <obj_property name="ObjectShortName">fdma_waccept</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/fdma_wdone" type="logic">
+      <obj_property name="ElementShortName">fdma_wdone</obj_property>
+      <obj_property name="ObjectShortName">fdma_wdone</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/fdma_werror" type="logic">
+      <obj_property name="ElementShortName">fdma_werror</obj_property>
+      <obj_property name="ObjectShortName">fdma_werror</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/bus/dbg_state" type="array">
+      <obj_property name="ElementShortName">dbg_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/U_DUT/used_bytes" type="array">
+      <obj_property name="ElementShortName">used_bytes[31:0]</obj_property>
+      <obj_property name="ObjectShortName">used_bytes[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/U_DUT/publish_seq" type="array">
+      <obj_property name="ElementShortName">publish_seq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">publish_seq[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/U_DUT/time_count" type="array">
+      <obj_property name="ElementShortName">time_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">time_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/U_DUT/half_valid" type="logic">
+      <obj_property name="ElementShortName">half_valid</obj_property>
+      <obj_property name="ObjectShortName">half_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/U_DUT/tick" type="logic">
+      <obj_property name="ElementShortName">tick</obj_property>
+      <obj_property name="ObjectShortName">tick</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_ring/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+</wave_config>

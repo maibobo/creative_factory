@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Oct 10 13:03:04 2026
+# Process ID: 27136
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/smoke_nowave_r3/fast_highaddr
+# Command line: xsim.exe -log fast_highaddr.simulate.log -mode tcl -source {xsim.dir/fast_highaddr/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/smoke_nowave_r3/fast_highaddr/fast_highaddr.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/smoke_nowave_r3/fast_highaddr\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/fast_highaddr/xsim_script.tcl
+# xsim {fast_highaddr} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/smoke_nowave_r3/run_nowave.tcl} -onfinish quit -onerror quit
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/smoke_nowave_r3/run_nowave.tcl
+## puts {SMOKE_NOWAVE assertions=on waves=off}
+SMOKE_NOWAVE assertions=on waves=off
+## run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_xdma_rtds_trythrough.dut.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_xdma_rtds_trythrough/dut/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial294_68  Scope: tb_xdma_rtds_trythrough.dut.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 488
+RP_API: enumeration/link initialization complete
+Error: XDMA_BACKEND: FDMA write used unexpected upper address bits
+Time: 3066 ns  Iteration: 0  Process: /tb_xdma_rtds_trythrough/u_backend/record_backend_error  Scope: tb_xdma_rtds_trythrough.u_backend.record_backend_error  File: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_trythrough/xdma_rp_backend.sv Line: 85
+
+Time: 3066 ns Started: 3066 ns Scope: /tb_xdma_rtds_trythrough/u_assertions File: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_trythrough/rtds_assertions.sv Line:70
+Fatal: FDMA write address violated RX window/alignment
+Time: 3066 ns  Iteration: 4  Process: /tb_xdma_rtds_trythrough/u_assertions//tb_xdma_rtds_trythrough/u_assertions  Scope: tb_xdma_rtds_trythrough.u_assertions  File: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/sim_xdma_trythrough/rtds_assertions.sv Line: 71
+$finish called at time : 3066 ns
+exit 0
+INFO: [Common 17-206] Exiting xsim at Sat Oct 10 13:03:10 2026...

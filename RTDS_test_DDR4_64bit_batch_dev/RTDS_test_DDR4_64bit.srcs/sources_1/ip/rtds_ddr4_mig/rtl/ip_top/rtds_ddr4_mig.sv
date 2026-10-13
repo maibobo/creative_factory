@@ -52,6 +52,7 @@
 // /___/  \  /    Vendor             : Xilinx
 // \   \   \/     Version            : 1.0
 //  \   \         Application        : DDR4
+//  /   /         Filename           : rtds_ddr4_mig.v
 // /___/   /\     Date Last Modified : $Date: 2014/09/03 $
 // \   \  /  \    Date Created       : Thu Apr 18 2013
 //  \___\/\___\

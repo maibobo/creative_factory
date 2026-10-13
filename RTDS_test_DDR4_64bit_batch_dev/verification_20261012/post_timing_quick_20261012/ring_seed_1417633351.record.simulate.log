@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 13:01:30 2026
+# Process ID: 26156
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012
+# Command line: xsim.exe -log ring_seed_1417633351.record.simulate.log -mode tcl -source {xsim.dir/ring/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/ring_seed_1417633351.record.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/ring/xsim_script.tcl
+# xsim {ring} -testplusarg SEED=1417633351 -wdb {ring_seed_1417633351.wdb} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/ring_seed_1417633351.tcl} -onfinish stop -onerror quit -sv_seed 1417633351
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/ring_seed_1417633351.tcl
+## set scope /tb_rtds_ring
+## log_wave -r ${scope}/*
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set objects [get_objects -r ${scope}/*]
+## set fh [open {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/ring_seed_1417633351.capture/recorded_signals.txt} w]
+## foreach obj $objects {puts $fh $obj}
+## close $fh
+## create_wave_config
+## foreach obj $objects {if {[regexp {(^/[^/]+/(clk|M_AXI_ACLK|fdma_clk|user_clk|src_clk|clk_250m|rst_n|frames|beat|tick_toggle_2us|cpu_sync_50us)$)|(/(bus|B)/[^/]+$)|(/H/[^/]+$)|(/U_ADAPTER/(tx_active|tx_recovering|tx_quiet_count|tx_user_quiet_fdma|tx_deliver_enable|link_up_fdma|tx_frame_done_fdma|tx_restart_pending)$)|(/U_DMA/(read_curr_st|M_AXI_RVALID|M_AXI_RREADY|M_AXI_RDATA)$)|(/U_DDR/(storage_ready|recovery_read_pending|recovery_read_abort|recovery_read_left|recovery_rvalid|recovery_rdata|recovery_rid|recovery_rresp|recovery_rlast|recovery_write_pending|recovery_write_abort|recovery_write_left|recovery_bvalid|recovery_bid|recovery_bresp)$)|(/U_DUT/(time_count|tick|state|half_valid|used_bytes|publish_seq)$)} $obj]} {catch {add_wave $obj}}}
+## save_wave_config {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/ring_seed_1417633351.capture/recommended.wcfg}
+## open_vcd {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/ring_seed_1417633351.capture/trace.vcd}
+## log_vcd $objects
+INFO: HDL object /tb_rtds_ring/U_DUT/block_len is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_rtds_ring/U_DUT/block_seq is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+## run all
+RNG_INIT scope=tb_rtds_ring.phase2_pick seed=1417633351 algorithm=xorshift32
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=1 value=4 lo=3 hi=9
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=2 value=1 lo=0 hi=3
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=3 value=1264427289 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=4 value=2 lo=0 hi=3
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=5 value=139715216 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=6 value=2 lo=2 hi=9
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=7 value=0 lo=0 hi=3
+RNG_DRAW scope=tb_rtds_ring.phase2_pick n=8 value=604752443 lo=0 hi=2147483647
+TEST PASS tb_rtds_ring V2.01
+RNG_SUMMARY scope=tb_rtds_ring seed=1417633351 draws=198 state=f35f248c
+$finish called at time : 28918 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/sources/regression/batch_1g/tb_rtds_ring.sv" Line 125
+## close_vcd
+## puts "CAPTURE_DONE=ring_seed_1417633351"
+CAPTURE_DONE=ring_seed_1417633351
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 13:01:36 2026...

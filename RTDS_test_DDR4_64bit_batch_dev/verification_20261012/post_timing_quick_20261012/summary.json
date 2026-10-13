@@ -1,0 +1,1673 @@
+[
+  {
+    "case": "ready_recovery",
+    "top": "tb_ready_recovery",
+    "ids": [
+      "TC-F11"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:45:51.159455+08:00",
+    "finished": "2026-10-12T12:46:16.012421+08:00",
+    "wall_seconds": 24.84,
+    "log": "ready_recovery_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=1 value=3 lo=0 hi=31",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=2 value=1 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=4 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=5 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=7 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=8 value=1 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_ready_recovery.phase2_pick n=3 value=36 lo=0 hi=80",
+      "RNG_SUMMARY scope=tb_ready_recovery.H seed=1417633351 draws=47215 state=43282186",
+      "RNG_SUMMARY scope=tb_ready_recovery seed=1417633351 draws=3 state=4b5da119"
+    ]
+  },
+  {
+    "case": "ready_recovery",
+    "top": "tb_ready_recovery",
+    "ids": [
+      "TC-F11"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:46:16.013558+08:00",
+    "finished": "2026-10-12T12:46:24.170899+08:00",
+    "wall_seconds": 8.16,
+    "log": "ready_recovery_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=1 value=10 lo=0 hi=31",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=2 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=3 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=4 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=5 value=7 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=6 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=7 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=8 value=6 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_ready_recovery.phase2_pick n=3 value=26 lo=0 hi=80",
+      "RNG_SUMMARY scope=tb_ready_recovery.H seed=750318462 draws=47339 state=e54b87ac",
+      "RNG_SUMMARY scope=tb_ready_recovery seed=750318462 draws=3 state=a280585c"
+    ]
+  },
+  {
+    "case": "ready_recovery",
+    "top": "tb_ready_recovery",
+    "ids": [
+      "TC-F11"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:46:24.172406+08:00",
+    "finished": "2026-10-12T12:46:32.321217+08:00",
+    "wall_seconds": 8.14,
+    "log": "ready_recovery_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=1 value=26 lo=0 hi=31",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=2 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=3 value=5 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=4 value=2 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=5 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=6 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=7 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_ready_recovery.H.phase2_pick n=8 value=4 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_ready_recovery.phase2_pick n=3 value=79 lo=0 hi=80",
+      "RNG_SUMMARY scope=tb_ready_recovery.H seed=360207181 draws=47265 state=1f632da1",
+      "RNG_SUMMARY scope=tb_ready_recovery seed=360207181 draws=3 state=274bb023"
+    ]
+  },
+  {
+    "case": "backend_read",
+    "top": "tb_backend_read",
+    "ids": [
+      "TC-F13"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:46:38.068413+08:00",
+    "finished": "2026-10-12T12:46:45.875044+08:00",
+    "wall_seconds": 7.8,
+    "log": "backend_read_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=1 value=166008068 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=2 value=1138832515 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=4 value=278997607 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=5 value=139715218 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=7 value=158571554 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=8 value=604752445 lo=1 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=7 value=158571554 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=8 value=604752445 lo=1 hi=2147483647",
+      "RNG_SUMMARY scope=tb_backend_read.T seed=1417633351 draws=3968 state=b9795f5b"
+    ]
+  },
+  {
+    "case": "backend_read",
+    "top": "tb_backend_read",
+    "ids": [
+      "TC-F13"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:46:45.876549+08:00",
+    "finished": "2026-10-12T12:46:52.452723+08:00",
+    "wall_seconds": 6.56,
+    "log": "backend_read_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=1 value=681357227 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=2 value=274698975 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=3 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=4 value=419045307 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=5 value=984028641 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=6 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=7 value=1489736110 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=8 value=1966784147 lo=1 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=7 value=1489736110 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=8 value=1966784147 lo=1 hi=2147483647",
+      "RNG_SUMMARY scope=tb_backend_read.T seed=750318462 draws=3968 state=442c6e4a"
+    ]
+  },
+  {
+    "case": "backend_read",
+    "top": "tb_backend_read",
+    "ids": [
+      "TC-F13"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:46:52.454228+08:00",
+    "finished": "2026-10-12T12:46:59.064331+08:00",
+    "wall_seconds": 6.61,
+    "log": "backend_read_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=1 value=1031840636 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=2 value=337200687 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=3 value=5 lo=0 hi=9",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=4 value=2024859653 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=5 value=1404764510 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=6 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=7 value=569104498 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=8 value=106108228 lo=1 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=7 value=569104498 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=8 value=106108228 lo=1 hi=2147483647",
+      "RNG_SUMMARY scope=tb_backend_read.T seed=360207181 draws=3968 state=063744e5"
+    ]
+  },
+  {
+    "case": "backend_write",
+    "top": "tb_backend_write",
+    "ids": [
+      "TC-F14"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:47:04.646682+08:00",
+    "finished": "2026-10-12T12:47:11.865087+08:00",
+    "wall_seconds": 7.22,
+    "log": "backend_write_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=1 value=166008068 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=2 value=1138832515 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=3 value=8 lo=2 hi=8",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=4 value=278997607 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=5 value=139715218 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=6 value=4 lo=0 hi=5",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=7 value=158571554 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=8 value=604752445 lo=1 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=7 value=158571554 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=8 value=604752445 lo=1 hi=2147483647",
+      "RNG_SUMMARY scope=tb_backend_write.T seed=1417633351 draws=3980 state=bb2e7a47"
+    ]
+  },
+  {
+    "case": "backend_write",
+    "top": "tb_backend_write",
+    "ids": [
+      "TC-F14"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:47:11.866593+08:00",
+    "finished": "2026-10-12T12:47:18.410174+08:00",
+    "wall_seconds": 6.55,
+    "log": "backend_write_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=1 value=681357227 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=2 value=274698975 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=3 value=3 lo=2 hi=8",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=4 value=419045307 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=5 value=984028641 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=6 value=1 lo=0 hi=5",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=7 value=1489736110 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=8 value=1966784147 lo=1 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=7 value=1489736110 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=8 value=1966784147 lo=1 hi=2147483647",
+      "RNG_SUMMARY scope=tb_backend_write.T seed=750318462 draws=3980 state=2e6c20cb"
+    ]
+  },
+  {
+    "case": "backend_write",
+    "top": "tb_backend_write",
+    "ids": [
+      "TC-F14"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:47:18.411680+08:00",
+    "finished": "2026-10-12T12:47:24.973793+08:00",
+    "wall_seconds": 6.56,
+    "log": "backend_write_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=1 value=1031840636 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=2 value=337200687 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=3 value=6 lo=2 hi=8",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=4 value=2024859653 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=5 value=1404764510 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=6 value=2 lo=0 hi=5",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=7 value=569104498 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=8 value=106108228 lo=1 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=7 value=569104498 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_write.T.phase2_pick n=8 value=106108228 lo=1 hi=2147483647",
+      "RNG_SUMMARY scope=tb_backend_write.T seed=360207181 draws=3980 state=7e1e1694"
+    ]
+  },
+  {
+    "case": "backend_edge_recovery",
+    "top": "tb_backend_edge_recovery",
+    "ids": [
+      "TC-F13",
+      "TC-F14"
+    ],
+    "seed": 1417633351,
+    "status": "FUNCTIONAL_FAIL",
+    "exit_code": 0,
+    "started": "2026-10-12T12:47:30.353191+08:00",
+    "finished": "2026-10-12T12:47:37.419106+08:00",
+    "wall_seconds": 7.06,
+    "log": "backend_edge_recovery_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=1 value=166008068 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=2 value=1138832515 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=3 value=1264427290 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=4 value=278997607 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=5 value=139715218 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=6 value=1949469329 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=7 value=158571554 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=8 value=604752445 lo=1 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=7 value=158571554 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=8 value=604752445 lo=1 hi=2147483647",
+      "RNG_SUMMARY scope=tb_backend_edge_recovery seed=1417633351 draws=13 state=e561cd88"
+    ]
+  },
+  {
+    "case": "backend_edge_recovery",
+    "top": "tb_backend_edge_recovery",
+    "ids": [
+      "TC-F13",
+      "TC-F14"
+    ],
+    "seed": 750318462,
+    "status": "FUNCTIONAL_FAIL",
+    "exit_code": 0,
+    "started": "2026-10-12T12:47:37.420612+08:00",
+    "finished": "2026-10-12T12:47:44.081640+08:00",
+    "wall_seconds": 6.67,
+    "log": "backend_edge_recovery_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=1 value=681357227 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=2 value=274698975 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=3 value=578836574 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=4 value=419045307 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=5 value=984028641 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=6 value=1535632370 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=7 value=1489736110 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=8 value=1966784147 lo=1 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=7 value=1489736110 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=8 value=1966784147 lo=1 hi=2147483647",
+      "RNG_SUMMARY scope=tb_backend_edge_recovery seed=750318462 draws=13 state=d172c3cf"
+    ]
+  },
+  {
+    "case": "backend_edge_recovery",
+    "top": "tb_backend_edge_recovery",
+    "ids": [
+      "TC-F13",
+      "TC-F14"
+    ],
+    "seed": 360207181,
+    "status": "FUNCTIONAL_FAIL",
+    "exit_code": 0,
+    "started": "2026-10-12T12:47:44.083153+08:00",
+    "finished": "2026-10-12T12:47:50.634903+08:00",
+    "wall_seconds": 6.55,
+    "log": "backend_edge_recovery_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=1 value=1031840636 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=2 value=337200687 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=3 value=659271716 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=4 value=2024859653 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=5 value=1404764510 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=6 value=1099680278 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=7 value=569104498 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=8 value=106108228 lo=1 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=7 value=569104498 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=8 value=106108228 lo=1 hi=2147483647",
+      "RNG_SUMMARY scope=tb_backend_edge_recovery seed=360207181 draws=13 state=a918025e"
+    ]
+  },
+  {
+    "case": "writer_error_recovery",
+    "top": "tb_writer_error_recovery",
+    "ids": [
+      "TC-F14"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:47:57.252931+08:00",
+    "finished": "2026-10-12T12:48:04.488865+08:00",
+    "wall_seconds": 7.23,
+    "log": "writer_error_recovery_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=1 value=3 lo=0 hi=31",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=2 value=1 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=4 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=5 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=7 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=8 value=1 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_writer_error_recovery.phase2_pick n=4 value=76657 lo=1 hi=1048575",
+      "RNG_SUMMARY scope=tb_writer_error_recovery.H seed=1417633351 draws=5146 state=46cc1d76",
+      "RNG_SUMMARY scope=tb_writer_error_recovery seed=1417633351 draws=4 state=10a12a66"
+    ]
+  },
+  {
+    "case": "writer_error_recovery",
+    "top": "tb_writer_error_recovery",
+    "ids": [
+      "TC-F14"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:48:04.490374+08:00",
+    "finished": "2026-10-12T12:48:11.230407+08:00",
+    "wall_seconds": 6.73,
+    "log": "writer_error_recovery_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=1 value=10 lo=0 hi=31",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=2 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=3 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=4 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=5 value=7 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=6 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=7 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=8 value=6 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_writer_error_recovery.phase2_pick n=4 value=665929 lo=1 hi=1048575",
+      "RNG_SUMMARY scope=tb_writer_error_recovery.H seed=750318462 draws=5148 state=d8d0043c",
+      "RNG_SUMMARY scope=tb_writer_error_recovery seed=750318462 draws=4 state=98fa1fb9"
+    ]
+  },
+  {
+    "case": "writer_error_recovery",
+    "top": "tb_writer_error_recovery",
+    "ids": [
+      "TC-F14"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:48:11.231926+08:00",
+    "finished": "2026-10-12T12:48:18.108700+08:00",
+    "wall_seconds": 6.88,
+    "log": "writer_error_recovery_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=1 value=26 lo=0 hi=31",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=2 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=3 value=5 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=4 value=2 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=5 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=6 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=7 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_writer_error_recovery.H.phase2_pick n=8 value=4 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_writer_error_recovery.phase2_pick n=4 value=61328 lo=1 hi=1048575",
+      "RNG_SUMMARY scope=tb_writer_error_recovery.H seed=360207181 draws=5147 state=f7d94fb4",
+      "RNG_SUMMARY scope=tb_writer_error_recovery seed=360207181 draws=4 state=78b0e804"
+    ]
+  },
+  {
+    "case": "recovery_isolation",
+    "top": "tb_recovery_isolation",
+    "ids": [
+      "TC-F15"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:48:24.728070+08:00",
+    "finished": "2026-10-12T12:48:32.601280+08:00",
+    "wall_seconds": 7.88,
+    "log": "recovery_isolation_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=1 value=3 lo=0 hi=31",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=2 value=1 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=4 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=5 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=7 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=8 value=1 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_recovery_isolation.phase2_pick n=8 value=775292 lo=1 hi=1048575",
+      "RNG_SUMMARY scope=tb_recovery_isolation.H seed=1417633351 draws=12519 state=3694fc4c",
+      "RNG_SUMMARY scope=tb_recovery_isolation seed=1417633351 draws=284 state=85e5723f"
+    ]
+  },
+  {
+    "case": "recovery_isolation",
+    "top": "tb_recovery_isolation",
+    "ids": [
+      "TC-F15"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:48:32.602784+08:00",
+    "finished": "2026-10-12T12:48:39.994241+08:00",
+    "wall_seconds": 7.39,
+    "log": "recovery_isolation_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=1 value=10 lo=0 hi=31",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=2 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=3 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=4 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=5 value=7 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=6 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=7 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=8 value=6 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_recovery_isolation.phase2_pick n=8 value=706022 lo=1 hi=1048575",
+      "RNG_SUMMARY scope=tb_recovery_isolation.H seed=750318462 draws=12494 state=ca4fd61b",
+      "RNG_SUMMARY scope=tb_recovery_isolation seed=750318462 draws=284 state=1cb811cb"
+    ]
+  },
+  {
+    "case": "recovery_isolation",
+    "top": "tb_recovery_isolation",
+    "ids": [
+      "TC-F15"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:48:39.994241+08:00",
+    "finished": "2026-10-12T12:48:47.371118+08:00",
+    "wall_seconds": 7.38,
+    "log": "recovery_isolation_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=1 value=26 lo=0 hi=31",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=2 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=3 value=5 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=4 value=2 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=5 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=6 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=7 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_isolation.H.phase2_pick n=8 value=4 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_recovery_isolation.phase2_pick n=8 value=204200 lo=1 hi=1048575",
+      "RNG_SUMMARY scope=tb_recovery_isolation.H seed=360207181 draws=12552 state=10e3f30d",
+      "RNG_SUMMARY scope=tb_recovery_isolation seed=360207181 draws=284 state=d29c6410"
+    ]
+  },
+  {
+    "case": "recovery_cross_variants",
+    "top": "tb_recovery_cross_variants",
+    "ids": [
+      "TC-F15"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:48:53.976390+08:00",
+    "finished": "2026-10-12T12:49:13.706675+08:00",
+    "wall_seconds": 19.74,
+    "log": "recovery_cross_variants_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=1 value=3 lo=0 hi=31",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=2 value=1 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=4 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=5 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=7 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=8 value=1 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_recovery_cross_variants.phase2_pick n=8 value=775292 lo=1 hi=1048575",
+      "RNG_SUMMARY scope=tb_recovery_cross_variants.H seed=1417633351 draws=12519 state=3694fc4c",
+      "RNG_SUMMARY scope=tb_recovery_cross_variants seed=1417633351 draws=284 state=85e5723f"
+    ]
+  },
+  {
+    "case": "recovery_cross_variants",
+    "top": "tb_recovery_cross_variants",
+    "ids": [
+      "TC-F15"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:49:13.708179+08:00",
+    "finished": "2026-10-12T12:49:21.256715+08:00",
+    "wall_seconds": 7.55,
+    "log": "recovery_cross_variants_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=1 value=10 lo=0 hi=31",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=2 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=3 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=4 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=5 value=7 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=6 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=7 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=8 value=6 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_recovery_cross_variants.phase2_pick n=8 value=706022 lo=1 hi=1048575",
+      "RNG_SUMMARY scope=tb_recovery_cross_variants.H seed=750318462 draws=12500 state=414d90ee",
+      "RNG_SUMMARY scope=tb_recovery_cross_variants seed=750318462 draws=284 state=1cb811cb"
+    ]
+  },
+  {
+    "case": "recovery_cross_variants",
+    "top": "tb_recovery_cross_variants",
+    "ids": [
+      "TC-F15"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:49:21.258220+08:00",
+    "finished": "2026-10-12T12:49:28.631009+08:00",
+    "wall_seconds": 7.38,
+    "log": "recovery_cross_variants_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=1 value=26 lo=0 hi=31",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=2 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=3 value=5 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=4 value=2 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=5 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=6 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=7 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=8 value=4 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_recovery_cross_variants.phase2_pick n=8 value=204200 lo=1 hi=1048575",
+      "RNG_SUMMARY scope=tb_recovery_cross_variants.H seed=360207181 draws=12604 state=6d80e41c",
+      "RNG_SUMMARY scope=tb_recovery_cross_variants seed=360207181 draws=284 state=d29c6410"
+    ]
+  },
+  {
+    "case": "fast_base",
+    "top": "tb_xdma_rtds_trythrough",
+    "ids": [
+      "TC-F01",
+      "TC-F02",
+      "TC-F03",
+      "TC-F04",
+      "TC-F05",
+      "TC-F06",
+      "TC-F07",
+      "TC-F08"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:49:34.791012+08:00",
+    "finished": "2026-10-12T12:49:42.972875+08:00",
+    "wall_seconds": 8.19,
+    "log": "fast_base_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_SUMMARY scope=tb_xdma_rtds_trythrough seed=x draws=0 state=00000000"
+    ],
+    "random_summary": [
+      "RNG_SUMMARY scope=tb_xdma_rtds_trythrough seed=x draws=0 state=00000000"
+    ]
+  },
+  {
+    "case": "fast_base",
+    "top": "tb_xdma_rtds_trythrough",
+    "ids": [
+      "TC-F01",
+      "TC-F02",
+      "TC-F03",
+      "TC-F04",
+      "TC-F05",
+      "TC-F06",
+      "TC-F07",
+      "TC-F08"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:49:42.975891+08:00",
+    "finished": "2026-10-12T12:49:50.733002+08:00",
+    "wall_seconds": 7.75,
+    "log": "fast_base_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_SUMMARY scope=tb_xdma_rtds_trythrough seed=x draws=0 state=00000000"
+    ],
+    "random_summary": [
+      "RNG_SUMMARY scope=tb_xdma_rtds_trythrough seed=x draws=0 state=00000000"
+    ]
+  },
+  {
+    "case": "fast_base",
+    "top": "tb_xdma_rtds_trythrough",
+    "ids": [
+      "TC-F01",
+      "TC-F02",
+      "TC-F03",
+      "TC-F04",
+      "TC-F05",
+      "TC-F06",
+      "TC-F07",
+      "TC-F08"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:49:50.734511+08:00",
+    "finished": "2026-10-12T12:49:58.492722+08:00",
+    "wall_seconds": 7.75,
+    "log": "fast_base_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_SUMMARY scope=tb_xdma_rtds_trythrough seed=x draws=0 state=00000000"
+    ],
+    "random_summary": [
+      "RNG_SUMMARY scope=tb_xdma_rtds_trythrough seed=x draws=0 state=00000000"
+    ]
+  },
+  {
+    "case": "axi",
+    "top": "tb_rtds_axi",
+    "ids": [
+      "TC-M03"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:50:03.819754+08:00",
+    "finished": "2026-10-12T12:50:10.882800+08:00",
+    "wall_seconds": 7.06,
+    "log": "axi_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=1 value=7 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=2 value=1 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=4 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=5 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=7 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=8 value=1 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=7 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=8 value=1 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_rtds_axi seed=1417633351 draws=9462 state=3c070825"
+    ]
+  },
+  {
+    "case": "axi",
+    "top": "tb_rtds_axi",
+    "ids": [
+      "TC-M03"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:50:10.884305+08:00",
+    "finished": "2026-10-12T12:50:17.480667+08:00",
+    "wall_seconds": 6.59,
+    "log": "axi_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=1 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=2 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=3 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=4 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=5 value=7 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=6 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=7 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=8 value=6 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=7 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=8 value=6 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_rtds_axi seed=750318462 draws=9474 state=6a311049"
+    ]
+  },
+  {
+    "case": "axi",
+    "top": "tb_rtds_axi",
+    "ids": [
+      "TC-M03"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:50:17.483681+08:00",
+    "finished": "2026-10-12T12:50:24.061112+08:00",
+    "wall_seconds": 6.58,
+    "log": "axi_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=1 value=2 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=2 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=3 value=5 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=4 value=2 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=5 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=6 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=7 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=8 value=4 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=7 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi.phase2_pick n=8 value=4 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_rtds_axi seed=360207181 draws=9372 state=36a3bfc0"
+    ]
+  },
+  {
+    "case": "axi_tail",
+    "top": "tb_rtds_axi_tail",
+    "ids": [
+      "TC-M04"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:50:29.376832+08:00",
+    "finished": "2026-10-12T12:50:36.430817+08:00",
+    "wall_seconds": 7.05,
+    "log": "axi_tail_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=1 value=166008068 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=2 value=1 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=4 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=5 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=7 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=8 value=1 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=7 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=8 value=1 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_rtds_axi_tail seed=1417633351 draws=157 state=cca26980"
+    ]
+  },
+  {
+    "case": "axi_tail",
+    "top": "tb_rtds_axi_tail",
+    "ids": [
+      "TC-M04"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:50:36.432322+08:00",
+    "finished": "2026-10-12T12:50:43.003191+08:00",
+    "wall_seconds": 6.58,
+    "log": "axi_tail_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=1 value=681357227 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=2 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=3 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=4 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=5 value=7 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=6 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=7 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=8 value=6 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=7 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=8 value=6 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_rtds_axi_tail seed=750318462 draws=160 state=86bb8415"
+    ]
+  },
+  {
+    "case": "axi_tail",
+    "top": "tb_rtds_axi_tail",
+    "ids": [
+      "TC-M04"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:50:43.006209+08:00",
+    "finished": "2026-10-12T12:50:49.597305+08:00",
+    "wall_seconds": 6.59,
+    "log": "axi_tail_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=1 value=1031840636 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=2 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=3 value=5 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=4 value=2 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=5 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=6 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=7 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=8 value=4 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=7 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_axi_tail.phase2_pick n=8 value=4 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_rtds_axi_tail seed=360207181 draws=169 state=fd98513a"
+    ]
+  },
+  {
+    "case": "ring",
+    "top": "tb_rtds_ring",
+    "ids": [
+      "TC-M02"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:50:54.845251+08:00",
+    "finished": "2026-10-12T12:51:02.224633+08:00",
+    "wall_seconds": 7.38,
+    "log": "ring_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=1 value=4 lo=3 hi=9",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=2 value=1 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=3 value=1264427289 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=4 value=2 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=5 value=139715216 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=6 value=2 lo=2 hi=9",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=7 value=0 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=8 value=604752443 lo=0 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=7 value=0 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=8 value=604752443 lo=0 hi=2147483647",
+      "RNG_SUMMARY scope=tb_rtds_ring seed=1417633351 draws=198 state=f35f248c"
+    ]
+  },
+  {
+    "case": "ring",
+    "top": "tb_rtds_ring",
+    "ids": [
+      "TC-M02"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:51:02.227727+08:00",
+    "finished": "2026-10-12T12:51:08.784384+08:00",
+    "wall_seconds": 6.56,
+    "log": "ring_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=1 value=7 lo=3 hi=9",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=2 value=2 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=3 value=578836572 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=4 value=1 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=5 value=984028639 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=6 value=3 lo=2 hi=9",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=7 value=1 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=8 value=1966784146 lo=0 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=7 value=1 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=8 value=1966784146 lo=0 hi=2147483647",
+      "RNG_SUMMARY scope=tb_rtds_ring seed=750318462 draws=198 state=211c8eee"
+    ]
+  },
+  {
+    "case": "ring",
+    "top": "tb_rtds_ring",
+    "ids": [
+      "TC-M02"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:51:08.785890+08:00",
+    "finished": "2026-10-12T12:51:15.358598+08:00",
+    "wall_seconds": 6.56,
+    "log": "ring_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=1 value=4 lo=3 hi=9",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=2 value=1 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=3 value=659271715 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=4 value=0 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=5 value=1404764508 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=6 value=6 lo=2 hi=9",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=7 value=0 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=8 value=106108226 lo=0 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=7 value=0 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_ring.phase2_pick n=8 value=106108226 lo=0 hi=2147483647",
+      "RNG_SUMMARY scope=tb_rtds_ring seed=360207181 draws=198 state=fe8668cd"
+    ]
+  },
+  {
+    "case": "regs",
+    "top": "tb_rtds_regs",
+    "ids": [
+      "TC-M05"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:51:20.816806+08:00",
+    "finished": "2026-10-12T12:51:28.635440+08:00",
+    "wall_seconds": 7.81,
+    "log": "regs_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=1 value=3 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=2 value=1 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=3 value=1 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=4 value=6 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=5 value=0 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=6 value=0 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=7 value=0 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=8 value=3 lo=0 hi=7"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=7 value=0 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=8 value=3 lo=0 hi=7",
+      "RNG_SUMMARY scope=tb_rtds_regs seed=1417633351 draws=24 state=a135b20a"
+    ]
+  },
+  {
+    "case": "regs",
+    "top": "tb_rtds_regs",
+    "ids": [
+      "TC-M05"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:51:28.636945+08:00",
+    "finished": "2026-10-12T12:51:35.238213+08:00",
+    "wall_seconds": 6.61,
+    "log": "regs_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=1 value=2 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=2 value=6 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=3 value=4 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=4 value=1 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=5 value=7 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=6 value=1 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=7 value=5 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=8 value=2 lo=0 hi=7"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=7 value=5 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=8 value=2 lo=0 hi=7",
+      "RNG_SUMMARY scope=tb_rtds_regs seed=750318462 draws=24 state=7cab9153"
+    ]
+  },
+  {
+    "case": "regs",
+    "top": "tb_rtds_regs",
+    "ids": [
+      "TC-M05"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:51:35.239718+08:00",
+    "finished": "2026-10-12T12:51:41.746472+08:00",
+    "wall_seconds": 6.5,
+    "log": "regs_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=1 value=2 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=2 value=5 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=3 value=3 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=4 value=4 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=5 value=4 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=6 value=4 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=7 value=0 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=8 value=2 lo=0 hi=7"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=7 value=0 lo=0 hi=7",
+      "RNG_DRAW scope=tb_rtds_regs.phase2_pick n=8 value=2 lo=0 hi=7",
+      "RNG_SUMMARY scope=tb_rtds_regs seed=360207181 draws=24 state=62c807ea"
+    ]
+  },
+  {
+    "case": "rx_fifo",
+    "top": "tb_rtds_rx_fifo",
+    "ids": [
+      "TC-M06"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:51:47.161612+08:00",
+    "finished": "2026-10-12T12:51:54.211955+08:00",
+    "wall_seconds": 7.05,
+    "log": "rx_fifo_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=1 value=166008067 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=2 value=1138832513 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=3 value=1264427289 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=4 value=278997606 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=5 value=139715216 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=6 value=1949469328 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=7 value=158571552 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=8 value=604752443 lo=0 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=7 value=158571552 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=8 value=604752443 lo=0 hi=2147483647",
+      "RNG_SUMMARY scope=tb_rtds_rx_fifo seed=1417633351 draws=62 state=613198d5"
+    ]
+  },
+  {
+    "case": "rx_fifo",
+    "top": "tb_rtds_rx_fifo",
+    "ids": [
+      "TC-M06"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:51:54.211955+08:00",
+    "finished": "2026-10-12T12:52:00.779793+08:00",
+    "wall_seconds": 6.56,
+    "log": "rx_fifo_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=1 value=681357226 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=2 value=274698974 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=3 value=578836572 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=4 value=419045305 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=5 value=984028639 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=6 value=1535632369 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=7 value=1489736109 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=8 value=1966784146 lo=0 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=7 value=1489736109 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=8 value=1966784146 lo=0 hi=2147483647",
+      "RNG_SUMMARY scope=tb_rtds_rx_fifo seed=750318462 draws=50 state=7b9e7874"
+    ]
+  },
+  {
+    "case": "rx_fifo",
+    "top": "tb_rtds_rx_fifo",
+    "ids": [
+      "TC-M06"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:52:00.782815+08:00",
+    "finished": "2026-10-12T12:52:07.377309+08:00",
+    "wall_seconds": 6.59,
+    "log": "rx_fifo_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=1 value=1031840634 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=2 value=337200685 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=3 value=659271715 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=4 value=2024859652 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=5 value=1404764508 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=6 value=1099680276 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=7 value=569104496 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=8 value=106108226 lo=0 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=7 value=569104496 lo=0 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=8 value=106108226 lo=0 hi=2147483647",
+      "RNG_SUMMARY scope=tb_rtds_rx_fifo seed=360207181 draws=54 state=2484c383"
+    ]
+  },
+  {
+    "case": "tx",
+    "top": "tb_rtds_tx",
+    "ids": [
+      "TC-M07"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:52:12.878908+08:00",
+    "finished": "2026-10-12T12:52:19.984757+08:00",
+    "wall_seconds": 7.11,
+    "log": "tx_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=1 value=166008068 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=2 value=1 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=4 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=5 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=7 value=0 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=8 value=1 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=7 value=0 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=8 value=1 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_rtds_tx seed=1417633351 draws=1753 state=304dc23e"
+    ]
+  },
+  {
+    "case": "tx",
+    "top": "tb_rtds_tx",
+    "ids": [
+      "TC-M07"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:52:19.986302+08:00",
+    "finished": "2026-10-12T12:52:26.655822+08:00",
+    "wall_seconds": 6.66,
+    "log": "tx_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=1 value=681357227 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=2 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=3 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=4 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=5 value=7 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=6 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=7 value=1 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=8 value=6 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=7 value=1 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=8 value=6 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_rtds_tx seed=750318462 draws=1767 state=770c97a5"
+    ]
+  },
+  {
+    "case": "tx",
+    "top": "tb_rtds_tx",
+    "ids": [
+      "TC-M07"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:52:26.657329+08:00",
+    "finished": "2026-10-12T12:52:33.401059+08:00",
+    "wall_seconds": 6.73,
+    "log": "tx_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=1 value=1031840636 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=2 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=3 value=5 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=4 value=2 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=5 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=6 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=7 value=0 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=8 value=4 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=7 value=0 lo=0 hi=3",
+      "RNG_DRAW scope=tb_rtds_tx.phase2_pick n=8 value=4 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_rtds_tx seed=360207181 draws=1785 state=079121b3"
+    ]
+  },
+  {
+    "case": "sync",
+    "top": "tb_rtds_sync",
+    "ids": [
+      "TC-M08"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:52:38.516351+08:00",
+    "finished": "2026-10-12T12:52:45.762325+08:00",
+    "wall_seconds": 7.23,
+    "log": "sync_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_sync.phase2_pick n=1 value=8 lo=5 hi=20",
+      "RNG_SUMMARY scope=tb_rtds_sync seed=1417633351 draws=1 state=09e51503"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_sync.phase2_pick n=1 value=8 lo=5 hi=20",
+      "RNG_SUMMARY scope=tb_rtds_sync seed=1417633351 draws=1 state=09e51503"
+    ]
+  },
+  {
+    "case": "sync",
+    "top": "tb_rtds_sync",
+    "ids": [
+      "TC-M08"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:52:45.763833+08:00",
+    "finished": "2026-10-12T12:52:52.285100+08:00",
+    "wall_seconds": 6.53,
+    "log": "sync_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_sync.phase2_pick n=1 value=15 lo=5 hi=20",
+      "RNG_SUMMARY scope=tb_rtds_sync seed=750318462 draws=1 state=289cafaa"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_sync.phase2_pick n=1 value=15 lo=5 hi=20",
+      "RNG_SUMMARY scope=tb_rtds_sync seed=750318462 draws=1 state=289cafaa"
+    ]
+  },
+  {
+    "case": "sync",
+    "top": "tb_rtds_sync",
+    "ids": [
+      "TC-M08"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:52:52.286609+08:00",
+    "finished": "2026-10-12T12:52:58.859691+08:00",
+    "wall_seconds": 6.58,
+    "log": "sync_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_sync.phase2_pick n=1 value=15 lo=5 hi=20",
+      "RNG_SUMMARY scope=tb_rtds_sync seed=360207181 draws=1 state=bd80a37a"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_sync.phase2_pick n=1 value=15 lo=5 hi=20",
+      "RNG_SUMMARY scope=tb_rtds_sync seed=360207181 draws=1 state=bd80a37a"
+    ]
+  },
+  {
+    "case": "1g",
+    "top": "tb_rtds_1g",
+    "ids": [
+      "TC-M01"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:53:04.175741+08:00",
+    "finished": "2026-10-12T12:53:12.093654+08:00",
+    "wall_seconds": 7.91,
+    "log": "1g_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=1 value=7 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=2 value=23 lo=0 hi=30",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=3 value=48 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=4 value=24 lo=0 hi=30",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=5 value=28 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=6 value=11 lo=0 hi=30",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=7 value=32 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=8 value=12 lo=0 hi=30"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=7 value=32 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=8 value=12 lo=0 hi=30",
+      "RNG_SUMMARY scope=tb_rtds_1g seed=1417633351 draws=20 state=803357b9"
+    ]
+  },
+  {
+    "case": "1g",
+    "top": "tb_rtds_1g",
+    "ids": [
+      "TC-M01"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:53:12.095161+08:00",
+    "finished": "2026-10-12T12:53:18.749422+08:00",
+    "wall_seconds": 6.64,
+    "log": "1g_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=1 value=31 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=2 value=7 lo=0 hi=30",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=3 value=11 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=4 value=17 lo=0 hi=30",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=5 value=36 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=6 value=1 lo=0 hi=30",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=7 value=48 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=8 value=27 lo=0 hi=30"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=7 value=48 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=8 value=27 lo=0 hi=30",
+      "RNG_SUMMARY scope=tb_rtds_1g seed=750318462 draws=20 state=6f91ff3f"
+    ]
+  },
+  {
+    "case": "1g",
+    "top": "tb_rtds_1g",
+    "ids": [
+      "TC-M01"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:53:18.750928+08:00",
+    "finished": "2026-10-12T12:53:25.436447+08:00",
+    "wall_seconds": 6.67,
+    "log": "1g_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=1 value=41 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=2 value=16 lo=0 hi=30",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=3 value=19 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=4 value=9 lo=0 hi=30",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=5 value=32 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=6 value=11 lo=0 hi=30",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=7 value=10 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=8 value=2 lo=0 hi=30"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=7 value=10 lo=0 hi=50",
+      "RNG_DRAW scope=tb_rtds_1g.phase2_pick n=8 value=2 lo=0 hi=30",
+      "RNG_SUMMARY scope=tb_rtds_1g seed=360207181 draws=20 state=a103fb47"
+    ]
+  },
+  {
+    "case": "byte1_1g",
+    "top": "tb_byte1_1g",
+    "ids": [
+      "TC-F09"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:53:32.113778+08:00",
+    "finished": "2026-10-12T12:53:50.936799+08:00",
+    "wall_seconds": 18.81,
+    "log": "byte1_1g_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=1 value=3 lo=0 hi=31",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=2 value=1 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=4 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=5 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=7 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=8 value=1 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=8 value=1 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_byte1_1g.H seed=1417633351 draws=26010 state=4242f3e8",
+      "RNG_SUMMARY scope=tb_byte1_1g seed=x draws=0 state=00000000"
+    ]
+  },
+  {
+    "case": "byte1_1g",
+    "top": "tb_byte1_1g",
+    "ids": [
+      "TC-F09"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:53:50.936799+08:00",
+    "finished": "2026-10-12T12:53:58.386266+08:00",
+    "wall_seconds": 7.45,
+    "log": "byte1_1g_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=1 value=10 lo=0 hi=31",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=2 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=3 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=4 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=5 value=7 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=6 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=7 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=8 value=6 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=8 value=6 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_byte1_1g.H seed=750318462 draws=26007 state=950c2b26",
+      "RNG_SUMMARY scope=tb_byte1_1g seed=x draws=0 state=00000000"
+    ]
+  },
+  {
+    "case": "byte1_1g",
+    "top": "tb_byte1_1g",
+    "ids": [
+      "TC-F09"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:53:58.387772+08:00",
+    "finished": "2026-10-12T12:54:05.883352+08:00",
+    "wall_seconds": 7.5,
+    "log": "byte1_1g_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=1 value=26 lo=0 hi=31",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=2 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=3 value=5 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=4 value=2 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=5 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=6 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=7 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=8 value=4 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_byte1_1g.H.phase2_pick n=8 value=4 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_byte1_1g.H seed=360207181 draws=26003 state=800b84bb",
+      "RNG_SUMMARY scope=tb_byte1_1g seed=x draws=0 state=00000000"
+    ]
+  },
+  {
+    "case": "tx_boundaries",
+    "top": "tb_tx_boundaries",
+    "ids": [
+      "TC-F10"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:54:12.474531+08:00",
+    "finished": "2026-10-12T12:54:20.434415+08:00",
+    "wall_seconds": 7.95,
+    "log": "tx_boundaries_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=1 value=3 lo=0 hi=31",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=2 value=1 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=4 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=5 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=7 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=8 value=1 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_tx_boundaries.phase2_pick n=8 value=775292 lo=1 hi=1048575",
+      "RNG_SUMMARY scope=tb_tx_boundaries.H seed=1417633351 draws=23413 state=1f7b7a2a",
+      "RNG_SUMMARY scope=tb_tx_boundaries seed=1417633351 draws=32 state=16413be9"
+    ]
+  },
+  {
+    "case": "tx_boundaries",
+    "top": "tb_tx_boundaries",
+    "ids": [
+      "TC-F10"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:54:20.437721+08:00",
+    "finished": "2026-10-12T12:54:27.943392+08:00",
+    "wall_seconds": 7.5,
+    "log": "tx_boundaries_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=1 value=10 lo=0 hi=31",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=2 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=3 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=4 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=5 value=7 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=6 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=7 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=8 value=6 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_tx_boundaries.phase2_pick n=8 value=706022 lo=1 hi=1048575",
+      "RNG_SUMMARY scope=tb_tx_boundaries.H seed=750318462 draws=25761 state=a449c29f",
+      "RNG_SUMMARY scope=tb_tx_boundaries seed=750318462 draws=32 state=a00fd9d2"
+    ]
+  },
+  {
+    "case": "tx_boundaries",
+    "top": "tb_tx_boundaries",
+    "ids": [
+      "TC-F10"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:54:27.944901+08:00",
+    "finished": "2026-10-12T12:54:35.531437+08:00",
+    "wall_seconds": 7.59,
+    "log": "tx_boundaries_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=1 value=26 lo=0 hi=31",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=2 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=3 value=5 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=4 value=2 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=5 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=6 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=7 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_tx_boundaries.H.phase2_pick n=8 value=4 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_tx_boundaries.phase2_pick n=8 value=204200 lo=1 hi=1048575",
+      "RNG_SUMMARY scope=tb_tx_boundaries.H seed=360207181 draws=27041 state=e88fcee2",
+      "RNG_SUMMARY scope=tb_tx_boundaries seed=360207181 draws=32 state=ee90d8be"
+    ]
+  },
+  {
+    "case": "regs_multiblock",
+    "top": "tb_regs_multiblock",
+    "ids": [
+      "TC-F12"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:54:42.091042+08:00",
+    "finished": "2026-10-12T12:54:49.344733+08:00",
+    "wall_seconds": 7.26,
+    "log": "regs_multiblock_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_regs_multiblock.phase2_pick n=1 value=333218 lo=1 hi=1048575",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=1 value=3 lo=0 hi=31",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=2 value=1 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=4 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=5 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=7 value=0 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=8 value=1 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_regs_multiblock.H seed=1417633351 draws=6906 state=d44e3999",
+      "RNG_SUMMARY scope=tb_regs_multiblock seed=1417633351 draws=1 state=09e51503"
+    ]
+  },
+  {
+    "case": "regs_multiblock",
+    "top": "tb_regs_multiblock",
+    "ids": [
+      "TC-F12"
+    ],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:54:49.347745+08:00",
+    "finished": "2026-10-12T12:54:56.294413+08:00",
+    "wall_seconds": 6.94,
+    "log": "regs_multiblock_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_regs_multiblock.phase2_pick n=1 value=832052 lo=1 hi=1048575",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=1 value=10 lo=0 hi=31",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=2 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=3 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=4 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=5 value=7 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=6 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=7 value=9 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=8 value=6 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_regs_multiblock.H seed=750318462 draws=6914 state=c39dc996",
+      "RNG_SUMMARY scope=tb_regs_multiblock seed=750318462 draws=1 state=289cafaa"
+    ]
+  },
+  {
+    "case": "regs_multiblock",
+    "top": "tb_regs_multiblock",
+    "ids": [
+      "TC-F12"
+    ],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:54:56.295918+08:00",
+    "finished": "2026-10-12T12:55:03.100279+08:00",
+    "wall_seconds": 6.81,
+    "log": "regs_multiblock_seed_360207181.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_regs_multiblock.phase2_pick n=1 value=44883 lo=1 hi=1048575",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=1 value=26 lo=0 hi=31",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=2 value=3 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=3 value=5 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=4 value=2 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=5 value=6 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=6 value=4 lo=0 hi=9",
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=7 value=4 lo=0 hi=9"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_regs_multiblock.H.phase2_pick n=8 value=4 lo=0 hi=9",
+      "RNG_SUMMARY scope=tb_regs_multiblock.H seed=360207181 draws=6906 state=96e5716e",
+      "RNG_SUMMARY scope=tb_regs_multiblock seed=360207181 draws=1 state=bd80a37a"
+    ]
+  },
+  {
+    "case": "board_cdc",
+    "top": "tb_board_cdc_smoke",
+    "ids": [],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:55:09.359330+08:00",
+    "finished": "2026-10-12T12:55:16.421845+08:00",
+    "wall_seconds": 7.06,
+    "log": "board_cdc_seed_1417633351.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "board_cdc",
+    "top": "tb_board_cdc_smoke",
+    "ids": [],
+    "seed": 750318462,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:55:16.424861+08:00",
+    "finished": "2026-10-12T12:55:23.056204+08:00",
+    "wall_seconds": 6.62,
+    "log": "board_cdc_seed_750318462.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  },
+  {
+    "case": "board_cdc",
+    "top": "tb_board_cdc_smoke",
+    "ids": [],
+    "seed": 360207181,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-12T12:55:23.059216+08:00",
+    "finished": "2026-10-12T12:55:29.662773+08:00",
+    "wall_seconds": 6.61,
+    "log": "board_cdc_seed_360207181.simulate.log",
+    "random_samples": [],
+    "random_summary": []
+  }
+]

@@ -1,6 +1,8 @@
 `timescale 1ns/1ps
 // 实际发送桥+XPM FIFO专项，不使用Aurora物理核；逐拍验证16Byte帧和反压恢复。
 module tb_rtds_tx;
+ // 修改记录 2026-10-11：加入随机种子激励。
+ `include "rtds_random.svh"   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     logic fdma_clk=0,user_clk=0;
     // FDMA 侧时钟 250MHz（半周期 2ns）
     always #2 fdma_clk=~fdma_clk;
@@ -8,6 +10,7 @@ module tb_rtds_tx;
     // 用户侧时钟 156.25MHz（半周期 3.2ns），与 FDMA 域异步
     always #3.2 user_clk=~user_clk;
     rtds_tx_test_if bus(fdma_clk,user_clk);
+    logic[31:0] phase2_data=phase2_pick(1,2147483647);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     int received=0,peak_words=0;    // 已验收字数与观测到的 FIFO 占用峰值
     bit monitor_enable=0;    // 复位完成后才使能检查，避免复位期间误报
     logic [69:0] held_payload;    // 反压期间应保持不变的 70bit 发送载荷快照
@@ -24,7 +27,7 @@ module tb_rtds_tx;
     );
     // 数据包含递增序号及固定高位，任何丢拍、重拍、错序都会改变比较结果。
     function automatic logic [63:0] payload(input int word_index);
-        return {32'hA5C32001,32'(word_index)};
+        return {phase2_data,32'(word_index)^phase2_data};   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     endfunction
     // 只通过公开调试端口观察FIFO占用及异常，不驱动DUT内部状态。
     initial forever begin
@@ -68,9 +71,11 @@ module tb_rtds_tx;
                 $fatal(1,"TX/ADDRESS");
             bus.fdma_cb.rbusy<=1;
             for(int beat=0;beat<2;beat++) begin
+                repeat(phase2_pick(0,3)) @(bus.fdma_cb);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
                 bus.fdma_cb.rdata<=payload(frame_id*2+beat);
                 bus.fdma_cb.rvalid<=1;
                 do @(bus.fdma_cb); while(!bus.fdma_cb.rready);
+                bus.fdma_cb.rvalid<=0;   // 2026-10-11：已接受数据后撤销valid，随机空拍不能重复发送前一字
             end
             bus.fdma_cb.rvalid<=0;
             bus.fdma_cb.rbusy<=0;
@@ -85,7 +90,7 @@ module tb_rtds_tx;
         for(int cycle=0;received<frames*2;cycle++) begin
             @(bus.tx_cb);
             // 先长时间堵塞使FIFO达到阈值，再周期性停顿，覆盖首末拍保持。
-            bus.tx_cb.ready<=((cycle%7)<4);
+            bus.tx_cb.ready<=phase2_pick(0,9)<7;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
         end
         repeat(20) @(bus.tx_cb);
         bus.tx_cb.ready<=0;

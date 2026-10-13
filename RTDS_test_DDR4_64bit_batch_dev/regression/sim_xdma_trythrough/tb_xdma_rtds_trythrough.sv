@@ -3,6 +3,8 @@
 `timescale 1ns / 1ps
 
 module tb_xdma_rtds_trythrough;
+ // 修改记录 2026-10-11：加入随机种子激励。
+ `include "rtds_random.svh"   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     import rtds_test_pkg::*;
 
 `ifdef RTDS_TEST_NONZERO_CARD_HI
@@ -127,6 +129,7 @@ module tb_xdma_rtds_trythrough;
         .fdma_clk(fdma_clk), .fdma_rstn(fdma_rstn),
         .aurora_user_clk(user_clk), .aurora_user_rstn(user_rstn),
         .pcie_link_up(pcie_link_up),
+        .ddr_ready(1'b1),   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
         .aurora_channel_up(aurora_channel_up),
         .aurora_lane_up(aurora_lane_up),
         .aurora_tx_d(aurora_tx_d), .aurora_tx_sof(aurora_tx_sof),

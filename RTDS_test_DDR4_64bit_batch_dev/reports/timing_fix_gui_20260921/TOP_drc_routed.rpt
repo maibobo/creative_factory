@@ -64,10 +64,26 @@ Related violations: <none>
 
 REQP-1853#1 Warning
 BUFGCE_DIV_cascade_from_clock_buf  
+Cascaded clock buffers exist in the design with constant CE pin. This may result in large clock skew and timing violations. Cell BUFGCE_DIV U_RTDS_FPGA_1G_INIT/U_BUFGCE_DIV_INIT I pin is driven by another clock buffer u_clk_gen/clk_wiz_0_inst/inst/clkout3_buf.
 Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
+231 net(s) have no routable loads. The problem bus(es) and/or net(s) are u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/LMB_CE_riu,
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/LMB_UE_riu,
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[12],
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[13],
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[14],
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[15],
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_low/SYNC[0].sync_reg[1],
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_low/SYNC[1].sync_reg[1],
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_upp/SYNC[0].sync_reg[1],
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_upp/SYNC[1].sync_reg[1],
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_low/SYNC[0].sync_reg[1],
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_low/SYNC[1].sync_reg[1],
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_low/SYNC[2].sync_reg[1],
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_upp/SYNC[0].sync_reg[1],
+u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_upp/SYNC[1].sync_reg[1]
  (the first 15 of 184 listed).
 Related violations: <none>
 

@@ -1,6 +1,8 @@
 `timescale 1ns/1ps
 // 连续字流验证：通过接口驱动，检查器逐字读取独立内存模型，不复用DUT地址算法。
 module tb_rtds_ring;
+ // 修改记录 2026-10-11：加入随机种子激励。
+ `include "rtds_random.svh"   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     logic clk=0;
 
     // 生成 250MHz 系统时钟
@@ -19,7 +21,7 @@ module tb_rtds_ring;
         .fdma_wdone(bus.fdma_wdone), .fdma_werror(bus.fdma_werror), .dbg_state(bus.dbg_state)
     );
     byte unsigned memory[int unsigned];    // 独立字节记分板：地址→数据，仅 responder 写入
-    int response_delay=3;    // 写响应延迟拍数，可加大到跨越组块周期窗口
+    int response_delay=phase2_pick(3,9);   // 2026-10-11：写响应延迟拍数，可加大到跨越组块周期窗口
     bit inject_error=0;    // 置 1 时 responder 回复写错误响应
     // FDMA响应器独占响应引脚；等待B时可延迟/报错，W数据与字节使能独立评分。
     initial begin : responder
@@ -34,7 +36,7 @@ module tb_rtds_ring;
             bus.fdma_cb.fdma_wbusy<=1;
             do @(bus.fdma_cb); while(!bus.fdma_cb.fdma_wvalid);
             data=bus.fdma_cb.fdma_wdata; strb=bus.fdma_cb.fdma_wstrb;
-            repeat(2) @(bus.fdma_cb);
+            repeat(phase2_pick(2,9)) @(bus.fdma_cb);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
             // 接受写数据前，数据与字节使能必须保持稳定
             if(data!==bus.fdma_cb.fdma_wdata || strb!==bus.fdma_cb.fdma_wstrb)
                 $fatal(1,"STREAM/HOLD");
@@ -52,7 +54,8 @@ module tb_rtds_ring;
     end
     // 发送一个 32bit 字并等待 DUT 握手接收
     task automatic send_word(input int value);
-        @(bus.host_cb); bus.host_cb.frame_data<={$urandom,32'(value)}; bus.host_cb.frame_valid<=1;
+        repeat(phase2_pick(0,3)) @(bus.host_cb);   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+        @(bus.host_cb); bus.host_cb.frame_data<={32'(phase2_pick(0,2147483647)),32'(value)}; bus.host_cb.frame_valid<=1;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
         do @(bus.host_cb); while(!bus.host_cb.frame_ready);
         bus.host_cb.frame_valid<=0;
     endtask

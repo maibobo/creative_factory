@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Oct 11 21:11:16 2026
+# Process ID: 22452
+# Current directory: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression
+# Command line: xsim.exe -log axi_seed_1417633351.simulate.log -mode tcl -source {xsim.dir/axi/xsim_script.tcl}
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/axi_seed_1417633351.simulate.log
+# Journal file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/axi/xsim_script.tcl
+# xsim {axi} -testplusarg SEED=1417633351 -autoloadwcfg -tclbatch {F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/axi_seed_1417633351.tcl} -onfinish stop -onerror quit
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/axi_seed_1417633351.tcl
+## run all
+RNG_INIT scope=tb_rtds_axi.phase2_pick seed=1417633351 algorithm=xorshift32
+RNG_DRAW scope=tb_rtds_axi.phase2_pick n=1 value=7 lo=0 hi=9
+RNG_DRAW scope=tb_rtds_axi.phase2_pick n=2 value=1 lo=0 hi=9
+RNG_DRAW scope=tb_rtds_axi.phase2_pick n=3 value=9 lo=0 hi=9
+RNG_DRAW scope=tb_rtds_axi.phase2_pick n=4 value=6 lo=0 hi=9
+RNG_DRAW scope=tb_rtds_axi.phase2_pick n=5 value=4 lo=0 hi=9
+RNG_DRAW scope=tb_rtds_axi.phase2_pick n=6 value=8 lo=0 hi=9
+RNG_DRAW scope=tb_rtds_axi.phase2_pick n=7 value=0 lo=0 hi=9
+RNG_DRAW scope=tb_rtds_axi.phase2_pick n=8 value=1 lo=0 hi=9
+WRITE_BEGIN addr=0000000000100000 count=         16
+WRITE_BEGIN addr=0000000000140000 count=         16
+WRITE_BEGIN addr=0000000000180000 count=         16
+WRITE_BEGIN addr=00000000001c0000 count=         16
+WRITE_BEGIN addr=0000000000200000 count=         16
+WRITE_BEGIN addr=0000000000240000 count=         16
+WRITE_BEGIN addr=0000000000280000 count=         16
+WRITE_BEGIN addr=00000000002c0000 count=         16
+WRITE_BEGIN addr=0000000000180ff8 count=        520
+WRITE_BEGIN addr=0000000000200000 count=         16
+TEST PASS tb_rtds_axi
+RNG_SUMMARY scope=tb_rtds_axi seed=1417633351 draws=9462 state=3c070825
+$finish called at time : 12618 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_axi.sv" Line 215
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 21:11:50 2026...

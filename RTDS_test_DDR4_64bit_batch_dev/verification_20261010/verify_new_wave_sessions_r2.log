@@ -1,0 +1,113 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Oct 10 17:28:48 2026
+# Process ID: 20108
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Command line: vivado.exe -mode batch -source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/scripts/verify_new_wave_sessions.tcl -log C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/verify_new_wave_sessions_r2.log -journal C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/verify_new_wave_sessions_r2.jou
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/verify_new_wave_sessions_r2.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/verify_new_wave_sessions_r2.jou
+#-----------------------------------------------------------
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/scripts/verify_new_wave_sessions.tcl
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# foreach selected {byte1_1g tx_boundaries ready_recovery regs_multiblock period_100ms} {
+#   set argv [list $selected]
+#   source [file join $root scripts open_new_case_wave.tcl]
+#   set objects [get_objects -r /tb_${selected}/*]
+#   if {[llength $objects] < 10} {error "no saved HDL objects for $selected"}
+#   set config [current_wave_config]
+#   if {[string length $config] == 0} {error "no saved wave config for $selected"}
+#   puts "NEW_WAVE_VERIFIED=$selected objects=[llength $objects] config=$config"
+#   close_sim
+#   close_project
+# }
+## set root [file normalize [file join [file dirname [info script]] ..]]
+## set case [lindex $argv 0]
+## if {$case ni {byte1_1g tx_boundaries ready_recovery regs_multiblock period_100ms}} {error "unknown case"}
+## set folder [file join $root evidence local_wave_sessions $case]
+## open_project -read_only [file join $folder project wave_${case}.xpr]
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/project'
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/project/wave_byte1_1g.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+## open_wave_database [file join $folder ${case}.wdb]
+open_wave_config {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g\byte1_1g.wcfg}
+## open_wave_config [file join $folder ${case}.wcfg]
+## puts "SAVED_WAVE_OPENED=$case (no simulation run)"
+SAVED_WAVE_OPENED=byte1_1g (no simulation run)
+NEW_WAVE_VERIFIED=byte1_1g objects=2569 config=byte1_1g.wcfg
+INFO: [Simtcl 6-16] Simulation closed
+## set root [file normalize [file join [file dirname [info script]] ..]]
+## set case [lindex $argv 0]
+## if {$case ni {byte1_1g tx_boundaries ready_recovery regs_multiblock period_100ms}} {error "unknown case"}
+## set folder [file join $root evidence local_wave_sessions $case]
+## open_project -read_only [file join $folder project wave_${case}.xpr]
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/tx_boundaries/project'
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/tx_boundaries/project/wave_tx_boundaries.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+## open_wave_database [file join $folder ${case}.wdb]
+open_wave_config {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/tx_boundaries\tx_boundaries.wcfg}
+## open_wave_config [file join $folder ${case}.wcfg]
+## puts "SAVED_WAVE_OPENED=$case (no simulation run)"
+SAVED_WAVE_OPENED=tx_boundaries (no simulation run)
+NEW_WAVE_VERIFIED=tx_boundaries objects=2564 config=tx_boundaries.wcfg
+INFO: [Simtcl 6-16] Simulation closed
+## set root [file normalize [file join [file dirname [info script]] ..]]
+## set case [lindex $argv 0]
+## if {$case ni {byte1_1g tx_boundaries ready_recovery regs_multiblock period_100ms}} {error "unknown case"}
+## set folder [file join $root evidence local_wave_sessions $case]
+## open_project -read_only [file join $folder project wave_${case}.xpr]
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/ready_recovery/project'
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/ready_recovery/project/wave_ready_recovery.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+## open_wave_database [file join $folder ${case}.wdb]
+open_wave_config {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/ready_recovery\ready_recovery.wcfg}
+## open_wave_config [file join $folder ${case}.wcfg]
+## puts "SAVED_WAVE_OPENED=$case (no simulation run)"
+SAVED_WAVE_OPENED=ready_recovery (no simulation run)
+NEW_WAVE_VERIFIED=ready_recovery objects=2572 config=ready_recovery.wcfg
+INFO: [Simtcl 6-16] Simulation closed
+## set root [file normalize [file join [file dirname [info script]] ..]]
+## set case [lindex $argv 0]
+## if {$case ni {byte1_1g tx_boundaries ready_recovery regs_multiblock period_100ms}} {error "unknown case"}
+## set folder [file join $root evidence local_wave_sessions $case]
+## open_project -read_only [file join $folder project wave_${case}.xpr]
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/regs_multiblock/project'
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/regs_multiblock/project/wave_regs_multiblock.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+## open_wave_database [file join $folder ${case}.wdb]
+open_wave_config {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/regs_multiblock\regs_multiblock.wcfg}
+## open_wave_config [file join $folder ${case}.wcfg]
+## puts "SAVED_WAVE_OPENED=$case (no simulation run)"
+SAVED_WAVE_OPENED=regs_multiblock (no simulation run)
+NEW_WAVE_VERIFIED=regs_multiblock objects=2560 config=regs_multiblock.wcfg
+INFO: [Simtcl 6-16] Simulation closed
+## set root [file normalize [file join [file dirname [info script]] ..]]
+## set case [lindex $argv 0]
+## if {$case ni {byte1_1g tx_boundaries ready_recovery regs_multiblock period_100ms}} {error "unknown case"}
+## set folder [file join $root evidence local_wave_sessions $case]
+## open_project -read_only [file join $folder project wave_${case}.xpr]
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/period_100ms/project'
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/period_100ms/project/wave_period_100ms.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+## open_wave_database [file join $folder ${case}.wdb]
+open_wave_config {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/period_100ms\period_100ms.wcfg}
+## open_wave_config [file join $folder ${case}.wcfg]
+## puts "SAVED_WAVE_OPENED=$case (no simulation run)"
+SAVED_WAVE_OPENED=period_100ms (no simulation run)
+NEW_WAVE_VERIFIED=period_100ms objects=118 config=period_100ms.wcfg
+INFO: [Simtcl 6-16] Simulation closed
+# puts "NEW_WAVE_VERIFY_COMPLETE (read-only saved databases, no run)"
+NEW_WAVE_VERIFY_COMPLETE (read-only saved databases, no run)
+# exit
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 10 17:29:07 2026...

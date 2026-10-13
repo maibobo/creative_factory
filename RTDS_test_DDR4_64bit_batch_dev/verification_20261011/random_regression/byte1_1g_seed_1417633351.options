@@ -1,0 +1,5 @@
+--testplusarg "SEED=1417633351"
+--tclbatch "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/byte1_1g_seed_1417633351.tcl"
+--onerror quit
+--onfinish stop
+--log byte1_1g_seed_1417633351.simulate.log

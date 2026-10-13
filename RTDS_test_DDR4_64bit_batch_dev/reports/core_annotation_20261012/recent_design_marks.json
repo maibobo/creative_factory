@@ -1,0 +1,34 @@
+[
+  {
+    "path": "rtl/rtds_ddr4_recovery_cdc.xdc",
+    "date": "2026-10-12",
+    "type": "CDC约束参考文件",
+    "line": 1,
+    "change": "恢复同步链异步CLR和就绪首级D的定点例外；已有日期注释保留，命令本次不改。",
+    "evidence": "当前XDC中2026-10-12修改注释"
+  },
+  {
+    "path": "rtl/ddr4/rtds_ddr4_backend.sv",
+    "date": "2026-10-11～12",
+    "type": "恢复功能与CDC属性",
+    "line": 7,
+    "change": "按原ID/拍数结束旧读写，反压保持响应；共同复位和16拍解除；12日补同步属性并更新DDR4_PIN.xdc关联说明。",
+    "evidence": "reports/recovery_phase2_20261011/modified_sources.json；当前源码日期注释；修改前文件时间"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v",
+    "date": "2026-10-11",
+    "type": "恢复功能修改",
+    "line": 7,
+    "change": "旧读排空、跨域停止确认、完成事件隔离；正常结束暂存一条下一命令；空闲撤销rready避免假超时。",
+    "evidence": "reports/recovery_phase2_20261011/modified_sources.json；当前源码日期注释；修改前文件时间"
+  },
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/constrs_1/new/DDR4_PIN.xdc",
+    "date": "2026-10-12",
+    "type": "当前加载的约束修改",
+    "line": 294,
+    "change": "新增恢复同步链的定点例外；已有日期注释保留，Q到D和业务时序仍检查，命令本次不改。",
+    "evidence": "当前XDC中2026-10-12修改注释"
+  }
+]

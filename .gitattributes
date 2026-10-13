@@ -3,3 +3,6 @@ evidence/**/*.vcd filter=lfs diff=lfs merge=lfs -text
 regression/**/*.wdb filter=lfs diff=lfs merge=lfs -text
 regression/**/*.vcd filter=lfs diff=lfs merge=lfs -text
 docs/RPT205-1-001.brd filter=lfs diff=lfs merge=lfs -text
+RTDS_test_DDR4_64bit_batch_dev/evidence/**/*.wdb filter=lfs diff=lfs merge=lfs -text
+RTDS_test_DDR4_64bit_batch_dev/evidence/**/*.vcd filter=lfs diff=lfs merge=lfs -text
+RTDS_test_DDR4_64bit_batch_dev/docs/**/*.brd filter=lfs diff=lfs merge=lfs -text

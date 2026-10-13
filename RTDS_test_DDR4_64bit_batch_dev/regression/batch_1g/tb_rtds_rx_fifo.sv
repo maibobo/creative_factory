@@ -1,6 +1,9 @@
 `timescale 1ns/1ps
 // FIFO按有效拍存储，不依据SOF/EOF进行组帧；随机高32bit也必须在此层完整透传。
+// 回归RTDS_RX_FRAME_FIFO（深度16）：判定按序透传、满丢弃计数、length_error恒0
 module tb_rtds_rx_fifo;
+ // 修改记录 2026-10-11：加入随机种子激励。
+ `include "rtds_random.svh"   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     logic user_clk=0,mem_clk=0;    // 用户域与存储域双时钟，初值0由下方always翻转
 
     // 用户域时钟：周期6.4ns（约156.25MHz）
@@ -21,6 +24,8 @@ module tb_rtds_rx_fifo;
         .length_error(bus.length_error)
     );
     logic[63:0] expected[$];    // 参考模型队列：按写入顺序记录期望读出的64bit原拍
+    bit phase2_read_enable=0;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
+    always @(bus.mem_drv_cb) if(phase2_read_enable) bus.mem_drv_cb.frame_ready<=phase2_pick(0,9)<7;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
     int received=0;    // 监视器已核对通过的读出拍计数
 
     // 输出监视：mem侧每次成功握手弹出期望队列核对，多余/乱序即报EXTRA/ORDER
@@ -40,7 +45,7 @@ module tb_rtds_rx_fifo;
     // send：驱动一拍64bit写入；n按3/5取模产生随机SOF/EOF组合，stored=1时同步入期望队列
     task automatic send(input int n,input bit stored);
         logic[63:0] value;
-        value={$urandom,32'(n)};
+        value={32'(phase2_pick(0,2147483647)),32'(n)};   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
         @(bus.user_drv_cb);
         if(stored)
             expected.push_back(value);
@@ -65,7 +70,7 @@ module tb_rtds_rx_fifo;
         if(bus.dropped_frames!=1)
             $fatal(1,"FIFO/FULL_DROP %d",bus.dropped_frames);
         // 拉高读侧ready，让FIFO排空并完成17拍顺序核对
-        bus.mem_drv_cb.frame_ready<=1;
+        phase2_read_enable=1;   // 2026-10-11：随机种子回归：改变激励时序或数据，保留原检查判据
         wait(received==17);
         // 排空后追加一拍并等待读出：确认满释放后恢复正常收发
         send(99,1);wait(received==18);

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="1g_seed_1417633351.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_rtds_1g" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/tb_rtds_1g/bus/src_clk" type="logic">
+      <obj_property name="ElementShortName">src_clk</obj_property>
+      <obj_property name="ObjectShortName">src_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/user_clk" type="logic">
+      <obj_property name="ElementShortName">user_clk</obj_property>
+      <obj_property name="ObjectShortName">user_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/cfg_byte" type="array">
+      <obj_property name="ElementShortName">cfg_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cfg_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/cfg_byte_valid" type="logic">
+      <obj_property name="ElementShortName">cfg_byte_valid</obj_property>
+      <obj_property name="ObjectShortName">cfg_byte_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/user_reset" type="logic">
+      <obj_property name="ElementShortName">user_reset</obj_property>
+      <obj_property name="ObjectShortName">user_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/channel_up" type="logic">
+      <obj_property name="ElementShortName">channel_up</obj_property>
+      <obj_property name="ObjectShortName">channel_up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_ready" type="logic">
+      <obj_property name="ElementShortName">tx_ready</obj_property>
+      <obj_property name="ObjectShortName">tx_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_data" type="array">
+      <obj_property name="ElementShortName">tx_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_rem" type="array">
+      <obj_property name="ElementShortName">tx_rem[1:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_rem[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_sof" type="logic">
+      <obj_property name="ElementShortName">tx_sof</obj_property>
+      <obj_property name="ObjectShortName">tx_sof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_eof" type="logic">
+      <obj_property name="ElementShortName">tx_eof</obj_property>
+      <obj_property name="ObjectShortName">tx_eof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/tx_valid" type="logic">
+      <obj_property name="ElementShortName">tx_valid</obj_property>
+      <obj_property name="ObjectShortName">tx_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/configured" type="logic">
+      <obj_property name="ElementShortName">configured</obj_property>
+      <obj_property name="ObjectShortName">configured</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/configured_id" type="array">
+      <obj_property name="ElementShortName">configured_id[7:0]</obj_property>
+      <obj_property name="ObjectShortName">configured_id[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/bus/skipped_periods" type="array">
+      <obj_property name="ElementShortName">skipped_periods[31:0]</obj_property>
+      <obj_property name="ObjectShortName">skipped_periods[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/src_clk" type="logic">
+      <obj_property name="ElementShortName">src_clk</obj_property>
+      <obj_property name="ObjectShortName">src_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/user_clk" type="logic">
+      <obj_property name="ElementShortName">user_clk</obj_property>
+      <obj_property name="ObjectShortName">user_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/tick_toggle_2us" type="logic">
+      <obj_property name="ElementShortName">tick_toggle_2us</obj_property>
+      <obj_property name="ObjectShortName">tick_toggle_2us</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_1g/cpu_sync_50us" type="logic">
+      <obj_property name="ElementShortName">cpu_sync_50us</obj_property>
+      <obj_property name="ObjectShortName">cpu_sync_50us</obj_property>
+   </wvobject>
+</wave_config>

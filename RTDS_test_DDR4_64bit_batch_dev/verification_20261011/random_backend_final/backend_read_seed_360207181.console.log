@@ -1,0 +1,11 @@
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/backend_read/xsim_script.tcl
+# xsim {backend_read} -testplusarg SEED=360207181 -autoloadwcfg -tclbatch {F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_backend_final/backend_read_seed_360207181.tcl} -onfinish stop -onerror quit -sv_seed 360207181
+Vivado Simulator 2020.2
+ERROR: [Simtcl 6-50] Simulation engine failed to start: Failed to communicate with child process.
+Please see the Tcl Console or the Messages for details.

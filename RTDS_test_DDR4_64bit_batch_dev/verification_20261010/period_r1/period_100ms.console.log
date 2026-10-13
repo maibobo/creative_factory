@@ -1,0 +1,17 @@
+﻿
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/period_100ms/xsim_script.tcl
+# xsim {period_100ms} -wdb {period_100ms.wdb} -autoloadwcfg -tclbatch {period_100ms.tcl} -onfinish stop -onerror quit
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source period_100ms.tcl
+## set top /tb_period_100ms open_vcd period_100ms.vcd
+wrong # args: should be "set varName ?newValue?"
+    while executing
+"set top /tb_period_100ms open_vcd period_100ms.vcd"
+    (file "period_100ms.tcl" line 1)
+INFO: [Common 17-206] Exiting xsim at Sat Oct 10 17:02:33 2026...

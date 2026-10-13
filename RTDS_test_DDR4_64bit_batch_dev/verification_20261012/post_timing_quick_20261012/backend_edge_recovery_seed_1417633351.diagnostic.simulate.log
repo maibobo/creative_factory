@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 12:53:26 2026
+# Process ID: 21428
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012
+# Command line: xsim.exe -log backend_edge_recovery_seed_1417633351.diagnostic.simulate.log -mode tcl -source {xsim.dir/backend_edge_recovery/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/backend_edge_recovery_seed_1417633351.diagnostic.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/backend_edge_recovery/xsim_script.tcl
+# xsim {backend_edge_recovery} -testplusarg SEED=1417633351 -wdb {backend_edge_recovery_seed_1417633351.wdb} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/backend_edge_recovery_seed_1417633351.diagnostic.tcl} -onfinish stop -onerror quit -sv_seed 1417633351
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/backend_edge_recovery_seed_1417633351.diagnostic.tcl
+## set scope /tb_backend_edge_recovery
+## log_wave -r ${scope}/*
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set objs [get_objects -r ${scope}/*]
+## set f [open {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/backend_edge_recovery_seed_1417633351.capture/recorded_signals.txt} w]
+## foreach obj $objs {puts $f $obj}
+## close $f
+## create_wave_config
+## foreach obj $objs {if {[regexp {(^/tb_backend_edge_recovery/clk$)|(^/tb_backend_edge_recovery/B/[^/]+$)|(/U_DDR/(storage_ready|sim_ready_pipe|recovery_read_pending|recovery_read_abort|recovery_read_left|recovery_rload|recovery_rvalid|recovery_rdata|recovery_rresp|recovery_rlast|recovery_write_abort|recovery_write_left|mem_wvalid)$)} $obj]} {catch {add_wave $obj}}}
+## save_wave_config {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/backend_edge_recovery_seed_1417633351.capture/recommended.wcfg}
+## open_vcd {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/backend_edge_recovery_seed_1417633351.capture/trace.vcd}
+## log_vcd $objs
+INFO: HDL object /tb_backend_edge_recovery/words is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+## run all
+RNG_INIT scope=tb_backend_edge_recovery.phase2_pick seed=1417633351 algorithm=xorshift32
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=1 value=166008068 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=2 value=1138832515 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=3 value=1264427290 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=4 value=278997607 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=5 value=139715218 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=6 value=1949469329 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=7 value=158571554 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=8 value=604752445 lo=1 hi=2147483647
+Fatal: EDGE/R k=2 id=1 resp=0 last=0 data=0853e29274328a91
+Time: 2178 ns  Iteration: 0  Process: /tb_backend_edge_recovery/read_word  Scope: tb_backend_edge_recovery.read_word  File: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/sources/regression/recovery_phase2_20261011/tb_backend_edge_recovery.sv Line: 23
+$finish called at time : 2178 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/sources/regression/recovery_phase2_20261011/tb_backend_edge_recovery.sv" Line 23
+## close_vcd
+## quit
+RNG_SUMMARY scope=tb_backend_edge_recovery seed=1417633351 draws=13 state=e561cd88
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 12:53:32 2026...

@@ -1,3 +1,4 @@
+# RTDS 64 KiB Address Editor配置
 
 最终板卡存储窗口为共享的64 KiB AXI地址段：
 
@@ -9,6 +10,7 @@
 
 ```powershell
 & 'D:\Xilinx_2020_2\Vivado\2020.2\bin\vivado.bat' -mode batch `
+  -source 'E:\PCIE-CPU\RTDS_test\regression\configure_rtds_64k_bd.tcl'
 ```
 
 在 Vivado GUI 中核对或手动操作时：

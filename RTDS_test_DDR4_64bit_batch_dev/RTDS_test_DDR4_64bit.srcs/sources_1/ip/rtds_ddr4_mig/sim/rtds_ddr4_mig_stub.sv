@@ -48,6 +48,7 @@
 
 
 //------------------------------------------------------------------------------------
+// Filename:    rtds_ddr4_mig_stub.sv
 // Description: This HDL file is intended to be used with following simulators only:
 //
 //   Vivado Simulator (XSim)

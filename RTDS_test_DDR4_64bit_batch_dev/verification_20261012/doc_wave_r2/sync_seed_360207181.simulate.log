@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 10:32:47 2026
+# Process ID: 18500
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r2
+# Command line: xsim.exe -log sync_seed_360207181.simulate.log -mode tcl -source {xsim.dir/sync/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r2/sync_seed_360207181.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r2\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/sync/xsim_script.tcl
+# xsim {sync} -testplusarg SEED=360207181 -wdb {sync_seed_360207181.wdb} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r2/sync_seed_360207181.tcl} -onfinish stop -onerror quit -sv_seed 360207181
+Vivado Simulator 2020.2
+Could not open the HDL type file 
+ERROR: [Simtcl 6-50] Simulation engine failed to start: The Simulation shut down unexpectedly during initialization.
+Please see the Tcl Console or the Messages for details.
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 10:32:49 2026...

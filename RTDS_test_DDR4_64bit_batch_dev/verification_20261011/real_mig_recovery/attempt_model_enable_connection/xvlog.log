@@ -1,0 +1,371 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" into library xpm
+INFO: [VRFC 10-311] analyzing module xpm_memory_base
+INFO: [VRFC 10-311] analyzing module asym_bwe_bb
+INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
+INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
+INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
+INFO: [VRFC 10-311] analyzing module xpm_memory_spram
+INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.ip_user_files/ipstatic/simulation/blk_mem_gen_v8_4.v" into library blk_mem_gen_v8_4_4
+INFO: [VRFC 10-311] analyzing module STATE_LOGIC_v8_4
+INFO: [VRFC 10-311] analyzing module beh_vlog_muxf7_v8_4
+INFO: [VRFC 10-311] analyzing module beh_vlog_ff_clr_v8_4
+INFO: [VRFC 10-311] analyzing module beh_vlog_ff_pre_v8_4
+INFO: [VRFC 10-311] analyzing module beh_vlog_ff_ce_clr_v8_4
+INFO: [VRFC 10-311] analyzing module write_netlist_v8_4
+INFO: [VRFC 10-311] analyzing module read_netlist_v8_4
+INFO: [VRFC 10-311] analyzing module blk_mem_axi_write_wrapper_beh_v8_4
+INFO: [VRFC 10-311] analyzing module blk_mem_axi_read_wrapper_beh_v8_4
+INFO: [VRFC 10-311] analyzing module blk_mem_axi_regs_fwd_v8_4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_4_4_output_stage
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_4_4_softecc_output_reg_stage
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_4_4_mem_module
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_4_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_6/sim/bd_6edb_lmb_bram_I_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_6edb_lmb_bram_I_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/bd_0/ip/ip_9/sim/bd_6edb_second_lmb_bram_I_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_6edb_second_lmb_bram_I_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/bd_0/sim/bd_6edb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bd_6edb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_0/sim/rtds_ddr4_mig_microblaze_mcs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_mig_microblaze_mcs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_1/rtl/phy/rtds_ddr4_mig_phy_ddr4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_mig_phy_ddr4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_1/rtl/phy/ddr4_phy_v2_2_xiphy_behav.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_behav
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_bitslice_behav
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_fifo_sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_1/rtl/phy/ddr4_phy_v2_2_xiphy.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_1/rtl/iob/ddr4_phy_v2_2_iob_byte.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_iob_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_1/rtl/iob/ddr4_phy_v2_2_iob.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_iob
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_1/rtl/clocking/ddr4_phy_v2_2_pll.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_pll
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_tristate_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_tristate_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_riuor_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_riuor_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_control_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_control_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_byte_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_byte_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_1/rtl/xiphy_files/ddr4_phy_v2_2_xiphy_bitslice_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_phy_v2_2_0_xiphy_bitslice_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/ip_1/rtl/ip_top/rtds_ddr4_mig_phy.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_mig_phy
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_wtr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_wtr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_ref.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_ref
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_rd_wr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_rd_wr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_periodic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_periodic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_group.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_group
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_ecc_merge_enc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_ecc_merge_enc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_ecc_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_ecc_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_ecc_fi_xor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_ecc_fi_xor
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_ecc_fi_xor.sv:125]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_ecc_dec_fix.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_ecc_dec_fix
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_ecc_buf.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_ecc_buf
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_ecc_buf.sv:135]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_ecc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_ecc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_ctl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_ctl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_cmd_mux_c.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_cmd_mux_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_cmd_mux_ap.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_cmd_mux_ap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_arb_p.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_arb_p
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_arb_mux_p.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_arb_mux_p
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_arb_c.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_arb_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_arb_a.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_arb_a
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_act_timer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_act_timer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc_act_rank.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc_act_rank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/controller/ddr4_v2_2_mc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_mc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/ui/ddr4_v2_2_ui_wr_data.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_ui_wr_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/ui/ddr4_v2_2_ui_rd_data.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_ui_rd_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/ui/ddr4_v2_2_ui_cmd.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_ui_cmd
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/ui/ddr4_v2_2_ui.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_ui
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_ar_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_ar_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_aw_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_aw_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_b_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_b_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_cmd_arbiter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_cmd_arbiter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_cmd_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_cmd_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_cmd_translator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_cmd_translator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_incr_cmd.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_incr_cmd
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_r_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_r_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_w_channel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_w_channel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_wr_cmd_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_wr_cmd_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_wrap_cmd.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_wrap_cmd
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_a_upsizer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_a_upsizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_register_slice.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_register_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axi_upsizer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_upsizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_axic_register_slice.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axic_register_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_carry_and.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_carry_and
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_carry_latch_and.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_carry_latch_and
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_carry_latch_or.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_carry_latch_or
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_carry_or.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_carry_or
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_command_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_command_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_comparator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_comparator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_comparator_sel.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_comparator_sel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_comparator_sel_static.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_comparator_sel_static
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_r_upsizer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_r_upsizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi/ddr4_v2_2_w_upsizer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_w_upsizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_addr_decode.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_ctrl_addr_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_read.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_ctrl_read
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_reg_bank.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_ctrl_reg_bank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_reg.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_ctrl_reg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_ctrl_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/axi_ctrl/ddr4_v2_2_axi_ctrl_write.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_axi_ctrl_write
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/clocking/ddr4_v2_2_infrastructure.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_infrastructure
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_xsdb_bram.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_xsdb_bram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_write.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_write
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_wr_byte.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_wr_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_wr_bit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_wr_bit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_sync.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_sync
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_read.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_read
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_rd_en.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_rd_en
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_pi.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_pi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_mc_odt.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_mc_odt
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_debug_microblaze.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_debug_microblaze
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_cplx_data.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_cplx_data
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_cplx.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_cplx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_config_rom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_config_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_addr_decode
+WARNING: [VRFC 10-8426] non-net output port 'io_ready_lvl' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:165]
+WARNING: [VRFC 10-8426] non-net output port 'ub_ready' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:166]
+WARNING: [VRFC 10-8426] non-net output port 'cal_DMOut_n' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:235]
+WARNING: [VRFC 10-8426] non-net output port 'casSlot' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:267]
+WARNING: [VRFC 10-8426] non-net output port 'rdCAS' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:269]
+WARNING: [VRFC 10-8426] non-net output port 'wrCAS' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:272]
+WARNING: [VRFC 10-8426] non-net output port 'lowCL0' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:276]
+WARNING: [VRFC 10-8426] non-net output port 'lowCL1' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:277]
+WARNING: [VRFC 10-8426] non-net output port 'lowCL2' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:278]
+WARNING: [VRFC 10-8426] non-net output port 'lowCL3' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:279]
+WARNING: [VRFC 10-8426] non-net output port 'uppCL0' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:280]
+WARNING: [VRFC 10-8426] non-net output port 'uppCL1' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:281]
+WARNING: [VRFC 10-8426] non-net output port 'uppCL2' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:282]
+WARNING: [VRFC 10-8426] non-net output port 'uppCL3' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:283]
+WARNING: [VRFC 10-8426] non-net output port 'win_status' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_addr_decode.sv:320]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_top
+WARNING: [VRFC 10-8426] non-net output port 'cal_RESET_n' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_top.sv:323]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal_xsdb_arbiter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal_xsdb_arbiter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_cal.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cal
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_chipscope_xsdb_slave.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_chipscope_xsdb_slave
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/ddr4_v2_2_dp_AB9.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_cfg_mem_mod
+INFO: [VRFC 10-311] analyzing module ddr4_v2_2_10_bram_tdp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/ip_top/rtds_ddr4_mig_ddr4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_mig_ddr4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/ip_top/rtds_ddr4_mig_ddr4_mem_intfc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_mig_ddr4_mem_intfc
+WARNING: [VRFC 10-8447] parameter 'lr_width' declared inside generate block shall be treated as localparam [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/ip_top/ddr4_v2_2_10_ddr4_assert.vh:942]
+WARNING: [VRFC 10-8447] parameter 'save_restore' declared inside generate block shall be treated as localparam [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/ip_top/ddr4_v2_2_10_ddr4_assert.vh:943]
+WARNING: [VRFC 10-8447] parameter 'self_refresh' declared inside generate block shall be treated as localparam [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/ip_top/ddr4_v2_2_10_ddr4_assert.vh:944]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/rtds_ddr4_mig_ddr4_cal_riu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_mig_ddr4_cal_riu
+WARNING: [VRFC 10-8426] non-net output port 'io_addr_strobe_lvl_riuclk' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/rtds_ddr4_mig_ddr4_cal_riu.sv:115]
+WARNING: [VRFC 10-8426] non-net output port 'io_write_strobe_riuclk' cannot be initialized at declaration in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/cal/rtds_ddr4_mig_ddr4_cal_riu.sv:118]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/rtl/ip_top/rtds_ddr4_mig.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_mig
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/tb/microblaze_mcs_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_mig_microblaze_mcs
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'rtds_ddr4_mig_microblaze_mcs' [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/example/rtds_ddr4_mig_ex/rtds_ddr4_mig_ex.gen/sources_1/ip/rtds_ddr4_mig/tb/microblaze_mcs_0.sv:36]
+INFO: [VRFC 10-311] analyzing module microblaze_mcs
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" into library generic_baseblocks_v2_1_0
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_carry_and
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_carry_latch_and
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_carry_latch_or
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_carry_or
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_carry
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_command_fifo
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_mask_static
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_mask
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_sel_mask_static
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_sel_mask
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_sel_static
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_sel
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator_static
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_comparator
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_mux_enc
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_mux
+INFO: [VRFC 10-311] analyzing module generic_baseblocks_v2_1_0_nto1_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" into library axi_infrastructure_v1_1_0
+INFO: [VRFC 10-311] analyzing module axi_infrastructure_v1_1_0_axi2vector
+INFO: [VRFC 10-311] analyzing module axi_infrastructure_v1_1_0_axic_srl_fifo
+INFO: [VRFC 10-311] analyzing module axi_infrastructure_v1_1_0_vector2axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v" into library axi_register_slice_v2_1_22
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_test_master
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_test_slave
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_tdm_sample
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_auto_slr
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_auto_src
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_auto_dest
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_srl_rtl
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_axic_register_slice
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_multi_slr
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_middle_region_slr
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_source_region_slr
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_dest_region_slr
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_single_slr
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_axic_reg_srl_fifo
+INFO: [VRFC 10-311] analyzing module axi_register_slice_v2_1_22_axi_register_slice
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v" into library fifo_generator_v13_2_5
+INFO: [VRFC 10-311] analyzing module fifo_generator_vlog_beh
+INFO: [VRFC 10-2458] undeclared symbol wr_rst_busy_i, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v:1249]
+INFO: [VRFC 10-2458] undeclared symbol wr_eop_ad, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v:1331]
+INFO: [VRFC 10-2458] undeclared symbol rd_eop_ad, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v:1332]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_axis, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v:1574]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_wach, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v:2099]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_wdch, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v:2319]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_wrch, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v:2486]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_rach, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v:2866]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_rdch, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v:3099]
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_5_CONV_VER
+INFO: [VRFC 10-2458] undeclared symbol safety_ckt_rd_rst, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v:4153]
+INFO: [VRFC 10-2458] undeclared symbol safety_ckt_rd_rst, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v:4361]
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_5_sync_stage
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_5_bhv_ver_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_5_beh_ver_ll_afifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_5_bhv_ver_ss
+INFO: [VRFC 10-2458] undeclared symbol srst_wrst_busy, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/simulation/fifo_generator_vlog_beh.v:7793]
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_5_bhv_ver_preload0
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_5_axic_reg_slice
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/hdl/fifo_generator_v13_2_rfs.v" into library fifo_generator_v13_2_5
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_5
+INFO: [VRFC 10-2458] undeclared symbol sleep_i, assumed default net type wire [F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/276e/hdl/fifo_generator_v13_2_rfs.v:519]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/54c0/hdl/axi_data_fifo_v2_1_vl_rfs.v" into library axi_data_fifo_v2_1_21
+INFO: [VRFC 10-311] analyzing module axi_data_fifo_v2_1_21_axic_fifo
+INFO: [VRFC 10-311] analyzing module axi_data_fifo_v2_1_21_fifo_gen
+INFO: [VRFC 10-311] analyzing module axi_data_fifo_v2_1_21_axic_srl_fifo
+INFO: [VRFC 10-311] analyzing module axi_data_fifo_v2_1_21_axic_reg_srl_fifo
+INFO: [VRFC 10-311] analyzing module axi_data_fifo_v2_1_21_ndeep_srl
+INFO: [VRFC 10-311] analyzing module axi_data_fifo_v2_1_21_axi_data_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ipshared/1304/hdl/axi_clock_converter_v2_1_vl_rfs.v" into library axi_clock_converter_v2_1_21
+INFO: [VRFC 10-311] analyzing module axi_clock_converter_v2_1_21_axic_sync_clock_converter
+INFO: [VRFC 10-311] analyzing module axi_clock_converter_v2_1_21_axic_sample_cycle_ratio
+INFO: [VRFC 10-311] analyzing module axi_clock_converter_v2_1_21_lite_async
+INFO: [VRFC 10-311] analyzing module axi_clock_converter_v2_1_21_axi_clock_converter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" into library xpm
+INFO: [VRFC 10-311] analyzing module xpm_cdc_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
+INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
+INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_low_latency_handshake
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" into library xpm
+INFO: [VRFC 10-311] analyzing module xpm_fifo_base
+INFO: [VRFC 10-311] analyzing module xpm_fifo_rst
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn
+INFO: [VRFC 10-311] analyzing module xpm_fifo_reg_vec
+INFO: [VRFC 10-311] analyzing module xpm_fifo_reg_bit
+WARNING: [VRFC 10-8426] non-net output port 'd_out' cannot be initialized at declaration in SystemVerilog mode [D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1909]
+INFO: [VRFC 10-311] analyzing module xpm_reg_pipe_bit
+INFO: [VRFC 10-311] analyzing module xpm_fifo_sync
+INFO: [VRFC 10-311] analyzing module xpm_fifo_async
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axif
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/Xilinx_2020_2/Vivado/2020.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:3660]
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axil
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axi_reg_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/ip_copy/rtds_ddr4_mig/tb/ddr4_sdram_model_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/ip_copy/rtds_ddr4_mig/tb/ddr4_model/arch_package.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/ip_copy/rtds_ddr4_mig/tb/ddr4_model/proj_package.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/ip_copy/rtds_ddr4_mig/tb/ddr4_model/interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/ip_copy/rtds_ddr4_mig/tb/ddr4_model/ddr4_model.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module StateTable
+INFO: [VRFC 10-311] analyzing module ddr4_model
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/ip_copy/rtds_ddr4_mig/tb/ddr4_model/ddr4_model.sv:340]
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/ip_copy/rtds_ddr4_mig/tb/ddr4_model/ddr4_model.sv:1535]
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/mig_model_probe/ip_copy/rtds_ddr4_mig/tb/ddr4_model/ddr4_model.sv:1582]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/sim/rtds_axi_clock_converter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_axi_clock_converter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/rtl/ddr4/rtds_ddr4_backend.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_backend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/recovery_phase2_20261011/rtds_ddr4_physical_peer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_ddr_short
+INFO: [VRFC 10-311] analyzing module rtds_ddr4_physical_peer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/recovery_phase2_20261011/rtds_backend_real_env.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rtds_backend_real_env
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "F:/RTDS_test_DDR4_64bit_batch_dev/regression/recovery_phase2_20261011/tb_real_mig_recovery.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_real_mig_recovery
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Xilinx_2020_2/Vivado/2020.2/data/verilog/src/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

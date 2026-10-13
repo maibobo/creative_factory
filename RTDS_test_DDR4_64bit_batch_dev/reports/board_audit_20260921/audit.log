@@ -4,9 +4,17 @@
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
 # Start of session at: Mon Sep 21 09:32:32 2026
 # Process ID: 16316
+# Current directory: F:/RTDS_test_DDR4_64bit_batch_dev/reports
+# Command line: vivado.exe -mode batch -source F:\RTDS_test_DDR4_64bit_batch_dev\scripts\audit_board_readonly_20260921.tcl -log F:\RTDS_test_DDR4_64bit_batch_dev\reports\board_audit_20260921\audit.log -journal F:\RTDS_test_DDR4_64bit_batch_dev\reports\board_audit_20260921\audit.jou
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/reports/board_audit_20260921/audit.log
+# Journal file: F:\RTDS_test_DDR4_64bit_batch_dev\reports\board_audit_20260921\audit.jou
 #-----------------------------------------------------------
+source {F:\RTDS_test_DDR4_64bit_batch_dev\scripts\audit_board_readonly_20260921.tcl}
+# set root F:/RTDS_test_DDR4_64bit_batch_dev
 # set out $root/reports/board_audit_20260921
 # file mkdir $out
+# open_checkpoint $root/RTDS_test_DDR4_64bit.runs/impl_1/TOP_routed.dcp
+Command: open_checkpoint F:/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/impl_1/TOP_routed.dcp
 
 Starting open_checkpoint Task
 
@@ -17,6 +25,8 @@ INFO: [Netlist 29-17] Analyzing 2025 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 3 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
 INFO: [Timing 38-478] Restoring timing data from binary archive.
 INFO: [Timing 38-479] Binary timing data restore complete.
 INFO: [Project 1-856] Restoring constraints from binary archive.
@@ -62,6 +72,7 @@ INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum o
 WARNING: [Timing 38-164] This design has multiple clocks. Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
 report_clock_interaction: Time (s): cpu = 00:01:16 ; elapsed = 00:00:56 . Memory (MB): peak = 2212.031 ; gain = 143.227
 # set fh [open $out/synchronizer_properties.txt w]
+# foreach c [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/ready_sync_reg\[[01]\]$}] {
 #     puts $fh "$c ASYNC_REG=[get_property ASYNC_REG $c]"
 # }
 # close $fh

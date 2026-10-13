@@ -1,0 +1,2 @@
+u_pcie/u_rtds_ddr4_backend/ready_sync_reg[0] ASYNC_REG=1
+u_pcie/u_rtds_ddr4_backend/ready_sync_reg[1] ASYNC_REG=1

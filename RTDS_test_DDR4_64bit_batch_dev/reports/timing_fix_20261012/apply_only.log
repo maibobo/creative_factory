@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 10:53:21 2026
+# Process ID: 21300
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/timing_fix_20261012
+# Command line: vivado.exe -mode batch -source C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\apply_only.tcl -log C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\apply_only.log -journal C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\apply_only.jou
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/timing_fix_20261012/apply_only.log
+# Journal file: C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\apply_only.jou
+#-----------------------------------------------------------
+source {C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\apply_only.tcl}
+# set root C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev
+# set out $root/reports/timing_fix_20261012
+# open_project $root/RTDS_test_DDR4_64bit.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1109.605 ; gain = 0.000
+# set xdc $root/rtl/rtds_ddr4_recovery_cdc.xdc
+# if {[llength [get_files -quiet $xdc]] == 0} {add_files -fileset constrs_1 -norecurse $xdc}
+# set_property USED_IN_SYNTHESIS false [get_files $xdc]
+# set_property USED_IN_IMPLEMENTATION true [get_files $xdc]
+# set_property PROCESSING_ORDER LATE [get_files $xdc]
+# set run [get_runs impl_1]
+# set_property STRATEGY Performance_ExplorePostRoutePhysOpt $run
+# set_property STEPS.PLACE_DESIGN.ARGS.DIRECTIVE Explore $run
+# set_property STEPS.PHYS_OPT_DESIGN.IS_ENABLED true $run
+# set_property STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE AggressiveExplore $run
+# set_property STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE Explore $run
+# set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED true $run
+# set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.DIRECTIVE AggressiveExplore $run
+# set f [open $out/applied_project_settings.txt w]
+# foreach p {STRATEGY STEPS.PLACE_DESIGN.ARGS.DIRECTIVE STEPS.PHYS_OPT_DESIGN.IS_ENABLED STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.DIRECTIVE} {puts $f "$p=[get_property $p $run]"}
+# foreach p {USED_IN_SYNTHESIS USED_IN_IMPLEMENTATION PROCESSING_ORDER} {puts $f "$p=[get_property $p [get_files $xdc]]"}
+# close $f
+# close_project
+# puts "TIMING_FIX_SAVED_NO_RUN_LAUNCHED"
+TIMING_FIX_SAVED_NO_RUN_LAUNCHED
+# exit
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 12 10:53:33 2026...

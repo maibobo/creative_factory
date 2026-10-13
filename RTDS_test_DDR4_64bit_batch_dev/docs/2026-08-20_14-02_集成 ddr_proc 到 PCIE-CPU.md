@@ -45,9 +45,11 @@
 ### User
 
 参考：
+# RTDS 1ch DDR4 替换 BRAM 实施计划
 
 ## 1. 方案结论
 
+目标工程固定为 `E:\PCIE-CPU\RTDS_test-1ch`，Vivado 固定使用：
 
 ```text
 D:\Xilinx_2020_2\Vivado\2020.2\bin\vivado.bat
@@ -73,6 +75,7 @@ CONV_DMA ───┘       250 MHz                  MIG ui_clk
 ### DDR 后端边界
 
 - 从现有 `design_1` 中移除 `axi_bram_ctrl + blk_mem_gen`，将仲裁后的64-bit AXI接口导出为统一内存主口。
+- 新增独立 `rtds_ddr4_backend`：
   - 上游：64-bit、32-bit地址的 AXI Slave，工作于现有250 MHz域。
   - 内部：AXI Clock Converter。
   - 下游：远端 golden 配置对应的 MIG DDR4 AXI64 Slave。
@@ -121,6 +124,7 @@ bit4  DDR/AXI timeout sticky
 - 内存后端支持两个构建模式：
   - `DDR4_REAL`：综合及MIG完整仿真使用真实MIG。
   - `DDR4_SIM_RAM`：Root Port快速回归使用64-bit AXI RAM模型，保持真实仲裁、Clock Converter上游行为、地址和背压。
+- `rtds_pcie_ep_sim_wrapper.sv` 默认选择 `DDR4_SIM_RAM`，因此现有Xilinx Root Port回归不会被MIG器件模型显著拖慢。
 - 新增集成脚本负责：
   - 比对远端golden和本机staging源文件。
   - 生成MIG及Clock Converter。
@@ -146,9 +150,11 @@ bit4  DDR/AXI timeout sticky
    - DDR地址`0x0000～0xFFFF`读写一致性。
 
 3. Root Port大仿真：
+   - 原 `rtds_minimum` 地址和512 B用例保持不变。
    - 重新通过枚举、BAR、H2C/C2H、CPU→Aurora、Aurora→CPU、IRQ/ack和read-to-clear。
    - 增加DDR ready轮询、同时XDMA/FDMA仲裁和连续多帧。
    - 有界DDR stall不丢数据；超过32 KiB FIFO承受能力必须产生overflow失败证据。
+   - 日志仍以 `RTDS_ROOTPORT_PASS` 和 `RTDS_LOG_COMPARE_PASS` 为门槛。
 
 4. 实现和上板：
    - `validate_bd_design`、综合、实现、DRC和时序全部通过，WNS不得为负。
@@ -157,6 +163,7 @@ bit4  DDR/AXI timeout sticky
 
 ### 交付记录
 
+生成 `docs/RTDS_test_DDR4共享缓冲集成与验证记录.md`，记录：
 
 - 远端golden与本机staging差异。
 - MIG参数、时钟复位、地址图和引脚来源。
@@ -166,23 +173,29 @@ bit4  DDR/AXI timeout sticky
 
 ### Assistant
 
+这份参考把技术方向锁得很清楚：64-bit 数据通路不变，BRAM 后端替换成独立 DDR4 backend，并保留快速仿真模型。我会据此核对远端刚出现的 `C:\project\RTDS\DDR`、`ddr_proc` 工程和 `C:\project\PCIE-CPU`，确认“新目录”应从哪份基线复制、接入哪个顶层，而不是照抄本地 `E:` 路径。
 
 ### User
 
+但我要在远程机实现C:\project\RTDS\DDR
 
 ### Assistant
 
+确认：所有新建和改造都限定在远程 `C:\project\RTDS\DDR` 下，原始 `C:\project\PCIE-CPU` 和现有 DDR golden 目录都保持只读。接下来我会确定可复用的 DDR 接口模块、目标工程基线和目录命名候选，再把最后几个会影响实现的选择与你锁定。
 
 远端 DDR 包的 README 已确认其来源正是本机 `E:\ddr_proc`，但远端当前只有 golden/交付包，没有一个可直接称为“PCIE-CPU+DDR”的合并工程。我再只读核对 `E:\ddr_proc` 的完整源工程，判断实施时是复制完整源、只复用 MIG 配置，还是仅以远端 `LATEST_DDR4_PACKAGE_20260814` 为接口依据。
 
 ### User
 
+看C:\project\RTDS\DDR\axi_ddr4xxx
 
 ### Assistant
 
+已定位到你说的目录：`C:\project\RTDS\DDR\axi_ddr4_min_2020_2`。我现在就以它作为 DDR golden，不再把 `LATEST_DDR4_PACKAGE_20260814` 当主工程；重点读取它的 MIG 生成 Tcl、XDC、现有构建结果和 `integration` 内容，确认哪些可以复用、哪些必须在新合并工程里重新生成。
 
 我看完这个 golden 的关键状态了：MIG AXI64 已生成，真实 DDR 仿真 32-word PASS，已产出 bit/bin，路由后 WNS 为 `+0.010 ns`；现有两条 DRC 都是 Warning（CFGBVS 配置属性缺失、MIG 内部无可路由负载）。接入时有一个必须处理的实际冲突：golden 和 PCIE 工程都把 `AK17` 当作 100 MHz 差分时钟入口，不能简单把两份 XDC/顶层叠加。我继续确认现有时钟树，给出唯一可实现的接法。
 
+我已经把 `axi_ddr4xxx` 对应到远程机的 `C:\project\RTDS\DDR\axi_ddr4_min_2020_2`。我再补查两个会直接影响集成方案的点：现有 Aurora RX FIFO 深度，以及 DDR 约束里的配置电压/复位引脚；然后只需要你确认工程基线、新目录名和 AXI ID 处理方式。
 
 ### User
 
@@ -206,12 +219,16 @@ bit4  DDR/AXI timeout sticky
 ## 1. 工程与目录
 
 - 只在远程机操作，Vivado 使用 `C:\Xilinx\Vivado\2020.2\bin\vivado.bat`。
+- 新建完整独立工程目录：`C:\project\RTDS\DDR\RTDS_test_DDR4_64bit`。
+- 以较新的 `E:\PCIE-CPU\RTDS_test-1ch` 为基线，传入上述远程目录并重建工程路径；远程旧工程 `C:\project\PCIE-CPU\RTDS_test` 仅作差异参考。
+- DDR golden 固定为 `C:\project\RTDS\DDR\axi_ddr4_min_2020_2`，只读取配置、约束和测试模型，不直接修改。
 - 新目录包含可独立打开的 XPR、RTL/IP、Tcl、仿真、约束、报告、日志、文档和 SHA-256 清单；不得引用新目录外的绝对源文件路径。
 - 原 PCIE-CPU 工程、DDR golden 和 Xilinx 官方模型全部保持不变。
 
 ## 2. 设计集成
 
 - 从 `design_1` 移除 `axi_bram_ctrl + blk_mem_gen`，保留 XDMA/CONV_DMA 两主机及现有仲裁，导出统一 DDR AXI 主口。
+- 新增 `rtds_ddr4_backend`：
   - 上游：AXI4，64-bit 数据、32-bit 地址、5-bit ID、250 MHz。
   - 内部：AXI Clock Converter、复位/就绪控制、响应错误及超时监测。
   - 下游：根据 golden Tcl 在新目录重新生成的 MIG DDR4。
@@ -249,7 +266,10 @@ bit4  DDR/AXI timeout sticky
 - DDR golden验证包括原有正常/注错用例、32-word MIG smoke、4096-word signoff、16-beat INCR、512 B及4 KiB边界。
 - DDR后端验证包括校准前阻断、两拍复位释放、AW/W独立握手、跨时钟背压、读写一致性、错误/超时/校准掉线sticky。
 - Root Port回归保持原512 B及地址用例，并覆盖DDR ready轮询、XDMA/FDMA仲裁、连续多帧、有界stall和FIFO overflow；必须出现：
+  - `RTDS_ROOTPORT_PASS`
+  - `RTDS_LOG_COMPARE_PASS`
 - 运行 `validate_bd_design`、综合、实现、DRC和时序；要求无Error/Critical Warning、WNS≥0并生成bitstream。Golden遗留的 `CFGBVS-1`、MIG内部 `RTSTAT-10` 若仍存在，只允许在与golden一致且交付记录明确说明时保留。
+- 生成 `docs\RTDS_test_DDR4共享缓冲集成与验证记录.md`，记录差异、参数、地址、时钟复位、命令、日志、WDB、报告及SHA-256。
 - 若远程机未连接目标板，上板校准、512 B/32 KiB闭环和ILA观测作为待执行硬件验收项，不伪造PASS；仿真、实现和bitstream仍必须在新目录完成。
 </proposed_plan>
 
@@ -261,12 +281,16 @@ PLEASE IMPLEMENT THIS PLAN:
 ## 1. 工程与目录
 
 - 只在远程机操作，Vivado 使用 `C:\Xilinx\Vivado\2020.2\bin\vivado.bat`。
+- 新建完整独立工程目录：`C:\project\RTDS\DDR\RTDS_test_DDR4_64bit`。
+- 以较新的 `E:\PCIE-CPU\RTDS_test-1ch` 为基线，传入上述远程目录并重建工程路径；远程旧工程 `C:\project\PCIE-CPU\RTDS_test` 仅作差异参考。
+- DDR golden 固定为 `C:\project\RTDS\DDR\axi_ddr4_min_2020_2`，只读取配置、约束和测试模型，不直接修改。
 - 新目录包含可独立打开的 XPR、RTL/IP、Tcl、仿真、约束、报告、日志、文档和 SHA-256 清单；不得引用新目录外的绝对源文件路径。
 - 原 PCIE-CPU 工程、DDR golden 和 Xilinx 官方模型全部保持不变。
 
 ## 2. 设计集成
 
 - 从 `design_1` 移除 `axi_bram_ctrl + blk_mem_gen`，保留 XDMA/CONV_DMA 两主机及现有仲裁，导出统一 DDR AXI 主口。
+- 新增 `rtds_ddr4_backend`：
   - 上游：AXI4，64-bit 数据、32-bit 地址、5-bit ID、250 MHz。
   - 内部：AXI Clock Converter、复位/就绪控制、响应错误及超时监测。
   - 下游：根据 golden Tcl 在新目录重新生成的 MIG DDR4。
@@ -304,11 +328,15 @@ PLEASE IMPLEMENT THIS PLAN:
 - DDR golden验证包括原有正常/注错用例、32-word MIG smoke、4096-word signoff、16-beat INCR、512 B及4 KiB边界。
 - DDR后端验证包括校准前阻断、两拍复位释放、AW/W独立握手、跨时钟背压、读写一致性、错误/超时/校准掉线sticky。
 - Root Port回归保持原512 B及地址用例，并覆盖DDR ready轮询、XDMA/FDMA仲裁、连续多帧、有界stall和FIFO overflow；必须出现：
+  - `RTDS_ROOTPORT_PASS`
+  - `RTDS_LOG_COMPARE_PASS`
 - 运行 `validate_bd_design`、综合、实现、DRC和时序；要求无Error/Critical Warning、WNS≥0并生成bitstream。Golden遗留的 `CFGBVS-1`、MIG内部 `RTSTAT-10` 若仍存在，只允许在与golden一致且交付记录明确说明时保留。
+- 生成 `docs\RTDS_test_DDR4共享缓冲集成与验证记录.md`，记录差异、参数、地址、时钟复位、命令、日志、WDB、报告及SHA-256。
 - 若远程机未连接目标板，上板校准、512 B/32 KiB闭环和ILA观测作为待执行硬件验收项，不伪造PASS；仿真、实现和bitstream仍必须在新目录完成。
 
 ### Assistant
 
+开始执行。我会把所有工程修改限定在远程新目录 `C:\project\RTDS\DDR\RTDS_test_DDR4_64bit`，先建立可回退的独立基线并记录哈希，再分阶段完成 BD/RTL、DDR IP、仿真和实现；原工程与 DDR golden 不会修改。
 
 ### User
 
@@ -326,6 +354,7 @@ PLEASE IMPLEMENT THIS PLAN:
 
 范围已调整：本轮不跑综合、实现、DRC、时序和 bitstream，只完成工程接入、Vivado 编译、elaborate 与基本冒烟；Word 文档中会把综合/上板明确标为“未执行、后续验收”。我先确认远程磁盘余量，再用精简但可独立重建的工程基线落到新目录。
 
+远程 C 盘可用约 313 GiB，空间足够。基线约 514 MiB；为满足“完整独立工程”，我会把整个 `RTDS_test-1ch` 原样流式复制到新目录（不在本机生成中间包），随后所有修改只发生在远程副本。
 
 完整基线正在流式复制到远程新目录，未在本机落中间归档。复制完成后我会先比对文件数量和总字节数，再开始修改。
 
@@ -333,6 +362,7 @@ PLEASE IMPLEMENT THIS PLAN:
 
 基线复制核对完成：远程副本与本机源均为 1997 个文件、538,633,852 字节。下一步先生成基线哈希和 DDR golden 快照，再按实际端口修改；我会优先用可重复执行的 Tcl/脚本完成 BD 与 IP 变更，避免手工改生成文件。
 
+发现并确认了一个基线问题：原 `RTDS_test-1ch.xpr` 仍引用同一板卡的另一个 `fdma_aurora_brg` 工程，直接搬目录后无法打开。为满足“同一板卡、完整独立工程”，我会把这些 Aurora/桥接依赖一并收进新目录并重定位 XPR；不会改用远程目录外的绝对路径。
 
 第一阶段 RTL 已写入：`DDR_STATUS` 接口、DDR-ready 对 Adapter 的双时钟域门控、共享单端时钟入口均已加入。现在 Vivado 正在更新 BD：移除 BRAM、导出统一 AXI 主口、刷新 INFO_EXCH，并重新生成 wrapper。
 
@@ -515,6 +545,7 @@ TOP 结构展开已经抓到一个真正需要处理的集成问题：新 BD 的
 
 ### Assistant
 
+可以。我会在远程新工程内新增并持续更新 `docs\RTDS_DDR4集成运行关键点与问题记录.md`，把本次聊天中的目标变更、已完成项、命令/日志、遇到的问题、处理方式、当前边界和后续项按时间整理进去。先把正在进行的 `DDR4_REAL` Elaborate 跑完，再把本轮结果一并写入，之后每完成一个关键步骤同步维护。
 
 我先把远程工程的当前状态和最新日志核实一遍，然后立即建立运行纪要 Markdown。之后每完成一个关键检查，我会同步更新这份文件；本轮也会给出“编译、Elaborate、基本冒烟是否全部完成”的明确结论。
 
@@ -538,6 +569,7 @@ Word 已生成并通过 DOCX ZIP/XML、必需部件、表格数量和关键字�
 
 可以。我会把整个远程新工程按“生产必需、验证留档、可再生成缓存、疑似误复制/示例工程”四类审计，重点查 `example/exdes/example_design`、旧 XPR、旧 run、`.cache/.gen/.hw`、XSim 工作目录和重复的 `ip_user_files`。本轮先只检查和列出，不擅自删除。
 
+初步结果里确实有明显冗余，而且比单个 example 工程更值得注意：新目录同时保留了整套旧名 `RTDS_test.*` 和新名 `RTDS_test_DDR4_64bit.*`，两个 `.runs` 里还有基线遗留的旧 `TOP.bit/DCP`。这些文件不是本次 DDR4 集成生成的，继续保留容易误当成新 bitstream。我正在核对 XPR 是否引用它们并统计体积；在确认引用关系前不会删除。
 
 核对完成：所谓“example”里有两种情况。Aurora 的 `exdes/example_*` 源目前被新 XPR 直接引用，不能按名字删除；真正未被 XPR 引用的 `.gen\...\example_design` 只有约 0.159 MiB。最大的冗余其实是旧名工程副本和两套遗留 run，合计约 642 MiB。我会把可删/不可删边界写入独立审计 Markdown 和总运行纪要。
 
@@ -547,6 +579,7 @@ Word 已生成并通过 DOCX ZIP/XML、必需部件、表格数量和关键字�
 
 | 分类 | 大小 | 结论 |
 |---|---:|---|
+| 旧名 `RTDS_test.*` 工程族 | 约 470.78 MiB | 可清理 |
 | 新名 `.runs` 中复制的旧产物 | 约 171.60 MiB | 建议清理 |
 | 未引用的 Aurora `.gen` | 27.17 MiB | 可选清理 |
 | XSim 工作目录 | 约 8 MiB | 可再生成 |
@@ -555,6 +588,7 @@ Word 已生成并通过 DOCX ZIP/XML、必需部件、表格数量和关键字�
 特别注意：当前目录里的：
 
 ```text
+RTDS_test_DDR4_64bit.runs\impl_1\TOP.bit
 ```
 
 与旧工程的 `TOP.bit` SHA-256 完全一致，是基线复制遗留，不是 DDR4 集成后的 bitstream，不能拿去上板。
@@ -562,10 +596,20 @@ Word 已生成并通过 DOCX ZIP/XML、必需部件、表格数量和关键字�
 强清理候选预计可释放约 642.38 MiB：
 
 ```text
+RTDS_test.xpr
+RTDS_test.srcs
+RTDS_test.runs
+RTDS_test.ip_user_files
+RTDS_test.cache
+RTDS_test.hw
+RTDS_test.sim
+RTDS_test_DDR4_64bit.runs
 ```
 
 审计记录已保存并同步到总运行纪要：
 
+- `C:\project\RTDS\DDR\RTDS_test_DDR4_64bit\docs\RTDS_test_DDR4工程目录冗余审计.md`
+- `C:\project\RTDS\DDR\RTDS_test_DDR4_64bit\docs\RTDS_DDR4集成运行关键点与问题记录.md`
 
 当前编译、Elaborate、基本冒烟均已 PASS。最终 SHA-256 清单暂缓生成，等冗余清理决定后再固定。
 
@@ -603,6 +647,8 @@ Vivado 2020.2 支持 `archive_project -exclude_run_results`，正适合这里：
 
 目前这两份不是自动同步的同一目录：
 
+- 远程生产工程：`C:\project\RTDS\DDR\RTDS_test_DDR4_64bit`
+- 本机备份：`E:\PCIE-CPU\RTDS_test_DDR4_64bit_本机备份_20260820`
 
 本机备份是快照，后续任一端修改都不会自动回到另一端。我也会顺手检查本机 `E:` 究竟是本地磁盘、映射网络盘还是共享挂载，再给你确定结论。
 
@@ -612,9 +658,11 @@ Vivado 2020.2 支持 `archive_project -exclude_run_results`，正适合这里：
 
 本机打开验证已经 PASS：
 
+- 工程名：`RTDS_test_DDR4_64bit`
 - 器件：`xcku040-ffva1156-2-i`
 - Vivado 发现工程文件：864 个
 - 缺失引用：0
+- 标记：`RTDS_LOCAL_BACKUP_OPEN_PASS`
 
 接下来我补备份 SHA-256、把“本机/远程不是同一共享目录”的结论写入运行纪要，并清理由归档失败留下的远程临时目录。
 
@@ -661,6 +709,11 @@ vivado.bat -mode batch -source validate_local_backup_open.tcl
 
 本机备份：
 
+- [打开工程 XPR](E:/PCIE-CPU/RTDS_test_DDR4_64bit_本机备份_20260820/RTDS_test_DDR4_64bit.xpr)
+- [备份说明](E:/PCIE-CPU/RTDS_test_DDR4_64bit_本机备份_20260820/README_本机备份说明.md)
+- [设计方案与寄存器 Word](E:/PCIE-CPU/RTDS_test_DDR4_64bit_本机备份_20260820/docs/RTDS_test_DDR4设计方案与寄存器清单.docx)
+- [运行关键点记录](E:/PCIE-CPU/RTDS_test_DDR4_64bit_本机备份_20260820/docs/RTDS_DDR4集成运行关键点与问题记录.md)
+- [SHA-256 清单](E:/PCIE-CPU/RTDS_test_DDR4_64bit_本机备份_20260820/BACKUP_SHA256.txt)
 
 DOCX 结构复检也已 PASS：7 个表格、66 个段落。
 
@@ -718,6 +771,7 @@ DOCX 结构复检也已 PASS：7 个表格、66 个段落。
 - 已更新聊天运行纪要和SHA-256清单。
 - 未打开Vivado；远程机离线，本次未同步远程目录。
 
+[下载修改后的Word文档](E:/PCIE-CPU/RTDS_test_DDR4_64bit_本机备份_20260820/docs/RTDS_test_DDR4设计方案与寄存器清单.docx)
 
 ---
 
@@ -780,7 +834,10 @@ DOCX 结构复检也已 PASS：7 个表格、66 个段落。
 远程工程结构如下：
 
 ```text
+C:\project\RTDS\DDR\RTDS_test_DDR4_64bit
 │
+├─ RTDS_test_DDR4_64bit.xpr       当前主工程
+├─ RTDS_test_DDR4_64bit.srcs\     当前工程的RTL、BD及IP源文件
 ├─ rtl\                            本次新增/定制RTL
 ├─ tcl\                            工程生成与集成Tcl
 ├─ scripts\                        编译、Elaborate和冒烟脚本
@@ -788,6 +845,10 @@ DOCX 结构复检也已 PASS：7 个表格、66 个段落。
 ├─ regression\                     回归测试内容
 │
 ├─ docs\                           正式文档目录
+│  ├─ RTDS_test_DDR4设计方案与寄存器清单.docx
+│  ├─ RTDS_DDR4集成运行关键点与问题记录.md
+│  ├─ RTDS_test_DDR4共享缓冲集成与验证记录.md
+│  ├─ RTDS_test_DDR4工程目录冗余审计.md
 │  │
 │  ├─ figures\
 │  │  ├─ figure_A1_architecture.png
@@ -807,14 +868,27 @@ DOCX 结构复检也已 PASS：7 个表格、66 个段落。
 ├─ golden_snapshot\                DDR golden关键配置快照
 ├─ external_snapshot\              外部Aurora等依赖源快照
 │
+├─ RTDS_test_DDR4_64bit.cache\     Vivado可再生成缓存
+├─ RTDS_test_DDR4_64bit.hw\        硬件管理器生成目录
+├─ RTDS_test_DDR4_64bit.runs\      综合/实现运行产物
+├─ RTDS_test_DDR4_64bit.sim\       Vivado仿真产物
+└─ RTDS_test_DDR4_64bit.ip_user_files\
                                    IP生成及仿真导出内容
 ```
 
 另外，根目录中还保留了一套旧基线：
 
 ```text
+RTDS_test.xpr
+RTDS_test.srcs\
+RTDS_test.runs\
+RTDS_test.cache\
+RTDS_test.hw\
+RTDS_test.ip_user_files\
+RTDS_test.sim\
 ```
 
+这套 `RTDS_test.*` 不是当前主工程，主要作为历史基线和差异参考。目前没有删除。
 
 本次真正覆盖更新的内容只有：
 
@@ -834,6 +908,7 @@ SSH终端显示中文时有乱码，这是远程控制台编码问题；实际Un
 
 ### User
 
+根据C:\project\RTDS\DDR\RTDS\_test\_DDR4\_64bit docs\    9-8号的几个文件，指出如何查看原理图文件，以及当前的xdc需要如何修改/管脚绑定   这个不是KU的板子，是组里自己做好的板子，也是后面集成DDR后的pcie项目（C:\project\RTDS\pcie\_07\RTDS\_test-1ch\RTDS\_test-1ch）做的板子
 
 ### Assistant
 
@@ -931,11 +1006,15 @@ xcku040-ffva1156-2-i
 目标工程当前活动约束是：
 
 ```text
+C:\project\RTDS\pcie_07\RTDS_test-1ch\RTDS_test-1ch\
+RTDS_test.srcs\constrs_1\new\PIN.xdc
 ```
 
 DDR 集成工程还有：
 
 ```text
+C:\project\RTDS\DDR\RTDS_test_DDR4_64bit\
+RTDS_test_DDR4_64bit.srcs\constrs_1\new\DDR4_PIN.xdc
 ```
 
 ### 系统时钟
@@ -1113,6 +1192,7 @@ MT40A1G16TB-062EIT
 
 本次检查结论已经同步写入本机和远程运行纪要，SHA-256 一致：
 
+[RTDS_DDR4集成运行关键点与问题记录.md](</E:/PCIE-CPU/RTDS_test_DDR4_64bit_本机备份_20260820/docs/RTDS_DDR4集成运行关键点与问题记录.md>)。未启动 Vivado GUI，也没有修改生产 RTL、IP、XPR 或 XDC。
 
 ---
 
@@ -1122,6 +1202,7 @@ MT40A1G16TB-062EIT
 
 ### User
 
+问了下同事，说其实就是把KU040  FPGA做到了当前项目的单板上（板子上包含自己的DDR颗粒和其他硬件如pcie、aurora、以太网），因此理论上复用demo的xdc文件即可（他说他就跑了原始demo的工程按这个文档说明是通的），他按照远程机C/project/RTDS/DDR目录 xxxfpga开发指南的 32章实验demo（工程在同目录的26\_topxx）                                                                                                       注意，我们之前做过DDR最小工程同目录的xxxddr4\_minxx (日志操作在E:\codex\_history\_md\ddr\_proc目录）   当前问题是他让我再复核下管脚有木有问题，我不知道怎么看，并且要验证全DDR空间的读写、包括其他在硬件测试上需要FPGA验证的项，我用之前的最小ddr工程是否可行（我记得之前的工程代码是兼容仿真、上板验证的，不需要修改代码或xdc文件？）
 
 ### Assistant
 
@@ -1170,6 +1251,7 @@ Demo 按 Micron 颗粒用了 `16-16-16`；GD规格书在2400速率保证的是 `
 ## 1. 结论与实施原则
 
 - 继续使用 AXI 最小工程作为验证底座。它比第32章 Demo 的 Native APP 接口更适合后续接入 PCIe/Aurora。
+- 原工程 `axi_ddr4_min_2020_2` 保持不变；新建 `C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2` 完成增强验证。
 - 当前最小工程与 `26_top_ddr4_rw` 的 DDR管脚、AK17差分时钟、AC34复位及T22/T23 LED约束逐项一致。XDC只做审计，不改变物理绑定。
 - 现有bitstream可以直接用于32 KiB基础冒烟，但不能证明4 GB全空间正常。
 - 全空间测试必须生成新bitstream。最小改动可把顶层 `TEST_WORDS` 覆盖为536,870,912，但正式硬件验收应增强BIST测试模式、突发访问、进度和错误记录。
@@ -1241,6 +1323,7 @@ PLEASE IMPLEMENT THIS PLAN:
 ## 1. 结论与实施原则
 
 - 继续使用 AXI 最小工程作为验证底座。它比第32章 Demo 的 Native APP 接口更适合后续接入 PCIe/Aurora。
+- 原工程 `axi_ddr4_min_2020_2` 保持不变；新建 `C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2` 完成增强验证。
 - 当前最小工程与 `26_top_ddr4_rw` 的 DDR管脚、AK17差分时钟、AC34复位及T22/T23 LED约束逐项一致。XDC只做审计，不改变物理绑定。
 - 现有bitstream可以直接用于32 KiB基础冒烟，但不能证明4 GB全空间正常。
 - 全空间测试必须生成新bitstream。最小改动可把顶层 `TEST_WORDS` 覆盖为536,870,912，但正式硬件验收应增强BIST测试模式、突发访问、进度和错误记录。
@@ -1442,6 +1525,7 @@ SHA 检查第一次出现 5 个“缺失”是远端 PowerShell 5 按本地代�
 
 新工程有两份：
 
+- 远程机正式工程：`C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2`
 - 本机轻量备份：[axi_ddr4_full_bist_2020_2](E:/PCIE-CPU/axi_ddr4_full_bist_2020_2)
 
 建议优先看这些文件：
@@ -1547,6 +1631,7 @@ RTL 修改已通过语法编译，正在重跑原有行为回归，确认新增�
 远端行为仿真已发起，正在运行：
 
 ```text
+C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2
 ```
 
 日志：
@@ -1589,6 +1674,7 @@ logs\behavior_after_timing_fix_remote.log
 
 现在请先不要手动综合/实现：我启动的 `synth_1` 仍在运行，脚本之后会自动进入 `impl_1`，同时操作会冲突。你可以只读查看：
 
+- 主日志：`C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\logs\timing_fix2_compat_remote.log`
 - 综合实时日志：`...\prj\compat\axi_ddr4_full_bist_compat.runs\synth_1\runme.log`
 - 实现实时日志：`...\prj\compat\axi_ddr4_full_bist_compat.runs\impl_1\runme.log`
 
@@ -1631,6 +1717,7 @@ logs\behavior_after_timing_fix_remote.log
 
 请打开：
 
+`C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2\prj\compat\axi_ddr4_full_bist_compat.xpr`
 
 在 Design Runs 中：
 
@@ -1689,6 +1776,7 @@ logs\behavior_after_timing_fix_remote.log
 远端对应目录：
 
 ```text
+C:\project\RTDS\DDR\axi_ddr4_full_bist_2020_2
 ```
 
 最新违例分析：

@@ -1,0 +1,60 @@
+[
+  {
+    "case": "backend_read",
+    "top": "tb_backend_read",
+    "ids": [
+      "TC-F13"
+    ],
+    "seed": 1417633351,
+    "status": "PASS",
+    "exit_code": 0,
+    "started": "2026-10-11T22:25:30.074231+08:00",
+    "finished": "2026-10-11T22:26:28.055926+08:00",
+    "wall_seconds": 57.97,
+    "log": "backend_read_seed_1417633351.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=1 value=166008068 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=2 value=1138832515 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=3 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=4 value=278997607 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=5 value=139715218 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=6 value=8 lo=0 hi=9",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=7 value=158571554 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=8 value=604752445 lo=1 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=7 value=158571554 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=8 value=604752445 lo=1 hi=2147483647",
+      "RNG_SUMMARY scope=tb_backend_read.T seed=1417633351 draws=3968 state=b9795f5b"
+    ]
+  },
+  {
+    "case": "backend_read",
+    "top": "tb_backend_read",
+    "ids": [
+      "TC-F13"
+    ],
+    "seed": 750318462,
+    "status": "FAIL",
+    "exit_code": -999,
+    "started": "2026-10-11T22:26:28.057921+08:00",
+    "finished": "2026-10-11T22:37:41.836305+08:00",
+    "wall_seconds": 673.84,
+    "log": "backend_read_seed_750318462.simulate.log",
+    "random_samples": [
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=1 value=681357227 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=2 value=274698975 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=3 value=0 lo=0 hi=9",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=4 value=419045307 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=5 value=984028641 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=6 value=9 lo=0 hi=9",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=7 value=1489736110 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=8 value=1966784147 lo=1 hi=2147483647"
+    ],
+    "random_summary": [
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=7 value=1489736110 lo=1 hi=2147483647",
+      "RNG_DRAW scope=tb_backend_read.T.phase2_pick n=8 value=1966784147 lo=1 hi=2147483647",
+      "RNG_SUMMARY scope=tb_backend_read.T seed=750318462 draws=3968 state=442c6e4a"
+    ]
+  }
+]

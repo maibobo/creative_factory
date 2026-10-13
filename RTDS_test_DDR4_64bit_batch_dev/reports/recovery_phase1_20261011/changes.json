@@ -1,0 +1,16 @@
+[
+  {
+    "path": "RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v",
+    "before_sha256": "f7e1064d9afc9df3b313f1a69850fdbb6ecd37f096259235eed8aaac2ce6dc1b",
+    "after_sha256": "a1d9c0cb950ac83eb7c055fbb59a082734fc6b120b9e4decc8f9cb30d8f5db72",
+    "interface_unchanged": true,
+    "changed_code_lines_with_dated_comments": 56
+  },
+  {
+    "path": "rtl/ddr4/rtds_ddr4_backend.sv",
+    "before_sha256": "62907e3b5b288de8aa8285a2abde5d86feaf2d1ce80fb4ad318020a824dc8583",
+    "after_sha256": "0571115027fc915b872f195a16f14e592e6a9e2e9fc8c282e5aecc9d6db281aa",
+    "interface_unchanged": true,
+    "changed_code_lines_with_dated_comments": 180
+  }
+]

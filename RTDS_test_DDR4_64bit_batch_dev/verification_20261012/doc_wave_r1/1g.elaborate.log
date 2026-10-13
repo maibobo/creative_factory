@@ -1,0 +1,8 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -debug all -O3 -mt off -L xpm -L unisims_ver work.tb_rtds_1g work.glbl -s 1g 
+Turned off multi-threading.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2861] module 'RTDS_1G_PERIODIC_TX' does not have a parameter named PERIOD_CYCLES [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/batch_1g/tb_rtds_1g.sv:17]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

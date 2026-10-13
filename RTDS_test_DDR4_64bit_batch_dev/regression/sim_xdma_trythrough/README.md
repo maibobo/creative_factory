@@ -5,11 +5,13 @@
 基础地址配置：
 
 ```powershell
+& 'E:\PCIE-CPU\RTDS_test\regression\sim_xdma_trythrough\run_xsim.ps1'
 ```
 
 非零高32位地址配置：
 
 ```powershell
+& 'E:\PCIE-CPU\RTDS_test\regression\sim_xdma_trythrough\run_xsim.ps1' -NonzeroCardHi
 ```
 
 通过条件包括：512 B、1 KiB和32 KiB TX；RX中断、read-clear与CPU_REC所有权；64帧环形回绕；随机FDMA/LocalLink背压；RX预期溢出及链路恢复；FDMA size、地址窗口、4 KiB边界和stall稳定性断言。

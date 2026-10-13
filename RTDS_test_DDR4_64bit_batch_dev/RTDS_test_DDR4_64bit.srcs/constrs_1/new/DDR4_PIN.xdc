@@ -19,6 +19,11 @@ set_property PACKAGE_PIN AP11 [get_ports led]
 set_property IOSTANDARD LVCMOS33 [get_ports led]
 set_property PACKAGE_PIN AP10 [get_ports user_lnk_up]
 set_property IOSTANDARD LVCMOS33 [get_ports user_lnk_up]
+# RPT205 TEST3/AM11, direct 3.3 V input to the confirmed RK3588 GPIO bank.
+set_property PACKAGE_PIN AM11 [get_ports cpu_sync_50us]
+set_property IOSTANDARD LVCMOS33 [get_ports cpu_sync_50us]
+# The receiver samples this output asynchronously; its internal source remains timed at 250 MHz.
+set_false_path -to [get_ports cpu_sync_50us]
 # Human-visible LED outputs have no external synchronous sampling requirement.
 set_false_path -to [get_ports {led user_lnk_up}]
 
@@ -283,3 +288,17 @@ set_property PACKAGE_PIN AM2 [get_ports {pcie_mgt_rxp[1]}]
 set_property PACKAGE_PIN AM1 [get_ports {pcie_mgt_rxn[1]}]
 set_property PACKAGE_PIN AM6 [get_ports {pcie_mgt_txp[1]}]
 set_property PACKAGE_PIN AM5 [get_ports {pcie_mgt_txn[1]}]
+
+
+# RTDS_RECOVERY_CDC_BEGIN_20261012
+# 修改点 2026-10-12：直接写入当前已加载的DDR4_PIN.xdc，避免额外XDC未登记时修复失效。
+# 修改记录 2026-10-12：DDR事务恢复新增同步器的定点CDC约束。
+# converter_reset_n异步置位复位；s/m管线分别经过16个目的时钟沿释放。
+# 此例外只针对同步器的异步CLR入口；同步释放链的Q->D路径仍正常检查。
+# converter_ready_sync[0]是MIG接口复位释放确认的第一级电平同步器。
+# 仅排除首级D的异步采样；[0]/Q->[1]/D及全部业务路径仍正常检查。
+# 不建立整组时钟异步例外，不改变MIG内部时钟周期或协议路径要求。
+set_false_path -to [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_(s|m)_reset_pipe_reg\[[0-9]+\]$}] -filter {REF_PIN_NAME == CLR}]
+set_false_path -to [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_ready_sync_reg\[[01]\]$}] -filter {REF_PIN_NAME == CLR}]
+set_false_path -to [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_ready_sync_reg\[0\]$}] -filter {REF_PIN_NAME == D}]
+# RTDS_RECOVERY_CDC_END_20261012

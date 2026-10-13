@@ -1,0 +1,9 @@
+﻿{
+    "case":  "period_100ms",
+    "passed":  false,
+    "started":  "2026-10-10T16:55:29.3892650+08:00",
+    "finished":  "2026-10-10T17:02:33.2322488+08:00",
+    "log":  "period_100ms.simulate.log",
+    "wdb":  "period_100ms.wdb",
+    "vcd":  "period_100ms.vcd"
+}

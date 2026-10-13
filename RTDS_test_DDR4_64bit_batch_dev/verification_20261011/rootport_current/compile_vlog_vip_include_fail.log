@@ -1,0 +1,23 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" into library xilinx_vip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" into library xilinx_vip
+ERROR: [VRFC 10-3195] cannot open include file 'xil_common_vip_macros.svh' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:48]
+ERROR: [VRFC 10-3805] use of undefined macro 'xil_warning' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:221]
+ERROR: [VRFC 10-4982] syntax error near '(' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:221]
+ERROR: [VRFC 10-4982] syntax error near ')' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:222]
+ERROR: [VRFC 10-3805] use of undefined macro 'xil_info' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:275]
+ERROR: [VRFC 10-4982] syntax error near '(' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:275]
+ERROR: [VRFC 10-4982] syntax error near '(' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:280]
+ERROR: [VRFC 10-3805] use of undefined macro 'xil_fatal' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:309]
+ERROR: [VRFC 10-4982] syntax error near '(' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:309]
+ERROR: [VRFC 10-3805] use of undefined macro 'xil_error' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:353]
+ERROR: [VRFC 10-4982] syntax error near '(' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:353]
+ERROR: [VRFC 10-4982] syntax error near '(' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:398]
+ERROR: [VRFC 10-4982] syntax error near '(' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:410]
+ERROR: [VRFC 10-4982] syntax error near '(' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:412]
+ERROR: [VRFC 10-4982] syntax error near ',' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:414]
+ERROR: [VRFC 10-4982] syntax error near '(' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:455]
+ERROR: [VRFC 10-4982] syntax error near '(' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:467]
+ERROR: [VRFC 10-4982] syntax error near '(' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:469]
+ERROR: [VRFC 10-4982] syntax error near ',' [D:/Xilinx_2020_2/Vivado/2020.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv:471]
+INFO: [#UNDEF] Sorry, too many errors..

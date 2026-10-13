@@ -1,0 +1,30 @@
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/backend_edge_recovery/xsim_script.tcl
+# xsim {backend_edge_recovery} -testplusarg EDGE_PHASE=0 -testplusarg SEED=750318462 -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/edge_criteria_closure_20261012/backend_edge_recovery_seed_750318462.tcl} -onfinish stop -onerror quit -sv_seed 750318462
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/edge_criteria_closure_20261012/backend_edge_recovery_seed_750318462.tcl
+## run all
+EDGE/CONFIG phase=0 third_expected_resp=0 model=DDR4_SIM_RAM clk_ns=4 timeout_cycles=64 hold_cycles=400
+RNG_INIT scope=tb_backend_edge_recovery.phase2_pick seed=750318462 algorithm=xorshift32
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=1 value=681357227 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=2 value=274698975 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=3 value=578836574 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=4 value=419045307 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=5 value=984028641 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=6 value=1535632370 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=7 value=1489736110 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_edge_recovery.phase2_pick n=8 value=1966784147 lo=1 hi=2147483647
+EDGE/SECOND_ACCEPT time_ns=190000 phase=0 sampled_storage_ready=1 third_expected_resp=0
+EDGE/FAULT_EFFECTIVE time_ns=192000 phase=0 held_third_resp=0
+EDGE/COUNTS phase=0 AR=2 AW=2 R=5 W=5 B=2 R_OKAY=4 R_ERROR=1 B_OKAY=1 B_ERROR=1
+TEST PASS tb_backend_edge_recovery phase=0 repeated_fault=2 parallel_abort=1 hold=400 third_resp=0
+RNG_SUMMARY scope=tb_backend_edge_recovery seed=750318462 draws=19 state=c62570c1
+$finish called at time : 5622001 ps : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/edge_criteria_closure_20261012/sources/regression/recovery_phase2_20261011/tb_backend_edge_recovery.sv" Line 121
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 18:37:46 2026...

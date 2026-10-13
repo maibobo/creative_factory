@@ -1,24 +1,36 @@
+// 用XPM握手成组传递48bit配置，源域保持数据直到目的域确认。
+// src_send发请求，dst_req表示目的侧得到完整数据，dst_ack返回接受确认。
+// 多位配置作为一个整体传递，不逐位独立同步；两侧按各自时钟推进。
+// 注释整理 2026-10-12：仅修改说明和排版，端口、表达式、状态条件及连接保持。
+
 `timescale 1ns/1ps
-// FPGA 平台适配层：48bit 配置采用 XPM 完整请求/确认握手。
-// 源数据从 send 拉高前保持至 rcv；再次发送必须先完成四相返回空闲。
-// XPM 无业务复位端口：主机复位须使 send/ack 保持低，且两域时钟均运行
-// 至少 16 拍后才提交新配置。Aurora 链路复位不复位这份上电配置。
+
+// 模块参数与输入输出。
 module RTDS_FPGA_CFG_CDC (
-    input wire src_clk, // DDR/控制域，250MHz
-    input wire dst_clk, // 1G 用户域，31.25MHz
-    input wire [47:0] src_data, // 一次传递 {Vin[31:0],duty[15:0]}
-    input wire src_send, // 源端请求，收到 src_rcv 后撤销
-    input wire dst_ack, // 目的端确认，dst_req 撤销后撤销
-    output wire src_rcv, // 源端已完成数据传递
-    output wire dst_req, // 目的端数据有效请求
-    output wire [47:0] dst_data // 在 dst_req 有效时整体采样
+    input wire                                 src_clk,                               // 源时钟域时钟
+    input wire                                 dst_clk,                               // 目的时钟域时钟
+    input wire    [47:0]                       src_data,                              // 源域保持的成组数据
+    input wire                                 src_send,                              // 源域提交请求
+    input wire                                 dst_ack,                               // 目的域已接收的返回确认
+    output wire                                src_rcv,                               // 源域收到目的端接受确认
+    output wire                                dst_req,                               // 目的域配置请求已到达
+    output wire   [47:0]                       dst_data                               // 目的域收到的完整成组数据
 );
     xpm_cdc_handshake #(
-        .DEST_EXT_HSK(1), .DEST_SYNC_FF(4), .SRC_SYNC_FF(4),
-        .INIT_SYNC_FF(1), .SIM_ASSERT_CHK(1), .WIDTH(48)
+        .DEST_EXT_HSK(1),
+        .DEST_SYNC_FF(4),
+        .SRC_SYNC_FF(4),
+        .INIT_SYNC_FF(1),
+        .SIM_ASSERT_CHK(1),
+        .WIDTH(48)
     ) U_XPM_CDC_HANDSHAKE (
-        .src_clk(src_clk), .src_in(src_data), .src_send(src_send),
-        .src_rcv(src_rcv), .dest_clk(dst_clk), .dest_req(dst_req),
-        .dest_ack(dst_ack), .dest_out(dst_data)
+        .src_clk(src_clk),
+        .src_in(src_data),
+        .src_send(src_send),
+        .src_rcv(src_rcv),
+        .dest_clk(dst_clk),
+        .dest_req(dst_req),
+        .dest_ack(dst_ack),
+        .dest_out(dst_data)
     );
 endmodule

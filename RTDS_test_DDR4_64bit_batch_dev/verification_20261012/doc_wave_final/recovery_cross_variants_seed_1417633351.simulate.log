@@ -1,0 +1,278 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 10:39:36 2026
+# Process ID: 18744
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final
+# Command line: xsim.exe -log recovery_cross_variants_seed_1417633351.simulate.log -mode tcl -source {xsim.dir/recovery_cross_variants/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/recovery_cross_variants_seed_1417633351.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/recovery_cross_variants/xsim_script.tcl
+# xsim {recovery_cross_variants} -testplusarg SEED=1417633351 -wdb {recovery_cross_variants_seed_1417633351.wdb} -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/recovery_cross_variants_seed_1417633351.tcl} -onfinish stop -onerror quit -sv_seed 1417633351
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/recovery_cross_variants_seed_1417633351.tcl
+## set scope /tb_recovery_cross_variants
+## log_wave -r ${scope}/*
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set objects [get_objects -r ${scope}/*]
+## set fh [open {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/recovery_cross_variants_seed_1417633351.capture/recorded_signals.txt} w]
+## foreach obj $objects {puts $fh $obj}
+## close $fh
+## create_wave_config
+## set shown 0
+## foreach obj $objects {if {[regexp {(^/[^/]+/(clk|fdma_clk|user_clk|src_clk|clk_250m|rst_n|ticks|frames|beat|tick_toggle_2us|cpu_sync_50us)$)|(/bus/[^/]+$)|(/H/(clk|uclk|gclk|rst_n|pcie_up|channel_up|lane_up|ddr_reset_n|ddr_ready|hold_r|hold_b|tx_ready|fdma_rbusy|fdma_rareq|fdma_rdata|fdma_rvalid|fdma_rready|tx_valid|tx_data|tx_sof|tx_eof|done_event|cfg_byte|cfg_valid|cfg_pulses|tx_frames|tx_beats|gdata|gvalid|gsof|geof|configured|configured_id|tick_2us|gpio_50us)$)|(/U_ADAPTER/(tx_active|tx_recovering|tx_quiet_count|tx_user_quiet_fdma|tx_deliver_enable|link_up_fdma|tx_frame_done_fdma|tx_restart_pending)$)|(/U_DMA/(read_curr_st|M_AXI_RVALID|M_AXI_RREADY|M_AXI_RDATA)$)|(/U_DDR/(storage_ready|recovery_read_pending|recovery_read_abort|recovery_read_left|recovery_rvalid|recovery_rresp|recovery_rlast)$)} $obj]} {catch {add_wave $obj};incr shown}}
+## if {$shown==0} {add_wave ${scope}/*}
+## save_wave_config {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/recovery_cross_variants_seed_1417633351.capture/recommended.wcfg}
+## open_vcd {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_final/recovery_cross_variants_seed_1417633351.capture/trace.vcd}
+## log_vcd $objects
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /mem is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.enb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.doutb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_RTDS_FPGA_COUNT_CDC/U_XPM_CDC_GRAY/dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /mem is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.enb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst /\gen_rd_b.gen_doutb_pipe.doutb_pipe  is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/U_RTDS_RX_FRAME_FIFO/U_XPM_FIFO_ASYNC/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst /dest_graysync_ff is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/U_RTDS_RX_BLOCK_WRITER/block_len is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+INFO: HDL object /tb_recovery_cross_variants/H/U_ADAPTER/U_RTDS_RX_BLOCK_WRITER/block_seq is an unpacked array. VCD does not support unpacked array type according to IEEE LRM 1800-2009, section21.7.5.
+## run all
+RNG_INIT scope=tb_recovery_cross_variants.H.phase2_pick seed=1417633351 algorithm=xorshift32
+RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=1 value=3 lo=0 hi=31
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb_recovery_cross_variants.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_recovery_cross_variants/H/U_ADAPTER/u_fdma_aurora_brg_tx/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial294_146  Scope: tb_recovery_cross_variants.H.U_ADAPTER.u_fdma_aurora_brg_tx.xpm_fifo_async_inst.\gnuram_async_fifo.xpm_fifo_base_inst .\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx/Vivado/2020.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 488
+RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=2 value=1 lo=0 hi=9
+RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=3 value=9 lo=0 hi=9
+RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=4 value=6 lo=0 hi=9
+RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=5 value=4 lo=0 hi=9
+RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=6 value=8 lo=0 hi=9
+RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=7 value=0 lo=0 hi=9
+RNG_DRAW scope=tb_recovery_cross_variants.H.phase2_pick n=8 value=1 lo=0 hi=9
+RNG_INIT scope=tb_recovery_cross_variants.phase2_pick seed=1417633351 algorithm=xorshift32
+RNG_DRAW scope=tb_recovery_cross_variants.phase2_pick n=1 value=4 lo=1 hi=4
+RNG_DRAW scope=tb_recovery_cross_variants.phase2_pick n=2 value=82112 lo=1 hi=1048575
+RNG_DRAW scope=tb_recovery_cross_variants.phase2_pick n=3 value=23 lo=8 hi=40
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=0 kind=0 stage=0 old_bytes=64 paused=1 fresh_beats=4 done=1
+RNG_DRAW scope=tb_recovery_cross_variants.phase2_pick n=4 value=3 lo=1 hi=4
+RNG_DRAW scope=tb_recovery_cross_variants.phase2_pick n=5 value=256790 lo=1 hi=1048575
+RNG_DRAW scope=tb_recovery_cross_variants.phase2_pick n=6 value=12 lo=8 hi=40
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=1 kind=0 stage=1 old_bytes=48 paused=0 fresh_beats=4 done=1
+RNG_DRAW scope=tb_recovery_cross_variants.phase2_pick n=7 value=1 lo=1 hi=4
+RNG_DRAW scope=tb_recovery_cross_variants.phase2_pick n=8 value=775292 lo=1 hi=1048575
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=2 kind=0 stage=2 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=3 kind=0 stage=3 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=4 kind=0 stage=4 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=5 kind=0 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=6 kind=1 stage=0 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=7 kind=1 stage=1 old_bytes=64 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=8 kind=1 stage=2 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=9 kind=1 stage=3 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=10 kind=1 stage=4 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=11 kind=1 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=12 kind=2 stage=0 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=13 kind=2 stage=1 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=14 kind=2 stage=2 old_bytes=64 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=15 kind=2 stage=3 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=16 kind=2 stage=4 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=17 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=18 kind=3 stage=0 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=19 kind=3 stage=1 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=20 kind=3 stage=2 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=21 kind=3 stage=3 old_bytes=16 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=22 kind=3 stage=4 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=23 kind=3 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=24 kind=0 stage=0 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=25 kind=0 stage=1 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=26 kind=0 stage=2 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=27 kind=0 stage=3 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=28 kind=0 stage=4 old_bytes=64 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=29 kind=0 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=30 kind=1 stage=0 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=31 kind=1 stage=1 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=32 kind=1 stage=2 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=33 kind=1 stage=3 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=34 kind=1 stage=4 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=35 kind=1 stage=5 old_bytes=16 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=36 kind=2 stage=0 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=37 kind=2 stage=1 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=38 kind=2 stage=2 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=39 kind=2 stage=3 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=40 kind=2 stage=4 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=41 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=42 kind=3 stage=0 old_bytes=48 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=43 kind=3 stage=1 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=44 kind=3 stage=2 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=45 kind=3 stage=3 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=46 kind=3 stage=4 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=47 kind=3 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=48 kind=0 stage=0 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=49 kind=0 stage=1 old_bytes=48 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=50 kind=0 stage=2 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=51 kind=0 stage=3 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=52 kind=0 stage=4 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=53 kind=0 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=54 kind=1 stage=0 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=55 kind=1 stage=1 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=56 kind=1 stage=2 old_bytes=32 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=57 kind=1 stage=3 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=58 kind=1 stage=4 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=59 kind=1 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=60 kind=2 stage=0 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=61 kind=2 stage=1 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=62 kind=2 stage=2 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=63 kind=2 stage=3 old_bytes=64 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=64 kind=2 stage=4 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=65 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=66 kind=3 stage=0 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=67 kind=3 stage=1 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=68 kind=3 stage=2 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=69 kind=3 stage=3 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=70 kind=3 stage=4 old_bytes=48 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=71 kind=3 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=72 kind=0 stage=0 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=73 kind=0 stage=1 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=74 kind=0 stage=2 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=75 kind=0 stage=3 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=76 kind=0 stage=4 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=77 kind=0 stage=5 old_bytes=16 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=78 kind=1 stage=0 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=79 kind=1 stage=1 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=80 kind=1 stage=2 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=81 kind=1 stage=3 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=82 kind=1 stage=4 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=83 kind=1 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=84 kind=2 stage=0 old_bytes=48 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=85 kind=2 stage=1 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=86 kind=2 stage=2 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=87 kind=2 stage=3 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=88 kind=2 stage=4 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=89 kind=2 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=90 kind=3 stage=0 old_bytes=64 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=91 kind=3 stage=1 old_bytes=64 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=92 kind=3 stage=2 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=93 kind=3 stage=3 old_bytes=48 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=94 kind=3 stage=4 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=95 kind=3 stage=5 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=96 kind=0 stage=0 old_bytes=16 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=97 kind=0 stage=1 old_bytes=32 paused=0 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=98 kind=0 stage=2 old_bytes=16 paused=1 fresh_beats=4 done=1
+TX_CHECK addr=00009000 length=32 end=00009020 frames=2 beats=4
+ISOLATION_CHECK n=99 kind=0 stage=3 old_bytes=48 paused=0 fresh_beats=4 done=1
+TEST PASS tb_recovery_cross_variants iterations=100 reset_free=100
+RNG_SUMMARY scope=tb_recovery_cross_variants.H seed=1417633351 draws=12519 state=3694fc4c
+RNG_SUMMARY scope=tb_recovery_cross_variants seed=1417633351 draws=284 state=85e5723f
+$finish called at time : 162834 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/regression/recovery_phase2_20261011/tb_recovery_cross_variants.sv" Line 57
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 916.430 ; gain = 0.000
+## close_vcd
+## puts "CAPTURE_DONE=recovery_cross_variants_seed_1417633351"
+CAPTURE_DONE=recovery_cross_variants_seed_1417633351
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 10:39:55 2026...

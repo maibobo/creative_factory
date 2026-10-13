@@ -1,3 +1,5 @@
+#ifndef IP_RTDS_DDR4_MIG_H_
+#define IP_RTDS_DDR4_MIG_H_
 
 // (c) Copyright 1995-2026 Xilinx, Inc. All rights reserved.
 // 
@@ -63,6 +65,7 @@
 #define DllExport
 #endif
 
+#include "rtds_ddr4_mig_sc.h"
 
 
 
@@ -534,3 +537,4 @@ private:
 
 };
 #endif // MTI_SYSTEMC
+#endif // IP_RTDS_DDR4_MIG_H_

@@ -5,9 +5,13 @@
 # Start of session at: Mon Sep 14 17:28:42 2026
 # Process ID: 73724
 # Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Command line: vivado.exe -mode batch -source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/scripts/repair_project_references.tcl -log C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/repair_project_references.log -nojournal
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/repair_project_references.log
 # Journal file: 
 #-----------------------------------------------------------
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/scripts/repair_project_references.tcl
 # set root [file normalize [file join [file dirname [info script]] ..]]
+# open_project [file join $root RTDS_test_DDR4_64bit.xpr]
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -33,20 +37,28 @@ open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:01:15 . Memory (MB): peak 
 # set f [file join $root {external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/imports/aurora_64b66b_0_ex/aurora_64b66b_0_ex.srcs/sources_1/new/aurora_64b66b_top.v}]
 # if {![file exists $f]} {error "Missing required source: $f"}
 # if {[llength [get_files -quiet [list $f]]] == 0} {add_files -norecurse -fileset sources_1 [list $f]}
+# set f [file join $root {rtl/rtds_1g_periodic_tx.v}]
 # if {![file exists $f]} {error "Missing required source: $f"}
 # if {[llength [get_files -quiet [list $f]]] == 0} {add_files -norecurse -fileset sources_1 [list $f]}
+# set f [file join $root {rtl/rtds_fpga_1g_init.v}]
 # if {![file exists $f]} {error "Missing required source: $f"}
 # if {[llength [get_files -quiet [list $f]]] == 0} {add_files -norecurse -fileset sources_1 [list $f]}
+# set f [file join $root {rtl/rtds_fpga_bit_cdc.v}]
 # if {![file exists $f]} {error "Missing required source: $f"}
 # if {[llength [get_files -quiet [list $f]]] == 0} {add_files -norecurse -fileset sources_1 [list $f]}
+# set f [file join $root {rtl/rtds_fpga_cfg_cdc.v}]
 # if {![file exists $f]} {error "Missing required source: $f"}
 # if {[llength [get_files -quiet [list $f]]] == 0} {add_files -norecurse -fileset sources_1 [list $f]}
+# set f [file join $root {rtl/rtds_fpga_count_cdc.v}]
 # if {![file exists $f]} {error "Missing required source: $f"}
 # if {[llength [get_files -quiet [list $f]]] == 0} {add_files -norecurse -fileset sources_1 [list $f]}
+# set f [file join $root {rtl/rtds_fpga_reset_sync.v}]
 # if {![file exists $f]} {error "Missing required source: $f"}
 # if {[llength [get_files -quiet [list $f]]] == 0} {add_files -norecurse -fileset sources_1 [list $f]}
+# set f [file join $root {rtl/rtds_rx_block_writer.v}]
 # if {![file exists $f]} {error "Missing required source: $f"}
 # if {[llength [get_files -quiet [list $f]]] == 0} {add_files -norecurse -fileset sources_1 [list $f]}
+# set f [file join $root {rtl/rtds_rx_frame_fifo.v}]
 # if {![file exists $f]} {error "Missing required source: $f"}
 # if {[llength [get_files -quiet [list $f]]] == 0} {add_files -norecurse -fileset sources_1 [list $f]}
 # set f [file join $root {external_snapshot/aurora1g_verified/rtl/aurora_8b10b_1p25g_axi_to_ll_exdes.v}]

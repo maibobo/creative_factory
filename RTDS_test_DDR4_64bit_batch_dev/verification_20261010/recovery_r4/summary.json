@@ -1,0 +1,9 @@
+﻿{
+    "case":  "ready_recovery",
+    "passed":  false,
+    "started":  "2026-10-10T17:08:16.6613631+08:00",
+    "finished":  "2026-10-10T17:08:48.7203312+08:00",
+    "log":  "ready_recovery.simulate.log",
+    "wdb":  "ready_recovery.wdb",
+    "vcd":  "ready_recovery.vcd"
+}

@@ -1,0 +1,11 @@
+{
+  "case": "backend_edge_recovery",
+  "seed": 1417633351,
+  "exit_code": 0,
+  "status": "EXPECTED_REPRODUCTION_OF_UNCLOSED_FAILURE",
+  "failure_lines": [
+    "Fatal: EDGE/R k=2 id=1 resp=0 last=0 data=0853e29274328a91",
+    "Time: 2178 ns  Iteration: 0  Process: /tb_backend_edge_recovery/read_word  Scope: tb_backend_edge_recovery.read_word  File: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/sources/regression/recovery_phase2_20261011/tb_backend_edge_recovery.sv Line: 23"
+  ],
+  "captured": "2026-10-12T12:53:32.383537"
+}

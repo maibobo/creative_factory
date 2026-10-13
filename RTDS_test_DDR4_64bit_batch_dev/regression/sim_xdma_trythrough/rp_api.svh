@@ -1,4 +1,5 @@
 // 快速验证用虚拟BAR API：本文件不实例化INFO_EXCH；真实寄存器读写由Root Port验证。
+// Root-Port/TPI abstraction used by tb_xdma_rtds_trythrough.
 // The behavioral backend implements the same operations as the intended
 // vendor XDMA TPI: BAR register access plus H2C/C2H memory transfers.
 

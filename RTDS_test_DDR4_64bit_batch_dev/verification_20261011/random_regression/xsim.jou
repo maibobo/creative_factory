@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Oct 11 22:13:36 2026
+# Process ID: 23580
+# Current directory: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression
+# Command line: xsim.exe -log board_diag.log -mode tcl -source {xsim.dir/board_cdc/xsim_script.tcl}
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/board_diag.log
+# Journal file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/board_cdc/xsim_script.tcl
+source board_diag.tcl

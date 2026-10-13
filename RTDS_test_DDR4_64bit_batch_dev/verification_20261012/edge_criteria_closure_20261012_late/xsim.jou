@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 18:42:50 2026
+# Process ID: 39832
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/edge_criteria_closure_20261012_late
+# Command line: xsim.exe -log backend_edge_recovery_seed_1417633351.record.simulate.log -mode tcl -source {xsim.dir/backend_edge_recovery/xsim_script.tcl}
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/edge_criteria_closure_20261012_late/backend_edge_recovery_seed_1417633351.record.simulate.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/edge_criteria_closure_20261012_late\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/backend_edge_recovery/xsim_script.tcl
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/edge_criteria_closure_20261012_late/backend_edge_recovery_seed_1417633351.tcl

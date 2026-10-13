@@ -1,0 +1,6 @@
+--sv_seed 750318462
+--testplusarg "SEED=750318462"
+--tclbatch run.tcl
+--onerror quit
+--onfinish stop
+--log real_mig_seed_750318462.simulate.log

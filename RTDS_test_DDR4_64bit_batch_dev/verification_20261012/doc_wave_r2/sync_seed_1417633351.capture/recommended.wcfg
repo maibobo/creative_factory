@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sync_seed_1417633351.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_rtds_sync" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/tb_rtds_sync/clk_250m" type="logic">
+      <obj_property name="ElementShortName">clk_250m</obj_property>
+      <obj_property name="ObjectShortName">clk_250m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_sync/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_sync/tick_toggle_2us" type="logic">
+      <obj_property name="ElementShortName">tick_toggle_2us</obj_property>
+      <obj_property name="ObjectShortName">tick_toggle_2us</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rtds_sync/cpu_sync_50us" type="logic">
+      <obj_property name="ElementShortName">cpu_sync_50us</obj_property>
+      <obj_property name="ObjectShortName">cpu_sync_50us</obj_property>
+   </wvobject>
+</wave_config>

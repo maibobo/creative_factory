@@ -1,0 +1,7 @@
+--sv_seed 360207181
+--testplusarg "SEED=360207181"
+--tclbatch "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/doc_wave_r1/recovery_cross_variants_seed_360207181.tcl"
+--onerror quit
+--onfinish stop
+--wdb recovery_cross_variants_seed_360207181.wdb
+--log recovery_cross_variants_seed_360207181.simulate.log

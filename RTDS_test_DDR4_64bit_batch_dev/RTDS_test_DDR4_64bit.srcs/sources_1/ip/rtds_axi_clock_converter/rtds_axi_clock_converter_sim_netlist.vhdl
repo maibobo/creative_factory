@@ -4,6 +4,8 @@
 -- Date        : Wed Sep 16 17:52:52 2026
 -- Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
+--               c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/ip/rtds_axi_clock_converter/rtds_axi_clock_converter_sim_netlist.vhdl
+-- Design      : rtds_axi_clock_converter
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xcku040-ffva1156-2-i

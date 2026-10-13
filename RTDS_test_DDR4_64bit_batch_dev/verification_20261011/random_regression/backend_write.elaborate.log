@@ -1,0 +1,9 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx_2020_2/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -debug typical -O3 -mt off -L xpm -L unisims_ver work.tb_backend_write work.glbl -s backend_write 
+Turned off multi-threading.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3535] module instantiation of 'rtds_ddr4_backend(TIMEOUT_CYCLES=64)' is not allowed in interface 'rtds_backend_test_if' [F:/RTDS_test_DDR4_64bit_batch_dev/regression/recovery_phase2_20261011/rtds_backend_test_if.sv:17]
+WARNING: [VRFC 10-3645] port 'c0_ddr4_act_n' remains unconnected for this instance [F:/RTDS_test_DDR4_64bit_batch_dev/regression/recovery_phase2_20261011/rtds_backend_test_if.sv:17]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

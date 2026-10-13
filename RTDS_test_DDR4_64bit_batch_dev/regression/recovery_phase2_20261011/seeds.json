@@ -1,0 +1,9 @@
+{
+  "seeds": [
+    1417633351,
+    750318462,
+    360207181
+  ],
+  "generation": "Python secrets.SystemRandom，记录后可复现",
+  "runs_per_case": 3
+}

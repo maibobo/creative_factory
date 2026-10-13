@@ -1,0 +1,5 @@
+--testplusarg "SEED=1417633351"
+--tclbatch fast_diagnostic.tcl
+--log fast_diagnostic.simulate.log
+--onerror quit
+--onfinish stop

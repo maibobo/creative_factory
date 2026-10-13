@@ -47,7 +47,9 @@
 // DO NOT MODIFY THIS FILE.
 
 
+#include "rtds_axi_clock_converter_sc.h"
 
+#include "rtds_axi_clock_converter.h"
 
 #include "axi_clock_converter.h"
 

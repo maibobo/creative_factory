@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 09:15:15 2026
+# Process ID: 15784
+# Current directory: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_final
+# Command line: xsim.exe -log F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_resume_20261012/board_cdc_seed_360207181.simulate.log -mode tcl -source {xsim.dir/board_cdc/xsim_script.tcl}
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_resume_20261012/board_cdc_seed_360207181.simulate.log
+# Journal file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_final\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/board_cdc/xsim_script.tcl
+source F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_resume_20261012/board_cdc_seed_360207181.tcl

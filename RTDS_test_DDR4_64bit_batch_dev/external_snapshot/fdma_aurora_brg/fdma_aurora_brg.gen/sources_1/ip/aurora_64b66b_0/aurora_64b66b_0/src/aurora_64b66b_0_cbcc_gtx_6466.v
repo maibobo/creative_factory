@@ -463,6 +463,7 @@
      end
 
      // Reset link if CC is not detected after 10000 clk cycles
+     // This circuit for auto-recovery of the link during hot-plug scenario
      // Incoming control blocks are decoded to detmine CC reception
      // valid_btf_detect is used as the reset for the count_for_reset_r, which would reset the link
      // after the defined time. link_reset_0 is used to reset the GT & link_reset_1 is used to reset

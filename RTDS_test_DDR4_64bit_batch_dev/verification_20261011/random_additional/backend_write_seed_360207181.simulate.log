@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Oct 11 21:33:08 2026
+# Process ID: 24908
+# Current directory: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_additional
+# Command line: xsim.exe -log backend_write_seed_360207181.simulate.log -mode tcl -source {xsim.dir/backend_write/xsim_script.tcl}
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_additional/backend_write_seed_360207181.simulate.log
+# Journal file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_additional\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/backend_write/xsim_script.tcl
+# xsim {backend_write} -testplusarg SEED=360207181 -autoloadwcfg -tclbatch {F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_additional/backend_write_seed_360207181.tcl} -onfinish stop -onerror quit
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_additional/backend_write_seed_360207181.tcl
+## run all
+RNG_INIT scope=tb_backend_write.T.phase2_pick seed=360207181 algorithm=xorshift32
+RNG_DRAW scope=tb_backend_write.T.phase2_pick n=1 value=1031840636 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_write.T.phase2_pick n=2 value=337200687 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_write.T.phase2_pick n=3 value=6 lo=2 hi=8
+RNG_DRAW scope=tb_backend_write.T.phase2_pick n=4 value=41 lo=8 hi=80
+RNG_DRAW scope=tb_backend_write.T.phase2_pick n=5 value=1404764510 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_write.T.phase2_pick n=6 value=1099680278 lo=1 hi=2147483647
+RNG_DRAW scope=tb_backend_write.T.phase2_pick n=7 value=4 lo=0 hi=5
+RNG_DRAW scope=tb_backend_write.T.phase2_pick n=8 value=49 lo=8 hi=80
+WRITE_RECOVERY_CHECK n=1 stage=0 id=0 response=0 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=1 stage=1 id=8 response=2 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=1 stage=2 id=21 response=2 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=1 stage=3 id=27 response=0 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=1 stage=4 id=31 response=0 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=2 stage=0 id=0 response=0 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=2 stage=1 id=26 response=2 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=2 stage=2 id=17 response=2 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=2 stage=3 id=25 response=0 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=2 stage=4 id=31 response=0 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=256 stage=0 id=0 response=0 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=256 stage=1 id=27 response=2 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=256 stage=2 id=28 response=2 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=256 stage=3 id=24 response=0 reset_free_fresh=1
+WRITE_RECOVERY_CHECK n=256 stage=4 id=31 response=0 reset_free_fresh=1
+BACKEND_PARALLEL_CHECK read_id=2 write_id=17 beats=8
+TEST PASS tb_backend_write checks=16
+RNG_SUMMARY scope=tb_backend_write.T seed=360207181 draws=4014 state=c4b735f7
+$finish called at time : 31864 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/recovery_phase2_20261011/backend_recovery_runner.sv" Line 142
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 21:33:13 2026...

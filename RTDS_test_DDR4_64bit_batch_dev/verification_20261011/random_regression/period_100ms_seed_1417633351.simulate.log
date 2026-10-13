@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Oct 11 21:33:52 2026
+# Process ID: 21508
+# Current directory: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression
+# Command line: xsim.exe -log period_100ms_seed_1417633351.simulate.log -mode tcl -source {xsim.dir/period_100ms/xsim_script.tcl}
+# Log file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/period_100ms_seed_1417633351.simulate.log
+# Journal file: F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/period_100ms/xsim_script.tcl
+# xsim {period_100ms} -testplusarg SEED=1417633351 -autoloadwcfg -tclbatch {F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/period_100ms_seed_1417633351.tcl} -onfinish stop -onerror quit
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_regression/period_100ms_seed_1417633351.tcl
+## run all
+RNG_INIT scope=tb_period_100ms.phase2_pick seed=1417633351 algorithm=xorshift32
+RNG_DRAW scope=tb_period_100ms.phase2_pick n=1 value=166008068 lo=1 hi=2147483647
+RNG_DRAW scope=tb_period_100ms.phase2_pick n=2 value=1138832515 lo=1 hi=2147483647
+RNG_DRAW scope=tb_period_100ms.phase2_pick n=3 value=1264427290 lo=1 hi=2147483647
+RNG_DRAW scope=tb_period_100ms.phase2_pick n=4 value=278997607 lo=1 hi=2147483647
+RNG_DRAW scope=tb_period_100ms.phase2_pick n=5 value=139715218 lo=1 hi=2147483647
+PERIOD_TICK n=1 time_ns=100000030 ready=0
+RNG_DRAW scope=tb_period_100ms.phase2_pick n=6 value=11 lo=3 hi=12
+WRITE_RESPONSE n=1 time_ns=100000226 addr=0000000000100000 strb=ff
+PERIOD_TICK n=2 time_ns=200000030 ready=0
+BLOCK_READABLE seq=0 time_ns=200000146 length=8
+PERIOD_TICK n=3 time_ns=300000030 ready=0
+RNG_DRAW scope=tb_period_100ms.phase2_pick n=7 value=3 lo=3 hi=12
+WRITE_RESPONSE n=2 time_ns=300000162 addr=0000000000140000 strb=ff
+BLOCK_READABLE seq=1 time_ns=300000266 length=8
+PERIOD_TICK n=4 time_ns=400000030 ready=0
+RNG_DRAW scope=tb_period_100ms.phase2_pick n=8 value=4 lo=3 hi=12
+WRITE_RESPONSE n=3 time_ns=400000166 addr=0000000000180000 strb=0f
+BLOCK_READABLE seq=2 time_ns=400000266 length=4
+TEST PASS tb_period_100ms ticks=4 intervals=3 writes=3 blocks=3 PERIOD_CYCLES=25000000 clk_ns=4
+RNG_SUMMARY scope=tb_period_100ms seed=1417633351 draws=8 state=a40bca3b
+$finish called at time : 400000394 ns : File "F:/RTDS_test_DDR4_64bit_batch_dev/regression/new_cases_20261010/tb_period_100ms.sv" Line 88
+run: Time (s): cpu = 00:00:03 ; elapsed = 00:12:42 . Memory (MB): peak = 924.352 ; gain = 0.027
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 11 21:47:19 2026...

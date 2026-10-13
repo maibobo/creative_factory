@@ -1,0 +1,6 @@
+--sv_seed 750318462
+--testplusarg "SEED=750318462"
+--tclbatch "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_resume_20261012/backend_write_seed_750318462.tcl"
+--onerror quit
+--onfinish stop
+--log "F:/RTDS_test_DDR4_64bit_batch_dev/verification_20261011/random_resume_20261012/backend_write_seed_750318462.simulate.log"

@@ -1,0 +1,26 @@
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/rx_fifo/xsim_script.tcl
+# xsim {rx_fifo} -testplusarg SEED=750318462 -autoloadwcfg -tclbatch {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/rx_fifo_seed_750318462.tcl} -onfinish stop -onerror quit -sv_seed 750318462
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/rx_fifo_seed_750318462.tcl
+## run all
+RNG_INIT scope=tb_rtds_rx_fifo.phase2_pick seed=750318462 algorithm=xorshift32
+RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=1 value=681357226 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=2 value=274698974 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=3 value=578836572 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=4 value=419045305 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=5 value=984028639 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=6 value=1535632369 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=7 value=1489736109 lo=0 hi=2147483647
+RNG_DRAW scope=tb_rtds_rx_fifo.phase2_pick n=8 value=1966784146 lo=0 hi=2147483647
+TEST PASS tb_rtds_rx_fifo V2.01
+RNG_SUMMARY scope=tb_rtds_rx_fifo seed=750318462 draws=50 state=7b9e7874
+$finish called at time : 802 ns : File "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261012/post_timing_quick_20261012/sources/regression/batch_1g/tb_rtds_rx_fifo.sv" Line 80
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct 12 12:52:00 2026...

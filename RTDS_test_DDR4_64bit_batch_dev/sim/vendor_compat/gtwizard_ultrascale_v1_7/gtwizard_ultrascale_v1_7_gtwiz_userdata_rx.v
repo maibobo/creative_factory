@@ -205,6 +205,7 @@ module gtwizard_ultrascale_v1_7_9_gtwiz_userdata_rx #(
 
         default:
           begin : gen_default
+            // The default case is a configuration error scenario should never be exercised
             assign gtwiz_userdata_rx_out = {P_TOTAL_NUMBER_OF_CHANNELS*P_RX_USER_DATA_WIDTH{1'b1}};
           end
       endcase

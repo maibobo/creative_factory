@@ -1,0 +1,105 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 12 10:47:29 2026
+# Process ID: 24092
+# Current directory: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/timing_fix_20261012
+# Command line: vivado.exe -mode batch -source C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\probe_route.tcl -log C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\probe_vivado.log -journal C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\probe_vivado.jou
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/reports/timing_fix_20261012/probe_vivado.log
+# Journal file: C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\probe_vivado.jou
+#-----------------------------------------------------------
+source {C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\reports\timing_fix_20261012\probe_route.tcl}
+# set root C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev
+# set out $root/reports/timing_fix_20261012/probe
+# file mkdir $out
+# set_param general.maxThreads 4
+# open_checkpoint $root/RTDS_test_DDR4_64bit.runs/impl_1/TOP_routed.dcp
+Command: open_checkpoint C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/impl_1/TOP_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1110.043 ; gain = 0.000
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1401.152 ; gain = 5.043
+INFO: [Netlist 29-17] Analyzing 2023 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for DRIVE but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'u_pcie/u_rtds_ddr4_backend/u_ddr4_mig/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2112.250 ; gain = 84.340
+Restored from archive | CPU: 11.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2112.250 ; gain = 84.340
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2283.316 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 902 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 244 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT(x2)): 8 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 72 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 31 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 1 instance 
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 20 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 204 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 257 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 10 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+  SRLC32E => SRL16E: 41 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2020.2 (64-bit) build 3064766
+open_checkpoint: Time (s): cpu = 00:00:47 ; elapsed = 00:01:03 . Memory (MB): peak = 2287.305 ; gain = 1177.262
+# set pipes [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_(s|m)_reset_pipe_reg\[[0-9]+\]$}]
+# set ready [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_ready_sync_reg\[[01]\]$}]
+# set clrs [get_pins -of_objects [concat $pipes $ready] -filter {REF_PIN_NAME == CLR}]
+# set d0 [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_ready_sync_reg\[0\]$}] -filter {REF_PIN_NAME == D}]
+# if {[llength $pipes] != 32 || [llength $ready] != 2 || [llength $clrs] != 34 || [llength $d0] != 1} {error "CDC_TARGET_COUNT pipes=[llength $pipes] ready=[llength $ready] clr=[llength $clrs] d0=[llength $d0]"}
+# foreach c [concat $pipes $ready] {if {[get_property ASYNC_REG $c] != 1} {error "ASYNC_REG missing: $c"}}
+# set f [open $out/cdc_targets.txt w]
+# puts $f "reset_pipeline_cells=32 ready_sync_cells=2 asynchronous_clear_pins=34 first_stage_D_pins=1"
+# puts $f "CLR targets: $clrs"
+# puts $f "first D: $d0"
+# close $f
+# read_xdc $root/rtl/rtds_ddr4_recovery_cdc.xdc
+Parsing XDC File [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_ddr4_recovery_cdc.xdc]
+Finished Parsing XDC File [C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/rtl/rtds_ddr4_recovery_cdc.xdc]
+# report_timing_summary -delay_type min_max -report_unconstrained -max_paths 10 -file $out/after_cdc_timing.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+WARNING: [Timing 38-453] Line(s) in the report have been truncated to keep line length below 5000 characters.
+report_timing_summary: Time (s): cpu = 00:00:36 ; elapsed = 00:00:15 . Memory (MB): peak = 2556.887 ; gain = 269.582
+# report_timing -delay_type max -slack_lesser_than 0 -max_paths 50 -file $out/remaining_setup.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 50 -nworst 1 -delay_type max -sort_by slack.
+# report_exceptions -coverage -file $out/exceptions_coverage.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+report_exceptions: Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 2565.996 ; gain = 9.070
+# puts "CDC_CONSTRAINTS_APPLIED"
+CDC_CONSTRAINTS_APPLIED
+# phys_opt_design -directive AggressiveExplore
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
+WARNING: [Common 17-348] Failed to get the license for feature 'Implementation' and/or device 'xcku040'. Explanation: Cannot connect to a license server running the xilinxd licensing daemon at the specified port.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
+0 Infos, 1 Warnings, 0 Critical Warnings and 1 Errors encountered.
+phys_opt_design failed
+ERROR: [Common 17-345] A valid license was not found for feature 'Implementation' and/or device 'xcku040'. Please run the Vivado License Manager for assistance in determining
+which features and devices are licensed for your system.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". If you are using a license server, verify that the license server is up and running a version of the xilinx daemon that is compatible with the version of Xilinx software that you are using. Please note that Vivado 2017.3 and later requires upgrading your license server tools to the Flex 11.14.1 tools. Please confirm with your license admin that the correct version of the license server tools are installed.
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 12 10:49:17 2026...

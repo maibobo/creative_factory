@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Oct 10 17:19:08 2026
+# Process ID: 24252
+# Current directory: C:/Users/vivadoagent.DESKTOP-H0AB0MD
+# Command line: vivado.exe -mode batch -source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/scripts/build_new_wave_projects.tcl -log C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/build_new_wave_projects_r2.log -journal C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/build_new_wave_projects_r2.jou
+# Log file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/build_new_wave_projects_r2.log
+# Journal file: C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/verification_20261010/build_new_wave_projects_r2.jou
+#-----------------------------------------------------------
+source C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/scripts/build_new_wave_projects.tcl
+# set root {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev}
+# set folder {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g}
+# create_project -force wave_byte1_1g [file join $folder project] -part xcku040-ffva1156-2-e
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/project'
+# set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/rtl/rtds_1g_periodic_tx.v}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/rtl/rtds_fpga_1g_init.v}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/rtl/rtds_fpga_bit_cdc.v}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/rtl/rtds_fpga_cfg_cdc.v}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/rtl/rtds_fpga_count_cdc.v}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/rtl/rtds_fpga_reset_sync.v}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/rtl/rtds_rx_block_writer.v}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/rtl/rtds_rx_frame_fifo.v}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/rtl/rtds_sync_timebase.v}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/RTDS_test_DDR4_64bit.srcs/sources_1/new/INFO_EXCH.v}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/RTDS_test_DDR4_64bit.srcs/sources_1/new/CONV_DMA.v}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/RTDS_test_DDR4_64bit.srcs/sources_1/new/pcie_fdma_aurora_brg_adapter.v}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/rtl/ddr4/rtds_ddr4_backend.sv}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/rtl/ddr4/rtds_axi_ram_model.sv}]
+# add_files -norecurse [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/external_snapshot/fdma_aurora_brg/fdma_aurora_brg.srcs/sources_1 - loop_validate/new/fdma_aurora_brg_tx.v}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/batch_1g/rtds_1g_test_if.sv}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/batch_1g/rtds_axi_tail_test_if.sv}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/batch_1g/rtds_axi_test_if.sv}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/batch_1g/rtds_regs_test_if.sv}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/batch_1g/rtds_ring_test_if.sv}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/batch_1g/rtds_rx_fifo_test_if.sv}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/batch_1g/rtds_tx_test_if.sv}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/new_cases_20261010/rtds_real_harness.sv}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/new_cases_20261010/tb_byte1_1g.sv}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/new_cases_20261010/tb_period_100ms.sv}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/new_cases_20261010/tb_ready_recovery.sv}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/new_cases_20261010/tb_regs_multiblock.sv}]
+# add_files -fileset sim_1 [list {C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/evidence/local_wave_sessions/byte1_1g/sources/regression/new_cases_20261010/tb_tx_boundaries.sv}]
+# set_property top tb_byte1_1g [get_filesets sim_1]
+# open_wave_database [file join $folder byte1_1g.wdb]
+# create_wave_config
+# set found 0
+# foreach path {{/tb_byte1_1g/duty} {/tb_byte1_1g/voltage} {/tb_byte1_1g/beat} {/tb_byte1_1g/frames} {/tb_byte1_1g/expected_cfg} {/tb_byte1_1g/expected_data} {/tb_byte1_1g/H/clk} {/tb_byte1_1g/H/uclk} {/tb_byte1_1g/H/gclk} {/tb_byte1_1g/H/rst_n} {/tb_byte1_1g/H/pcie_up} {/tb_byte1_1g/H/channel_up} {/tb_byte1_1g/H/lane_up} {/tb_byte1_1g/H/ddr_reset_n} {/tb_byte1_1g/H/tx_ready} {/tb_byte1_1g/H/rx_data} {/tb_byte1_1g/H/rx_valid} {/tb_byte1_1g/H/rx_sof} {/tb_byte1_1g/H/rx_eof} {/tb_byte1_1g/H/rx_ready} {/tb_byte1_1g/H/tx_data} {/tb_byte1_1g/H/tx_sof} {/tb_byte1_1g/H/tx_eof} {/tb_byte1_1g/H/tx_valid} {/tb_byte1_1g/H/tx_rem} {/tb_byte1_1g/H/fdma_raddr} {/tb_byte1_1g/H/fdma_rdata} {/tb_byte1_1g/H/fdma_waddr} {/tb_byte1_1g/H/fdma_wdata} {/tb_byte1_1g/H/fdma_rsize} {/tb_byte1_1g/H/fdma_wsize} {/tb_byte1_1g/H/fdma_wstrb} {/tb_byte1_1g/H/fdma_rareq} {/tb_byte1_1g/H/fdma_rbusy} {/tb_byte1_1g/H/fdma_rvalid} {/tb_byte1_1g/H/fdma_rready} {/tb_byte1_1g/H/fdma_wareq} {/tb_byte1_1g/H/fdma_wbusy} {/tb_byte1_1g/H/fdma_wvalid} {/tb_byte1_1g/H/fdma_waccept} {/tb_byte1_1g/H/fdma_wdone} {/tb_byte1_1g/H/fdma_werror} {/tb_byte1_1g/H/head_addr} {/tb_byte1_1g/H/head_len} {/tb_byte1_1g/H/head_seq} {/tb_byte1_1g/H/ready_blocks} {/tb_byte1_1g/H/dropped_words} {/tb_byte1_1g/H/int_state} {/tb_byte1_1g/H/rec_state} {/tb_byte1_1g/H/irq} {/tb_byte1_1g/H/overflow} {/tb_byte1_1g/H/overrun} {/tb_byte1_1g/H/underflow} {/tb_byte1_1g/H/fdma_timeout} {/tb_byte1_1g/H/length_error} {/tb_byte1_1g/H/link_error} {/tb_byte1_1g/H/rx_pending} {/tb_byte1_1g/H/tx_state} {/tb_byte1_1g/H/rx_state} {/tb_byte1_1g/H/fifo_afull} {/tb_byte1_1g/H/fifo_full} {/tb_byte1_1g/H/done_event} {/tb_byte1_1g/H/done_resp} {/tb_byte1_1g/H/cfg_byte} {/tb_byte1_1g/H/cfg_valid} {/tb_byte1_1g/H/ddr_ready} {/tb_byte1_1g/H/calib} {/tb_byte1_1g/H/response_error} {/tb_byte1_1g/H/ddr_timeout} {/tb_byte1_1g/H/ddr_status} {/tb_byte1_1g/H/tick_2us} {/tb_byte1_1g/H/gpio_50us} {/tb_byte1_1g/H/gdata} {/tb_byte1_1g/H/grem} {/tb_byte1_1g/H/gsof} {/tb_byte1_1g/H/geof} {/tb_byte1_1g/H/gvalid} {/tb_byte1_1g/H/configured} {/tb_byte1_1g/H/configured_id} {/tb_byte1_1g/H/skipped} {/tb_byte1_1g/H/fault_read} {/tb_byte1_1g/H/fault_write} {/tb_byte1_1g/H/hold_r} {/tb_byte1_1g/H/hold_b} {/tb_byte1_1g/H/cpu_read_mode} {/tb_byte1_1g/H/cpu_arvalid} {/tb_byte1_1g/H/cpu_rready} {/tb_byte1_1g/H/cpu_araddr} {/tb_byte1_1g/H/cpu_arready} {/tb_byte1_1g/H/cpu_rvalid} {/tb_byte1_1g/H/cpu_rlast} {/tb_byte1_1g/H/cpu_rdata} {/tb_byte1_1g/H/cpu_rresp} {/tb_byte1_1g/H/a_awid} {/tb_byte1_1g/H/a_awaddr} {/tb_byte1_1g/H/a_awlen} {/tb_byte1_1g/H/a_awsize} {/tb_byte1_1g/H/a_awburst} {/tb_byte1_1g/H/a_awlock} {/tb_byte1_1g/H/a_awcache} {/tb_byte1_1g/H/a_awprot} {/tb_byte1_1g/H/a_awqos} {/tb_byte1_1g/H/a_awvalid} {/tb_byte1_1g/H/a_awready} {/tb_byte1_1g/H/a_wid} {/tb_byte1_1g/H/a_wdata} {/tb_byte1_1g/H/a_wstrb} {/tb_byte1_1g/H/a_wlast} {/tb_byte1_1g/H/a_wvalid} {/tb_byte1_1g/H/a_wready} {/tb_byte1_1g/H/a_bid} {/tb_byte1_1g/H/a_bresp} {/tb_byte1_1g/H/a_bvalid} {/tb_byte1_1g/H/a_bready} {/tb_byte1_1g/H/a_arid} {/tb_byte1_1g/H/a_araddr} {/tb_byte1_1g/H/a_arlen} {/tb_byte1_1g/H/a_arsize} {/tb_byte1_1g/H/a_arburst} {/tb_byte1_1g/H/a_arlock} {/tb_byte1_1g/H/a_arcache} {/tb_byte1_1g/H/a_arprot} {/tb_byte1_1g/H/a_arqos} {/tb_byte1_1g/H/a_arvalid} {/tb_byte1_1g/H/a_arready} {/tb_byte1_1g/H/a_rid} {/tb_byte1_1g/H/a_rdata} {/tb_byte1_1g/H/a_rresp} {/tb_byte1_1g/H/a_rlast} {/tb_byte1_1g/H/a_rvalid} {/tb_byte1_1g/H/a_rready} {/tb_byte1_1g/H/b_arready} {/tb_byte1_1g/H/b_rvalid} {/tb_byte1_1g/H/b_rlast} {/tb_byte1_1g/H/b_bvalid} {/tb_byte1_1g/H/b_rdata} {/tb_byte1_1g/H/b_rresp} {/tb_byte1_1g/H/b_bresp} {/tb_byte1_1g/H/b_bid} {/tb_byte1_1g/H/b_rid} {/tb_byte1_1g/H/read_beats} {/tb_byte1_1g/H/read_requests} {/tb_byte1_1g/H/tx_beats} {/tb_byte1_1g/H/tx_frames} {/tb_byte1_1g/H/cfg_pulses} {/tb_byte1_1g/H/done_events} {/tb_byte1_1g/H/acks} {/tb_byte1_1g/H/check_tx} {/tb_byte1_1g/H/expected_tx_base} {/tb_byte1_1g/H/expected_tx_len} {/tb_byte1_1g/H/expected_seed} {/tb_byte1_1g/H/expected_byte1} {/tb_byte1_1g/H/regbus/clk} {/tb_byte1_1g/H/regbus/rst_n} {/tb_byte1_1g/H/regbus/done} {/tb_byte1_1g/H/regbus/awaddr} {/tb_byte1_1g/H/regbus/wdata} {/tb_byte1_1g/H/regbus/araddr} {/tb_byte1_1g/H/regbus/awvalid} {/tb_byte1_1g/H/regbus/wvalid} {/tb_byte1_1g/H/regbus/arvalid} {/tb_byte1_1g/H/regbus/bready} {/tb_byte1_1g/H/regbus/rready} {/tb_byte1_1g/H/regbus/wstrb} {/tb_byte1_1g/H/regbus/awready} {/tb_byte1_1g/H/regbus/wready} {/tb_byte1_1g/H/regbus/bvalid} {/tb_byte1_1g/H/regbus/arready} {/tb_byte1_1g/H/regbus/rvalid} {/tb_byte1_1g/H/regbus/rdata} {/tb_byte1_1g/H/regbus/command_addr} {/tb_byte1_1g/H/regbus/command_len} {/tb_byte1_1g/H/regbus/bresp} {/tb_byte1_1g/H/regbus/rresp} {/tb_byte1_1g/H/regbus/start} {/tb_byte1_1g/H/regbus/ack} {/tb_byte1_1g/H/regbus/clear_irq} {/tb_byte1_1g/H/regbus/clear_inter} {/tb_byte1_1g/Block25_538/id}} { set objects [get_objects -quiet $path]; if {[llength $objects]>0} {add_wave $objects; incr found} }
+# if {$found<10} {error "insufficient wave objects"}
+# save_wave_config [file join $folder byte1_1g.wcfg]
+# puts "NATIVE_WAVE_BUILT byte1_1g objects=$found"
+NATIVE_WAVE_BUILT byte1_1g objects=179
+# close_wave_database
+invalid command name "close_wave_database"
+    while executing
+"close_wave_database"
+    (file "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/scripts/build_new_wave_projects.tcl" line 41)
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 10 17:19:11 2026...

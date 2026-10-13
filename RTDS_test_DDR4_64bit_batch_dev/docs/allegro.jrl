@@ -1,0 +1,44 @@
+\t (00:00:04) allegro 16.6-2015 S066 (v16-6-112FJ) Windows 32
+\t (00:00:04)     Journal start - Mon Sep 21 18:50:12 2026
+\t (00:00:04)         Host=DESKTOP-H0AB0MD User=Lenovo Pid=24928 CPUs=32
+\t (00:00:04) CmdLine= C:\Tool\Cadence\Cadence\Cadence_SPB_16.6-2015\tools\pcb\bin\allegro.exe
+\t (00:00:04) 
+\t (00:00:07) Starting new design...
+\i (00:00:07) trapsize 647
+\i (00:00:07) trapsize 635
+\i (00:00:07) trapsize 649
+\i (00:00:07) trapsize 573
+\i (00:00:07) trapsize 1028
+\i (00:00:07) generaledit 
+\i (00:00:09) zoom out 1 
+\i (00:00:09) setwindow pcb
+\i (00:00:09) zoom out 31183.8 14533.2
+\i (00:00:09) trapsize 1028
+\i (00:00:09) zoom out 1 
+\i (00:00:09) setwindow pcb
+\i (00:00:09) zoom out 31183.8 14409.9
+\i (00:00:09) trapsize 1028
+\i (00:00:09) zoom out 1 
+\i (00:00:09) setwindow pcb
+\i (00:00:09) zoom out 31183.8 14348.2
+\i (00:00:09) trapsize 1028
+\i (00:00:09) zoom out 1 
+\i (00:00:09) setwindow pcb
+\i (00:00:09) zoom out 31183.8 14327.7
+\i (00:00:09) trapsize 1028
+\i (00:00:09) zoom out 1 
+\i (00:00:09) setwindow pcb
+\i (00:00:09) zoom out 31183.8 14327.7
+\i (00:00:09) trapsize 1028
+\i (00:00:09) zoom out 1 
+\i (00:00:09) setwindow pcb
+\i (00:00:09) zoom out 31183.8 14327.7
+\i (00:00:09) trapsize 1028
+\i (00:00:09) drag_start grid 28408.7 13608.2
+\i (00:00:09) drag_stop 30197.1 10586.5
+\t (00:00:10) last pick:  30937.1 9414.7
+\w (00:00:10) WARNING(SPMHUT-40): Pick is outside the extent of the drawing ... pick again.
+\i (00:00:10) drag_start grid 31492.1 7934.7
+\i (00:00:10) drag_stop 19754.5 13505.4
+\i (00:00:11) exit 
+\t (00:00:11)     Journal end - Mon Sep 21 18:50:19 2026

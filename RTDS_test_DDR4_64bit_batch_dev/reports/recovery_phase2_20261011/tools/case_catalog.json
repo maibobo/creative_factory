@@ -1,0 +1,266 @@
+[
+  {
+    "id": "TC-F01",
+    "name": "快速模型枚举与容量",
+    "level": "行为模型集成",
+    "files": [
+      "tb_xdma_rtds_trythrough.sv",
+      "rp_api.svh",
+      "rtds_test_pkg.sv",
+      "xdma_rp_backend.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜行为模型集成；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-F02",
+    "name": "越窗下行命令拒绝",
+    "level": "行为模型集成",
+    "files": [
+      "tb_xdma_rtds_trythrough.sv",
+      "rp_api.svh",
+      "rtds_test_pkg.sv",
+      "xdma_rp_backend.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜行为模型集成；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-F03",
+    "name": "16 Byte H2C至10G",
+    "level": "行为模型集成",
+    "files": [
+      "tb_xdma_rtds_trythrough.sv",
+      "rp_api.svh",
+      "rtds_test_pkg.sv",
+      "xdma_rp_backend.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜行为模型集成；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-F04",
+    "name": "1KiB批量与双层反压",
+    "level": "行为模型集成",
+    "files": [
+      "tb_xdma_rtds_trythrough.sv",
+      "rp_api.svh",
+      "rtds_test_pkg.sv",
+      "xdma_rp_backend.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜行为模型集成；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-F05",
+    "name": "32KiB批量及并发上行",
+    "level": "行为模型集成",
+    "files": [
+      "tb_xdma_rtds_trythrough.sv",
+      "rp_api.svh",
+      "rtds_test_pkg.sv",
+      "xdma_rp_backend.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜行为模型集成；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-F06",
+    "name": "模型上行通知与C2H读清",
+    "level": "行为模型集成",
+    "files": [
+      "tb_xdma_rtds_trythrough.sv",
+      "rp_api.svh",
+      "rtds_test_pkg.sv",
+      "xdma_rp_backend.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜行为模型集成；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-F07",
+    "name": "24块三轮读取确认",
+    "level": "行为模型集成",
+    "files": [
+      "tb_xdma_rtds_trythrough.sv",
+      "rp_api.svh",
+      "rtds_test_pkg.sv",
+      "xdma_rp_backend.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜行为模型集成；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-F08",
+    "name": "快速集成结束记分板汇总",
+    "level": "行为模型集成",
+    "files": [
+      "tb_xdma_rtds_trythrough.sv",
+      "rp_api.svh",
+      "rtds_test_pkg.sv",
+      "xdma_rp_backend.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜行为模型集成；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-M01",
+    "name": "1G十组四拍发送与恢复",
+    "level": "模块测试",
+    "files": [
+      "tb_rtds_1g.sv",
+      "rtds_1g_test_if.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜模块测试；本机当前XPR未重跑；活动1G版本不符"
+  },
+  {
+    "id": "TC-M02",
+    "name": "上行拼接、环形队列与B响应",
+    "level": "模块测试（缩时）",
+    "files": [
+      "tb_rtds_ring.sv",
+      "rtds_ring_test_if.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜模块测试（缩时）；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-M03",
+    "name": "CONV_DMA独立AXI通道与地址",
+    "level": "模块测试",
+    "files": [
+      "tb_rtds_axi.sv",
+      "rtds_axi_test_if.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜模块测试；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-M04",
+    "name": "AXI奇数尾字保留高半",
+    "level": "模块测试",
+    "files": [
+      "tb_rtds_axi_tail.sv",
+      "rtds_axi_tail_test_if.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜模块测试；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-M05",
+    "name": "真实INFO_EXCH命令及只读值",
+    "level": "模块测试",
+    "files": [
+      "tb_rtds_regs.sv",
+      "rtds_regs_test_if.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜模块测试；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-M06",
+    "name": "RX FIFO丢字与排空恢复",
+    "level": "模块测试（减小容量）",
+    "files": [
+      "tb_rtds_rx_fifo.sv",
+      "rtds_rx_fifo_test_if.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜模块测试（减小容量）；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-M07",
+    "name": "TX单帧、300帧与近满反压",
+    "level": "模块测试",
+    "files": [
+      "tb_rtds_tx.sv",
+      "rtds_tx_test_if.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜模块测试；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-R01",
+    "name": "真实Root Port与XDMA历史结果",
+    "level": "真实XDMA仿真（历史）",
+    "files": [],
+    "result": "历史功能通过、脚本门禁失败｜2026-09-23｜真实XDMA；当前未重跑"
+  },
+  {
+    "id": "TC-M08",
+    "name": "同源2µs与50µs节拍",
+    "level": "模块测试",
+    "files": [
+      "tb_rtds_sync.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜模块测试；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-F09",
+    "name": "Byte1到实际1G完整链路",
+    "level": "行为模型集成",
+    "files": [
+      "tb_byte1_1g.sv",
+      "rtds_real_harness.sv",
+      "rtds_regs_test_if.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜行为模型集成；本机当前XPR未重跑；活动1G版本不符"
+  },
+  {
+    "id": "TC-F10",
+    "name": "下行命令完整边界",
+    "level": "行为模型集成",
+    "files": [
+      "tb_tx_boundaries.sv",
+      "rtds_real_harness.sv",
+      "rtds_regs_test_if.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜行为模型集成；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-F11",
+    "name": "DDR与链路就绪、中断及恢复",
+    "level": "行为模型集成",
+    "files": [
+      "tb_ready_recovery.sv",
+      "rtds_real_harness.sv",
+      "rtds_regs_test_if.sv"
+    ],
+    "result": "归档失败：6项恢复检查｜2026-10-10｜行为模型集成；2026-10-11已修改代码，未重跑，待验证"
+  },
+  {
+    "id": "TC-F12",
+    "name": "真实寄存器五块逐读确认",
+    "level": "行为模型集成",
+    "files": [
+      "tb_regs_multiblock.sv",
+      "rtds_real_harness.sv",
+      "rtds_regs_test_if.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜行为模型集成；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-M09",
+    "name": "生产参数100ms周期及可读边界",
+    "level": "模块生产参数",
+    "files": [
+      "tb_period_100ms.sv",
+      "rtds_ring_test_if.sv"
+    ],
+    "result": "归档通过｜2026-10-10｜模块生产参数；本机当前XPR未重跑"
+  },
+  {
+    "id": "TC-F13",
+    "name": "DDR读事务中断与响应保持",
+    "level": "模块＋行为模型集成",
+    "files": [],
+    "result": "未执行｜2026-10-11｜第一阶段仅修改代码与规划；待第二阶段验证"
+  },
+  {
+    "id": "TC-F14",
+    "name": "DDR写事务中断与错误提交边界",
+    "level": "模块＋行为模型集成",
+    "files": [],
+    "result": "未执行｜2026-10-11｜第一阶段仅修改代码与规划；待第二阶段验证"
+  },
+  {
+    "id": "TC-F15",
+    "name": "短断链与迟到事件跨任务隔离",
+    "level": "行为模型集成",
+    "files": [],
+    "result": "未执行｜2026-10-11｜第一阶段仅修改代码与规划；待第二阶段验证"
+  },
+  {
+    "id": "TC-F16",
+    "name": "真实共享AXI路径与MIG恢复",
+    "level": "真实IP集成／板级",
+    "files": [],
+    "result": "未执行｜2026-10-11｜第一阶段仅修改代码与规划；待第二阶段验证"
+  }
+]
