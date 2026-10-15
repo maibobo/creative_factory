@@ -1,0 +1,174 @@
+{
+  "version": "2.0.0-demo",
+  "execution_status": "not_run",
+  "lifecycle": "candidate",
+  "display_review": "pending_review",
+  "model_config": null,
+  "toolchain_config": null,
+  "approved_by": null,
+  "approved_at": null,
+  "run_ids": [],
+  "results": null,
+  "id": "TASK-HO-001",
+  "type": "end_to_end_design_task",
+  "causality": "planned_holdout",
+  "profile": "fpga_project",
+  "source_ids": [
+    "SRC-LEAK",
+    "SRC-CUSTOM"
+  ],
+  "purpose": "从新规格到RTL、独立验证、回归及交付的人工+AI协作试验",
+  "requirements": [
+    {
+      "id": "REQ-HO-001",
+      "text": "64 bit数据与tlast，独立输入输出时钟域，ready/valid",
+      "test_ids": [
+        "TP-HO-001"
+      ]
+    },
+    {
+      "id": "REQ-HO-002",
+      "text": "允许输出反压；成功握手的数据无丢失、重复、乱序",
+      "test_ids": [
+        "TP-HO-002",
+        "TP-HO-003"
+      ]
+    },
+    {
+      "id": "REQ-HO-003",
+      "text": "双方busy退出后恢复；中途复位与包有效性以DEC-001批准语义为准",
+      "test_ids": [
+        "TP-HO-004"
+      ]
+    },
+    {
+      "id": "REQ-HO-004",
+      "text": "FIFO默认深度512仅为候选；最大包长和性能目标以DEC-002批准为准",
+      "test_ids": [
+        "TP-HO-003"
+      ]
+    }
+  ],
+  "candidate_parameters": {
+    "data_width": 64,
+    "has_tlast": true,
+    "fifo_kind": "XPM async FIFO candidate",
+    "fifo_depth": 512,
+    "input_clock_hz": null,
+    "output_clock_hz": null,
+    "max_packet_beats": null,
+    "required_throughput": null,
+    "max_latency": null
+  },
+  "decisions": [
+    {
+      "id": "DEC-001",
+      "question": "输出半包已握手时复位如何通知接收端？仅清FIFO无法撤销已接收数据",
+      "options": [
+        "接收端共同reset并明确丢弃该epoch",
+        "增加显式abort或epoch协议",
+        "允许截断并由下游按协议丢弃"
+      ],
+      "status": "open",
+      "approved_choice": null
+    },
+    {
+      "id": "DEC-002",
+      "question": "确定最大包长、容量、延迟吞吐、时钟范围、XPM版本/模式及项目批准",
+      "options": [
+        "冻结任务约束后批准平台实现"
+      ],
+      "status": "open",
+      "approved_choice": null
+    }
+  ],
+  "testpoints": [
+    {
+      "id": "TP-HO-001",
+      "text": "无反压、连续包与握手",
+      "gate_ids": [
+        "G4"
+      ]
+    },
+    {
+      "id": "TP-HO-002",
+      "text": "随机反压、输出稳定、快慢时钟/相位差、固定Seed重放",
+      "gate_ids": [
+        "G4",
+        "G5"
+      ]
+    },
+    {
+      "id": "TP-HO-003",
+      "text": "满/空/包长边界，容量与资源预算",
+      "gate_ids": [
+        "G4",
+        "G5"
+      ]
+    },
+    {
+      "id": "TP-HO-004",
+      "text": "依批准语义测试入包、输出半包、空闲复位及busy恢复",
+      "gate_ids": [
+        "G4",
+        "G5"
+      ]
+    }
+  ],
+  "stages": [
+    "规格澄清",
+    "设计方案与人工批准",
+    "RTL与约束",
+    "验证方案及独立oracle",
+    "TB/SVA实现",
+    "编译展开",
+    "仿真调试",
+    "回归验收",
+    "交付与回灌"
+  ],
+  "required_gate_ids": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7"
+  ],
+  "optional_gate_ids": [
+    "G8"
+  ],
+  "workspace": null,
+  "allowed_write_paths": [],
+  "corpus_filter": {
+    "status": "not_implemented",
+    "allow": [
+      "官方FIFO资料",
+      "官方CDC资料",
+      "官方AXI-Stream规范",
+      "已批准企业规则"
+    ],
+    "exclude_exact_sha256": [
+      "a20bd1e9d3d4526de3c65febb0957202406df2f0533b89e048e26d7d20fabcbf"
+    ],
+    "exclude_names": [
+      "axis_async_fifo.sv"
+    ],
+    "exclude_project_answers": [
+      "NVMe",
+      "FDMA",
+      "Aurora"
+    ],
+    "exclude_artifacts": [
+      "已有桥接RTL",
+      "已有TB",
+      "答案台账",
+      "答案聊天",
+      "近似实现和摘要"
+    ],
+    "near_duplicate_review": "required_before_run"
+  },
+  "retry_limit": 1,
+  "patch_iteration_limit": 2
+}

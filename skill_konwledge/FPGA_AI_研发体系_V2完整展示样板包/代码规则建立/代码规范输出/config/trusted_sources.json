@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-09-16",
+  "purpose": "AI协作任务可信资料的唯一登记入口。芯片手册/TRM、IP文档、开发环境与SDK版本等必须由人提供并登记；状态非approved的资料不得作为设计依据；联网检索结果只作线索，经人工核实登记后方可使用。",
+  "status_values": [
+    "pending_user_input",
+    "under_review",
+    "approved",
+    "superseded",
+    "forbidden"
+  ],
+  "categories": [
+    "chip_manual_trm",
+    "ip_documentation",
+    "dev_environment",
+    "sdk_bsp",
+    "language_standard",
+    "schematic_hardware",
+    "internal_design_doc",
+    "project_code"
+  ],
+  "usage_rules": {
+    "task_input": "任务下达时必须引用本表条目（资料名+版本），并在输入第一条声明不得引用未登记资料作为设计依据。",
+    "multi_version": "同一芯片/同一IP存在多份手册时，以本表登记版本为准，不由模型自行选择。",
+    "extraction": "按项目抽取所需章节进入任务上下文，不整库投喂。",
+    "relation_to_approved_cells": "本表回答依据什么资料；approved_cells.json回答允许例化什么单元。两者都未补齐前，相关设计保持待决。"
+  },
+  "sources": [
+    {
+      "id": "TS-001",
+      "category": "chip_manual_trm",
+      "required_for": "目标芯片寄存器、电气与时序参数的唯一依据",
+      "document": "TBD",
+      "version": "TBD",
+      "path": "TBD",
+      "owner": "TBD",
+      "date_obtained": "TBD",
+      "status": "pending_user_input",
+      "notes": "填写芯片确切型号、手册版本/日期、本地路径；同一芯片只登记一个现行版本，旧版转superseded。"
+    },
+    {
+      "id": "TS-002",
+      "category": "ip_documentation",
+      "required_for": "所购/所用IP的接口、配置参数与约束",
+      "document": "TBD",
+      "version": "TBD",
+      "path": "TBD",
+      "owner": "TBD",
+      "date_obtained": "TBD",
+      "status": "pending_user_input",
+      "notes": "如Xilinx PG/UG系列；按IP分别登记，注明对应的工具版本。"
+    },
+    {
+      "id": "TS-003",
+      "category": "dev_environment",
+      "required_for": "编译器/仿真器/综合器及许可证环境的版本定义",
+      "document": "TBD",
+      "version": "TBD",
+      "path": "TBD",
+      "owner": "TBD",
+      "date_obtained": "TBD",
+      "status": "pending_user_input",
+      "notes": "登记工具名称、确切版本号与安装位置说明；不同工具版本的结果不能互相充当签核依据。"
+    },
+    {
+      "id": "TS-004",
+      "category": "sdk_bsp",
+      "required_for": "SDK、BSP、RTOS/驱动框架的版本与配置",
+      "document": "TBD",
+      "version": "TBD",
+      "path": "TBD",
+      "owner": "TBD",
+      "date_obtained": "TBD",
+      "status": "pending_user_input",
+      "notes": "嵌入式/驱动任务必填；包含OS版本、交叉编译链版本、板级配置。"
+    },
+    {
+      "id": "TS-005",
+      "category": "language_standard",
+      "required_for": "语言与协议语义裁决",
+      "document": "TBD",
+      "version": "TBD",
+      "path": "TBD",
+      "owner": "TBD",
+      "date_obtained": "TBD",
+      "status": "pending_user_input",
+      "notes": "如IEEE 1364/1800、IEEE 1800.2、相关总线协议标准；语言标准不能被内部文档覆盖。"
+    },
+    {
+      "id": "TS-006",
+      "category": "schematic_hardware",
+      "required_for": "引脚分配、电平、板级连接关系",
+      "document": "TBD",
+      "version": "TBD",
+      "path": "TBD",
+      "owner": "TBD",
+      "date_obtained": "TBD",
+      "status": "pending_user_input",
+      "notes": "上板类任务必填；登记原理图版本与日期。"
+    },
+    {
+      "id": "TS-007",
+      "category": "internal_design_doc",
+      "required_for": "本项目已批准的规格、方案、接口文档",
+      "document": "TBD",
+      "version": "TBD",
+      "path": "TBD",
+      "owner": "TBD",
+      "date_obtained": "TBD",
+      "status": "pending_user_input",
+      "notes": "当前项目正式规格优先于历史案例与通用资料。"
+    },
+    {
+      "id": "TS-008",
+      "category": "project_code",
+      "required_for": "本任务允许读取/修改的代码基线",
+      "document": "TBD",
+      "version": "TBD",
+      "path": "TBD",
+      "owner": "TBD",
+      "date_obtained": "TBD",
+      "status": "pending_user_input",
+      "notes": "登记代码库位置、基线提交/标签；授权修改范围在任务包中另行限定。"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+# design_path_audit
+
+- Category: `aurora`
+- Source: `R:\aurora_64b66b_10p3125g_2020_2_verified\reports\design_path_audit.txt`
+- SHA-256: `fd98517515d0e8a50d5d6b4716717d5700b514aa1724b86fae8be71857ca74e3`
+- Extractor: `text`
+- Tags: `10.3125g, 64b66b, aurora, verified, vivado-2020.2`
+- Duplicate sources:
+  - none
+
+Project=C:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.xpr
+Part=xcku040-ffva1156-2-i
+Top=aurora_64b66b_10p3125g_design
+IN_ARCHIVE=1 FILE=C:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.srcs/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xci
+IN_ARCHIVE=1 FILE=C:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/constraints/aurora_64b66b_10p3125g_design.xdc
+IN_ARCHIVE=1 FILE=C:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/rtl/aurora_64b66b_0_cdc_sync_exdes.v
+IN_ARCHIVE=1 FILE=C:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/rtl/aurora_64b66b_0_example_axi_to_ll.v
+IN_ARCHIVE=1 FILE=C:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/rtl/aurora_64b66b_0_example_ll_to_axi.v
+IN_ARCHIVE=1 FILE=C:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/rtl/aurora_64b66b_0_exdes.v
+IN_ARCHIVE=1 FILE=C:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/rtl/aurora_64b66b_10p3125g_design.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.veo
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.vho
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xdc
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0.xml
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/example_design/aurora_64b66b_0_axi_to_drp.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/example_design/aurora_64b66b_0_gt_gthe3_common_wrapper.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/example_design/gt/aurora_64b66b_0_multi_wrapper.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/example_design/gt/aurora_64b66b_0_ultrascale_rx_userclk.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/example_design/gt/aurora_64b66b_0_wrapper.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/example_design/gtwizard_ultrascale_v1_7_gthe3_common.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_64b66b_descrambler.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_64b66b_scrambler.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_aurora_lane.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_axi_to_ll.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_block_sync_sm.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_cbcc_gtx_6466.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_cdc_sync.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_ch_bond_code_gen.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_channel_err_detect.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_channel_init_sm.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_clock_module.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_common_logic_cbcc.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_common_reset_cbcc.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_crc_top.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_err_detect.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_global_logic.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_gt_common_wrapper.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_lane_init_sm.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_polarity_check.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_reset_logic.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_rx_ll.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_rx_ll_datapath.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_rxcrc_axi.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_standard_cc_module.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_support.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_support_reset_logic.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_sym_dec.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_sym_gen.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_tx_ll.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_tx_ll_control_sm.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_tx_ll_datapath.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_txcrc_axi.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_ultrascale_tx_userclk.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0/src/aurora_64b66b_0_width_conversion.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_clocks.xdc
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_core.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/aurora_64b66b_0_ooc.xdc
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/doc/aurora_64b66b_v12_0_changelog.txt
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/aurora_64b66b_0_gt.xci
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/aurora_64b66b_0_gt.xml
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/aurora_64b66b_0_gt.xml
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_bit_sync.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gte4_drp_arb.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe3_cal_freqcnt.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe3_cpll_cal.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cal_freqcnt.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_rx.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_cpll_cal_tx.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gthe4_delay_powergood.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_buffbypass_rx.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_buffbypass_tx.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_reset.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userclk_rx.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userclk_tx.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_rx.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtwiz_userdata_tx.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtye4_cal_freqcnt.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtye4_cpll_cal.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtye4_cpll_cal_rx.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtye4_cpll_cal_tx.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_gtye4_delay_powergood.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_inv_sync.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/hdl/gtwizard_ultrascale_v1_7_reset_sync.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/sim/aurora_64b66b_0_gt.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/sim/aurora_64b66b_0_gt_gthe3_channel_wrapper.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/sim/aurora_64b66b_0_gt_gtwizard_gthe3.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/sim/aurora_64b66b_0_gt_gtwizard_top.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/sim/gtwizard_ultrascale_v1_7_gthe3_channel.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt.xdc
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt_gthe3_channel_wrapper.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt_gtwizard_gthe3.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt_gtwizard_top.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/aurora_64b66b_0_gt_ooc.xdc
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_0/synth/gtwizard_ultrascale_v1_7_gthe3_channel.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master.xci
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master.xdc
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master.xml
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master.xml
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_1/aurora_64b66b_0_fifo_gen_master_clocks.xdc
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_1/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_1/hdl/fifo_generator_v13_2_rfs.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_1/hdl/fifo_generator_v13_2_rfs.vhd
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_1/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_1/sim/aurora_64b66b_0_fifo_gen_master.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_1/simulation/fifo_generator_vlog_beh.v
+IN_ARCHIVE=1 FILE=c:/project/RTDS/aurora_64b66b_10p3125g_2020_2_verified/design/aurora_64b66b_10p3125g_design.gen/sources_1/ip/aurora_64b66b_0/ip_1/synth/aurora_64b66b_0_fifo_gen_master.vhd
+OUTSIDE_FILE_COUNT=0

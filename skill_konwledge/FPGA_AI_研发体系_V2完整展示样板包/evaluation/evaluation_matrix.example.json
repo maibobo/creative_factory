@@ -1,0 +1,47 @@
+{
+  "id": "EVAL-001",
+  "version": "2.0.0-demo",
+  "task_id": "TASK-HO-001",
+  "execution_status": "not_run",
+  "freeze_status": "pending_DEC-001_DEC-002",
+  "groups": [
+    {
+      "group": "A",
+      "inputs": "同一冻结规格+普通提示",
+      "model_config": null,
+      "budget": null,
+      "run_ids": [],
+      "results": null,
+      "elapsed_seconds": null,
+      "human_active_seconds": null,
+      "iterations": null,
+      "unsubstantiated_claims": null
+    },
+    {
+      "group": "B",
+      "inputs": "同一冻结规格+任务包+规则+Skill",
+      "model_config": null,
+      "budget": null,
+      "run_ids": [],
+      "results": null,
+      "elapsed_seconds": null,
+      "human_active_seconds": null,
+      "iterations": null,
+      "unsubstantiated_claims": null
+    },
+    {
+      "group": "C",
+      "inputs": "B+独立过滤证据集合",
+      "model_config": null,
+      "budget": null,
+      "run_ids": [],
+      "results": null,
+      "elapsed_seconds": null,
+      "human_active_seconds": null,
+      "iterations": null,
+      "unsubstantiated_claims": null
+    }
+  ],
+  "baseline": null,
+  "comparison_result": null
+}

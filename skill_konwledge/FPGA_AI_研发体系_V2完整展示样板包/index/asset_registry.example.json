@@ -1,0 +1,211 @@
+{
+  "id": "ASSET-REGISTRY",
+  "version": "2.0.0-demo",
+  "status": "demonstration_package",
+  "main_document": "../FPGA_AI_知识库结构与案例分析_v2.md",
+  "files": [
+    {
+      "id": "ASSET-035",
+      "path": "接地气使用指南.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-001",
+      "path": "00_管理层视图.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-002",
+      "path": "01_工程实现视图.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-003",
+      "path": "README.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-004",
+      "path": "approved_examples/批准输出候选与差异分析.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-005",
+      "path": "cases/CASE-001.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-006",
+      "path": "cases/CASE-002.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-007",
+      "path": "cases/CASE-003.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-008",
+      "path": "cases/CASE-004.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-009",
+      "path": "cases/CASE-005.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-010",
+      "path": "cases/CASE-006.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-011",
+      "path": "cases/CASE-007.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-012",
+      "path": "cases/CASE-008.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-013",
+      "path": "document_rules/文档模板与填写示例.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-014",
+      "path": "eda_gates/gate_catalog.json",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-015",
+      "path": "eda_gates/run_manifest.example.json",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-016",
+      "path": "eda_gates/门禁判定与故障分类.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-017",
+      "path": "evaluation/EVAL-001.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-018",
+      "path": "evaluation/evaluation_matrix.example.json",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-019",
+      "path": "feedback/feedback_card.example.json",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-020",
+      "path": "feedback/回灌审核与发布流程.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-021",
+      "path": "governance/治理_证据与状态规则.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-022",
+      "path": "index/asset_registry.example.json",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-023",
+      "path": "index/evidence_path_index.local.json",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-024",
+      "path": "index/source_baseline.local.json",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-025",
+      "path": "index/traceability_matrix.example.json",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-026",
+      "path": "objects/knowledge_objects.example.json",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-027",
+      "path": "objects/object_contract.schema.json",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-028",
+      "path": "rules/企业规则卡与适用范围.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-029",
+      "path": "skill/fpga-rnd-closure-demo/SKILL.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-030",
+      "path": "task_pack/README.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-031",
+      "path": "task_pack/TASK-AUR-001.json",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-032",
+      "path": "task_pack/TASK-HO-001.json",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-033",
+      "path": "tools/validate_sample.py",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-034",
+      "path": "交付检查记录.md",
+      "state": "sample_created"
+    },
+    {
+      "id": "ASSET-036",
+      "path": "02_通用使用方法.md",
+      "state": "sample_created"
+    }
+  ],
+  "external_assets": [
+    {
+      "id": "EXT-KB-001",
+      "path": "E:/centOS/xilinx_knowledge_base",
+      "access": "read_only",
+      "source_ids": [
+        "SRC-KB",
+        "SRC-MANIFEST"
+      ]
+    },
+    {
+      "id": "EXT-RULE-001",
+      "path": "E:/centOS/代码规则建立/代码规范输出",
+      "access": "read_only",
+      "source_ids": [
+        "SRC-RULES",
+        "SRC-CUSTOM"
+      ]
+    }
+  ],
+  "production_backend": "not_implemented",
+  "skill_installation": "not_installed",
+  "eda_execution": "not_run"
+}

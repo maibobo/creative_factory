@@ -1,0 +1,39 @@
+{
+  "id": "TRACE-001",
+  "version": "2.0.0-demo",
+  "rows": [
+    {
+      "requirement_id": "REQ-AUR-001",
+      "task_id": "TASK-AUR-001",
+      "case_id": "CASE-002",
+      "test_ids": [
+        "TP-AUR-001"
+      ],
+      "gate_ids": [
+        "G4",
+        "G5"
+      ],
+      "source_ids": [
+        "SRC-PCIE"
+      ],
+      "historical_evidence_id": "EVID-AUR-001",
+      "v2_run_id": null
+    },
+    {
+      "requirement_id": "REQ-HO-003",
+      "task_id": "TASK-HO-001",
+      "case_id": "CASE-008",
+      "decision_id": "DEC-001",
+      "test_ids": [
+        "TP-HO-004"
+      ],
+      "gate_ids": [
+        "G0",
+        "G4",
+        "G5"
+      ],
+      "source_ids": [],
+      "v2_run_id": null
+    }
+  ]
+}

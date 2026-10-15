@@ -1,0 +1,4 @@
+interface:
+  display_name: "FPGA代码编写与审查"
+  short_description: "按已确认功能规格编写RTL，组织编译、人工检视和综合检查后提交审核"
+  default_prompt: "使用 $fpga-rtl-development-review 按已确认的设计规格编写并审查RTL，记录四步检查结果并提交本阶段审核。"

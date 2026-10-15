@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V2展示对象最低合同",
+  "description": "只约束knowledge_objects.example.json中的知识对象；任务、运行、索引使用各自字段。验证器实现本合同必要检查，不宣称完整JSON Schema实现。",
+  "type": "object",
+  "required": [
+    "objects"
+  ],
+  "properties": {
+    "objects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "version",
+          "scope",
+          "source_ids",
+          "lifecycle",
+          "verification_level",
+          "authority",
+          "causality",
+          "related_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9-]+$"
+          },
+          "type": {
+            "enum": [
+              "rule_ref",
+              "acceptance",
+              "approved_output_candidate",
+              "evidence_ref",
+              "case_ref"
+            ]
+          },
+          "version": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lifecycle": {
+            "enum": [
+              "candidate",
+              "reviewed",
+              "active",
+              "superseded",
+              "retired"
+            ]
+          },
+          "verification_level": {
+            "enum": [
+              "not_run",
+              "static_check",
+              "compile_elab",
+              "module_sim",
+              "integration_sim",
+              "implementation_sta",
+              "board_system"
+            ]
+          },
+          "authority": {
+            "enum": [
+              "official",
+              "verified_project",
+              "current_project",
+              "process_history"
+            ]
+          },
+          "causality": {
+            "enum": [
+              "pre_kb_historical",
+              "post_kb_asset",
+              "post_kb_supported",
+              "planned_holdout"
+            ]
+          },
+          "related_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

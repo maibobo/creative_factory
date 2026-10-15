@@ -1,0 +1,6 @@
+index/*.sqlite3
+index/*.sqlite3-*
+index/build_report.json
+index/excluded.jsonl
+node_modules
+cache/

@@ -1,0 +1,23 @@
+{
+  "id": "FB-001",
+  "version": "2.0.0-demo",
+  "lifecycle": "candidate",
+  "source_ids": [
+    "SRC-PCIE"
+  ],
+  "related_ids": [
+    "OUT-AUR-001",
+    "CASE-002"
+  ],
+  "proposal": "复用历史模块时检查实际方向、握手事件及已验证映射",
+  "scope": "历史模块接口集成",
+  "counterexample": "不能把valid/ready交叉连接推广至所有模块",
+  "publication_allowed": false,
+  "reviewer": null,
+  "approved_at": null,
+  "missing": [
+    "原始候选与终稿成对证据",
+    "正式签核",
+    "其他场景适用性复核"
+  ]
+}

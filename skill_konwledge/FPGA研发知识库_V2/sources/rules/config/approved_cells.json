@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-09-02",
+  "purpose": "项目批准单元、公共模块和平台包装器的唯一登记入口。TBD 条目不得用于 ASIC 签核。",
+  "status_values": [
+    "pending_user_input",
+    "under_review",
+    "approved",
+    "deprecated",
+    "forbidden"
+  ],
+  "profile_policy": {
+    "asic_signoff": "只能使用状态为 approved 且 profiles 包含 asic_signoff 的实现。",
+    "fpga_prototype": "允许在 FPGA 平台包装层使用已批准的 XPM 或厂商 IP；平台实现不得进入 ASIC 签核文件表。"
+  },
+  "cells": [
+    {
+      "category": "reset_sync",
+      "required_for": "异步复位同步释放",
+      "module_or_ip": "TBD",
+      "wrapper": "TBD",
+      "source_path": "TBD",
+      "version": "TBD",
+      "owner": "TBD",
+      "profiles": [],
+      "status": "pending_user_input",
+      "evidence": "TBD",
+      "notes": "填写复位极性、同步级数、测试模式和 DFT 约束。"
+    },
+    {
+      "category": "bit_sync",
+      "required_for": "稳定单比特电平跨时钟域",
+      "module_or_ip": "TBD",
+      "wrapper": "TBD",
+      "source_path": "TBD",
+      "version": "TBD",
+      "owner": "TBD",
+      "profiles": [],
+      "status": "pending_user_input",
+      "evidence": "TBD",
+      "notes": "填写允许级数、同步属性、源端无毛刺要求和 MTBF 依据。"
+    },
+    {
+      "category": "sync_fifo",
+      "required_for": "单时钟 FIFO",
+      "module_or_ip": "TBD",
+      "wrapper": "TBD",
+      "source_path": "TBD",
+      "version": "TBD",
+      "owner": "TBD",
+      "profiles": [],
+      "status": "pending_user_input",
+      "evidence": "TBD",
+      "notes": "填写深度、位宽、读写延迟、阈值和复位行为。"
+    },
+    {
+      "category": "async_fifo",
+      "required_for": "多比特数据跨异步时钟域",
+      "module_or_ip": "TBD",
+      "wrapper": "TBD",
+      "source_path": "TBD",
+      "version": "TBD",
+      "owner": "TBD",
+      "profiles": [],
+      "status": "pending_user_input",
+      "evidence": "TBD",
+      "notes": "填写 CDC 结构、Gray 指针、复位顺序和约束脚本。"
+    },
+    {
+      "category": "dmux",
+      "required_for": "项目标准解复用功能",
+      "module_or_ip": "TBD",
+      "wrapper": "TBD",
+      "source_path": "TBD",
+      "version": "TBD",
+      "owner": "TBD",
+      "profiles": [],
+      "status": "pending_user_input",
+      "evidence": "TBD",
+      "notes": "填写路数、选择编码、默认输出和非法选择行为。"
+    },
+    {
+      "category": "icg",
+      "required_for": "门控时钟",
+      "module_or_ip": "TBD",
+      "wrapper": "TBD",
+      "source_path": "TBD",
+      "version": "TBD",
+      "owner": "TBD",
+      "profiles": [],
+      "status": "pending_user_input",
+      "evidence": "TBD",
+      "notes": "填写工艺库单元、测试使能、CTS 和 STA 使用要求。"
+    },
+    {
+      "category": "memory_macro",
+      "required_for": "SRAM、ROM、寄存器文件及其包装器",
+      "module_or_ip": "TBD",
+      "wrapper": "TBD",
+      "source_path": "TBD",
+      "version": "TBD",
+      "owner": "TBD",
+      "profiles": [],
+      "status": "pending_user_input",
+      "evidence": "TBD",
+      "notes": "填写编译器版本、PVT 视图、BIST 和仿真模型。"
+    },
+    {
+      "category": "arithmetic_ip",
+      "required_for": "项目指定乘除法、开方、浮点和流水算术",
+      "module_or_ip": "TBD",
+      "wrapper": "TBD",
+      "source_path": "TBD",
+      "version": "TBD",
+      "owner": "TBD",
+      "profiles": [],
+      "status": "pending_user_input",
+      "evidence": "TBD",
+      "notes": "填写延迟、吞吐率、舍入、饱和和 DesignWare/厂商许可要求。"
+    }
+  ]
+}

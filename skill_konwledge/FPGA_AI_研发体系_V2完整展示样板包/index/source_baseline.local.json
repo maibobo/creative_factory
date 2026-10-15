@@ -1,0 +1,142 @@
+{
+  "classification": "LOCAL_ONLY_DO_NOT_EXPORT",
+  "captured_at": "2026-09-08",
+  "files": [
+    {
+      "Path": "E:\\centOS\\xilinx_knowledge_base\\README.md",
+      "Hash": "E27B154D56633DC8FB1471FB9D10FD4232F489DBB5419822A1C93C8D869F5444"
+    },
+    {
+      "Path": "E:\\centOS\\xilinx_knowledge_base\\config\\sources.json",
+      "Hash": "1D5CEDA6D3D99970B30BA771D0FC265F2A02A293A8BA01365A78720292461AEC"
+    },
+    {
+      "Path": "E:\\centOS\\xilinx_knowledge_base\\index\\manifest.json",
+      "Hash": "CDA2B85F63E3F48FE6909AFDFBC67D5FE07ADC5B86AA2D6215167F7723A8E8EE"
+    },
+    {
+      "Path": "E:\\centOS\\xilinx_knowledge_base\\index\\xilinx_kb.sqlite3",
+      "Hash": "9DF61E42AF64D54F051361A67785795E478370AD2B791FB833894EE6BFE587A4"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\01_ASIC_Verilog_RTL代码规范.md",
+      "Hash": "F04EB87112C46D57AE35A7BFA0C66519B3E626055F13178EC9E079F3504B95D8"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\02_SystemVerilog_UVM验证代码规范.md",
+      "Hash": "A5EE619A04DF9406B1CFC6F4D0C184BCFDC41C952757DE220A4D13B9CAFB39AF"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\03_用户自定义规则.md",
+      "Hash": "5D3703BFE9DD45C29DF6006748491553FDD217FBAD150A911A572EC000B41930"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\04_代码评审检查表.md",
+      "Hash": "36872C4612B582D376CE2343C0D43B21C3AA00513B2E5E47DA0F9813C45C75A4"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\05_来源与冲突裁决.md",
+      "Hash": "255EF717F43ED1B32B6DFA33C4982FBAC2A9DED6D9A978032EE792C259EA9C80"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\06_验证记录.md",
+      "Hash": "D923D5AAE68DA5DAB3F616A9C5AF6CFDB0CB81931B642F789350FE65E10AAC16"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\README.md",
+      "Hash": "B73E004F7A6D39198D5CC96556D130DFE06092FABDDB2CBF78F7E8BE495B5086"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\config\\approved_cells.json",
+      "Hash": "D3C0F18EFA895B1458FF1239D519CB5CF235F81CD49CA030E3B87CF5C482E8DE"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\config\\custom_rules.json",
+      "Hash": "A16AD409FA9185671AC5062E5A3A4CAA54C5DA1DE78BA15D9C4CA5C0D6ED54D3"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\rtl\\asic_rtl_template.v",
+      "Hash": "2E4190402FE0295BA70A09984424BAAF2F360E3DB203E9C533F5665E276BDA91"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\filelist.f",
+      "Hash": "066D041971ACA72B8699C0C40D4D1FAFA7B5DD2C71A18721D31E2879A1195631"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\README.md",
+      "Hash": "40F573B2005FF81DDC40E89FF09BDEA984819C5492A9B221AA83BA5362E6B904"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_agent.svh",
+      "Hash": "6F859F6C665ACB15B474E6E6667FB1D245459BB1BCB87B9A5C13C5E343B02785"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_assertions.sv",
+      "Hash": "A1385EA1AE2E27E484F4890555B31CB2A4AB691F41E2682F237DD706A586CBA8"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_cfg.svh",
+      "Hash": "061B8AACFB73BC551B5F249D16AA82E782C3580BAF74A76F41ADC5DCB5010A35"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_coverage.svh",
+      "Hash": "7D8176F591F7A0D71028B5B82A129EEC0007DA3DA75DB70A2CE6727BB726C14D"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_driver.svh",
+      "Hash": "99C813A48A778CDB4020A08AB27A429D8E94145FEA22A5826D02CAB70E12653F"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_dut.v",
+      "Hash": "9F2AB36A3C1A0E79341E447B8DB77B1188483D734072B9E3589AEF796C906CB9"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_env.svh",
+      "Hash": "FC97228F9A1F1A7FF2C6FD3BD4CEF717DF1F5B96DC62224423CDAE034901A560"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_if.sv",
+      "Hash": "C0776A802E0B91C505F9A5CDCD15E0D0057BAEAB5A1DC3BB54AEB2E560FB5BAB"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_item.svh",
+      "Hash": "3863C9A2F392CBDC34684C01CDF76C21BE618A5FBB8CAFD48E587DCD5529FC61"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_monitor.svh",
+      "Hash": "3C16A4E50F9860D069B6D3E10065D4C29FC9EDEEF84021E7EBB9F4BF357E5542"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_pkg.sv",
+      "Hash": "1CBFAAFC0B2EA909E7FD3E113B2911074B90E329167A61A5693136F17720BA4F"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_scoreboard.svh",
+      "Hash": "F177E7A707E7ED1C6DE8614E434BE7372F859A6AE79A54DC7C40D2FDF016CF68"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_sequence.svh",
+      "Hash": "D3C282CCBC81DF5968368F498B7C5278B39E4D477A327B27F740E5E24007F811"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_sequencer.svh",
+      "Hash": "A419BDEC90523FCEEFEF37C360CAE229D797757ACF89CA4C7A36771F24AF7F41"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_tb.sv",
+      "Hash": "A5E898EB2A9341BA45F7B036F5047DE7E2469B375043A183F6304B31E9BA5E3B"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_test.svh",
+      "Hash": "99D9E8411A588F1E086582F50FC26FBDC8CE6CA0153D952A9197425AF96888E9"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\tools\\sync_custom_rules.py",
+      "Hash": "A638A6D533677FDA51890E6F7F960BFF03DF19A259DBAF41DF6275996A04FAE0"
+    },
+    {
+      "Path": "E:\\centOS\\代码规则建立\\代码规范输出\\tools\\validate_package.py",
+      "Hash": "DA32FF57A2A4860D43E1B4FAF6BA46270EC76DCE57D82D74A5B0167870394236"
+    }
+  ]
+}

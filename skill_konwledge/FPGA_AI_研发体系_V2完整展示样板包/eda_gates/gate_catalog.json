@@ -1,0 +1,123 @@
+{
+  "id": "GATE-CATALOG",
+  "version": "2.0.0-demo",
+  "gates": [
+    {
+      "id": "G0",
+      "name": "规格与范围",
+      "kind": "human_and_artifact",
+      "default_result": "not_run",
+      "required_evidence": [
+        "输入版本",
+        "执行身份",
+        "具体判据",
+        "证据来源"
+      ],
+      "notes": "适用性以任务合同为准"
+    },
+    {
+      "id": "G1",
+      "name": "设计方案与规则",
+      "kind": "human_and_artifact",
+      "default_result": "not_run",
+      "required_evidence": [
+        "输入版本",
+        "执行身份",
+        "具体判据",
+        "证据来源"
+      ],
+      "notes": "适用性以任务合同为准"
+    },
+    {
+      "id": "G2",
+      "name": "编译展开",
+      "kind": "tool_or_artifact",
+      "default_result": "not_run",
+      "required_evidence": [
+        "输入版本",
+        "执行身份",
+        "具体判据",
+        "证据来源"
+      ],
+      "notes": "适用性以任务合同为准"
+    },
+    {
+      "id": "G3",
+      "name": "验证环境可信度",
+      "kind": "tool_or_artifact",
+      "default_result": "not_run",
+      "required_evidence": [
+        "输入版本",
+        "执行身份",
+        "具体判据",
+        "证据来源"
+      ],
+      "notes": "适用性以任务合同为准"
+    },
+    {
+      "id": "G4",
+      "name": "功能仿真",
+      "kind": "tool_or_artifact",
+      "default_result": "not_run",
+      "required_evidence": [
+        "输入版本",
+        "执行身份",
+        "具体判据",
+        "证据来源"
+      ],
+      "notes": "适用性以任务合同为准"
+    },
+    {
+      "id": "G5",
+      "name": "回归覆盖",
+      "kind": "tool_or_artifact",
+      "default_result": "not_run",
+      "required_evidence": [
+        "输入版本",
+        "执行身份",
+        "具体判据",
+        "证据来源"
+      ],
+      "notes": "适用性以任务合同为准"
+    },
+    {
+      "id": "G6",
+      "name": "修改范围与交付",
+      "kind": "tool_or_artifact",
+      "default_result": "not_run",
+      "required_evidence": [
+        "输入版本",
+        "执行身份",
+        "具体判据",
+        "证据来源"
+      ],
+      "notes": "适用性以任务合同为准"
+    },
+    {
+      "id": "G7",
+      "name": "人工签核",
+      "kind": "human_and_artifact",
+      "default_result": "not_run",
+      "required_evidence": [
+        "签核人",
+        "日期",
+        "范围",
+        "残余风险"
+      ],
+      "notes": "适用性以任务合同为准"
+    },
+    {
+      "id": "G8",
+      "name": "实现时序及板级",
+      "kind": "tool_or_artifact",
+      "default_result": "not_run",
+      "required_evidence": [
+        "输入版本",
+        "执行身份",
+        "具体判据",
+        "证据来源"
+      ],
+      "notes": "实现、STA、板级分别判定；由任务选择适用项"
+    }
+  ]
+}

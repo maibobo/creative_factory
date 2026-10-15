@@ -1,0 +1,4 @@
+interface:
+  display_name: "FPGA方案文档设计"
+  short_description: "依据已给初定值的系统需求，按模块和功能点生成设计方案及Excel规格"
+  default_prompt: "使用 $fpga-design-spec 根据已确认的系统需求编写设计规格与详细设计方案，完成后提交本阶段审核。"

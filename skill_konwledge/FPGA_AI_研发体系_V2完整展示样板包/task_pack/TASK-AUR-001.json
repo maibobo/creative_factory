@@ -1,0 +1,104 @@
+{
+  "version": "2.0.0-demo",
+  "execution_status": "not_run",
+  "lifecycle": "candidate",
+  "display_review": "pending_review",
+  "model_config": null,
+  "toolchain_config": null,
+  "approved_by": null,
+  "approved_at": null,
+  "run_ids": [],
+  "results": null,
+  "id": "TASK-AUR-001",
+  "type": "historical_replay_task",
+  "causality": "pre_kb_historical",
+  "profile": "fpga_project",
+  "source_ids": [
+    "SRC-PCIE",
+    "SRC-CUSTOM"
+  ],
+  "purpose": "受控复盘AUR-002；修改仅限另行批准的隔离工程wrapper",
+  "requirements": [
+    {
+      "id": "REQ-AUR-001",
+      "text": "按冻结基线完成512 B输入、FDMA写完成、端到端数据比较",
+      "test_ids": [
+        "TP-AUR-001"
+      ]
+    },
+    {
+      "id": "REQ-AUR-002",
+      "text": "IRQ req/ack、使能和清除符合现有用例",
+      "test_ids": [
+        "TP-AUR-002"
+      ]
+    },
+    {
+      "id": "REQ-AUR-003",
+      "text": "保护FDMA、adapter、CONV_DMA本体，仅允许wrapper映射修改",
+      "test_ids": [
+        "TP-AUR-003"
+      ]
+    }
+  ],
+  "testpoints": [
+    {
+      "id": "TP-AUR-001",
+      "gate_ids": [
+        "G4",
+        "G5"
+      ]
+    },
+    {
+      "id": "TP-AUR-002",
+      "gate_ids": [
+        "G4",
+        "G5"
+      ]
+    },
+    {
+      "id": "TP-AUR-003",
+      "gate_ids": [
+        "G6"
+      ]
+    }
+  ],
+  "workspace": null,
+  "allowed_write_paths": [],
+  "protected_components": [
+    "FDMA",
+    "adapter",
+    "CONV_DMA",
+    "旧知识库",
+    "现有规则包"
+  ],
+  "decisions": [
+    {
+      "id": "DEC-AUR-001",
+      "question": "批准隔离工程、实际wrapper路径和复盘预算",
+      "status": "open",
+      "approved_choice": null
+    }
+  ],
+  "required_gate_ids": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7"
+  ],
+  "optional_gate_ids": [
+    "G8"
+  ],
+  "retry_limit": 1,
+  "patch_iteration_limit": 2,
+  "stop_conditions": [
+    "范围扩大",
+    "规格变化",
+    "同因修复2轮未收敛",
+    "证据不足"
+  ]
+}

@@ -1,0 +1,536 @@
+[
+  {
+    "id": "TPL-仿真报告模板",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\templates\\仿真报告模板.docx",
+    "source_sha256": "58e9914454fd61ec00f403a905c13e74f5aaed61c52256878652cbab2c70a650",
+    "local": "templates/仿真报告模板.docx",
+    "local_sha256": "58e9914454fd61ec00f403a905c13e74f5aaed61c52256878652cbab2c70a650",
+    "handling": "原样副本"
+  },
+  {
+    "id": "TPL-设计方案模板",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\templates\\设计方案模板.docx",
+    "source_sha256": "83440b86b6ae2850a40f82b7a0470c31f6109fd2c7ec4247992dc3385c97e58a",
+    "local": "templates/设计方案模板.docx",
+    "local_sha256": "83440b86b6ae2850a40f82b7a0470c31f6109fd2c7ec4247992dc3385c97e58a",
+    "handling": "原样副本"
+  },
+  {
+    "id": "TPL-设计规格_测试点_测试用例模板",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\templates\\设计规格_测试点_测试用例模板.xlsx",
+    "source_sha256": "68dc8c52b447f16f8618774b0c34c803bf46e49038b9620bbd33f130173d0d67",
+    "local": "templates/设计规格_测试点_测试用例模板.xlsx",
+    "local_sha256": "68dc8c52b447f16f8618774b0c34c803bf46e49038b9620bbd33f130173d0d67",
+    "handling": "原样副本"
+  },
+  {
+    "id": "TPL-验证方案模板",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\templates\\验证方案模板.docx",
+    "source_sha256": "617c02e9b953d8f80b089cd13c8940936c074fed533a63e0ae14d1cd99c67497",
+    "local": "templates/验证方案模板.docx",
+    "local_sha256": "617c02e9b953d8f80b089cd13c8940936c074fed533a63e0ae14d1cd99c67497",
+    "handling": "原样副本"
+  },
+  {
+    "id": "FLOW-测试表填写说明",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\references\\测试表填写说明.md",
+    "source_sha256": "934be258982c692dd98f5abe1c766a4985d32136de225e264785c3be70075374",
+    "local": "references/测试表填写说明.md",
+    "local_sha256": "934be258982c692dd98f5abe1c766a4985d32136de225e264785c3be70075374",
+    "handling": "原样副本"
+  },
+  {
+    "id": "FLOW-每日回归脚本使用",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\references\\每日回归脚本使用.md",
+    "source_sha256": "51f196d0ffd091de9ea33506885314496ebb2db56456f2b06500d9edd71885d5",
+    "local": "references/每日回归脚本使用.md",
+    "local_sha256": "51f196d0ffd091de9ea33506885314496ebb2db56456f2b06500d9edd71885d5",
+    "handling": "原样副本"
+  },
+  {
+    "id": "FLOW-run_daily_regression.py",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\scripts\\run_daily_regression.py",
+    "source_sha256": "6945dff9d51133c91a9a09f75a582b8007e876bf9bb274487fee60ea702cb6cb",
+    "local": "scripts/run_daily_regression.py",
+    "local_sha256": "6945dff9d51133c91a9a09f75a582b8007e876bf9bb274487fee60ea702cb6cb",
+    "handling": "原样副本"
+  },
+  {
+    "id": "FLOW-regression_config.template.json",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\scripts\\regression_config.template.json",
+    "source_sha256": "671e89ee66f64df8a5a775ea6138923ba3494a83039c8aae0c195b0a856317b1",
+    "local": "scripts/regression_config.template.json",
+    "local_sha256": "671e89ee66f64df8a5a775ea6138923ba3494a83039c8aae0c195b0a856317b1",
+    "handling": "原样副本"
+  },
+  {
+    "id": "FLOW-test_daily_regression.py",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\scripts\\test_daily_regression.py",
+    "source_sha256": "cb45c7274ddb633db89076387a303603362f35e37daf920e6fbe9dffd5089aaf",
+    "local": "scripts/test_daily_regression.py",
+    "local_sha256": "cb45c7274ddb633db89076387a303603362f35e37daf920e6fbe9dffd5089aaf",
+    "handling": "原样副本"
+  },
+  {
+    "id": "META-fpga-design-spec",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\skills\\fpga-design-spec\\agents\\openai.yaml",
+    "source_sha256": "f8aa62f33be235ae2cd01e447857af307143ad7a5a22b8cdea60b47d55757bb8",
+    "local": "skills/fpga-design-spec/agents/openai.yaml",
+    "local_sha256": "f8aa62f33be235ae2cd01e447857af307143ad7a5a22b8cdea60b47d55757bb8",
+    "handling": "原样副本"
+  },
+  {
+    "id": "META-fpga-rtl-development-review",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\skills\\fpga-rtl-development-review\\agents\\openai.yaml",
+    "source_sha256": "d826550191b9f5934f9fec8f6dbef0d2dc582de6647d48b6d37ddbb74d128f9a",
+    "local": "skills/fpga-rtl-development-review/agents/openai.yaml",
+    "local_sha256": "d826550191b9f5934f9fec8f6dbef0d2dc582de6647d48b6d37ddbb74d128f9a",
+    "handling": "原样副本"
+  },
+  {
+    "id": "META-fpga-verification-planning",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\skills\\fpga-verification-planning\\agents\\openai.yaml",
+    "source_sha256": "c6beeac3be48b0e0bfe1525e083e57e92e9344d7220505885b95dc0333a32e13",
+    "local": "skills/fpga-verification-planning/agents/openai.yaml",
+    "local_sha256": "c6beeac3be48b0e0bfe1525e083e57e92e9344d7220505885b95dc0333a32e13",
+    "handling": "原样副本"
+  },
+  {
+    "id": "META-fpga-simulation-regression",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\skills\\fpga-simulation-regression\\agents\\openai.yaml",
+    "source_sha256": "7f4b6a3834d8d56c9b695b997a568e8651f39891603e5018c7386decb6f69a5a",
+    "local": "skills/fpga-simulation-regression/agents/openai.yaml",
+    "local_sha256": "7f4b6a3834d8d56c9b695b997a568e8651f39891603e5018c7386decb6f69a5a",
+    "handling": "原样副本"
+  },
+  {
+    "id": "RULE-01",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\01_ASIC_Verilog_RTL代码规范.md",
+    "source_sha256": "f04eb87112c46d57ae35a7bfa0c66519b3e626055f13178ec9e079f3504b95d8",
+    "local": "sources/rules/01_ASIC_Verilog_RTL代码规范.md",
+    "local_sha256": "e1a2d1e5c796c5185212657817e781670b18bb97a0dba570ffe883aa5666e0d2",
+    "handling": "保留规则正文；清理历史维护入口及来源声明"
+  },
+  {
+    "id": "RULE-02",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\02_SystemVerilog_UVM验证代码规范.md",
+    "source_sha256": "a5ee619a04df9406b1cfc6f4d0c184bcfdc41c952757de220a4d13b9cafb39af",
+    "local": "sources/rules/02_SystemVerilog_UVM验证代码规范.md",
+    "local_sha256": "ea5c8af9e389676b29cc4918bbb55413622606978ced0c25b8f4a08324453ecc",
+    "handling": "保留规则正文；清理历史维护入口及来源声明"
+  },
+  {
+    "id": "RULE-03",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\03_用户自定义规则.md",
+    "source_sha256": "5d3703bfe9dd45c29df6006748491553fdd217fbad150a911a572ec000b41930",
+    "local": "sources/rules/03_用户自定义规则.md",
+    "local_sha256": "f03f5f007addab3d6f8299ce8eb0b881ef1c25f17b5b06af64e6ab545e99a49b",
+    "handling": "保留规则正文；清理历史维护入口及来源声明"
+  },
+  {
+    "id": "RULE-04",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\04_代码评审检查表.md",
+    "source_sha256": "36872c4612b582d376ce2343c0d43b21c3aa00513b2e5e47da0f9813c45c75a4",
+    "local": "sources/rules/04_代码评审检查表.md",
+    "local_sha256": "e08c5d7ae8a20ed55d62780c894557ad027d4d633c4a059e743665b702ad3578",
+    "handling": "保留规则正文；清理历史维护入口及来源声明"
+  },
+  {
+    "id": "RULE-CONFIG-custom_rules.json",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\config\\custom_rules.json",
+    "source_sha256": "a16ad409fa9185671ac5062e5a3a4caa54c5da1de78ba15d9c4ca5c0d6ed54d3",
+    "local": "sources/rules/config/custom_rules.json",
+    "local_sha256": "a16ad409fa9185671ac5062e5a3a4caa54c5da1de78ba15d9c4ca5c0d6ed54d3",
+    "handling": "原样副本"
+  },
+  {
+    "id": "RULE-CONFIG-approved_cells.json",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\config\\approved_cells.json",
+    "source_sha256": "d3c0f18efa895b1458ff1239d519cb5cf235f81cd49ca030e3b87cf5c482e8de",
+    "local": "sources/rules/config/approved_cells.json",
+    "local_sha256": "d3c0f18efa895b1458ff1239d519cb5cf235f81cd49ca030e3b87cf5c482e8de",
+    "handling": "原样副本"
+  },
+  {
+    "id": "EX-RTL",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\rtl\\asic_rtl_template.v",
+    "source_sha256": "2e4190402fe0295ba70a09984424baaf2f360e3db203e9c533f5665e276bda91",
+    "local": "examples/rtl/asic_rtl_template.v",
+    "local_sha256": "2e4190402fe0295ba70a09984424baaf2f360e3db203e9c533f5665e276bda91",
+    "handling": "原样副本"
+  },
+  {
+    "id": "EX-UVM-filelist.f",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\filelist.f",
+    "source_sha256": "066d041971aca72b8699c0c40d4d1fafa7b5dd2c71a18721d31e2879a1195631",
+    "local": "examples/sv_uvm_minimal/filelist.f",
+    "local_sha256": "066d041971aca72b8699c0c40d4d1fafa7b5dd2c71a18721d31e2879a1195631",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-README.md",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\README.md",
+    "source_sha256": "40f573b2005ff81ddc40e89ff09bdea984819c5492a9b221aa83ba5362e6b904",
+    "local": "examples/sv_uvm_minimal/README.md",
+    "local_sha256": "840984a434b53a5114d0ae7b3ff9cded81d57d095fb85d0c1a613e41553ed0be",
+    "handling": "示例副本；补充运行状态"
+  },
+  {
+    "id": "EX-UVM-demo_agent.svh",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_agent.svh",
+    "source_sha256": "6f859f6c665acb15b474e6e6667fb1d245459bb1bcb87b9a5c13c5e343b02785",
+    "local": "examples/sv_uvm_minimal/src/demo_agent.svh",
+    "local_sha256": "6f859f6c665acb15b474e6e6667fb1d245459bb1bcb87b9a5c13c5e343b02785",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_assertions.sv",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_assertions.sv",
+    "source_sha256": "a1385ea1ae2e27e484f4890555b31cb2a4ab691f41e2682f237dd706a586cba8",
+    "local": "examples/sv_uvm_minimal/src/demo_assertions.sv",
+    "local_sha256": "a1385ea1ae2e27e484f4890555b31cb2a4ab691f41e2682f237dd706a586cba8",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_cfg.svh",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_cfg.svh",
+    "source_sha256": "061b8aacfb73bc551b5f249d16aa82e782c3580baf74a76f41adc5dcb5010a35",
+    "local": "examples/sv_uvm_minimal/src/demo_cfg.svh",
+    "local_sha256": "061b8aacfb73bc551b5f249d16aa82e782c3580baf74a76f41adc5dcb5010a35",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_coverage.svh",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_coverage.svh",
+    "source_sha256": "7d8176f591f7a0d71028b5b82a129eec0007da3da75db70a2ce6727bb726c14d",
+    "local": "examples/sv_uvm_minimal/src/demo_coverage.svh",
+    "local_sha256": "7d8176f591f7a0d71028b5b82a129eec0007da3da75db70a2ce6727bb726c14d",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_driver.svh",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_driver.svh",
+    "source_sha256": "99c813a48a778cdb4020a08ab27a429d8e94145fea22a5826d02cab70e12653f",
+    "local": "examples/sv_uvm_minimal/src/demo_driver.svh",
+    "local_sha256": "99c813a48a778cdb4020a08ab27a429d8e94145fea22a5826d02cab70e12653f",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_dut.v",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_dut.v",
+    "source_sha256": "9f2ab36a3c1a0e79341e447b8db77b1188483d734072b9e3589aef796c906cb9",
+    "local": "examples/sv_uvm_minimal/src/demo_dut.v",
+    "local_sha256": "9f2ab36a3c1a0e79341e447b8db77b1188483d734072b9e3589aef796c906cb9",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_env.svh",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_env.svh",
+    "source_sha256": "fc97228f9a1f1a7ff2c6fd3bd4cef717df1f5b96dc62224423cdae034901a560",
+    "local": "examples/sv_uvm_minimal/src/demo_env.svh",
+    "local_sha256": "fc97228f9a1f1a7ff2c6fd3bd4cef717df1f5b96dc62224423cdae034901a560",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_if.sv",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_if.sv",
+    "source_sha256": "c0776a802e0b91c505f9a5cdcd15e0d0057baeab5a1dc3bb54aeb2e560fb5bab",
+    "local": "examples/sv_uvm_minimal/src/demo_if.sv",
+    "local_sha256": "c0776a802e0b91c505f9a5cdcd15e0d0057baeab5a1dc3bb54aeb2e560fb5bab",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_item.svh",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_item.svh",
+    "source_sha256": "3863c9a2f392cbdc34684c01cdf76c21be618a5fbb8cafd48e587dcd5529fc61",
+    "local": "examples/sv_uvm_minimal/src/demo_item.svh",
+    "local_sha256": "3863c9a2f392cbdc34684c01cdf76c21be618a5fbb8cafd48e587dcd5529fc61",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_monitor.svh",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_monitor.svh",
+    "source_sha256": "3c16a4e50f9860d069b6d3e10065d4c29fc9edeef84021e7ebb9f4bf357e5542",
+    "local": "examples/sv_uvm_minimal/src/demo_monitor.svh",
+    "local_sha256": "3c16a4e50f9860d069b6d3e10065d4c29fc9edeef84021e7ebb9f4bf357e5542",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_pkg.sv",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_pkg.sv",
+    "source_sha256": "1cbfaafc0b2ea909e7fd3e113b2911074b90e329167a61a5693136f17720ba4f",
+    "local": "examples/sv_uvm_minimal/src/demo_pkg.sv",
+    "local_sha256": "1cbfaafc0b2ea909e7fd3e113b2911074b90e329167a61a5693136f17720ba4f",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_scoreboard.svh",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_scoreboard.svh",
+    "source_sha256": "f177e7a707e7ed1c6de8614e434be7372f859a6ae79a54dc7c40d2fdf016cf68",
+    "local": "examples/sv_uvm_minimal/src/demo_scoreboard.svh",
+    "local_sha256": "f177e7a707e7ed1c6de8614e434be7372f859a6ae79a54dc7c40d2fdf016cf68",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_sequence.svh",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_sequence.svh",
+    "source_sha256": "d3c282ccbc81df5968368f498b7c5278b39e4d477a327b27f740e5e24007f811",
+    "local": "examples/sv_uvm_minimal/src/demo_sequence.svh",
+    "local_sha256": "d3c282ccbc81df5968368f498b7c5278b39e4d477a327b27f740e5e24007f811",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_sequencer.svh",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_sequencer.svh",
+    "source_sha256": "a419bdec90523fceefef37c360cae229d797757acf89ca4c7a36771f24af7f41",
+    "local": "examples/sv_uvm_minimal/src/demo_sequencer.svh",
+    "local_sha256": "a419bdec90523fceefef37c360cae229d797757acf89ca4c7a36771f24af7f41",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_tb.sv",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_tb.sv",
+    "source_sha256": "a5e898eb2a9341ba45f7b036f5047de7e2469b375043a183f6304b31e9ba5e3b",
+    "local": "examples/sv_uvm_minimal/src/demo_tb.sv",
+    "local_sha256": "a5e898eb2a9341ba45f7b036f5047de7e2469b375043a183f6304b31e9ba5e3b",
+    "handling": "示例副本"
+  },
+  {
+    "id": "EX-UVM-demo_test.svh",
+    "source": "E:\\centOS\\代码规则建立\\代码规范输出\\examples\\sv_uvm_minimal\\src\\demo_test.svh",
+    "source_sha256": "99d9e8411a588f1e086582f50fc26fbdc8ce6ca0153d952a9197425af96888e9",
+    "local": "examples/sv_uvm_minimal/src/demo_test.svh",
+    "local_sha256": "99d9e8411a588f1e086582f50fc26fbdc8ce6ca0153d952a9197425af96888e9",
+    "handling": "示例副本"
+  },
+  {
+    "id": "HIST-1",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\knowledge\\01_Aurora_工程速查.md",
+    "source_sha256": "203a220658f887164381d919feb78f71abc549d55723002551ef814ff1130442",
+    "local": "sources/history/01_Aurora_工程速查.md",
+    "local_sha256": "81dc5f290c3124f47ca460d987d4b5caa8af688b3fd867006b8ca17d8ff34c37",
+    "handling": "主题快照；补充历史状态与执行方式说明"
+  },
+  {
+    "id": "HIST-2",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\knowledge\\02_PCIe_XDMA_工程速查.md",
+    "source_sha256": "523c1419e53b260c8612c326b14da91fadd5eb94d4644891df5e3b8c70291dbc",
+    "local": "sources/history/02_PCIe_XDMA_工程速查.md",
+    "local_sha256": "8db5806c1f766d572bf23bbe6ee78f087ec377cfd54ddba55e5729c3e6590642",
+    "handling": "主题快照；补充历史状态与执行方式说明"
+  },
+  {
+    "id": "HIST-3",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\knowledge\\03_DDR_MIG_工程速查.md",
+    "source_sha256": "61e1d66574e410881636e0759c0ccd99c39f673c4083512d5f669afda4c462f8",
+    "local": "sources/history/03_DDR_MIG_工程速查.md",
+    "local_sha256": "dcbd0ba47ab45021df937d658146e8bf5fb8bb1a16d6f4a9972452470adfc12d",
+    "handling": "主题快照；补充历史状态与执行方式说明"
+  },
+  {
+    "id": "HIST-4",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\knowledge\\04_以太网_工程速查.md",
+    "source_sha256": "67de30d17eb54f5ef89faa5bfbfff0338ad4b05f1a8b99f8dc4be764bce32a7f",
+    "local": "sources/history/04_以太网_工程速查.md",
+    "local_sha256": "80598a390da40f9a40a7b3a93fac1e104061fb45997465b129c605ef87d01372",
+    "handling": "主题快照；补充历史状态与执行方式说明"
+  },
+  {
+    "id": "HIST-5",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\knowledge\\05_跨IP_集成检查表.md",
+    "source_sha256": "cbef62b599b3ae7c29079ce968e38903dc5aba5ccdc1ca95d94b9d4e9cef5b51",
+    "local": "sources/history/05_跨IP_集成检查表.md",
+    "local_sha256": "ee06bc72e9a2584a3623437dce61e98b21b37b2eda6773cae58a2e8a9f5ad834",
+    "handling": "主题快照；补充历史状态与执行方式说明"
+  },
+  {
+    "id": "DOC-IHI0022E",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\corpus\\foundation\\IHI0022E_amba_axi_and_ace_protocol_spec-399f31971e23cbe5.md",
+    "source_sha256": "997720ccc3846d1b2d42dc3d5a7523bc4e8f68a3976434d585c63a6a70f26c06",
+    "local": "sources/vendor/IHI0022E.md",
+    "local_sha256": "997720ccc3846d1b2d42dc3d5a7523bc4e8f68a3976434d585c63a6a70f26c06",
+    "handling": "原知识库文字抽取副本；非原PDF",
+    "original_document": "F:\\Xiliinx文档\\IHI0022E_amba_axi_and_ace_protocol_spec.pdf",
+    "original_document_sha256": "399f31971e23cbe59e7df9c4a2a18500db6a1bda3e460ed33454487c192880f9",
+    "extractor": "pypdf:328pages"
+  },
+  {
+    "id": "DOC-IHI0051A",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\corpus\\foundation\\IHI0051A_amba4_axi4_stream_v1_0_protocol_spec-86778ed00b1185ac.md",
+    "source_sha256": "f1edf24bf9199dc4b120ff8e6125b63ba681ded5998ce47c85b59ba4bf9afe20",
+    "local": "sources/vendor/IHI0051A.md",
+    "local_sha256": "f1edf24bf9199dc4b120ff8e6125b63ba681ded5998ce47c85b59ba4bf9afe20",
+    "handling": "原知识库文字抽取副本；非原PDF",
+    "original_document": "F:\\Xiliinx文档\\IHI0051A_amba4_axi4_stream_v1_0_protocol_spec.pdf",
+    "original_document_sha256": "86778ed00b1185ac4410ebe6df2771222d809f79d0cec7bde856b3bbe01c1d63",
+    "extractor": "pypdf:42pages"
+  },
+  {
+    "id": "DOC-pg057",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\corpus\\foundation\\pg057-fifo-generator-e40e7d596642d2a6.md",
+    "source_sha256": "e9d9378645128a9b58326748db14e3267071cab1beb103984d01ccf597796dcf",
+    "local": "sources/vendor/pg057.md",
+    "local_sha256": "e9d9378645128a9b58326748db14e3267071cab1beb103984d01ccf597796dcf",
+    "handling": "原知识库文字抽取副本；非原PDF",
+    "original_document": "F:\\Xiliinx文档\\pg057-fifo-generator.pdf",
+    "original_document_sha256": "e40e7d596642d2a639219c8b5d3721739fb7399efecfacf85825a0e0b89c9284",
+    "extractor": "pypdf:221pages"
+  },
+  {
+    "id": "DOC-ug949",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\corpus\\foundation\\ug949-vivado-design-methodology-895f91e2d6a5b8c0.md",
+    "source_sha256": "c2102b385a8af8fc276f991a9ed0ba52451495b83fa3e2fc967395a1a219f37a",
+    "local": "sources/vendor/ug949.md",
+    "local_sha256": "c2102b385a8af8fc276f991a9ed0ba52451495b83fa3e2fc967395a1a219f37a",
+    "handling": "原知识库文字抽取副本；非原PDF",
+    "original_document": "F:\\Xiliinx文档\\ug949-vivado-design-methodology.pdf",
+    "original_document_sha256": "895f91e2d6a5b8c0874265a34d1d6d883cb5b7b1fac2dc69f1969eda4656761d",
+    "extractor": "pypdf:283pages"
+  },
+  {
+    "id": "DOC-ug901",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\corpus\\foundation\\ug901-vivado-synthesis-5d981d705fb6b037.md",
+    "source_sha256": "8945b81295c086902fc9ef1c549d69cbbe3a384c28e4f25221d9bc45e6bffd70",
+    "local": "sources/vendor/ug901.md",
+    "local_sha256": "8945b81295c086902fc9ef1c549d69cbbe3a384c28e4f25221d9bc45e6bffd70",
+    "handling": "原知识库文字抽取副本；非原PDF",
+    "original_document": "F:\\Xiliinx文档\\ug901-vivado-synthesis.pdf",
+    "original_document_sha256": "5d981d705fb6b0375626e999dad33c8ec6b6733e63379c018b2f23ff043fb0c5",
+    "extractor": "pypdf:270pages"
+  },
+  {
+    "id": "DOC-ug937",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\corpus\\foundation\\ug937-vivado-design-suite-simulation-tutorial-3d50c7cfa0112ddc.md",
+    "source_sha256": "1bed57a139b4cf48a4d03d0c6110cd9173d923ad7a33f38198decdfe7f51294a",
+    "local": "sources/vendor/ug937.md",
+    "local_sha256": "1bed57a139b4cf48a4d03d0c6110cd9173d923ad7a33f38198decdfe7f51294a",
+    "handling": "原知识库文字抽取副本；非原PDF",
+    "original_document": "F:\\Xiliinx文档\\ug937-vivado-design-suite-simulation-tutorial.pdf",
+    "original_document_sha256": "3d50c7cfa0112ddc95b41e6b205e70204097a49a591be07efd29f3280ed726a3",
+    "extractor": "pypdf:56pages"
+  },
+  {
+    "id": "DOC-ug835",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\corpus\\foundation\\ug835-vivado-tcl-commands-146a91189a26c41c.md",
+    "source_sha256": "59acac23e03d5104bc1524ec357c16e2c4537f1c08c21044186ab7c330e68c35",
+    "local": "sources/vendor/ug835.md",
+    "local_sha256": "59acac23e03d5104bc1524ec357c16e2c4537f1c08c21044186ab7c330e68c35",
+    "handling": "原知识库文字抽取副本；非原PDF",
+    "original_document": "F:\\Xiliinx文档\\ug835-vivado-tcl-commands.pdf",
+    "original_document_sha256": "146a91189a26c41c9739e79986768308865acce7a91b33248c549c0f6cc37d39",
+    "extractor": "pypdf:1557pages"
+  },
+  {
+    "id": "DOC-pg059",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\corpus\\foundation\\pg059-axi-interconnect-50406c8c53bddc0a.md",
+    "source_sha256": "3bf4a61ac51e3208c24def5a9d5f9ecce386792542995023f78325ec133b13f4",
+    "local": "sources/vendor/pg059.md",
+    "local_sha256": "3bf4a61ac51e3208c24def5a9d5f9ecce386792542995023f78325ec133b13f4",
+    "handling": "原知识库文字抽取副本；非原PDF",
+    "original_document": "F:\\Xiliinx文档\\pg059-axi-interconnect.pdf",
+    "original_document_sha256": "50406c8c53bddc0a66367f7f8bd32e5fa63a7e1dbce1efb543b2a04afb523493",
+    "extractor": "pypdf:171pages"
+  },
+  {
+    "id": "DOC-pg021",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\corpus\\foundation\\pg021_axi_dma-83913d125d8c4615.md",
+    "source_sha256": "f35b9f4dddb0f792d3b081fb0bde0690303d994877d780ead0d6aa4b35e2e9ca",
+    "local": "sources/vendor/pg021.md",
+    "local_sha256": "f35b9f4dddb0f792d3b081fb0bde0690303d994877d780ead0d6aa4b35e2e9ca",
+    "handling": "原知识库文字抽取副本；非原PDF",
+    "original_document": "F:\\Xiliinx文档\\pg021_axi_dma.pdf",
+    "original_document_sha256": "83913d125d8c46150f499b9bdf56301421d0021b67480f132123db4a1a5ea324",
+    "extractor": "pypdf:97pages"
+  },
+  {
+    "id": "DOC-pg022",
+    "source": "E:\\centOS\\xilinx_knowledge_base\\corpus\\foundation\\pg022_axi_datamover_5.1-4db49ac7c5084a69.md",
+    "source_sha256": "7dbe6bc7cb12ccf0f1dd72f7fad173f3eba3704f9b9a6e2657f5672e3c673b16",
+    "local": "sources/vendor/pg022.md",
+    "local_sha256": "7dbe6bc7cb12ccf0f1dd72f7fad173f3eba3704f9b9a6e2657f5672e3c673b16",
+    "handling": "原知识库文字抽取副本；非原PDF",
+    "original_document": "F:\\Xiliinx文档\\pg022_axi_datamover_5.1.pdf",
+    "original_document_sha256": "4db49ac7c5084a697e2f78f8278949ff35637c7e6610bcc935e3a6bfdedd5f3d",
+    "extractor": "pypdf:59pages"
+  },
+  {
+    "id": "CASE-002",
+    "source": "E:\\centOS\\AI演示样例\\FPGA_AI_研发体系_V2完整展示样板包\\cases\\CASE-002.md",
+    "source_sha256": "0fa20b584b468851c751880142862d198d5e608c841faeb8040a20942079b21a",
+    "local": "sources/cases/CASE-002.md",
+    "local_sha256": "3cb9094bb4e2a570a40c5b8d46b0ef24eb947297180984a948961d54901b9159",
+    "handling": "保留技术段；去除演示与旧流程部分"
+  },
+  {
+    "id": "CASE-003",
+    "source": "E:\\centOS\\AI演示样例\\FPGA_AI_研发体系_V2完整展示样板包\\cases\\CASE-003.md",
+    "source_sha256": "23d83474c5e5453a20d318421030348f8c613320baed7f591cf83a0b9c693e28",
+    "local": "sources/cases/CASE-003.md",
+    "local_sha256": "92852d161a47df6096482a9593dc80ed61f4a31192d737443b06e0aafe2a56ad",
+    "handling": "保留技术段；去除演示与旧流程部分"
+  },
+  {
+    "id": "CASE-004",
+    "source": "E:\\centOS\\AI演示样例\\FPGA_AI_研发体系_V2完整展示样板包\\cases\\CASE-004.md",
+    "source_sha256": "73da2f7a0f934772e0a277cdc02cbc829b397e2c066c7e24aa92da14f92f2677",
+    "local": "sources/cases/CASE-004.md",
+    "local_sha256": "d9b971f56626add93fd270041ac69facb2c51976a50582fd02154881f4440a55",
+    "handling": "保留技术段；去除演示与旧流程部分"
+  },
+  {
+    "id": "CASE-005",
+    "source": "E:\\centOS\\AI演示样例\\FPGA_AI_研发体系_V2完整展示样板包\\cases\\CASE-005.md",
+    "source_sha256": "b76c801f987ac683a168a13088aad115b747e99eb39fd809503d6ecab464372a",
+    "local": "sources/cases/CASE-005.md",
+    "local_sha256": "33bbabce4cbcffb8522eef6cb729374a942b47d7f83678ab64568ec0a6f05706",
+    "handling": "保留技术段；去除演示与旧流程部分"
+  },
+  {
+    "id": "CASE-006",
+    "source": "E:\\centOS\\AI演示样例\\FPGA_AI_研发体系_V2完整展示样板包\\cases\\CASE-006.md",
+    "source_sha256": "1a4d97bb9d44adc550b8b9dfbb918c2be5b0b7399fdc475da8e64d30699b34ae",
+    "local": "sources/cases/CASE-006.md",
+    "local_sha256": "e55f77571727c007b553b5d63c024b26c613b0bc2c5144961462e8b9748cc028",
+    "handling": "保留技术段；去除演示与旧流程部分"
+  },
+  {
+    "id": "HISTORY-INDEX",
+    "source": "E:\\centOS\\AI演示样例\\FPGA_AI_研发体系_V2完整展示样板包\\index\\evidence_path_index.local.json",
+    "source_sha256": "37cb8aefb55ff8d4129ec34a05a37b377df7f03bf6c7eb33fd234f7620e456cf",
+    "local": "sources/历史来源定位.md",
+    "local_sha256": "e75cfe18d02f95f78d95b916291552d9cddc8417afd58df8826ecacd1a859e23",
+    "handling": "来源登记转为离线说明"
+  },
+  {
+    "id": "SKILL-fpga-design-spec",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\skills\\fpga-design-spec\\SKILL.md",
+    "source_sha256": "08a977b2e8bf64a59c79637bf2189effc3d1beddba92c1fce9a58221f10f594e",
+    "local": "skills/fpga-design-spec/SKILL.md",
+    "local_sha256": "48728c2c9a06816b67744a140acec2d174a00546e0ee161f87c8e9babf172a4f",
+    "handling": "保留四阶段流程；增加知识入口及上传发布安全引用"
+  },
+  {
+    "id": "SKILL-fpga-rtl-development-review",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\skills\\fpga-rtl-development-review\\SKILL.md",
+    "source_sha256": "ac35c326ce6ddd0bb5fbc92e2335fc0f129fb25997bb7995e3c595bbebfc69da",
+    "local": "skills/fpga-rtl-development-review/SKILL.md",
+    "local_sha256": "d39bbcf20ca1317ec3acf280dbb32cb0f30fee2e0689fb72dc4e137430d1b340",
+    "handling": "保留四阶段流程；增加知识入口及上传发布安全引用"
+  },
+  {
+    "id": "SKILL-fpga-simulation-regression",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\skills\\fpga-simulation-regression\\SKILL.md",
+    "source_sha256": "bee3f629f67c8a7db1d04ba4eb86a50bbae0062a00aa7dfea73fb2549a865a14",
+    "local": "skills/fpga-simulation-regression/SKILL.md",
+    "local_sha256": "92d54ac972708551e2aaddec84b3908cc8e1d5e9375ffb9f7f32f1ddb448ed5c",
+    "handling": "保留四阶段流程；增加知识入口及上传发布安全引用"
+  },
+  {
+    "id": "SKILL-fpga-verification-planning",
+    "source": "E:\\centOS\\FPGA流程知识库_V1\\skills\\fpga-verification-planning\\SKILL.md",
+    "source_sha256": "2580d604bbda933c1e139cfe189dc4126fc99cd72919901ee80bb52188941cfa",
+    "local": "skills/fpga-verification-planning/SKILL.md",
+    "local_sha256": "b68bc68673de9c4d12cc9972a9befc86fe1175edd965758cecaa9440c7dfa7bf",
+    "handling": "保留四阶段流程；增加知识入口及上传发布安全引用"
+  }
+]

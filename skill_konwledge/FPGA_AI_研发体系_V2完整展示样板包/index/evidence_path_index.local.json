@@ -1,0 +1,192 @@
+{
+  "id": "LOCAL-EVIDENCE-INDEX",
+  "version": "2.0.0-demo",
+  "classification": "LOCAL_ONLY_DO_NOT_EXPORT",
+  "access": "read_only",
+  "sources": [
+    {
+      "id": "SRC-CHAT",
+      "path": "E:/centOS/AI演示样例/FPGA_AI_知识库与展示策略_完整聊天记录.md",
+      "authority": "process_history",
+      "description": "用户需求背景，助手建议不是用户指令",
+      "access": "read_only",
+      "sha256": "cbf627e28919400e871d9a8a098a93266d89b7bb44881329e79b27c06f4bd1f7",
+      "evidence_form": "background_or_process_record"
+    },
+    {
+      "id": "SRC-MAPPING",
+      "path": "R:/a_transferred_docs/AI辅助编程摸排文档.docx",
+      "authority": "current_project",
+      "description": "五字段摸排空模板",
+      "access": "read_only",
+      "sha256": "61d241f543de0862abe9df8af06902bfb58790409b53b845d6cc321fcc00341e",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-KB",
+      "path": "E:/centOS/xilinx_knowledge_base/README.md",
+      "authority": "current_project",
+      "description": "旧库范围与使用",
+      "access": "read_only",
+      "sha256": "e27b154d56633dc8fb1471fb9d10fd4232f489dbb5419822a1c93c8d869f5444",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-MANIFEST",
+      "path": "E:/centOS/xilinx_knowledge_base/index/manifest.json",
+      "authority": "current_project",
+      "description": "396条文档清单",
+      "access": "read_only",
+      "sha256": "cda2b85f63e3f48fe6909afdfbc67d5fe07adc5b86aa2d6215167f7723a8e8ee",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-KBBUILD",
+      "path": "E:/centOS/xilinx_knowledge_base/index/build_report.json",
+      "authority": "current_project",
+      "description": "2026-08-20构建统计",
+      "access": "read_only",
+      "sha256": "412bbacf02d6fe665f6dffacb473ffdf5ad653407f16c42689900afab06bbfcf",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-AURORA",
+      "path": "E:/centOS/xilinx_knowledge_base/knowledge/01_Aurora_工程速查.md",
+      "authority": "current_project",
+      "description": "参数层级，人工摘要",
+      "access": "read_only",
+      "sha256": "203a220658f887164381d919feb78f71abc549d55723002551ef814ff1130442",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-CROSS",
+      "path": "E:/centOS/xilinx_knowledge_base/knowledge/05_跨IP_集成检查表.md",
+      "authority": "current_project",
+      "description": "跨IP约束摘要",
+      "access": "read_only",
+      "sha256": "cbef62b599b3ae7c29079ce968e38903dc5aba5ccdc1ca95d94b9d4e9cef5b51",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-RULES",
+      "path": "E:/centOS/代码规则建立/代码规范输出/README.md",
+      "authority": "current_project",
+      "description": "规则包1.0.0",
+      "access": "read_only",
+      "sha256": "b73e004f7a6d39198d5cc96556d130dfe06092fabddb2cbf78f7e8be495b5086",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-CUSTOM",
+      "path": "E:/centOS/代码规则建立/代码规范输出/config/custom_rules.json",
+      "authority": "current_project",
+      "description": "四条规则单一事实源",
+      "access": "read_only",
+      "sha256": "a16ad409fa9185671ac5062e5a3a4caa54c5da1de78ba15d9c4ca5c0d6ed54d3",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-CELLS",
+      "path": "E:/centOS/代码规则建立/代码规范输出/config/approved_cells.json",
+      "authority": "current_project",
+      "description": "8类待批准单元",
+      "access": "read_only",
+      "sha256": "d3c0f18efa895b1458ff1239d519cb5cf235f81cd49ca030e3b87cf5c482e8de",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-RULECHECK",
+      "path": "E:/centOS/代码规则建立/代码规范输出/06_验证记录.md",
+      "authority": "current_project",
+      "description": "包检查与VCS NOT RUN",
+      "access": "read_only",
+      "sha256": "d923d5aae68da5dab3f616a9c5af6cfdb0cb81931b642f789350fe65e10aac16",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-PCIE",
+      "path": "E:/PCIE-CPU/docs/RTDS_test_XDMA_RootPort问题发现与处理台账.md",
+      "authority": "verified_project",
+      "description": "2026-07-24台账：AUR-002、DMA-002等",
+      "access": "read_only",
+      "sha256": "e5a0c9c640aa17341e65b2ad9e8c155dcbea6be047ea9c08f0e9f676092dcce5",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-COV",
+      "path": "E:/gpt_doc/Vivado_2024.2_覆盖率验证与回归报告.md",
+      "authority": "verified_project",
+      "description": "2026-07-17报告：7/7与覆盖统计",
+      "access": "read_only",
+      "sha256": "4eaea43d0b92f033f8bd66e75f4971e861ebed092bd2cc26115026b683df84b3",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-WORKMINUS",
+      "path": "E:/gpt_doc/Vivado_2024.2_第8章_batch覆盖率_work_minus与采样问题修复.md",
+      "authority": "verified_project",
+      "description": "路径与monitor采样修复报告",
+      "access": "read_only",
+      "sha256": "2d7a0cc738e500127500f0881a950a16daa25a187b79dace582121f0bec94ba0",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-FDMA",
+      "path": "E:/codex_history_md/centOS/2026-09-02_09-23_分析主体并设计AI展示选题.md",
+      "authority": "process_history",
+      "description": "全流程阶段与背景归纳",
+      "access": "read_only",
+      "sha256": "1876b2fb4530d4d07fe0a6cf51b641d5521d39650777c5fcbae98e837765f79d",
+      "evidence_form": "background_or_process_record"
+    },
+    {
+      "id": "SRC-EARLY",
+      "path": "E:/codex_history_md/gpt_doc/2026-06-15_设计分析与文档更新.md",
+      "authority": "process_history",
+      "description": "已有RTL基础上的协作",
+      "access": "read_only",
+      "sha256": "ae42fac1e3734c57b17c4adb01136fba4d8a80c5fe3d85b87ab294ce2aa85fbd",
+      "evidence_form": "background_or_process_record"
+    },
+    {
+      "id": "SRC-RX",
+      "path": "E:/codex_history_md/gpt_doc/2026-07-08_09-41_检查 RX FIFO almost_full.md",
+      "authority": "process_history",
+      "description": "固定Seed 564926原对话记录",
+      "access": "read_only",
+      "sha256": "dd58a7200c60540935e121340d038f4dedfd373afc73a90d2a35b4aeb2910aae",
+      "evidence_form": "background_or_process_record"
+    },
+    {
+      "id": "SRC-REGHIST",
+      "path": "E:/codex_history_md/gpt_doc/2026-07-03_16-23_排查回归失败原因.md",
+      "authority": "process_history",
+      "description": "27任务回归排查记录",
+      "access": "read_only",
+      "sha256": "0b6073714a7d3ad273d7f503c85f26116b4f338288ba4d65fccd8d03415b887c",
+      "evidence_form": "background_or_process_record"
+    },
+    {
+      "id": "SRC-LEAK",
+      "path": "E:/centOS/xilinx_knowledge_base/corpus/cross_ip/axis_async_fifo-a20bd1e9d3d4526d.md",
+      "authority": "current_project",
+      "description": "已入库的异步FIFO，留出排除",
+      "access": "read_only",
+      "sha256": "d3a34e25700dc2180a996a8a58072cc98d34f21194ca16b1d1e6eee8b524aeca",
+      "evidence_form": "document_or_report"
+    },
+    {
+      "id": "SRC-RULEHIST",
+      "path": "E:/codex_history_md/centOS/2026-09-02_10-09_制定海思ASIC代码规范.md",
+      "authority": "process_history",
+      "description": "规范建立过程背景",
+      "access": "read_only",
+      "sha256": "595d9645b8cb9194e30260bb3c8237475fd32394d0916b0bc2722e26e96ffcba",
+      "evidence_form": "background_or_process_record"
+    }
+  ],
+  "local_toolchain": {
+    "vivado_bat": "D:/Xilinx_2020_2/Vivado/2020.2/bin/vivado.bat",
+    "execution_status": "not_run"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "FPGA测试点与验证方案"
+  short_description: "从模块功能规格分解测试点和用例，同步生成反标完整的测试表与验证方案"
+  default_prompt: "使用 $fpga-verification-planning 分解已确认规格的测试点与用例，并同步编写验证方案，完成后提交本阶段审核。"

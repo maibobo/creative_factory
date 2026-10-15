@@ -1,0 +1,262 @@
+{
+  "objects": [
+    {
+      "id": "RULE-001",
+      "type": "rule_ref",
+      "version": "1.0.0",
+      "scope": "仅任务profile明确采纳时适用",
+      "source_ids": [
+        "SRC-CUSTOM"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "static_check",
+      "authority": "current_project",
+      "causality": "post_kb_asset",
+      "related_ids": [
+        "TASK-HO-001"
+      ],
+      "external_id": "CUSTOM-RTL-001",
+      "body_ref": "rules/企业规则卡与适用范围.md"
+    },
+    {
+      "id": "RULE-002",
+      "type": "rule_ref",
+      "version": "1.0.0",
+      "scope": "仅任务profile明确采纳时适用",
+      "source_ids": [
+        "SRC-CUSTOM"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "static_check",
+      "authority": "current_project",
+      "causality": "post_kb_asset",
+      "related_ids": [
+        "TASK-HO-001"
+      ],
+      "external_id": "CUSTOM-RTL-002",
+      "body_ref": "rules/企业规则卡与适用范围.md"
+    },
+    {
+      "id": "RULE-003",
+      "type": "rule_ref",
+      "version": "1.0.0",
+      "scope": "仅任务profile明确采纳时适用",
+      "source_ids": [
+        "SRC-CUSTOM"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "static_check",
+      "authority": "current_project",
+      "causality": "post_kb_asset",
+      "related_ids": [
+        "TASK-HO-001"
+      ],
+      "external_id": "CUSTOM-RTL-003",
+      "body_ref": "rules/企业规则卡与适用范围.md"
+    },
+    {
+      "id": "RULE-004",
+      "type": "rule_ref",
+      "version": "1.0.0",
+      "scope": "仅任务profile明确采纳时适用",
+      "source_ids": [
+        "SRC-CUSTOM"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "static_check",
+      "authority": "current_project",
+      "causality": "post_kb_asset",
+      "related_ids": [
+        "TASK-HO-001"
+      ],
+      "external_id": "CUSTOM-RTL-004",
+      "body_ref": "rules/企业规则卡与适用范围.md"
+    },
+    {
+      "id": "ACCEPT-AUR-001",
+      "type": "acceptance",
+      "version": "2.0.0-demo",
+      "scope": "AUR-002历史复盘的512 B与IRQ门禁",
+      "source_ids": [
+        "SRC-PCIE"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "not_run",
+      "authority": "current_project",
+      "causality": "post_kb_asset",
+      "related_ids": [
+        "TASK-AUR-001",
+        "TP-AUR-001",
+        "G4"
+      ],
+      "current_result": null
+    },
+    {
+      "id": "OUT-AUR-001",
+      "type": "approved_output_candidate",
+      "version": "2.0.0-demo",
+      "scope": "wrapper历史修复的语义摘要，不是原始AI与人工diff",
+      "source_ids": [
+        "SRC-PCIE"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "integration_sim",
+      "authority": "verified_project",
+      "causality": "pre_kb_historical",
+      "related_ids": [
+        "CASE-002",
+        "FB-001"
+      ],
+      "approval": {
+        "reviewer": null,
+        "date": null,
+        "status": "pending"
+      },
+      "raw_ai_candidate_available": false
+    },
+    {
+      "id": "EVID-AUR-001",
+      "type": "evidence_ref",
+      "version": "2026-07-24-report",
+      "scope": "原台账描述的LocalLink BFM集成仿真结果",
+      "source_ids": [
+        "SRC-PCIE"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "integration_sim",
+      "authority": "verified_project",
+      "causality": "pre_kb_historical",
+      "related_ids": [
+        "CASE-002"
+      ],
+      "evidence_form": "historical_report_not_raw_run"
+    },
+    {
+      "id": "CASE-001",
+      "type": "case_ref",
+      "version": "2.0.0-demo",
+      "scope": "FDMA–Aurora人工与AI端到端协作",
+      "source_ids": [
+        "SRC-COV",
+        "SRC-EARLY"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "integration_sim",
+      "authority": "verified_project",
+      "causality": "pre_kb_historical",
+      "related_ids": [],
+      "document": "cases/CASE-001.md"
+    },
+    {
+      "id": "CASE-002",
+      "type": "case_ref",
+      "version": "2.0.0-demo",
+      "scope": "AUR-002：历史端口语义与wrapper映射",
+      "source_ids": [
+        "SRC-PCIE"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "integration_sim",
+      "authority": "verified_project",
+      "causality": "pre_kb_historical",
+      "related_ids": [],
+      "document": "cases/CASE-002.md"
+    },
+    {
+      "id": "CASE-003",
+      "type": "case_ref",
+      "version": "2.0.0-demo",
+      "scope": "参数层级与证据绑定",
+      "source_ids": [
+        "SRC-AURORA",
+        "SRC-PCIE"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "static_check",
+      "authority": "verified_project",
+      "causality": "post_kb_asset",
+      "related_ids": [],
+      "document": "cases/CASE-003.md"
+    },
+    {
+      "id": "CASE-004",
+      "type": "case_ref",
+      "version": "2.0.0-demo",
+      "scope": "工具证据纠正AI判断",
+      "source_ids": [
+        "SRC-WORKMINUS",
+        "SRC-RX"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "integration_sim",
+      "authority": "verified_project",
+      "causality": "pre_kb_historical",
+      "related_ids": [],
+      "document": "cases/CASE-004.md"
+    },
+    {
+      "id": "CASE-005",
+      "type": "case_ref",
+      "version": "2.0.0-demo",
+      "scope": "回归可信度与失败分类",
+      "source_ids": [
+        "SRC-REGHIST",
+        "SRC-COV"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "integration_sim",
+      "authority": "verified_project",
+      "causality": "pre_kb_historical",
+      "related_ids": [],
+      "document": "cases/CASE-005.md"
+    },
+    {
+      "id": "CASE-006",
+      "type": "case_ref",
+      "version": "2.0.0-demo",
+      "scope": "DMA-002：数据到了，观察模型却不对",
+      "source_ids": [
+        "SRC-PCIE"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "integration_sim",
+      "authority": "verified_project",
+      "causality": "pre_kb_historical",
+      "related_ids": [],
+      "document": "cases/CASE-006.md"
+    },
+    {
+      "id": "CASE-007",
+      "type": "case_ref",
+      "version": "2.0.0-demo",
+      "scope": "代码规范工程化与验收边界",
+      "source_ids": [
+        "SRC-RULECHECK"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "static_check",
+      "authority": "verified_project",
+      "causality": "post_kb_asset",
+      "related_ids": [],
+      "document": "cases/CASE-007.md"
+    },
+    {
+      "id": "CASE-008",
+      "type": "case_ref",
+      "version": "2.0.0-demo",
+      "scope": "包级跨时钟流桥：从规格到验收的新设计样板",
+      "source_ids": [
+        "SRC-LEAK"
+      ],
+      "lifecycle": "candidate",
+      "verification_level": "not_run",
+      "authority": "current_project",
+      "causality": "planned_holdout",
+      "related_ids": [
+        "TASK-HO-001",
+        "EVAL-001"
+      ],
+      "document": "cases/CASE-008.md"
+    }
+  ]
+}

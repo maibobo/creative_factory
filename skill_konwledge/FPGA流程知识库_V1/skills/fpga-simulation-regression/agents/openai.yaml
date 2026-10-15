@@ -1,0 +1,4 @@
+interface:
+  display_name: "FPGA仿真与每日回归"
+  short_description: "按测试点生成验证环境与每日回归脚本，执行复测回归并完成实现和时序收敛"
+  default_prompt: "使用 $fpga-simulation-regression 按已确认测试点编写验证代码和每日回归脚本，完成仿真、回归及implement时序收敛后提交审核。"
