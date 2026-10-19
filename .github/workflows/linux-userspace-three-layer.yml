@@ -1,0 +1,29 @@
+name: Linux userspace three-layer checks
+
+on:
+  push:
+    branches:
+      - refactor/linux-three-layer-20261019
+  pull_request:
+    paths:
+      - 'MobaXterm_Portable_v22.0/linux_design_handoff_20261019_155820/hardware_joint_lab_20261016/arm/**'
+      - 'MobaXterm_Portable_v22.0/linux_design_handoff_20261019_155820/hardware_joint_lab_20261016/tests/test_lab.py'
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: MobaXterm_Portable_v22.0/linux_design_handoff_20261019_155820/hardware_joint_lab_20261016
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile Python modules
+        run: |
+          python3 -m py_compile \
+            arm/rtds_common.py \
+            arm/rtds_regs.py \
+            arm/rtds_dma_transport.py \
+            arm/rtds_protocol.py \
+            arm/rtds_lab.py
+      - name: Run Linux userspace safety tests
+        run: python3 tests/test_lab.py
