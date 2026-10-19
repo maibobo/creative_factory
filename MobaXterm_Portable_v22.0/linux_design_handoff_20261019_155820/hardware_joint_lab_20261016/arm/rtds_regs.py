@@ -50,7 +50,6 @@ class PcieEndpoint:
             for name in ('user', 'h2c_0', 'c2h_0')
         }
         self._verify_nodes()
-        self.reject_external_users()
 
         report.doc['endpoint'] = {
             'bdf': self.pci.name,
@@ -58,6 +57,8 @@ class PcieEndpoint:
             'driver': driver.resolve().name,
             'nodes': {key: str(value) for key, value in self.devices.items()},
         }
+        # Keep endpoint evidence even when another process currently owns a node.
+        self.reject_external_users()
 
     def _verify_nodes(self):
         for node in self.devices.values():
