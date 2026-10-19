@@ -1,0 +1,163 @@
+{"elapsed": 5.4e-05, "event": "START", "run_id": "20261019_092131_multi_0f0a0", "case": "multi", "status": "RUNNING", "pc_time": "2026-10-19T09:21:31.835256+08:00", "boot_mode": "unknown", "arm_wall_time_untrusted": "2000-11-30T16:35:13.527917", "arm_monotonic_start": 1967.563193686, "kernel": "5.10.226-v1.0.4-008a05487-rt89", "machine": "aarch64", "evidence": [], "exclusive_declared": true, "note": "VIO mode validates DDR/C2H, not real Aurora RX."}
+{"elapsed": 0.045697, "event": "REGISTERS", "label": "baseline", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43564, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 0.049098, "event": "DROP_BASELINE", "value": 0}
+{"elapsed": 0.052128, "event": "CONTROL_REQUEST", "action": "inspect", "sequence": 1, "params": {}}
+{"elapsed": 0.958176, "event": "CONTROL_COMPLETE", "action": "inspect", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "3", "blocks": "0", "live": "191", "id": "001_6bae4546"}}
+{"elapsed": 0.971495, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 2, "params": {}}
+{"elapsed": 2.585023, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "1", "live": "447", "id": "002_255a0768"}}
+{"elapsed": 2.594985, "event": "STATE_READY", "offset": "0x30", "value": 1}
+{"elapsed": 2.638384, "event": "REGISTERS", "label": "after_inject_1", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43456, "0x18": 2621440, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 1, "0x34": 14, "0x38": 0}}
+{"elapsed": 2.652299, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 3, "params": {}}
+{"elapsed": 4.266382, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "2", "live": "447", "id": "003_9aef6d85"}}
+{"elapsed": 4.275571, "event": "STATE_READY", "offset": "0x30", "value": 2}
+{"elapsed": 4.320964, "event": "REGISTERS", "label": "after_inject_2", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43556, "0x18": 2621440, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 2, "0x34": 14, "0x38": 0}}
+{"elapsed": 5.446293, "event": "REGISTERS", "label": "before_notification_clear", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43480, "0x18": 2621440, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 2, "0x34": 14, "0x38": 0}}
+{"elapsed": 5.45696, "event": "READ_CLEAR_ONCE", "offset": "0x10", "value": 1}
+{"elapsed": 5.473509, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x280000", "requested": 16, "data_file": "up_000_seq_0000000e.bin"}
+{"elapsed": 5.489168, "event": "DMA_RETURN", "direction": "c2h", "card_address": 2621440, "requested": 16, "completed": 16, "elapsed_seconds": 4.6666e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 5.535874, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43580, "0x18": 2621440, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 2, "0x34": 14, "0x38": 0}}
+{"elapsed": 5.554447, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x280000", "sequence": 14, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_000_seq_0000000e.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 5.560513, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 5.569174, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 5.57834, "event": "STATE_READY", "offset": "0x30", "value": 1}
+{"elapsed": 5.584335, "event": "BLOCK_ACK_CONFIRMED", "sequence": 14, "remaining": 1}
+{"elapsed": 5.602999, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x2c0000", "requested": 16, "data_file": "up_001_seq_0000000f.bin"}
+{"elapsed": 5.61291, "event": "DMA_RETURN", "direction": "c2h", "card_address": 2883584, "requested": 16, "completed": 16, "elapsed_seconds": 3.2958e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 5.657059, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43420, "0x18": 2883584, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 1, "0x34": 15, "0x38": 0}}
+{"elapsed": 5.675899, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x2c0000", "sequence": 15, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_001_seq_0000000f.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 5.682471, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 5.691508, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 5.700349, "event": "STATE_READY", "offset": "0x30", "value": 0}
+{"elapsed": 5.706917, "event": "BLOCK_ACK_CONFIRMED", "sequence": 15, "remaining": 0}
+{"elapsed": 5.719435, "event": "QUEUE_BATCH_VERIFIED", "blocks": 2}
+{"elapsed": 5.726251, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 4, "params": {}}
+{"elapsed": 7.040625, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "1", "live": "447", "id": "004_89f20ace"}}
+{"elapsed": 7.052865, "event": "STATE_READY", "offset": "0x30", "value": 1}
+{"elapsed": 7.1004, "event": "REGISTERS", "label": "after_inject_1", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43476, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 1, "0x34": 16, "0x38": 0}}
+{"elapsed": 7.117413, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 5, "params": {}}
+{"elapsed": 8.733847, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "2", "live": "447", "id": "005_9bf602bb"}}
+{"elapsed": 8.745214, "event": "STATE_READY", "offset": "0x30", "value": 2}
+{"elapsed": 8.792133, "event": "REGISTERS", "label": "after_inject_2", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43478, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 2, "0x34": 16, "0x38": 0}}
+{"elapsed": 8.818459, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 6, "params": {}}
+{"elapsed": 10.442004, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "3", "live": "447", "id": "006_bf4929df"}}
+{"elapsed": 10.450741, "event": "STATE_READY", "offset": "0x30", "value": 3}
+{"elapsed": 10.498515, "event": "REGISTERS", "label": "after_inject_3", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43514, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 3, "0x34": 16, "0x38": 0}}
+{"elapsed": 10.525825, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 7, "params": {}}
+{"elapsed": 12.143401, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "4", "live": "447", "id": "007_be2d1faf"}}
+{"elapsed": 12.155675, "event": "STATE_READY", "offset": "0x30", "value": 4}
+{"elapsed": 12.203303, "event": "REGISTERS", "label": "after_inject_4", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43492, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 4, "0x34": 16, "0x38": 0}}
+{"elapsed": 12.231198, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 8, "params": {}}
+{"elapsed": 13.848899, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "5", "live": "447", "id": "008_a6554df7"}}
+{"elapsed": 13.861522, "event": "STATE_READY", "offset": "0x30", "value": 5}
+{"elapsed": 13.909253, "event": "REGISTERS", "label": "after_inject_5", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43460, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 5, "0x34": 16, "0x38": 0}}
+{"elapsed": 13.937399, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 9, "params": {}}
+{"elapsed": 15.655644, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "6", "live": "447", "id": "009_b4f32079"}}
+{"elapsed": 15.670239, "event": "STATE_READY", "offset": "0x30", "value": 6}
+{"elapsed": 15.719444, "event": "REGISTERS", "label": "after_inject_6", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43492, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 6, "0x34": 16, "0x38": 0}}
+{"elapsed": 15.748348, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 10, "params": {}}
+{"elapsed": 17.367079, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "7", "live": "447", "id": "010_ce092716"}}
+{"elapsed": 17.389515, "event": "STATE_READY", "offset": "0x30", "value": 7}
+{"elapsed": 17.438666, "event": "REGISTERS", "label": "after_inject_7", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43480, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 7, "0x34": 16, "0x38": 0}}
+{"elapsed": 17.46706, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 11, "params": {}}
+{"elapsed": 18.88548, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "8", "live": "447", "id": "011_43c5e989"}}
+{"elapsed": 18.899522, "event": "STATE_READY", "offset": "0x30", "value": 8}
+{"elapsed": 18.950089, "event": "REGISTERS", "label": "after_inject_8", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43512, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 8, "0x34": 16, "0x38": 0}}
+{"elapsed": 20.078694, "event": "REGISTERS", "label": "before_notification_clear", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43516, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 8, "0x34": 16, "0x38": 0}}
+{"elapsed": 20.093345, "event": "READ_CLEAR_ONCE", "offset": "0x10", "value": 1}
+{"elapsed": 20.116536, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x100000", "requested": 16, "data_file": "up_002_seq_00000010.bin"}
+{"elapsed": 20.132719, "event": "DMA_RETURN", "direction": "c2h", "card_address": 1048576, "requested": 16, "completed": 16, "elapsed_seconds": 4.9292e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 20.183437, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43488, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 8, "0x34": 16, "0x38": 0}}
+{"elapsed": 20.206694, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x100000", "sequence": 16, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_002_seq_00000010.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 20.216821, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 20.223763, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 20.230841, "event": "STATE_READY", "offset": "0x30", "value": 7}
+{"elapsed": 20.235703, "event": "BLOCK_ACK_CONFIRMED", "sequence": 16, "remaining": 7}
+{"elapsed": 20.248923, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x140000", "requested": 16, "data_file": "up_003_seq_00000011.bin"}
+{"elapsed": 20.258582, "event": "DMA_RETURN", "direction": "c2h", "card_address": 1310720, "requested": 16, "completed": 16, "elapsed_seconds": 4.2e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 20.290868, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43428, "0x18": 1310720, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 7, "0x34": 17, "0x38": 0}}
+{"elapsed": 20.305298, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x140000", "sequence": 17, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_003_seq_00000011.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 20.31056, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 20.317628, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 20.32471, "event": "STATE_READY", "offset": "0x30", "value": 6}
+{"elapsed": 20.329584, "event": "BLOCK_ACK_CONFIRMED", "sequence": 17, "remaining": 6}
+{"elapsed": 20.343213, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x180000", "requested": 16, "data_file": "up_004_seq_00000012.bin"}
+{"elapsed": 20.359399, "event": "DMA_RETURN", "direction": "c2h", "card_address": 1572864, "requested": 16, "completed": 16, "elapsed_seconds": 4.375e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 20.392621, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43492, "0x18": 1572864, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 6, "0x34": 18, "0x38": 0}}
+{"elapsed": 20.406151, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x180000", "sequence": 18, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_004_seq_00000012.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 20.411565, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 20.417777, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 20.424602, "event": "STATE_READY", "offset": "0x30", "value": 5}
+{"elapsed": 20.429918, "event": "BLOCK_ACK_CONFIRMED", "sequence": 18, "remaining": 5}
+{"elapsed": 20.443725, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x1c0000", "requested": 16, "data_file": "up_005_seq_00000013.bin"}
+{"elapsed": 20.45378, "event": "DMA_RETURN", "direction": "c2h", "card_address": 1835008, "requested": 16, "completed": 16, "elapsed_seconds": 4.9583e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 20.486526, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43482, "0x18": 1835008, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 5, "0x34": 19, "0x38": 0}}
+{"elapsed": 20.501407, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x1c0000", "sequence": 19, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_005_seq_00000013.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 20.506851, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 20.514344, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 20.521852, "event": "STATE_READY", "offset": "0x30", "value": 4}
+{"elapsed": 20.527315, "event": "BLOCK_ACK_CONFIRMED", "sequence": 19, "remaining": 4}
+{"elapsed": 20.542049, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x200000", "requested": 16, "data_file": "up_006_seq_00000014.bin"}
+{"elapsed": 20.552595, "event": "DMA_RETURN", "direction": "c2h", "card_address": 2097152, "requested": 16, "completed": 16, "elapsed_seconds": 4.4041e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 20.585768, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43540, "0x18": 2097152, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 4, "0x34": 20, "0x38": 0}}
+{"elapsed": 20.60089, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x200000", "sequence": 20, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_006_seq_00000014.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 20.606709, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 20.614386, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 20.622406, "event": "STATE_READY", "offset": "0x30", "value": 3}
+{"elapsed": 20.627909, "event": "BLOCK_ACK_CONFIRMED", "sequence": 20, "remaining": 3}
+{"elapsed": 20.642299, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x240000", "requested": 16, "data_file": "up_007_seq_00000015.bin"}
+{"elapsed": 20.652758, "event": "DMA_RETURN", "direction": "c2h", "card_address": 2359296, "requested": 16, "completed": 16, "elapsed_seconds": 4.5791e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 20.687075, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43444, "0x18": 2359296, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 3, "0x34": 21, "0x38": 0}}
+{"elapsed": 20.702029, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x240000", "sequence": 21, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_007_seq_00000015.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 20.70788, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 20.715657, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 20.727716, "event": "STATE_READY", "offset": "0x30", "value": 2}
+{"elapsed": 20.733559, "event": "BLOCK_ACK_CONFIRMED", "sequence": 21, "remaining": 2}
+{"elapsed": 20.74798, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x280000", "requested": 16, "data_file": "up_008_seq_00000016.bin"}
+{"elapsed": 20.758749, "event": "DMA_RETURN", "direction": "c2h", "card_address": 2621440, "requested": 16, "completed": 16, "elapsed_seconds": 4.9583e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 20.793023, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43546, "0x18": 2621440, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 2, "0x34": 22, "0x38": 0}}
+{"elapsed": 20.808305, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x280000", "sequence": 22, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_008_seq_00000016.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 20.814408, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 20.821593, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 20.829847, "event": "STATE_READY", "offset": "0x30", "value": 1}
+{"elapsed": 20.835648, "event": "BLOCK_ACK_CONFIRMED", "sequence": 22, "remaining": 1}
+{"elapsed": 20.850336, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x2c0000", "requested": 16, "data_file": "up_009_seq_00000017.bin"}
+{"elapsed": 20.861259, "event": "DMA_RETURN", "direction": "c2h", "card_address": 2883584, "requested": 16, "completed": 16, "elapsed_seconds": 4.3459e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 20.89548, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43456, "0x18": 2883584, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 1, "0x34": 23, "0x38": 0}}
+{"elapsed": 20.910819, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x2c0000", "sequence": 23, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_009_seq_00000017.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 20.917229, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 20.924376, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 20.93299, "event": "STATE_READY", "offset": "0x30", "value": 0}
+{"elapsed": 20.938959, "event": "BLOCK_ACK_CONFIRMED", "sequence": 23, "remaining": 0}
+{"elapsed": 20.949319, "event": "QUEUE_BATCH_VERIFIED", "blocks": 8}
+{"elapsed": 20.955541, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 12, "params": {}}
+{"elapsed": 22.666791, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "1", "live": "447", "id": "012_0765dc67"}}
+{"elapsed": 22.677886, "event": "STATE_READY", "offset": "0x30", "value": 1}
+{"elapsed": 22.734673, "event": "REGISTERS", "label": "after_inject_1", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43536, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 1, "0x34": 24, "0x38": 0}}
+{"elapsed": 22.760753, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 13, "params": {}}
+{"elapsed": 24.382477, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "2", "live": "447", "id": "013_96679f43"}}
+{"elapsed": 24.4023, "event": "STATE_READY", "offset": "0x30", "value": 2}
+{"elapsed": 24.460703, "event": "REGISTERS", "label": "after_inject_2", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43480, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 2, "0x34": 24, "0x38": 0}}
+{"elapsed": 25.597382, "event": "REGISTERS", "label": "before_notification_clear", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43466, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 2, "0x34": 24, "0x38": 0}}
+{"elapsed": 25.609405, "event": "READ_CLEAR_ONCE", "offset": "0x10", "value": 1}
+{"elapsed": 25.637995, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x100000", "requested": 16, "data_file": "up_010_seq_00000018.bin"}
+{"elapsed": 25.64909, "event": "DMA_RETURN", "direction": "c2h", "card_address": 1048576, "requested": 16, "completed": 16, "elapsed_seconds": 4.4917e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 25.683466, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43444, "0x18": 1048576, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 2, "0x34": 24, "0x38": 0}}
+{"elapsed": 25.69922, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x100000", "sequence": 24, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_010_seq_00000018.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 25.705712, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 25.71434, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 25.722381, "event": "STATE_READY", "offset": "0x30", "value": 1}
+{"elapsed": 25.728873, "event": "BLOCK_ACK_CONFIRMED", "sequence": 24, "remaining": 1}
+{"elapsed": 25.744352, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x140000", "requested": 16, "data_file": "up_011_seq_00000019.bin"}
+{"elapsed": 25.755734, "event": "DMA_RETURN", "direction": "c2h", "card_address": 1310720, "requested": 16, "completed": 16, "elapsed_seconds": 4.1125e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 25.790831, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43448, "0x18": 1310720, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 1, "0x34": 25, "0x38": 0}}
+{"elapsed": 25.806989, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x140000", "sequence": 25, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_011_seq_00000019.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 25.813612, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 25.821529, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 25.830453, "event": "STATE_READY", "offset": "0x30", "value": 0}
+{"elapsed": 25.837273, "event": "BLOCK_ACK_CONFIRMED", "sequence": 25, "remaining": 0}
+{"elapsed": 25.848318, "event": "QUEUE_BATCH_VERIFIED", "blocks": 2}
+{"elapsed": 25.859616, "event": "RING_WRAP_VERIFIED", "total_blocks": 12, "distinct_slots": 8}
+{"elapsed": 25.89387, "event": "REGISTERS", "label": "final", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43444, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 25.903693, "event": "CONTROL_REQUEST", "action": "snapshot", "sequence": 14, "params": {}}
+{"elapsed": 26.614393, "event": "CONTROL_COMPLETE", "action": "snapshot", "response": {"status": "ok", "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_lab_20261016/captures/gui_20261019_085727_1792371448033/vio_20261019_092158_1792372918442.txt", "id": "014_4327e136"}}
+{"elapsed": 26.633498, "event": "FINISH", "status": "PASS", "error": null}

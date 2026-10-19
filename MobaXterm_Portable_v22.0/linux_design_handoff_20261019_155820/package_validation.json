@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "pc_time": "2026-10-19T15:58:30.161682+08:00",
+  "board_runs": 18,
+  "ddr_payload_pairs_verified": 3,
+  "docx_structure_only": [
+    "history_docs/CPU-FPGA PCIe软件寄存器说明V2.02（当前实现）.docx",
+    "history_docs/CPU-FPGA_PCIe寄存器表单_软件指导手册_V2.0.docx",
+    "history_docs/RTDS_PCIe软硬件联调与烧录操作手册_20261015.docx",
+    "history_docs/RTDS_主机单机VIO上行激励_设计方案_20261013.docx",
+    "hardware_joint_lab_20261016/docs/PCIe板内实验资料入口_20261016.docx",
+    "hardware_joint_lab_20261016/docs/RTDS_ARM_FPGA板内联调实验手册_20261016.docx",
+    "hardware_joint_lab_20261016/docs/RTDS_ARM测试程序源码说明_20261019.docx",
+    "hardware_joint_lab_20261016/docs/RTDS_ARM重点寄存器实时监视说明_20261019.docx",
+    "hardware_joint_lab_20261016/docs/RTDS_ILA_VIO实测波形判读附册_20261019.docx",
+    "hardware_joint_lab_20261016/docs/RTDS_当前ILA_VIO窗口与实测数值_20261019.docx",
+    "hardware_joint_lab_20261016/docs/RTDS_板内联动实测记录_20261019.docx",
+    "hardware_joint_lab_20261016/docs/RTDS_板内联调现场操作卡_20261016.docx",
+    "hardware_joint_lab_20261016/docs/RTDS_现有GUI接入与完整硬件验证计划_20261016.docx",
+    "hardware_joint_lab_20261016/docs/RTDS_远程GUI联动续测说明_20261019.docx",
+    "hardware_joint_lab_20261016/docs/RTDS_部署与实测记录_20261016.docx"
+  ],
+  "docx_rendered": false,
+  "python_syntax": "PASS",
+  "credential_pattern_issues": [],
+  "copied_driver_source": false,
+  "existing_versions_overwritten": false,
+  "remote_target": "C:/project/RTDS/github/MobaXterm_Portable_v22.0/linux_design_handoff_20261019_155820",
+  "git_add_commit_push": false,
+  "keyword_screening": "keyword_screening.json",
+  "keyword_screening_status": "PASS"
+}

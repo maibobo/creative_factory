@@ -1,0 +1,24 @@
+{"elapsed": 6.4e-05, "event": "START", "run_id": "20261019_092419_single_88e6d", "case": "single", "status": "RUNNING", "pc_time": "2026-10-19T09:24:19.841730+08:00", "boot_mode": "unknown", "arm_wall_time_untrusted": "2000-11-30T16:38:01.502713", "arm_monotonic_start": 2135.537992016, "kernel": "5.10.226-v1.0.4-008a05487-rt89", "machine": "aarch64", "evidence": [], "exclusive_declared": true, "note": "VIO mode validates DDR/C2H, not real Aurora RX."}
+{"elapsed": 0.045539, "event": "REGISTERS", "label": "baseline", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43532, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 0.048862, "event": "DROP_BASELINE", "value": 0}
+{"elapsed": 0.058823, "event": "CONTROL_REQUEST", "action": "inspect", "sequence": 1, "params": {}}
+{"elapsed": 0.964625, "event": "CONTROL_COMPLETE", "action": "inspect", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "3", "blocks": "0", "live": "191", "id": "001_ece9c0dc"}}
+{"elapsed": 0.975683, "event": "CONTROL_REQUEST", "action": "inject", "sequence": 2, "params": {}}
+{"elapsed": 2.689622, "event": "CONTROL_COMPLETE", "action": "inject", "response": {"status": "ok", "busy": "0", "accepted": "2", "rx_status": "11", "blocks": "1", "live": "447", "id": "002_1a5cb77d"}}
+{"elapsed": 2.698409, "event": "STATE_READY", "offset": "0x30", "value": 1}
+{"elapsed": 2.743362, "event": "REGISTERS", "label": "after_inject_1", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43558, "0x18": 1572864, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 1, "0x34": 26, "0x38": 0}}
+{"elapsed": 3.859445, "event": "REGISTERS", "label": "before_notification_clear", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43504, "0x18": 1572864, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 1, "0x34": 26, "0x38": 0}}
+{"elapsed": 3.869541, "event": "READ_CLEAR_ONCE", "offset": "0x10", "value": 1}
+{"elapsed": 3.887534, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x180000", "requested": 16, "data_file": "up_000_seq_0000001a.bin"}
+{"elapsed": 3.898685, "event": "DMA_RETURN", "direction": "c2h", "card_address": 1572864, "requested": 16, "completed": 16, "elapsed_seconds": 4.8125e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 3.943422, "event": "REGISTERS", "label": "before_ack", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43530, "0x18": 1572864, "0x1c": 8, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 1, "0x34": 26, "0x38": 0}}
+{"elapsed": 3.961887, "event": "BLOCK_DATA_VERIFIED", "block": {"address": "0x180000", "sequence": 26, "effective": 8, "requested": 16, "completed": 16, "data_hex": "1100000022000000", "file": "up_000_seq_0000001a.bin", "ack_intent": true, "ack_confirmed": false}}
+{"elapsed": 3.967548, "event": "WRITE_INTENT", "offset": "0x14", "value": "0x1", "retry": false}
+{"elapsed": 3.975984, "event": "WRITE_RETURNED", "offset": "0x14"}
+{"elapsed": 3.984768, "event": "STATE_READY", "offset": "0x30", "value": 0}
+{"elapsed": 3.990408, "event": "BLOCK_ACK_CONFIRMED", "sequence": 26, "remaining": 0}
+{"elapsed": 4.002126, "event": "QUEUE_BATCH_VERIFIED", "blocks": 1}
+{"elapsed": 4.05258, "event": "REGISTERS", "label": "final", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43468, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 4.062306, "event": "CONTROL_REQUEST", "action": "snapshot", "sequence": 3, "params": {}}
+{"elapsed": 4.873973, "event": "CONTROL_COMPLETE", "action": "snapshot", "response": {"status": "ok", "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_lab_20261016/captures/gui_20261019_085727_1792371448033/vio_20261019_092424_1792373064746.txt", "id": "003_c8e44067"}}
+{"elapsed": 4.88048, "event": "FINISH", "status": "PASS", "error": null}

@@ -1,0 +1,1200 @@
+[
+  {
+    "path": ".gitignore",
+    "size": 217,
+    "sha256": "ffbe4b8a06c17b740ade2b976a1807f47cbcdbb30b5c502d6e27a68323d1c319",
+    "origin": "Prepared from verified session context and saved evidence, 2026-10-19"
+  },
+  {
+    "path": "fpga_reference/ip_config/design_1.bd",
+    "size": 70195,
+    "sha256": "004f8709994b457c65f7dd6f0e1830a5e0788e5b07f24ceb513f0dc31de35768",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\RTDS_test_DDR4_64bit.srcs\\sources_1\\bd\\design_1\\design_1.bd"
+  },
+  {
+    "path": "fpga_reference/ip_config/design_1_xdma_0_0.xci",
+    "size": 340171,
+    "sha256": "c77f78f89728f14c01b8b4c6969ca7af5c9594b062d1efc2aa864d577de85e0e",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\RTDS_test_DDR4_64bit.srcs\\sources_1\\bd\\design_1\\ip\\design_1_xdma_0_0\\design_1_xdma_0_0.xci"
+  },
+  {
+    "path": "fpga_reference/new/CONV_DMA.v",
+    "size": 32069,
+    "sha256": "3a4fa96ecc03e8d208e678e4e9f0ba3a91190d77bba459d992c5d103d99bd117",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\CONV_DMA.v"
+  },
+  {
+    "path": "fpga_reference/new/INFO_EXCH.v",
+    "size": 24029,
+    "sha256": "b7ec6e070fc43cf9b118520398582e56ab248bd73201fbba6c14f1d84198a11e",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\INFO_EXCH.v"
+  },
+  {
+    "path": "fpga_reference/new/PCIe.v",
+    "size": 36049,
+    "sha256": "b700d3e82cbca3195020c3d2de826e54f30544fca4ac4e410db792157c848386",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\PCIe.v"
+  },
+  {
+    "path": "fpga_reference/new/pcie_fdma_aurora_brg_adapter.v",
+    "size": 63799,
+    "sha256": "6859c2f282092cc8566fb1d058e8d4437808ef50ef393aaaf331b1c7b97aa4ee",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\pcie_fdma_aurora_brg_adapter.v"
+  },
+  {
+    "path": "fpga_reference/new/TOP.v",
+    "size": 19217,
+    "sha256": "c11d818e4898f9756cd98f7edcead74a9bda349c28b7f2eacf1e60585fa117b1",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\RTDS_test_DDR4_64bit.srcs\\sources_1\\new\\TOP.v"
+  },
+  {
+    "path": "fpga_reference/rtl/aurora1g_board.xdc",
+    "size": 1218,
+    "sha256": "85c7e96f422269febfc6214d7e1cb59ff1f3d7dc3166a08ace3ef7531eac704d",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\aurora1g_board.xdc"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_1g_periodic_tx.v",
+    "size": 14157,
+    "sha256": "54cb551ed6cc013bf4041cef3a4a5990f9d88814832ed7ec38ae03dc377f5929",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_1g_periodic_tx.v"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_ddr4_recovery_cdc.xdc",
+    "size": 1024,
+    "sha256": "84177265e74c6806a141462f72c2392ff3d95565d7eb86aa488e11462db902e7",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_ddr4_recovery_cdc.xdc"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_fpga_1g_init.v",
+    "size": 2689,
+    "sha256": "2347d9e082632ba370b2b64c97408e1f4321e9493c2a70001e36b361117d6e2a",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_fpga_1g_init.v"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_fpga_bit_cdc.v",
+    "size": 752,
+    "sha256": "ce4cc11d09ff031e37ba62899d4f42a9fc37e725e519a146bb1ef9686848b149",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_fpga_bit_cdc.v"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_fpga_cfg_cdc.v",
+    "size": 1883,
+    "sha256": "f5a6102288e4ba9a90698082c50a01dd22d8febc5aa2363f3ad5354f069a02e8",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_fpga_cfg_cdc.v"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_fpga_count_cdc.v",
+    "size": 1266,
+    "sha256": "acf5f934117e552404e69caf04262e6a05090773c1ce06a7cf4fe752b7e1947b",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_fpga_count_cdc.v"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_fpga_reset_sync.v",
+    "size": 1083,
+    "sha256": "27747817788871afcf8237d11c44aec9313792c4440bbcac191068de02369e11",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_fpga_reset_sync.v"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_pcie_link_debug.v",
+    "size": 8434,
+    "sha256": "bb1fd45246ef0189b243ed4d3ee2b2630cb6086a732d23529bc9b9c3200716aa",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_pcie_link_debug.v"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_pcie_link_observer.v",
+    "size": 4789,
+    "sha256": "e5f80714a6afd541a41da9b27880430fa355e8fc6321be4901b0632a4eea0a2b",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_pcie_link_observer.v"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_rx_block_writer.v",
+    "size": 19574,
+    "sha256": "29f826bd10722081557e80c971937116a8145a384551d4e9968928d4fe4531f1",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_rx_block_writer.v"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_rx_frame_fifo.v",
+    "size": 9504,
+    "sha256": "1263b892f17925bb5a7761c2d97de749015a48882fbfd82aad2c87dedad2418d",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_rx_frame_fifo.v"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_rx_vio_stim.v",
+    "size": 4943,
+    "sha256": "e664dda0c51de01da914f05eddf5fff151ee102bda6fce554ba8653c69b0c913",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_rx_vio_stim.v"
+  },
+  {
+    "path": "fpga_reference/rtl/rtds_sync_timebase.v",
+    "size": 1996,
+    "sha256": "d015ae9f57935a3a43b8d72f2856531c97b56feb09e4aa9baf9036c23d29045d",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\rtl\\rtds_sync_timebase.v"
+  },
+  {
+    "path": "guide_input/01_网页端编写任务与事实边界.md",
+    "size": 2674,
+    "sha256": "3e7c63fcfc184697525a89033a9650228f19e8fa56f3df1faa42af866edede8d",
+    "origin": "Prepared from verified session context and saved evidence, 2026-10-19"
+  },
+  {
+    "path": "guide_input/02_驱动应用代码与依赖关系.md",
+    "size": 6492,
+    "sha256": "da281b0421cab439cfdcd4195cac27d7a3355b81a93ca66e3c886b483fe54bcd",
+    "origin": "Prepared from verified session context and saved evidence, 2026-10-19",
+    "pre_screening_sha256": "c7dd4f54fc33364a614fd24fe36d0f477cd0879f5576bb47f516c9de8e527158",
+    "screened_copy": true
+  },
+  {
+    "path": "guide_input/03_近期讨论与DMA证据摘要.md",
+    "size": 4543,
+    "sha256": "7c3d722d9941694a293221b7c072afa1242e7fab95d0123658e64aaf4bb030f4",
+    "origin": "Prepared from verified session context and saved evidence, 2026-10-19"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/arm/build.sh",
+    "size": 571,
+    "sha256": "1187d75330006faa40358cee49e3412e90de7f5a7aef178a17e3a0765768b7a4",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\arm\\build.sh"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/arm/rtds_dma.c",
+    "size": 4927,
+    "sha256": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\arm\\rtds_dma.c"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/arm/rtds_lab.py",
+    "size": 29047,
+    "sha256": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\arm\\rtds_lab.py"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/arm/rtds_regs_watch.py",
+    "size": 9541,
+    "sha256": "13acad80e2bda0c9971771ccd3779d82b5783ba8abec03bdca250af4c95eba69",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\arm\\rtds_regs_watch.py"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/artifact_manifest.json",
+    "size": 811,
+    "sha256": "369efcefd73cafdcaafbecb7703dd4ec5d9bafb46c2ebeff7a0a056faf2e3ff7",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\artifact_manifest.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/figures_20261019/ila1_c2h_read_zoom.png",
+    "size": 124174,
+    "sha256": "3dac113dee0764dbb81446de4bd2269da0bff808d359afc38b75b371668b76e3",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\figures_20261019\\ila1_c2h_read_zoom.png"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/figures_20261019/ila1_h2c_write_zoom.png",
+    "size": 103615,
+    "sha256": "5e9de6f5886df9799e6dbf690678c00507edf140c01072572766fcd0b3362459",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\figures_20261019\\ila1_h2c_write_zoom.png"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/figures_20261019/ila2_fdma_writer_zoom.png",
+    "size": 118609,
+    "sha256": "77aee05cf81a568bfd7a1da22cf1e335b74b5821d67b29c8e386ed63b570d214",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\figures_20261019\\ila2_fdma_writer_zoom.png"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/figures_20261019/queue_282_and_ring.png",
+    "size": 149987,
+    "sha256": "4b0b6527f1c7b3b1847d9ff5ad9060a6f88f39fb2bfbcdd9f06f0b9dfef340de",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\figures_20261019\\queue_282_and_ring.png"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/PCIe板内实验资料入口_20261016.docx",
+    "size": 38089,
+    "sha256": "ef098da585a36a7a472f080446fb0c340b7d5740b0d54594363a8802030a1a68",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\PCIe板内实验资料入口_20261016.docx"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/PCIe板内实验资料入口_20261016.md",
+    "size": 807,
+    "sha256": "84a976ba59a22825238836d68464bf628903f7fb244cef8575f3638402e5ec92",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\PCIe板内实验资料入口_20261016.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_ARM_FPGA板内联调实验手册_20261016.docx",
+    "size": 49198,
+    "sha256": "61da69b4232ebe771b46f2d6b3f7972dd6c28797f12e0a90dca9273008c275e8",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_ARM_FPGA板内联调实验手册_20261016.docx"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_ARM_FPGA板内联调实验手册_20261016.md",
+    "size": 18360,
+    "sha256": "cfa4406e9408791705efffa09a68a2ba1deb2fcbf4433973870178f3146e4ae7",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_ARM_FPGA板内联调实验手册_20261016.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_ARM测试程序源码说明_20261019.docx",
+    "size": 46564,
+    "sha256": "b483f0d2968731e72ad23a3d912e609ea0fa4a120dd8f1cf7e1907e1b8e2dd8b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_ARM测试程序源码说明_20261019.docx"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_ARM测试程序源码说明_20261019.md",
+    "size": 15221,
+    "sha256": "00c91b4d49d09ed1d12eb69cdd4171a28e15aac63b00092962f78be2b505729c",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_ARM测试程序源码说明_20261019.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_ARM重点寄存器实时监视说明_20261019.docx",
+    "size": 41283,
+    "sha256": "0507c3f6bc352d1bc1d1d64d0545b9232acd0369be28470279ed88f20eeff461",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_ARM重点寄存器实时监视说明_20261019.docx"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_ARM重点寄存器实时监视说明_20261019.md",
+    "size": 5498,
+    "sha256": "c2db1253c53771776760dab48bcbb8be3a303a05ceef5d218a2af3eab26359d3",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_ARM重点寄存器实时监视说明_20261019.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_ILA_VIO实测波形判读附册_20261019.docx",
+    "size": 498609,
+    "sha256": "b945a0c882a9009d4a0c1e1182f317ed97cce55fad02217517d2fd09b478ffd7",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_ILA_VIO实测波形判读附册_20261019.docx"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_ILA_VIO实测波形判读附册_20261019.md",
+    "size": 14307,
+    "sha256": "91a81c7cacb25f77f9293291e348a6b56069cc87863ac9213f8493de8bd98d4b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_ILA_VIO实测波形判读附册_20261019.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_当前ILA_VIO窗口与实测数值_20261019.docx",
+    "size": 45081,
+    "sha256": "ce7ee3e6f1a0f882524c1bcfe8e7cac72264f63881b6d09b30eff412cdac7a20",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_当前ILA_VIO窗口与实测数值_20261019.docx"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_当前ILA_VIO窗口与实测数值_20261019.md",
+    "size": 11373,
+    "sha256": "0e44cdc3a9dd69acd99b3f7cdf2770fe47b8109ab0e2374609b30df599ac8ae6",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_当前ILA_VIO窗口与实测数值_20261019.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_板内联动实测记录_20261019.docx",
+    "size": 40721,
+    "sha256": "4f512bc6f6e1a9519a0f6c5c26b0218cac3db0fb612be3a228084eb3218a7dda",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_板内联动实测记录_20261019.docx"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_板内联动实测记录_20261019.md",
+    "size": 4540,
+    "sha256": "97f511393c731c15d566ebc747da75afa10522367ee9483916e92748cf221015",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_板内联动实测记录_20261019.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_板内联调现场操作卡_20261016.docx",
+    "size": 39256,
+    "sha256": "345273053c50f800763d9d0433688d76987ac762e7051f83d19d345f12f9d92f",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_板内联调现场操作卡_20261016.docx"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_板内联调现场操作卡_20261016.md",
+    "size": 2071,
+    "sha256": "8510390aaa3256ca16d9a75de7296ac46fb8eacbf25eeab64f38ef262b8c6629",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_板内联调现场操作卡_20261016.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_现有GUI接入与完整硬件验证计划_20261016.docx",
+    "size": 40736,
+    "sha256": "734c1481057e72e5f521d6d43df3be7b409723a0b7eb7ad955a4fb4dfb06fb2e",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_现有GUI接入与完整硬件验证计划_20261016.docx"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_现有GUI接入与完整硬件验证计划_20261016.md",
+    "size": 4311,
+    "sha256": "4c432363e7c6042b5680df474e4383ba7842794e559a6c03387303037359fc86",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_现有GUI接入与完整硬件验证计划_20261016.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_远程GUI联动续测说明_20261019.docx",
+    "size": 41614,
+    "sha256": "9d9e01e0e3b88df2b0c5452da4c03b158e5727b1cb808d40f8476e5e8f7dd3c3",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_远程GUI联动续测说明_20261019.docx"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_远程GUI联动续测说明_20261019.md",
+    "size": 6186,
+    "sha256": "623e4901d1d546add608fead6253ac002b4e230c7d8015195c1997fd14d735b6",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_远程GUI联动续测说明_20261019.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_部署与实测记录_20261016.docx",
+    "size": 40247,
+    "sha256": "3665493dcdee50e2b4b7b73d1422f32b7a641ff0aaf7b5bc72076c4aeeb333da",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_部署与实测记录_20261016.docx"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/docs/RTDS_部署与实测记录_20261016.md",
+    "size": 3674,
+    "sha256": "d4a000256a6e2e2fdc54684d84e6851d1aa4252312381ebc82f01928ee71e450",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\docs\\RTDS_部署与实测记录_20261016.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/pc/lab_remote.py",
+    "size": 19154,
+    "sha256": "0fb5c757c1c0a1073fa123f3e1969793470a4bcc10ce6219610bacc4ffeafddb",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\pc\\lab_remote.py"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/pc/launch_windows_check.py",
+    "size": 1394,
+    "sha256": "2a3408c89b207532c928e8c2446477ff50162efd120506ce9ce09a9e853bfd24",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\pc\\launch_windows_check.py"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/pc/verify_from_windows.py",
+    "size": 2643,
+    "sha256": "d9b208a897af46d0a488d55ae06eea937adaa469eece3c792b0c14e688a08f07",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\pc\\verify_from_windows.py"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/pc/verify_gui.py",
+    "size": 4300,
+    "sha256": "7d92ecd2f8da0c73cb6043a9794d86da6f3e8be9004d83c4925dd031e67ef12f",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\pc\\verify_gui.py"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/README.md",
+    "size": 1552,
+    "sha256": "faa3e92a3b37c512b67a76a9643016377583290be621b52d5fd9d56466036912",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\README.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/README_20261019.md",
+    "size": 2204,
+    "sha256": "976f7fbe65806c937ade2d2cdf043a682ca0b8ee01fdc1bd12e4c4dbce839e6c",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\README_20261019.md"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/tests/test_gui_bridge.py",
+    "size": 3485,
+    "sha256": "dd89b66c1736b4a085bc28511d11898b2996c87293388f48271a7473db9f9676",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\tests\\test_gui_bridge.py"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/tests/test_ila_settings.py",
+    "size": 1535,
+    "sha256": "39ed8a87e33c3c89e3187bcaadd7cb671c14307fd784123c757412cd5ee8a70d",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\tests\\test_ila_settings.py"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/tests/test_job_transport.py",
+    "size": 2091,
+    "sha256": "97da1bf1392e9c0d6d72a453f1f96ae457bce0d7c1c8c6280e53ab3f9ee5a47f",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\tests\\test_job_transport.py"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/tests/test_lab.py",
+    "size": 9111,
+    "sha256": "cc11b0a8fbb8e03beba30328524b061a82120162db08cbd71839917eb1282dd6",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\tests\\test_lab.py"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/tests/test_regs_watch.py",
+    "size": 3557,
+    "sha256": "4280cc741401286e1c8937eca482ed99e24a93bb2da74ee16f34a151ae869699",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\tests\\test_regs_watch.py"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/tests/test_vivado.tcl",
+    "size": 1926,
+    "sha256": "f4c79fc6f366040b4aec0a27e18b31881ec4e033b06ae455254a4b528dd59d7e",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\tests\\test_vivado.tcl"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/20261019/acceptance_summary.csv",
+    "size": 1218,
+    "sha256": "745a46db82525e19367c6bbcfd4fbe662184ba0f35181e979a48d1d9b3234a19",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\acceptance_summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/20261019/analyze_captures.py",
+    "size": 3851,
+    "sha256": "8c3ae1527129eef6a2e04d4e11a028a2d355c1dae88afbe9e47eb08b7212f734",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\analyze_captures.py"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/20261019/capture_decode.json",
+    "size": 4453,
+    "sha256": "7e318fdd9992084bad93d59bb45dffe1b54919785fc3808945d21cfd3580a763",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\capture_decode.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/20261019/captures/gui_fdma_20261019_091109_1792372269768.csv",
+    "size": 91427,
+    "sha256": "28aacbde6d6cefa82fee57564571d6c3af87a399a51c7fac19d2ad71ff1183be",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\captures\\gui_fdma_20261019_091109_1792372269768.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/20261019/captures/gui_native_20261019_091031_1792372231992.csv",
+    "size": 199057,
+    "sha256": "3d6e89d7004f61ceed53d3296e0d2de28d470779ad26534fdc885cc149929be5",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\captures\\gui_native_20261019_091031_1792372231992.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/20261019/captures/gui_native_20261019_091042_1792372242631.csv",
+    "size": 199057,
+    "sha256": "16a7702dcfe1a7d80c5d0d0ef856f4906697cb8e95e02175b09f63c942f8a425",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\captures\\gui_native_20261019_091042_1792372242631.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/20261019/captures/vio_20261019_091234_1792372354569.txt",
+    "size": 2288,
+    "sha256": "3dde94b8fc74e810182e6e499227809d4bd91c5dc97c5e33d8e838b5158131d8",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\captures\\vio_20261019_091234_1792372354569.txt"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/20261019/change_only_unit_tests.json",
+    "size": 350,
+    "sha256": "b84f2abdf20996e1cfc101ba29998326a367e5f37fb2e155e7fea2ed189ecfd4",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\change_only_unit_tests.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/20261019/driver_location_20261019_153633.json",
+    "size": 1147,
+    "sha256": "24a763a598847432f82b9bb585d4ff46142ee2e1fcd10b3b283dbb76e0bf0a43",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\driver_location_20261019_153633.json",
+    "pre_screening_sha256": "52f610337d7b0c1e32e3ac78665a311570e7d6663f46a62850abcb9d055370a0",
+    "screened_copy": true
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/20261019/final_route_comparison.json",
+    "size": 8475,
+    "sha256": "52e31f834e26d7447fcafd566cad12ae55417422a3759c5bf913cdb1866486fa",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\final_route_comparison.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/20261019/quiet_monitor_arm_20261019_094523.json",
+    "size": 1560,
+    "sha256": "67a057f352fa545bebe3ff013f949f98bb2fc187c5183c48549cf7368e46bd96",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\quiet_monitor_arm_20261019_094523.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091004_env_38180/result.json",
+    "size": 3534,
+    "sha256": "26594810349d570a75d701f92fa5f624e4de85e3cc06b047bdb1b5066987b4fc",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091004_env_38180\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091004_env_38180/run.log",
+    "size": 1164,
+    "sha256": "6b467749ec11784b69ca6b96933a5234465dbaaffc382b18c8dc6d9ea3ce0102",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091004_env_38180\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091004_env_38180/summary.csv",
+    "size": 161,
+    "sha256": "137b12da42dd042b170752d7e49c1a08b084d6382a0879098599bc0a8b6a169a",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091004_env_38180\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091005_regs_131bc/result.json",
+    "size": 3485,
+    "sha256": "f81fb6ce020ae890cb06ab04d688ccc861c79e6a4781db3d3573c7821596ff51",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091005_regs_131bc\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091005_regs_131bc/run.log",
+    "size": 1125,
+    "sha256": "8f5633366a72b544640439c3acf2ecb466be4dc3333a488deae5971279e5cad5",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091005_regs_131bc\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091005_regs_131bc/summary.csv",
+    "size": 163,
+    "sha256": "c6968cfc7c9ae9c2d1ffc100ba61776d14457a1942fb86d31821c454e2c19d7b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091005_regs_131bc\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091016_config_773c3/result.json",
+    "size": 5817,
+    "sha256": "ef4aac1f23b8e3feb630fde3bae995a30854237d1ce6d35c51f467d3f0c5c530",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091016_config_773c3\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091016_config_773c3/run.log",
+    "size": 2736,
+    "sha256": "44013d4a0105f12630c3c690e503200c2ce41bba0ba92fe867a76015aae7af79",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091016_config_773c3\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091016_config_773c3/summary.csv",
+    "size": 166,
+    "sha256": "7974bc174e57f2c84648e9fdbaa9e56b7f546026d002b5c062ecb36548781966",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091016_config_773c3\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091019_ddr_3159c/ddr_rx.bin",
+    "size": 16,
+    "sha256": "be45cb2605bf36bebde684841a28f0fd43c69850a3dce5fedba69928ee3a8991",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091019_ddr_3159c\\ddr_rx.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091019_ddr_3159c/ddr_tx.bin",
+    "size": 16,
+    "sha256": "be45cb2605bf36bebde684841a28f0fd43c69850a3dce5fedba69928ee3a8991",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091019_ddr_3159c\\ddr_tx.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091019_ddr_3159c/result.json",
+    "size": 10850,
+    "sha256": "25494f8f076b43d059695eee9cd9602c3bd55d53ecf652ce4c5d664063a9145c",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091019_ddr_3159c\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091019_ddr_3159c/run.log",
+    "size": 4265,
+    "sha256": "1307473865400e4ddced11e8dbf57c5910e7d8794c34782ff2e5291c802b104a",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091019_ddr_3159c\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091019_ddr_3159c/summary.csv",
+    "size": 160,
+    "sha256": "8d839a698bf788f8e3223922f2b12e961067b4fdb4699116dab2105c826815e3",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091019_ddr_3159c\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091052_single_b260f/result.json",
+    "size": 11827,
+    "sha256": "1ad241f11fa53d116abf5c3eb42819f9ef14a8745dc2ccf6b07279a6f462d080",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091052_single_b260f\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091052_single_b260f/run.log",
+    "size": 4981,
+    "sha256": "da467b50f192251c8a9283766d378eed0c9b408fce336f8737ce3bd89e830637",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091052_single_b260f\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091052_single_b260f/summary.csv",
+    "size": 166,
+    "sha256": "85a9f98457b11d9cdb88387c046945d9e524f3ca87c5b494910211ecd9cd9f77",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091052_single_b260f\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091052_single_b260f/up_000_seq_00000000.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091052_single_b260f\\up_000_seq_00000000.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/result.json",
+    "size": 49619,
+    "sha256": "1fa92347b76f55e4eec6a0a87f5cbf240c4d384a2594e2643ebf68fbeee95947",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/run.log",
+    "size": 25884,
+    "sha256": "097fb4af629f8e0c27e6eeb2ac372d46d073781053f9b7542d8305d1eef57a69",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/summary.csv",
+    "size": 163,
+    "sha256": "048b483d60950bb81199503cfdec7a74d80a15f333e8846f9902e7b98f56a51b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/up_000_seq_00000001.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\up_000_seq_00000001.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/up_001_seq_00000002.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\up_001_seq_00000002.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/up_002_seq_00000003.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\up_002_seq_00000003.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/up_003_seq_00000004.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\up_003_seq_00000004.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/up_004_seq_00000005.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\up_004_seq_00000005.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/up_005_seq_00000006.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\up_005_seq_00000006.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/up_006_seq_00000007.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\up_006_seq_00000007.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/up_007_seq_00000008.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\up_007_seq_00000008.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/up_008_seq_00000009.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\up_008_seq_00000009.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/up_009_seq_0000000a.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\up_009_seq_0000000a.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/up_010_seq_0000000b.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\up_010_seq_0000000b.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_091120_multi_01905/up_011_seq_0000000c.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\board_runs\\20261019_091120_multi_01905\\up_011_seq_0000000c.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092123_config_ab27e/result.json",
+    "size": 5808,
+    "sha256": "88b1ac85fd2d9c01a3583a276731a7e64de9112a235c50aae4068270c2ddf90c",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092123_config_ab27e\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092123_config_ab27e/run.log",
+    "size": 2726,
+    "sha256": "c0dcd2092bd45ef4736853e1da48a714a3fa83ef40245ad204fbe36bc20a3d5b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092123_config_ab27e\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092123_config_ab27e/summary.csv",
+    "size": 167,
+    "sha256": "9b32cf385b15acd0a563d0d7504f49dd280d0b66d84a03807d60e95f33106848",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092123_config_ab27e\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092123_env_a6a5a/result.json",
+    "size": 3536,
+    "sha256": "a3f4293dfeddbca1d12ac93643869d625467407f1b05d427d79562ec6e74a7bc",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092123_env_a6a5a\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092123_env_a6a5a/run.log",
+    "size": 1166,
+    "sha256": "b546f7d3e58b1be2ec7371af4db9cc979ab470aa2fb8ada89fe573fd86bde23f",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092123_env_a6a5a\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092123_env_a6a5a/summary.csv",
+    "size": 161,
+    "sha256": "db877a4643d6751bee8657eab781d9aa9aff499889f039a37a6256c19c6415f8",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092123_env_a6a5a\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092123_regs_811de/result.json",
+    "size": 3483,
+    "sha256": "93ac1d4c3302a2e3fe73fde5ae6f937d77155ff0a2becc207bec288e073d04d6",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092123_regs_811de\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092123_regs_811de/run.log",
+    "size": 1123,
+    "sha256": "323aaf74868bfa95bef4d6157231aeaefe4cd648df2c7e772571d8f8872cc929",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092123_regs_811de\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092123_regs_811de/summary.csv",
+    "size": 163,
+    "sha256": "9efde00a160d42bfab454294b820367fa98e583151e7ab13ee7eabee2e91e884",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092123_regs_811de\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092124_ddr_8bc6e/ddr_rx.bin",
+    "size": 16,
+    "sha256": "be45cb2605bf36bebde684841a28f0fd43c69850a3dce5fedba69928ee3a8991",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092124_ddr_8bc6e\\ddr_rx.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092124_ddr_8bc6e/ddr_tx.bin",
+    "size": 16,
+    "sha256": "be45cb2605bf36bebde684841a28f0fd43c69850a3dce5fedba69928ee3a8991",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092124_ddr_8bc6e\\ddr_tx.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092124_ddr_8bc6e/result.json",
+    "size": 6315,
+    "sha256": "9cfbab879005a52738df75c701eb226a7a92ab2c2e6f00ba4b0ec24176fadd81",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092124_ddr_8bc6e\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092124_ddr_8bc6e/run.log",
+    "size": 2563,
+    "sha256": "26f9d3cd06d4095cc36f9479741b4caef1d8c0cf09c621f645ca027b8c48b34e",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092124_ddr_8bc6e\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092124_ddr_8bc6e/summary.csv",
+    "size": 160,
+    "sha256": "44d9280b3762c6f88de1a1ea925a1a56f4ed3a69e588683d23223b6b3c8fed38",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092124_ddr_8bc6e\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092126_single_fcaea/result.json",
+    "size": 9188,
+    "sha256": "cc002f2de7ef954e1a037fb0cc3a1d228585ebfb29eec9a5d3165de724398ed9",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092126_single_fcaea\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092126_single_fcaea/run.log",
+    "size": 4016,
+    "sha256": "55561686b7c5f001cad810cf965cecb9f8b577d935e901b20fb0418d18cf42e4",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092126_single_fcaea\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092126_single_fcaea/summary.csv",
+    "size": 165,
+    "sha256": "3f5fe41ebe89c6187b30424b431e6920e5601f57b0d2d4ec892e6bb3edf2644b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092126_single_fcaea\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092126_single_fcaea/up_000_seq_0000000d.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092126_single_fcaea\\up_000_seq_0000000d.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/result.json",
+    "size": 47031,
+    "sha256": "360f5d8ce468690da2e3406d4e4d189791c702464dc4c8e79f93c31c9dfe5b3d",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/run.log",
+    "size": 25134,
+    "sha256": "800c31e1b9c7ed88c24aae72e44dfa91879019f3a92b35adab1443f81e7c648c",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/summary.csv",
+    "size": 164,
+    "sha256": "d27889d7db64954b0f03198f3b7059d29d9e9f523e5bbdbd3da0e5cea018ccf1",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/up_000_seq_0000000e.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\up_000_seq_0000000e.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/up_001_seq_0000000f.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\up_001_seq_0000000f.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/up_002_seq_00000010.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\up_002_seq_00000010.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/up_003_seq_00000011.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\up_003_seq_00000011.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/up_004_seq_00000012.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\up_004_seq_00000012.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/up_005_seq_00000013.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\up_005_seq_00000013.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/up_006_seq_00000014.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\up_006_seq_00000014.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/up_007_seq_00000015.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\up_007_seq_00000015.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/up_008_seq_00000016.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\up_008_seq_00000016.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/up_009_seq_00000017.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\up_009_seq_00000017.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/up_010_seq_00000018.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\up_010_seq_00000018.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092131_multi_0f0a0/up_011_seq_00000019.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092131_multi_0f0a0\\up_011_seq_00000019.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092416_config_63a2d/result.json",
+    "size": 5817,
+    "sha256": "aefd4756f7e3cf02e7e110d45ceeb6c4329ab5bdfa9f23f170c33845a0c9947c",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092416_config_63a2d\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092416_config_63a2d/run.log",
+    "size": 2735,
+    "sha256": "1b138fc94a09ab4beb3348224439f0a03d669b60a7e0bc9b4135ea73baa9e3cd",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092416_config_63a2d\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092416_config_63a2d/summary.csv",
+    "size": 167,
+    "sha256": "dc863bf02a825473af2ddeda59c58687dba6d577725d150aa1cf85b058637f59",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092416_config_63a2d\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092416_env_d8028/result.json",
+    "size": 3535,
+    "sha256": "d91b29323789d7c82d6fa7ce8b690d36a555a87bd9b3816c20c92139181a53a5",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092416_env_d8028\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092416_env_d8028/run.log",
+    "size": 1165,
+    "sha256": "a33ff82b047375ddca4f80f6d64403b6ebd28113d116adde5ea0b938d01bc76c",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092416_env_d8028\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092416_env_d8028/summary.csv",
+    "size": 161,
+    "sha256": "20637df865e6dbc388ee7b015eaeb3646bd915eb484c2af0765c476a815b05e1",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092416_env_d8028\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092416_regs_e8bc4/result.json",
+    "size": 3480,
+    "sha256": "4a1c7e5d6244ddf5f33cb1e183775d3aa7d1cbc448381fbcb76a4ab587b834d6",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092416_regs_e8bc4\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092416_regs_e8bc4/run.log",
+    "size": 1120,
+    "sha256": "f3139ee0586ddd90cdbc1d3245ccaf910ea48e53e3f775947e146e6aa1ca6188",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092416_regs_e8bc4\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092416_regs_e8bc4/summary.csv",
+    "size": 163,
+    "sha256": "6c8faead3ef307a6a37ab6a1e2edc0815bc839573d9e7b2d6bc6b58f03f1947e",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092416_regs_e8bc4\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092417_ddr_77663/ddr_rx.bin",
+    "size": 16,
+    "sha256": "be45cb2605bf36bebde684841a28f0fd43c69850a3dce5fedba69928ee3a8991",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092417_ddr_77663\\ddr_rx.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092417_ddr_77663/ddr_tx.bin",
+    "size": 16,
+    "sha256": "be45cb2605bf36bebde684841a28f0fd43c69850a3dce5fedba69928ee3a8991",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092417_ddr_77663\\ddr_tx.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092417_ddr_77663/result.json",
+    "size": 6313,
+    "sha256": "4caf4c27852b63cac091aebc5c053f9f3fabcff8d03b6a78f85286329462f818",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092417_ddr_77663\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092417_ddr_77663/run.log",
+    "size": 2561,
+    "sha256": "5dccb8e34d4e3a2b28fd7819c61f6c176ff538222a0e95541b3bc460fbf58a0c",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092417_ddr_77663\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092417_ddr_77663/summary.csv",
+    "size": 160,
+    "sha256": "ed2233ee1c9bf46c98e0ef6f6099454fbebcffa0df531d0213f7f6e8c8246830",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092417_ddr_77663\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092419_single_88e6d/result.json",
+    "size": 9193,
+    "sha256": "3678818068b090ba92bb55ba5e89958ee0a14022733b55bc6c163cec1f03bd09",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092419_single_88e6d\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092419_single_88e6d/run.log",
+    "size": 4020,
+    "sha256": "ad7b043d0fb4ea132c415eb007c074a9a4a8815ba5afb7d9ef3d0c4b0d6817cc",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092419_single_88e6d\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092419_single_88e6d/summary.csv",
+    "size": 166,
+    "sha256": "165ea641625dd5c9a684dbcaaef0d7e5e7fd84ea22991efebf8cb5929d07a46a",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092419_single_88e6d\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092419_single_88e6d/up_000_seq_0000001a.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092419_single_88e6d\\up_000_seq_0000001a.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/result.json",
+    "size": 47034,
+    "sha256": "34a51d7d1b378ffd1cd27ef6fbc4aafc8a644ff3db036fbaf661df7b73d2cf50",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\result.json"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/run.log",
+    "size": 25137,
+    "sha256": "087935514144a2d6eea6ddecb91210078e295490207681c4304e1008fc15ebac",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\run.log"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/summary.csv",
+    "size": 164,
+    "sha256": "15c994f662c6be350fc4ea9acc58e84bef258048d6a93a60f89ffacc3dbc23e1",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\summary.csv"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/up_000_seq_0000001b.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\up_000_seq_0000001b.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/up_001_seq_0000001c.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\up_001_seq_0000001c.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/up_002_seq_0000001d.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\up_002_seq_0000001d.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/up_003_seq_0000001e.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\up_003_seq_0000001e.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/up_004_seq_0000001f.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\up_004_seq_0000001f.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/up_005_seq_00000020.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\up_005_seq_00000020.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/up_006_seq_00000021.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\up_006_seq_00000021.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/up_007_seq_00000022.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\up_007_seq_00000022.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/up_008_seq_00000023.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\up_008_seq_00000023.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/up_009_seq_00000024.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\up_009_seq_00000024.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/up_010_seq_00000025.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\up_010_seq_00000025.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/validation/board_runs/20261019_092424_multi_2e024/up_011_seq_00000026.bin",
+    "size": 16,
+    "sha256": "d378682a69872e12c0740099ad8b6bf0ac381e5bc44b3c73162314aebdbec93b",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\validation\\20261019\\direct_windows\\20261019_092424_multi_2e024\\up_011_seq_00000026.bin"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/vivado/gui_bridge.tcl",
+    "size": 5236,
+    "sha256": "cbb6a9202e75ff906974da7f1b0c867d491c5a7f62dd73fd240f2d62da9659b2",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\vivado\\gui_bridge.tcl"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/vivado/lab_service.tcl",
+    "size": 3325,
+    "sha256": "3f9fd569ee8ee8ddeb693b3b88af730e635e651498fadb9045092691f73d0c98",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\vivado\\lab_service.tcl"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/vivado/pcie_joint_debug_base.tcl",
+    "size": 8807,
+    "sha256": "62232226a69f0e300afafe81d7207f6a3b0c0372f726f3f1544e424c64b21996",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\vivado\\pcie_joint_debug_base.tcl"
+  },
+  {
+    "path": "hardware_joint_lab_20261016/vivado/rtds_lab.tcl",
+    "size": 3372,
+    "sha256": "674e5fd1c446065229122118eedeb1954193dbcd0eddf668253b8c31740bc1b8",
+    "origin": "E:\\PCIE-CPU\\outputs\\hardware_joint_lab_20261016\\vivado\\rtds_lab.tcl"
+  },
+  {
+    "path": "history_docs/CPU-FPGA PCIe软件寄存器说明V2.02（当前实现）.docx",
+    "size": 43839,
+    "sha256": "9bafd524b6fa549359098a12a9364c9e39b4f25ab9aa1b7e04eb06b53d3ff18d",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\CPU-FPGA PCIe软件寄存器说明V2.02（当前实现）.docx"
+  },
+  {
+    "path": "history_docs/CPU-FPGA_PCIe寄存器表单_软件指导手册_V2.0.docx",
+    "size": 52980,
+    "sha256": "3e128fe2d4cf7d6dcd4c7e4ddc00753293822a7e1baff90c63bfa519b98683cb",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\CPU-FPGA_PCIe寄存器表单_软件指导手册_V2.0.docx"
+  },
+  {
+    "path": "history_docs/CPU-FPGA_PCIe软件寄存器说明_V2.01_当前实现.md",
+    "size": 8119,
+    "sha256": "ec77164783762df49b2e720abd80dbfebdc663bd8f3d6812d2471ba42c581651",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\CPU-FPGA_PCIe软件寄存器说明_V2.01_当前实现.md"
+  },
+  {
+    "path": "history_docs/PCIe交互协议_V2.01.md",
+    "size": 6981,
+    "sha256": "bfe0f617cbef331d387f3aec4520f62946b0be1a4a3e58d9235d9c21be1ac776",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\PCIe交互协议_V2.01.md"
+  },
+  {
+    "path": "history_docs/RTDS_PCIe软硬件联调与烧录操作手册_20261015.docx",
+    "size": 71636,
+    "sha256": "c7a152e6e8608c5337097779acd49b5e0b9a4265b2ce302f5c84d880461884c5",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\RTDS_PCIe软硬件联调与烧录操作手册_20261015.docx"
+  },
+  {
+    "path": "history_docs/RTDS_PCIe软硬件联调与烧录操作手册_20261015.md",
+    "size": 41929,
+    "sha256": "b5e1c67cad7ce43f8d7fa3dccde00706912684d0cf3de781019e5c20e963649f",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\RTDS_PCIe软硬件联调与烧录操作手册_20261015.md"
+  },
+  {
+    "path": "history_docs/RTDS_主机单机VIO上行激励_设计方案_20261013.docx",
+    "size": 52908,
+    "sha256": "5a0194e76ce90b0872361d9a2cb864a2cd244446c969bcafaaf18c7fe597aa2b",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\RTDS_主机单机VIO上行激励_设计方案_20261013.docx"
+  },
+  {
+    "path": "history_docs/RTDS_主机单机VIO上行激励_设计方案_20261013.md",
+    "size": 23364,
+    "sha256": "0ea839de3b91671187c26b7c4f63e662c9e7f809f5086e6f8abe42e4a2b0e63c",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\RTDS_主机单机VIO上行激励_设计方案_20261013.md"
+  },
+  {
+    "path": "history_docs/RTDS_当前软件联调推荐配置与操作顺序_20261013.md",
+    "size": 6150,
+    "sha256": "37f2245c0dc94a5353c5107d9c894d531c0243b9ffcba09a42e442dfd096132f",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\RTDS_当前软件联调推荐配置与操作顺序_20261013.md"
+  },
+  {
+    "path": "history_docs/RTDS_最新设计方案_精简版_20261012.md",
+    "size": 11418,
+    "sha256": "028581aacaaaf061c221fe3af6773bea220593874a1d08fd69aa617ca86d055b",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\RTDS_最新设计方案_精简版_20261012.md"
+  },
+  {
+    "path": "history_docs/RTDS_现有VIO_ILA全部信号速查_20261015.md",
+    "size": 15512,
+    "sha256": "d05690a915b3572e93922420abfaa53a61a08cf5493677daed0e1f562f4b0918",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\RTDS_现有VIO_ILA全部信号速查_20261015.md"
+  },
+  {
+    "path": "history_docs/RTDS_驱动与主机单机联调_上下行完整操作步骤_20261013.md",
+    "size": 10951,
+    "sha256": "c673f40f08cf4c6defcd5f2d5f93259527e6bbd2fee3e7427edf915523c5ed5f",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\RTDS_驱动与主机单机联调_上下行完整操作步骤_20261013.md"
+  },
+  {
+    "path": "history_docs/主机_软件配置与操作说明_20261013.md",
+    "size": 7347,
+    "sha256": "61d590d58e5bd7185adfdcaaa3043ef00309c104a5fe23a1de4c1a267d188f16",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\主机_软件配置与操作说明_20261013.md"
+  },
+  {
+    "path": "history_docs/主机规格与寄存器总结.md",
+    "size": 9975,
+    "sha256": "212ef4511e671520bb466630061fbc930df92256f8d861645ce55fa4e62d9bf8",
+    "origin": "C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\docs\\主机规格与寄存器总结.md"
+  },
+  {
+    "path": "keyword_screening.json",
+    "origin": "Generated screening result; original keyword list is not copied",
+    "size": 1076,
+    "sha256": "4dc672e45a61b1390444a7b888f98908c8d579f4ec85daaf7fe68e1f85b295b3"
+  },
+  {
+    "path": "package_validation.json",
+    "size": 1882,
+    "sha256": "82ff32afc5864696e0da1dec99685d14966a65d7c7520c55777730b0663ac33f",
+    "origin": "Prepared from verified session context and saved evidence, 2026-10-19"
+  },
+  {
+    "path": "README.md",
+    "size": 2451,
+    "sha256": "86ccdda96f894a513ddcf80137eeb5b405ab8e032aad6dd8dfd78a109d18d3fc",
+    "origin": "Prepared from verified session context and saved evidence, 2026-10-19"
+  }
+]

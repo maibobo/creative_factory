@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "tests": 7,
+  "command": "python tests/test_regs_watch.py",
+  "pc_time": "2026-10-19T09:45:21.767306+08:00",
+  "coverage": [
+    "safe reads",
+    "bad BAR stops",
+    "invalid resources",
+    "journal display only",
+    "idle/temp silent",
+    "changed rows only",
+    "no repeated baseline or ANSI clear"
+  ]
+}

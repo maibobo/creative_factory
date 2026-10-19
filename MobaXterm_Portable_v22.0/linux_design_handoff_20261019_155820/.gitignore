@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.new
+hardware_joint_lab_20261016/arm/rtds_dma
+hardware_joint_lab_20261016/arm/rtds_dma.aarch64
+hardware_joint_lab_20261016/results/
+hardware_joint_lab_20261016/jobs/
+*.pem
+*.key
+.env

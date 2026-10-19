@@ -1,0 +1,23 @@
+{"elapsed": 5.1e-05, "event": "START", "run_id": "20261019_091016_config_773c3", "case": "config", "status": "RUNNING", "pc_time": "2026-10-19T09:10:16.993525+08:00", "boot_mode": "unknown", "arm_wall_time_untrusted": "2000-11-30T16:23:58.374349", "arm_monotonic_start": 1292.409627156, "kernel": "5.10.226-v1.0.4-008a05487-rt89", "machine": "aarch64", "evidence": [], "exclusive_declared": true, "note": "VIO mode validates DDR/C2H, not real Aurora RX."}
+{"elapsed": 0.044275, "event": "REGISTERS", "label": "baseline", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43336, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 0.047765, "event": "DROP_BASELINE", "value": 0}
+{"elapsed": 0.057424, "event": "STATE_READY", "offset": "0x20", "value": 0}
+{"elapsed": 0.060545, "event": "WRITE_INTENT", "offset": "0x24", "value": "0x8000", "retry": false}
+{"elapsed": 0.065744, "event": "WRITE_RETURNED", "offset": "0x24"}
+{"elapsed": 0.068932, "event": "WRITE_INTENT", "offset": "0x28", "value": "0x10", "retry": false}
+{"elapsed": 0.074103, "event": "WRITE_RETURNED", "offset": "0x28"}
+{"elapsed": 0.098243, "event": "CONFIG_VERIFIED", "address": "0x8000", "length": 16}
+{"elapsed": 0.10391, "event": "STATE_READY", "offset": "0x20", "value": 0}
+{"elapsed": 0.106973, "event": "WRITE_INTENT", "offset": "0x24", "value": "0x8010", "retry": false}
+{"elapsed": 0.111928, "event": "WRITE_RETURNED", "offset": "0x24"}
+{"elapsed": 0.114882, "event": "WRITE_INTENT", "offset": "0x28", "value": "0x20", "retry": false}
+{"elapsed": 0.120098, "event": "WRITE_RETURNED", "offset": "0x28"}
+{"elapsed": 0.129868, "event": "CONFIG_VERIFIED", "address": "0x8010", "length": 32}
+{"elapsed": 0.160987, "event": "REGISTERS", "label": "before_config_restore", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43340, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32784, "0x28": 32, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 0.164552, "event": "WRITE_INTENT", "offset": "0x24", "value": "0x8000", "retry": false}
+{"elapsed": 0.168863, "event": "WRITE_RETURNED", "offset": "0x24"}
+{"elapsed": 0.172123, "event": "WRITE_INTENT", "offset": "0x28", "value": "0x8000", "retry": false}
+{"elapsed": 0.177365, "event": "WRITE_RETURNED", "offset": "0x28"}
+{"elapsed": 0.184856, "event": "CONFIG_RESTORED", "address": "0x8000", "length": 32768}
+{"elapsed": 0.215994, "event": "REGISTERS", "label": "final", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43430, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 0.221841, "event": "FINISH", "status": "PASS", "error": null}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "pc_time": "2026-10-19T16:15:08.900441+08:00",
+  "rule_source": "E:\\centOS\\敏感词.txt",
+  "rule_source_sha256": "64bd7f2bff114de16865bc8d47006d03a83d16f09b1bce0a2cb38ca804726647",
+  "rules": 11,
+  "matching_policy": "Chinese rules: literal substring; English standalone rule: case-insensitive ASCII-word boundaries",
+  "changes": [
+    {
+      "file": "guide_input/02_驱动应用代码与依赖关系.md",
+      "replacements": 1
+    },
+    {
+      "file": "hardware_joint_lab_20261016/validation/20261019/driver_location_20261019_153633.json",
+      "replacements": 1
+    }
+  ],
+  "total_replacements": 2,
+  "filename_matches": 0,
+  "remaining_text_xml_metadata_matches": 0,
+  "docx_structure_checked": 15,
+  "docx_rendered": false,
+  "image_scope": "Image metadata checked; image pixels were not OCR checked or edited",
+  "source_code_and_payloads_changed": false,
+  "backups_created": false,
+  "scope": "Only this upload directory, its local ZIP and corresponding remote copy; not the whole existing Git repository"
+}

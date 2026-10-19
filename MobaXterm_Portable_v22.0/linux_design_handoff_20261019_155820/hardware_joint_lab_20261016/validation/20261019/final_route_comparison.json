@@ -1,0 +1,201 @@
+{
+  "status": "PASS",
+  "pc_time": "2026-10-19T09:33:13.424775+08:00",
+  "routes": {
+    "local_via_windows": {
+      "env": {
+        "run_id": "20261019_091004_env_38180",
+        "blocks": 0,
+        "peak_queue": 0,
+        "program_sha256": {
+          "rtds_lab.py": "c0d77a47cc99c4932e8af3bc26be7e0ac4d2a40f7cf1a87157d5e9aa25a53cbb",
+          "rtds_dma.c": "ef89d9f0450e57f46f18b34519fb9f1b664e9e04639992c8ed7895470adf38f9",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "regs": {
+        "run_id": "20261019_091005_regs_131bc",
+        "blocks": 0,
+        "peak_queue": 0,
+        "program_sha256": {
+          "rtds_lab.py": "c0d77a47cc99c4932e8af3bc26be7e0ac4d2a40f7cf1a87157d5e9aa25a53cbb",
+          "rtds_dma.c": "ef89d9f0450e57f46f18b34519fb9f1b664e9e04639992c8ed7895470adf38f9",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "config": {
+        "run_id": "20261019_091016_config_773c3",
+        "blocks": 0,
+        "peak_queue": 0,
+        "program_sha256": {
+          "rtds_lab.py": "c0d77a47cc99c4932e8af3bc26be7e0ac4d2a40f7cf1a87157d5e9aa25a53cbb",
+          "rtds_dma.c": "ef89d9f0450e57f46f18b34519fb9f1b664e9e04639992c8ed7895470adf38f9",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "ddr": {
+        "run_id": "20261019_091019_ddr_3159c",
+        "blocks": 0,
+        "peak_queue": 0,
+        "program_sha256": {
+          "rtds_lab.py": "c0d77a47cc99c4932e8af3bc26be7e0ac4d2a40f7cf1a87157d5e9aa25a53cbb",
+          "rtds_dma.c": "ef89d9f0450e57f46f18b34519fb9f1b664e9e04639992c8ed7895470adf38f9",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "single": {
+        "run_id": "20261019_091052_single_b260f",
+        "blocks": 1,
+        "peak_queue": 1,
+        "program_sha256": {
+          "rtds_lab.py": "c0d77a47cc99c4932e8af3bc26be7e0ac4d2a40f7cf1a87157d5e9aa25a53cbb",
+          "rtds_dma.c": "ef89d9f0450e57f46f18b34519fb9f1b664e9e04639992c8ed7895470adf38f9",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "multi": {
+        "run_id": "20261019_091120_multi_01905",
+        "blocks": 12,
+        "peak_queue": 8,
+        "program_sha256": {
+          "rtds_lab.py": "c0d77a47cc99c4932e8af3bc26be7e0ac4d2a40f7cf1a87157d5e9aa25a53cbb",
+          "rtds_dma.c": "ef89d9f0450e57f46f18b34519fb9f1b664e9e04639992c8ed7895470adf38f9",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      }
+    },
+    "direct_windows_1": {
+      "env": {
+        "run_id": "20261019_092123_env_a6a5a",
+        "blocks": 0,
+        "peak_queue": 0,
+        "program_sha256": {
+          "rtds_lab.py": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+          "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "regs": {
+        "run_id": "20261019_092123_regs_811de",
+        "blocks": 0,
+        "peak_queue": 0,
+        "program_sha256": {
+          "rtds_lab.py": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+          "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "config": {
+        "run_id": "20261019_092123_config_ab27e",
+        "blocks": 0,
+        "peak_queue": 0,
+        "program_sha256": {
+          "rtds_lab.py": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+          "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "ddr": {
+        "run_id": "20261019_092124_ddr_8bc6e",
+        "blocks": 0,
+        "peak_queue": 0,
+        "program_sha256": {
+          "rtds_lab.py": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+          "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "single": {
+        "run_id": "20261019_092126_single_fcaea",
+        "blocks": 1,
+        "peak_queue": 1,
+        "program_sha256": {
+          "rtds_lab.py": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+          "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "multi": {
+        "run_id": "20261019_092131_multi_0f0a0",
+        "blocks": 12,
+        "peak_queue": 8,
+        "program_sha256": {
+          "rtds_lab.py": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+          "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      }
+    },
+    "direct_windows_2": {
+      "env": {
+        "run_id": "20261019_092416_env_d8028",
+        "blocks": 0,
+        "peak_queue": 0,
+        "program_sha256": {
+          "rtds_lab.py": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+          "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "regs": {
+        "run_id": "20261019_092416_regs_e8bc4",
+        "blocks": 0,
+        "peak_queue": 0,
+        "program_sha256": {
+          "rtds_lab.py": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+          "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "config": {
+        "run_id": "20261019_092416_config_63a2d",
+        "blocks": 0,
+        "peak_queue": 0,
+        "program_sha256": {
+          "rtds_lab.py": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+          "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "ddr": {
+        "run_id": "20261019_092417_ddr_77663",
+        "blocks": 0,
+        "peak_queue": 0,
+        "program_sha256": {
+          "rtds_lab.py": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+          "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "single": {
+        "run_id": "20261019_092419_single_88e6d",
+        "blocks": 1,
+        "peak_queue": 1,
+        "program_sha256": {
+          "rtds_lab.py": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+          "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      },
+      "multi": {
+        "run_id": "20261019_092424_multi_2e024",
+        "blocks": 12,
+        "peak_queue": 8,
+        "program_sha256": {
+          "rtds_lab.py": "52ab1d2253c7fd5fb8c9e249ef3f5a0857f16f6c318e92b7a4ddaa8e7519a377",
+          "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+          "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+        }
+      }
+    }
+  },
+  "experiments": 18,
+  "functional_final_registers_equal": true,
+  "ddr_bytes_equal": true,
+  "annotation_python_ast_unchanged": true,
+  "annotation_c_tokens_unchanged": true,
+  "annotation_shell_tokens_unchanged": true,
+  "dma_binary_unchanged": true,
+  "boot_mode": "unknown",
+  "real_aurora": "NOT_TESTED"
+}

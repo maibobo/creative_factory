@@ -1,0 +1,201 @@
+{
+  "gui_fdma_20261019_091109_1792372269768.csv": {
+    "file": "gui_fdma_20261019_091109_1792372269768.csv",
+    "samples": 1024,
+    "trigger_samples": [
+      128
+    ],
+    "write_address": "0x100000",
+    "write_size_64bit_beats": 1,
+    "source_data_64bit": "0000002200000011",
+    "writer_state_sequence": [
+      0,
+      1,
+      2,
+      3,
+      0
+    ],
+    "source_valid_samples": [
+      130,
+      131,
+      132,
+      133
+    ],
+    "note": "Source valid is not a transfer-accept pulse; its duration is not a word count.",
+    "status": "PASS"
+  },
+  "gui_native_20261019_091031_1792372231992.csv": {
+    "file": "gui_native_20261019_091031_1792372231992.csv",
+    "samples": 2048,
+    "trigger_samples": [
+      128
+    ],
+    "handshake_counts": {
+      "aw": 1,
+      "w": 2,
+      "b": 1,
+      "ar": 0,
+      "r": 0
+    },
+    "events": {
+      "aw": [
+        {
+          "sample": 128,
+          "aw": true,
+          "w": false,
+          "b": false,
+          "ar": false,
+          "r": false,
+          "bresp": 0,
+          "rresp": 0,
+          "wlast": 0,
+          "rlast": 0,
+          "strb": 255,
+          "awaddr": 32768,
+          "araddr": 0,
+          "wdata": 0,
+          "rdata": 0
+        }
+      ],
+      "w": [
+        {
+          "sample": 134,
+          "aw": false,
+          "w": true,
+          "b": false,
+          "ar": false,
+          "r": false,
+          "bresp": 0,
+          "rresp": 0,
+          "wlast": 0,
+          "rlast": 0,
+          "strb": 255,
+          "awaddr": 32768,
+          "araddr": 0,
+          "wdata": 506097522914230528,
+          "rdata": 0
+        },
+        {
+          "sample": 135,
+          "aw": false,
+          "w": true,
+          "b": false,
+          "ar": false,
+          "r": false,
+          "bresp": 0,
+          "rresp": 0,
+          "wlast": 1,
+          "rlast": 0,
+          "strb": 255,
+          "awaddr": 32768,
+          "araddr": 0,
+          "wdata": 1084818905618843912,
+          "rdata": 0
+        }
+      ],
+      "b": [
+        {
+          "sample": 171,
+          "aw": false,
+          "w": false,
+          "b": true,
+          "ar": false,
+          "r": false,
+          "bresp": 0,
+          "rresp": 0,
+          "wlast": 0,
+          "rlast": 0,
+          "strb": 255,
+          "awaddr": 32768,
+          "araddr": 0,
+          "wdata": 0,
+          "rdata": 0
+        }
+      ],
+      "ar": [],
+      "r": []
+    },
+    "all_error_probes_zero": true,
+    "direction": "H2C",
+    "accepted_data_hex": "000102030405060708090a0b0c0d0e0f",
+    "status": "PASS"
+  },
+  "gui_native_20261019_091042_1792372242631.csv": {
+    "file": "gui_native_20261019_091042_1792372242631.csv",
+    "samples": 2048,
+    "trigger_samples": [
+      128
+    ],
+    "handshake_counts": {
+      "aw": 0,
+      "w": 0,
+      "b": 0,
+      "ar": 1,
+      "r": 2
+    },
+    "events": {
+      "aw": [],
+      "w": [],
+      "b": [],
+      "ar": [
+        {
+          "sample": 128,
+          "aw": false,
+          "w": false,
+          "b": false,
+          "ar": true,
+          "r": false,
+          "bresp": 0,
+          "rresp": 0,
+          "wlast": 0,
+          "rlast": 0,
+          "strb": 255,
+          "awaddr": 32768,
+          "araddr": 32768,
+          "wdata": 0,
+          "rdata": 0
+        }
+      ],
+      "r": [
+        {
+          "sample": 272,
+          "aw": false,
+          "w": false,
+          "b": false,
+          "ar": false,
+          "r": true,
+          "bresp": 0,
+          "rresp": 0,
+          "wlast": 0,
+          "rlast": 0,
+          "strb": 255,
+          "awaddr": 32768,
+          "araddr": 32768,
+          "wdata": 0,
+          "rdata": 506097522914230528
+        },
+        {
+          "sample": 273,
+          "aw": false,
+          "w": false,
+          "b": false,
+          "ar": false,
+          "r": true,
+          "bresp": 0,
+          "rresp": 0,
+          "wlast": 0,
+          "rlast": 1,
+          "strb": 255,
+          "awaddr": 32768,
+          "araddr": 32768,
+          "wdata": 0,
+          "rdata": 1084818905618843912
+        }
+      ]
+    },
+    "all_error_probes_zero": true,
+    "direction": "C2H",
+    "accepted_data_hex": "000102030405060708090a0b0c0d0e0f",
+    "status": "PASS"
+  }
+}

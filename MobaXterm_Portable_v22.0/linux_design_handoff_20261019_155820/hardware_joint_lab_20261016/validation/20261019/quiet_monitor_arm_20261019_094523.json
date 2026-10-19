@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "seconds": 3,
+  "baseline_frames": 1,
+  "screen_escape_sequences": 0,
+  "extra_idle_frames": 0,
+  "stdout": "RTDS register viewer | READ ONLY | Ctrl+C to stop\nBDF=0000:01:00.0 BAR0=0xf0200000 elapsed=0.0s (* changed since prior refresh)\nSequential reads, not atomic. No DMA, no writes, no read-clear.\nOFF ACC   NAME               HEX             DEC DETAIL\n 00 R     VERSION            00002001       8193 \n 04 R     BUILD_ID           20260914  539363604 \n 08 R     BLOCK_CAPACITY     00040000     262144 262144 bytes\n 0C R     TEMP_RAW           0000A9F4      43508 raw code, not Celsius\n 18 R     RX_HEAD_ADDR       00000000          0 \n 1C R     RX_VALID_BYTES     00000000          0 0 bytes\n 20 R/W1P DOWN_TRIGGER_BUSY  00000000          0 busy=0; W1 launches dow\n 24 RW    DOWN_START_ADDR    00008000      32768 \n 28 RW    DOWN_BYTES         00008000      32768 32768 bytes\n 2C R     DDR_STATUS         00000003          3 ready=1 errors=0x0\n 30 R     RX_BLOCKS          00000000          0 queue 0/8\n 34 R     RX_HEAD_SEQ        00000000          0 head seq; 0 when empty\n 38 R     RX_DROPPED         00000000          0 dropped words; do not c\n 10 RC    NOT POLLED         Reading clears notification.\n 14 R/W1P NOT POLLED         W1 returns a block; use validated test.\nRecent TEST R/W journal (manual io writes are not captured):\nNo journal events yet.\n\n\n\nCHANGE-ONLY: unchanged business values produce no output; polling continues.\nTemperature-only changes are muted. No screen clearing.\n"
+}

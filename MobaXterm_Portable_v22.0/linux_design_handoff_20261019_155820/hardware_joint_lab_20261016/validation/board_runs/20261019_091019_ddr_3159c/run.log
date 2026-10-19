@@ -1,0 +1,22 @@
+{"elapsed": 5e-05, "event": "START", "run_id": "20261019_091019_ddr_3159c", "case": "ddr", "status": "RUNNING", "pc_time": "2026-10-19T09:10:19.291020+08:00", "boot_mode": "unknown", "arm_wall_time_untrusted": "2000-11-30T16:24:00.723505", "arm_monotonic_start": 1294.75878399, "kernel": "5.10.226-v1.0.4-008a05487-rt89", "machine": "aarch64", "evidence": [], "exclusive_declared": true, "note": "VIO mode validates DDR/C2H, not real Aurora RX."}
+{"elapsed": 0.044404, "event": "REGISTERS", "label": "baseline", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43432, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 0.047658, "event": "DROP_BASELINE", "value": 0}
+{"elapsed": 0.050782, "event": "CONTROL_REQUEST", "action": "inspect", "sequence": 1, "params": {}}
+{"elapsed": 3.760182, "event": "CONTROL_COMPLETE", "action": "inspect", "response": {"status": "ok", "busy": "0", "accepted": "0", "rx_status": "3", "blocks": "0", "live": "191", "request_id": "job_989ca03252964ed689afc0b4d865cc79", "id": "001_de9a9adb"}}
+{"elapsed": 3.765178, "event": "CONTROL_REQUEST", "action": "arm", "sequence": 2, "params": {"test": "dma_write"}}
+{"elapsed": 8.590272, "event": "CONTROL_COMPLETE", "action": "arm", "response": {"status": "ok", "armed": "1", "test": "dma_write", "request_id": "job_2ba6a091bf694af3be8978d189e08985", "id": "002_9da984d8"}}
+{"elapsed": 8.595584, "event": "DMA_SUBMIT", "direction": "h2c", "card_address": "0x8000", "requested": 16, "data_file": "ddr_tx.bin"}
+{"elapsed": 8.604575, "event": "DMA_RETURN", "direction": "h2c", "card_address": 32768, "requested": 16, "completed": 16, "elapsed_seconds": 3.9666e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 8.609152, "event": "CONTROL_REQUEST", "action": "save", "sequence": 3, "params": {"kind": "native"}}
+{"elapsed": 14.538353, "event": "CONTROL_COMPLETE", "action": "save", "response": {"status": "ok", "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_lab_20261016/captures/gui_20261019_085727_1792371448033/gui_native_20261019_091031_1792372231992.csv", "request_id": "job_81f1a6de58da4c9780ebae86c07d9982", "id": "003_e20d37b5"}}
+{"elapsed": 14.545046, "event": "CONTROL_REQUEST", "action": "arm", "sequence": 4, "params": {"test": "dma_read"}}
+{"elapsed": 19.17044, "event": "CONTROL_COMPLETE", "action": "arm", "response": {"status": "ok", "armed": "1", "test": "dma_read", "request_id": "job_dcc46a06725849008d65843fc4b1195f", "id": "004_b403986b"}}
+{"elapsed": 19.176397, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x8000", "requested": 16, "data_file": "ddr_rx.bin"}
+{"elapsed": 19.187763, "event": "DMA_RETURN", "direction": "c2h", "card_address": 32768, "requested": 16, "completed": 16, "elapsed_seconds": 3.85e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 19.193736, "event": "DATA_MATCH", "effective": 16, "requested": 16, "data_hex": "000102030405060708090a0b0c0d0e0f"}
+{"elapsed": 19.198741, "event": "CONTROL_REQUEST", "action": "save", "sequence": 5, "params": {"kind": "native"}}
+{"elapsed": 26.032055, "event": "CONTROL_COMPLETE", "action": "save", "response": {"status": "ok", "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_lab_20261016/captures/gui_20261019_085727_1792371448033/gui_native_20261019_091042_1792372242631.csv", "request_id": "job_905f766690154ceb9808bdec2d595991", "id": "005_b5bab4de"}}
+{"elapsed": 26.080916, "event": "REGISTERS", "label": "final", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43468, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 26.090662, "event": "CONTROL_REQUEST", "action": "snapshot", "sequence": 6, "params": {}}
+{"elapsed": 30.31498, "event": "CONTROL_COMPLETE", "action": "snapshot", "response": {"status": "ok", "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_lab_20261016/captures/gui_20261019_085727_1792371448033/vio_20261019_091049_1792372249207.txt", "request_id": "job_b59f742bb3974e76a68529c2edb892dc", "id": "006_1866f9e2"}}
+{"elapsed": 30.32302, "event": "FINISH", "status": "PASS", "error": null}
