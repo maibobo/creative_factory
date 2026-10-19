@@ -1,0 +1,53 @@
+project_id: "PROJECT-XXXX"
+project_name: ""
+module_name: ""
+owner: ""
+status: "INIT"
+
+design:
+  baseline: "DESIGN-v0.1"
+  specification: "docs/design_spec.md"
+  target_part: ""
+  vendor: "AMD"
+  rtl_language: "Verilog-2001"
+
+tools:
+  vivado_version: ""
+  vitis_version: ""
+  simulator: "xsim"
+  simulator_version: ""
+  mcp_or_cli: ""
+
+sources:
+  rtl_manifest: ""
+  constraints: []
+  ip_configs: []
+  simulation_sources: []
+  external_models: []
+
+baselines:
+  rtl: ""
+  tb: ""
+  implementation: ""
+  bitstream_or_pdi: ""
+
+quality_gates:
+  G0: "NOT_RUN"
+  G1: "NOT_RUN"
+  G2: "NOT_RUN"
+  G3: "NOT_RUN"
+  G4: "NOT_RUN"
+  G5: "NOT_RUN"
+  G6: "NOT_RUN"
+  G7: "NOT_RUN"
+  G8: "NOT_RUN"
+  G9: "N/A"
+  G10: "NOT_RUN"
+
+artifacts:
+  traceability: "traceability.csv"
+  reports_dir: "reports/"
+  evidence_dir: "evidence/"
+
+open_issues: []
+accepted_risks: []
