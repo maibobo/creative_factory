@@ -1,0 +1,2620 @@
+{
+  "run_id": "20261027_145241_eight_85fe2",
+  "case": "eight",
+  "status": "PASS",
+  "pc_time": "2026-10-27T14:52:41.247288+08:00",
+  "boot_mode": "unknown",
+  "arm_wall_time_untrusted": "2000-12-08T22:06:23.837877",
+  "arm_monotonic_start": 3636.851468649,
+  "kernel": "5.10.226-v1.0.4-008a05487-rt89",
+  "machine": "aarch64",
+  "steps": [
+    {
+      "elapsed": 5.3e-05,
+      "event": "START",
+      "run_id": "20261027_145241_eight_85fe2",
+      "case": "eight",
+      "status": "RUNNING",
+      "pc_time": "2026-10-27T14:52:41.247288+08:00",
+      "boot_mode": "unknown",
+      "arm_wall_time_untrusted": "2000-12-08T22:06:23.837877",
+      "arm_monotonic_start": 3636.851468649,
+      "kernel": "5.10.226-v1.0.4-008a05487-rt89",
+      "machine": "aarch64",
+      "evidence": [
+        {
+          "status": "ok",
+          "busy": "0",
+          "accepted": "0",
+          "rx_status": "3",
+          "blocks": "0",
+          "live": "191",
+          "id": "001_32b80c41"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "fdma_up",
+          "id": "002_25694c47"
+        },
+        {
+          "status": "ok",
+          "busy": "0",
+          "accepted": "2",
+          "rx_status": "11",
+          "blocks": "1",
+          "live": "447",
+          "id": "003_6195c52e"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145247_1793083967172.csv",
+          "id": "004_f680a515"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "fdma_up",
+          "id": "005_35234e9a"
+        },
+        {
+          "status": "ok",
+          "busy": "0",
+          "accepted": "2",
+          "rx_status": "11",
+          "blocks": "2",
+          "live": "447",
+          "id": "006_46acd0a9"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145255_1793083975761.csv",
+          "id": "007_f59156c8"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "fdma_up",
+          "id": "008_c022fcbe"
+        },
+        {
+          "status": "ok",
+          "busy": "0",
+          "accepted": "2",
+          "rx_status": "11",
+          "blocks": "3",
+          "live": "447",
+          "id": "009_304a2e97"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145304_1793083984461.csv",
+          "id": "010_5f829130"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "fdma_up",
+          "id": "011_52b3d8c9"
+        },
+        {
+          "status": "ok",
+          "busy": "0",
+          "accepted": "2",
+          "rx_status": "11",
+          "blocks": "4",
+          "live": "447",
+          "id": "012_7379f174"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145313_1793083993048.csv",
+          "id": "013_0fca1f5b"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "fdma_up",
+          "id": "014_42371489"
+        },
+        {
+          "status": "ok",
+          "busy": "0",
+          "accepted": "2",
+          "rx_status": "11",
+          "blocks": "5",
+          "live": "447",
+          "id": "015_ebf5b93e"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145321_1793084001711.csv",
+          "id": "016_5954d24d"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "fdma_up",
+          "id": "017_51986849"
+        },
+        {
+          "status": "ok",
+          "busy": "0",
+          "accepted": "2",
+          "rx_status": "11",
+          "blocks": "6",
+          "live": "447",
+          "id": "018_522796fd"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145330_1793084010418.csv",
+          "id": "019_d9446bbb"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "fdma_up",
+          "id": "020_d7db4a36"
+        },
+        {
+          "status": "ok",
+          "busy": "0",
+          "accepted": "2",
+          "rx_status": "11",
+          "blocks": "7",
+          "live": "447",
+          "id": "021_4bc79a9f"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145339_1793084019045.csv",
+          "id": "022_6beb6e08"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "fdma_up",
+          "id": "023_02f0fcdd"
+        },
+        {
+          "status": "ok",
+          "busy": "0",
+          "accepted": "2",
+          "rx_status": "11",
+          "blocks": "8",
+          "live": "447",
+          "id": "024_789e7ff6"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145347_1793084027652.csv",
+          "id": "025_e48509c7"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "dma_read",
+          "id": "026_cd5bcfe2"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145355_1793084035573.csv",
+          "id": "027_0416f7b1"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "dma_read",
+          "id": "028_b5e6bfb0"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145402_1793084042264.csv",
+          "id": "029_613773af"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "dma_read",
+          "id": "030_22398054"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145408_1793084048992.csv",
+          "id": "031_500dbd7d"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "dma_read",
+          "id": "032_24382c5a"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145415_1793084055745.csv",
+          "id": "033_aafcc03a"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "dma_read",
+          "id": "034_5d2134df"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145422_1793084062485.csv",
+          "id": "035_fa5c78f5"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "dma_read",
+          "id": "036_505f721b"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145429_1793084069337.csv",
+          "id": "037_8e99ab6a"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "dma_read",
+          "id": "038_505021c3"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145436_1793084076133.csv",
+          "id": "039_5c998201"
+        },
+        {
+          "status": "ok",
+          "armed": "1",
+          "test": "dma_read",
+          "id": "040_0ff2659a"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145442_1793084082802.csv",
+          "id": "041_92fd79b1"
+        },
+        {
+          "status": "ok",
+          "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/vio_20261027_145447_1793084087649.txt",
+          "id": "042_aa9590ae"
+        }
+      ],
+      "exclusive_declared": true,
+      "note": "VIO mode validates DDR/C2H, not real Aurora RX."
+    },
+    {
+      "elapsed": 0.04508,
+      "event": "REGISTERS",
+      "label": "baseline",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43976,
+        "0x18": 0,
+        "0x1c": 0,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 0,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 0.048571,
+      "event": "DROP_BASELINE",
+      "value": 0
+    },
+    {
+      "elapsed": 0.051567,
+      "event": "CONTROL_REQUEST",
+      "action": "inspect",
+      "sequence": 1,
+      "params": {}
+    },
+    {
+      "elapsed": 0.957426,
+      "event": "CONTROL_COMPLETE",
+      "action": "inspect",
+      "response": {
+        "status": "ok",
+        "busy": "0",
+        "accepted": "0",
+        "rx_status": "3",
+        "blocks": "0",
+        "live": "191",
+        "id": "001_32b80c41"
+      }
+    },
+    {
+      "elapsed": 0.966947,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 2,
+      "params": {
+        "test": "fdma_up"
+      }
+    },
+    {
+      "elapsed": 2.683226,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "fdma_up",
+        "id": "002_25694c47"
+      }
+    },
+    {
+      "elapsed": 2.695034,
+      "event": "CONTROL_REQUEST",
+      "action": "inject",
+      "sequence": 3,
+      "params": {}
+    },
+    {
+      "elapsed": 4.51002,
+      "event": "CONTROL_COMPLETE",
+      "action": "inject",
+      "response": {
+        "status": "ok",
+        "busy": "0",
+        "accepted": "2",
+        "rx_status": "11",
+        "blocks": "1",
+        "live": "447",
+        "id": "003_6195c52e"
+      }
+    },
+    {
+      "elapsed": 4.520643,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 1
+    },
+    {
+      "elapsed": 4.565926,
+      "event": "REGISTERS",
+      "label": "after_inject_1",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43950,
+        "0x18": 1048576,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 1,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 4.571625,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 4,
+      "params": {
+        "kind": "fdma"
+      }
+    },
+    {
+      "elapsed": 7.693284,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145247_1793083967172.csv",
+        "id": "004_f680a515"
+      }
+    },
+    {
+      "elapsed": 7.69922,
+      "event": "DEMO_HOLD",
+      "stage": "入队完成",
+      "queue": 1,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 9.7162,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 5,
+      "params": {
+        "test": "fdma_up"
+      }
+    },
+    {
+      "elapsed": 11.333491,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "fdma_up",
+        "id": "005_35234e9a"
+      }
+    },
+    {
+      "elapsed": 11.341284,
+      "event": "CONTROL_REQUEST",
+      "action": "inject",
+      "sequence": 6,
+      "params": {}
+    },
+    {
+      "elapsed": 13.056046,
+      "event": "CONTROL_COMPLETE",
+      "action": "inject",
+      "response": {
+        "status": "ok",
+        "busy": "0",
+        "accepted": "2",
+        "rx_status": "11",
+        "blocks": "2",
+        "live": "447",
+        "id": "006_46acd0a9"
+      }
+    },
+    {
+      "elapsed": 13.067702,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 2
+    },
+    {
+      "elapsed": 13.112023,
+      "event": "REGISTERS",
+      "label": "after_inject_2",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43970,
+        "0x18": 1048576,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 2,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 13.128169,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 7,
+      "params": {
+        "kind": "fdma"
+      }
+    },
+    {
+      "elapsed": 16.250813,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145255_1793083975761.csv",
+        "id": "007_f59156c8"
+      }
+    },
+    {
+      "elapsed": 16.25724,
+      "event": "DEMO_HOLD",
+      "stage": "入队完成",
+      "queue": 2,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 18.275093,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 8,
+      "params": {
+        "test": "fdma_up"
+      }
+    },
+    {
+      "elapsed": 19.893257,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "fdma_up",
+        "id": "008_c022fcbe"
+      }
+    },
+    {
+      "elapsed": 19.900124,
+      "event": "CONTROL_REQUEST",
+      "action": "inject",
+      "sequence": 9,
+      "params": {}
+    },
+    {
+      "elapsed": 21.7171,
+      "event": "CONTROL_COMPLETE",
+      "action": "inject",
+      "response": {
+        "status": "ok",
+        "busy": "0",
+        "accepted": "2",
+        "rx_status": "11",
+        "blocks": "3",
+        "live": "447",
+        "id": "009_304a2e97"
+      }
+    },
+    {
+      "elapsed": 21.729966,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 3
+    },
+    {
+      "elapsed": 21.777704,
+      "event": "REGISTERS",
+      "label": "after_inject_3",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43962,
+        "0x18": 1048576,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 3,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 21.794491,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 10,
+      "params": {
+        "kind": "fdma"
+      }
+    },
+    {
+      "elapsed": 24.924453,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145304_1793083984461.csv",
+        "id": "010_5f829130"
+      }
+    },
+    {
+      "elapsed": 24.932172,
+      "event": "DEMO_HOLD",
+      "stage": "入队完成",
+      "queue": 3,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 26.951356,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 11,
+      "params": {
+        "test": "fdma_up"
+      }
+    },
+    {
+      "elapsed": 28.671228,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "fdma_up",
+        "id": "011_52b3d8c9"
+      }
+    },
+    {
+      "elapsed": 28.680369,
+      "event": "CONTROL_REQUEST",
+      "action": "inject",
+      "sequence": 12,
+      "params": {}
+    },
+    {
+      "elapsed": 30.394673,
+      "event": "CONTROL_COMPLETE",
+      "action": "inject",
+      "response": {
+        "status": "ok",
+        "busy": "0",
+        "accepted": "2",
+        "rx_status": "11",
+        "blocks": "4",
+        "live": "447",
+        "id": "012_7379f174"
+      }
+    },
+    {
+      "elapsed": 30.407936,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 4
+    },
+    {
+      "elapsed": 30.454701,
+      "event": "REGISTERS",
+      "label": "after_inject_4",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 44014,
+        "0x18": 1048576,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 4,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 30.472893,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 13,
+      "params": {
+        "kind": "fdma"
+      }
+    },
+    {
+      "elapsed": 33.59816,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145313_1793083993048.csv",
+        "id": "013_0fca1f5b"
+      }
+    },
+    {
+      "elapsed": 33.608197,
+      "event": "DEMO_HOLD",
+      "stage": "入队完成",
+      "queue": 4,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 35.627402,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 14,
+      "params": {
+        "test": "fdma_up"
+      }
+    },
+    {
+      "elapsed": 37.146843,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "fdma_up",
+        "id": "014_42371489"
+      }
+    },
+    {
+      "elapsed": 37.157082,
+      "event": "CONTROL_REQUEST",
+      "action": "inject",
+      "sequence": 15,
+      "params": {}
+    },
+    {
+      "elapsed": 38.975574,
+      "event": "CONTROL_COMPLETE",
+      "action": "inject",
+      "response": {
+        "status": "ok",
+        "busy": "0",
+        "accepted": "2",
+        "rx_status": "11",
+        "blocks": "5",
+        "live": "447",
+        "id": "015_ebf5b93e"
+      }
+    },
+    {
+      "elapsed": 38.989045,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 5
+    },
+    {
+      "elapsed": 39.04048,
+      "event": "REGISTERS",
+      "label": "after_inject_5",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 44102,
+        "0x18": 1048576,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 5,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 39.059492,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 16,
+      "params": {
+        "kind": "fdma"
+      }
+    },
+    {
+      "elapsed": 42.190713,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145321_1793084001711.csv",
+        "id": "016_5954d24d"
+      }
+    },
+    {
+      "elapsed": 42.200504,
+      "event": "DEMO_HOLD",
+      "stage": "入队完成",
+      "queue": 5,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 44.220718,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 17,
+      "params": {
+        "test": "fdma_up"
+      }
+    },
+    {
+      "elapsed": 45.841461,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "fdma_up",
+        "id": "017_51986849"
+      }
+    },
+    {
+      "elapsed": 45.851261,
+      "event": "CONTROL_REQUEST",
+      "action": "inject",
+      "sequence": 18,
+      "params": {}
+    },
+    {
+      "elapsed": 47.670458,
+      "event": "CONTROL_COMPLETE",
+      "action": "inject",
+      "response": {
+        "status": "ok",
+        "busy": "0",
+        "accepted": "2",
+        "rx_status": "11",
+        "blocks": "6",
+        "live": "447",
+        "id": "018_522796fd"
+      }
+    },
+    {
+      "elapsed": 47.685424,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 6
+    },
+    {
+      "elapsed": 47.73583,
+      "event": "REGISTERS",
+      "label": "after_inject_6",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43998,
+        "0x18": 1048576,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 6,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 47.755842,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 19,
+      "params": {
+        "kind": "fdma"
+      }
+    },
+    {
+      "elapsed": 50.881527,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145330_1793084010418.csv",
+        "id": "019_d9446bbb"
+      }
+    },
+    {
+      "elapsed": 50.892155,
+      "event": "DEMO_HOLD",
+      "stage": "入队完成",
+      "queue": 6,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 52.913901,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 20,
+      "params": {
+        "test": "fdma_up"
+      }
+    },
+    {
+      "elapsed": 54.536051,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "fdma_up",
+        "id": "020_d7db4a36"
+      }
+    },
+    {
+      "elapsed": 54.546998,
+      "event": "CONTROL_REQUEST",
+      "action": "inject",
+      "sequence": 21,
+      "params": {}
+    },
+    {
+      "elapsed": 56.367369,
+      "event": "CONTROL_COMPLETE",
+      "action": "inject",
+      "response": {
+        "status": "ok",
+        "busy": "0",
+        "accepted": "2",
+        "rx_status": "11",
+        "blocks": "7",
+        "live": "447",
+        "id": "021_4bc79a9f"
+      }
+    },
+    {
+      "elapsed": 56.38376,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 7
+    },
+    {
+      "elapsed": 56.434148,
+      "event": "REGISTERS",
+      "label": "after_inject_7",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43974,
+        "0x18": 1048576,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 7,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 56.455307,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 22,
+      "params": {
+        "kind": "fdma"
+      }
+    },
+    {
+      "elapsed": 59.582873,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145339_1793084019045.csv",
+        "id": "022_6beb6e08"
+      }
+    },
+    {
+      "elapsed": 59.595602,
+      "event": "DEMO_HOLD",
+      "stage": "入队完成",
+      "queue": 7,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 61.618189,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 23,
+      "params": {
+        "test": "fdma_up"
+      }
+    },
+    {
+      "elapsed": 63.140256,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "fdma_up",
+        "id": "023_02f0fcdd"
+      }
+    },
+    {
+      "elapsed": 63.153204,
+      "event": "CONTROL_REQUEST",
+      "action": "inject",
+      "sequence": 24,
+      "params": {}
+    },
+    {
+      "elapsed": 64.974287,
+      "event": "CONTROL_COMPLETE",
+      "action": "inject",
+      "response": {
+        "status": "ok",
+        "busy": "0",
+        "accepted": "2",
+        "rx_status": "11",
+        "blocks": "8",
+        "live": "447",
+        "id": "024_789e7ff6"
+      }
+    },
+    {
+      "elapsed": 64.989892,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 8
+    },
+    {
+      "elapsed": 65.042174,
+      "event": "REGISTERS",
+      "label": "after_inject_8",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43986,
+        "0x18": 1048576,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 8,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 65.065261,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 25,
+      "params": {
+        "kind": "fdma"
+      }
+    },
+    {
+      "elapsed": 68.193757,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145347_1793084027652.csv",
+        "id": "025_e48509c7"
+      }
+    },
+    {
+      "elapsed": 68.206337,
+      "event": "DEMO_HOLD",
+      "stage": "入队完成",
+      "queue": 8,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 71.332908,
+      "event": "REGISTERS",
+      "label": "before_notification_clear",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 44038,
+        "0x18": 1048576,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 8,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 71.350916,
+      "event": "READ_CLEAR_ONCE",
+      "offset": "0x10",
+      "value": 1
+    },
+    {
+      "elapsed": 71.376071,
+      "event": "BLOCK_READ_BEGIN",
+      "address": "0x100000",
+      "sequence": 0,
+      "effective": 8,
+      "remaining": 8
+    },
+    {
+      "elapsed": 71.38872,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 26,
+      "params": {
+        "test": "dma_read"
+      }
+    },
+    {
+      "elapsed": 72.709854,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "dma_read",
+        "id": "026_cd5bcfe2"
+      }
+    },
+    {
+      "elapsed": 72.722721,
+      "event": "DMA_SUBMIT",
+      "direction": "c2h",
+      "card_address": "0x100000",
+      "requested": 16,
+      "data_file": "up_000_seq_00000000.bin"
+    },
+    {
+      "elapsed": 72.747428,
+      "event": "DMA_RETURN",
+      "direction": "c2h",
+      "card_address": 1048576,
+      "requested": 16,
+      "completed": 16,
+      "elapsed_seconds": 4.3458e-05,
+      "errno": 0,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "elapsed": 72.760604,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 27,
+      "params": {
+        "kind": "native"
+      }
+    },
+    {
+      "elapsed": 75.888602,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145355_1793084035573.csv",
+        "id": "027_0416f7b1"
+      }
+    },
+    {
+      "elapsed": 75.943456,
+      "event": "REGISTERS",
+      "label": "before_ack",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43990,
+        "0x18": 1048576,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 8,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 75.970331,
+      "event": "BLOCK_DATA_VERIFIED",
+      "block": {
+        "address": "0x100000",
+        "sequence": 0,
+        "effective": 8,
+        "requested": 16,
+        "completed": 16,
+        "data_hex": "1100000022000000",
+        "file": "up_000_seq_00000000.bin",
+        "ack_intent": true,
+        "ack_confirmed": false
+      }
+    },
+    {
+      "elapsed": 75.983923,
+      "event": "WRITE_INTENT",
+      "offset": "0x14",
+      "value": "0x1",
+      "retry": false
+    },
+    {
+      "elapsed": 75.999791,
+      "event": "WRITE_RETURNED",
+      "offset": "0x14"
+    },
+    {
+      "elapsed": 76.013592,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 7
+    },
+    {
+      "elapsed": 76.019068,
+      "event": "BLOCK_ACK_CONFIRMED",
+      "sequence": 0,
+      "remaining": 7
+    },
+    {
+      "elapsed": 76.024347,
+      "event": "DEMO_HOLD",
+      "stage": "读取并归还完成",
+      "queue": 7,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 78.044509,
+      "event": "BLOCK_READ_BEGIN",
+      "address": "0x140000",
+      "sequence": 1,
+      "effective": 8,
+      "remaining": 7
+    },
+    {
+      "elapsed": 78.060625,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 28,
+      "params": {
+        "test": "dma_read"
+      }
+    },
+    {
+      "elapsed": 79.583636,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "dma_read",
+        "id": "028_b5e6bfb0"
+      }
+    },
+    {
+      "elapsed": 79.599467,
+      "event": "DMA_SUBMIT",
+      "direction": "c2h",
+      "card_address": "0x140000",
+      "requested": 16,
+      "data_file": "up_001_seq_00000001.bin"
+    },
+    {
+      "elapsed": 79.617186,
+      "event": "DMA_RETURN",
+      "direction": "c2h",
+      "card_address": 1310720,
+      "requested": 16,
+      "completed": 16,
+      "elapsed_seconds": 4.6958e-05,
+      "errno": 0,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "elapsed": 79.631584,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 29,
+      "params": {
+        "kind": "native"
+      }
+    },
+    {
+      "elapsed": 82.660584,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145402_1793084042264.csv",
+        "id": "029_613773af"
+      }
+    },
+    {
+      "elapsed": 82.717823,
+      "event": "REGISTERS",
+      "label": "before_ack",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43978,
+        "0x18": 1310720,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 7,
+        "0x34": 1,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 82.746394,
+      "event": "BLOCK_DATA_VERIFIED",
+      "block": {
+        "address": "0x140000",
+        "sequence": 1,
+        "effective": 8,
+        "requested": 16,
+        "completed": 16,
+        "data_hex": "1100000022000000",
+        "file": "up_001_seq_00000001.bin",
+        "ack_intent": true,
+        "ack_confirmed": false
+      }
+    },
+    {
+      "elapsed": 82.761715,
+      "event": "WRITE_INTENT",
+      "offset": "0x14",
+      "value": "0x1",
+      "retry": false
+    },
+    {
+      "elapsed": 82.778722,
+      "event": "WRITE_RETURNED",
+      "offset": "0x14"
+    },
+    {
+      "elapsed": 82.793445,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 6
+    },
+    {
+      "elapsed": 82.804058,
+      "event": "BLOCK_ACK_CONFIRMED",
+      "sequence": 1,
+      "remaining": 6
+    },
+    {
+      "elapsed": 82.80969,
+      "event": "DEMO_HOLD",
+      "stage": "读取并归还完成",
+      "queue": 6,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 84.829876,
+      "event": "BLOCK_READ_BEGIN",
+      "address": "0x180000",
+      "sequence": 2,
+      "effective": 8,
+      "remaining": 6
+    },
+    {
+      "elapsed": 84.846605,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 30,
+      "params": {
+        "test": "dma_read"
+      }
+    },
+    {
+      "elapsed": 86.270215,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "dma_read",
+        "id": "030_22398054"
+      }
+    },
+    {
+      "elapsed": 86.286994,
+      "event": "DMA_SUBMIT",
+      "direction": "c2h",
+      "card_address": "0x180000",
+      "requested": 16,
+      "data_file": "up_002_seq_00000002.bin"
+    },
+    {
+      "elapsed": 86.307691,
+      "event": "DMA_RETURN",
+      "direction": "c2h",
+      "card_address": 1572864,
+      "requested": 16,
+      "completed": 16,
+      "elapsed_seconds": 4.6666e-05,
+      "errno": 0,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "elapsed": 86.323325,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 31,
+      "params": {
+        "kind": "native"
+      }
+    },
+    {
+      "elapsed": 89.353969,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145408_1793084048992.csv",
+        "id": "031_500dbd7d"
+      }
+    },
+    {
+      "elapsed": 89.410961,
+      "event": "REGISTERS",
+      "label": "before_ack",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 44040,
+        "0x18": 1572864,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 6,
+        "0x34": 2,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 89.43936,
+      "event": "BLOCK_DATA_VERIFIED",
+      "block": {
+        "address": "0x180000",
+        "sequence": 2,
+        "effective": 8,
+        "requested": 16,
+        "completed": 16,
+        "data_hex": "1100000022000000",
+        "file": "up_002_seq_00000002.bin",
+        "ack_intent": true,
+        "ack_confirmed": false
+      }
+    },
+    {
+      "elapsed": 89.454611,
+      "event": "WRITE_INTENT",
+      "offset": "0x14",
+      "value": "0x1",
+      "retry": false
+    },
+    {
+      "elapsed": 89.469471,
+      "event": "WRITE_RETURNED",
+      "offset": "0x14"
+    },
+    {
+      "elapsed": 89.478033,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 5
+    },
+    {
+      "elapsed": 89.484329,
+      "event": "BLOCK_ACK_CONFIRMED",
+      "sequence": 2,
+      "remaining": 5
+    },
+    {
+      "elapsed": 89.490408,
+      "event": "DEMO_HOLD",
+      "stage": "读取并归还完成",
+      "queue": 5,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 91.511144,
+      "event": "BLOCK_READ_BEGIN",
+      "address": "0x1c0000",
+      "sequence": 3,
+      "effective": 8,
+      "remaining": 5
+    },
+    {
+      "elapsed": 91.520095,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 32,
+      "params": {
+        "test": "dma_read"
+      }
+    },
+    {
+      "elapsed": 93.04527,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "dma_read",
+        "id": "032_24382c5a"
+      }
+    },
+    {
+      "elapsed": 93.061948,
+      "event": "DMA_SUBMIT",
+      "direction": "c2h",
+      "card_address": "0x1c0000",
+      "requested": 16,
+      "data_file": "up_003_seq_00000003.bin"
+    },
+    {
+      "elapsed": 93.084377,
+      "event": "DMA_RETURN",
+      "direction": "c2h",
+      "card_address": 1835008,
+      "requested": 16,
+      "completed": 16,
+      "elapsed_seconds": 4.7541e-05,
+      "errno": 0,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "elapsed": 93.10139,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 33,
+      "params": {
+        "kind": "native"
+      }
+    },
+    {
+      "elapsed": 96.131807,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145415_1793084055745.csv",
+        "id": "033_aafcc03a"
+      }
+    },
+    {
+      "elapsed": 96.19199,
+      "event": "REGISTERS",
+      "label": "before_ack",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43936,
+        "0x18": 1835008,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 5,
+        "0x34": 3,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 96.222478,
+      "event": "BLOCK_DATA_VERIFIED",
+      "block": {
+        "address": "0x1c0000",
+        "sequence": 3,
+        "effective": 8,
+        "requested": 16,
+        "completed": 16,
+        "data_hex": "1100000022000000",
+        "file": "up_003_seq_00000003.bin",
+        "ack_intent": true,
+        "ack_confirmed": false
+      }
+    },
+    {
+      "elapsed": 96.239038,
+      "event": "WRITE_INTENT",
+      "offset": "0x14",
+      "value": "0x1",
+      "retry": false
+    },
+    {
+      "elapsed": 96.247665,
+      "event": "WRITE_RETURNED",
+      "offset": "0x14"
+    },
+    {
+      "elapsed": 96.2564,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 4
+    },
+    {
+      "elapsed": 96.26301,
+      "event": "BLOCK_ACK_CONFIRMED",
+      "sequence": 3,
+      "remaining": 4
+    },
+    {
+      "elapsed": 96.269288,
+      "event": "DEMO_HOLD",
+      "stage": "读取并归还完成",
+      "queue": 4,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 98.28928,
+      "event": "BLOCK_READ_BEGIN",
+      "address": "0x200000",
+      "sequence": 4,
+      "effective": 8,
+      "remaining": 4
+    },
+    {
+      "elapsed": 98.298856,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 34,
+      "params": {
+        "test": "dma_read"
+      }
+    },
+    {
+      "elapsed": 99.72447,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "dma_read",
+        "id": "034_5d2134df"
+      }
+    },
+    {
+      "elapsed": 99.742594,
+      "event": "DMA_SUBMIT",
+      "direction": "c2h",
+      "card_address": "0x200000",
+      "requested": 16,
+      "data_file": "up_004_seq_00000004.bin"
+    },
+    {
+      "elapsed": 99.765681,
+      "event": "DMA_RETURN",
+      "direction": "c2h",
+      "card_address": 2097152,
+      "requested": 16,
+      "completed": 16,
+      "elapsed_seconds": 5.6292e-05,
+      "errno": 0,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "elapsed": 99.783945,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 35,
+      "params": {
+        "kind": "native"
+      }
+    },
+    {
+      "elapsed": 103.017213,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145422_1793084062485.csv",
+        "id": "035_fa5c78f5"
+      }
+    },
+    {
+      "elapsed": 103.078696,
+      "event": "REGISTERS",
+      "label": "before_ack",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 44034,
+        "0x18": 2097152,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 4,
+        "0x34": 4,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 103.110972,
+      "event": "BLOCK_DATA_VERIFIED",
+      "block": {
+        "address": "0x200000",
+        "sequence": 4,
+        "effective": 8,
+        "requested": 16,
+        "completed": 16,
+        "data_hex": "1100000022000000",
+        "file": "up_004_seq_00000004.bin",
+        "ack_intent": true,
+        "ack_confirmed": false
+      }
+    },
+    {
+      "elapsed": 103.126531,
+      "event": "WRITE_INTENT",
+      "offset": "0x14",
+      "value": "0x1",
+      "retry": false
+    },
+    {
+      "elapsed": 103.135461,
+      "event": "WRITE_RETURNED",
+      "offset": "0x14"
+    },
+    {
+      "elapsed": 103.144678,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 3
+    },
+    {
+      "elapsed": 103.15812,
+      "event": "BLOCK_ACK_CONFIRMED",
+      "sequence": 4,
+      "remaining": 3
+    },
+    {
+      "elapsed": 103.164594,
+      "event": "DEMO_HOLD",
+      "stage": "读取并归还完成",
+      "queue": 3,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 105.185828,
+      "event": "BLOCK_READ_BEGIN",
+      "address": "0x240000",
+      "sequence": 5,
+      "effective": 8,
+      "remaining": 3
+    },
+    {
+      "elapsed": 105.195764,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 36,
+      "params": {
+        "test": "dma_read"
+      }
+    },
+    {
+      "elapsed": 106.522159,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "dma_read",
+        "id": "036_505f721b"
+      }
+    },
+    {
+      "elapsed": 106.541165,
+      "event": "DMA_SUBMIT",
+      "direction": "c2h",
+      "card_address": "0x240000",
+      "requested": 16,
+      "data_file": "up_005_seq_00000005.bin"
+    },
+    {
+      "elapsed": 106.56345,
+      "event": "DMA_RETURN",
+      "direction": "c2h",
+      "card_address": 2359296,
+      "requested": 16,
+      "completed": 16,
+      "elapsed_seconds": 3.9375e-05,
+      "errno": 0,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "elapsed": 106.583296,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 37,
+      "params": {
+        "kind": "native"
+      }
+    },
+    {
+      "elapsed": 109.718327,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145429_1793084069337.csv",
+        "id": "037_8e99ab6a"
+      }
+    },
+    {
+      "elapsed": 109.780258,
+      "event": "REGISTERS",
+      "label": "before_ack",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43912,
+        "0x18": 2359296,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 3,
+        "0x34": 5,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 109.813396,
+      "event": "BLOCK_DATA_VERIFIED",
+      "block": {
+        "address": "0x240000",
+        "sequence": 5,
+        "effective": 8,
+        "requested": 16,
+        "completed": 16,
+        "data_hex": "1100000022000000",
+        "file": "up_005_seq_00000005.bin",
+        "ack_intent": true,
+        "ack_confirmed": false
+      }
+    },
+    {
+      "elapsed": 109.830811,
+      "event": "WRITE_INTENT",
+      "offset": "0x14",
+      "value": "0x1",
+      "retry": false
+    },
+    {
+      "elapsed": 109.840335,
+      "event": "WRITE_RETURNED",
+      "offset": "0x14"
+    },
+    {
+      "elapsed": 109.84993,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 2
+    },
+    {
+      "elapsed": 109.857087,
+      "event": "BLOCK_ACK_CONFIRMED",
+      "sequence": 5,
+      "remaining": 2
+    },
+    {
+      "elapsed": 109.864188,
+      "event": "DEMO_HOLD",
+      "stage": "读取并归还完成",
+      "queue": 2,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 111.886195,
+      "event": "BLOCK_READ_BEGIN",
+      "address": "0x280000",
+      "sequence": 6,
+      "effective": 8,
+      "remaining": 2
+    },
+    {
+      "elapsed": 111.896448,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 38,
+      "params": {
+        "test": "dma_read"
+      }
+    },
+    {
+      "elapsed": 113.425153,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "dma_read",
+        "id": "038_505021c3"
+      }
+    },
+    {
+      "elapsed": 113.445462,
+      "event": "DMA_SUBMIT",
+      "direction": "c2h",
+      "card_address": "0x280000",
+      "requested": 16,
+      "data_file": "up_006_seq_00000006.bin"
+    },
+    {
+      "elapsed": 113.477291,
+      "event": "DMA_RETURN",
+      "direction": "c2h",
+      "card_address": 2621440,
+      "requested": 16,
+      "completed": 16,
+      "elapsed_seconds": 4.6375e-05,
+      "errno": 0,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "elapsed": 113.497686,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 39,
+      "params": {
+        "kind": "native"
+      }
+    },
+    {
+      "elapsed": 116.532638,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145436_1793084076133.csv",
+        "id": "039_5c998201"
+      }
+    },
+    {
+      "elapsed": 116.594589,
+      "event": "REGISTERS",
+      "label": "before_ack",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43944,
+        "0x18": 2621440,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 2,
+        "0x34": 6,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 116.617092,
+      "event": "BLOCK_DATA_VERIFIED",
+      "block": {
+        "address": "0x280000",
+        "sequence": 6,
+        "effective": 8,
+        "requested": 16,
+        "completed": 16,
+        "data_hex": "1100000022000000",
+        "file": "up_006_seq_00000006.bin",
+        "ack_intent": true,
+        "ack_confirmed": false
+      }
+    },
+    {
+      "elapsed": 116.629914,
+      "event": "WRITE_INTENT",
+      "offset": "0x14",
+      "value": "0x1",
+      "retry": false
+    },
+    {
+      "elapsed": 116.639728,
+      "event": "WRITE_RETURNED",
+      "offset": "0x14"
+    },
+    {
+      "elapsed": 116.649595,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 1
+    },
+    {
+      "elapsed": 116.657066,
+      "event": "BLOCK_ACK_CONFIRMED",
+      "sequence": 6,
+      "remaining": 1
+    },
+    {
+      "elapsed": 116.664231,
+      "event": "DEMO_HOLD",
+      "stage": "读取并归还完成",
+      "queue": 1,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 118.686301,
+      "event": "BLOCK_READ_BEGIN",
+      "address": "0x2c0000",
+      "sequence": 7,
+      "effective": 8,
+      "remaining": 1
+    },
+    {
+      "elapsed": 118.708794,
+      "event": "CONTROL_REQUEST",
+      "action": "arm",
+      "sequence": 40,
+      "params": {
+        "test": "dma_read"
+      }
+    },
+    {
+      "elapsed": 120.036882,
+      "event": "CONTROL_COMPLETE",
+      "action": "arm",
+      "response": {
+        "status": "ok",
+        "armed": "1",
+        "test": "dma_read",
+        "id": "040_0ff2659a"
+      }
+    },
+    {
+      "elapsed": 120.059268,
+      "event": "DMA_SUBMIT",
+      "direction": "c2h",
+      "card_address": "0x2c0000",
+      "requested": 16,
+      "data_file": "up_007_seq_00000007.bin"
+    },
+    {
+      "elapsed": 120.085125,
+      "event": "DMA_RETURN",
+      "direction": "c2h",
+      "card_address": 2883584,
+      "requested": 16,
+      "completed": 16,
+      "elapsed_seconds": 4.7541e-05,
+      "errno": 0,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "elapsed": 120.106907,
+      "event": "CONTROL_REQUEST",
+      "action": "save",
+      "sequence": 41,
+      "params": {
+        "kind": "native"
+      }
+    },
+    {
+      "elapsed": 123.039821,
+      "event": "CONTROL_COMPLETE",
+      "action": "save",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145442_1793084082802.csv",
+        "id": "041_92fd79b1"
+      }
+    },
+    {
+      "elapsed": 123.102267,
+      "event": "REGISTERS",
+      "label": "before_ack",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 44000,
+        "0x18": 2883584,
+        "0x1c": 8,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 1,
+        "0x34": 7,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 123.132472,
+      "event": "BLOCK_DATA_VERIFIED",
+      "block": {
+        "address": "0x2c0000",
+        "sequence": 7,
+        "effective": 8,
+        "requested": 16,
+        "completed": 16,
+        "data_hex": "1100000022000000",
+        "file": "up_007_seq_00000007.bin",
+        "ack_intent": true,
+        "ack_confirmed": false
+      }
+    },
+    {
+      "elapsed": 123.140608,
+      "event": "WRITE_INTENT",
+      "offset": "0x14",
+      "value": "0x1",
+      "retry": false
+    },
+    {
+      "elapsed": 123.157744,
+      "event": "WRITE_RETURNED",
+      "offset": "0x14"
+    },
+    {
+      "elapsed": 123.168017,
+      "event": "STATE_READY",
+      "offset": "0x30",
+      "value": 0
+    },
+    {
+      "elapsed": 123.176043,
+      "event": "BLOCK_ACK_CONFIRMED",
+      "sequence": 7,
+      "remaining": 0
+    },
+    {
+      "elapsed": 123.183612,
+      "event": "DEMO_HOLD",
+      "stage": "读取并归还完成",
+      "queue": 0,
+      "seconds": 2.0
+    },
+    {
+      "elapsed": 125.198023,
+      "event": "QUEUE_BATCH_VERIFIED",
+      "blocks": 8
+    },
+    {
+      "elapsed": 125.214058,
+      "event": "RING_WRAP_VERIFIED",
+      "total_blocks": 8,
+      "distinct_slots": 8
+    },
+    {
+      "elapsed": 125.277286,
+      "event": "REGISTERS",
+      "label": "final",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43968,
+        "0x18": 0,
+        "0x1c": 0,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 0,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 125.296681,
+      "event": "CONTROL_REQUEST",
+      "action": "snapshot",
+      "sequence": 42,
+      "params": {}
+    },
+    {
+      "elapsed": 126.410346,
+      "event": "CONTROL_COMPLETE",
+      "action": "snapshot",
+      "response": {
+        "status": "ok",
+        "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/vio_20261027_145447_1793084087649.txt",
+        "id": "042_aa9590ae"
+      }
+    },
+    {
+      "elapsed": 126.433102,
+      "event": "FINISH",
+      "status": "PASS",
+      "error": null
+    }
+  ],
+  "blocks": [
+    {
+      "address": "0x100000",
+      "sequence": 0,
+      "effective": 8,
+      "requested": 16,
+      "completed": 16,
+      "data_hex": "1100000022000000",
+      "file": "up_000_seq_00000000.bin",
+      "ack_intent": true,
+      "ack_confirmed": true
+    },
+    {
+      "address": "0x140000",
+      "sequence": 1,
+      "effective": 8,
+      "requested": 16,
+      "completed": 16,
+      "data_hex": "1100000022000000",
+      "file": "up_001_seq_00000001.bin",
+      "ack_intent": true,
+      "ack_confirmed": true
+    },
+    {
+      "address": "0x180000",
+      "sequence": 2,
+      "effective": 8,
+      "requested": 16,
+      "completed": 16,
+      "data_hex": "1100000022000000",
+      "file": "up_002_seq_00000002.bin",
+      "ack_intent": true,
+      "ack_confirmed": true
+    },
+    {
+      "address": "0x1c0000",
+      "sequence": 3,
+      "effective": 8,
+      "requested": 16,
+      "completed": 16,
+      "data_hex": "1100000022000000",
+      "file": "up_003_seq_00000003.bin",
+      "ack_intent": true,
+      "ack_confirmed": true
+    },
+    {
+      "address": "0x200000",
+      "sequence": 4,
+      "effective": 8,
+      "requested": 16,
+      "completed": 16,
+      "data_hex": "1100000022000000",
+      "file": "up_004_seq_00000004.bin",
+      "ack_intent": true,
+      "ack_confirmed": true
+    },
+    {
+      "address": "0x240000",
+      "sequence": 5,
+      "effective": 8,
+      "requested": 16,
+      "completed": 16,
+      "data_hex": "1100000022000000",
+      "file": "up_005_seq_00000005.bin",
+      "ack_intent": true,
+      "ack_confirmed": true
+    },
+    {
+      "address": "0x280000",
+      "sequence": 6,
+      "effective": 8,
+      "requested": 16,
+      "completed": 16,
+      "data_hex": "1100000022000000",
+      "file": "up_006_seq_00000006.bin",
+      "ack_intent": true,
+      "ack_confirmed": true
+    },
+    {
+      "address": "0x2c0000",
+      "sequence": 7,
+      "effective": 8,
+      "requested": 16,
+      "completed": 16,
+      "data_hex": "1100000022000000",
+      "file": "up_007_seq_00000007.bin",
+      "ack_intent": true,
+      "ack_confirmed": true
+    }
+  ],
+  "evidence": [
+    {
+      "status": "ok",
+      "busy": "0",
+      "accepted": "0",
+      "rx_status": "3",
+      "blocks": "0",
+      "live": "191",
+      "id": "001_32b80c41"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "fdma_up",
+      "id": "002_25694c47"
+    },
+    {
+      "status": "ok",
+      "busy": "0",
+      "accepted": "2",
+      "rx_status": "11",
+      "blocks": "1",
+      "live": "447",
+      "id": "003_6195c52e"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145247_1793083967172.csv",
+      "id": "004_f680a515"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "fdma_up",
+      "id": "005_35234e9a"
+    },
+    {
+      "status": "ok",
+      "busy": "0",
+      "accepted": "2",
+      "rx_status": "11",
+      "blocks": "2",
+      "live": "447",
+      "id": "006_46acd0a9"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145255_1793083975761.csv",
+      "id": "007_f59156c8"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "fdma_up",
+      "id": "008_c022fcbe"
+    },
+    {
+      "status": "ok",
+      "busy": "0",
+      "accepted": "2",
+      "rx_status": "11",
+      "blocks": "3",
+      "live": "447",
+      "id": "009_304a2e97"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145304_1793083984461.csv",
+      "id": "010_5f829130"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "fdma_up",
+      "id": "011_52b3d8c9"
+    },
+    {
+      "status": "ok",
+      "busy": "0",
+      "accepted": "2",
+      "rx_status": "11",
+      "blocks": "4",
+      "live": "447",
+      "id": "012_7379f174"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145313_1793083993048.csv",
+      "id": "013_0fca1f5b"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "fdma_up",
+      "id": "014_42371489"
+    },
+    {
+      "status": "ok",
+      "busy": "0",
+      "accepted": "2",
+      "rx_status": "11",
+      "blocks": "5",
+      "live": "447",
+      "id": "015_ebf5b93e"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145321_1793084001711.csv",
+      "id": "016_5954d24d"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "fdma_up",
+      "id": "017_51986849"
+    },
+    {
+      "status": "ok",
+      "busy": "0",
+      "accepted": "2",
+      "rx_status": "11",
+      "blocks": "6",
+      "live": "447",
+      "id": "018_522796fd"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145330_1793084010418.csv",
+      "id": "019_d9446bbb"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "fdma_up",
+      "id": "020_d7db4a36"
+    },
+    {
+      "status": "ok",
+      "busy": "0",
+      "accepted": "2",
+      "rx_status": "11",
+      "blocks": "7",
+      "live": "447",
+      "id": "021_4bc79a9f"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145339_1793084019045.csv",
+      "id": "022_6beb6e08"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "fdma_up",
+      "id": "023_02f0fcdd"
+    },
+    {
+      "status": "ok",
+      "busy": "0",
+      "accepted": "2",
+      "rx_status": "11",
+      "blocks": "8",
+      "live": "447",
+      "id": "024_789e7ff6"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_fdma_20261027_145347_1793084027652.csv",
+      "id": "025_e48509c7"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "dma_read",
+      "id": "026_cd5bcfe2"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145355_1793084035573.csv",
+      "id": "027_0416f7b1"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "dma_read",
+      "id": "028_b5e6bfb0"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145402_1793084042264.csv",
+      "id": "029_613773af"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "dma_read",
+      "id": "030_22398054"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145408_1793084048992.csv",
+      "id": "031_500dbd7d"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "dma_read",
+      "id": "032_24382c5a"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145415_1793084055745.csv",
+      "id": "033_aafcc03a"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "dma_read",
+      "id": "034_5d2134df"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145422_1793084062485.csv",
+      "id": "035_fa5c78f5"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "dma_read",
+      "id": "036_505f721b"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145429_1793084069337.csv",
+      "id": "037_8e99ab6a"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "dma_read",
+      "id": "038_505021c3"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145436_1793084076133.csv",
+      "id": "039_5c998201"
+    },
+    {
+      "status": "ok",
+      "armed": "1",
+      "test": "dma_read",
+      "id": "040_0ff2659a"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145442_1793084082802.csv",
+      "id": "041_92fd79b1"
+    },
+    {
+      "status": "ok",
+      "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/vio_20261027_145447_1793084087649.txt",
+      "id": "042_aa9590ae"
+    }
+  ],
+  "exclusive_declared": true,
+  "note": "VIO mode validates DDR/C2H, not real Aurora RX.",
+  "program_sha256": {
+    "rtds_lab.py": "28e3531982c8c31183c0d144fa81a84d08a2d02052a49dd5eab355741c13686d",
+    "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+    "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+  },
+  "fpga_artifacts": {
+    "identity_source": "Host artifact files only; not proof of active FPGA or Flash identity",
+    "rx_vio_test_enable": 1,
+    "artifacts": [
+      {
+        "host_path": "R:\\pcie_cold_boot_audit_20261014\\main_spi4_50_gui\\TOP_main_spi4_50.bit",
+        "bytes": 8196610,
+        "sha256": "5131c34a2c2c4d84564a867d4b177105951c43c361dcd8d892d18cef564c7e45"
+      },
+      {
+        "host_path": "R:\\pcie_cold_boot_audit_20261014\\main_spi4_50_gui\\TOP_main_spi4_50.ltx",
+        "bytes": 276641,
+        "sha256": "4e388540548b63f639255a7c6ff0947ffda6cc7380fc4866571e7687ee6d56e5"
+      },
+      {
+        "host_path": "R:\\pcie_cold_boot_audit_20261014\\main_spi4_50_gui\\TOP_main_spi4_50.mcs",
+        "bytes": 23054784,
+        "sha256": "b27306b9c3d8f8723bd1d0463d192c67abd647c879c2edd448c6446baefaa58a"
+      }
+    ]
+  },
+  "endpoint": {
+    "bdf": "0000:01:00.0",
+    "bar0": "0xf0200000",
+    "driver": "xdma",
+    "nodes": {
+      "user": "/dev/xdma0_user",
+      "h2c_0": "/dev/xdma0_h2c_0",
+      "c2h_0": "/dev/xdma0_c2h_0"
+    }
+  },
+  "error": null,
+  "elapsed_seconds": 126.43308685200009
+}

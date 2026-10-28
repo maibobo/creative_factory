@@ -1,0 +1,21 @@
+{
+  "identity_source": "Host artifact files only; not proof of active FPGA or Flash identity",
+  "rx_vio_test_enable": 1,
+  "artifacts": [
+    {
+      "host_path": "R:\\pcie_cold_boot_audit_20261014\\main_spi4_50_gui\\TOP_main_spi4_50.bit",
+      "bytes": 8196610,
+      "sha256": "5131c34a2c2c4d84564a867d4b177105951c43c361dcd8d892d18cef564c7e45"
+    },
+    {
+      "host_path": "R:\\pcie_cold_boot_audit_20261014\\main_spi4_50_gui\\TOP_main_spi4_50.ltx",
+      "bytes": 276641,
+      "sha256": "4e388540548b63f639255a7c6ff0947ffda6cc7380fc4866571e7687ee6d56e5"
+    },
+    {
+      "host_path": "R:\\pcie_cold_boot_audit_20261014\\main_spi4_50_gui\\TOP_main_spi4_50.mcs",
+      "bytes": 23054784,
+      "sha256": "b27306b9c3d8f8723bd1d0463d192c67abd647c879c2edd448c6446baefaa58a"
+    }
+  ]
+}

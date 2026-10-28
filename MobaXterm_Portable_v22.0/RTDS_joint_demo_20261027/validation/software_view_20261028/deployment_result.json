@@ -1,0 +1,27 @@
+﻿[
+    {
+        "Path":  "debug/hardware_joint_demo_20261027/pc/demo_runner.py",
+        "Hash":  "c046e83e41e725a1997a01f61fb4b01621248a28ebd74ce106ed259eb5eeaacc",
+        "Status":  "DEPLOYED"
+    },
+    {
+        "Path":  "debug/hardware_joint_demo_20261027/arm/rtds_lab.py",
+        "Hash":  "ba99cb7a9a4c5cbc9960f131e54e69ae2c1645567c886b9927e92093fe2f8700",
+        "Status":  "DEPLOYED"
+    },
+    {
+        "Path":  "docs/主机_软件配置与操作说明_20261028.docx",
+        "Hash":  "1f5db143e04b34f9e8c32327092c82c47783bb2192c99ba8147249300dcc7b7e",
+        "Status":  "DEPLOYED"
+    },
+    {
+        "Path":  "docs/主机_软件配置与操作说明_20261028.md",
+        "Hash":  "2e29aa3ad41a7eb5c297d910c5425f6e9404191826d0f328335e824dd92635b1",
+        "Status":  "DEPLOYED"
+    },
+    {
+        "Path":  "docs/FPGA_1G到CPU_2us补充调试说明_20261028.md",
+        "Hash":  "e3997fff29e815954b2160fa1ffb8c5581929842a5b534b73e4d0939eec65a06",
+        "Status":  "DEPLOYED"
+    }
+]

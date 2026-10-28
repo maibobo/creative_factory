@@ -1,0 +1,37 @@
+[
+  {
+    "local": "E:\\Workspace\\FPGA\\PCIE_DDR_CPU\\outputs\\hardware_joint_demo_20261027\\pc\\demo_runner.py",
+    "target": "debug/hardware_joint_demo_20261027/pc/demo_runner.py",
+    "before": "193b652600f5e2584d8eb7b47fce97faaf0f5bb80e332aa81248d7885e3b26a3",
+    "after": "c046e83e41e725a1997a01f61fb4b01621248a28ebd74ce106ed259eb5eeaacc",
+    "stage": "code_0.pending"
+  },
+  {
+    "local": "E:\\Workspace\\FPGA\\PCIE_DDR_CPU\\outputs\\hardware_joint_demo_20261027\\arm\\rtds_lab.py",
+    "target": "debug/hardware_joint_demo_20261027/arm/rtds_lab.py",
+    "before": "28e3531982c8c31183c0d144fa81a84d08a2d02052a49dd5eab355741c13686d",
+    "after": "ba99cb7a9a4c5cbc9960f131e54e69ae2c1645567c886b9927e92093fe2f8700",
+    "stage": "code_1.pending"
+  },
+  {
+    "local": "E:\\Workspace\\FPGA\\PCIE_DDR_CPU\\outputs\\software_manual_revision_20261028\\主机_软件配置与操作说明_20261028.docx",
+    "target": "docs/主机_软件配置与操作说明_20261028.docx",
+    "before": "f269741b0a7c2df6e896f04eab507903687443700a3baa080e3cbac42e5c879c",
+    "after": "1f5db143e04b34f9e8c32327092c82c47783bb2192c99ba8147249300dcc7b7e",
+    "stage": "doc_0.pending"
+  },
+  {
+    "local": "E:\\Workspace\\FPGA\\PCIE_DDR_CPU\\outputs\\software_manual_revision_20261028\\主机_软件配置与操作说明_20261028.md",
+    "target": "docs/主机_软件配置与操作说明_20261028.md",
+    "before": "3d7c931a2432201ed6c3db679c02e8aaeaac59a5dca1bd8faf7bc73bd31a5277",
+    "after": "2e29aa3ad41a7eb5c297d910c5425f6e9404191826d0f328335e824dd92635b1",
+    "stage": "doc_1.pending"
+  },
+  {
+    "local": "E:\\Workspace\\FPGA\\PCIE_DDR_CPU\\outputs\\software_manual_revision_20261028\\FPGA_1G到CPU_2us补充调试说明_20261028.md",
+    "target": "docs/FPGA_1G到CPU_2us补充调试说明_20261028.md",
+    "before": null,
+    "after": "e3997fff29e815954b2160fa1ffb8c5581929842a5b534b73e4d0939eec65a06",
+    "stage": "doc_2.pending"
+  }
+]
