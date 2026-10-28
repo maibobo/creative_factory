@@ -5286,6 +5286,66 @@ begin
   end
  
 
+////////////////////////////////////////////// JTAG Debugger //////////////////////////////////////////////
+//------------------------------------------------------------------------------------------------------------------//
+//                                         JTAG LTSSM state Debugger                                                //
+//------------------------------------------------------------------------------------------------------------------//
+   wire                              [3:0]    cfg_negotiated_width_i;
+   wire                              [2:0]    cfg_current_speed_i;
+   assign cfg_current_speed_i    = cfg_current_speed;
+   assign cfg_negotiated_width_i = cfg_negotiated_width;
+
+   reg                                        pipe_tx0_rcvr_det_reg0    = 1'b0;
+   reg [((PL_LINK_CAP_MAX_LINK_WIDTH*3)-1):0] pipe_rx_status_reg0 = 'b0;
+   reg [((PL_LINK_CAP_MAX_LINK_WIDTH*1)-1):0] pipe_rx_phy_status_reg0 = 'b0;
+   reg [2:0]                                  phy_rst_fsm_reg0 = 3'b000;
+   wire                                       free_run_clock_sys_clk;
+  
+  assign free_run_clock_sys_clk = sys_clk_bufg; // Clock from the PCIe slot
+  //assign free_run_clock_sys_clk = free_run_clock; // Free run clock from the reference board 
+
+always @ (posedge pipe_clk) begin
+  pipe_tx0_rcvr_det_reg0   <= pipe_tx0_rcvr_det;
+  pipe_rx_status_reg0      <= pipe_rx_status;
+  pipe_rx_phy_status_reg0  <= pipe_rx_phy_status;
+end
+
+always @(posedge free_run_clock_sys_clk) begin
+  phy_rst_fsm_reg0 <= phy_rst_fsm[2:0];
+end
+
+  design_1_xdma_0_0_pcie3_ip_debug_wrapper #(
+   .PHY_LANE (PL_LINK_CAP_MAX_LINK_WIDTH)
+  ) 
+  debug_wrapper_U  
+  (
+  //reset state debugging probes
+  .user_clk             (user_clk),
+  .user_reset           (user_reset),
+  .sys_rst              (~sys_rst_n),
+  .sys_clk              (free_run_clock_sys_clk),
+  .reset_state          (phy_rst_fsm_reg0[2:0]),
+
+  //ltssm debugging probes
+  .ltssm                (cfg_ltssm_state_reg0),
+  .cfg_negotiated_width (cfg_negotiated_width_i), 
+  .cfg_current_speed    (cfg_current_speed_i),
+
+  //Receiver detect probes
+  .pclk                 (pipe_clk),
+  .prst_n               (phy_prst_n),
+  .txdetectrx           (pipe_tx0_rcvr_det_reg0),
+  .powerdown            (pipe_tx0_powerdown),
+  .phystatus            (pipe_rx_phy_status_reg0),
+  .rxstatus             (pipe_rx_status_reg0),
+
+  //clock and reset
+  .AXI_aclk             (free_run_clock_sys_clk),
+  .AXI_aresetn          (sys_rst_n)
+
+  );
+
+//
 
 
   

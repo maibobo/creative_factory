@@ -1,0 +1,158 @@
+root@RTDS:~# python3 /root/rtds_joint_demo_20261027/arm/rtds_regs_watch.py --log /root/rtds_joint_demo_20261027/live_status.log
+RTDS register viewer | READ ONLY | Ctrl+C to stop
+BDF=0000:01:00.0 BAR0=0xf0200000 elapsed=0.0s (* changed since prior refresh)
+Sequential reads, not atomic. No DMA, no writes, no read-clear.
+OFF ACC   NAME               HEX             DEC DETAIL
+ 00 R     VERSION            00002001       8193
+ 04 R     BUILD_ID           20260914  539363604
+ 08 R     BLOCK_CAPACITY     00040000     262144 262144 bytes
+ 0C R     TEMP_RAW           0000AB9E      43934 raw code, not Celsius
+ 18 R     RX_HEAD_ADDR       00000000          0
+ 1C R     RX_VALID_BYTES     00000000          0 0 bytes
+ 20 R/W1P DOWN_TRIGGER_BUSY  00000000          0 busy=0; W1 launches dow
+ 24 RW    DOWN_START_ADDR    00008000      32768
+ 28 RW    DOWN_BYTES         00008000      32768 32768 bytes
+ 2C R     DDR_STATUS         00000003          3 ready=1 errors=0x0
+ 30 R     RX_BLOCKS          00000000          0 queue 0/8
+ 34 R     RX_HEAD_SEQ        00000000          0 head seq; 0 when empty
+ 38 R     RX_DROPPED         00000000          0 dropped words; do not c
+ 10 RC    NOT POLLED         Reading clears notification.
+ 14 R/W1P NOT POLLED         W1 returns a block; use validated test.
+Recent TEST R/W journal (manual io writes are not captured):
+No journal events yet.
+
+
+
+CHANGE-ONLY: unchanged business values produce no output; polling continues.
+Temperature-only changes are muted. No screen clearing.
+
+[+39.6s] observed changes / new test actions
+  0x18 RX_HEAD_ADDR       R     00000000 -> 00100000 (1048576)
+  0x1C RX_VALID_BYTES     R     00000000 -> 00000008 (8)
+  0x30 RX_BLOCKS          R     00000000 -> 00000001 (1)
+[+48.1s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000001 -> 00000002 (2)
+[+57.1s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000002 -> 00000003 (3)
+[+65.6s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000003 -> 00000004 (4)
+[+74.1s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000004 -> 00000005 (5)
+[+82.6s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000005 -> 00000006 (6)
+[+91.6s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000006 -> 00000007 (7)
+[+100.1s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000007 -> 00000008 (8)
+[+106.6s] observed changes / new test actions
+  R CLEAR    0x10 -> 1 (performed by test, not viewer)
+[+111.2s] observed changes / new test actions
+  0x18 RX_HEAD_ADDR       R     00100000 -> 00140000 (1310720)
+  0x30 RX_BLOCKS          R     00000008 -> 00000007 (7)
+  0x34 RX_HEAD_SEQ        R     00000000 -> 00000001 (1)
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=0 queue=7
+[+118.2s] observed changes / new test actions
+  0x18 RX_HEAD_ADDR       R     00140000 -> 00180000 (1572864)
+  0x30 RX_BLOCKS          R     00000007 -> 00000006 (6)
+  0x34 RX_HEAD_SEQ        R     00000001 -> 00000002 (2)
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=1 queue=6
+[+124.7s] observed changes / new test actions
+  0x18 RX_HEAD_ADDR       R     00180000 -> 001C0000 (1835008)
+  0x30 RX_BLOCKS          R     00000006 -> 00000005 (5)
+  0x34 RX_HEAD_SEQ        R     00000002 -> 00000003 (3)
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=2 queue=5
+[+131.7s] observed changes / new test actions
+  0x18 RX_HEAD_ADDR       R     001C0000 -> 00200000 (2097152)
+  0x30 RX_BLOCKS          R     00000005 -> 00000004 (4)
+  0x34 RX_HEAD_SEQ        R     00000003 -> 00000004 (4)
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=3 queue=4
+[+138.7s] observed changes / new test actions
+  0x18 RX_HEAD_ADDR       R     00200000 -> 00240000 (2359296)
+  0x30 RX_BLOCKS          R     00000004 -> 00000003 (3)
+  0x34 RX_HEAD_SEQ        R     00000004 -> 00000005 (5)
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=4 queue=3
+[+145.2s] observed changes / new test actions
+  0x18 RX_HEAD_ADDR       R     00240000 -> 00280000 (2621440)
+  0x30 RX_BLOCKS          R     00000003 -> 00000002 (2)
+  0x34 RX_HEAD_SEQ        R     00000005 -> 00000006 (6)
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=5 queue=2
+[+152.2s] observed changes / new test actions
+  0x18 RX_HEAD_ADDR       R     00280000 -> 002C0000 (2883584)
+  0x30 RX_BLOCKS          R     00000002 -> 00000001 (1)
+  0x34 RX_HEAD_SEQ        R     00000006 -> 00000007 (7)
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=6 queue=1
+[+158.7s] observed changes / new test actions
+  0x18 RX_HEAD_ADDR       R     002C0000 -> 00000000 (0)
+  0x1C RX_VALID_BYTES     R     00000008 -> 00000000 (0)
+  0x30 RX_BLOCKS          R     00000001 -> 00000000 (0)
+  0x34 RX_HEAD_SEQ        R     00000007 -> 00000000 (0)
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=7 queue=0
+[+164.7s] observed changes / new test actions
+  0x18 RX_HEAD_ADDR       R     00000000 -> 00100000 (1048576)
+  0x1C RX_VALID_BYTES     R     00000000 -> 00000008 (8)
+  0x30 RX_BLOCKS          R     00000000 -> 00000001 (1)
+  0x34 RX_HEAD_SEQ        R     00000000 -> 00000008 (8)
+[+166.2s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000001 -> 00000002 (2)
+[+168.2s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000002 -> 00000003 (3)
+[+169.7s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000003 -> 00000004 (4)
+[+171.7s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000004 -> 00000005 (5)
+[+173.7s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000005 -> 00000006 (6)
+[+175.2s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000006 -> 00000007 (7)
+[+177.2s] observed changes / new test actions
+  0x30 RX_BLOCKS          R     00000007 -> 00000008 (8)
+[+178.7s] observed changes / new test actions
+  0x18 RX_HEAD_ADDR       R     00100000 -> 001C0000 (1835008)
+  0x30 RX_BLOCKS          R     00000008 -> 00000005 (5)
+  0x34 RX_HEAD_SEQ        R     00000008 -> 0000000B (11)
+  R CLEAR    0x10 -> 1 (performed by test, not viewer)
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=8 queue=7
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=9 queue=6
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=10 queue=5
+[+179.2s] observed changes / new test actions
+  0x18 RX_HEAD_ADDR       R     001C0000 -> 00000000 (0)
+  0x1C RX_VALID_BYTES     R     00000008 -> 00000000 (0)
+  0x30 RX_BLOCKS          R     00000005 -> 00000000 (0)
+  0x34 RX_HEAD_SEQ        R     0000000B -> 00000000 (0)
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=11 queue=4
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=12 queue=3
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=13 queue=2
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=14 queue=1
+  W INTENT   0x14 = 0x1 (not completion proof)
+  W RETURNED 0x14 (io returned; verify state)
+  ACK CHECK  seq=15 queue=0

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct 12 17:48:28 2026" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 14 11:59:17 2026" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="kintexu" DEVICE="xcku040" NAME="design_1" PACKAGE="ffva1156" SPEEDGRADE="-2"/>
 
@@ -211,24 +211,154 @@
         <CONNECTION INSTANCE="INFO_EXCH_0" PORT="CPU_WR_DONE_EVENT"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="1" NAME="pcie_7x_mgt_rxn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxn">
+    <PORT DIR="O" LEFT="5" NAME="pcie_dbg_ltssm" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_cfg_ltssm_state_o">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_rxn"/>
+        <CONNECTION INSTANCE="xdma_0" PORT="cfg_ltssm_state_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="1" NAME="pcie_7x_mgt_rxp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxp">
+    <PORT DIR="O" LEFT="2" NAME="pcie_dbg_speed" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_cfg_current_speed_o">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_rxp"/>
+        <CONNECTION INSTANCE="xdma_0" PORT="cfg_current_speed_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="1" NAME="pcie_7x_mgt_txn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txn">
+    <PORT DIR="O" LEFT="3" NAME="pcie_dbg_width" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_cfg_negotiated_width_o">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_txn"/>
+        <CONNECTION INSTANCE="xdma_0" PORT="cfg_negotiated_width_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="1" NAME="pcie_7x_mgt_txp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txp">
+    <PORT CLKFREQUENCY="250000000" DIR="O" NAME="pcie_dbg_axi_clk" SIGIS="clk" SIGNAME="xdma_0_axi_aclk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_txp"/>
+        <CONNECTION INSTANCE="xdma_0" PORT="axi_aclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="xdma_0_axi_aresetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="axi_aresetn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="pcie_dbg_qpll1lock" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_int_qpll1lock_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="int_qpll1lock_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_err_cor" SIGIS="undef" SIGNAME="xdma_0_cfg_err_cor_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="cfg_err_cor_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_err_nonfatal" SIGIS="undef" SIGNAME="xdma_0_cfg_err_nonfatal_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="cfg_err_nonfatal_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_err_fatal" SIGIS="undef" SIGNAME="xdma_0_cfg_err_fatal_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="cfg_err_fatal_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="4" NAME="pcie_dbg_local_error" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_cfg_local_error_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="cfg_local_error_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_local_error_valid" SIGIS="undef" SIGNAME="xdma_0_cfg_local_error_valid_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="cfg_local_error_valid_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_awvalid" SIGIS="undef" SIGNAME="xdma_0_m_axi_awvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_awready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_awready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_wvalid" SIGIS="undef" SIGNAME="xdma_0_m_axi_wvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_wready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_wready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_wready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_bvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_bvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_bvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_bready" SIGIS="undef" SIGNAME="xdma_0_m_axi_bready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_arvalid" SIGIS="undef" SIGNAME="xdma_0_m_axi_arvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_arready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_arready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_rvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_rready" SIGIS="undef" SIGNAME="xdma_0_m_axi_rready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="pcie_dbg_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_bresp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_bresp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="pcie_dbg_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rresp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rresp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_wlast" SIGIS="undef" SIGNAME="xdma_0_m_axi_wlast">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wlast"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pcie_dbg_rlast" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rlast">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rlast"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="pcie_dbg_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_m_axi_wstrb">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wstrb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="63" NAME="pcie_dbg_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_m_axi_awaddr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awaddr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="63" NAME="pcie_dbg_araddr" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_m_axi_araddr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="m_axi_araddr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="63" NAME="pcie_dbg_wdata" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_m_axi_wdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="63" NAME="pcie_dbg_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rdata"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" LEFT="0" NAME="pcie_diff_clock_clk_p" RIGHT="0" SIGIS="clk" SIGNAME="util_ds_buf_IBUF_DS_P">
@@ -434,6 +564,26 @@
     <PORT DIR="O" LEFT="0" NAME="M_AXI_MEM_rready" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_M00_AXI_rready">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_interconnect_0" PORT="M00_AXI_rready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="pcie_7x_mgt_rxn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_rxn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="pcie_7x_mgt_rxp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_rxp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_rxp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="pcie_7x_mgt_txn" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_txn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="pcie_7x_mgt_txp" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_pci_exp_txp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xdma_0" PORT="pci_exp_txp"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -1530,185 +1680,6 @@
             <CONNECTION INSTANCE="External_Ports" PORT="sys_rst_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="63" NAME="S01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S01_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awlen"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S01_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awsize"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S01_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awburst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_awlock" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awlock">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awlock"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awcache"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S01_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_awvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_awready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="63" NAME="S01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_wlast" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_wlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_wvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_wready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="S01_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_bid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_bvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_bready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="63" NAME="S01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S01_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arlen"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S01_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arsize"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S01_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arburst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_arlock" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arlock">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arlock"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arcache"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S01_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_arready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="S01_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="63" NAME="S01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_rlast" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_rvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_rready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="0" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="CONV_DMA_0_M_AXI_AWID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="CONV_DMA_0" PORT="M_AXI_AWID"/>
@@ -1892,6 +1863,231 @@
         <PORT DIR="I" NAME="S00_AXI_rready" SIGIS="undef" SIGNAME="CONV_DMA_0_M_AXI_RREADY">
           <CONNECTIONS>
             <CONNECTION INSTANCE="CONV_DMA_0" PORT="M_AXI_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="S01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_m_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awaddr"/>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="S01_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S01_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="S01_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_AXI_awlock" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S01_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_AXI_awregion" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_awqos" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_awvalid" SIGIS="undef" SIGNAME="xdma_0_m_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awvalid"/>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S01_AXI_awready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awready"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_awready"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="S01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_m_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wdata"/>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="S01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_m_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wstrb"/>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_AXI_wlast" SIGIS="undef" SIGNAME="xdma_0_m_axi_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wlast"/>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_AXI_wvalid" SIGIS="undef" SIGNAME="xdma_0_m_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wvalid"/>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S01_AXI_wready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wready"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_wready"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="S01_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_bid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bresp"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_bresp"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S01_AXI_bvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bvalid"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_bvalid"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_AXI_bready" SIGIS="undef" SIGNAME="xdma_0_m_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bready"/>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="S01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_m_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_araddr"/>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="S01_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S01_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="S01_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_AXI_arlock" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S01_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_AXI_arregion" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_arqos" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S01_AXI_arvalid" SIGIS="undef" SIGNAME="xdma_0_m_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arvalid"/>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S01_AXI_arready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arready"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_arready"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="S01_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="S01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rdata"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_rdata"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rresp"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_rresp"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S01_AXI_rlast" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rlast"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_rlast"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S01_AXI_rvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rvalid"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_rvalid"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_AXI_rready" SIGIS="undef" SIGNAME="xdma_0_m_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rready"/>
+            <CONNECTION INSTANCE="xdma_0" PORT="m_axi_rready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="4" NAME="M00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_M00_AXI_awid">
@@ -2995,8 +3191,8 @@
         <PARAMETER NAME="C_ECC_ENABLE" VALUE="0"/>
         <PARAMETER NAME="EN_DEBUG_PORTS" VALUE="FALSE"/>
         <PARAMETER NAME="VU9P_BOARD" VALUE="FALSE"/>
-        <PARAMETER NAME="ENABLE_JTAG_DBG" VALUE="FALSE"/>
-        <PARAMETER NAME="ENABLE_LTSSM_DBG" VALUE="FALSE"/>
+        <PARAMETER NAME="ENABLE_JTAG_DBG" VALUE="TRUE"/>
+        <PARAMETER NAME="ENABLE_LTSSM_DBG" VALUE="TRUE"/>
         <PARAMETER NAME="ENABLE_IBERT" VALUE="false"/>
         <PARAMETER NAME="MM_SLAVE_EN" VALUE="0"/>
         <PARAMETER NAME="DMA_EN" VALUE="1"/>
@@ -3108,7 +3304,7 @@
         <PARAMETER NAME="XDMA_ST_INFINITE_DESC_EXDES" VALUE="FALSE"/>
         <PARAMETER NAME="EXT_XVC_VSEC_ENABLE" VALUE="FALSE"/>
         <PARAMETER NAME="ACS_EXT_CAP_ENABLE" VALUE="FALSE"/>
-        <PARAMETER NAME="EN_PCIE_DEBUG_PORTS" VALUE="FALSE"/>
+        <PARAMETER NAME="EN_PCIE_DEBUG_PORTS" VALUE="TRUE"/>
         <PARAMETER NAME="MULTQ_EN" VALUE="0"/>
         <PARAMETER NAME="DMA_MM" VALUE="1"/>
         <PARAMETER NAME="DMA_ST" VALUE="0"/>
@@ -3290,8 +3486,8 @@
         <PARAMETER NAME="vu9p_board" VALUE="false"/>
         <PARAMETER NAME="type1_membase_memlimit_enable" VALUE="Disabled"/>
         <PARAMETER NAME="type1_prefetchable_membase_memlimit" VALUE="Disabled"/>
-        <PARAMETER NAME="enable_jtag_dbg" VALUE="false"/>
-        <PARAMETER NAME="enable_ltssm_dbg" VALUE="false"/>
+        <PARAMETER NAME="enable_jtag_dbg" VALUE="true"/>
+        <PARAMETER NAME="enable_ltssm_dbg" VALUE="true"/>
         <PARAMETER NAME="enable_ibert" VALUE="false"/>
         <PARAMETER NAME="axibar_num" VALUE="1"/>
         <PARAMETER NAME="axibar_0" VALUE="0x0000000000000000"/>
@@ -3975,7 +4171,7 @@
         <PARAMETER NAME="dsc_bypass_wr_out" VALUE="0000"/>
         <PARAMETER NAME="num_queues" VALUE="1"/>
         <PARAMETER NAME="enable_auto_rxeq" VALUE="False"/>
-        <PARAMETER NAME="enable_pcie_debug" VALUE="False"/>
+        <PARAMETER NAME="enable_pcie_debug" VALUE="True"/>
         <PARAMETER NAME="axisten_if_enable_msg_route" VALUE="27FFF"/>
         <PARAMETER NAME="en_axi_mm_mqdma" VALUE="true"/>
         <PARAMETER NAME="en_axi_st_mqdma" VALUE="false"/>
@@ -4129,12 +4325,14 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_ACLK"/>
             <CONNECTION INSTANCE="axi_interconnect_1" PORT="S00_ACLK"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_axi_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="axi_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="xdma_0_axi_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_ARESETN"/>
             <CONNECTION INSTANCE="axi_interconnect_1" PORT="S00_ARESETN"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="usr_irq_req" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_FPGA_CPU_irq_req">
@@ -4149,8 +4347,14 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_awready"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_awready"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m_axi_wready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_wready"/>
+          </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_wready"/>
           </CONNECTIONS>
@@ -4164,13 +4368,22 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_bresp"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_bresp"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m_axi_bvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_bvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_bvalid"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_bvalid"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m_axi_arready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_arready"/>
+          </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_arready"/>
           </CONNECTIONS>
@@ -4184,8 +4397,14 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rdata"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rdata"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="1" NAME="m_axi_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rresp"/>
+          </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rresp"/>
           </CONNECTIONS>
@@ -4194,8 +4413,14 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rlast"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rlast"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m_axi_rvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rvalid"/>
+          </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rvalid"/>
           </CONNECTIONS>
@@ -4205,8 +4430,10 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_awid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="63" NAME="m_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awaddr">
+        <PORT DIR="O" LEFT="63" NAME="m_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_m_axi_awaddr">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_awaddr"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_awaddr"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_awaddr"/>
           </CONNECTIONS>
         </PORT>
@@ -4230,8 +4457,10 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_awprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_awvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_awvalid">
+        <PORT DIR="O" NAME="m_axi_awvalid" SIGIS="undef" SIGNAME="xdma_0_m_axi_awvalid">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_awvalid"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_awvalid"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_awvalid"/>
           </CONNECTIONS>
         </PORT>
@@ -4245,28 +4474,38 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_awcache"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="63" NAME="m_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_wdata">
+        <PORT DIR="O" LEFT="63" NAME="m_axi_wdata" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_m_axi_wdata">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_wdata"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_wdata"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="m_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_wstrb">
+        <PORT DIR="O" LEFT="7" NAME="m_axi_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_m_axi_wstrb">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_wstrb"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_wstrb"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_wlast" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_wlast">
+        <PORT DIR="O" NAME="m_axi_wlast" SIGIS="undef" SIGNAME="xdma_0_m_axi_wlast">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_wlast"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_wlast"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_wlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_wvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_wvalid">
+        <PORT DIR="O" NAME="m_axi_wvalid" SIGIS="undef" SIGNAME="xdma_0_m_axi_wvalid">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_wvalid"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_wvalid"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_bready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_bready">
+        <PORT DIR="O" NAME="m_axi_bready" SIGIS="undef" SIGNAME="xdma_0_m_axi_bready">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_bready"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_bready"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_bready"/>
           </CONNECTIONS>
         </PORT>
@@ -4275,8 +4514,10 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_arid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="63" NAME="m_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_araddr">
+        <PORT DIR="O" LEFT="63" NAME="m_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_m_axi_araddr">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_araddr"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_araddr"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_araddr"/>
           </CONNECTIONS>
         </PORT>
@@ -4300,8 +4541,10 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_arprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_arvalid" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_arvalid">
+        <PORT DIR="O" NAME="m_axi_arvalid" SIGIS="undef" SIGNAME="xdma_0_m_axi_arvalid">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_arvalid"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_arvalid"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_arvalid"/>
           </CONNECTIONS>
         </PORT>
@@ -4315,8 +4558,10 @@
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_arcache"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_rready" SIGIS="undef" SIGNAME="axi_interconnect_0_S01_AXI_rready">
+        <PORT DIR="O" NAME="m_axi_rready" SIGIS="undef" SIGNAME="xdma_0_m_axi_rready">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rready"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_rready"/>
             <CONNECTION INSTANCE="axi_interconnect_0" PORT="S01_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
@@ -4415,7 +4660,51 @@
             <CONNECTION INSTANCE="axi_interconnect_1" PORT="S00_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="int_qpll1lock_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="cfg_negotiated_width_o" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_cfg_negotiated_width_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_width"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="cfg_current_speed_o" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_cfg_current_speed_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_speed"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="cfg_ltssm_state_o" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_cfg_ltssm_state_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_ltssm"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cfg_err_cor_o" SIGIS="undef" SIGNAME="xdma_0_cfg_err_cor_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_err_cor"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cfg_err_fatal_o" SIGIS="undef" SIGNAME="xdma_0_cfg_err_fatal_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_err_fatal"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cfg_err_nonfatal_o" SIGIS="undef" SIGNAME="xdma_0_cfg_err_nonfatal_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_err_nonfatal"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="cfg_local_error_o" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_cfg_local_error_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_local_error"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cfg_local_error_valid_o" SIGIS="undef" SIGNAME="xdma_0_cfg_local_error_valid_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_local_error_valid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="int_qpll1lock_out" RIGHT="0" SIGIS="undef" SIGNAME="xdma_0_int_qpll1lock_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pcie_dbg_qpll1lock"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="0" NAME="int_qpll1outrefclk_out" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="0" NAME="int_qpll1outclk_out" RIGHT="0" SIGIS="undef"/>
       </PORTS>
@@ -4550,6 +4839,18 @@
             <PORTMAP LOGICAL="rxp" PHYSICAL="pci_exp_rxp"/>
             <PORTMAP LOGICAL="txn" PHYSICAL="pci_exp_txn"/>
             <PORTMAP LOGICAL="txp" PHYSICAL="pci_exp_txp"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="pcie_debug_ports" TYPE="TARGET" VLNV="xilinx.com:display_xdma:pcie_debug:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="cfg_current_speed" PHYSICAL="cfg_current_speed_o"/>
+            <PORTMAP LOGICAL="cfg_err_cor" PHYSICAL="cfg_err_cor_o"/>
+            <PORTMAP LOGICAL="cfg_err_fatal" PHYSICAL="cfg_err_fatal_o"/>
+            <PORTMAP LOGICAL="cfg_err_nonfatal" PHYSICAL="cfg_err_nonfatal_o"/>
+            <PORTMAP LOGICAL="cfg_local_error" PHYSICAL="cfg_local_error_o"/>
+            <PORTMAP LOGICAL="cfg_local_error_valid" PHYSICAL="cfg_local_error_valid_o"/>
+            <PORTMAP LOGICAL="cfg_ltssm_state" PHYSICAL="cfg_ltssm_state_o"/>
+            <PORTMAP LOGICAL="cfg_negotiated_width" PHYSICAL="cfg_negotiated_width_o"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="__NOC__" NAME="pcie3_us_int_shared_logic" TYPE="INITIATOR" VLNV="xilinx.com:display_xdma:int_shared_logic:1.0">

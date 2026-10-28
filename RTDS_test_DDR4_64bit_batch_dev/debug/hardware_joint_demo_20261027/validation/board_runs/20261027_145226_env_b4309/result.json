@@ -1,0 +1,128 @@
+{
+  "run_id": "20261027_145226_env_b4309",
+  "case": "env",
+  "status": "PASS",
+  "pc_time": "2026-10-27T14:52:26.004914+08:00",
+  "boot_mode": "unknown",
+  "arm_wall_time_untrusted": "2000-12-08T22:06:08.794961",
+  "arm_monotonic_start": 3621.808552933,
+  "kernel": "5.10.226-v1.0.4-008a05487-rt89",
+  "machine": "aarch64",
+  "steps": [
+    {
+      "elapsed": 5.5e-05,
+      "event": "START",
+      "run_id": "20261027_145226_env_b4309",
+      "case": "env",
+      "status": "RUNNING",
+      "pc_time": "2026-10-27T14:52:26.004914+08:00",
+      "boot_mode": "unknown",
+      "arm_wall_time_untrusted": "2000-12-08T22:06:08.794961",
+      "arm_monotonic_start": 3621.808552933,
+      "kernel": "5.10.226-v1.0.4-008a05487-rt89",
+      "machine": "aarch64",
+      "evidence": [],
+      "exclusive_declared": false,
+      "note": "VIO mode validates DDR/C2H, not real Aurora RX."
+    },
+    {
+      "elapsed": 0.058411,
+      "event": "REGISTERS",
+      "label": "baseline",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43988,
+        "0x18": 0,
+        "0x1c": 0,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 0,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 0.061923,
+      "event": "DROP_BASELINE",
+      "value": 0
+    },
+    {
+      "elapsed": 0.065044,
+      "event": "ENVIRONMENT_VERIFIED",
+      "python": "3.8.10",
+      "io": "/usr/bin/io"
+    },
+    {
+      "elapsed": 0.094632,
+      "event": "REGISTERS",
+      "label": "final",
+      "values": {
+        "0x0": 8193,
+        "0x4": 539363604,
+        "0x8": 262144,
+        "0xc": 43972,
+        "0x18": 0,
+        "0x1c": 0,
+        "0x20": 0,
+        "0x24": 32768,
+        "0x28": 32768,
+        "0x2c": 3,
+        "0x30": 0,
+        "0x34": 0,
+        "0x38": 0
+      }
+    },
+    {
+      "elapsed": 0.100431,
+      "event": "FINISH",
+      "status": "PASS",
+      "error": null
+    }
+  ],
+  "blocks": [],
+  "evidence": [],
+  "exclusive_declared": false,
+  "note": "VIO mode validates DDR/C2H, not real Aurora RX.",
+  "program_sha256": {
+    "rtds_lab.py": "28e3531982c8c31183c0d144fa81a84d08a2d02052a49dd5eab355741c13686d",
+    "rtds_dma.c": "1f243f0f4f2fcb34a96a42298eb381c061278fef5b8c9d0cc27a1e9eaae21a3a",
+    "rtds_dma": "5e53aa2ab52189df4fffb832c92cc24c0d3a1d8c5517b6012afc435583d46cc5"
+  },
+  "fpga_artifacts": {
+    "identity_source": "Host artifact files only; not proof of active FPGA or Flash identity",
+    "rx_vio_test_enable": 1,
+    "artifacts": [
+      {
+        "host_path": "R:\\pcie_cold_boot_audit_20261014\\main_spi4_50_gui\\TOP_main_spi4_50.bit",
+        "bytes": 8196610,
+        "sha256": "5131c34a2c2c4d84564a867d4b177105951c43c361dcd8d892d18cef564c7e45"
+      },
+      {
+        "host_path": "R:\\pcie_cold_boot_audit_20261014\\main_spi4_50_gui\\TOP_main_spi4_50.ltx",
+        "bytes": 276641,
+        "sha256": "4e388540548b63f639255a7c6ff0947ffda6cc7380fc4866571e7687ee6d56e5"
+      },
+      {
+        "host_path": "R:\\pcie_cold_boot_audit_20261014\\main_spi4_50_gui\\TOP_main_spi4_50.mcs",
+        "bytes": 23054784,
+        "sha256": "b27306b9c3d8f8723bd1d0463d192c67abd647c879c2edd448c6446baefaa58a"
+      }
+    ]
+  },
+  "endpoint": {
+    "bdf": "0000:01:00.0",
+    "bar0": "0xf0200000",
+    "driver": "xdma",
+    "nodes": {
+      "user": "/dev/xdma0_user",
+      "h2c_0": "/dev/xdma0_h2c_0",
+      "c2h_0": "/dev/xdma0_c2h_0"
+    }
+  },
+  "error": null,
+  "elapsed_seconds": 0.10042404199975863
+}

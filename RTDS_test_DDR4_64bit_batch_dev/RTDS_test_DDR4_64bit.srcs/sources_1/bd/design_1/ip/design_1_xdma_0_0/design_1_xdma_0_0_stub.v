@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Tue Sep 22 13:50:23 2026
+// Date        : Wed Oct 14 11:24:19 2026
 // Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.srcs/sources_1/bd/design_1/ip/design_1_xdma_0_0/design_1_xdma_0_0_stub.v
@@ -25,8 +25,11 @@ module design_1_xdma_0_0(sys_clk, sys_clk_gt, sys_rst_n, user_lnk_up,
   m_axil_awaddr, m_axil_awprot, m_axil_awvalid, m_axil_awready, m_axil_wdata, m_axil_wstrb, 
   m_axil_wvalid, m_axil_wready, m_axil_bvalid, m_axil_bresp, m_axil_bready, m_axil_araddr, 
   m_axil_arprot, m_axil_arvalid, m_axil_arready, m_axil_rdata, m_axil_rresp, m_axil_rvalid, 
-  m_axil_rready, int_qpll1lock_out, int_qpll1outrefclk_out, int_qpll1outclk_out)
-/* synthesis syn_black_box black_box_pad_pin="sys_clk,sys_clk_gt,sys_rst_n,user_lnk_up,pci_exp_txp[1:0],pci_exp_txn[1:0],pci_exp_rxp[1:0],pci_exp_rxn[1:0],axi_aclk,axi_aresetn,usr_irq_req[0:0],usr_irq_ack[0:0],msi_enable,msi_vector_width[2:0],m_axi_awready,m_axi_wready,m_axi_bid[3:0],m_axi_bresp[1:0],m_axi_bvalid,m_axi_arready,m_axi_rid[3:0],m_axi_rdata[63:0],m_axi_rresp[1:0],m_axi_rlast,m_axi_rvalid,m_axi_awid[3:0],m_axi_awaddr[63:0],m_axi_awlen[7:0],m_axi_awsize[2:0],m_axi_awburst[1:0],m_axi_awprot[2:0],m_axi_awvalid,m_axi_awlock,m_axi_awcache[3:0],m_axi_wdata[63:0],m_axi_wstrb[7:0],m_axi_wlast,m_axi_wvalid,m_axi_bready,m_axi_arid[3:0],m_axi_araddr[63:0],m_axi_arlen[7:0],m_axi_arsize[2:0],m_axi_arburst[1:0],m_axi_arprot[2:0],m_axi_arvalid,m_axi_arlock,m_axi_arcache[3:0],m_axi_rready,m_axil_awaddr[31:0],m_axil_awprot[2:0],m_axil_awvalid,m_axil_awready,m_axil_wdata[31:0],m_axil_wstrb[3:0],m_axil_wvalid,m_axil_wready,m_axil_bvalid,m_axil_bresp[1:0],m_axil_bready,m_axil_araddr[31:0],m_axil_arprot[2:0],m_axil_arvalid,m_axil_arready,m_axil_rdata[31:0],m_axil_rresp[1:0],m_axil_rvalid,m_axil_rready,int_qpll1lock_out[0:0],int_qpll1outrefclk_out[0:0],int_qpll1outclk_out[0:0]" */;
+  m_axil_rready, cfg_negotiated_width_o, cfg_current_speed_o, cfg_ltssm_state_o, 
+  cfg_err_cor_o, cfg_err_fatal_o, cfg_err_nonfatal_o, cfg_local_error_o, 
+  cfg_local_error_valid_o, int_qpll1lock_out, int_qpll1outrefclk_out, 
+  int_qpll1outclk_out)
+/* synthesis syn_black_box black_box_pad_pin="sys_clk,sys_clk_gt,sys_rst_n,user_lnk_up,pci_exp_txp[1:0],pci_exp_txn[1:0],pci_exp_rxp[1:0],pci_exp_rxn[1:0],axi_aclk,axi_aresetn,usr_irq_req[0:0],usr_irq_ack[0:0],msi_enable,msi_vector_width[2:0],m_axi_awready,m_axi_wready,m_axi_bid[3:0],m_axi_bresp[1:0],m_axi_bvalid,m_axi_arready,m_axi_rid[3:0],m_axi_rdata[63:0],m_axi_rresp[1:0],m_axi_rlast,m_axi_rvalid,m_axi_awid[3:0],m_axi_awaddr[63:0],m_axi_awlen[7:0],m_axi_awsize[2:0],m_axi_awburst[1:0],m_axi_awprot[2:0],m_axi_awvalid,m_axi_awlock,m_axi_awcache[3:0],m_axi_wdata[63:0],m_axi_wstrb[7:0],m_axi_wlast,m_axi_wvalid,m_axi_bready,m_axi_arid[3:0],m_axi_araddr[63:0],m_axi_arlen[7:0],m_axi_arsize[2:0],m_axi_arburst[1:0],m_axi_arprot[2:0],m_axi_arvalid,m_axi_arlock,m_axi_arcache[3:0],m_axi_rready,m_axil_awaddr[31:0],m_axil_awprot[2:0],m_axil_awvalid,m_axil_awready,m_axil_wdata[31:0],m_axil_wstrb[3:0],m_axil_wvalid,m_axil_wready,m_axil_bvalid,m_axil_bresp[1:0],m_axil_bready,m_axil_araddr[31:0],m_axil_arprot[2:0],m_axil_arvalid,m_axil_arready,m_axil_rdata[31:0],m_axil_rresp[1:0],m_axil_rvalid,m_axil_rready,cfg_negotiated_width_o[3:0],cfg_current_speed_o[2:0],cfg_ltssm_state_o[5:0],cfg_err_cor_o,cfg_err_fatal_o,cfg_err_nonfatal_o,cfg_local_error_o[4:0],cfg_local_error_valid_o,int_qpll1lock_out[0:0],int_qpll1outrefclk_out[0:0],int_qpll1outclk_out[0:0]" */;
   input sys_clk;
   input sys_clk_gt;
   input sys_rst_n;
@@ -95,6 +98,14 @@ module design_1_xdma_0_0(sys_clk, sys_clk_gt, sys_rst_n, user_lnk_up,
   input [1:0]m_axil_rresp;
   input m_axil_rvalid;
   output m_axil_rready;
+  output [3:0]cfg_negotiated_width_o;
+  output [2:0]cfg_current_speed_o;
+  output [5:0]cfg_ltssm_state_o;
+  output cfg_err_cor_o;
+  output cfg_err_fatal_o;
+  output cfg_err_nonfatal_o;
+  output [4:0]cfg_local_error_o;
+  output cfg_local_error_valid_o;
   output [0:0]int_qpll1lock_out;
   output [0:0]int_qpll1outrefclk_out;
   output [0:0]int_qpll1outclk_out;

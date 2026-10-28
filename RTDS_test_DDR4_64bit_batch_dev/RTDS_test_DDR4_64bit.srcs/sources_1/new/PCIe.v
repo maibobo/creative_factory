@@ -180,6 +180,39 @@ module PCIe #(
                                 ddr_ready}                                        ;    // DDR就绪、校准和错误状态输入
 
 
+
+    // PCIe diagnostics 2026-10-14: separate registered observation path.
+    wire [5:0] pcie_dbg_ltssm;
+    wire [2:0] pcie_dbg_speed;
+    wire [3:0] pcie_dbg_width;
+    wire pcie_dbg_axi_clk;
+    wire pcie_dbg_axi_aresetn;
+    wire pcie_dbg_qpll1lock;
+    wire pcie_dbg_err_cor;
+    wire pcie_dbg_err_nonfatal;
+    wire pcie_dbg_err_fatal;
+    wire [4:0] pcie_dbg_local_error;
+    wire pcie_dbg_local_error_valid;
+    wire pcie_dbg_awvalid;
+    wire pcie_dbg_awready;
+    wire pcie_dbg_wvalid;
+    wire pcie_dbg_wready;
+    wire pcie_dbg_bvalid;
+    wire pcie_dbg_bready;
+    wire pcie_dbg_arvalid;
+    wire pcie_dbg_arready;
+    wire pcie_dbg_rvalid;
+    wire pcie_dbg_rready;
+    wire pcie_dbg_wlast;
+    wire pcie_dbg_rlast;
+    wire [1:0] pcie_dbg_bresp;
+    wire [1:0] pcie_dbg_rresp;
+    wire [7:0] pcie_dbg_wstrb;
+    wire [63:0] pcie_dbg_awaddr;
+    wire [63:0] pcie_dbg_araddr;
+    wire [63:0] pcie_dbg_wdata;
+    wire [63:0] pcie_dbg_rdata;
+
     assign user_lnk_up = user_lnk_up_int                                          ;    // XDMA报告PCIe链路已经建立
 
 
@@ -405,8 +438,58 @@ module PCIe #(
         .pcie_diff_clock_clk_p   (pcie_diff_clk_p),
         .pcie_rst_n              (pcie_rst_n),
         .user_lnk_up             (user_lnk_up_int),
-        .FPGA_CPU_irq_req        (FPGA_CPU_irq_req)
+        .FPGA_CPU_irq_req        (FPGA_CPU_irq_req),
+        .pcie_dbg_ltssm(pcie_dbg_ltssm),
+        .pcie_dbg_speed(pcie_dbg_speed),
+        .pcie_dbg_width(pcie_dbg_width),
+        .pcie_dbg_axi_clk(pcie_dbg_axi_clk),
+        .pcie_dbg_axi_aresetn(pcie_dbg_axi_aresetn),
+        .pcie_dbg_qpll1lock(pcie_dbg_qpll1lock),
+        .pcie_dbg_err_cor(pcie_dbg_err_cor),
+        .pcie_dbg_err_nonfatal(pcie_dbg_err_nonfatal),
+        .pcie_dbg_err_fatal(pcie_dbg_err_fatal),
+        .pcie_dbg_local_error(pcie_dbg_local_error),
+        .pcie_dbg_local_error_valid(pcie_dbg_local_error_valid),
+        .pcie_dbg_awvalid(pcie_dbg_awvalid),
+        .pcie_dbg_awready(pcie_dbg_awready),
+        .pcie_dbg_wvalid(pcie_dbg_wvalid),
+        .pcie_dbg_wready(pcie_dbg_wready),
+        .pcie_dbg_bvalid(pcie_dbg_bvalid),
+        .pcie_dbg_bready(pcie_dbg_bready),
+        .pcie_dbg_arvalid(pcie_dbg_arvalid),
+        .pcie_dbg_arready(pcie_dbg_arready),
+        .pcie_dbg_rvalid(pcie_dbg_rvalid),
+        .pcie_dbg_rready(pcie_dbg_rready),
+        .pcie_dbg_wlast(pcie_dbg_wlast),
+        .pcie_dbg_rlast(pcie_dbg_rlast),
+        .pcie_dbg_bresp(pcie_dbg_bresp),
+        .pcie_dbg_rresp(pcie_dbg_rresp),
+        .pcie_dbg_wstrb(pcie_dbg_wstrb),
+        .pcie_dbg_awaddr(pcie_dbg_awaddr),
+        .pcie_dbg_araddr(pcie_dbg_araddr),
+        .pcie_dbg_wdata(pcie_dbg_wdata),
+        .pcie_dbg_rdata(pcie_dbg_rdata)
 
+    );
+
+
+    rtds_pcie_link_debug U_PCIE_LINK_DEBUG (
+        .board_clk(i_sys_clk), .board_reset(i_sys_rst),
+        .pcie_clk(pcie_dbg_axi_clk), .perst_n(pcie_rst_n),
+        .qpll1_lock(pcie_dbg_qpll1lock), .user_lnk_up(user_lnk_up_int),
+        .axi_aresetn(pcie_dbg_axi_aresetn), .ddr_ready(ddr_ready),
+        .irq_req(FPGA_CPU_irq_req), .ltssm(pcie_dbg_ltssm),
+        .speed(pcie_dbg_speed), .width(pcie_dbg_width),
+        .err_cor(pcie_dbg_err_cor), .err_nonfatal(pcie_dbg_err_nonfatal),
+        .err_fatal(pcie_dbg_err_fatal), .local_error_valid(pcie_dbg_local_error_valid),
+        .local_error(pcie_dbg_local_error),
+        .axi_flags({pcie_dbg_rready,pcie_dbg_rvalid,pcie_dbg_arready,pcie_dbg_arvalid,
+                    pcie_dbg_bready,pcie_dbg_bvalid,pcie_dbg_wready,pcie_dbg_wvalid,
+                    pcie_dbg_awready,pcie_dbg_awvalid}),
+        .bresp(pcie_dbg_bresp), .rresp(pcie_dbg_rresp),
+        .wlast(pcie_dbg_wlast), .rlast(pcie_dbg_rlast), .wstrb(pcie_dbg_wstrb),
+        .awaddr(pcie_dbg_awaddr[31:0]), .araddr(pcie_dbg_araddr[31:0]),
+        .wdata(pcie_dbg_wdata), .rdata(pcie_dbg_rdata)
     );
 
     rtds_ddr4_backend u_rtds_ddr4_backend (

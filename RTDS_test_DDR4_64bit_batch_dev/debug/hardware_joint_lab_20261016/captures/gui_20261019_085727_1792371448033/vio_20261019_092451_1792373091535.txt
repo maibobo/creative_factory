@@ -1,0 +1,36 @@
+TIME=2026-10-19 09:24:51
+DEVICE=xcku040_0
+PROGRAM.FILE=C:/Xilinx/Vivado/2020.2/data/xicom/cfgmem/bitfile/spi_xcku040_pullnone.bit
+PROBES.FILE=C:\project\RTDS\pcie_cold_boot_audit_20261014\main_spi4_50_gui\TOP_main_spi4_50.ltx
+FULL_PROBES.FILE=C:\project\RTDS\pcie_cold_boot_audit_20261014\main_spi4_50_gui\TOP_main_spi4_50.ltx
+NOTE: PROGRAM.FILE is a host-side setting, not proof of Flash identity. VIO inputs below are sequential JTAG reads.
+VIO=hw_vio_1 CELL=u_pcie/G_RX_VIO.U_VIO_RX_START
+INPUT=u_pcie/rx_test_accepted_r VALUE=2
+INPUT=u_pcie/rx_test_blocks_r VALUE=0
+INPUT=u_pcie/rx_test_busy_r VALUE=0
+INPUT=u_pcie/rx_test_status_r VALUE=3
+OUTPUT_SETTING=u_pcie/rx_test_start VALUE=1
+VIO=hw_vio_2 CELL=u_pcie/U_PCIE_LINK_DEBUG/vio
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/age_vio VALUE=00000000
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/ar_falls_vio VALUE=0000
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/downs_vio VALUE=0000
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/first_link_vio VALUE=00000f56
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/first_perst_vio VALUE=00000000
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/history_vio VALUE=e
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/live_vio VALUE=00bf
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/persts_vio VALUE=0000
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/pll_losses_vio VALUE=0000
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/seq_vio VALUE=036d
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/snapshot_vio VALUE=ffffffff00000000029e530c8f80
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/snapshot_vio_1 VALUE=0001e490
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/snapshot_vio_2 VALUE=0000000000017ff7
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/snapshot_vio_3 VALUE=00000000000000000000002a00000003
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/ups_vio VALUE=0001
+INPUT=u_pcie/U_PCIE_LINK_DEBUG/uptime_vio VALUE=00211d7f
+OUTPUT_SETTING=u_pcie/U_PCIE_LINK_DEBUG/capture_axi_vio VALUE=0
+OUTPUT_SETTING=u_pcie/U_PCIE_LINK_DEBUG/clear_vio VALUE=0
+LIVE: perst=1 qpll=1 clock_alive=1 link=1 axi_reset_released=1 ddr=1 board_reset=0 settled=1 irq_req=0
+NATIVE: LTSSM=10 speed=2 width=2 link=1 axi_reset_released=1 local_error_valid=0 local_error=0 cor=0 nonfatal=0 fatal=0
+COUNTS: AW=3 AR=42 COR_CYCLES=0 NONFATAL_CYCLES=0 FATAL_CYCLES=0 LOCAL_VALID_CYCLES=0
+EXTRA: ticks=1393332096 transitions=670 B_ERROR_RESPONSES=0 R_ERROR_BEATS=0 dwell_cycles=4294967295
+RX_TEST: ddr=1 link=1 fault=0 notify=0

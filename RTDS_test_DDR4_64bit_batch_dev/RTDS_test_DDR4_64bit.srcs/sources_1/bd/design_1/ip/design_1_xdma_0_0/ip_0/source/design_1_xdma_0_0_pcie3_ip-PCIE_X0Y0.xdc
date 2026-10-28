@@ -151,6 +151,7 @@ set_case_analysis 0 [get_pins design_1_xdma_0_0_pcie3_ip_gt_top_i/phy_clk_i/bufg
 #
 
 set_false_path -to [get_pins -hier *sync_reg[0]/D]
+set_false_path -to [get_pins -hier *gen_rd_b.doutb_reg_reg[*]/D]
 
 #------------------------------------------------------------------------------
 # CDC Registers

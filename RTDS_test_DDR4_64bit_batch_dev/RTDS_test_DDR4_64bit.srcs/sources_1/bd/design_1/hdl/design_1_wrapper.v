@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Mon Oct 12 17:48:27 2026
+//Date        : Wed Oct 14 11:59:16 2026
 //Host        : DESKTOP-H0AB0MD running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -82,6 +82,36 @@ module design_1_wrapper
     pcie_7x_mgt_rxp,
     pcie_7x_mgt_txn,
     pcie_7x_mgt_txp,
+    pcie_dbg_araddr,
+    pcie_dbg_arready,
+    pcie_dbg_arvalid,
+    pcie_dbg_awaddr,
+    pcie_dbg_awready,
+    pcie_dbg_awvalid,
+    pcie_dbg_axi_aresetn,
+    pcie_dbg_axi_clk,
+    pcie_dbg_bready,
+    pcie_dbg_bresp,
+    pcie_dbg_bvalid,
+    pcie_dbg_err_cor,
+    pcie_dbg_err_fatal,
+    pcie_dbg_err_nonfatal,
+    pcie_dbg_local_error,
+    pcie_dbg_local_error_valid,
+    pcie_dbg_ltssm,
+    pcie_dbg_qpll1lock,
+    pcie_dbg_rdata,
+    pcie_dbg_rlast,
+    pcie_dbg_rready,
+    pcie_dbg_rresp,
+    pcie_dbg_rvalid,
+    pcie_dbg_speed,
+    pcie_dbg_wdata,
+    pcie_dbg_width,
+    pcie_dbg_wlast,
+    pcie_dbg_wready,
+    pcie_dbg_wstrb,
+    pcie_dbg_wvalid,
     pcie_diff_clock_clk_n,
     pcie_diff_clock_clk_p,
     pcie_rst_n,
@@ -166,6 +196,36 @@ module design_1_wrapper
   input [1:0]pcie_7x_mgt_rxp;
   output [1:0]pcie_7x_mgt_txn;
   output [1:0]pcie_7x_mgt_txp;
+  output [63:0]pcie_dbg_araddr;
+  output pcie_dbg_arready;
+  output pcie_dbg_arvalid;
+  output [63:0]pcie_dbg_awaddr;
+  output pcie_dbg_awready;
+  output pcie_dbg_awvalid;
+  output pcie_dbg_axi_aresetn;
+  output pcie_dbg_axi_clk;
+  output pcie_dbg_bready;
+  output [1:0]pcie_dbg_bresp;
+  output pcie_dbg_bvalid;
+  output pcie_dbg_err_cor;
+  output pcie_dbg_err_fatal;
+  output pcie_dbg_err_nonfatal;
+  output [4:0]pcie_dbg_local_error;
+  output pcie_dbg_local_error_valid;
+  output [5:0]pcie_dbg_ltssm;
+  output [0:0]pcie_dbg_qpll1lock;
+  output [63:0]pcie_dbg_rdata;
+  output pcie_dbg_rlast;
+  output pcie_dbg_rready;
+  output [1:0]pcie_dbg_rresp;
+  output pcie_dbg_rvalid;
+  output [2:0]pcie_dbg_speed;
+  output [63:0]pcie_dbg_wdata;
+  output [3:0]pcie_dbg_width;
+  output pcie_dbg_wlast;
+  output pcie_dbg_wready;
+  output [7:0]pcie_dbg_wstrb;
+  output pcie_dbg_wvalid;
   input [0:0]pcie_diff_clock_clk_n;
   input [0:0]pcie_diff_clock_clk_p;
   input pcie_rst_n;
@@ -251,6 +311,36 @@ module design_1_wrapper
   wire [1:0]pcie_7x_mgt_rxp;
   wire [1:0]pcie_7x_mgt_txn;
   wire [1:0]pcie_7x_mgt_txp;
+  wire [63:0]pcie_dbg_araddr;
+  wire pcie_dbg_arready;
+  wire pcie_dbg_arvalid;
+  wire [63:0]pcie_dbg_awaddr;
+  wire pcie_dbg_awready;
+  wire pcie_dbg_awvalid;
+  wire pcie_dbg_axi_aresetn;
+  wire pcie_dbg_axi_clk;
+  wire pcie_dbg_bready;
+  wire [1:0]pcie_dbg_bresp;
+  wire pcie_dbg_bvalid;
+  wire pcie_dbg_err_cor;
+  wire pcie_dbg_err_fatal;
+  wire pcie_dbg_err_nonfatal;
+  wire [4:0]pcie_dbg_local_error;
+  wire pcie_dbg_local_error_valid;
+  wire [5:0]pcie_dbg_ltssm;
+  wire [0:0]pcie_dbg_qpll1lock;
+  wire [63:0]pcie_dbg_rdata;
+  wire pcie_dbg_rlast;
+  wire pcie_dbg_rready;
+  wire [1:0]pcie_dbg_rresp;
+  wire pcie_dbg_rvalid;
+  wire [2:0]pcie_dbg_speed;
+  wire [63:0]pcie_dbg_wdata;
+  wire [3:0]pcie_dbg_width;
+  wire pcie_dbg_wlast;
+  wire pcie_dbg_wready;
+  wire [7:0]pcie_dbg_wstrb;
+  wire pcie_dbg_wvalid;
   wire [0:0]pcie_diff_clock_clk_n;
   wire [0:0]pcie_diff_clock_clk_p;
   wire pcie_rst_n;
@@ -337,6 +427,36 @@ module design_1_wrapper
         .pcie_7x_mgt_rxp(pcie_7x_mgt_rxp),
         .pcie_7x_mgt_txn(pcie_7x_mgt_txn),
         .pcie_7x_mgt_txp(pcie_7x_mgt_txp),
+        .pcie_dbg_araddr(pcie_dbg_araddr),
+        .pcie_dbg_arready(pcie_dbg_arready),
+        .pcie_dbg_arvalid(pcie_dbg_arvalid),
+        .pcie_dbg_awaddr(pcie_dbg_awaddr),
+        .pcie_dbg_awready(pcie_dbg_awready),
+        .pcie_dbg_awvalid(pcie_dbg_awvalid),
+        .pcie_dbg_axi_aresetn(pcie_dbg_axi_aresetn),
+        .pcie_dbg_axi_clk(pcie_dbg_axi_clk),
+        .pcie_dbg_bready(pcie_dbg_bready),
+        .pcie_dbg_bresp(pcie_dbg_bresp),
+        .pcie_dbg_bvalid(pcie_dbg_bvalid),
+        .pcie_dbg_err_cor(pcie_dbg_err_cor),
+        .pcie_dbg_err_fatal(pcie_dbg_err_fatal),
+        .pcie_dbg_err_nonfatal(pcie_dbg_err_nonfatal),
+        .pcie_dbg_local_error(pcie_dbg_local_error),
+        .pcie_dbg_local_error_valid(pcie_dbg_local_error_valid),
+        .pcie_dbg_ltssm(pcie_dbg_ltssm),
+        .pcie_dbg_qpll1lock(pcie_dbg_qpll1lock),
+        .pcie_dbg_rdata(pcie_dbg_rdata),
+        .pcie_dbg_rlast(pcie_dbg_rlast),
+        .pcie_dbg_rready(pcie_dbg_rready),
+        .pcie_dbg_rresp(pcie_dbg_rresp),
+        .pcie_dbg_rvalid(pcie_dbg_rvalid),
+        .pcie_dbg_speed(pcie_dbg_speed),
+        .pcie_dbg_wdata(pcie_dbg_wdata),
+        .pcie_dbg_width(pcie_dbg_width),
+        .pcie_dbg_wlast(pcie_dbg_wlast),
+        .pcie_dbg_wready(pcie_dbg_wready),
+        .pcie_dbg_wstrb(pcie_dbg_wstrb),
+        .pcie_dbg_wvalid(pcie_dbg_wvalid),
         .pcie_diff_clock_clk_n(pcie_diff_clock_clk_n),
         .pcie_diff_clock_clk_p(pcie_diff_clock_clk_p),
         .pcie_rst_n(pcie_rst_n),

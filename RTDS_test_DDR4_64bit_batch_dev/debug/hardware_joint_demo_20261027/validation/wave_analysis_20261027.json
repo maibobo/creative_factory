@@ -1,0 +1,274 @@
+{
+  "native": [
+    {
+      "file": "gui_native_20261027_145233_1793083953328.csv",
+      "samples": 2048,
+      "aw": [
+        "0x8000"
+      ],
+      "ar": [],
+      "wdata": [
+        "0x706050403020100",
+        "0xf0e0d0c0b0a0908"
+      ],
+      "rdata": [],
+      "error_samples": 0
+    },
+    {
+      "file": "gui_native_20261027_145238_1793083958103.csv",
+      "samples": 2048,
+      "aw": [],
+      "ar": [
+        "0x8000"
+      ],
+      "wdata": [],
+      "rdata": [
+        "0x706050403020100",
+        "0xf0e0d0c0b0a0908"
+      ],
+      "error_samples": 0
+    },
+    {
+      "file": "gui_native_20261027_145355_1793084035573.csv",
+      "samples": 2048,
+      "aw": [],
+      "ar": [
+        "0x100000"
+      ],
+      "wdata": [],
+      "rdata": [
+        "0x2200000011",
+        "0x0"
+      ],
+      "error_samples": 0
+    },
+    {
+      "file": "gui_native_20261027_145402_1793084042264.csv",
+      "samples": 2048,
+      "aw": [],
+      "ar": [
+        "0x140000"
+      ],
+      "wdata": [],
+      "rdata": [
+        "0x2200000011",
+        "0x0"
+      ],
+      "error_samples": 0
+    },
+    {
+      "file": "gui_native_20261027_145408_1793084048992.csv",
+      "samples": 2048,
+      "aw": [],
+      "ar": [
+        "0x180000"
+      ],
+      "wdata": [],
+      "rdata": [
+        "0x2200000011",
+        "0x0"
+      ],
+      "error_samples": 0
+    },
+    {
+      "file": "gui_native_20261027_145415_1793084055745.csv",
+      "samples": 2048,
+      "aw": [],
+      "ar": [
+        "0x1c0000"
+      ],
+      "wdata": [],
+      "rdata": [
+        "0x2200000011",
+        "0x0"
+      ],
+      "error_samples": 0
+    },
+    {
+      "file": "gui_native_20261027_145422_1793084062485.csv",
+      "samples": 2048,
+      "aw": [],
+      "ar": [
+        "0x200000"
+      ],
+      "wdata": [],
+      "rdata": [
+        "0x2200000011",
+        "0x0"
+      ],
+      "error_samples": 0
+    },
+    {
+      "file": "gui_native_20261027_145429_1793084069337.csv",
+      "samples": 2048,
+      "aw": [],
+      "ar": [
+        "0x240000"
+      ],
+      "wdata": [],
+      "rdata": [
+        "0x2200000011",
+        "0x0"
+      ],
+      "error_samples": 0
+    },
+    {
+      "file": "gui_native_20261027_145436_1793084076133.csv",
+      "samples": 2048,
+      "aw": [],
+      "ar": [
+        "0x280000"
+      ],
+      "wdata": [],
+      "rdata": [
+        "0x2200000011",
+        "0x0"
+      ],
+      "error_samples": 0
+    },
+    {
+      "file": "gui_native_20261027_145442_1793084082802.csv",
+      "samples": 2048,
+      "aw": [],
+      "ar": [
+        "0x2c0000"
+      ],
+      "wdata": [],
+      "rdata": [
+        "0x2200000011",
+        "0x0"
+      ],
+      "error_samples": 0
+    }
+  ],
+  "fdma": [
+    {
+      "file": "gui_fdma_20261027_145247_1793083967172.csv",
+      "samples": 1024,
+      "request_addresses": [
+        "0x100000"
+      ],
+      "valid_data": [
+        "0x2200000011"
+      ],
+      "states": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "file": "gui_fdma_20261027_145255_1793083975761.csv",
+      "samples": 1024,
+      "request_addresses": [
+        "0x140000"
+      ],
+      "valid_data": [
+        "0x2200000011"
+      ],
+      "states": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "file": "gui_fdma_20261027_145304_1793083984461.csv",
+      "samples": 1024,
+      "request_addresses": [
+        "0x180000"
+      ],
+      "valid_data": [
+        "0x2200000011"
+      ],
+      "states": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "file": "gui_fdma_20261027_145313_1793083993048.csv",
+      "samples": 1024,
+      "request_addresses": [
+        "0x1c0000"
+      ],
+      "valid_data": [
+        "0x2200000011"
+      ],
+      "states": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "file": "gui_fdma_20261027_145321_1793084001711.csv",
+      "samples": 1024,
+      "request_addresses": [
+        "0x200000"
+      ],
+      "valid_data": [
+        "0x2200000011"
+      ],
+      "states": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "file": "gui_fdma_20261027_145330_1793084010418.csv",
+      "samples": 1024,
+      "request_addresses": [
+        "0x240000"
+      ],
+      "valid_data": [
+        "0x2200000011"
+      ],
+      "states": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "file": "gui_fdma_20261027_145339_1793084019045.csv",
+      "samples": 1024,
+      "request_addresses": [
+        "0x280000"
+      ],
+      "valid_data": [
+        "0x2200000011"
+      ],
+      "states": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "file": "gui_fdma_20261027_145347_1793084027652.csv",
+      "samples": 1024,
+      "request_addresses": [
+        "0x2c0000"
+      ],
+      "valid_data": [
+        "0x2200000011"
+      ],
+      "states": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+}

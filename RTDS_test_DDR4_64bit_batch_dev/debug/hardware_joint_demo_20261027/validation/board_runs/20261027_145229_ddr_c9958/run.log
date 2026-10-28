@@ -1,0 +1,22 @@
+{"elapsed": 5e-05, "event": "START", "run_id": "20261027_145229_ddr_c9958", "case": "ddr", "status": "RUNNING", "pc_time": "2026-10-27T14:52:29.069982+08:00", "boot_mode": "unknown", "arm_wall_time_untrusted": "2000-12-08T22:06:11.618816", "arm_monotonic_start": 3624.632409226, "kernel": "5.10.226-v1.0.4-008a05487-rt89", "machine": "aarch64", "evidence": [], "exclusive_declared": true, "note": "VIO mode validates DDR/C2H, not real Aurora RX."}
+{"elapsed": 0.045384, "event": "REGISTERS", "label": "baseline", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43992, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 0.048828, "event": "DROP_BASELINE", "value": 0}
+{"elapsed": 0.051699, "event": "CONTROL_REQUEST", "action": "inspect", "sequence": 1, "params": {}}
+{"elapsed": 1.258516, "event": "CONTROL_COMPLETE", "action": "inspect", "response": {"status": "ok", "busy": "0", "accepted": "0", "rx_status": "3", "blocks": "0", "live": "191", "id": "001_c0fc046f"}}
+{"elapsed": 1.265039, "event": "CONTROL_REQUEST", "action": "arm", "sequence": 2, "params": {"test": "dma_write"}}
+{"elapsed": 2.879307, "event": "CONTROL_COMPLETE", "action": "arm", "response": {"status": "ok", "armed": "1", "test": "dma_write", "id": "002_4adbc947"}}
+{"elapsed": 2.886011, "event": "DMA_SUBMIT", "direction": "h2c", "card_address": "0x8000", "requested": 16, "data_file": "ddr_tx.bin"}
+{"elapsed": 2.894911, "event": "DMA_RETURN", "direction": "h2c", "card_address": 32768, "requested": 16, "completed": 16, "elapsed_seconds": 4.6083e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 2.899821, "event": "CONTROL_REQUEST", "action": "save", "sequence": 3, "params": {"kind": "native"}}
+{"elapsed": 6.02011, "event": "CONTROL_COMPLETE", "action": "save", "response": {"status": "ok", "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145233_1793083953328.csv", "id": "003_159d2639"}}
+{"elapsed": 6.027799, "event": "CONTROL_REQUEST", "action": "arm", "sequence": 4, "params": {"test": "dma_read"}}
+{"elapsed": 7.64232, "event": "CONTROL_COMPLETE", "action": "arm", "response": {"status": "ok", "armed": "1", "test": "dma_read", "id": "004_3a812017"}}
+{"elapsed": 7.649518, "event": "DMA_SUBMIT", "direction": "c2h", "card_address": "0x8000", "requested": 16, "data_file": "ddr_rx.bin"}
+{"elapsed": 7.660445, "event": "DMA_RETURN", "direction": "c2h", "card_address": 32768, "requested": 16, "completed": 16, "elapsed_seconds": 5.2792e-05, "errno": 0, "returncode": 0, "stderr": ""}
+{"elapsed": 7.66618, "event": "DATA_MATCH", "effective": 16, "requested": 16, "data_hex": "000102030405060708090a0b0c0d0e0f"}
+{"elapsed": 7.67146, "event": "CONTROL_REQUEST", "action": "save", "sequence": 5, "params": {"kind": "native"}}
+{"elapsed": 10.691653, "event": "CONTROL_COMPLETE", "action": "save", "response": {"status": "ok", "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/gui_native_20261027_145238_1793083958103.csv", "id": "005_9e5f7df4"}}
+{"elapsed": 10.735707, "event": "REGISTERS", "label": "final", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43928, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 10.745526, "event": "CONTROL_REQUEST", "action": "snapshot", "sequence": 6, "params": {}}
+{"elapsed": 11.959513, "event": "CONTROL_COMPLETE", "action": "snapshot", "response": {"status": "ok", "path": "C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/debug/hardware_joint_demo_20261027/captures/gui_20261027_144752_1793083673056/vio_20261027_145240_1793083960987.txt", "id": "006_0bc0fcd9"}}
+{"elapsed": 11.966146, "event": "FINISH", "status": "PASS", "error": null}

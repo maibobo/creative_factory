@@ -122,6 +122,14 @@ module design_1_xdma_0_0 (
   m_axil_rresp,
   m_axil_rvalid,
   m_axil_rready,
+  cfg_negotiated_width_o,
+  cfg_current_speed_o,
+  cfg_ltssm_state_o,
+  cfg_err_cor_o,
+  cfg_err_fatal_o,
+  cfg_err_nonfatal_o,
+  cfg_local_error_o,
+  cfg_local_error_valid_o,
   int_qpll1lock_out,
   int_qpll1outrefclk_out,
   int_qpll1outclk_out
@@ -269,6 +277,22 @@ input wire m_axil_rvalid;
 RITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_LITE RREADY" *)
 output wire m_axil_rready;
+(* X_INTERFACE_INFO = "xilinx.com:display_xdma:pcie_debug:1.0 pcie_debug_ports cfg_negotiated_width" *)
+output wire [3 : 0] cfg_negotiated_width_o;
+(* X_INTERFACE_INFO = "xilinx.com:display_xdma:pcie_debug:1.0 pcie_debug_ports cfg_current_speed" *)
+output wire [2 : 0] cfg_current_speed_o;
+(* X_INTERFACE_INFO = "xilinx.com:display_xdma:pcie_debug:1.0 pcie_debug_ports cfg_ltssm_state" *)
+output wire [5 : 0] cfg_ltssm_state_o;
+(* X_INTERFACE_INFO = "xilinx.com:display_xdma:pcie_debug:1.0 pcie_debug_ports cfg_err_cor" *)
+output wire cfg_err_cor_o;
+(* X_INTERFACE_INFO = "xilinx.com:display_xdma:pcie_debug:1.0 pcie_debug_ports cfg_err_fatal" *)
+output wire cfg_err_fatal_o;
+(* X_INTERFACE_INFO = "xilinx.com:display_xdma:pcie_debug:1.0 pcie_debug_ports cfg_err_nonfatal" *)
+output wire cfg_err_nonfatal_o;
+(* X_INTERFACE_INFO = "xilinx.com:display_xdma:pcie_debug:1.0 pcie_debug_ports cfg_local_error" *)
+output wire [4 : 0] cfg_local_error_o;
+(* X_INTERFACE_INFO = "xilinx.com:display_xdma:pcie_debug:1.0 pcie_debug_ports cfg_local_error_valid" *)
+output wire cfg_local_error_valid_o;
 (* X_INTERFACE_INFO = "xilinx.com:display_xdma:int_shared_logic:1.0 pcie3_us_int_shared_logic ints_qpll1lock_out" *)
 output wire [0 : 0] int_qpll1lock_out;
 (* X_INTERFACE_INFO = "xilinx.com:display_xdma:int_shared_logic:1.0 pcie3_us_int_shared_logic ints_qpll1outrefclk_out" *)
@@ -406,8 +430,8 @@ output wire [0 : 0] int_qpll1outclk_out;
     .C_ECC_ENABLE(0),
     .EN_DEBUG_PORTS("FALSE"),
     .VU9P_BOARD("FALSE"),
-    .ENABLE_JTAG_DBG("FALSE"),
-    .ENABLE_LTSSM_DBG("FALSE"),
+    .ENABLE_JTAG_DBG("TRUE"),
+    .ENABLE_LTSSM_DBG("TRUE"),
     .ENABLE_IBERT("false"),
     .MM_SLAVE_EN(0),
     .DMA_EN(1),
@@ -521,7 +545,7 @@ output wire [0 : 0] int_qpll1outclk_out;
     .XDMA_ST_INFINITE_DESC_EXDES("FALSE"),
     .EXT_XVC_VSEC_ENABLE("FALSE"),
     .ACS_EXT_CAP_ENABLE("FALSE"),
-    .EN_PCIE_DEBUG_PORTS("FALSE"),
+    .EN_PCIE_DEBUG_PORTS("TRUE"),
     .MULTQ_EN(0),
     .DMA_MM(1),
     .DMA_ST(0),
@@ -898,14 +922,14 @@ output wire [0 : 0] int_qpll1outclk_out;
     .h2c_sts_2(),
     .c2h_sts_3(),
     .h2c_sts_3(),
-    .cfg_negotiated_width_o(),
-    .cfg_current_speed_o(),
-    .cfg_ltssm_state_o(),
-    .cfg_err_cor_o(),
-    .cfg_err_fatal_o(),
-    .cfg_err_nonfatal_o(),
-    .cfg_local_error_o(),
-    .cfg_local_error_valid_o(),
+    .cfg_negotiated_width_o(cfg_negotiated_width_o),
+    .cfg_current_speed_o(cfg_current_speed_o),
+    .cfg_ltssm_state_o(cfg_ltssm_state_o),
+    .cfg_err_cor_o(cfg_err_cor_o),
+    .cfg_err_fatal_o(cfg_err_fatal_o),
+    .cfg_err_nonfatal_o(cfg_err_nonfatal_o),
+    .cfg_local_error_o(cfg_local_error_o),
+    .cfg_local_error_valid_o(cfg_local_error_valid_o),
     .pipe_txprbssel(3'B0),
     .pipe_rxprbssel(3'B0),
     .pipe_txprbsforceerr(1'B0),

@@ -216,6 +216,40 @@ proc create_root_design { parentCell } {
   set fdma_wsize_0 [ create_bd_port -dir I -from 15 -to 0 fdma_wsize_0 ]
   set fdma_wstrb_0 [ create_bd_port -dir I -from 7 -to 0 fdma_wstrb_0 ]
   set fdma_wvalid_0 [ create_bd_port -dir O fdma_wvalid_0 ]
+  set pcie_dbg_araddr [ create_bd_port -dir O -from 63 -to 0 pcie_dbg_araddr ]
+  set pcie_dbg_arready [ create_bd_port -dir O pcie_dbg_arready ]
+  set pcie_dbg_arvalid [ create_bd_port -dir O pcie_dbg_arvalid ]
+  set pcie_dbg_awaddr [ create_bd_port -dir O -from 63 -to 0 pcie_dbg_awaddr ]
+  set pcie_dbg_awready [ create_bd_port -dir O pcie_dbg_awready ]
+  set pcie_dbg_awvalid [ create_bd_port -dir O pcie_dbg_awvalid ]
+  set pcie_dbg_axi_aresetn [ create_bd_port -dir O -type rst pcie_dbg_axi_aresetn ]
+  set pcie_dbg_axi_clk [ create_bd_port -dir O -type clk pcie_dbg_axi_clk ]
+  set_property -dict [ list \
+   CONFIG.ASSOCIATED_RESET {pcie_dbg_axi_aresetn} \
+   CONFIG.FREQ_HZ {250000000} \
+ ] $pcie_dbg_axi_clk
+  set pcie_dbg_bready [ create_bd_port -dir O pcie_dbg_bready ]
+  set pcie_dbg_bresp [ create_bd_port -dir O -from 1 -to 0 pcie_dbg_bresp ]
+  set pcie_dbg_bvalid [ create_bd_port -dir O pcie_dbg_bvalid ]
+  set pcie_dbg_err_cor [ create_bd_port -dir O pcie_dbg_err_cor ]
+  set pcie_dbg_err_fatal [ create_bd_port -dir O pcie_dbg_err_fatal ]
+  set pcie_dbg_err_nonfatal [ create_bd_port -dir O pcie_dbg_err_nonfatal ]
+  set pcie_dbg_local_error [ create_bd_port -dir O -from 4 -to 0 pcie_dbg_local_error ]
+  set pcie_dbg_local_error_valid [ create_bd_port -dir O pcie_dbg_local_error_valid ]
+  set pcie_dbg_ltssm [ create_bd_port -dir O -from 5 -to 0 pcie_dbg_ltssm ]
+  set pcie_dbg_qpll1lock [ create_bd_port -dir O -from 0 -to 0 pcie_dbg_qpll1lock ]
+  set pcie_dbg_rdata [ create_bd_port -dir O -from 63 -to 0 pcie_dbg_rdata ]
+  set pcie_dbg_rlast [ create_bd_port -dir O pcie_dbg_rlast ]
+  set pcie_dbg_rready [ create_bd_port -dir O pcie_dbg_rready ]
+  set pcie_dbg_rresp [ create_bd_port -dir O -from 1 -to 0 pcie_dbg_rresp ]
+  set pcie_dbg_rvalid [ create_bd_port -dir O pcie_dbg_rvalid ]
+  set pcie_dbg_speed [ create_bd_port -dir O -from 2 -to 0 pcie_dbg_speed ]
+  set pcie_dbg_wdata [ create_bd_port -dir O -from 63 -to 0 pcie_dbg_wdata ]
+  set pcie_dbg_width [ create_bd_port -dir O -from 3 -to 0 pcie_dbg_width ]
+  set pcie_dbg_wlast [ create_bd_port -dir O pcie_dbg_wlast ]
+  set pcie_dbg_wready [ create_bd_port -dir O pcie_dbg_wready ]
+  set pcie_dbg_wstrb [ create_bd_port -dir O -from 7 -to 0 pcie_dbg_wstrb ]
+  set pcie_dbg_wvalid [ create_bd_port -dir O pcie_dbg_wvalid ]
   set pcie_rst_n [ create_bd_port -dir I -type rst pcie_rst_n ]
   set_property -dict [ list \
    CONFIG.POLARITY {ACTIVE_LOW} \
@@ -294,6 +328,9 @@ proc create_root_design { parentCell } {
    CONFIG.dedicate_perst {false} \
    CONFIG.disable_gt_loc {true} \
    CONFIG.en_gt_selection {true} \
+   CONFIG.enable_jtag_dbg {true} \
+   CONFIG.enable_ltssm_dbg {true} \
+   CONFIG.enable_pcie_debug {True} \
    CONFIG.pciebar2axibar_axil_master {0x40000000} \
    CONFIG.pciebar2axibar_axist_bypass {0x0000000000000000} \
    CONFIG.pf0_device_id {8032} \
@@ -343,6 +380,15 @@ proc create_root_design { parentCell } {
   connect_bd_net -net INT_STATE_W_0_1 [get_bd_ports INT_STATE_W_0] [get_bd_pins INFO_EXCH_0/INT_STATE_W]
   connect_bd_net -net M_AXI_ACLK_0_1 [get_bd_ports sys_clk] [get_bd_pins CONV_DMA_0/M_AXI_ACLK] [get_bd_pins INFO_EXCH_0/S_AXI_ACLK] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_1/ACLK] [get_bd_pins axi_interconnect_1/M00_ACLK]
   connect_bd_net -net M_AXI_ARESETN_0_1 [get_bd_ports sys_rst_n] [get_bd_pins CONV_DMA_0/M_AXI_ARESETN] [get_bd_pins INFO_EXCH_0/S_AXI_ARESETN] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axi_interconnect_1/ARESETN] [get_bd_pins axi_interconnect_1/M00_ARESETN]
+  connect_bd_net -net Net [get_bd_ports pcie_dbg_awready] [get_bd_pins axi_interconnect_0/S01_AXI_awready] [get_bd_pins xdma_0/m_axi_awready]
+  connect_bd_net -net Net1 [get_bd_ports pcie_dbg_wready] [get_bd_pins axi_interconnect_0/S01_AXI_wready] [get_bd_pins xdma_0/m_axi_wready]
+  connect_bd_net -net Net2 [get_bd_ports pcie_dbg_bvalid] [get_bd_pins axi_interconnect_0/S01_AXI_bvalid] [get_bd_pins xdma_0/m_axi_bvalid]
+  connect_bd_net -net Net3 [get_bd_ports pcie_dbg_arready] [get_bd_pins axi_interconnect_0/S01_AXI_arready] [get_bd_pins xdma_0/m_axi_arready]
+  connect_bd_net -net Net4 [get_bd_ports pcie_dbg_rvalid] [get_bd_pins axi_interconnect_0/S01_AXI_rvalid] [get_bd_pins xdma_0/m_axi_rvalid]
+  connect_bd_net -net Net5 [get_bd_ports pcie_dbg_bresp] [get_bd_pins axi_interconnect_0/S01_AXI_bresp] [get_bd_pins xdma_0/m_axi_bresp]
+  connect_bd_net -net Net6 [get_bd_ports pcie_dbg_rresp] [get_bd_pins axi_interconnect_0/S01_AXI_rresp] [get_bd_pins xdma_0/m_axi_rresp]
+  connect_bd_net -net Net7 [get_bd_ports pcie_dbg_rlast] [get_bd_pins axi_interconnect_0/S01_AXI_rlast] [get_bd_pins xdma_0/m_axi_rlast]
+  connect_bd_net -net Net8 [get_bd_ports pcie_dbg_rdata] [get_bd_pins axi_interconnect_0/S01_AXI_rdata] [get_bd_pins xdma_0/m_axi_rdata]
   connect_bd_net -net RX_DROPPED_FRAMES_net [get_bd_ports RX_DROPPED_FRAMES] [get_bd_pins INFO_EXCH_0/RX_DROPPED_FRAMES]
   connect_bd_net -net RX_HEAD_SEQ_net [get_bd_ports RX_HEAD_SEQ] [get_bd_pins INFO_EXCH_0/RX_HEAD_SEQ]
   connect_bd_net -net RX_READY_BLOCKS_net [get_bd_ports RX_READY_BLOCKS] [get_bd_pins INFO_EXCH_0/RX_READY_BLOCKS]
@@ -361,8 +407,27 @@ proc create_root_design { parentCell } {
   connect_bd_net -net reset_rtl_0_1 [get_bd_ports pcie_rst_n] [get_bd_pins xdma_0/sys_rst_n]
   connect_bd_net -net util_ds_buf_IBUF_DS_ODIV2 [get_bd_pins util_ds_buf/IBUF_DS_ODIV2] [get_bd_pins xdma_0/sys_clk]
   connect_bd_net -net util_ds_buf_IBUF_OUT [get_bd_pins util_ds_buf/IBUF_OUT] [get_bd_pins xdma_0/sys_clk_gt]
-  connect_bd_net -net xdma_0_axi_aclk [get_bd_pins axi_interconnect_0/S01_ACLK] [get_bd_pins axi_interconnect_1/S00_ACLK] [get_bd_pins xdma_0/axi_aclk]
-  connect_bd_net -net xdma_0_axi_aresetn [get_bd_pins axi_interconnect_0/S01_ARESETN] [get_bd_pins axi_interconnect_1/S00_ARESETN] [get_bd_pins xdma_0/axi_aresetn]
+  connect_bd_net -net xdma_0_axi_aclk [get_bd_ports pcie_dbg_axi_clk] [get_bd_pins axi_interconnect_0/S01_ACLK] [get_bd_pins axi_interconnect_1/S00_ACLK] [get_bd_pins xdma_0/axi_aclk]
+  connect_bd_net -net xdma_0_axi_aresetn [get_bd_ports pcie_dbg_axi_aresetn] [get_bd_pins axi_interconnect_0/S01_ARESETN] [get_bd_pins axi_interconnect_1/S00_ARESETN] [get_bd_pins xdma_0/axi_aresetn]
+  connect_bd_net -net xdma_0_cfg_current_speed_o [get_bd_ports pcie_dbg_speed] [get_bd_pins xdma_0/cfg_current_speed_o]
+  connect_bd_net -net xdma_0_cfg_err_cor_o [get_bd_ports pcie_dbg_err_cor] [get_bd_pins xdma_0/cfg_err_cor_o]
+  connect_bd_net -net xdma_0_cfg_err_fatal_o [get_bd_ports pcie_dbg_err_fatal] [get_bd_pins xdma_0/cfg_err_fatal_o]
+  connect_bd_net -net xdma_0_cfg_err_nonfatal_o [get_bd_ports pcie_dbg_err_nonfatal] [get_bd_pins xdma_0/cfg_err_nonfatal_o]
+  connect_bd_net -net xdma_0_cfg_local_error_o [get_bd_ports pcie_dbg_local_error] [get_bd_pins xdma_0/cfg_local_error_o]
+  connect_bd_net -net xdma_0_cfg_local_error_valid_o [get_bd_ports pcie_dbg_local_error_valid] [get_bd_pins xdma_0/cfg_local_error_valid_o]
+  connect_bd_net -net xdma_0_cfg_ltssm_state_o [get_bd_ports pcie_dbg_ltssm] [get_bd_pins xdma_0/cfg_ltssm_state_o]
+  connect_bd_net -net xdma_0_cfg_negotiated_width_o [get_bd_ports pcie_dbg_width] [get_bd_pins xdma_0/cfg_negotiated_width_o]
+  connect_bd_net -net xdma_0_int_qpll1lock_out [get_bd_ports pcie_dbg_qpll1lock] [get_bd_pins xdma_0/int_qpll1lock_out]
+  connect_bd_net -net xdma_0_m_axi_araddr [get_bd_ports pcie_dbg_araddr] [get_bd_pins axi_interconnect_0/S01_AXI_araddr] [get_bd_pins xdma_0/m_axi_araddr]
+  connect_bd_net -net xdma_0_m_axi_arvalid [get_bd_ports pcie_dbg_arvalid] [get_bd_pins axi_interconnect_0/S01_AXI_arvalid] [get_bd_pins xdma_0/m_axi_arvalid]
+  connect_bd_net -net xdma_0_m_axi_awaddr [get_bd_ports pcie_dbg_awaddr] [get_bd_pins axi_interconnect_0/S01_AXI_awaddr] [get_bd_pins xdma_0/m_axi_awaddr]
+  connect_bd_net -net xdma_0_m_axi_awvalid [get_bd_ports pcie_dbg_awvalid] [get_bd_pins axi_interconnect_0/S01_AXI_awvalid] [get_bd_pins xdma_0/m_axi_awvalid]
+  connect_bd_net -net xdma_0_m_axi_bready [get_bd_ports pcie_dbg_bready] [get_bd_pins axi_interconnect_0/S01_AXI_bready] [get_bd_pins xdma_0/m_axi_bready]
+  connect_bd_net -net xdma_0_m_axi_rready [get_bd_ports pcie_dbg_rready] [get_bd_pins axi_interconnect_0/S01_AXI_rready] [get_bd_pins xdma_0/m_axi_rready]
+  connect_bd_net -net xdma_0_m_axi_wdata [get_bd_ports pcie_dbg_wdata] [get_bd_pins axi_interconnect_0/S01_AXI_wdata] [get_bd_pins xdma_0/m_axi_wdata]
+  connect_bd_net -net xdma_0_m_axi_wlast [get_bd_ports pcie_dbg_wlast] [get_bd_pins axi_interconnect_0/S01_AXI_wlast] [get_bd_pins xdma_0/m_axi_wlast]
+  connect_bd_net -net xdma_0_m_axi_wstrb [get_bd_ports pcie_dbg_wstrb] [get_bd_pins axi_interconnect_0/S01_AXI_wstrb] [get_bd_pins xdma_0/m_axi_wstrb]
+  connect_bd_net -net xdma_0_m_axi_wvalid [get_bd_ports pcie_dbg_wvalid] [get_bd_pins axi_interconnect_0/S01_AXI_wvalid] [get_bd_pins xdma_0/m_axi_wvalid]
   connect_bd_net -net xdma_0_user_lnk_up [get_bd_ports user_lnk_up] [get_bd_pins xdma_0/user_lnk_up]
 
   # Create address segments

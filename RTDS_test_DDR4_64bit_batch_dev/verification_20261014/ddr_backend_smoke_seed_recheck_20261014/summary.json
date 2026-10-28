@@ -1,0 +1,30 @@
+[
+  {
+    "seed": 750318462,
+    "status": "FUNCTIONAL_FAIL",
+    "exit_code": 0,
+    "started": "2026-10-14T08:56:31.465006+08:00",
+    "finished": "2026-10-14T08:56:38.327187+08:00",
+    "wall_seconds": 6.86,
+    "log": "backend_smoke_seed_750318462.simulate.log",
+    "failure": [
+      "RTDS_DDR_BACKEND_SMOKE_FAIL: simulation timeout"
+    ],
+    "ready_pass": true,
+    "first_write_pass": false
+  },
+  {
+    "seed": 360207181,
+    "status": "FUNCTIONAL_FAIL",
+    "exit_code": 0,
+    "started": "2026-10-14T08:56:38.328692+08:00",
+    "finished": "2026-10-14T08:56:44.890510+08:00",
+    "wall_seconds": 6.56,
+    "log": "backend_smoke_seed_360207181.simulate.log",
+    "failure": [
+      "RTDS_DDR_BACKEND_SMOKE_FAIL: simulation timeout"
+    ],
+    "ready_pass": true,
+    "first_write_pass": false
+  }
+]

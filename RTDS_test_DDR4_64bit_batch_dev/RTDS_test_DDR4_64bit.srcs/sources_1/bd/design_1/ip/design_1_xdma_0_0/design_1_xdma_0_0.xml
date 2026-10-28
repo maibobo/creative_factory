@@ -8621,7 +8621,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.pcie_debug_ports" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.pcie_debug_ports" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -20126,11 +20126,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 21 11:46:44 UTC 2026</spirit:value>
+            <spirit:value>Mon Sep 21 11:55:32 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2a35e0a9</spirit:value>
+            <spirit:value>9:97649b15</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20146,11 +20146,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 21 11:55:14 UTC 2026</spirit:value>
+            <spirit:value>Wed Oct 14 02:22:21 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1e37253d</spirit:value>
+            <spirit:value>9:b4e90673</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20161,7 +20161,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1e37253d</spirit:value>
+            <spirit:value>9:b4e90673</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20177,11 +20177,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 21 11:55:14 UTC 2026</spirit:value>
+            <spirit:value>Wed Oct 14 02:22:21 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1e37253d</spirit:value>
+            <spirit:value>9:b4e90673</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20197,11 +20197,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 21 11:55:14 UTC 2026</spirit:value>
+            <spirit:value>Wed Oct 14 02:22:21 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:da17305e</spirit:value>
+            <spirit:value>9:5a5ea6e9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20217,11 +20217,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 21 11:55:15 UTC 2026</spirit:value>
+            <spirit:value>Wed Oct 14 02:22:21 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:da17305e</spirit:value>
+            <spirit:value>9:5a5ea6e9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20235,11 +20235,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 21 11:55:15 UTC 2026</spirit:value>
+            <spirit:value>Wed Oct 14 02:22:21 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1e37253d</spirit:value>
+            <spirit:value>9:b4e90673</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -20253,11 +20253,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Sep 22 05:50:29 UTC 2026</spirit:value>
+            <spirit:value>Wed Oct 14 03:24:23 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:1e37253d</spirit:value>
+            <spirit:value>9:b4e90673</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -27802,7 +27802,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_negotiated_width_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_negotiated_width_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -27826,7 +27826,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_current_speed_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_current_speed_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -27850,7 +27850,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_ltssm_state_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_ltssm_state_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -27870,7 +27870,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_err_cor_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_err_cor_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -27890,7 +27890,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_err_fatal_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_err_fatal_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -27910,7 +27910,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_err_nonfatal_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_err_nonfatal_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -27934,7 +27934,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_local_error_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_local_error_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -27954,7 +27954,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_local_error_valid_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.cfg_local_error_valid_o" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS&apos;)) = &quot;TRUE&quot;)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -52000,11 +52000,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>ENABLE_JTAG_DBG</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ENABLE_JTAG_DBG">FALSE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ENABLE_JTAG_DBG">TRUE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>ENABLE_LTSSM_DBG</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ENABLE_LTSSM_DBG">FALSE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ENABLE_LTSSM_DBG">TRUE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>ENABLE_IBERT</spirit:name>
@@ -52501,7 +52501,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>EN_PCIE_DEBUG_PORTS</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS">FALSE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.EN_PCIE_DEBUG_PORTS">TRUE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>MULTQ_EN</spirit:name>
@@ -55029,7 +55029,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>enable_jtag_dbg</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.enable_jtag_dbg" spirit:order="94">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.enable_jtag_dbg" spirit:order="94">true</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -55040,7 +55040,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>enable_ltssm_dbg</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.enable_ltssm_dbg" spirit:order="94.11">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.enable_ltssm_dbg" spirit:order="94.11">true</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -61576,7 +61576,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>enable_pcie_debug</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.enable_pcie_debug" spirit:choiceRef="choice_list_bdd7203f" spirit:order="477">False</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.enable_pcie_debug" spirit:choiceRef="choice_list_bdd7203f" spirit:order="477">True</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>axisten_if_enable_msg_route</spirit:name>
@@ -62191,6 +62191,9 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.dedicate_perst" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.disable_gt_loc" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.en_gt_selection" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.enable_jtag_dbg" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.enable_ltssm_dbg" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.enable_pcie_debug" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pciebar2axibar_axil_master" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pciebar2axibar_axist_bypass" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.pf0_device_id" xilinx:valueSource="user"/>

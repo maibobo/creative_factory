@@ -5121,12 +5121,8 @@
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 21 11:46:44 UTC 2026</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cd8820a6</spirit:value>
+            <spirit:value>9:8918c038</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5142,11 +5138,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 21 11:55:21 UTC 2026</spirit:value>
+            <spirit:value>Wed Oct 14 02:22:25 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ed6a9f75</spirit:value>
+            <spirit:value>9:ef4855fa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5157,7 +5153,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ed6a9f75</spirit:value>
+            <spirit:value>9:ef4855fa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5173,11 +5169,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 21 11:55:21 UTC 2026</spirit:value>
+            <spirit:value>Wed Oct 14 02:22:25 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ed6a9f75</spirit:value>
+            <spirit:value>9:ef4855fa</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5193,11 +5189,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 21 11:55:21 UTC 2026</spirit:value>
+            <spirit:value>Wed Oct 14 02:22:25 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:eb4cdacd</spirit:value>
+            <spirit:value>9:868436f7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -5213,11 +5209,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 21 11:55:22 UTC 2026</spirit:value>
+            <spirit:value>Wed Oct 14 02:22:25 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:eb4cdacd</spirit:value>
+            <spirit:value>9:868436f7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -17800,11 +17796,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>ENABLE_JTAG_DBG</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ENABLE_JTAG_DBG">FALSE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ENABLE_JTAG_DBG">TRUE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>ENABLE_LTSSM_DBG</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ENABLE_LTSSM_DBG">FALSE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ENABLE_LTSSM_DBG">TRUE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>AXISTEN_IF_CC_PARITY_CHK</spirit:name>
@@ -18178,6 +18174,14 @@
         <spirit:name>ip_0/design_1_xdma_0_0_pcie3_ip_gt.xml</spirit:name>
         <spirit:userFileType>xml</spirit:userFileType>
       </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_1/design_1_xdma_0_0_pcie3_ip_jtag.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_1/design_1_xdma_0_0_pcie3_ip_jtag.xml</spirit:name>
+        <spirit:userFileType>xml</spirit:userFileType>
+      </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
@@ -18299,6 +18303,34 @@
       <spirit:file>
         <spirit:name>source/design_1_xdma_0_0_pcie3_ip_rxcdrhold.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>source/design_1_xdma_0_0_pcie3_ip_debug_probes.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>source/design_1_xdma_0_0_pcie3_ip_debug_axi4l_s.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>source/design_1_xdma_0_0_pcie3_ip_debug_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_xdma_0_0_pcie3_ip/pcie_debugger/draw_ltssm.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_xdma_0_0_pcie3_ip/pcie_debugger/draw_reset.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_xdma_0_0_pcie3_ip/pcie_debugger/draw_rxdet.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_xdma_0_0_pcie3_ip/pcie_debugger/test_rd.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>source/design_1_xdma_0_0_pcie3_ip_pcie3_uscale_core_top.v</spirit:name>
@@ -18423,6 +18455,34 @@
       <spirit:file>
         <spirit:name>source/design_1_xdma_0_0_pcie3_ip_rxcdrhold.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>source/design_1_xdma_0_0_pcie3_ip_debug_probes.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>source/design_1_xdma_0_0_pcie3_ip_debug_axi4l_s.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>source/design_1_xdma_0_0_pcie3_ip_debug_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_xdma_0_0_pcie3_ip/pcie_debugger/draw_ltssm.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_xdma_0_0_pcie3_ip/pcie_debugger/draw_reset.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_xdma_0_0_pcie3_ip/pcie_debugger/draw_rxdet.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_xdma_0_0_pcie3_ip/pcie_debugger/test_rd.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>source/design_1_xdma_0_0_pcie3_ip_pcie3_uscale_core_top.v</spirit:name>
@@ -20112,11 +20172,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>enable_jtag_dbg</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.enable_jtag_dbg" spirit:order="313">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.enable_jtag_dbg" spirit:order="313">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>enable_ltssm_dbg</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.enable_ltssm_dbg" spirit:order="313.1">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.enable_ltssm_dbg" spirit:order="313.1">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>en_parity</spirit:name>

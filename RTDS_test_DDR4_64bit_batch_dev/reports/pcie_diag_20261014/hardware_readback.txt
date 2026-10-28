@@ -1,0 +1,72 @@
+TIME=Wed Oct 14 12:41:59 +0800 2026
+DEVICE=xcku040_0
+PROGRAM.FILE=C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/impl_pcie_diag_20261014/TOP.bit
+PROBES.FILE=C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/impl_pcie_diag_20261014/TOP.ltx
+FULL_PROBES.FILE=C:/project/RTDS/DDR/RTDS_test_DDR4_64bit_batch_dev/RTDS_test_DDR4_64bit.runs/impl_pcie_diag_20261014/TOP.ltx
+ILA=hw_ila_1 CELL=u_pcie/U_PCIE_LINK_DEBUG/ila PROBES=11
+ ILA_PROBE=u_pcie/U_PCIE_LINK_DEBUG/ila_axi
+ ILA_PROBE=u_pcie/U_PCIE_LINK_DEBUG/ila_errors
+ ILA_PROBE=u_pcie/U_PCIE_LINK_DEBUG/ila_flags
+ ILA_PROBE=u_pcie/U_PCIE_LINK_DEBUG/ila_flags_1
+ ILA_PROBE=u_pcie/U_PCIE_LINK_DEBUG/ila_flags_2
+ ILA_PROBE=u_pcie/U_PCIE_LINK_DEBUG/ila_flags_3
+ ILA_PROBE=u_pcie/U_PCIE_LINK_DEBUG/ila_flags_4
+ ILA_PROBE=u_pcie/U_PCIE_LINK_DEBUG/ila_ltssm
+ ILA_PROBE=u_pcie/U_PCIE_LINK_DEBUG/ila_speed
+ ILA_PROBE=u_pcie/U_PCIE_LINK_DEBUG/ila_ticks
+ ILA_PROBE=u_pcie/U_PCIE_LINK_DEBUG/ila_width
+ILA=hw_ila_2 CELL=u_pcie/ila_FDMA_inst PROBES=14
+ ILA_PROBE=u_pcie/adapter_rx_state_dbg
+ ILA_PROBE=u_pcie/adapter_tx_state_dbg
+ ILA_PROBE=u_pcie/fdma_raddr
+ ILA_PROBE=u_pcie/fdma_rareq
+ ILA_PROBE=u_pcie/fdma_rbusy
+ ILA_PROBE=u_pcie/fdma_rdata
+ ILA_PROBE=u_pcie/fdma_rsize
+ ILA_PROBE=u_pcie/fdma_rvalid
+ ILA_PROBE=u_pcie/fdma_w_source_valid
+ ILA_PROBE=u_pcie/fdma_waddr
+ ILA_PROBE=u_pcie/fdma_wareq
+ ILA_PROBE=u_pcie/fdma_wbusy
+ ILA_PROBE=u_pcie/fdma_wdata
+ ILA_PROBE=u_pcie/fdma_wsize
+ILA=hw_ila_3 CELL=u_temp_rd/ila_temp_inst PROBES=6
+ ILA_PROBE=u_temp_rd/busy
+ ILA_PROBE=u_temp_rd/cnt_time
+ ILA_PROBE=u_temp_rd/daddr_in
+ ILA_PROBE=u_temp_rd/den_in
+ ILA_PROBE=u_temp_rd/dwe_in
+ ILA_PROBE=u_temp_rd/temp
+ILA=hw_ila_4 CELL=ila_pcie_phy PROBES=10
+ ILA_PROBE=pcie_diag_phy_value_0
+ ILA_PROBE=pcie_diag_phy_value_1
+ ILA_PROBE=pcie_diag_phy_value_2
+ ILA_PROBE=pcie_diag_phy_value_3
+ ILA_PROBE=pcie_diag_phy_value_4
+ ILA_PROBE=pcie_diag_phy_value_5
+ ILA_PROBE=pcie_diag_phy_value_6
+ ILA_PROBE=pcie_diag_phy_value_7
+ ILA_PROBE=pcie_diag_phy_value_8
+ ILA_PROBE=pcie_diag_phy_value_9
+VIO=hw_vio_1 CELL=u_pcie/G_RX_VIO.U_VIO_RX_START
+ INPUT=u_pcie/rx_test_accepted_r VALUE=0
+ INPUT=u_pcie/rx_test_blocks_r VALUE=0
+ INPUT=u_pcie/rx_test_busy_r VALUE=0
+ INPUT=u_pcie/rx_test_status_r VALUE=1
+VIO=hw_vio_2 CELL=u_pcie/U_PCIE_LINK_DEBUG/vio
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/age_vio VALUE=00000000
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/ar_falls_vio VALUE=0000
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/downs_vio VALUE=0000
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/first_link_vio VALUE=ffffffff
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/first_perst_vio VALUE=00000000
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/history_vio VALUE=6
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/live_vio VALUE=00a7
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/persts_vio VALUE=0000
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/pll_losses_vio VALUE=0000
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/seq_vio VALUE=6443
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/snapshot_vio VALUE=002b6ee400000000ffff5d9dd44b
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/snapshot_vio_1 VALUE=00019040
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/snapshot_vio_2 VALUE=0000000000000003
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/snapshot_vio_3 VALUE=00000000000000000000000000000000
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/ups_vio VALUE=0000
+ INPUT=u_pcie/U_PCIE_LINK_DEBUG/uptime_vio VALUE=00098877

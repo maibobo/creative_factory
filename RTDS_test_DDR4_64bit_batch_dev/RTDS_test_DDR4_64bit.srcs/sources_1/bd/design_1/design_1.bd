@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xEFA2591B0C392E5E",
+      "boundary_crc": "0xFEF92F1F0ECF6789",
       "device": "xcku040-ffva1156-2-i",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -374,6 +374,156 @@
       },
       "CPU_WR_DONE_EVENT": {
         "direction": "I"
+      },
+      "pcie_dbg_ltssm": {
+        "direction": "O",
+        "left": "5",
+        "right": "0"
+      },
+      "pcie_dbg_speed": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "pcie_dbg_width": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "pcie_dbg_axi_clk": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "pcie_dbg_axi_aresetn"
+          },
+          "CLK_DOMAIN": {
+            "value": "design_1_xdma_0_0_axi_aclk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "250000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "pcie_dbg_axi_aresetn": {
+        "type": "rst",
+        "direction": "O",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "pcie_dbg_qpll1lock": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "pcie_dbg_err_cor": {
+        "direction": "O"
+      },
+      "pcie_dbg_err_nonfatal": {
+        "direction": "O"
+      },
+      "pcie_dbg_err_fatal": {
+        "direction": "O"
+      },
+      "pcie_dbg_local_error": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "pcie_dbg_local_error_valid": {
+        "direction": "O"
+      },
+      "pcie_dbg_awvalid": {
+        "direction": "O"
+      },
+      "pcie_dbg_awready": {
+        "direction": "O"
+      },
+      "pcie_dbg_wvalid": {
+        "direction": "O"
+      },
+      "pcie_dbg_wready": {
+        "direction": "O"
+      },
+      "pcie_dbg_bvalid": {
+        "direction": "O"
+      },
+      "pcie_dbg_bready": {
+        "direction": "O"
+      },
+      "pcie_dbg_arvalid": {
+        "direction": "O"
+      },
+      "pcie_dbg_arready": {
+        "direction": "O"
+      },
+      "pcie_dbg_rvalid": {
+        "direction": "O"
+      },
+      "pcie_dbg_rready": {
+        "direction": "O"
+      },
+      "pcie_dbg_bresp": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "pcie_dbg_rresp": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "pcie_dbg_wlast": {
+        "direction": "O"
+      },
+      "pcie_dbg_rlast": {
+        "direction": "O"
+      },
+      "pcie_dbg_wstrb": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "pcie_dbg_awaddr": {
+        "direction": "O",
+        "left": "63",
+        "right": "0"
+      },
+      "pcie_dbg_araddr": {
+        "direction": "O",
+        "left": "63",
+        "right": "0"
+      },
+      "pcie_dbg_wdata": {
+        "direction": "O",
+        "left": "63",
+        "right": "0"
+      },
+      "pcie_dbg_rdata": {
+        "direction": "O",
+        "left": "63",
+        "right": "0"
       }
     },
     "components": {
@@ -705,28 +855,10 @@
           }
         },
         "interface_nets": {
-          "axi_interconnect_0_to_s00_couplers": {
+          "axi_interconnect_0_to_s01_couplers": {
             "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
-          "s01_couplers_to_xbar": {
-            "interface_ports": [
-              "s01_couplers/M_AXI",
-              "xbar/S01_AXI"
-            ]
-          },
-          "m00_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
+              "S01_AXI",
+              "s01_couplers/S_AXI"
             ]
           },
           "s00_couplers_to_xbar": {
@@ -735,10 +867,28 @@
               "xbar/S00_AXI"
             ]
           },
-          "axi_interconnect_0_to_s01_couplers": {
+          "xbar_to_m00_couplers": {
             "interface_ports": [
-              "S01_AXI",
-              "s01_couplers/S_AXI"
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
+            ]
+          },
+          "m00_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
+            ]
+          },
+          "s01_couplers_to_xbar": {
+            "interface_ports": [
+              "s01_couplers/M_AXI",
+              "xbar/S01_AXI"
+            ]
+          },
+          "axi_interconnect_0_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           }
         },
@@ -928,16 +1078,16 @@
               }
             },
             "interface_nets": {
-              "auto_cc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_cc/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_cc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_cc/S_AXI"
+                ]
+              },
+              "auto_cc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_cc/M_AXI"
                 ]
               }
             },
@@ -1055,6 +1205,15 @@
           },
           "en_gt_selection": {
             "value": "true"
+          },
+          "enable_jtag_dbg": {
+            "value": "true"
+          },
+          "enable_ltssm_dbg": {
+            "value": "true"
+          },
+          "enable_pcie_debug": {
+            "value": "True"
           },
           "pciebar2axibar_axil_master": {
             "value": "0x40000000"
@@ -1912,24 +2071,6 @@
           "util_ds_buf/CLK_IN_D"
         ]
       },
-      "S01_AXI_1": {
-        "interface_ports": [
-          "axi_interconnect_0/S01_AXI",
-          "xdma_0/M_AXI"
-        ]
-      },
-      "S00_AXI_1": {
-        "interface_ports": [
-          "axi_interconnect_0/S00_AXI",
-          "CONV_DMA_0/M_AXI"
-        ]
-      },
-      "axi_interconnect_1_M00_AXI": {
-        "interface_ports": [
-          "axi_interconnect_1/M00_AXI",
-          "INFO_EXCH_0/S_AXI"
-        ]
-      },
       "axi_interconnect_0_M00_AXI": {
         "interface_ports": [
           "M_AXI_MEM",
@@ -1939,16 +2080,34 @@
           "MARK_SIM": "true"
         }
       },
-      "xdma_0_pcie_mgt": {
+      "axi_interconnect_1_M00_AXI": {
         "interface_ports": [
-          "pcie_7x_mgt",
-          "xdma_0/pcie_mgt"
+          "axi_interconnect_1/M00_AXI",
+          "INFO_EXCH_0/S_AXI"
         ]
       },
       "S00_AXI_2": {
         "interface_ports": [
           "axi_interconnect_1/S00_AXI",
           "xdma_0/M_AXI_LITE"
+        ]
+      },
+      "xdma_0_pcie_mgt": {
+        "interface_ports": [
+          "pcie_7x_mgt",
+          "xdma_0/pcie_mgt"
+        ]
+      },
+      "S00_AXI_1": {
+        "interface_ports": [
+          "axi_interconnect_0/S00_AXI",
+          "CONV_DMA_0/M_AXI"
+        ]
+      },
+      "S01_AXI_1": {
+        "interface_ports": [
+          "axi_interconnect_0/S01_AXI",
+          "xdma_0/M_AXI"
         ]
       }
     },
@@ -2083,14 +2242,16 @@
         "ports": [
           "xdma_0/axi_aclk",
           "axi_interconnect_0/S01_ACLK",
-          "axi_interconnect_1/S00_ACLK"
+          "axi_interconnect_1/S00_ACLK",
+          "pcie_dbg_axi_clk"
         ]
       },
       "xdma_0_axi_aresetn": {
         "ports": [
           "xdma_0/axi_aresetn",
           "axi_interconnect_0/S01_ARESETN",
-          "axi_interconnect_1/S00_ARESETN"
+          "axi_interconnect_1/S00_ARESETN",
+          "pcie_dbg_axi_aresetn"
         ]
       },
       "xdma_0_user_lnk_up": {
@@ -2223,6 +2384,193 @@
         "ports": [
           "CPU_WR_DONE_EVENT",
           "INFO_EXCH_0/CPU_WR_DONE_EVENT"
+        ]
+      },
+      "xdma_0_cfg_ltssm_state_o": {
+        "ports": [
+          "xdma_0/cfg_ltssm_state_o",
+          "pcie_dbg_ltssm"
+        ]
+      },
+      "xdma_0_cfg_current_speed_o": {
+        "ports": [
+          "xdma_0/cfg_current_speed_o",
+          "pcie_dbg_speed"
+        ]
+      },
+      "xdma_0_cfg_negotiated_width_o": {
+        "ports": [
+          "xdma_0/cfg_negotiated_width_o",
+          "pcie_dbg_width"
+        ]
+      },
+      "xdma_0_int_qpll1lock_out": {
+        "ports": [
+          "xdma_0/int_qpll1lock_out",
+          "pcie_dbg_qpll1lock"
+        ]
+      },
+      "xdma_0_cfg_err_cor_o": {
+        "ports": [
+          "xdma_0/cfg_err_cor_o",
+          "pcie_dbg_err_cor"
+        ]
+      },
+      "xdma_0_cfg_err_nonfatal_o": {
+        "ports": [
+          "xdma_0/cfg_err_nonfatal_o",
+          "pcie_dbg_err_nonfatal"
+        ]
+      },
+      "xdma_0_cfg_err_fatal_o": {
+        "ports": [
+          "xdma_0/cfg_err_fatal_o",
+          "pcie_dbg_err_fatal"
+        ]
+      },
+      "xdma_0_cfg_local_error_o": {
+        "ports": [
+          "xdma_0/cfg_local_error_o",
+          "pcie_dbg_local_error"
+        ]
+      },
+      "xdma_0_cfg_local_error_valid_o": {
+        "ports": [
+          "xdma_0/cfg_local_error_valid_o",
+          "pcie_dbg_local_error_valid"
+        ]
+      },
+      "xdma_0_m_axi_awvalid": {
+        "ports": [
+          "xdma_0/m_axi_awvalid",
+          "pcie_dbg_awvalid",
+          "axi_interconnect_0/S01_AXI_awvalid"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "axi_interconnect_0/S01_AXI_awready",
+          "xdma_0/m_axi_awready",
+          "pcie_dbg_awready"
+        ]
+      },
+      "xdma_0_m_axi_wvalid": {
+        "ports": [
+          "xdma_0/m_axi_wvalid",
+          "pcie_dbg_wvalid",
+          "axi_interconnect_0/S01_AXI_wvalid"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "axi_interconnect_0/S01_AXI_wready",
+          "xdma_0/m_axi_wready",
+          "pcie_dbg_wready"
+        ]
+      },
+      "Net2": {
+        "ports": [
+          "axi_interconnect_0/S01_AXI_bvalid",
+          "xdma_0/m_axi_bvalid",
+          "pcie_dbg_bvalid"
+        ]
+      },
+      "xdma_0_m_axi_bready": {
+        "ports": [
+          "xdma_0/m_axi_bready",
+          "pcie_dbg_bready",
+          "axi_interconnect_0/S01_AXI_bready"
+        ]
+      },
+      "xdma_0_m_axi_arvalid": {
+        "ports": [
+          "xdma_0/m_axi_arvalid",
+          "pcie_dbg_arvalid",
+          "axi_interconnect_0/S01_AXI_arvalid"
+        ]
+      },
+      "Net3": {
+        "ports": [
+          "axi_interconnect_0/S01_AXI_arready",
+          "xdma_0/m_axi_arready",
+          "pcie_dbg_arready"
+        ]
+      },
+      "Net4": {
+        "ports": [
+          "axi_interconnect_0/S01_AXI_rvalid",
+          "xdma_0/m_axi_rvalid",
+          "pcie_dbg_rvalid"
+        ]
+      },
+      "xdma_0_m_axi_rready": {
+        "ports": [
+          "xdma_0/m_axi_rready",
+          "pcie_dbg_rready",
+          "axi_interconnect_0/S01_AXI_rready"
+        ]
+      },
+      "Net5": {
+        "ports": [
+          "axi_interconnect_0/S01_AXI_bresp",
+          "xdma_0/m_axi_bresp",
+          "pcie_dbg_bresp"
+        ]
+      },
+      "Net6": {
+        "ports": [
+          "axi_interconnect_0/S01_AXI_rresp",
+          "xdma_0/m_axi_rresp",
+          "pcie_dbg_rresp"
+        ]
+      },
+      "xdma_0_m_axi_wlast": {
+        "ports": [
+          "xdma_0/m_axi_wlast",
+          "pcie_dbg_wlast",
+          "axi_interconnect_0/S01_AXI_wlast"
+        ]
+      },
+      "Net7": {
+        "ports": [
+          "axi_interconnect_0/S01_AXI_rlast",
+          "xdma_0/m_axi_rlast",
+          "pcie_dbg_rlast"
+        ]
+      },
+      "xdma_0_m_axi_wstrb": {
+        "ports": [
+          "xdma_0/m_axi_wstrb",
+          "pcie_dbg_wstrb",
+          "axi_interconnect_0/S01_AXI_wstrb"
+        ]
+      },
+      "xdma_0_m_axi_awaddr": {
+        "ports": [
+          "xdma_0/m_axi_awaddr",
+          "pcie_dbg_awaddr",
+          "axi_interconnect_0/S01_AXI_awaddr"
+        ]
+      },
+      "xdma_0_m_axi_araddr": {
+        "ports": [
+          "xdma_0/m_axi_araddr",
+          "pcie_dbg_araddr",
+          "axi_interconnect_0/S01_AXI_araddr"
+        ]
+      },
+      "xdma_0_m_axi_wdata": {
+        "ports": [
+          "xdma_0/m_axi_wdata",
+          "pcie_dbg_wdata",
+          "axi_interconnect_0/S01_AXI_wdata"
+        ]
+      },
+      "Net8": {
+        "ports": [
+          "axi_interconnect_0/S01_AXI_rdata",
+          "xdma_0/m_axi_rdata",
+          "pcie_dbg_rdata"
         ]
       }
     },

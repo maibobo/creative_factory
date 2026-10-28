@@ -95,8 +95,10 @@
 # Physical Constraints
 ###############################################################################
 #
-#create_clock -period 10 [get_ports sys_clk]
-#create_clock -period 10 [get_ports sys_clk_gt]
+#create_clock  -period 10 [get_ports sys_clk]
+#create_clock  -period 10 [get_ports sys_clk_gt]
+#set_clock_groups -asynchronous -group [get_clocks -of_objects [get_nets   -hierarchical -filter NAME=~*pcie3_ip_i/inst/sys_clk]]
+#set_clock_groups -asynchronous -group [get_clocks -of_objects [get_nets   -hierarchical -filter NAME=~*pcie3_ip_i/inst/sys_clk_gt]]
 #
 
 ###############################################################################

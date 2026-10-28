@@ -1,0 +1,6 @@
+{"elapsed": 5.5e-05, "event": "START", "run_id": "20261027_145226_regs_2d1b6", "case": "regs", "status": "RUNNING", "pc_time": "2026-10-27T14:52:26.515582+08:00", "boot_mode": "unknown", "arm_wall_time_untrusted": "2000-12-08T22:06:09.107392", "arm_monotonic_start": 3622.120984808, "kernel": "5.10.226-v1.0.4-008a05487-rt89", "machine": "aarch64", "evidence": [], "exclusive_declared": false, "note": "VIO mode validates DDR/C2H, not real Aurora RX."}
+{"elapsed": 0.044115, "event": "REGISTERS", "label": "baseline", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 44032, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 0.047559, "event": "DROP_BASELINE", "value": 0}
+{"elapsed": 0.050705, "event": "REGISTERS_VERIFIED"}
+{"elapsed": 0.080041, "event": "REGISTERS", "label": "final", "values": {"0x0": 8193, "0x4": 539363604, "0x8": 262144, "0xc": 43898, "0x18": 0, "0x1c": 0, "0x20": 0, "0x24": 32768, "0x28": 32768, "0x2c": 3, "0x30": 0, "0x34": 0, "0x38": 0}}
+{"elapsed": 0.084999, "event": "FINISH", "status": "PASS", "error": null}

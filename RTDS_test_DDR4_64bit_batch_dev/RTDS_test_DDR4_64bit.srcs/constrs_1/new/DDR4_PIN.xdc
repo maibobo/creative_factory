@@ -6,31 +6,69 @@
 
 set_property PACKAGE_PIN AK17 [get_ports clk_p]
 set_property PACKAGE_PIN AK16 [get_ports clk_n]
-set_property IOSTANDARD DIFF_HSTL_I_12 [get_ports {clk_p clk_n}]
-create_clock -period 10.000 -name sys_clk_100m [get_ports clk_p]
 
 # 顶层PCIe参考时钟为100MHz。BD的OOC约束只认识BD端口名，无法覆盖顶层端口；
 # 在当前工程实际启用的约束集中显式建钟，避免XDMA/PCIe内部寄存器成为no_clock端点。
-create_clock -period 10.000 -name pcie_refclk_100m [get_ports {pcie_diff_clk_p[0]}]
 
 # RPT205-1-001 pin workbook, Sheet1 rows 3/2: TEST1/TEST2 LEDs, 3.3V HR bank.
 # Explicit placement prevents automatic assignment onto configuration/QSPI pins.
 set_property PACKAGE_PIN AP11 [get_ports led]
-set_property IOSTANDARD LVCMOS33 [get_ports led]
 set_property PACKAGE_PIN AP10 [get_ports user_lnk_up]
-set_property IOSTANDARD LVCMOS33 [get_ports user_lnk_up]
 # RPT205 TEST3/AM11, direct 3.3 V input to the confirmed RK3588 GPIO bank.
 set_property PACKAGE_PIN AM11 [get_ports cpu_sync_50us]
-set_property IOSTANDARD LVCMOS33 [get_ports cpu_sync_50us]
 # The receiver samples this output asynchronously; its internal source remains timed at 250 MHz.
-set_false_path -to [get_ports cpu_sync_50us]
 # Human-visible LED outputs have no external synchronous sampling requirement.
-set_false_path -to [get_ports {led user_lnk_up}]
 
 
 #DDR4
 
 
+
+
+
+####################################################################################
+# Constraints from file : 'xpm_cdc_async_rst.tcl'
+####################################################################################
+
+set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
+set_property BITSTREAM.CONFIG.UNUSEDPIN PULLNONE [current_design]
+
+# MIG ui_clk 到主逻辑250MHz的就绪状态采用两级同步器跨域。
+# ready_sync_reg[0]是ui_axi_aresetn的两级同步器首级，只对该首级D端设置异步例外；
+# 第二级仍由250MHz时钟正常检查，其他MIG/AXI跨域仍由AXI Clock Converter约束负责。
+# Vivado 2020.2 read_xdc 不支持 if；必须直接执行约束，不能用 Tcl 条件包裹。
+# 不使用 -quiet，层级变化造成目标丢失时应产生告警；精确数量由独立检查脚本验证。
+
+# RPT205 hardware confirmation: H24 PERST# input, 3.3V, no level shifter.
+set_property PACKAGE_PIN H24 [get_ports pcie_rst_n]
+# Board configuration bank is 3.3V and CFGBVS is strapped to VCCO.
+set_property CFGBVS VCCO [current_design]
+set_property CONFIG_VOLTAGE 3.3 [current_design]
+# Backplane PCIe reference clock (100MHz), confirmed by hardware engineer.
+set_property PACKAGE_PIN AF5 [get_ports {pcie_diff_clk_n[0]}]
+set_property PACKAGE_PIN AF6 [get_ports {pcie_diff_clk_p[0]}]
+# Backplane x2 lanes; network TX/RX labels in the workbook are host-relative.
+set_property PACKAGE_PIN AP2 [get_ports {pcie_mgt_rxp[0]}]
+set_property PACKAGE_PIN AP1 [get_ports {pcie_mgt_rxn[0]}]
+set_property PACKAGE_PIN AN4 [get_ports {pcie_mgt_txp[0]}]
+set_property PACKAGE_PIN AN3 [get_ports {pcie_mgt_txn[0]}]
+set_property PACKAGE_PIN AM2 [get_ports {pcie_mgt_rxp[1]}]
+set_property PACKAGE_PIN AM1 [get_ports {pcie_mgt_rxn[1]}]
+set_property PACKAGE_PIN AM6 [get_ports {pcie_mgt_txp[1]}]
+set_property PACKAGE_PIN AM5 [get_ports {pcie_mgt_txn[1]}]
+
+
+# RTDS_RECOVERY_CDC_BEGIN_20261012
+# 修改点 2026-10-12：直接写入当前已加载的DDR4_PIN.xdc，避免额外XDC未登记时修复失效。
+# 修改记录 2026-10-12：DDR事务恢复新增同步器的定点CDC约束。
+# converter_reset_n异步置位复位；s/m管线分别经过16个目的时钟沿释放。
+# 此例外只针对同步器的异步CLR入口；同步释放链的Q->D路径仍正常检查。
+# converter_ready_sync[0]是MIG接口复位释放确认的第一级电平同步器。
+# 仅排除首级D的异步采样；[0]/Q->[1]/D及全部业务路径仍正常检查。
+# 不建立整组时钟异步例外，不改变MIG内部时钟周期或协议路径要求。
+# RTDS_RECOVERY_CDC_END_20261012
+
+# PCIe diagnostics: exception only to first-stage independent status synchronizers.
 
 set_property PACKAGE_PIN AG14 [get_ports {c0_ddr4_adr[0]}]
 set_property PACKAGE_PIN AF17 [get_ports {c0_ddr4_adr[1]}]
@@ -140,6 +178,15 @@ set_property PACKAGE_PIN AJ21 [get_ports {c0_ddr4_dm_dbi_n[2]}]
 set_property PACKAGE_PIN AE25 [get_ports {c0_ddr4_dm_dbi_n[1]}]
 set_property PACKAGE_PIN AD21 [get_ports {c0_ddr4_dm_dbi_n[0]}]
 
+set_property IOSTANDARD DIFF_HSTL_I_12 [get_ports clk_p]
+set_property IOSTANDARD DIFF_HSTL_I_12 [get_ports clk_n]
+create_clock -period 10.000 -name sys_clk_100m [get_ports clk_p]
+create_clock -period 10.000 -name pcie_refclk_100m [get_ports {pcie_diff_clk_p[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports led]
+set_property IOSTANDARD LVCMOS33 [get_ports user_lnk_up]
+set_property IOSTANDARD LVCMOS33 [get_ports cpu_sync_50us]
+set_false_path -to [get_ports cpu_sync_50us]
+set_false_path -to [get_ports {led user_lnk_up}]
 set_property IOSTANDARD SSTL12_DCI [get_ports {c0_ddr4_odt[0]}]
 set_property IOSTANDARD SSTL12_DCI [get_ports {c0_ddr4_cke[0]}]
 set_property IOSTANDARD SSTL12_DCI [get_ports {c0_ddr4_cs_n[0]}]
@@ -255,50 +302,107 @@ set_property IOSTANDARD DIFF_POD12_DCI [get_ports {c0_ddr4_dqs_t[1]}]
 set_property IOSTANDARD DIFF_POD12_DCI [get_ports {c0_ddr4_dqs_c[1]}]
 set_property IOSTANDARD DIFF_POD12_DCI [get_ports {c0_ddr4_dqs_t[0]}]
 set_property IOSTANDARD DIFF_POD12_DCI [get_ports {c0_ddr4_dqs_c[0]}]
-
-####################################################################################
-# Constraints from file : 'xpm_cdc_async_rst.tcl'
-####################################################################################
-
-set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
-set_property BITSTREAM.CONFIG.UNUSEDPIN PULLNONE [current_design]
-
-# MIG ui_clk 到主逻辑250MHz的就绪状态采用两级同步器跨域。
-# ready_sync_reg[0]是ui_axi_aresetn的两级同步器首级，只对该首级D端设置异步例外；
-# 第二级仍由250MHz时钟正常检查，其他MIG/AXI跨域仍由AXI Clock Converter约束负责。
-# Vivado 2020.2 read_xdc 不支持 if；必须直接执行约束，不能用 Tcl 条件包裹。
-# 不使用 -quiet，层级变化造成目标丢失时应产生告警；精确数量由独立检查脚本验证。
 set_false_path -to [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/ready_sync_reg\[0\]$}] -filter {REF_PIN_NAME == D}]
-
-# RPT205 hardware confirmation: H24 PERST# input, 3.3V, no level shifter.
-set_property PACKAGE_PIN H24 [get_ports pcie_rst_n]
 set_property IOSTANDARD LVCMOS33 [get_ports pcie_rst_n]
-# Board configuration bank is 3.3V and CFGBVS is strapped to VCCO.
-set_property CFGBVS VCCO [current_design]
-set_property CONFIG_VOLTAGE 3.3 [current_design]
-# Backplane PCIe reference clock (100MHz), confirmed by hardware engineer.
-set_property PACKAGE_PIN AF6 [get_ports {pcie_diff_clk_p[0]}]
-set_property PACKAGE_PIN AF5 [get_ports {pcie_diff_clk_n[0]}]
-# Backplane x2 lanes; network TX/RX labels in the workbook are host-relative.
-set_property PACKAGE_PIN AP2 [get_ports {pcie_mgt_rxp[0]}]
-set_property PACKAGE_PIN AP1 [get_ports {pcie_mgt_rxn[0]}]
-set_property PACKAGE_PIN AN4 [get_ports {pcie_mgt_txp[0]}]
-set_property PACKAGE_PIN AN3 [get_ports {pcie_mgt_txn[0]}]
-set_property PACKAGE_PIN AM2 [get_ports {pcie_mgt_rxp[1]}]
-set_property PACKAGE_PIN AM1 [get_ports {pcie_mgt_rxn[1]}]
-set_property PACKAGE_PIN AM6 [get_ports {pcie_mgt_txp[1]}]
-set_property PACKAGE_PIN AM5 [get_ports {pcie_mgt_txn[1]}]
-
-
-# RTDS_RECOVERY_CDC_BEGIN_20261012
-# 修改点 2026-10-12：直接写入当前已加载的DDR4_PIN.xdc，避免额外XDC未登记时修复失效。
-# 修改记录 2026-10-12：DDR事务恢复新增同步器的定点CDC约束。
-# converter_reset_n异步置位复位；s/m管线分别经过16个目的时钟沿释放。
-# 此例外只针对同步器的异步CLR入口；同步释放链的Q->D路径仍正常检查。
-# converter_ready_sync[0]是MIG接口复位释放确认的第一级电平同步器。
-# 仅排除首级D的异步采样；[0]/Q->[1]/D及全部业务路径仍正常检查。
-# 不建立整组时钟异步例外，不改变MIG内部时钟周期或协议路径要求。
 set_false_path -to [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_(s|m)_reset_pipe_reg\[[0-9]+\]$}] -filter {REF_PIN_NAME == CLR}]
 set_false_path -to [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_ready_sync_reg\[[01]\]$}] -filter {REF_PIN_NAME == CLR}]
 set_false_path -to [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/u_rtds_ddr4_backend/converter_ready_sync_reg\[0\]$}] -filter {REF_PIN_NAME == D}]
-# RTDS_RECOVERY_CDC_END_20261012
+set_false_path -to [get_pins -of_objects [get_cells -hier -regexp {^u_pcie/U_PCIE_LINK_DEBUG/(observer/(board_meta|native_meta)_reg.*|ctl_meta_reg.*|irq_meta_reg)$}] -filter {REF_PIN_NAME == D}]
+
+####################################################################################
+# Constraints from file : 'aurora1g_board.xdc'
+####################################################################################
+
+create_property INIT cell -type string
+set_property ASYNC_REG true [get_cells pcie_diag_phy_meta_0]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_tap_0]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_meta_0]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_tap_0]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_meta_0]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_tap_0]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_meta_1]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_tap_1]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_meta_1]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_tap_1]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_meta_1]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_tap_1]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_meta_2]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_tap_2]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_meta_2]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_tap_2]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_meta_2]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_tap_2]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_meta_3]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_tap_3]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_meta_3]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_tap_3]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_meta_3]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_tap_3]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_meta_4]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_tap_4]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_meta_4]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_tap_4]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_meta_4]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_tap_4]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_meta_5]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_tap_5]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_meta_5]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_tap_5]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_meta_5]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_tap_5]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_meta_6]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_tap_6]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_meta_6]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_tap_6]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_meta_6]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_tap_6]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_meta_7]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_tap_7]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_meta_7]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_tap_7]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_meta_7]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_tap_7]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_meta_8]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_tap_8]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_meta_8]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_tap_8]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_meta_8]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_tap_8]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_meta_9]
+set_property ASYNC_REG true [get_cells pcie_diag_phy_tap_9]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_meta_9]
+set_property DONT_TOUCH true [get_cells pcie_diag_phy_tap_9]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_meta_9]
+set_property INIT 1'b0 [get_cells pcie_diag_phy_tap_9]
+set_false_path -to [get_pins pcie_diag_phy_meta_0/D]
+set_false_path -to [get_pins pcie_diag_phy_meta_1/D]
+set_false_path -to [get_pins pcie_diag_phy_meta_2/D]
+set_false_path -to [get_pins pcie_diag_phy_meta_3/D]
+set_false_path -to [get_pins pcie_diag_phy_meta_4/D]
+set_false_path -to [get_pins pcie_diag_phy_meta_5/D]
+set_false_path -to [get_pins pcie_diag_phy_meta_6/D]
+set_false_path -to [get_pins pcie_diag_phy_meta_7/D]
+set_false_path -to [get_pins pcie_diag_phy_meta_8/D]
+set_false_path -to [get_pins pcie_diag_phy_meta_9/D]
+set_property CONFIG_MODE SPIx4 [current_design]
+set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
+set_property BITSTREAM.CONFIG.CONFIGRATE 50 [current_design]
+set_property BITSTREAM.CONFIG.SPI_FALL_EDGE Yes [current_design]
+create_debug_core ila_pcie_phy ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores ila_pcie_phy]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores ila_pcie_phy]
+set_property C_ADV_TRIGGER false [get_debug_cores ila_pcie_phy]
+set_property C_DATA_DEPTH 2048 [get_debug_cores ila_pcie_phy]
+set_property C_EN_STRG_QUAL false [get_debug_cores ila_pcie_phy]
+set_property C_INPUT_PIPE_STAGES 1 [get_debug_cores ila_pcie_phy]
+set_property C_TRIGIN_EN false [get_debug_cores ila_pcie_phy]
+set_property C_TRIGOUT_EN false [get_debug_cores ila_pcie_phy]
+set_property port_width 1 [get_debug_ports ila_pcie_phy/clk]
+connect_debug_port ila_pcie_phy/clk [get_nets [list clk_250m]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports ila_pcie_phy/probe0]
+set_property port_width 10 [get_debug_ports ila_pcie_phy/probe0]
+connect_debug_port ila_pcie_phy/probe0 [get_nets [list pcie_diag_phy_value_0 pcie_diag_phy_value_1 pcie_diag_phy_value_2 pcie_diag_phy_value_3 pcie_diag_phy_value_4 pcie_diag_phy_value_5 pcie_diag_phy_value_6 pcie_diag_phy_value_7 pcie_diag_phy_value_8 pcie_diag_phy_value_9]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk_250m]
