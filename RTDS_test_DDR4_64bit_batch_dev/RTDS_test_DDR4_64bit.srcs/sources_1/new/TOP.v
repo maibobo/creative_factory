@@ -288,6 +288,8 @@ module TOP #(
         .aurora_user_rstn    (aurora_user_rstn),
         .aurora_channel_up   (aurora_channel_up),
         .aurora_lane_up      (aurora_lane_up),
+        .aurora1g_channel_up (aurora1g_channel_up),
+        .aurora1g_configured (aurora1g_configured),
         .aurora_tx_d         (aurora_tx_d),
         .aurora_tx_sof       (aurora_tx_sof),
         .aurora_tx_eof       (aurora_tx_eof),

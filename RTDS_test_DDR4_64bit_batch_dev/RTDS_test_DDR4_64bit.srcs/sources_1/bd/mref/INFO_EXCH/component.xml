@@ -882,12 +882,12 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>VERSION</spirit:name>
         <spirit:displayName>Version</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VERSION" spirit:bitStringLength="32">0x00002001</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VERSION" spirit:bitStringLength="32">0x00002002</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>PROG_TIME</spirit:name>
         <spirit:displayName>Prog Time</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PROG_TIME" spirit:bitStringLength="32">0x20260914</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PROG_TIME" spirit:bitStringLength="32">0x20261029</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>CH_BUF_LEN</spirit:name>
@@ -929,12 +929,12 @@
     <spirit:parameter>
       <spirit:name>VERSION</spirit:name>
       <spirit:displayName>Version</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.VERSION" spirit:bitStringLength="32">0x00002001</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.VERSION" spirit:bitStringLength="32">0x00002002</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PROG_TIME</spirit:name>
       <spirit:displayName>Prog Time</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PROG_TIME" spirit:bitStringLength="32">0x20260914</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PROG_TIME" spirit:bitStringLength="32">0x20261029</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CH_BUF_LEN</spirit:name>

@@ -49,7 +49,9 @@ module PCIe #(
     input                                      aurora_user_clk,                       // 对应接口时钟，使用域由连接关系确定
     input                                      aurora_user_rstn,                      // 低有效复位或同步复位状态
     input                                      aurora_channel_up,                     // 对应链路就绪状态，跨域副本按后缀区分
-    input                                      aurora_lane_up,                        // 对应链路就绪状态，跨域副本按后缀区分
+    input                                      aurora_lane_up,                        // 10G Aurora lane就绪状态
+    input                                      aurora1g_channel_up,                    // 1G Aurora用户域channel_up，跨域后供状态寄存器读取
+    input                                      aurora1g_configured,                    // 1G首次合法配置已完成，来自250MHz业务域
 
     output        [63:0]                       aurora_tx_d,                           // 发送当前数据拍
     output                                     aurora_tx_sof,                         // 当前帧首拍标志，与有效/接受共同使用
@@ -170,14 +172,46 @@ module PCIe #(
     wire                                       ddr_init_calib_complete            ;    // 后端DDR校准完成状态
     wire                                       ddr_axi_response_error_sticky      ;    // 相应错误出现后保持为1，直到软件清除或复位
     wire                                       ddr_axi_timeout_sticky             ;    // 相应错误出现后保持为1，直到软件清除或复位
-    wire          [31:0]                       DDR_STATUS_W                       ;    // DDR就绪、校准和错误状态输入
+    wire          [31:0]                       DDR_STATUS_W                       ;    // DDR状态、错误事件及Aurora调试状态
 
-    assign DDR_STATUS_W = {27'd0,
+    (* ASYNC_REG = "TRUE" *) reg [1:0] aurora10g_channel_up_sync;
+    (* ASYNC_REG = "TRUE" *) reg [1:0] aurora1g_channel_up_sync;
+    reg                                        aurora10g_seen_up;
+    reg                                        aurora10g_link_down_sticky;
+
+    // 0x2C状态采样统一在i_sys_clk域；channel_up来自Aurora用户时钟，使用两级同步。
+    // Bit6记录10G channel_up曾经建立后又拉低；读0x10的清除脉冲清除该历史标志。
+    always @(posedge i_sys_clk) begin : update_aurora_debug_status
+        if (i_sys_rst) begin
+            aurora10g_channel_up_sync <= 2'b00;
+            aurora1g_channel_up_sync <= 2'b00;
+            aurora10g_seen_up <= 1'b0;
+            aurora10g_link_down_sticky <= 1'b0;
+        end else begin
+            aurora10g_channel_up_sync <= {aurora10g_channel_up_sync[0], aurora_channel_up};
+            aurora1g_channel_up_sync <= {aurora1g_channel_up_sync[0], aurora1g_channel_up};
+
+            if (aurora10g_channel_up_sync[1])
+                aurora10g_seen_up <= 1'b1;
+
+            if (CLEAR_INTER_R)
+                aurora10g_link_down_sticky <= 1'b0;
+            else if (aurora10g_seen_up && !aurora10g_channel_up_sync[1])
+                aurora10g_link_down_sticky <= 1'b1;
+        end
+    end
+
+    // 保留Bit0～4原定义；Bit5～8依次为10G建链、10G断链历史、1G建链、1G配置完成。
+    assign DDR_STATUS_W = {23'd0,
+                                aurora1g_configured,
+                                aurora1g_channel_up_sync[1],
+                                aurora10g_link_down_sticky,
+                                aurora10g_channel_up_sync[1],
                                 (ddr_axi_timeout_sticky | fdma_timeout_sticky),
                                 rx_overflow_sticky,
                                 ddr_axi_response_error_sticky,
                                 ddr_init_calib_complete,
-                                ddr_ready}                                        ;    // DDR就绪、校准和错误状态输入
+                                ddr_ready}                                        ;
 
 
 

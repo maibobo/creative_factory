@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "INFO_EXCH,Vivado 2020.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_INFO_EXCH_0_0,INFO_EXCH,{}" *)
-(* CORE_GENERATION_INFO = "design_1_INFO_EXCH_0_0,INFO_EXCH,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=INFO_EXCH,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,VERSION=0x00002001,PROG_TIME=0x20260914,CH_BUF_LEN=0x00040000,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "design_1_INFO_EXCH_0_0,INFO_EXCH,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=INFO_EXCH,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,VERSION=0x00002002,PROG_TIME=0x20261029,CH_BUF_LEN=0x00040000,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_INFO_EXCH_0_0 (
@@ -161,8 +161,8 @@ output wire S_AXI_RVALID;
 input wire S_AXI_RREADY;
 
   INFO_EXCH #(
-    .VERSION(32'H00002001),
-    .PROG_TIME(32'H20260914),
+    .VERSION(32'H00002002),
+    .PROG_TIME(32'H20261029),
     .CH_BUF_LEN(32'H00040000),
     .C_S_AXI_DATA_WIDTH(32),
     .C_S_AXI_ADDR_WIDTH(32)

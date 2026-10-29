@@ -1,6 +1,6 @@
 // 首次合法Byte1编号1～10查表得到duty和Vin，完整48bit配置跨域后锁定。
 // 250MHz产生的2µs事件同步到31.25MHz用户域，事件到来时尝试发送4×32bit。
-// 16Byte中Byte0/1为duty低/高，Byte2～5为Vin低字节先发，Byte6=F0，其余保留字节为0。
+// 16Byte四拍格式：第一拍Vin[31:0]；第二拍duty放在[31:16]；第三拍预留；第四拍[15:0]=16'hEB90。
 // 反压保持当前拍；忙时跳过事件，不补发。用户复位或断链中止帧，主机复位才清首次配置。
 // 注释整理 2026-10-12：仅修改说明和排版，端口、表达式、状态条件及连接保持。
 
@@ -271,9 +271,10 @@ module RTDS_1G_PERIODIC_TX (
 
 
     assign tx_data =
-        (tx_curr_st == FIRST)  ? {cfg_user[7:0], cfg_user[15:8], cfg_user[23:16], cfg_user[31:24]} :
-        (tx_curr_st == SECOND) ? {cfg_user[39:32], cfg_user[47:40], 8'hF0, 8'h00} :
-                                32'd0                                      ;    // 32bit 用户数据，先发字节放在高位
+        (tx_curr_st == FIRST)  ? cfg_user[47:16] :
+        (tx_curr_st == SECOND) ? {cfg_user[15:0], 16'h0000} :
+        (tx_curr_st == FOURTH) ? {16'h0000, 16'hEB90} :
+                                32'd0                                      ;    // 保持原位序；第四拍低16bit为同步字EB90
 
     assign tx_rem = 2'd3                                                   ;    // 四拍均为4个有效字节，固定为3
     assign tx_sof = (tx_curr_st == FIRST)                                  ;    // 首拍标记，反压时保持

@@ -10,8 +10,8 @@
 module INFO_EXCH#
     (
 
-        parameter integer                             VERSION             = 32'h0000_2001,      // 软件只读版本常量
-        parameter integer                             PROG_TIME           = 32'h2026_0914,      // 软件只读构建标识常量
+        parameter integer                             VERSION             = 32'h0000_2002,      // 软件只读版本常量
+        parameter integer                             PROG_TIME           = 32'h2026_1029,      // 软件只读构建标识常量
         parameter integer                             CH_BUF_LEN          = 32'h0004_0000,      // 单个上行块的字节容量常量
 
 

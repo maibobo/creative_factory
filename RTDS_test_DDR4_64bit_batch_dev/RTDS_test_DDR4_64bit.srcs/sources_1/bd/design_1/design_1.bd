@@ -1738,10 +1738,10 @@
             "value": "0x00040000"
           },
           "PROG_TIME": {
-            "value": "0x20260914"
+            "value": "0x20261029"
           },
           "VERSION": {
-            "value": "0x00002001"
+            "value": "0x00002002"
           }
         },
         "reference_info": {
