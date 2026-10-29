@@ -1,6 +1,6 @@
 # RTDS V2.02 开发工程
 
-当前业务版本：**V2.02**。远程主工程：`C:\\project\\RTDS\\DDR\\RTDS_test_DDR4_64bit_batch_dev\\RTDS_test_DDR4_64bit.xpr`。
+当前业务版本：**V2.02**。远程主工程：`C:\project\RTDS\DDR\RTDS_test_DDR4_64bit_batch_dev\RTDS_test_DDR4_64bit.xpr`。
 
 ## 版本变更记录
 
