@@ -99,11 +99,11 @@ def main() -> int:
         return 0
 
     new_source.parent.mkdir(parents=True, exist_ok=True)
-    new_source.write_text(rtl, encoding="utf-8", newline="\n")
+    new_source.write_text(rtl, encoding="utf-8")
     if source == old_source and old_source.exists():
         old_source.unlink()
-    xpr.write_text(xpr_new, encoding="utf-8", newline="\n")
-    refresh_entry.write_text(refresh_text, encoding="utf-8", newline="\n")
+    xpr.write_text(xpr_new, encoding="utf-8")
+    refresh_entry.write_text(refresh_text, encoding="utf-8")
     print("Applied. Next: run Vivado 2020.2 with scripts/update_ddr_axi_dma_bridge_bd.tcl.")
     return 0
 
