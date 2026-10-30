@@ -15,7 +15,8 @@ foreach required [list $project_file $source_file $bd_file] {
     }
 }
 
-if {[current_project -quiet] ne ""} {
+set active_project ""
+if {[catch {current_project} active_project] == 0 && $active_project ne ""} {
     close_project
 }
 open_project $project_file
