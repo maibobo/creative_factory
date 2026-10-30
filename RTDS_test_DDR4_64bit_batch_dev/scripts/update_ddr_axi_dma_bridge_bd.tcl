@@ -135,6 +135,7 @@ if {[llength $old_cell] > 0} {
     delete_bd_objs $old_cell
     create_bd_cell -type module -reference ddr_axi_dma_bridge $new_cell_name
     set new_cell [get_bd_cells $new_cell_name]
+    set_property -dict [list CONFIG.M_AXI_DATA_WIDTH {64}] $new_cell
 
     foreach {old_pin_name new_pin_name} $pin_map {
         set new_pin [get_bd_pins -quiet "$new_cell_name/$new_pin_name"]
@@ -162,6 +163,12 @@ if {[llength $old_cell] > 0} {
     if {[llength [get_bd_intf_pins -quiet "$new_cell_name/M_AXI"]] != 1} {
         error "Existing migrated cell is missing inferred M_AXI interface."
     }
+}
+
+# Refresh the unchanged INFO_EXCH module reference after re-adding its source file.
+set info_refs [get_ips -all *INFO_EXCH*]
+if {[llength $info_refs] > 0} {
+    update_module_reference $info_refs
 }
 
 # Retain the existing INFO_EXCH configuration and external status ports.
