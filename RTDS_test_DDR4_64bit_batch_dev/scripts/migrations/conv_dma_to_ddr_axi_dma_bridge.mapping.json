@@ -418,6 +418,14 @@
     {
       "find": "MIG用户域读数据通道当前可接受",
       "replace": "存储侧 AXI 读数据当前可接受"
+    },
+    {
+      "find": "input wire    [15 : 0]                     rd_beat_count          ,                     // 读请求64bit拍数",
+      "replace": "input wire    [15 : 0]                     rd_beat_count          ,                     // 读请求的数据拍数"
+    },
+    {
+      "find": "input wire    [M_AXI_ID_WIDTH-1 : 0]       M_AXI_BID           ,                     // 写数据通道 ID",
+      "replace": "input wire    [M_AXI_ID_WIDTH-1 : 0]       M_AXI_BID           ,                     // 写响应 ID"
     }
   ],
   "project_reference": {
