@@ -70,3 +70,9 @@ No changes were made to:
 ## Current status and handoff
 
 The GitHub branch contains the RTL rename, source reference update, mapping, application script, and BD regeneration Tcl. The checked-in design_1.bd and generated wrapper are not claimed to be regenerated yet; run the Tcl in the restored local Vivado 2020.2 environment before the next session performs expected-format and five-run regression verification.
+
+## Preserved legacy references
+
+The older regression/verify_rtds_integration.tcl still contains /CONV_DMA_0/M_AXI, but that script opens the legacy RTDS_test.xpr rather than the active RTDS_test_DDR4_64bit.xpr in this project. It was intentionally left untouched to avoid changing a legacy verification flow outside this migration scope.
+
+The generated XPR file-set/run names that still contain design_1_CONV_DMA_0_0 are also left for Vivado to regenerate when the BD Tcl is run; they are not manually edited.
