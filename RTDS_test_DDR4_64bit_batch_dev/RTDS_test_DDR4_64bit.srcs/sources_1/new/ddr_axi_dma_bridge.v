@@ -1,12 +1,12 @@
-// 将FDMA读写请求转换成AXI存储突发，读写方向独立运行。
-// 地址按字节计，fdma_size按数据拍计；突发受256拍和4KiB边界限制。
-// AW与W允许独立接受，写完成必须等最终B响应；读计数只随实际R握手推进。
-// 本模块wr_data_valid输入表示源数据有效，wr_data_accept_event输出表示当前拍已接受。
-// 注释整理 2026-10-12：仅修改说明和排版，端口、表达式、状态条件及连接保持。
+// 将上游读写请求转换为 AXI 存储突发；读写方向独立运行。
+// 地址按字节计，读写长度按数据拍计；每段突发不超过256拍且不跨越4KiB边界。
+// AW与W通道可独立握手；写请求必须等最终B响应，读计数只随实际R通道握手推进。
+// wr_data_valid表示上游写数据有效；wr_data_accept_event表示AXI W通道已接受该拍。
+// 命名整理 2026-10-30：统一模块、请求端口和状态变量名称；不改变协议及时序行为。
 
 `timescale 1ns / 1ps
 
-// 模块参数与输入输出。
+// 通用 AXI DMA 桥接模块。
 module ddr_axi_dma_bridge #
     (
         parameter integer                             M_AXI_ID_WIDTH       = 1    ,      // 本AXI主机事务ID位宽
@@ -15,17 +15,17 @@ module ddr_axi_dma_bridge #
         parameter integer                             M_AXI_DATA_WIDTH    = 64           // 本AXI主机数据位宽
     )
     (
-    input wire    [M_AXI_DATA_WIDTH/8-1:0]     wr_byte_enable,                               // 与W数据同步保持，末尾单字仅低4Byte有效
-    output reg                                 wr_done_event,                               // 全部写响应已返回的单周期事件
-    output reg                                 wr_error,                              // 本次事务响应/地址错误，与done配对
+    input wire    [M_AXI_DATA_WIDTH/8-1:0]     wr_byte_enable,                               // 与 wr_data 同拍传输的逐字节写使能
+    output reg                                 wr_done_event,                               // 写请求结束单周期事件（最终B响应完成或请求被拒绝）
+    output reg                                 wr_error,                              // 本次写请求的响应或地址错误，与 wr_done_event 配对
     input wire    [M_AXI_ADDR_WIDTH-1 : 0]     wr_addr          ,                     // 写起始字节地址
     input                                      wr_req          ,                     // 写请求，保持到busy接受
-    input wire    [15 : 0]                     wr_beat_count          ,                     // 写请求64bit拍数
+    input wire    [15 : 0]                     wr_beat_count          ,                     // 写请求的数据拍数
     output                                     wr_busy          ,                     // 写请求仍在处理，包含等待响应
 
     input wire    [M_AXI_DATA_WIDTH-1 :0]      wr_data          ,                     // 当前写数据
-    output wire                                wr_data_accept_event         ,                     // 历史命名：valid输出实际是数据接受脉冲
-    input wire                                 wr_data_valid         ,                     // 写接受/有效信号，方向含义见模块头
+    output wire                                wr_data_accept_event         ,                     // AXI WVALID 与 WREADY 握手后产生的单周期接受事件
+    input wire                                 wr_data_valid         ,                     // 上游写数据有效；未被 AXI 接受时需保持数据和有效
 
     input wire    [M_AXI_ADDR_WIDTH-1 : 0]     rd_addr          ,                     // 读起始字节地址
     input                                      rd_req          ,                     // 读请求，保持到busy接受
@@ -33,76 +33,76 @@ module ddr_axi_dma_bridge #
     output                                     rd_busy          ,                     // 读请求仍在处理
 
     output wire   [M_AXI_DATA_WIDTH-1 :0]      rd_data          ,                     // 当前读数据
-    output wire                                rd_data_accept_event         ,                     // 保留现有读桥的accept语义
+    output wire                                rd_data_accept_event         ,                     // AXI RVALID 与 RREADY 握手后产生的单周期接受事件
     input wire                                 rd_data_ready         ,                     // 读数据接收许可
 
-    input wire                                 M_AXI_ACLK          ,                     // MIG用户域对应接口时钟，使用域由连接关系确定
-    input wire                                 M_AXI_ARESETN       ,                     // MIG用户域低有效复位或同步复位状态
+    input wire                                 M_AXI_ACLK          ,                     // 存储侧AXI对应接口时钟，使用域由连接关系确定
+    input wire                                 M_AXI_ARESETN       ,                     // 存储侧AXI低有效复位或同步复位状态
     output wire   [M_AXI_ID_WIDTH-1 : 0]       M_AXI_AWID          ,                     // 写地址ID，用来标志一组写信号
     output wire   [M_AXI_ADDR_WIDTH-1 : 0]     M_AXI_AWADDR        ,                     // 写地址，给出一次写突发传输的写地址
-    output wire   [7 : 0]                      M_AXI_AWLEN         ,                     // 突发长度，给出突发传输的次数
-    output wire   [2 : 0]                      M_AXI_AWSIZE        ,                     // 突发大小，给出每次突发传输的字节数
-    output wire   [1 : 0]                      M_AXI_AWBURST       ,                     // 突发类型
-    output wire                                M_AXI_AWLOCK        ,                     // 总线锁信号，可提供操作的原子性
+    output wire   [7 : 0]                      M_AXI_AWLEN         ,                     // 写突发拍数减1，供 AXI AWLEN 使用
+    output wire   [2 : 0]                      M_AXI_AWSIZE        ,                     // 每拍传输字节数的 log2 编码
+    output wire   [1 : 0]                      M_AXI_AWBURST       ,                     // 固定为 INCR（逐拍递增）
+    output wire                                M_AXI_AWLOCK        ,                     // 未使用，固定为 0
     output wire   [3 : 0]                      M_AXI_AWCACHE       ,                     // 内存类型，表明一次传输是怎样通过系统的
     output wire   [2 : 0]                      M_AXI_AWPROT        ,                     // 保护类型，表明一次传输的特权级及安全等级
     output wire   [3 : 0]                      M_AXI_AWQOS         ,                     // 质量服务QoS
     output wire                                M_AXI_AWVALID       ,                     // 有效信号，表明此通道的地址控制信号有效
     input wire                                 M_AXI_AWREADY       ,                     // 表明“从”可以接收地址和对应的控制信号
-    output wire   [M_AXI_ID_WIDTH-1 : 0]       M_AXI_WID           ,                     // 写响应ID tag
+    output wire   [M_AXI_ID_WIDTH-1 : 0]       M_AXI_WID           ,                     // 写数据通道 ID
     output wire   [M_AXI_DATA_WIDTH-1 : 0]     M_AXI_WDATA         ,                     // 写数据
-    output wire   [M_AXI_DATA_WIDTH/8-1 : 0]   M_AXI_WSTRB         ,                     // 写数据有效的字节线，用来表明哪8bits数据是有效的
-    output wire                                M_AXI_WLAST         ,                     // 表明此次传输是最后一个突发传输
-    output wire                                M_AXI_WVALID        ,                     // 写有效，表明此次写有效
+    output wire   [M_AXI_DATA_WIDTH/8-1 : 0]   M_AXI_WSTRB         ,                     // 逐字节写使能，每一位对应一个数据字节
+    output wire                                M_AXI_WLAST         ,                     // 当前 AXI 写突发的最后一拍
+    output wire                                M_AXI_WVALID        ,                     // 写数据有效，保持到 WREADY 接受
     input wire                                 M_AXI_WREADY        ,                     // 表明从机可以接收写数据
-    input wire    [M_AXI_ID_WIDTH-1 : 0]       M_AXI_BID           ,                     // 写响应ID tag
+    input wire    [M_AXI_ID_WIDTH-1 : 0]       M_AXI_BID           ,                     // 写数据通道 ID
     input wire    [1 : 0]                      M_AXI_BRESP         ,                     // 写响应，表明写传输的状态
     input wire                                 M_AXI_BVALID        ,                     // 写响应有效
     output wire                                M_AXI_BREADY        ,                     // 表明主机能够接收写响应
-    output wire   [M_AXI_ID_WIDTH-1 : 0]       M_AXI_ARID          ,                     // MIG用户域读地址事务ID
+    output wire   [M_AXI_ID_WIDTH-1 : 0]       M_AXI_ARID          ,                     // 存储侧AXI读地址事务ID
 
-    output wire   [M_AXI_ADDR_WIDTH-1 : 0]     M_AXI_ARADDR        ,                     // MIG用户域读突发起始字节地址
-    output wire   [7 : 0]                      M_AXI_ARLEN         ,                     // MIG用户域读地址突发拍数减1
-    output wire   [2 : 0]                      M_AXI_ARSIZE        ,                     // MIG用户域读地址每拍字节数的log2编码
-    output wire   [1 : 0]                      M_AXI_ARBURST       ,                     // MIG用户域读地址地址类型，INCR为逐拍递增
-    output wire                                M_AXI_ARLOCK        ,                     // MIG用户域读地址通道lock属性
-    output wire   [3 : 0]                      M_AXI_ARCACHE       ,                     // MIG用户域读地址通道cache属性
-    output wire   [2 : 0]                      M_AXI_ARPROT        ,                     // MIG用户域读地址通道prot属性
-    output wire   [3 : 0]                      M_AXI_ARQOS         ,                     // MIG用户域读地址通道qos属性
-    output wire                                M_AXI_ARVALID       ,                     // MIG用户域读地址通道有效，保持到ready接受
-    input wire                                 M_AXI_ARREADY       ,                     // MIG用户域读地址通道当前可接受
-    input wire    [M_AXI_ID_WIDTH-1 : 0]       M_AXI_RID           ,                     // MIG用户域读数据事务ID
-    input wire    [M_AXI_DATA_WIDTH-1 : 0]     M_AXI_RDATA         ,                     // MIG用户域读数据当前数据
-    input wire    [1 : 0]                      M_AXI_RRESP         ,                     // MIG用户域读数据响应码，0为OKAY、2为SLVERR
-    input wire                                 M_AXI_RLAST         ,                     // MIG用户域读数据最后一拍标志
-    input wire                                 M_AXI_RVALID        ,                     // MIG用户域读数据通道有效，保持到ready接受
-    output wire                                M_AXI_RREADY                              // MIG用户域读数据通道当前可接受
+    output wire   [M_AXI_ADDR_WIDTH-1 : 0]     M_AXI_ARADDR        ,                     // 存储侧AXI读突发起始字节地址
+    output wire   [7 : 0]                      M_AXI_ARLEN         ,                     // 存储侧AXI读地址突发拍数减1
+    output wire   [2 : 0]                      M_AXI_ARSIZE        ,                     // 存储侧AXI读地址每拍字节数的log2编码
+    output wire   [1 : 0]                      M_AXI_ARBURST       ,                     // 存储侧AXI读地址地址类型，INCR为逐拍递增
+    output wire                                M_AXI_ARLOCK        ,                     // 存储侧AXI读地址通道lock属性
+    output wire   [3 : 0]                      M_AXI_ARCACHE       ,                     // 存储侧AXI读地址通道cache属性
+    output wire   [2 : 0]                      M_AXI_ARPROT        ,                     // 存储侧AXI读地址通道prot属性
+    output wire   [3 : 0]                      M_AXI_ARQOS         ,                     // 存储侧AXI读地址通道qos属性
+    output wire                                M_AXI_ARVALID       ,                     // 存储侧AXI读地址通道有效，保持到ready接受
+    input wire                                 M_AXI_ARREADY       ,                     // 存储侧AXI读地址通道当前可接受
+    input wire    [M_AXI_ID_WIDTH-1 : 0]       M_AXI_RID           ,                     // 存储侧AXI读数据事务ID
+    input wire    [M_AXI_DATA_WIDTH-1 : 0]     M_AXI_RDATA         ,                     // 存储侧AXI读数据当前数据
+    input wire    [1 : 0]                      M_AXI_RRESP         ,                     // 存储侧AXI读数据响应码，0为OKAY、2为SLVERR
+    input wire                                 M_AXI_RLAST         ,                     // 存储侧AXI读数据最后一拍标志
+    input wire                                 M_AXI_RVALID        ,                     // 存储侧AXI读数据通道有效，保持到ready接受
+    output wire                                M_AXI_RREADY                              // 存储侧AXI读数据通道当前可接受
 
         );
-    localparam integer                             AXI_BYTES = M_AXI_DATA_WIDTH/8         ;    // 本模块AXI_BYTES固定配置/状态编码
-    localparam integer                             SIZE_BITS = $clog2(AXI_BYTES)          ;    // 本模块SIZE_BITS固定配置/状态编码
-    localparam    [2:0]                        WRITE_IDLE=3'd0                                ;    // 本模块WRITE_IDLE固定配置/状态编码
-    localparam    [2:0]                        WRITE_PREPARE=3'd1                                ;    // 本模块WRITE_PREPARE固定配置/状态编码
-    localparam    [2:0]                        WRITE_SEND=3'd2                                ;    // 本模块WRITE_SEND固定配置/状态编码
-    localparam    [2:0]                        WRITE_RESPONSE=3'd3                                ;    // 本模块WRITE_RESPONSE固定配置/状态编码
-    localparam    [2:0]                        READ_IDLE=3'd0                                ;    // 本模块READ_IDLE固定配置/状态编码
-    localparam    [2:0]                        READ_PREPARE=3'd1                                ;    // 本模块READ_PREPARE固定配置/状态编码
-    localparam    [2:0]                        READ_ADDRESS=3'd2                                ;    // 本模块READ_ADDRESS固定配置/状态编码
-    localparam    [2:0]                        READ_DATA=3'd3                                ;    // 本模块READ_DATA固定配置/状态编码
+    localparam integer                             AXI_BYTES = M_AXI_DATA_WIDTH/8         ;    // 每拍数据字节数
+    localparam integer                             SIZE_BITS = $clog2(AXI_BYTES)          ;    // 每拍数据字节数的 log2 编码
+    localparam    [2:0]                        WRITE_IDLE=3'd0                                ;    // 写状态机：空闲
+    localparam    [2:0]                        WRITE_PREPARE=3'd1                                ;    // 写状态机：准备当前突发
+    localparam    [2:0]                        WRITE_SEND=3'd2                                ;    // 写状态机：发送地址和数据
+    localparam    [2:0]                        WRITE_RESPONSE=3'd3                                ;    // 写状态机：等待写响应
+    localparam    [2:0]                        READ_IDLE=3'd0                                ;    // 读状态机：空闲
+    localparam    [2:0]                        READ_PREPARE=3'd1                                ;    // 读状态机：准备当前突发
+    localparam    [2:0]                        READ_ADDRESS=3'd2                                ;    // 读状态机：发送读地址
+    localparam    [2:0]                        READ_DATA=3'd3                                ;    // 读状态机：接收读数据
     reg           [2:0]                        write_transaction_state                              ;    // 当前写事务状态
     reg           [2:0]                        read_transaction_state                               ;    // 当前读事务状态
     reg           [M_AXI_ADDR_WIDTH-1:0]       write_transaction_addr                                         ;    // 当前写突发的字节地址
     reg           [M_AXI_ADDR_WIDTH-1:0]       read_transaction_addr                                         ;    // 当前读突发的字节地址
-    reg           [15:0]                       write_beats_remaining                                      ;    // 整次FDMA写尚未响应完成的拍数
-    reg           [15:0]                       read_beats_remaining                                      ;    // 整次FDMA读尚未接受完成的拍数
+    reg           [15:0]                       write_beats_remaining                                      ;    // 整个写请求尚未收到响应的拍数
+    reg           [15:0]                       read_beats_remaining                                      ;    // 整个读请求尚未完成数据握手的拍数
     reg           [8:0]                        write_burst_beat_count                                         ;    // 当前写段拍数，1～256
     reg           [8:0]                        read_burst_beat_count                                         ;    // 当前读段拍数，1～256
     reg           [8:0]                        write_burst_beat_index                                      ;    // 当前写段已接受拍位置
     reg           [8:0]                        read_burst_beat_index                                      ;    // 当前读段已接受拍位置
     reg                                        write_address_pending                                 ;    // 当前段AW尚未接受
     reg                                        write_data_pending                                  ;    // 当前段W尚未收完
-    wire                                       s_axi_w_accept_event                                        ;    // AXI W实际接受事件
-    wire                                       s_axi_r_accept_event                                        ;    // AXI R实际接受事件
+    wire                                       m_axi_w_handshake                                        ;    // AXI W实际接受事件
+    wire                                       m_axi_r_handshake                                        ;    // AXI R实际接受事件
     function [8:0] burst_beats;
         input         [M_AXI_ADDR_WIDTH-1:0]       address                                ;    // 计算分段长度时使用的当前字节地址
         input         [15:0]                       remaining                              ;    // 整次请求剩余数据拍数
@@ -119,8 +119,8 @@ module ddr_axi_dma_bridge #
 
     wire          [8:0]                        write_burst_len_minus_one                        ;    // 当前写段拍数减1，形成AXI AWLEN
     wire          [8:0]                        read_burst_len_minus_one                         ;    // 当前读段拍数减1，形成AXI ARLEN
-    localparam    [M_AXI_ID_WIDTH-1:0]         AXI_FIXED_ID = M_AXI_ID[M_AXI_ID_WIDTH-1:0];    // 本模块AXI_FIXED_ID固定配置/状态编码
-    localparam    [2:0]                        AXI_SIZE = SIZE_BITS[2:0]                  ;    // 本模块AXI_SIZE固定配置/状态编码
+    localparam    [M_AXI_ID_WIDTH-1:0]         AXI_FIXED_ID = M_AXI_ID[M_AXI_ID_WIDTH-1:0];    // 固定 AXI 事务 ID
+    localparam    [2:0]                        AXI_SIZE = SIZE_BITS[2:0]                  ;    // AXI 每拍字节数编码
 
     assign write_burst_len_minus_one = write_burst_beat_count - 9'd1                                                ;    // 当前写段拍数减1，形成AXI AWLEN
 
@@ -130,17 +130,17 @@ module ddr_axi_dma_bridge #
 
     assign M_AXI_AWID=AXI_FIXED_ID                                                        ;    // 写地址ID，用来标志一组写信号
 
-    assign M_AXI_WID=AXI_FIXED_ID                                                         ;    // 写响应ID tag
+    assign M_AXI_WID=AXI_FIXED_ID                                                         ;    // 写数据通道 ID
 
     assign M_AXI_AWADDR=write_transaction_addr                                                                ;    // 写地址，给出一次写突发传输的写地址
 
-    assign M_AXI_AWLEN=write_burst_len_minus_one[7:0]                                           ;    // 突发长度，给出突发传输的次数
+    assign M_AXI_AWLEN=write_burst_len_minus_one[7:0]                                           ;    // 写突发拍数减1，供 AXI AWLEN 使用
 
-    assign M_AXI_AWSIZE=AXI_SIZE                                                          ;    // 突发大小，给出每次突发传输的字节数
+    assign M_AXI_AWSIZE=AXI_SIZE                                                          ;    // 每拍传输字节数的 log2 编码
 
-    assign M_AXI_AWBURST=2'b01                                                            ;    // 突发类型
+    assign M_AXI_AWBURST=2'b01                                                            ;    // 固定为 INCR（逐拍递增）
 
-    assign M_AXI_AWLOCK=1'b0                                                              ;    // 总线锁信号，可提供操作的原子性
+    assign M_AXI_AWLOCK=1'b0                                                              ;    // 未使用，固定为 0
 
     assign M_AXI_AWCACHE=4'b0010                                                          ;    // 内存类型，表明一次传输是怎样通过系统的
 
@@ -152,15 +152,15 @@ module ddr_axi_dma_bridge #
 
     assign M_AXI_WDATA=wr_data                                                         ;    // 写数据
 
-    assign M_AXI_WSTRB=wr_byte_enable                                                         ;    // 写数据有效的字节线，用来表明哪8bits数据是有效的
+    assign M_AXI_WSTRB=wr_byte_enable                                                         ;    // 逐字节写使能，每一位对应一个数据字节
 
-    assign M_AXI_WLAST=(write_burst_beat_index == write_burst_beat_count-9'd1)                                                 ;    // 表明此次传输是最后一个突发传输
+    assign M_AXI_WLAST=(write_burst_beat_index == write_burst_beat_count-9'd1)                                                 ;    // 当前 AXI 写突发的最后一拍
 
-    assign M_AXI_WVALID=(write_transaction_state == WRITE_SEND) && write_data_pending && wr_data_valid             ;    // 写有效，表明此次写有效
+    assign M_AXI_WVALID=(write_transaction_state == WRITE_SEND) && write_data_pending && wr_data_valid             ;    // 写数据有效，保持到 WREADY 接受
 
-    assign s_axi_w_accept_event=M_AXI_WVALID && M_AXI_WREADY                                               ;    // AXI W实际接受事件
+    assign m_axi_w_handshake=M_AXI_WVALID && M_AXI_WREADY                                               ;    // AXI W实际接受事件
 
-    assign wr_data_accept_event=s_axi_w_accept_event                                                                ;    // 历史命名：valid输出实际是数据接受脉冲
+    assign wr_data_accept_event=m_axi_w_handshake                                                                ;    // AXI WVALID 与 WREADY 握手后产生的单周期接受事件
 
     assign M_AXI_BREADY=(write_transaction_state == WRITE_RESPONSE)                                         ;    // 表明主机能够接收写响应
 
@@ -169,7 +169,7 @@ module ddr_axi_dma_bridge #
 
 
     // 计算写次态：校验请求后分段，AW/W独立处理，等B响应后继续下一段或结束。
-    always @(*) begin : calculate_write_next_st
+    always @(*) begin : calculate_write_next_state
         write_next_state = write_transaction_state;
 
         if (! M_AXI_ARESETN) begin
@@ -319,7 +319,7 @@ module ddr_axi_dma_bridge #
                     write_burst_beat_index <= 9'd0;
                 end
                 WRITE_SEND: begin
-                    if (s_axi_w_accept_event) begin
+                    if (m_axi_w_handshake) begin
                         if (write_burst_beat_index == write_burst_beat_count - 9'd1) begin
                         end else begin
                             write_burst_beat_index <= write_burst_beat_index + 9'd1 ;
@@ -372,7 +372,7 @@ module ddr_axi_dma_bridge #
                     write_data_pending <= 1'b1 ;
                 end
                 WRITE_SEND: begin
-                    if (s_axi_w_accept_event) begin
+                    if (m_axi_w_handshake) begin
                         if (write_burst_beat_index == write_burst_beat_count - 9'd1) begin
                             write_data_pending <= 1'b0 ;
                         end
@@ -417,39 +417,39 @@ module ddr_axi_dma_bridge #
 
     assign rd_busy=(read_transaction_state != READ_IDLE)                                            ;    // 读请求仍在处理
 
-    assign M_AXI_ARID=AXI_FIXED_ID                                                        ;    // MIG用户域读地址事务ID
+    assign M_AXI_ARID=AXI_FIXED_ID                                                        ;    // 存储侧AXI读地址事务ID
 
-    assign M_AXI_ARADDR=read_transaction_addr                                                                ;    // MIG用户域读突发起始字节地址
+    assign M_AXI_ARADDR=read_transaction_addr                                                                ;    // 存储侧AXI读突发起始字节地址
 
-    assign M_AXI_ARLEN=read_burst_len_minus_one[7:0]                                            ;    // MIG用户域读地址突发拍数减1
+    assign M_AXI_ARLEN=read_burst_len_minus_one[7:0]                                            ;    // 存储侧AXI读地址突发拍数减1
 
-    assign M_AXI_ARSIZE=AXI_SIZE                                                          ;    // MIG用户域读地址每拍字节数的log2编码
+    assign M_AXI_ARSIZE=AXI_SIZE                                                          ;    // 存储侧AXI读地址每拍字节数的log2编码
 
-    assign M_AXI_ARBURST=2'b01                                                            ;    // MIG用户域读地址地址类型，INCR为逐拍递增
+    assign M_AXI_ARBURST=2'b01                                                            ;    // 存储侧AXI读地址地址类型，INCR为逐拍递增
 
-    assign M_AXI_ARLOCK=1'b0                                                              ;    // MIG用户域读地址通道lock属性
+    assign M_AXI_ARLOCK=1'b0                                                              ;    // 存储侧AXI读地址通道lock属性
 
-    assign M_AXI_ARCACHE=4'b0010                                                          ;    // MIG用户域读地址通道cache属性
+    assign M_AXI_ARCACHE=4'b0010                                                          ;    // 存储侧AXI读地址通道cache属性
 
-    assign M_AXI_ARPROT=3'd0                                                              ;    // MIG用户域读地址通道prot属性
+    assign M_AXI_ARPROT=3'd0                                                              ;    // 存储侧AXI读地址通道prot属性
 
-    assign M_AXI_ARQOS=4'd0                                                               ;    // MIG用户域读地址通道qos属性
+    assign M_AXI_ARQOS=4'd0                                                               ;    // 存储侧AXI读地址通道qos属性
 
-    assign M_AXI_ARVALID=(read_transaction_state==READ_ADDRESS)                                           ;    // MIG用户域读地址通道有效，保持到ready接受
+    assign M_AXI_ARVALID=(read_transaction_state==READ_ADDRESS)                                           ;    // 存储侧AXI读地址通道有效，保持到ready接受
 
-    assign M_AXI_RREADY=(read_transaction_state==READ_DATA) && rd_data_ready                             ;    // MIG用户域读数据通道当前可接受
+    assign M_AXI_RREADY=(read_transaction_state==READ_DATA) && rd_data_ready                             ;    // 存储侧AXI读数据通道当前可接受
 
-    assign s_axi_r_accept_event=M_AXI_RVALID && M_AXI_RREADY                                               ;    // AXI R实际接受事件
+    assign m_axi_r_handshake=M_AXI_RVALID && M_AXI_RREADY                                               ;    // AXI R实际接受事件
 
     assign rd_data=M_AXI_RDATA                                                         ;    // 当前读数据
 
-    assign rd_data_accept_event=s_axi_r_accept_event                                                                ;    // 保留现有读桥的accept语义
+    assign rd_data_accept_event=m_axi_r_handshake                                                                ;    // AXI RVALID 与 RREADY 握手后产生的单周期接受事件
 
     reg           [2:0]                        read_next_state                               ;    // 完整组合次态，默认保持当前态
 
 
     // 计算读次态：分段提交AR，收到该段规定的全部R拍后继续或结束。
-    always @(*) begin : calculate_read_next_st
+    always @(*) begin : calculate_read_next_state
         read_next_state = read_transaction_state;
 
         if (! M_AXI_ARESETN) begin
@@ -470,7 +470,7 @@ module ddr_axi_dma_bridge #
                     end
                 end
                 READ_DATA: begin
-                    if (s_axi_r_accept_event) begin
+                    if (m_axi_r_handshake) begin
                         if (read_burst_beat_index == read_burst_beat_count - 9'd1) begin
                             if (read_beats_remaining == read_burst_beat_count) begin
                                 read_next_state = READ_IDLE ;
@@ -514,7 +514,7 @@ module ddr_axi_dma_bridge #
                 READ_ADDRESS: begin
                 end
                 READ_DATA: begin
-                    if (s_axi_r_accept_event) begin
+                    if (m_axi_r_handshake) begin
                         if (read_burst_beat_index == read_burst_beat_count - 9'd1) begin
                             if (read_beats_remaining == read_burst_beat_count) begin
                             end else begin
@@ -546,7 +546,7 @@ module ddr_axi_dma_bridge #
                 READ_ADDRESS: begin
                 end
                 READ_DATA: begin
-                    if (s_axi_r_accept_event) begin
+                    if (m_axi_r_handshake) begin
                         if (read_burst_beat_index == read_burst_beat_count - 9'd1) begin
                             if (read_beats_remaining == read_burst_beat_count) begin
                             end else begin
@@ -598,7 +598,7 @@ module ddr_axi_dma_bridge #
                 READ_ADDRESS: begin
                 end
                 READ_DATA: begin
-                    if (s_axi_r_accept_event) begin
+                    if (m_axi_r_handshake) begin
                         if (read_burst_beat_index == read_burst_beat_count - 9'd1) begin
                         end else begin
                             read_burst_beat_index <= read_burst_beat_index + 9'd1 ;
