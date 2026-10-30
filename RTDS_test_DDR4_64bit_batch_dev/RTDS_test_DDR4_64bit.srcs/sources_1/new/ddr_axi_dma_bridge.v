@@ -29,7 +29,7 @@ module ddr_axi_dma_bridge #
 
     input wire    [M_AXI_ADDR_WIDTH-1 : 0]     rd_addr          ,                     // 读起始字节地址
     input                                      rd_req          ,                     // 读请求，保持到busy接受
-    input wire    [15 : 0]                     rd_beat_count          ,                     // 读请求64bit拍数
+    input wire    [15 : 0]                     rd_beat_count          ,                     // 读请求的数据拍数
     output                                     rd_busy          ,                     // 读请求仍在处理
 
     output wire   [M_AXI_DATA_WIDTH-1 :0]      rd_data          ,                     // 当前读数据
@@ -55,7 +55,7 @@ module ddr_axi_dma_bridge #
     output wire                                M_AXI_WLAST         ,                     // 当前 AXI 写突发的最后一拍
     output wire                                M_AXI_WVALID        ,                     // 写数据有效，保持到 WREADY 接受
     input wire                                 M_AXI_WREADY        ,                     // 表明从机可以接收写数据
-    input wire    [M_AXI_ID_WIDTH-1 : 0]       M_AXI_BID           ,                     // 写数据通道 ID
+    input wire    [M_AXI_ID_WIDTH-1 : 0]       M_AXI_BID           ,                     // 写响应 ID
     input wire    [1 : 0]                      M_AXI_BRESP         ,                     // 写响应，表明写传输的状态
     input wire                                 M_AXI_BVALID        ,                     // 写响应有效
     output wire                                M_AXI_BREADY        ,                     // 表明主机能够接收写响应
