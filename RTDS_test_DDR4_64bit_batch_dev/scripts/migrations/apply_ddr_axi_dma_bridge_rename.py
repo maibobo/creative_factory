@@ -64,10 +64,15 @@ def main() -> int:
         raise RuntimeError("Expected module declaration 'ddr_axi_dma_bridge' was not found.")
     if re.search(r"\bmodule\s+CONV_DMA\b", code_only):
         raise RuntimeError("Legacy module declaration remains after mapping.")
-    for old_name in mapping.get("cleanup_identifier_renames", {}):
-        if re.search(r"(?<![A-Za-z0-9_$])" + re.escape(old_name) +
-                     r"(?![A-Za-z0-9_$])", code_only):
-            raise RuntimeError(f"Legacy internal identifier remains: {old_name}")
+    for group_name in ("identifier_renames", "cleanup_identifier_renames"):
+        for old_name in mapping.get(group_name, {}):
+            if re.search(r"(?<![A-Za-z0-9_$])" + re.escape(old_name) +
+                         r"(?![A-Za-z0-9_$])", code_only):
+                raise RuntimeError(f"Legacy identifier remains after {group_name}: {old_name}")
+    for port in mapping.get("port_mappings", []):
+        if not re.search(r"(?<![A-Za-z0-9_$])" + re.escape(port["to"]) +
+                         r"(?![A-Za-z0-9_$])", code_only):
+            raise RuntimeError(f"Mapped RTL port is missing: {port['to']}")
 
     xpr_text = xpr.read_text(encoding="utf-8")
     old_ref = mapping["project_reference"]["from"]
